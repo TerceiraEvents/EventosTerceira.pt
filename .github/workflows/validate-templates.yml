@@ -23,12 +23,12 @@ jobs:
       # and fail loudly if the include's logic regresses before we
       # bother with the slower jobs.
       - name: Unit-test postal_address.html include
-        run: ruby scripts/tests/test_postal_address.rb
+        run: bundle exec ruby scripts/tests/test_postal_address.rb
 
       # ── Data-vocabulary consistency ───────────────────────────────
       # Catches typo'd or unknown tag slugs in special_events.yml.
       - name: Validate event tag vocabulary
-        run: ruby scripts/tests/test_tag_vocabulary.rb
+        run: bundle exec ruby scripts/tests/test_tag_vocabulary.rb
 
       # ── Build the site ────────────────────────────────────────────
       # `bundle exec jekyll build` itself is the loudest test: any
@@ -45,4 +45,4 @@ jobs:
       # regressions like jekyll-seo-tag dropping og:image because of
       # a config quirk (PR #115).
       - name: Smoke-test built site
-        run: ruby scripts/tests/test_built_site.rb
+        run: bundle exec ruby scripts/tests/test_built_site.rb
