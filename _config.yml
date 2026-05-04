@@ -19,12 +19,16 @@ logo: /assets/images/apple-touch-icon.png
 
 # `image` is what jekyll-seo-tag puts into og:image / twitter:image
 # (the link-preview thumbnail on Facebook, WhatsApp, Slack, LinkedIn).
-# Facebook requires at least 600×315 px; the apple-touch-icon at 180×180
-# is below that and would suppress the preview entirely. Using the same
-# Wikipedia Commons hero photo the homepage already loads — it's
-# 1280px wide so it satisfies all the social-card minimums. A locally
-# hosted, purpose-built 1200×630 image would be cleaner long-term.
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG/1280px-Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG
+# 1280×720 is well above Facebook's 600×315 minimum and crisp on
+# retina screens. Locally hosted (was an external Wikipedia URL until
+# the previous attempt; the URL-encoded Wikipedia path silently failed
+# to render through jekyll-seo-tag's image_drop, suppressing og:image
+# on every page).
+image:
+  path: /assets/images/hero-angra.jpg
+  height: 720
+  width: 1280
+  alt: "Angra do Heroísmo, Terceira"
 
 # Plugins. Both are on the github-pages allowlist, so they'll run on
 # the live site without any pages-build configuration changes.
