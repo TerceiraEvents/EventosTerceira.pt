@@ -52,3 +52,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  # CI caches gems under vendor/ via `bundler-cache: true`. Without
+  # excluding it, Jekyll scans into the gem's own _posts template
+  # stubs and the build fails with "Invalid date '...'". GitHub Pages
+  # itself doesn't hit this because it installs gems outside the
+  # working tree.
+  - vendor
+  - .bundle
+  # Worktrees from local Claude Code agent runs.
+  - .claude
