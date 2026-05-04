@@ -24,11 +24,7 @@ logo: /assets/images/apple-touch-icon.png
 # the previous attempt; the URL-encoded Wikipedia path silently failed
 # to render through jekyll-seo-tag's image_drop, suppressing og:image
 # on every page).
-image:
-  path: /assets/images/hero-angra.jpg
-  height: 720
-  width: 1280
-  alt: "Angra do Heroísmo, Terceira"
+image: /assets/images/hero-angra.jpg
 
 # Plugins. Both are on the github-pages allowlist, so they'll run on
 # the live site without any pages-build configuration changes.
