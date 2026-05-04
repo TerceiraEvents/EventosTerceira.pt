@@ -32,6 +32,18 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Default front matter for posts. `image` is what jekyll-seo-tag pulls
+# into the BlogPosting JSON-LD `image` field. Without a default here,
+# the field is omitted (Google Rich Results flags it as a missing
+# optional). Posts can override by setting their own `image:` in front
+# matter — useful when a post has a flyer/hero of its own.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG/1280px-Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG
+
 exclude:
   - Gemfile
   - Gemfile.lock
