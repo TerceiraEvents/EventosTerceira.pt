@@ -214,6 +214,41 @@ else
 end
 
 # ─────────────────────────────────────────────────────────────────────
+# 7. Asset references resolve to real files
+# ─────────────────────────────────────────────────────────────────────
+# Catches: typos in `image:` config or `<img src=...>` paths that
+# build cleanly (Jekyll just outputs the string) but produce 404s in
+# the browser. Walks every HTML and CSS file under _site/ for
+# `/assets/...` URLs and checks the file exists.
+
+# Common URL-encoded chars we need to undo before checking the FS
+def url_decode(s)
+  s.gsub(/%([0-9A-Fa-f]{2})/) { [$1.hex].pack("C*").force_encoding("UTF-8") }
+end
+
+asset_refs = {} # path -> [referencing files]
+text_files = Dir.glob("#{SITE}/**/*.html") + Dir.glob("#{SITE}/**/*.css")
+text_files.each do |path|
+  body = File.read(path)
+  body.scan(%r{["'(\s](/assets/[^"'\s)?#]+)}).each do |match|
+    asset = match[0]
+    asset_refs[asset] ||= []
+    asset_refs[asset] << path.sub(%r{^#{SITE}/?}, "/")
+  end
+end
+
+asset_refs.each do |asset, referrers|
+  decoded = url_decode(asset)
+  fs_path = File.join(SITE, decoded.sub(%r{^/}, ""))
+  unless File.exist?(fs_path)
+    # Only show the first 2 referrers to keep error noise down
+    refs_summary = referrers.first(2).join(", ")
+    refs_summary += " (+#{referrers.size - 2} more)" if referrers.size > 2
+    err(errors, "asset #{asset} referenced by #{refs_summary} does not exist")
+  end
+end
+
+# ─────────────────────────────────────────────────────────────────────
 # Report
 # ─────────────────────────────────────────────────────────────────────
 puts ""
