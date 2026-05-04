@@ -51,7 +51,7 @@ h1, h2, h3 {
 .hero-image {
   position: absolute;
   inset: 0;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG/1280px-Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG');
+  background-image: url('/assets/images/hero-angra.jpg');
   background-size: cover;
   background-position: center 40%;
   filter: brightness(0.55) saturate(1.2);
