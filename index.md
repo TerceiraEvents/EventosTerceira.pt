@@ -50,7 +50,7 @@ title: Terceira Events - What's Happening on Terceira Island
 
 {% if upcoming_preview.size > 0 %}
 <section class="home-events-preview">
-  <h3 class="home-events-heading">Upcoming special events</h3>
+  <h2 class="home-events-heading">Upcoming special events</h2>
   <ul class="home-events-list">
     {% for event in upcoming_preview %}
     <li class="home-events-item">
@@ -71,7 +71,7 @@ title: Terceira Events - What's Happening on Terceira Island
 
 {% if site.posts.size > 0 %}
 <section class="home-blog-preview">
-  <h3 class="home-blog-heading">From the blog</h3>
+  <h2 class="home-blog-heading">From the blog</h2>
   <ul class="home-blog-list">
     {% for post in site.posts limit:3 %}
     <li class="home-blog-item">

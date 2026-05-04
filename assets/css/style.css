@@ -10,8 +10,9 @@
   --white: #ffffff;
   --text: #1a2e1a;
   --text-light: #4a6a4a;
-  --text-muted: #6b8a6b;
+  --text-muted: #557555;
   --accent: #d4a843;
+  --accent-dark: #8a6614;
   --accent-light: #f0d78c;
   --border: #c8dcc8;
   --shadow: rgba(26, 58, 42, 0.12);
@@ -211,7 +212,7 @@ h3 {
 }
 
 .event-venue {
-  color: var(--green-bright);
+  color: var(--green-mid);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 600;
   font-size: 0.85rem;
@@ -341,7 +342,7 @@ h3 {
 }
 
 .event-time-info {
-  color: var(--accent);
+  color: var(--accent-dark);
   font-weight: 600;
   font-size: 0.85rem;
   margin-top: 0.15rem;
@@ -392,13 +393,13 @@ h3 {
   display: inline-block;
   margin-top: 0.6rem;
   font-size: 0.8rem;
-  color: var(--green-bright);
+  color: var(--green-mid);
   text-decoration: none;
   font-weight: 500;
 }
 
 .event-source:hover {
-  color: var(--green-mid);
+  color: var(--green-deep);
   text-decoration: underline;
 }
 
@@ -478,6 +479,10 @@ h3 {
   font-size: 1.3rem;
   color: var(--green-deep);
   margin-bottom: 1rem;
+  padding-bottom: 0;
+}
+.home-events-heading::after {
+  content: none;
 }
 .home-events-list {
   list-style: none;
@@ -555,6 +560,10 @@ h3 {
   font-size: 1.3rem;
   color: var(--green-deep);
   margin-bottom: 1rem;
+  padding-bottom: 0;
+}
+.home-blog-heading::after {
+  content: none;
 }
 .home-blog-list {
   list-style: none;
@@ -772,13 +781,13 @@ h3 {
 }
 
 .venue-card a {
-  color: var(--green-bright);
+  color: var(--green-mid);
   text-decoration: none;
   font-weight: 500;
 }
 
 .venue-card a:hover {
-  color: var(--green-mid);
+  color: var(--green-deep);
   text-decoration: underline;
 }
 
@@ -917,7 +926,7 @@ main a {
 .btn-desc {
   display: block;
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.85);
+  color: #ffffff;
   line-height: 1.5;
 }
 
@@ -1012,7 +1021,7 @@ main a {
   background: transparent;
   border: 1px solid #d8d4c4;
   border-radius: 14px;
-  color: #777;
+  color: #5a5a5a;
   font-family: inherit;
   font-size: 0.78rem;
   font-weight: 500;
@@ -1067,7 +1076,7 @@ main a {
   border: none;
   font-size: 1.8rem;
   line-height: 1;
-  color: #777;
+  color: #5a5a5a;
   cursor: pointer;
   padding: 0;
   width: 32px;
