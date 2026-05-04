@@ -17,18 +17,13 @@ permalink: /blog/:year/:slug/
 # field (small square is fine, this is for Knowledge Graph).
 logo: /assets/images/apple-touch-icon.png
 
-# `image` is what jekyll-seo-tag puts into og:image / twitter:image
-# (the link-preview thumbnail on Facebook, WhatsApp, Slack, LinkedIn).
-# 1280×720 is well above Facebook's 600×315 minimum and crisp on
-# retina screens. Locally hosted (was an external Wikipedia URL until
-# the previous attempt; the URL-encoded Wikipedia path silently failed
-# to render through jekyll-seo-tag's image_drop, suppressing og:image
-# on every page).
-image:
-  path: /assets/images/hero-angra.jpg
-  height: 720
-  width: 1280
-  alt: "Angra do Heroísmo, Terceira"
+# NOTE: `image:` at the SITE level is ignored by jekyll-seo-tag.
+# `og:image` / `twitter:image` are only emitted when `page.image` is
+# present, which means a `defaults:` rule below — not a top-level key
+# here. (PR #114 + #115 both set this top-level `image:` and shipped
+# zero og:image tags as a result; the new CI smoke test catches that.)
+# The defaults block at the bottom is what actually populates the
+# meta tags.
 
 # Plugins. Both are on the github-pages allowlist, so they'll run on
 # the live site without any pages-build configuration changes.
@@ -36,19 +31,28 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Default front matter for posts. `image` is what jekyll-seo-tag pulls
-# into the BlogPosting JSON-LD `image` field. Without a default here,
-# the field is omitted (Google Rich Results flags it as a missing
-# optional). Posts can override by setting their own `image:` in front
-# matter — useful when a post has a flyer/hero of its own.
+# `image` populates `<meta property="og:image">`, `twitter:image`, and
+# the BlogPosting JSON-LD `image` field via jekyll-seo-tag, which only
+# reads it from `page.image` (NOT `site.image`). The empty-path
+# `defaults` below makes every page get the hero photo by default.
+# Per-page or per-post overrides take precedence — useful when a post
+# has a flyer of its own.
 defaults:
   - scope:
       path: ""
-      type: posts
     values:
-      image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG/1280px-Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG
+      image: /assets/images/hero-angra.jpg
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  # CI caches gems under vendor/ via `bundler-cache: true`. Without
+  # excluding it, Jekyll scans into the gem's own _posts template
+  # stubs and the build fails with "Invalid date '...'". GitHub Pages
+  # itself doesn't hit this because it installs gems outside the
+  # working tree.
+  - vendor
+  - .bundle
+  # Worktrees from local Claude Code agent runs.
+  - .claude
