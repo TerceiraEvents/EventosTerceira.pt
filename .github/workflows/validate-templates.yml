@@ -1,0 +1,48 @@
+name: validate templates and structured data
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true   # bundle install + cache /vendor/bundle keyed on Gemfile.lock
+
+      # ── Pure-Liquid unit tests for shared includes ────────────────
+      # Fast (<1 s). Don't need a full Jekyll build, so they run first
+      # and fail loudly if the include's logic regresses before we
+      # bother with the slower jobs.
+      - name: Unit-test postal_address.html include
+        run: ruby scripts/tests/test_postal_address.rb
+
+      # ── Data-vocabulary consistency ───────────────────────────────
+      # Catches typo'd or unknown tag slugs in special_events.yml.
+      - name: Validate event tag vocabulary
+        run: ruby scripts/tests/test_tag_vocabulary.rb
+
+      # ── Build the site ────────────────────────────────────────────
+      # `bundle exec jekyll build` itself is the loudest test: any
+      # Liquid syntax error, missing include, malformed YAML or front
+      # matter explodes here. This was how the comment-block bug in
+      # PR #109 surfaced — except it surfaced in production. With this
+      # job in place it would have surfaced at PR review time.
+      - name: Build site (jekyll)
+        run: bundle exec jekyll build --trace
+
+      # ── Built-site invariants ─────────────────────────────────────
+      # Walks _site/ and asserts the SEO/structured-data invariants
+      # that PR-by-PR fixes have established. Catches silent
+      # regressions like jekyll-seo-tag dropping og:image because of
+      # a config quirk (PR #115).
+      - name: Smoke-test built site
+        run: ruby scripts/tests/test_built_site.rb

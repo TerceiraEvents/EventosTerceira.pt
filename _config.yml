@@ -46,7 +46,7 @@ defaults:
       path: ""
       type: posts
     values:
-      image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG/1280px-Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG
+      image: /assets/images/hero-angra.jpg
 
 exclude:
   - Gemfile
