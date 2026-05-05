@@ -2,51 +2,67 @@
 #
 # `slug` is what goes into each event's `tags:` list and is used for
 # filtering in the URL (e.g. /calendar?tag=kid-friendly). `label` and
-# `emoji` drive the UI pill and dropdown.
+# `emoji` drive the UI pill and dropdown. `label_pt` provides the
+# Portuguese label; templates fall back to `label` when missing.
 #
 # Keep this list in sync with:
-#   - TerceiraEventsApp     src/utils/tags.js
+#   - TerceiraEventsApp     src/utils/tags.js (slugs+emojis only;
+#                            labels live in src/i18n/strings.*.js)
 #   - event-submit-worker   src/tags.js
 #
 - slug: kid-friendly
   label: Kid Friendly
+  label_pt: Para Crianças
   emoji: 👶
 - slug: live-music
   label: Live Music
+  label_pt: Música ao Vivo
   emoji: 🎵
 - slug: cinema
   label: Cinema
+  label_pt: Cinema
   emoji: 🎬
 - slug: theater
   label: Theater
+  label_pt: Teatro
   emoji: 🎭
 - slug: dance
   label: Dance
+  label_pt: Dança
   emoji: 💃
 - slug: nightlife
   label: Nightlife
+  label_pt: Vida Noturna
   emoji: 🌙
 - slug: karaoke
   label: Karaoke
+  label_pt: Karaoke
   emoji: 🎤
 - slug: food-drink
   label: Food & Drink
+  label_pt: Comida e Bebida
   emoji: 🍽️
 - slug: exhibition
   label: Exhibition
+  label_pt: Exposição
   emoji: 🖼️
 - slug: literature
   label: Literature
+  label_pt: Literatura
   emoji: 📖
 - slug: workshop
   label: Workshop
+  label_pt: Workshop
   emoji: 📚
 - slug: free
   label: Free
+  label_pt: Grátis
   emoji: 🆓
 - slug: outdoor
   label: Outdoor
+  label_pt: Ao Ar Livre
   emoji: 🌳
 - slug: bullfighting
   label: Bullfighting
+  label_pt: Tourada
   emoji: 🐂
