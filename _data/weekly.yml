@@ -1,4 +1,5 @@
 - day: Monday
+  day_pt: Segunda-feira
   events:
   - name: Clube de Leitura
     venue: Lar Doce Livro
@@ -6,18 +7,23 @@
     map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
     time: "18:00"
     description: "Weekly book club. The book and exact start time vary each month (start typically falls between 18:00 and 18:30); the coordinator rotates monthly."
+    description_pt: "Clube de leitura semanal. O livro e a hora exata de início mudam todos os meses (normalmente arranca entre as 18:00 e as 18:30); o coordenador roda mensalmente."
     note: "Check Instagram for the current month's book and exact start time. Their pinned monthly Agenda Cultural also lists it."
+    note_pt: "Vê o Instagram para saberes o livro e a hora certa do mês. A Agenda Cultural mensal afixada também os indica."
     instagram: https://www.instagram.com/livraria_lardocelivro/
     url: https://www.lardocelivro.pt
   - name: Live Music Night
+    name_pt: Noite de Música ao Vivo
     venue: Wine Not
     address: Rua Direita 8, Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Wine+Not+Angra+do+Heroísmo
     time: "21:30"
     description: "Weekly live music: solo artists or DJs every Monday under rotating themed banners (Crazy Monday, Ya Monday for reggae, etc.). Check their Instagram for the week's lineup."
+    description_pt: "Música ao vivo todas as segundas: artistas solo ou DJs sob temas rotativos (Crazy Monday, Ya Monday para reggae, etc.). Vê o Instagram para o cartaz da semana."
     instagram: https://www.instagram.com/winenot.terceira/
 
 - day: Tuesday
+  day_pt: Terça-feira
   events:
   - name: O Novo Normal
     venue: Lar Doce Livro
@@ -25,53 +31,72 @@
     map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
     time: "18:15"
     description: "Live podcast and debate with Pedro Pereira, Francisco Simões, Joel Neto, and Luciano Barcelos. Same team every week; episodes also released on Spotify and Apple Podcasts (search 'O Novo Normal LDL')."
+    description_pt: "Podcast e debate ao vivo com Pedro Pereira, Francisco Simões, Joel Neto e Luciano Barcelos. Mesma equipa todas as semanas; os episódios também saem no Spotify e Apple Podcasts (procura por 'O Novo Normal LDL')."
     note: "Lar Doce Livro posts a dedicated graphic the day before. Check Instagram for the week's topic."
+    note_pt: "O Lar Doce Livro publica um cartaz no dia anterior. Vê o Instagram para o tema da semana."
     instagram: https://www.instagram.com/livraria_lardocelivro/
     url: https://www.lardocelivro.pt
 
 - day: Wednesday
+  day_pt: Quarta-feira
   events:
   - name: Karaoke Night
+    name_pt: Noite de Karaoke
     venue: Tasca do Camões
     time: "20:30"
     description: Weekly karaoke at Camões
+    description_pt: Karaoke semanal no Camões
     address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
 - day: Thursday
+  day_pt: Quinta-feira
   events:
   - name: Latin Night
+    name_pt: Noite Latina
     venue: Tasca do Camões
     time: "20:30"
     description: Weekly Latin night
+    description_pt: Noite latina semanal
     note: "Salsa lesson at 19:00 with instructor Liliana Passos (@familiadancante) precedes the general Latin dancing from 20:30. Instructors stay around afterwards to help newcomers, so you can come with no prior dance experience."
+    note_pt: "Aula de salsa às 19:00 com a instrutora Liliana Passos (@familiadancante) antes da dança latina aberta a partir das 20:30. Os instrutores ficam depois para ajudar quem chega de novas, por isso podes ir sem qualquer experiência de dança."
     address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
 
     map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
 - day: Friday
+  day_pt: Sexta-feira
   events:
   - name: Karaoke Night
+    name_pt: Noite de Karaoke
     venue: The Texan
     address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Heroísmo
     time: "22:30"
     description: "Very popular! It often fills up at the start but seats open up around 23:30–midnight, so worth checking in later or grabbing a drink at the Texan bar while you wait."
+    description_pt: "Muito popular! Costuma encher logo no início mas por volta das 23:30 à meia-noite começa a abrir lugares — vale a pena passar mais tarde ou tomar um copo no bar do Texan enquanto esperas."
     note: "Reservations are for dinner, not karaoke — if you reserve, you are expected to order dinner. Last dinner reservation is at 21:00. Reservations are cancelled 15 minutes after the set time, so you need to arrive by 21:15 at the latest. If you reserve at 21:00 and show up at 22:30 for karaoke, your reservation will already be cancelled!"
+    note_pt: "As reservas são para jantar, não para karaoke — se reservas, é à conta do jantar. A última reserva de jantar é às 21:00. As reservas são canceladas 15 minutos depois da hora marcada, por isso tens de chegar até às 21:15. Se reservares para as 21:00 e apareceres às 22:30 só para o karaoke, a tua reserva já estará cancelada!"
     url: https://www.thetexan.pt
   - name: Live Act Night
+    name_pt: Noite ao Vivo
     venue: Havanna Club Terceira
     address: Porto das Pipas, 9700 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Havanna+Club+Terceira+Angra+do+Heroísmo
     time: "21:30"
     description: Weekly live DJ night at Havanna Club. Each week features a warm-up DJ plus a headline live act.
+    description_pt: Noite semanal de DJs ao vivo no Havanna Club. Todas as semanas tem um DJ de aquecimento e um cabeça de cartaz ao vivo.
     note: "The lineup changes every week — check their Instagram (@havannaangra) to see who's playing."
+    note_pt: "O cartaz muda todas as semanas — vê o Instagram (@havannaangra) para saberes quem toca."
     instagram: https://www.instagram.com/havannaangra/
   - name: 90s & 2000s Night
+    name_pt: Noite Anos 90 & 2000
     venue: Porta 42
     address: Rua de São João, Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Porta+42+Angra+do+Heroísmo
     time: "21:30"
     description: "Bar specialising in 90s and 2000s music. Themed banner varies week to week (Rock/Pop Rock, 90s & 2000s Vibes, etc.). Check Instagram for the week's lineup."
+    description_pt: "Bar dedicado a música dos anos 90 e 2000. O tema varia semana a semana (Rock/Pop Rock, 90s & 2000s Vibes, etc.). Vê o Instagram para o tema da semana."
     note: "Doors at 21:30. Sometimes closed when Friday is a holiday; on long weekends they occasionally shift the slot to a Thursday instead."
+    note_pt: "Abre às 21:30. Às vezes fecha quando a sexta calha em feriado; em fins-de-semana prolongados às vezes passa para quinta-feira."
     instagram: https://www.instagram.com/porta_42/
   - name: Concerto ao Vivo
     venue: Lar Doce Livro
@@ -79,44 +104,58 @@
     map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
     time: "21:00"
     description: "Weekly live music. House artists rotate (Pedro Xavier and João da Ilha both play regularly); the specific artist varies week to week."
+    description_pt: "Música ao vivo semanal. Os artistas da casa rodam (o Pedro Xavier e o João da Ilha tocam com regularidade); o artista da semana varia."
     note: "Check Instagram for this week's artist; usually posted 1 to 2 days in advance."
+    note_pt: "Vê o Instagram para saberes o artista da semana; normalmente é anunciado com 1 ou 2 dias de antecedência."
     instagram: https://www.instagram.com/livraria_lardocelivro/
     url: https://www.lardocelivro.pt
 
 - day: Saturday
+  day_pt: Sábado
   events:
   - name: Collecting Strawberries at Sabores da Horta
+    name_pt: Apanhar Morangos na Sabores da Horta
     venue: Sabores da Horta
     address: Canada do Saco, 9760-123
     map_url: https://maps.app.goo.gl/Jqw6MqjUWzjvEhPM9?g_st=ic
     time: "09:30–13:00"
     description: "Come collect strawberries and have fun with your kids — feed animals, jump on the trampoline, take a tractor ride…"
+    description_pt: "Vem apanhar morangos e divertir-te com os miúdos — dar de comer aos animais, saltar no trampolim, andar de trator…"
     instagram: https://www.instagram.com/sabores_dahort_a?igsh=bWQwcTN6OGxlaWZk
   - name: Live Act Night
+    name_pt: Noite ao Vivo
     venue: Havanna Club Terceira
     address: Porto das Pipas, 9700 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Havanna+Club+Terceira+Angra+do+Heroísmo
     time: "21:30"
     description: Weekly live DJ night at Havanna Club. Each week features a warm-up DJ plus a headline live act.
+    description_pt: Noite semanal de DJs ao vivo no Havanna Club. Todas as semanas tem um DJ de aquecimento e um cabeça de cartaz ao vivo.
     note: "The lineup changes every week — check their Instagram (@havannaangra) to see who's playing."
+    note_pt: "O cartaz muda todas as semanas — vê o Instagram (@havannaangra) para saberes quem toca."
     instagram: https://www.instagram.com/havannaangra/
   - name: Karaoke Night
+    name_pt: Noite de Karaoke
     venue: The Texan
     address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Heroísmo
     time: "22:30"
     description: "Very popular! It often fills up at the start but seats open up around 23:30–midnight, so worth checking in later or grabbing a drink at the Texan bar while you wait."
+    description_pt: "Muito popular! Costuma encher logo no início mas por volta das 23:30 à meia-noite começa a abrir lugares — vale a pena passar mais tarde ou tomar um copo no bar do Texan enquanto esperas."
     note: "Reservations are for dinner, not karaoke — if you reserve, you are expected to order dinner. Last dinner reservation is at 21:00. Reservations are cancelled 15 minutes after the set time, so you need to arrive by 21:15 at the latest. If you reserve at 21:00 and show up at 22:30 for karaoke, your reservation will already be cancelled!"
+    note_pt: "As reservas são para jantar, não para karaoke — se reservas, é à conta do jantar. A última reserva de jantar é às 21:00. As reservas são canceladas 15 minutos depois da hora marcada, por isso tens de chegar até às 21:15. Se reservares para as 21:00 e apareceres às 22:30 só para o karaoke, a tua reserva já estará cancelada!"
     url: https://www.thetexan.pt
   - name: 90s & 2000s Night
+    name_pt: Noite Anos 90 & 2000
     venue: Porta 42
     address: Rua de São João, Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Porta+42+Angra+do+Heroísmo
     time: "21:30"
     description: "Bar specialising in 90s and 2000s music. The most consistent slot of the week. Themed banner varies (Rock/Pop Rock, 90s & 2000s Vibes, etc.); check Instagram for this week's."
+    description_pt: "Bar dedicado a música dos anos 90 e 2000. O dia mais regular da semana. O tema varia (Rock/Pop Rock, 90s & 2000s Vibes, etc.); vê o Instagram para o desta semana."
     instagram: https://www.instagram.com/porta_42/
 
 - day: Sunday
+  day_pt: Domingo
   events:
   - name: Poesia/Prosa ao Crepúsculo
     venue: Lar Doce Livro
@@ -124,7 +163,9 @@
     map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
     time: "18:00"
     description: "Weekly literary gathering coordinated by Valter Peres with a regular group. The name alternates between Poesia (poetry) and Prosa (prose) depending on the week's format, but it's the same recurring event. Lar Doce Livro describes it as the gathering that defines them most."
+    description_pt: "Encontro literário semanal coordenado por Valter Peres com um grupo habitual. O nome alterna entre Poesia e Prosa consoante o formato da semana, mas é o mesmo encontro recorrente. O Lar Doce Livro descreve-o como o encontro que mais os define."
     note: "Posted a few days in advance on Instagram."
+    note_pt: "Anunciado com alguns dias de antecedência no Instagram."
     instagram: https://www.instagram.com/livraria_lardocelivro/
     url: https://www.lardocelivro.pt
   - name: Cine-Clube da Ilha Terceira
@@ -133,5 +174,7 @@
     map_url: https://www.google.com/maps/search/?api=1&query=Recreio+dos+Artistas+Angra+do+Heroísmo
     time: "18:00"
     description: "Weekly film club screening classic and art-house films. Runs seasonally — typically January through May, and September through December. Check their Facebook page for each season's schedule and the week's film."
+    description_pt: "Cineclube semanal com sessões de clássicos e cinema de autor. Funciona por temporadas — habitualmente de janeiro a maio e de setembro a dezembro. Vê a página de Facebook para a programação da temporada e o filme da semana."
     note: "Facebook-only presence — no Instagram account. Season dates announced on their Facebook page at the start of each season."
+    note_pt: "Apenas no Facebook — sem conta de Instagram. As datas da temporada são anunciadas no início de cada temporada na página de Facebook."
     url: https://www.facebook.com/cineclubeilhaterceira
