@@ -92,7 +92,7 @@ description: Submit a special event for inclusion in the Terceira Events calenda
     <p><strong>Other ways to suggest events:</strong></p>
     <ul>
       <li>Open the <strong>Terceira Events</strong> mobile app and tap "Suggest Event"</li>
-      <li>Submit a pull request on <a href="https://github.com/TerceiraEvents/EventosTerceira">GitHub</a> if you're technical</li>
+      <li>Submit a pull request on <a href="https://github.com/TerceiraEvents/EventosTerceira.pt">GitHub</a> if you're technical</li>
       <li>DM <a href="https://www.instagram.com/chrisrackauckas/">@chrisrackauckas</a> on Instagram</li>
     </ul>
   </div>
