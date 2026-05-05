@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Eventos da Terceira - O que se passa na Ilha Terceira
+title: Eventos da Terceira
 description: >-
   Noites de karaoke, concertos, festivais e eventos pontuais em Angra do
   Heroísmo e por toda a Ilha Terceira, Açores. Um guia comunitário curado

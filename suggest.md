@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Suggest an Event - Terceira Events"
+title: Suggest an Event
 description: Submit a special event for inclusion in the Terceira Events calendar.
 lang_alt: /pt/suggest/
 ---

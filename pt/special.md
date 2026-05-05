@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Eventos Especiais - Eventos da Terceira
+title: Eventos Especiais
 description: Concertos, festivais, festas e eventos pontuais desta semana em Angra do Heroísmo, Terceira.
 permalink: /pt/special/
 lang: pt

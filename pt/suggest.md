@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Sugerir um Evento - Eventos da Terceira"
+title: Sugerir um Evento
 description: Submete um evento especial para inclusão no calendário dos Eventos da Terceira.
 permalink: /pt/suggest/
 lang: pt

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Arquivo de Eventos - Eventos da Terceira
+title: Arquivo de Eventos
 description: Concertos, festas, festivais e noites especiais já realizados em Angra do Heroísmo, Terceira.
 permalink: /pt/archive/
 lang: pt

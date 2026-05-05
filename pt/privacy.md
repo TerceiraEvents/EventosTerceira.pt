@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Política de Privacidade - Eventos da Terceira"
+title: Política de Privacidade
 description: Política de privacidade do site e da app dos Eventos da Terceira.
 permalink: /pt/privacy/
 lang: pt

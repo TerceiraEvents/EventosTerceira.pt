@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Outros Recursos - Eventos da Terceira
+title: Outros Recursos
 description: "Recursos externos para encontrares eventos na Terceira: páginas oficiais das câmaras, Bullfight Finder, sites de bilheteira e muito mais."
 permalink: /pt/resources/
 lang: pt

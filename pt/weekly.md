@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Eventos Semanais - Eventos da Terceira
+title: Eventos Semanais
 description: Karaoke, noites de dança e outros eventos que se repetem todas as semanas em Angra do Heroísmo, Terceira.
 permalink: /pt/weekly/
 lang: pt

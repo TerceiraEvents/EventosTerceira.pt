@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Terceira Events - What's Happening on Terceira Island
+title: Terceira Events
 lang_alt: /pt/
 ---
 

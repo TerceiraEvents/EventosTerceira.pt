@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Other Resources - Terceira Events
+title: Other Resources
 description: "External resources for finding events on Terceira: official city pages, Bullfight Finder, ticket sites, and more."
 lang_alt: /pt/resources/
 ---

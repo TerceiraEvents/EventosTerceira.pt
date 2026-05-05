@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Calendário Completo de Eventos - Eventos da Terceira
+title: Calendário Completo de Eventos
 description: Calendário completo dos próximos concertos, festivais, festas e eventos pontuais em Angra do Heroísmo, Terceira.
 permalink: /pt/calendar/
 lang: pt

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Locais - Eventos da Terceira
+title: Locais
 description: Bares, restaurantes, espaços culturais e outros locais que recebem eventos em Angra do Heroísmo, Terceira.
 permalink: /pt/venues/
 lang: pt

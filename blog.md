@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog - Terceira Events
+title: Blog
 description: News, guides, and stories about life on Terceira, from venue reopenings to favourite food spots and tips for newcomers.
 permalink: /blog/
 lang_alt: /pt/blog/
