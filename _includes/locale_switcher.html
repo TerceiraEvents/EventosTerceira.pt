@@ -1,0 +1,26 @@
+{%- comment -%}
+  EN/PT locale switcher.
+
+  Each page sets `lang_alt:` in its front matter to the URL of its
+  counterpart in the other language (e.g. an English `/contribute/`
+  sets `lang_alt: /pt/contribute/` and vice versa). When `lang_alt`
+  is missing we fall back to the language root (`/` or `/pt/`),
+  which keeps the toggle functional on pages that don't yet have a
+  translation.
+{%- endcomment -%}
+{%- assign current_lang = page.lang | default: "en" -%}
+{%- if current_lang == "pt" -%}
+  {%- assign other_url = page.lang_alt | default: "/" -%}
+  {%- assign other_label = "EN" -%}
+  {%- assign other_full = "English" -%}
+  {%- assign current_label = "PT" -%}
+{%- else -%}
+  {%- assign other_url = page.lang_alt | default: "/pt/" -%}
+  {%- assign other_label = "PT" -%}
+  {%- assign other_full = "Português" -%}
+  {%- assign current_label = "EN" -%}
+{%- endif -%}
+<div class="locale-switcher" role="navigation" aria-label="Language">
+  <span class="locale-current" aria-current="true">{{ current_label }}</span>
+  <a class="locale-other" href="{{ other_url | relative_url }}" hreflang="{% if current_lang == 'pt' %}en{% else %}pt{% endif %}" lang="{% if current_lang == 'pt' %}en{% else %}pt{% endif %}" title="{{ other_full }}">{{ other_label }}</a>
+</div>

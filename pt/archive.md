@@ -1,13 +1,15 @@
 ---
 layout: default
-title: Event Archive - Terceira Events
-description: Past concerts, parties, festivals, and special nights in Angra do Heroísmo, Terceira.
-lang_alt: /pt/archive/
+title: Arquivo de Eventos - Eventos da Terceira
+description: Concertos, festas, festivais e noites especiais já realizados em Angra do Heroísmo, Terceira.
+permalink: /pt/archive/
+lang: pt
+lang_alt: /archive/
 ---
 
-## Event Archive
+## Arquivo de Eventos
 
-<p class="section-intro">Past concerts, parties, festivals, and special nights in Angra do Heroísmo.</p>
+<p class="section-intro">Concertos, festas, festivais e noites especiais já realizados em Angra do Heroísmo.</p>
 
 {% include event_search_bar.html %}
 
@@ -30,13 +32,13 @@ lang_alt: /pt/archive/
   {% endif %}
 {% endfor %}
 {% else %}
-<p>No past events yet.</p>
+<p>Ainda não há eventos no arquivo.</p>
 {% endif %}
 
 <p class="event-search-empty">
-  No events match your search. Try different keywords or clear the filter.
+  Nenhum evento corresponde à pesquisa. Tenta outras palavras ou limpa o filtro.
 </p>
 
 <div class="archive-link-section">
-  <a href="{{ '/special' | relative_url }}" class="view-all">Back to Special Events</a>
+  <a href="{{ '/pt/special/' | relative_url }}" class="view-all">Voltar a Eventos Especiais</a>
 </div>

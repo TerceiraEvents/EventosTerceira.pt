@@ -42,6 +42,18 @@ defaults:
       path: ""
     values:
       image: /assets/images/hero-angra.jpg
+      lang: en
+  # Pages under `pt/` are the Portuguese (pt-PT) mirrors. Front matter
+  # in each page sets `permalink: /pt/<slug>/`, but defaulting `lang: pt`
+  # here means we don't have to remember it on every file. The locale
+  # switcher in `_layouts/default.html` and the locale-aware field
+  # accessors in `_includes/special_event_card.html`,
+  # `_includes/event_search_bar.html`, etc. read `page.lang` to pick
+  # the right strings.
+  - scope:
+      path: "pt"
+    values:
+      lang: pt
 
 exclude:
   - Gemfile

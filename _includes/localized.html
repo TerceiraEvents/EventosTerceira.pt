@@ -1,0 +1,31 @@
+{%- comment -%}
+  Locale-aware field accessor.
+
+  Picks `<field>_<lang>` (e.g. `name_pt`) when set, falling back to the
+  bare `<field>` when the locale-specific value is missing or blank.
+  Keep the surrounding `{%- ... -%}` whitespace tight: this include
+  emits exactly the resolved string with no extra newlines, so callers
+  can drop it inside another tag without breakage (e.g. inside
+  `data-event-name="…"`).
+
+  Parameters:
+    - item:  the YAML record (event, venue, weekly entry, tag, etc.)
+    - field: the bare field name as a string ("name", "description",
+             "address", "label", …)
+    - lang:  the page locale (pass `page.lang`)
+
+  Example:
+    {%- include localized.html item=event field="name" lang=page.lang -%}
+
+  Equivalent inline shorthand when locale is known to be pt:
+    {{ event.name_pt | default: event.name }}
+
+  Curators add `name_pt:` / `description_pt:` siblings to existing
+  records over time. Until they're filled in, the bare field still
+  renders, so this is a safe additive change.
+{%- endcomment -%}
+{%- assign _loc_lang = include.lang | default: "en" -%}
+{%- assign _loc_suffix = "_" | append: _loc_lang -%}
+{%- assign _loc_key = include.field | append: _loc_suffix -%}
+{%- assign _loc_value = include.item[_loc_key] -%}
+{%- if _loc_value and _loc_value != "" -%}{{ _loc_value }}{%- else -%}{{ include.item[include.field] }}{%- endif -%}

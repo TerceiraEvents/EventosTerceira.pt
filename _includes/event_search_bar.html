@@ -2,13 +2,33 @@
   Pages that want a date-range selector pass `default_range` (week | month |
   year | all). Pages without a default_range (e.g. /archive) get a search +
   tag bar with no range control, and the JS skips range filtering entirely.
+
+  Locale-aware: reads `page.lang` to decide whether to render the EN or
+  PT strings. Tag display labels prefer `tag.label_pt` / `tag.label_en`
+  when set, falling back to bare `tag.label`.
 {%- endcomment -%}
+{% assign page_lang = page.lang | default: "en" %}
 <div class="event-search-bar" role="search"{% if include.default_range %} data-default-range="{{ include.default_range }}"{% endif %}>
+  {%- if page_lang == "pt" -%}
+  <input type="search" class="search-input event-search-input"
+    placeholder="Pesquisar eventos por nome, local ou descrição…"
+    aria-label="Pesquisar eventos">
+  {%- else -%}
   <input type="search" class="search-input event-search-input"
     placeholder="Search events by name, venue, or description…"
     aria-label="Search events">
+  {%- endif -%}
   {% if include.default_range %}
   <label class="event-filter-label" for="event-range-filter">
+    {%- if page_lang == "pt" -%}
+    <span class="visually-hidden">Intervalo de datas</span>
+    <select class="event-range-filter" id="event-range-filter" aria-label="Intervalo de datas">
+      <option value="week">📅 Esta Semana</option>
+      <option value="month">📆 Este Mês</option>
+      <option value="year">🗓️ Este Ano</option>
+      <option value="all">∞ Todos os próximos</option>
+    </select>
+    {%- else -%}
     <span class="visually-hidden">Date range</span>
     <select class="event-range-filter" id="event-range-filter" aria-label="Date range">
       <option value="week">📅 This Week</option>
@@ -16,15 +36,28 @@
       <option value="year">🗓️ This Year</option>
       <option value="all">∞ All Upcoming</option>
     </select>
+    {%- endif -%}
   </label>
   {% endif %}
   <label class="event-filter-label" for="event-tag-filter">
+    {%- if page_lang == "pt" -%}
+    <span class="visually-hidden">Filtrar por etiqueta</span>
+    <select class="event-tag-filter" id="event-tag-filter" aria-label="Filtrar por etiqueta">
+      <option value="">🏷️ Todas as etiquetas</option>
+      {% for tag in site.data.event_tags %}
+        {%- assign tag_label = tag.label_pt | default: tag.label -%}
+      <option value="{{ tag.slug }}">{{ tag.emoji }} {{ tag_label }}</option>
+      {% endfor %}
+    </select>
+    {%- else -%}
     <span class="visually-hidden">Filter by tag</span>
     <select class="event-tag-filter" id="event-tag-filter" aria-label="Filter by tag">
       <option value="">🏷️ All tags</option>
       {% for tag in site.data.event_tags %}
-      <option value="{{ tag.slug }}">{{ tag.emoji }} {{ tag.label }}</option>
+        {%- assign tag_label = tag.label_en | default: tag.label -%}
+      <option value="{{ tag.slug }}">{{ tag.emoji }} {{ tag_label }}</option>
       {% endfor %}
     </select>
+    {%- endif -%}
   </label>
 </div>
