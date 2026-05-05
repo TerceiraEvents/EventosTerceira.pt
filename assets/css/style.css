@@ -119,6 +119,35 @@ h1, h2, h3 {
   color: var(--white);
 }
 
+/* ── Locale switcher (EN/PT toggle in nav) ── */
+.locale-switcher {
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  padding: 0 0.4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.locale-switcher .locale-current {
+  color: var(--white, #fff);
+  padding: 0.85rem 0.55rem;
+  opacity: 0.9;
+}
+.locale-switcher .locale-other {
+  color: var(--green-pale);
+  padding: 0.85rem 0.55rem;
+  text-decoration: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  transition: background 0.2s, color 0.2s;
+}
+.locale-switcher .locale-other:hover {
+  background: rgba(82, 183, 136, 0.2);
+  color: var(--white, #fff);
+}
+
 /* ── Main content ── */
 main {
   padding: 2.5rem 0;

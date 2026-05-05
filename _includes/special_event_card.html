@@ -1,6 +1,45 @@
+{%- comment -%}
+  Locale-aware field resolution.
+
+  Each translatable field on a YAML event record may have a sibling
+  with a `_pt` (or `_en`) suffix — e.g. `description` and
+  `description_pt`. We resolve them up front so the rest of the
+  template can use the same variables it always did. When the
+  locale-specific value is missing or blank we fall back to the bare
+  field, which keeps the page working for events curators haven't
+  translated yet.
+
+  Fields kept as-is (not translatable, or translation makes no sense):
+    date, time, image, instagram, map_url, festival, kid_friendly,
+    tags, features, organizer (handled below as a string display).
+  Note `tags` contain SLUGS (e.g. `kid-friendly`) which are stable
+  identifiers; their display labels come from `_data/event_tags.yml`
+  and are localized below via the same suffix convention (`label_pt`).
+
+  Fields that ARE translatable: `name`, `venue`, `address`,
+  `description`. Months array is also localized for the date badge.
+{%- endcomment -%}
+{% assign page_lang = page.lang | default: "en" %}
 {% assign date_parts = event.date | split: "-" %}
-{% assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," %}
+{% if page_lang == "pt" %}
+  {% assign months = "Jan,Fev,Mar,Abr,Mai,Jun,Jul,Ago,Set,Out,Nov,Dez" | split: "," %}
+{% else %}
+  {% assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," %}
+{% endif %}
 {% assign month_index = date_parts[1] | plus: 0 | minus: 1 %}
+
+{%- comment -%} Resolve translatable fields with curator-language fallback. {%- endcomment -%}
+{% if page_lang == "pt" %}
+  {% assign event_name = event.name_pt | default: event.name %}
+  {% assign event_venue = event.venue_pt | default: event.venue %}
+  {% assign event_address = event.address_pt | default: event.address %}
+  {% assign event_description = event.description_pt | default: event.description %}
+{% else %}
+  {% assign event_name = event.name_en | default: event.name %}
+  {% assign event_venue = event.venue_en | default: event.venue %}
+  {% assign event_address = event.address_en | default: event.address %}
+  {% assign event_description = event.description_en | default: event.description %}
+{% endif %}
 
 {%- comment -%}
   Normalize tags: legacy `kid_friendly: true` events get mapped to the
@@ -18,9 +57,9 @@
 <div class="special-event {% if event.image %}has-image{% endif %} {% if event.festival %}is-festival{% endif %}"
      data-event-tags="{{ event_tags_str }}"
      data-event-date="{{ event.date | date: "%Y-%m-%d" }}"
-     data-event-name="{{ event.name | escape }}"
-     data-event-venue="{{ event.venue | escape }}"
-     data-event-description="{{ event.description | escape }}">
+     data-event-name="{{ event_name | escape }}"
+     data-event-venue="{{ event_venue | escape }}"
+     data-event-description="{{ event_description | escape }}">
   <div class="event-date-badge">
     <div class="month">{{ months[month_index] }}</div>
     <div class="day">{{ date_parts[2] | plus: 0 }}</div>
@@ -28,44 +67,60 @@
   </div>
   <div class="event-details">
     {% if event.festival %}
-    <div class="festival-badge">🎭 {{ event.festival }}</div>
+    {%- if page_lang == "pt" -%}
+      {%- assign festival_label = event.festival_pt | default: event.festival -%}
+    {%- else -%}
+      {%- assign festival_label = event.festival_en | default: event.festival -%}
+    {%- endif -%}
+    <div class="festival-badge">🎭 {{ festival_label }}</div>
     {% endif %}
     {% if event_tags.size > 0 %}
     <div class="event-tags">
       {% for slug in event_tags %}
         {% assign tag_meta = site.data.event_tags | where: "slug", slug | first %}
         {% if tag_meta %}
-          <span class="event-tag tag-{{ slug }}">{{ tag_meta.emoji }} {{ tag_meta.label }}</span>
+          {%- if page_lang == "pt" -%}
+            {%- assign tag_label = tag_meta.label_pt | default: tag_meta.label -%}
+          {%- else -%}
+            {%- assign tag_label = tag_meta.label_en | default: tag_meta.label -%}
+          {%- endif -%}
+          <span class="event-tag tag-{{ slug }}">{{ tag_meta.emoji }} {{ tag_label }}</span>
         {% else %}
           <span class="event-tag tag-{{ slug }}">🏷️ {{ slug }}</span>
         {% endif %}
       {% endfor %}
     </div>
     {% endif %}
-    <div class="event-name">{{ event.name }}</div>
-    <div class="event-venue">{{ event.venue }}</div>
-    {% if event.address %}
-    <div class="event-address">{{ event.address }}</div>
+    <div class="event-name">{{ event_name }}</div>
+    <div class="event-venue">{{ event_venue }}</div>
+    {% if event_address %}
+    <div class="event-address">{{ event_address }}</div>
     {% endif %}
     {% assign map_link = "" %}
     {% if event.map_url %}
       {% assign map_link = event.map_url %}
-    {% elsif event.address %}
-      {% assign map_query = event.address | url_encode %}
+    {% elsif event_address %}
+      {% assign map_query = event_address | url_encode %}
       {% assign map_link = "https://www.google.com/maps/search/?api=1&query=" | append: map_query %}
-    {% elsif event.venue %}
-      {% assign map_query = event.venue | url_encode %}
+    {% elsif event_venue %}
+      {% assign map_query = event_venue | url_encode %}
       {% assign map_link = "https://www.google.com/maps/search/?api=1&query=" | append: map_query %}
     {% endif %}
     {% if map_link != "" %}
-    <a class="event-map-link" href="{{ map_link }}" target="_blank" rel="noopener">📍 Open in Maps</a>
+    <a class="event-map-link" href="{{ map_link }}" target="_blank" rel="noopener">📍 {% if page_lang == "pt" %}Abrir no Maps{% else %}Open in Maps{% endif %}</a>
     {% endif %}
     {% if event.time %}
     <div class="event-time-info">{{ event.time }}</div>
     {% endif %}
-    <div class="event-description">{{ event.description }}</div>
+    <div class="event-description">{{ event_description }}</div>
     {% if event.organizer %}
-    <div class="event-organizer">Organized by: {{ event.organizer }}</div>
+    {%- if page_lang == "pt" -%}
+      {%- assign event_organizer = event.organizer_pt | default: event.organizer -%}
+    <div class="event-organizer">Organizado por: {{ event_organizer }}</div>
+    {%- else -%}
+      {%- assign event_organizer = event.organizer_en | default: event.organizer -%}
+    <div class="event-organizer">Organized by: {{ event_organizer }}</div>
+    {%- endif -%}
     {% endif %}
     {% if event.features %}
     <ul class="event-features">
@@ -75,19 +130,19 @@
     </ul>
     {% endif %}
     {% if event.instagram %}
-    <a class="event-source" href="{{ event.instagram }}" target="_blank" rel="noopener">📸 View on Instagram</a>
+    <a class="event-source" href="{{ event.instagram }}" target="_blank" rel="noopener">📸 {% if page_lang == "pt" %}Ver no Instagram{% else %}View on Instagram{% endif %}</a>
     {% endif %}
     <button type="button" class="event-flag-btn"
-      data-event-name="{{ event.name | escape }}"
+      data-event-name="{{ event_name | escape }}"
       data-event-date="{{ event.date }}"
-      data-event-venue="{{ event.venue | escape }}">
-      🚩 Suggest an edit
+      data-event-venue="{{ event_venue | escape }}">
+      🚩 {% if page_lang == "pt" %}Sugerir uma alteração{% else %}Suggest an edit{% endif %}
     </button>
   </div>
   {% if event.image %}
   <div class="event-image">
     <a href="{{ event.image | relative_url }}" target="_blank">
-      <img src="{{ event.image | relative_url }}" alt="{{ event.name | escape }} flyer">
+      <img src="{{ event.image | relative_url }}" alt="{{ event_name | escape }} {% if page_lang == 'pt' %}cartaz{% else %}flyer{% endif %}">
     </a>
   </div>
   {% endif %}
@@ -152,17 +207,17 @@
 {
   "@context": "https://schema.org",
   "@type": "Event",
-  "name": {{ event.name | jsonify }},
+  "name": {{ event_name | jsonify }},
   "startDate": "{{ event.date | date: '%Y-%m-%d' }}{% if time_iso != '' %}T{{ time_iso }}{% endif %}",
   "endDate": "{{ event.date | date: '%Y-%m-%d' }}{% if time_iso != '' %}T{{ time_iso }}{% endif %}",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "location": {
     "@type": "Place",
-    "name": {{ event.venue | jsonify }}{% if event.address %},
-    "address": {% include postal_address.html address=event.address %}{% endif %}
-  }{% if event.description %},
-  "description": {{ event.description | strip_html | strip | jsonify }}{% endif %}{% if event.image %},
+    "name": {{ event_venue | jsonify }}{% if event_address %},
+    "address": {% include postal_address.html address=event_address %}{% endif %}
+  }{% if event_description %},
+  "description": {{ event_description | strip_html | strip | jsonify }}{% endif %}{% if event.image %},
   "image": "{{ event.image | absolute_url }}"{% endif %}{% if event.instagram %},
   "url": {{ event.instagram | jsonify }}{% endif %},
   "organizer": {% include organization.html %}

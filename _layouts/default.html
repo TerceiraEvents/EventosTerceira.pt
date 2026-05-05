@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+{%- assign page_lang = page.lang | default: site.lang | default: "en" -%}
+<html lang="{{ page_lang }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,12 +26,26 @@
     <div class="hero-image"></div>
     <div class="header-content">
       <div class="container">
+        {%- if page_lang == "pt" -%}
+        <h1 class="site-title"><a href="{{ '/pt/' | relative_url }}">Eventos da Terceira</a></h1>
+        <p class="site-tagline">O que se passa na Ilha Terceira, A&ccedil;ores</p>
+        {%- else -%}
         <h1 class="site-title"><a href="{{ '/' | relative_url }}">Terceira Events</a></h1>
         <p class="site-tagline">What's happening on Terceira Island, A&ccedil;ores</p>
+        {%- endif -%}
       </div>
     </div>
     <nav class="site-nav">
       <div class="container">
+        {%- if page_lang == "pt" -%}
+        <a href="{{ '/pt/' | relative_url }}">Início</a>
+        <a href="{{ '/pt/weekly/' | relative_url }}">Semanal</a>
+        <a href="{{ '/pt/special/' | relative_url }}">Eventos Especiais</a>
+        <a href="{{ '/pt/venues/' | relative_url }}">Locais</a>
+        <a href="{{ '/pt/blog/' | relative_url }}">Blogue</a>
+        <a href="{{ '/pt/contribute/' | relative_url }}">Contribuir</a>
+        <a href="{{ '/pt/resources/' | relative_url }}">Recursos</a>
+        {%- else -%}
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/weekly' | relative_url }}">Weekly</a>
         <a href="{{ '/special' | relative_url }}">Special Events</a>
@@ -38,6 +53,8 @@
         <a href="{{ '/blog' | relative_url }}">Blog</a>
         <a href="{{ '/contribute' | relative_url }}">Contribute</a>
         <a href="{{ '/resources' | relative_url }}">Resources</a>
+        {%- endif -%}
+        {% include locale_switcher.html %}
       </div>
     </nav>
   </header>
@@ -55,11 +72,34 @@
   <div class="flag-overlay" id="flag-overlay" aria-hidden="true">
     <div class="flag-modal" role="dialog" aria-modal="true" aria-labelledby="flag-title">
       <div class="flag-header">
+        {%- if page_lang == "pt" -%}
+        <h3 id="flag-title">Sugerir uma alteração</h3>
+        <button type="button" class="flag-close" id="flag-close" aria-label="Fechar">&times;</button>
+        {%- else -%}
         <h3 id="flag-title">Suggest an Edit</h3>
         <button type="button" class="flag-close" id="flag-close" aria-label="Close">&times;</button>
+        {%- endif -%}
       </div>
       <div class="flag-event-context" id="flag-event-context"></div>
       <form id="flag-form">
+        {%- if page_lang == "pt" -%}
+        <div class="form-field">
+          <label for="flag-reason">O que precisa de ser alterado? <span class="required">*</span></label>
+          <textarea id="flag-reason" name="reason" rows="5" required
+            placeholder="Hora errada, local errado, cancelado, gralha, detalhes em falta, etc."></textarea>
+        </div>
+        <div class="form-field">
+          <label for="flag-submitter">O teu nome</label>
+          <input type="text" id="flag-submitter" name="submitterName" maxlength="100" placeholder="Opcional">
+        </div>
+        <!-- Honeypot -->
+        <div style="position:absolute; left:-9999px; opacity:0; pointer-events:none;" aria-hidden="true">
+          <label for="flag-website">Website</label>
+          <input type="text" id="flag-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" id="flag-submit" class="form-submit">Enviar</button>
+        <div id="flag-message" class="form-message" style="display:none;"></div>
+        {%- else -%}
         <div class="form-field">
           <label for="flag-reason">What needs to change? <span class="required">*</span></label>
           <textarea id="flag-reason" name="reason" rows="5" required
@@ -76,9 +116,29 @@
         </div>
         <button type="submit" id="flag-submit" class="form-submit">Submit</button>
         <div id="flag-message" class="form-message" style="display:none;"></div>
+        {%- endif -%}
       </form>
     </div>
   </div>
+  {%- comment -%}
+    Per-page i18n string bag for client-side messages. Keep this above
+    the main script block so the IIFEs below can read window.__SITE_I18N
+    instead of hard-coding English. Add new keys here when localizing
+    new client-side strings.
+  {%- endcomment -%}
+  <script>
+    window.__SITE_I18N = {
+      lang: {{ page_lang | jsonify }},
+      flag: {
+        submit: {% if page_lang == "pt" %}{{ "Enviar" | jsonify }}{% else %}{{ "Submit" | jsonify }}{% endif %},
+        submitting: {% if page_lang == "pt" %}{{ "A enviar..." | jsonify }}{% else %}{{ "Submitting..." | jsonify }}{% endif %},
+        success: {% if page_lang == "pt" %}{{ "Obrigado! A tua sugestão foi enviada." | jsonify }}{% else %}{{ "Thank you! Your suggestion has been submitted." | jsonify }}{% endif %},
+        describe: {% if page_lang == "pt" %}{{ "Descreve por favor o que precisa de ser alterado." | jsonify }}{% else %}{{ "Please describe what needs to change." | jsonify }}{% endif %},
+        generic_error: {% if page_lang == "pt" %}{{ "Algo correu mal. Tenta novamente mais tarde." | jsonify }}{% else %}{{ "Something went wrong. Please try again later." | jsonify }}{% endif %},
+        network_error: {% if page_lang == "pt" %}{{ "Erro de rede. Verifica a tua ligação." | jsonify }}{% else %}{{ "Network error. Please check your connection." | jsonify }}{% endif %}
+      }
+    };
+  </script>
   <script>
   (function() {
     var overlay = document.getElementById('lightbox');
@@ -129,7 +189,7 @@
       flagWebsite.value = '';
       flagMessage.style.display = 'none';
       flagSubmit.disabled = false;
-      flagSubmit.textContent = 'Submit';
+      flagSubmit.textContent = (window.__SITE_I18N && window.__SITE_I18N.flag.submit) || 'Submit';
       flagOverlay.classList.add('active');
       setTimeout(function() { flagReason.focus(); }, 100);
     }
@@ -180,21 +240,23 @@
       e.preventDefault();
       flagMessage.style.display = 'none';
 
+      var I18N = (window.__SITE_I18N && window.__SITE_I18N.flag) || {};
+
       if (flagWebsite.value.trim()) {
         // Honeypot — pretend success
-        showMessage('Thank you! Your suggestion has been submitted.', 'success');
+        showMessage(I18N.success || 'Thank you! Your suggestion has been submitted.', 'success');
         setTimeout(closeModal, 1200);
         return;
       }
 
       var reason = flagReason.value.trim();
       if (!reason || !currentEvent) {
-        showMessage('Please describe what needs to change.', 'error');
+        showMessage(I18N.describe || 'Please describe what needs to change.', 'error');
         return;
       }
 
       flagSubmit.disabled = true;
-      flagSubmit.textContent = 'Submitting...';
+      flagSubmit.textContent = I18N.submitting || 'Submitting...';
 
       try {
         var response = await fetch(FLAG_URL, {
@@ -210,17 +272,17 @@
         });
         var result = await response.json().catch(function() { return {}; });
         if (response.ok && result.success) {
-          showMessage('Thank you! Your suggestion has been submitted.', 'success');
+          showMessage(I18N.success || 'Thank you! Your suggestion has been submitted.', 'success');
           setTimeout(closeModal, 1200);
         } else {
-          showMessage(result.error || 'Something went wrong. Please try again later.', 'error');
+          showMessage(result.error || I18N.generic_error || 'Something went wrong. Please try again later.', 'error');
           flagSubmit.disabled = false;
-          flagSubmit.textContent = 'Submit';
+          flagSubmit.textContent = I18N.submit || 'Submit';
         }
       } catch (err) {
-        showMessage('Network error. Please check your connection.', 'error');
+        showMessage(I18N.network_error || 'Network error. Please check your connection.', 'error');
         flagSubmit.disabled = false;
-        flagSubmit.textContent = 'Submit';
+        flagSubmit.textContent = I18N.submit || 'Submit';
       }
     });
   })();
@@ -350,9 +412,15 @@
 
   <footer class="site-footer">
     <div class="container">
+      {%- if page_lang == "pt" -%}
+      <p>Eventos da Terceira &mdash; Um guia comunitário da Ilha Terceira, A&ccedil;ores</p>
+      <p class="attribution">Fotografia de capa de <a href="https://commons.wikimedia.org/wiki/File:Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG">Franzfoto</a> / CC BY-SA 3.0</p>
+      <p class="attribution"><a href="{{ '/pt/privacy/' | relative_url }}">Política de Privacidade</a></p>
+      {%- else -%}
       <p>Terceira Events &mdash; A community guide to Terceira Island, A&ccedil;ores</p>
       <p class="attribution">Hero photo by <a href="https://commons.wikimedia.org/wiki/File:Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG">Franzfoto</a> / CC BY-SA 3.0</p>
       <p class="attribution"><a href="{{ '/privacy' | relative_url }}">Privacy Policy</a></p>
+      {%- endif -%}
     </div>
   </footer>
 </body>

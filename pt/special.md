@@ -1,13 +1,15 @@
 ---
 layout: default
-title: Special Events - Terceira Events
-description: Special concerts, festivals, parties, and one-off events happening this week in Angra do Heroísmo, Terceira.
-lang_alt: /pt/special/
+title: Eventos Especiais - Eventos da Terceira
+description: Concertos, festivais, festas e eventos pontuais desta semana em Angra do Heroísmo, Terceira.
+permalink: /pt/special/
+lang: pt
+lang_alt: /special/
 ---
 
-<h2>Special Events</h2>
+<h2>Eventos Especiais</h2>
 
-<p class="section-intro">Concerts, festivals, parties, and one-off events in Angra do Heroísmo. Use the date range, search, or tag filter to narrow things down.</p>
+<p class="section-intro">Concertos, festivais, festas e eventos pontuais em Angra do Heroísmo. Usa o intervalo de datas, a pesquisa ou a etiqueta para refinares a lista.</p>
 
 {% include event_search_bar.html default_range="week" %}
 
@@ -30,13 +32,13 @@ lang_alt: /pt/special/
   {% endif %}
 {% endfor %}
 {% else %}
-<p>No upcoming events at the moment. Check back soon!</p>
+<p>De momento não há eventos agendados. Volta a passar por aqui em breve!</p>
 {% endif %}
 
 <p class="event-search-empty">
-  No events match your filters. Try a different range, search, or tag.
+  Nenhum evento corresponde aos filtros. Tenta um intervalo, pesquisa ou etiqueta diferentes.
 </p>
 
 <div class="archive-link-section">
-  <a href="{{ '/archive' | relative_url }}" class="view-all">Event Archive</a>
+  <a href="{{ '/pt/archive/' | relative_url }}" class="view-all">Arquivo de Eventos</a>
 </div>

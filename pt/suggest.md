@@ -1,100 +1,103 @@
 ---
 layout: default
-title: "Suggest an Event - Terceira Events"
-description: Submit a special event for inclusion in the Terceira Events calendar.
-lang_alt: /pt/suggest/
+title: "Sugerir um Evento - Eventos da Terceira"
+description: Submete um evento especial para inclusão no calendário dos Eventos da Terceira.
+permalink: /pt/suggest/
+lang: pt
+lang_alt: /suggest/
 ---
 
-<h2>Suggest an Event</h2>
+<h2>Sugerir um Evento</h2>
 
-<p class="section-intro">Got an event you think should be on here? Fill out the form below. We'll review it and add it to the site &mdash; usually within a day or two.</p>
+<p class="section-intro">Tens um evento que achas que devia estar aqui? Preenche o formulário abaixo. Vamos rever e adicioná-lo ao site &mdash; normalmente em um ou dois dias.</p>
 
 <form id="suggest-form" class="suggest-form">
   <div class="form-field">
-    <label for="name">Event Name <span class="required">*</span></label>
-    <input type="text" id="name" name="name" required maxlength="200" placeholder="e.g. Concert at Teatro Angrense">
+    <label for="name">Nome do Evento <span class="required">*</span></label>
+    <input type="text" id="name" name="name" required maxlength="200" placeholder="ex.: Concerto no Teatro Angrense">
   </div>
 
   <div class="form-field">
-    <label for="date">Date <span class="required">*</span></label>
+    <label for="date">Data <span class="required">*</span></label>
     <input type="date" id="date" name="date" required>
   </div>
 
   <div class="form-field">
-    <label for="time">Time</label>
-    <input type="time" id="time" name="time" placeholder="e.g. 21:30">
-    <small>Optional &mdash; leave blank if unknown</small>
+    <label for="time">Hora</label>
+    <input type="time" id="time" name="time" placeholder="ex.: 21:30">
+    <small>Opcional &mdash; deixa em branco se não souberes</small>
   </div>
 
   <div class="form-field">
-    <label for="venue">Venue <span class="required">*</span></label>
-    <input type="text" id="venue" name="venue" required maxlength="200" placeholder="e.g. Teatro Angrense">
+    <label for="venue">Local <span class="required">*</span></label>
+    <input type="text" id="venue" name="venue" required maxlength="200" placeholder="ex.: Teatro Angrense">
   </div>
 
   <div class="form-field">
-    <label for="address">Address</label>
-    <input type="text" id="address" name="address" maxlength="300" placeholder="e.g. Rua da Esperança 48-52, Angra do Heroísmo">
+    <label for="address">Morada</label>
+    <input type="text" id="address" name="address" maxlength="300" placeholder="ex.: Rua da Esperança 48-52, Angra do Heroísmo">
   </div>
 
   <div class="form-field">
-    <label for="map_url">Google Maps Link</label>
+    <label for="map_url">Link do Google Maps</label>
     <input type="url" id="map_url" name="map_url" maxlength="500" placeholder="https://maps.app.goo.gl/...">
-    <small>Optional &mdash; paste a Google Maps share link to pin the exact location</small>
+    <small>Opcional &mdash; cola um link de partilha do Google Maps para marcares a localização exata</small>
   </div>
 
   <div class="form-field">
-    <label for="description">Description</label>
-    <textarea id="description" name="description" rows="4" maxlength="2000" placeholder="What's the event about? Ticket info, guests, anything else people should know."></textarea>
+    <label for="description">Descrição</label>
+    <textarea id="description" name="description" rows="4" maxlength="2000" placeholder="Sobre o que é o evento? Bilheteira, convidados, qualquer coisa que as pessoas devam saber."></textarea>
   </div>
 
   <div class="form-field">
-    <label for="instagram">Instagram Link</label>
+    <label for="instagram">Link do Instagram</label>
     <input type="url" id="instagram" name="instagram" maxlength="500" placeholder="https://www.instagram.com/p/...">
-    <small>Link to an Instagram post or account with event details</small>
+    <small>Link para uma publicação ou conta de Instagram com mais detalhes do evento</small>
   </div>
 
   <div class="form-field">
-    <label for="image">Flyer / Poster Image URL</label>
+    <label for="image">URL do cartaz / poster</label>
     <input type="url" id="image" name="image" maxlength="500" placeholder="https://...">
-    <small>Link to a flyer or poster image (e.g. from Instagram or any public URL). Please include whenever possible!</small>
+    <small>Link para uma imagem do cartaz (por exemplo, do Instagram ou de qualquer URL público). Inclui sempre que possível!</small>
   </div>
 
   <div class="form-field form-tags">
-    <label>Tags</label>
-    <small>Pick all that apply. These help visitors filter the calendar.</small>
+    <label>Etiquetas</label>
+    <small>Escolhe todas as que se aplicam. Ajudam quem visita a filtrar o calendário.</small>
     <div class="tag-chips">
       {% for tag in site.data.event_tags %}
+      {%- assign tag_label = tag.label_pt | default: tag.label -%}
       <label class="tag-chip">
         <input type="checkbox" name="tags[]" value="{{ tag.slug }}">
-        <span>{{ tag.emoji }} {{ tag.label }}</span>
+        <span>{{ tag.emoji }} {{ tag_label }}</span>
       </label>
       {% endfor %}
     </div>
   </div>
 
   <div class="form-field">
-    <label for="submitterName">Your Name</label>
-    <input type="text" id="submitterName" name="submitterName" maxlength="100" placeholder="Optional &mdash; for credit">
+    <label for="submitterName">O teu nome</label>
+    <input type="text" id="submitterName" name="submitterName" maxlength="100" placeholder="Opcional &mdash; para créditos">
   </div>
 
   <!-- Honeypot field: hidden from users, bots fill it in -->
   <div style="position:absolute; left:-9999px; opacity:0; pointer-events:none;" aria-hidden="true">
-    <label for="website">Website (leave blank)</label>
+    <label for="website">Website (deixa em branco)</label>
     <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
   </div>
 
-  <button type="submit" id="submit-btn" class="form-submit">Submit Event</button>
+  <button type="submit" id="submit-btn" class="form-submit">Enviar Evento</button>
 
   <div id="form-message" class="form-message" style="display:none;"></div>
 </form>
 
 <div class="venue-card" style="margin-top:2rem;">
   <div class="venue-regulars">
-    <p><strong>Other ways to suggest events:</strong></p>
+    <p><strong>Outras formas de sugerir eventos:</strong></p>
     <ul>
-      <li>Open the <strong>Terceira Events</strong> mobile app and tap "Suggest Event"</li>
-      <li>Submit a pull request on <a href="https://github.com/TerceiraEvents/EventosTerceira.pt">GitHub</a> if you're technical</li>
-      <li>DM <a href="https://www.instagram.com/chrisrackauckas/">@chrisrackauckas</a> on Instagram</li>
+      <li>Abre a app móvel <strong>Eventos da Terceira</strong> e toca em "Sugerir Evento"</li>
+      <li>Submete um pull request no <a href="https://github.com/TerceiraEvents/EventosTerceira.pt">GitHub</a> se és da área técnica</li>
+      <li>Manda DM a <a href="https://www.instagram.com/chrisrackauckas/">@chrisrackauckas</a> no Instagram</li>
     </ul>
   </div>
 </div>
@@ -258,19 +261,19 @@ lang_alt: /pt/suggest/
 
     // Honeypot check — silently pretend success to not tip off bots
     if (data.website) {
-      showMessage('Thank you! Your event has been submitted for review.', 'success');
+      showMessage('Obrigado! O teu evento foi submetido para revisão.', 'success');
       form.reset();
       return;
     }
 
     // Client-side required-field check
     if (!data.name || !data.date || !data.venue) {
-      showMessage('Please fill in event name, date, and venue.', 'error');
+      showMessage('Preenche por favor o nome do evento, a data e o local.', 'error');
       return;
     }
 
     btn.disabled = true;
-    btn.textContent = 'Submitting...';
+    btn.textContent = 'A enviar...';
 
     try {
       var response = await fetch(SUBMIT_URL, {
@@ -281,17 +284,17 @@ lang_alt: /pt/suggest/
       var result = await response.json().catch(function() { return {}; });
 
       if (response.ok && result.success) {
-        showMessage('Thank you! Your event has been submitted for review.', 'success');
+        showMessage('Obrigado! O teu evento foi submetido para revisão.', 'success');
         form.reset();
       } else {
-        var errMsg = result.error || 'Something went wrong. Please try again later.';
+        var errMsg = result.error || 'Algo correu mal. Tenta novamente mais tarde.';
         showMessage(errMsg, 'error');
       }
     } catch (err) {
-      showMessage('Network error. Please check your connection and try again.', 'error');
+      showMessage('Erro de rede. Verifica a tua ligação e tenta novamente.', 'error');
     } finally {
       btn.disabled = false;
-      btn.textContent = 'Submit Event';
+      btn.textContent = 'Enviar Evento';
     }
   });
 })();

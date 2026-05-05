@@ -1,13 +1,15 @@
 ---
 layout: default
-title: Full Events Calendar - Terceira Events
-description: Full calendar of upcoming concerts, festivals, parties, and one-off events in Angra do Heroísmo, Terceira.
-lang_alt: /pt/calendar/
+title: Calendário Completo de Eventos - Eventos da Terceira
+description: Calendário completo dos próximos concertos, festivais, festas e eventos pontuais em Angra do Heroísmo, Terceira.
+permalink: /pt/calendar/
+lang: pt
+lang_alt: /calendar/
 ---
 
-<h2>Full Special Events Calendar</h2>
+<h2>Calendário Completo de Eventos</h2>
 
-<p class="section-intro">All upcoming concerts, festivals, parties, and one-off events in Angra do Heroísmo. Narrow by date range, search, or tag.</p>
+<p class="section-intro">Todos os próximos concertos, festivais, festas e eventos pontuais em Angra do Heroísmo. Filtra por intervalo de datas, pesquisa ou etiqueta.</p>
 
 {% include event_search_bar.html default_range="all" %}
 
@@ -30,13 +32,13 @@ lang_alt: /pt/calendar/
   {% endif %}
 {% endfor %}
 {% else %}
-<p>No upcoming events at the moment. Check back soon!</p>
+<p>De momento não há eventos agendados. Volta a passar por aqui em breve!</p>
 {% endif %}
 
 <p class="event-search-empty">
-  No events match your filters. Try a different range, search, or tag.
+  Nenhum evento corresponde aos filtros. Tenta um intervalo, pesquisa ou etiqueta diferentes.
 </p>
 
 <div class="archive-link-section">
-  <a href="{{ '/archive' | relative_url }}" class="view-all">Event Archive</a>
+  <a href="{{ '/pt/archive/' | relative_url }}" class="view-all">Arquivo de Eventos</a>
 </div>
