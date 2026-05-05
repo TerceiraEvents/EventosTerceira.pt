@@ -43,5 +43,5 @@ jobs:
 
       - name: Smoke-test live site
         env:
-          BASE_URL: https://terceiraevents.github.io
+          BASE_URL: https://eventosterceira.pt
         run: ruby scripts/tests/test_live_site.rb

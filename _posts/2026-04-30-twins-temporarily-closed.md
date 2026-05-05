@@ -58,4 +58,4 @@ English translation *(unofficial, by Terceira Events; corrections welcome)*:
 ### What this means for now
 
 - Their [Instagram](https://www.instagram.com/p/DVRbiLSDDg7/) is the place to watch for the actual reopening announcement.
-- If you see a flyer or hear they're back, [let us know](https://github.com/TerceiraEvents/TerceiraEvents.github.io/issues) and we'll update this post.
+- If you see a flyer or hear they're back, [let us know](https://github.com/TerceiraEvents/EventosTerceira/issues) and we'll update this post.

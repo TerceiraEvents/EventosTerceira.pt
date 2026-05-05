@@ -24,7 +24,7 @@ import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 YAML_PATH = REPO_ROOT / "_data" / "special_events.yml"
-USER_AGENT = "TerceiraEventsBot/1.0 (+https://terceiraevents.github.io)"
+USER_AGENT = "TerceiraEventsBot/1.0 (+https://eventosterceira.pt)"
 DESCRIPTION_MAX_CHARS = 500
 DEFAULT_MAX_EVENTS = 20
 LOOKAHEAD_DAYS = 365
