@@ -110,6 +110,10 @@ h1, h2, h3 {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 0.85rem 1.5rem;
+  /* Keep multi-word nav labels (e.g. "Eventos Especiais") on one
+     line — without this they wrap mid-pill at the desktop breakpoint
+     and break the row's visual rhythm. */
+  white-space: nowrap;
   transition: background 0.2s, color 0.2s;
 }
 

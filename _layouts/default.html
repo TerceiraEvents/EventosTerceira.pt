@@ -19,6 +19,17 @@
   {%- assign page_title = page.title | default: brand -%}
   <title>{%- if page_title == brand -%}{{ brand }}{%- else -%}{{ page_title }} | {{ brand }}{%- endif -%}</title>
   {% seo title=false %}
+  {%- comment -%}
+    Locale-aware overrides for tags `jekyll-seo-tag` doesn't expose
+    per-page hooks for. These tags appear AFTER the gem's emit, so
+    Open Graph crawlers using last-wins resolution (Facebook,
+    Twitter, LinkedIn) pick these up. `og:locale` uses the BCP-47
+    underscore form per the OG spec.
+  {%- endcomment -%}
+  {%- assign og_locale = "en_US" -%}
+  {%- if page_lang == "pt" -%}{%- assign og_locale = "pt_PT" -%}{%- endif -%}
+  <meta property="og:site_name" content="{{ brand }}" />
+  <meta property="og:locale" content="{{ og_locale }}" />
   <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
@@ -48,19 +59,19 @@
         {%- if page_lang == "pt" -%}
         <a href="{{ '/pt/' | relative_url }}">Início</a>
         <a href="{{ '/pt/weekly/' | relative_url }}">Semanal</a>
-        <a href="{{ '/pt/special/' | relative_url }}">Eventos Especiais</a>
+        <a href="{{ '/pt/special/' | relative_url }}">Especiais</a>
         <a href="{{ '/pt/venues/' | relative_url }}">Locais</a>
         <a href="{{ '/pt/blog/' | relative_url }}">Blogue</a>
         <a href="{{ '/pt/contribute/' | relative_url }}">Contribuir</a>
         <a href="{{ '/pt/resources/' | relative_url }}">Recursos</a>
         {%- else -%}
         <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/weekly' | relative_url }}">Weekly</a>
-        <a href="{{ '/special' | relative_url }}">Special Events</a>
-        <a href="{{ '/venues' | relative_url }}">Venues</a>
-        <a href="{{ '/blog' | relative_url }}">Blog</a>
-        <a href="{{ '/contribute' | relative_url }}">Contribute</a>
-        <a href="{{ '/resources' | relative_url }}">Resources</a>
+        <a href="{{ '/weekly/' | relative_url }}">Weekly</a>
+        <a href="{{ '/special/' | relative_url }}">Special Events</a>
+        <a href="{{ '/venues/' | relative_url }}">Venues</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/contribute/' | relative_url }}">Contribute</a>
+        <a href="{{ '/resources/' | relative_url }}">Resources</a>
         {%- endif -%}
         {% include locale_switcher.html %}
       </div>
