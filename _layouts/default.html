@@ -5,12 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {%- comment -%}
-    `{% seo %}` (jekyll-seo-tag) emits <title>, <meta description>,
-    canonical link, Open Graph + Twitter Card tags, and a JSON-LD
-    organization snippet. Per-page overrides come from front-matter
-    `title:`, `description:`, and `image:`.
+    Locale-aware <title>. `jekyll-seo-tag` reads only `site.title`
+    when building the " | <site>" suffix, with no per-page hook —
+    so we emit the title manually here and pass `title=false` to
+    `{% seo %}` to skip its built-in one. The rest of jekyll-seo-tag
+    (description, canonical, Open Graph, Twitter Card, JSON-LD) is
+    still emitted as usual.
   {%- endcomment -%}
-  {% seo %}
+  {%- assign brand = site.title -%}
+  {%- if page_lang == "pt" and site.title_pt -%}
+    {%- assign brand = site.title_pt -%}
+  {%- endif -%}
+  {%- assign page_title = page.title | default: brand -%}
+  <title>{%- if page_title == brand -%}{{ brand }}{%- else -%}{{ page_title }} | {{ brand }}{%- endif -%}</title>
+  {% seo title=false %}
   <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">

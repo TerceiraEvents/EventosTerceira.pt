@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Special Events - Terceira Events
+title: Special Events
 description: Special concerts, festivals, parties, and one-off events happening this week in Angra do Heroísmo, Terceira.
 lang_alt: /pt/special/
 ---

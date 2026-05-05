@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Contribuir - Eventos da Terceira"
+title: Contribuir
 description: Como contribuir para os Eventos da Terceira. Sugere um local, corrige um evento ou ajuda a fazer crescer o projeto.
 permalink: /pt/contribute/
 lang: pt

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blogue - Eventos da Terceira
+title: Blogue
 description: Notícias, guias e histórias sobre a vida na Terceira — desde reaberturas de espaços a sítios de comida favoritos e dicas para quem chega à ilha.
 permalink: /pt/blog/
 lang: pt
