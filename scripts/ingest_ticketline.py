@@ -56,7 +56,7 @@ LISTING_URL = f"{BASE_URL}/pesquisa?district=29"  # Ilha Terceira
 # not a stated crawling policy. We use a plain Firefox UA here scoped to
 # this module, keep request volume low (daily cron, ~8 requests, 0.5s
 # spacing), and honor the robots.txt disallow list. The site's own events
-# are public, and listing them on terceiraevents.github.io drives ticket
+# are public, and listing them on eventosterceira.pt drives ticket
 # sales back to Ticketline, so the use case is non-adversarial.
 TICKETLINE_USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0"

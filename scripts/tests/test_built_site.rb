@@ -194,7 +194,7 @@ sitemap_path = "#{SITE}/sitemap.xml"
 if File.exist?(sitemap_path)
   sm = File.read(sitemap_path)
   %w[/ /weekly/ /special/ /calendar/ /venues/ /blog/ /archive/].each do |path|
-    full = "https://terceiraevents.github.io#{path}"
+    full = "https://eventosterceira.pt#{path}"
     err(errors, "sitemap.xml does not list #{full}") unless sm.include?("<loc>#{full}</loc>")
   end
 else

@@ -36,7 +36,7 @@ ALLOW_CASES: list[str | None] = [
     "/assets/images/events/festival-teatro-2026.jpg",
     "https://github.com/user-attachments/assets/f4d41d0d-bf3a-43ba-8a55-1a2953f91998",
     # The format produced by scripts/rehost_image.py — must stay allowed.
-    "https://github.com/TerceiraEvents/TerceiraEvents.github.io/releases/download/event-images/escama-de-dragao-1-20260417-a1f76d95.jpg",
+    "https://github.com/TerceiraEvents/EventosTerceira/releases/download/event-images/escama-de-dragao-1-20260417-a1f76d95.jpg",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/foo.JPG/1280px-foo.JPG",
     # Anything under facebook.com that *points at a structural path* (photos, events, posts)
     # — these have a chance of being image-adjacent, whereas a bare page is not.

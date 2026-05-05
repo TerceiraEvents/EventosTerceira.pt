@@ -16,7 +16,7 @@ require "net/http"
 require "uri"
 require "json"
 
-BASE = ENV.fetch("BASE_URL", "https://terceiraevents.github.io")
+BASE = ENV.fetch("BASE_URL", "https://eventosterceira.pt")
 puts "Smoke-testing live site at #{BASE}"
 
 errors = []
