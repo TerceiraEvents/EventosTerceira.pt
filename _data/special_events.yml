@@ -1645,3 +1645,9 @@ Come join us and support our festivities!"
   tags:
     - kid-friendly
     - live-music
+
+- name: "TEST: PAT smoke test (please close, do not merge)"
+  date: 2099-01-03
+  time: "12:00"
+  venue: "Test venue (do not merge)"
+  description: "Automated smoke test to verify event-submit-worker GITHUB_TOKEN is still valid after the expiry notice. Please close without merging."
