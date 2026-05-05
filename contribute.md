@@ -20,7 +20,7 @@ description: How to contribute to Terceira Events. Suggest a venue, fix an event
     <span class="btn-title">Use the App</span>
     <span class="btn-desc">Tap "Suggest Event" in the mobile app</span>
   </a>
-  <a href="https://github.com/TerceiraEvents/EventosTerceira" class="homepage-btn btn-venues" target="_blank" rel="noopener">
+  <a href="https://github.com/TerceiraEvents/EventosTerceira.pt" class="homepage-btn btn-venues" target="_blank" rel="noopener">
     <span class="btn-icon">&#128187;</span>
     <span class="btn-title">Open a PR</span>
     <span class="btn-desc">Submit changes on GitHub (if you're a nerd)</span>
@@ -56,7 +56,7 @@ description: How to contribute to Terceira Events. Suggest a venue, fix an event
 <div class="venue-card">
   <h3>For a Special Event</h3>
   <div class="venue-regulars">
-    <p>Add an entry to <a href="https://github.com/TerceiraEvents/EventosTerceira/blob/main/_data/special_events.yml"><code>_data/special_events.yml</code></a>:</p>
+    <p>Add an entry to <a href="https://github.com/TerceiraEvents/EventosTerceira.pt/blob/main/_data/special_events.yml"><code>_data/special_events.yml</code></a>:</p>
 <pre><code>- date: 2026-06-15
   name: "Concert at Teatro Angrense"
   venue: Teatro Angrense
@@ -71,14 +71,14 @@ description: How to contribute to Terceira Events. Suggest a venue, fix an event
 </code></pre>
     <p>Only <code>date</code>, <code>name</code>, and <code>venue</code> are required. The <code>date</code> field must be in YYYY-MM-DD format.</p>
     <p><code>address</code> is the human-readable street address shown on the card. <code>map_url</code> is an optional Google Maps share link (e.g. <code>maps.app.goo.gl/...</code>) that powers the &quot;Open in Maps&quot; button &mdash; use it when you want to pin a precise location. If <code>map_url</code> is omitted, the button falls back to a Google Maps search of the address.</p>
-    <p>Add a <code>tags</code> list to help visitors filter the calendar. Available tags are defined in <a href="https://github.com/TerceiraEvents/EventosTerceira/blob/main/_data/event_tags.yml"><code>_data/event_tags.yml</code></a>: <code>kid-friendly</code>, <code>live-music</code>, <code>cinema</code>, <code>theater</code>, <code>dance</code>, <code>nightlife</code>, <code>karaoke</code>, <code>food-drink</code>, <code>exhibition</code>, <code>literature</code>, <code>workshop</code>, <code>free</code>, <code>outdoor</code>, <code>bullfighting</code>.</p>
+    <p>Add a <code>tags</code> list to help visitors filter the calendar. Available tags are defined in <a href="https://github.com/TerceiraEvents/EventosTerceira.pt/blob/main/_data/event_tags.yml"><code>_data/event_tags.yml</code></a>: <code>kid-friendly</code>, <code>live-music</code>, <code>cinema</code>, <code>theater</code>, <code>dance</code>, <code>nightlife</code>, <code>karaoke</code>, <code>food-drink</code>, <code>exhibition</code>, <code>literature</code>, <code>workshop</code>, <code>free</code>, <code>outdoor</code>, <code>bullfighting</code>.</p>
   </div>
 </div>
 
 <div class="venue-card">
   <h3>For a Weekly Recurring Event</h3>
   <div class="venue-regulars">
-    <p>Add an entry to <a href="https://github.com/TerceiraEvents/EventosTerceira/blob/main/_data/weekly.yml"><code>_data/weekly.yml</code></a> under the appropriate day:</p>
+    <p>Add an entry to <a href="https://github.com/TerceiraEvents/EventosTerceira.pt/blob/main/_data/weekly.yml"><code>_data/weekly.yml</code></a> under the appropriate day:</p>
 <pre><code>- day: Wednesday
   events:
     - name: Karaoke Night
@@ -93,7 +93,7 @@ description: How to contribute to Terceira Events. Suggest a venue, fix an event
 <div class="venue-card">
   <h3>For a New Venue</h3>
   <div class="venue-regulars">
-    <p>Edit <a href="https://github.com/TerceiraEvents/EventosTerceira/blob/main/venues.md"><code>venues.md</code></a> and add a new <code>venue-card</code> block following the existing pattern. Include the address, a Google Maps search link, description, and any relevant social media links.</p>
+    <p>Edit <a href="https://github.com/TerceiraEvents/EventosTerceira.pt/blob/main/venues.md"><code>venues.md</code></a> and add a new <code>venue-card</code> block following the existing pattern. Include the address, a Google Maps search link, description, and any relevant social media links.</p>
   </div>
 </div>
 
