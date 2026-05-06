@@ -18,6 +18,12 @@ lang_alt: /suggest/
   </div>
 
   <div class="form-field">
+    <label for="name_other">Nome do Evento em Inglês</label>
+    <input type="text" id="name_other" name="name_other" maxlength="200" placeholder="ex.: Concert at Teatro Angrense">
+    <small>Opcional &mdash; ajuda o evento a aparecer corretamente na versão inglesa do site. Deixa em branco se não tiveres tradução.</small>
+  </div>
+
+  <div class="form-field">
     <label for="date">Data <span class="required">*</span></label>
     <input type="date" id="date" name="date" required>
   </div>
@@ -47,6 +53,12 @@ lang_alt: /suggest/
   <div class="form-field">
     <label for="description">Descrição</label>
     <textarea id="description" name="description" rows="4" maxlength="2000" placeholder="Sobre o que é o evento? Bilheteira, convidados, qualquer coisa que as pessoas devam saber."></textarea>
+  </div>
+
+  <div class="form-field">
+    <label for="description_other">Descrição em Inglês</label>
+    <textarea id="description_other" name="description_other" rows="4" maxlength="2000" placeholder="What's the event about? Ticket info, guests, anything else people should know."></textarea>
+    <small>Opcional &mdash; ajuda o evento a aparecer corretamente na versão inglesa do site.</small>
   </div>
 
   <div class="form-field">
@@ -246,7 +258,7 @@ lang_alt: /suggest/
     e.preventDefault();
     msgBox.style.display = 'none';
 
-    var data = {};
+    var data = { lang: 'pt' };
     var tagList = [];
     new FormData(form).forEach(function(value, key) {
       if (key === 'tags[]') {
