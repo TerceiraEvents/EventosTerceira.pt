@@ -30,6 +30,13 @@ jobs:
       - name: Validate event tag vocabulary
         run: bundle exec ruby scripts/tests/test_tag_vocabulary.rb
 
+      # ── Blog post `lang:` front-matter ────────────────────────────
+      # Catches typos like `lang: portugese` and EN/PT filename ↔
+      # `lang:` mismatches before they break the bilingual permalinks
+      # or the mobile app's de-duplication of paired post files.
+      - name: Validate blog post lang front-matter
+        run: bundle exec ruby scripts/tests/test_post_lang.rb
+
       # ── Build the site ────────────────────────────────────────────
       # `bundle exec jekyll build` itself is the loudest test: any
       # Liquid syntax error, missing include, malformed YAML or front
