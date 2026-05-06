@@ -11,11 +11,15 @@ lang_alt: /blog/
 
 <p class="section-intro">Notícias, guias e histórias sobre a vida na Terceira — desde reaberturas de espaços a sítios de comida favoritos e dicas para quem chega à ilha.</p>
 
-<p class="section-intro" style="font-size: 0.9em; opacity: 0.85;"><em>Os artigos do blogue só estão disponíveis em inglês de momento. Estamos a trabalhar em traduções &mdash; se quiseres ajudar, vê a página <a href="{{ '/pt/contribute/' | relative_url }}">Contribuir</a>.</em></p>
-
-{% if site.posts.size > 0 %}
+{%- comment -%}
+  Filter to PT posts only — those with `lang: pt` and a
+  `/pt/blog/...` permalink. Untranslated EN posts show up on
+  `/blog/` instead of here.
+{%- endcomment -%}
+{%- assign posts_for_locale = site.posts | where: "lang", "pt" -%}
+{% if posts_for_locale.size > 0 %}
 <div class="post-list">
-  {% for post in site.posts %}
+  {% for post in posts_for_locale %}
   <article class="post-card">
     <p class="post-meta">
       {% if post.category %}<span class="post-category post-category-{{ post.category }}">{{ post.category }}</span>{% endif %}

@@ -4,6 +4,8 @@ title: "Twins is temporarily closed, but they say they're 'arriving very soon'"
 subtitle: "No reopening date confirmed. The team posted a message on Instagram acknowledging the silence and promising a return."
 date: 2026-04-30
 category: news
+lang: en
+lang_alt: /pt/blog/2026/twins-temporarily-closed/
 source_url: "https://www.instagram.com/p/DVRbiLSDDg7/"
 source_name: "Twins on Instagram"
 excerpt: "Twins (the Angra nightlife spot) is closed for now. The team posted a heartfelt message on Instagram saying they'll be back 'very soon', with no specific reopening date yet."
