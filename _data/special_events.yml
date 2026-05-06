@@ -1970,3 +1970,15 @@ Come join us and support our festivities!"
   tags:
     - kid-friendly
     - live-music
+
+- name: "TESTE: smoke test i18n (fechar, não fazer merge)"
+  name_pt: "TESTE: smoke test i18n (fechar, não fazer merge)"
+  name_en: "TEST: i18n smoke test (please close, do not merge)"
+  date: 2099-01-04
+  venue: "TEST VENUE"
+  address: "TEST ADDRESS"
+  description: "Submissão teste para verificar fluxo bilingue do worker."
+  description_pt: "Submissão teste para verificar fluxo bilingue do worker."
+  description_en: "Test submission to verify bilingual worker flow."
+  tags:
+    - free
