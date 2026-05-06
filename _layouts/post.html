@@ -1,6 +1,16 @@
 ---
 layout: default
 ---
+{%- assign post_lang = page.lang | default: "en" -%}
+{%- if post_lang == "pt" -%}
+  {%- assign source_label = "Fonte:" -%}
+  {%- assign back_label = "← Voltar ao Blogue" -%}
+  {%- assign back_url = "/pt/blog/" -%}
+{%- else -%}
+  {%- assign source_label = "Source:" -%}
+  {%- assign back_label = "← Back to Blog" -%}
+  {%- assign back_url = "/blog/" -%}
+{%- endif -%}
 <article class="post-page">
   <p class="post-meta">
     {% if page.category %}<span class="post-category post-category-{{ page.category }}">{{ page.category }}</span>{% endif %}
@@ -15,7 +25,7 @@ layout: default
 
   {% if page.source_url %}
   <p class="post-source">
-    Source:
+    {{ source_label }}
     <a href="{{ page.source_url }}" target="_blank" rel="noopener">
       {{ page.source_name | default: page.source_url }}
     </a>
@@ -23,7 +33,7 @@ layout: default
   {% endif %}
 
   <div class="archive-link-section">
-    <a href="{{ '/blog' | relative_url }}" class="view-all">← Back to Blog</a>
+    <a href="{{ back_url | relative_url }}" class="view-all">{{ back_label }}</a>
   </div>
 </article>
 
