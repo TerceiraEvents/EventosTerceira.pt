@@ -1288,6 +1288,9 @@
   time: "19:30"
   description: "Guided tour of the city center of Praia da Vitória. Registration until April 16 at turismo@cmpv.pt. Stops: Convento da Luz, Municipal Garden, Convento de Jesus, Convento da Graça, Convento das Chagas, Convent of St. Francis, Main Church (Igreja Matriz), Noble Hall of the Town Hall, Casa das Tias, Church of Misericórdia, Vitorino Nemésio House."
   description_pt: "Visita guiada ao centro histórico da Praia da Vitória. Inscrições até 16 de abril em turismo@cmpv.pt. Paragens: Convento da Luz, Jardim Municipal, Convento de Jesus, Convento da Graça, Convento das Chagas, Convento de São Francisco, Igreja Matriz, Salão Nobre dos Paços do Concelho, Casa das Tias, Igreja da Misericórdia, Casa Vitorino Nemésio."
+  tags:
+  - outdoor
+  - free
 
 - name: "Balas & Bolinhos - Só Mais uma coisa"
   date: 2026-04-17
@@ -1425,6 +1428,9 @@
   time: "21:00"
   description: "Live Music Night at The Vinyl Lounge. An unforgettable evening of live music celebrating the magic of vinyl and the passion of live performance! Live performances, a cozy intimate atmosphere, craft beers, cocktails, snacks, and a curated collection of vinyl records and rare finds. No tickets required — simply show up and enjoy! Seating is first-come, first-served."
   description_pt: "Noite de música ao vivo no The Vinyl Lounge. Uma noite inesquecível de música ao vivo a celebrar a magia do vinil e a paixão pelas atuações em palco! Atuações ao vivo, ambiente acolhedor e íntimo, cervejas artesanais, cocktails, snacks e uma colecção curada de discos em vinil e raridades. Sem bilhetes — basta aparecer e desfrutar! Lugares por ordem de chegada."
+  tags:
+  - live-music
+  - food-drink
 
 - date: 2026-04-11
   name: "K-9CAT Live"
@@ -1459,6 +1465,9 @@
   description: "An event for everyone — free entry! Admission to the Expo Atlantic Terroir is free, giving you access to different spaces, entertainment, and experiences throughout three days (April 10–12). Wine tastings with the purchase of the official glass. Wine-pairing dinners with prior registration."
   description_pt: "Um evento para todos — entrada gratuita! O acesso à Expo Atlantic Terroir é livre, dando-te acesso a vários espaços, animação e experiências ao longo de três dias (10 a 12 de abril). Provas de vinhos com a compra do copo oficial. Jantares vínicos com inscrição prévia."
   instagram: https://www.instagram.com/expoatlanticterroir/
+  tags:
+  - food-drink
+  - free
 
 - date: 2026-04-10
   name: "Festival Termómetro"
@@ -1512,6 +1521,7 @@
   instagram: https://www.instagram.com/p/DWcNTNtguSx/
   tags:
   - free
+  - literature
 
 - date: 2026-04-05
   name: "Brunch de Páscoa no Garden Club"
@@ -1968,5 +1978,6 @@ Come join us and support our festivities!"
 
     Vem juntar-te a nós e apoiar as nossas festas!
   tags:
+    - food-drink
     - kid-friendly
     - live-music
