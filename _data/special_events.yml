@@ -1970,3 +1970,10 @@ Come join us and support our festivities!"
   tags:
     - kid-friendly
     - live-music
+
+- name: "TEST: EN-only smoke (please close, do not merge)"
+  name_en: "TEST: EN-only smoke (please close, do not merge)"
+  date: 2099-01-05
+  venue: "TEST VENUE"
+  description: "EN-only submission to verify single-language path."
+  description_en: "EN-only submission to verify single-language path."
