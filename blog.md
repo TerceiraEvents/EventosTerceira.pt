@@ -11,12 +11,14 @@ lang_alt: /pt/blog/
 <p class="section-intro">News, guides, and stories about life on Terceira — from reopening announcements to favourite food spots and tips for newcomers.</p>
 
 {%- comment -%}
-  Filter to EN posts only. Posts without a `lang:` field are
-  treated as English (the default for posts authored before the
-  bilingual launch). PT posts have `lang: pt` and a permalink
-  under `/pt/blog/...` so they show on `/pt/blog/` instead.
+  Filter to EN/unlang posts (anything that isn't explicitly pt).
+  Posts without a `lang:` field are treated as English (the default
+  for posts authored before the bilingual launch). Liquid 4.0.4's
+  `where_exp` doesn't accept compound `or` / `and` expressions —
+  hence the single `!= 'pt'` form, which correctly captures both
+  'en' and nil (since nil != 'pt' in Liquid).
 {%- endcomment -%}
-{%- assign posts_for_locale = site.posts | where_exp: "post", "post.lang == nil or post.lang == 'en'" -%}
+{%- assign posts_for_locale = site.posts | where_exp: "post", "post.lang != 'pt'" -%}
 {% if posts_for_locale.size > 0 %}
 <div class="post-list">
   {% for post in posts_for_locale %}
