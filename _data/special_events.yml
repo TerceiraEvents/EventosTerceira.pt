@@ -1970,3 +1970,15 @@ Come join us and support our festivities!"
   tags:
     - kid-friendly
     - live-music
+
+- name: "TESTE: smoke da app móvel (fechar, não fazer merge)"
+  name_pt: "TESTE: smoke da app móvel (fechar, não fazer merge)"
+  name_en: "TEST: mobile app smoke test (please close, do not merge)"
+  date: 2099-01-06
+  venue: "TEST VENUE"
+  address: "TEST ADDRESS"
+  description: "Submissão da app para verificar fluxo bilingue móvel."
+  description_pt: "Submissão da app para verificar fluxo bilingue móvel."
+  description_en: "App submission to verify mobile bilingual flow."
+  tags:
+    - free
