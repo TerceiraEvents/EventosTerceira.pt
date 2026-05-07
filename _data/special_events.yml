@@ -389,9 +389,23 @@
   - workshop
   - free
 
+- date: 2026-05-09
+  name: "Noite de Lindy Hop — Workshop & Baile"
+  name_en: "Lindy Hop Night — Workshop & Social"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "20:30"
+  description: "Noite de Lindy Hop com Arianna Meschia. Workshop às 20:30, baile às 21:15. Aberto a todos os participantes, com ou sem treino no género. Participação livre."
+  description_en: "Lindy Hop night with Arianna Meschia. Workshop at 20:30, social dance at 21:15. Open to all, with or without prior training. Free participation."
+  tags:
+  - dance
+  - workshop
+  - free
+
 - name: "ESCAMA: de dragão 2#"
   date: 2026-05-09
-  time: "21:00"
+  time: "21:30"
   venue: "AMIT"
   address: "Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo"
   map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
@@ -1300,7 +1314,7 @@
   venue: "Meeting point at Largo da Luz / Largo do Conde da Praia da Vitória"
   time: "19:30"
   description: "Guided tour of the city center of Praia da Vitória. Registration until April 16 at turismo@cmpv.pt. Stops: Convento da Luz, Municipal Garden, Convento de Jesus, Convento da Graça, Convento das Chagas, Convent of St. Francis, Main Church (Igreja Matriz), Noble Hall of the Town Hall, Casa das Tias, Church of Misericórdia, Vitorino Nemésio House."
-  description_pt: "Visita guiada ao centro histórico da Praia da Vitória. Inscrições até 16 de abril em turismo@cmpv.pt. Paragens: Convento da Luz, Jardim Municipal, Convento de Jesus, Convento da Graça, Convento das Chagas, Convento de São Francisco, Igreja Matriz, Salão Nobre dos Paços do Concelho, Casa das Tias, Igreja da Misericórdia, Casa Vitorino Nemésio."
+  description_pt: "Visita guiada ao centro histórico da Praia da Vitória. Inscrições até 16 de abril em turismo@cmpv.pt. Paragens: Convento da Luz, Jardim Municipal, Convento de Jesus, Convento da Graça, Convento das Chagas, Convento de São Francisco, Igreja Matriz, Salão Nobre dos Paços do Concelho, Casa das Tias, Casa Vitorino Nemésio."
   tags:
   - outdoor
   - free
