@@ -71,6 +71,19 @@
   - free
 
 - date: 2026-05-15
+  name: "Grandioso Espetáculo Tauromáquico — Praça de Toiros da Ilha Terceira"
+  name_en: "Grand Bullfighting Spectacle — Terceira Bullring"
+  venue: Praça de Toiros da Ilha Terceira
+  address: Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Praça+de+Toiros+Ilha+Terceira
+  time: "19:30"
+  description: "Grandioso espetáculo tauromáquico na Praça de Toiros da Ilha Terceira. Cavaleiros: Tiago Pamplona e João Pamplona. Novillero: Vicente Sanchez. Bilhetes: 15€. Patrocinado pela Clubauto."
+  description_en: "Grand bullfighting spectacle at the Terceira bullring. Cavaleiros: Tiago Pamplona and João Pamplona. Novillero: Vicente Sanchez. Tickets: 15€. Sponsored by Clubauto."
+  tags:
+  - bullfighting
+  - outdoor
+
+- date: 2026-05-15
   name: "Poesia ao Crepúsculo — 90 Anos de Manuel Alegre"
   name_en: "Poetry at Dusk — 90 Years of Manuel Alegre"
   venue: "Lar Doce Livro"
