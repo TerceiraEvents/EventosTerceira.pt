@@ -557,26 +557,50 @@
   tags: []
 
 - date: 2026-05-17
-  name: "Dia Internacional Contra a Homofobia, Transfobia e Bifobia — Espaço AMIT"
-  name_en: "International Day Against Homophobia, Transphobia and Biphobia — Espaço AMIT"
+  name: "ESCAMA: de Borboleta — Dia 2 (Domingo)"
+  name_en: "ESCAMA: de Borboleta — Day 2 (Sunday)"
   venue: Espaço AMIT
   address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
   map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
-  description: "Espaço AMIT marks IDAHOTB (International Day Against Homophobia, Transphobia and Biphobia) with a two-day celebration on May 16–17."
-  description_pt: "O Espaço AMIT assinala o IDAHOTB (Dia Internacional Contra a Homofobia, Transfobia e Bifobia) com uma celebração de dois dias, a 16 e 17 de maio."
+  time: "21:30"
+  festival: "ESCAMA: de Borboleta"
+  description: "Dia 2 do festival ESCAMA: de Borboleta, em celebração do Dia Internacional contra a Homofobia, Transfobia e Bifobia. Curtas de David E. Teixeira (Sessão 2: Girls Night, Mannequin, Espelho Meu, Drama Queen), drag show + stand-up com Valley-Dation (São Miguel) e Jorgeous (Terceira), Isa Enes (Barcelona) e surpresa final. Bilhete diário 8€, passe 2 dias 15€ (shotgun.live)."
+  description_en: "Day 2 of the ESCAMA: de Borboleta festival, marking the International Day Against Homophobia, Transphobia and Biphobia. David E. Teixeira short films (Session 2: Girls Night, Mannequin, Espelho Meu, Drama Queen), drag show + stand-up with Valley-Dation (São Miguel) and Jorgeous (Terceira), Isa Enes (Barcelona), and a closing surprise. Day pass €8, 2-day pass €15 (shotgun.live)."
+  organizer: "AAIP — Associação de Artistas Independentes de Portugal"
+  features:
+  - "21:30 — Curtas de David E. Teixeira (Sessão 2)"
+  - "22:30 — Drag Show + Stand-up: Valley-Dation, Jorgeous"
+  - "00:00 — Isa Enes (Barcelona)"
+  - "01:00 — Surpresa"
   instagram: https://www.instagram.com/auditorioamit/
-  tags: []
+  tags:
+  - live-music
+  - cinema
+  - nightlife
 
 - date: 2026-05-16
-  name: "Dia Internacional Contra a Homofobia, Transfobia e Bifobia — Espaço AMIT"
-  name_en: "International Day Against Homophobia, Transphobia and Biphobia — Espaço AMIT"
+  name: "ESCAMA: de Borboleta — Dia 1 (Sábado)"
+  name_en: "ESCAMA: de Borboleta — Day 1 (Saturday)"
   venue: Espaço AMIT
   address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
   map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
-  description: "Espaço AMIT marks IDAHOTB (International Day Against Homophobia, Transphobia and Biphobia) with a two-day celebration on May 16–17."
-  description_pt: "O Espaço AMIT assinala o IDAHOTB (Dia Internacional Contra a Homofobia, Transfobia e Bifobia) com uma celebração de dois dias, a 16 e 17 de maio."
+  time: "18:30"
+  festival: "ESCAMA: de Borboleta"
+  description: "Dia 1 do festival ESCAMA: de Borboleta, em celebração do Dia Internacional contra a Homofobia, Transfobia e Bifobia. Conversa, curtas de David E. Teixeira (Sessão 1: Visiteur, She's Not Alone, In Utero, Final Gasp), poesia com Madalena Avila, Auto da Traineira do Inferno (Ricardo Ávila), MAÇARICO (São Miguel) e ASCA (São Miguel). Bilhete diário 8€, passe 2 dias 15€ (shotgun.live)."
+  description_en: "Day 1 of the ESCAMA: de Borboleta festival, marking the International Day Against Homophobia, Transphobia and Biphobia. Talk, David E. Teixeira short films (Session 1: Visiteur, She's Not Alone, In Utero, Final Gasp), poetry with Madalena Avila, Auto da Traineira do Inferno (Ricardo Ávila), MAÇARICO (São Miguel), and ASCA (São Miguel). Day pass €8, 2-day pass €15 (shotgun.live)."
+  organizer: "AAIP — Associação de Artistas Independentes de Portugal"
+  features:
+  - "18:30 — Conversa (tema e convidados a confirmar)"
+  - "22:00 — Curtas de David E. Teixeira (Sessão 1)"
+  - "23:00 — Poesia com Madalena Avila"
+  - "23:30 — Auto da Traineira do Inferno (Ricardo Ávila)"
+  - "00:00 — MAÇARICO (São Miguel)"
+  - "01:00 — ASCA (São Miguel)"
   instagram: https://www.instagram.com/auditorioamit/
-  tags: []
+  tags:
+  - live-music
+  - cinema
+  - nightlife
 
 - date: 2026-05-15
   name: "DesaFINO — Noite de Karaoke da AMIT"
