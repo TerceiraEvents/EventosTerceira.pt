@@ -458,6 +458,80 @@
   tags:
   - outdoor
 
+# Expo Praia 2026 — Praia da Vitória's annual exhibition of economic
+# activities of Terceira Island, May 15–17.
+- date: 2026-05-15
+  name: "Expo Praia 2026 — Dia 1 (Sexta-feira)"
+  name_en: "Expo Praia 2026 — Day 1 (Friday)"
+  venue: Praia da Vitória
+  address: Praia da Vitória
+  map_url: https://www.google.com/maps/search/?api=1&query=Praia+da+Vitória+Terceira
+  time: "17:30"
+  festival: "Expo Praia 2026"
+  description: "Abertura e inauguração oficial da Expo Praia 2026 — Exposição de Atividades Económicas da Ilha Terceira. Animação infantil 'O Gu e a Tita' (insuflável, cantinho das artes), workshop de construção de um catavento, animação musical itinerante 'Brava Charanga' e Noite de Comédia com JARC e AIRTON."
+  description_en: "Opening and official inauguration of Expo Praia 2026 — Terceira Island Exhibition of Economic Activities. Children's animation 'O Gu e a Tita' (inflatable, arts corner), pinwheel-building workshop, itinerant musical entertainment 'Brava Charanga', and Comedy Night with JARC and AIRTON."
+  organizer: "Câmara Municipal da Praia da Vitória"
+  features:
+  - "17:30 — Abertura e Inauguração Oficial"
+  - "18:00–22:00 — Animação Infantil 'O Gu e a Tita' (insuflável, cantinho das artes)"
+  - "18:00–21:00 — Workshop: Construção de um Catavento ('O Gu e a Tita')"
+  - "20:30 — Animação musical itinerante: Brava Charanga"
+  - "22:00 — Noite de Comédia: JARC e AIRTON"
+  tags:
+  - kid-friendly
+  - live-music
+  - outdoor
+  - exhibition
+
+- date: 2026-05-16
+  name: "Expo Praia 2026 — Dia 2 (Sábado)"
+  name_en: "Expo Praia 2026 — Day 2 (Saturday)"
+  venue: Praia da Vitória
+  address: Praia da Vitória
+  map_url: https://www.google.com/maps/search/?api=1&query=Praia+da+Vitória+Terceira
+  time: "12:00"
+  festival: "Expo Praia 2026"
+  description: "Dia 2 da Expo Praia 2026. Animação infantil (insuflável, pinturas faciais, modelagem de balões, Cantinho da Ciência — DIP Mágico — O Mar), construção de um 'Caça Sonhos', workshop de Medidas de Auto Proteção do SMPC, concurso 'Endémicas — Desenho em Turnos' para crianças e famílias, animação itinerante 'Bandilandia' e Noite de Folclore com Cantares da Eira, Sweet Hope e Fontes da Nossa Ilha."
+  description_en: "Day 2 of Expo Praia 2026. Children's animation (inflatable, face painting, balloon modeling, Science Corner — Magic DIP — The Sea), 'Dreamcatcher' build, Self-Protection Measures workshop by Municipal Civil Protection, 'Endemic Diseases — Drawing in Shifts' contest for children and families, itinerant entertainment 'Bandilandia', and Folklore Night with Cantares da Eira, Sweet Hope, and Fontes da Nossa Ilha."
+  organizer: "Câmara Municipal da Praia da Vitória"
+  features:
+  - "12:00 — Abertura"
+  - "15:00–22:00 — Animação Infantil 'O Gu e a Tita' (insuflável, pinturas faciais, modelagem de balões, Cantinho da Ciência — DIP Mágico — O Mar)"
+  - "15:00–17:00 — Construção de um 'Caça Sonhos' ('O Gu e a Tita')"
+  - "15:00–16:00 — Workshop: Medidas de Auto Proteção (SMPC)"
+  - "18:00–20:00 — Concurso 'Endémicas — Desenho em Turnos' (crianças e famílias)"
+  - "19:00 — Animação musical itinerante: Bandilandia"
+  - "22:00 — Noite de Folclore: Cantares da Eira, Sweet Hope, Fontes da Nossa Ilha"
+  tags:
+  - kid-friendly
+  - live-music
+  - outdoor
+  - exhibition
+
+- date: 2026-05-17
+  name: "Expo Praia 2026 — Dia 3 (Domingo)"
+  name_en: "Expo Praia 2026 — Day 3 (Sunday)"
+  venue: Praia da Vitória
+  address: Praia da Vitória
+  map_url: https://www.google.com/maps/search/?api=1&query=Praia+da+Vitória+Terceira
+  time: "12:00"
+  festival: "Expo Praia 2026"
+  description: "Dia de encerramento da Expo Praia 2026. Workshop de Costura Criativa 'Dotes Atelier', animação infantil (insuflável, pinturas faciais, modelagem de balões, atividades sensoriais), workshop 'Vem aí o Verão!' com construção de acessórios de beleza e/ou aviões, animação musical itinerante 'Azor Brass Charanga' e encerramento às 22h."
+  description_en: "Closing day of Expo Praia 2026. 'Dotes Atelier' creative sewing workshop, children's animation (inflatable, face painting, balloon modeling, sensory activities), 'Summer is coming!' workshop building beauty accessories and/or airplanes, itinerant musical entertainment 'Azor Brass Charanga', and closing ceremony at 22:00."
+  organizer: "Câmara Municipal da Praia da Vitória"
+  features:
+  - "12:00 — Abertura"
+  - "15:00–16:30 — Workshop de Costura Criativa ('Dotes Atelier')"
+  - "15:00–22:00 — Animação Infantil 'O Gu e a Tita' (insuflável, pinturas faciais, modelagem de balões, atividades sensoriais)"
+  - "16:00–18:00 — Workshop: Vem aí o Verão! (acessórios de beleza e/ou aviões)"
+  - "18:30 — Animação musical itinerante: Azor Brass Charanga"
+  - "22:00 — Encerramento da Expo Praia 2026"
+  tags:
+  - kid-friendly
+  - live-music
+  - outdoor
+  - exhibition
+
 - date: 2026-05-16
   name: "XXXVI Encontro de Coros da Ilha Terceira"
   name_en: "XXXVI Choir Meet of Terceira Island"
