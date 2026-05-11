@@ -125,6 +125,30 @@
   - live-music
   - outdoor
 
+- date: 2026-05-15
+  name: "Karaoke — Portas do Fundo (Noite 1)"
+  name_en: "Karaoke — Portas do Fundo (Night 1)"
+  venue: "Portas do Fundo Karaoke Bar"
+  map_url: https://www.google.com/maps/search/?api=1&query=Portas+do+Fundo+Karaoke+Bar+Terceira
+  time: "21:00"
+  description: "Noite de karaoke no Portas do Fundo. A partir das 21h. Boa música, boa companhia, boa disposição. 'Quanto mais melhor — se um dia não dá, vamos a dois!' — primeira de duas noites (15 e 16 de maio)."
+  description_en: "Karaoke night at Portas do Fundo. From 21:00. Good music, good company, good vibes. 'The more the merrier — if one night isn't enough, let's do two!' — first of two nights (May 15 and 16)."
+  tags:
+  - karaoke
+  - nightlife
+
+- date: 2026-05-16
+  name: "Karaoke — Portas do Fundo (Noite 2)"
+  name_en: "Karaoke — Portas do Fundo (Night 2)"
+  venue: "Portas do Fundo Karaoke Bar"
+  map_url: https://www.google.com/maps/search/?api=1&query=Portas+do+Fundo+Karaoke+Bar+Terceira
+  time: "21:00"
+  description: "Segunda noite de karaoke no Portas do Fundo. A partir das 21h. Boa música, boa companhia, boa disposição."
+  description_en: "Second karaoke night at Portas do Fundo. From 21:00. Good music, good company, good vibes."
+  tags:
+  - karaoke
+  - nightlife
+
 - date: 2026-05-16
   name: "Encontros de Origami — Pássaros"
   name_en: "Origami Meet-ups — Birds"
