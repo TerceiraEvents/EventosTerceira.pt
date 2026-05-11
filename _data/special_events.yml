@@ -111,6 +111,20 @@
   - live-music
   - free
 
+- date: 2026-05-15
+  name: "The Red Hot Tribute — 23º aniversário do Terceiraçor Moto Clube"
+  name_en: "The Red Hot Tribute — Terceiraçor Moto Clube 23rd anniversary"
+  venue: "Parque de Campismo das Cinco Ribeiras"
+  address: "Cinco Ribeiras, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Parque+de+Campismo+das+Cinco+Ribeiras+Terceira
+  time: "22:00"
+  description: "Concerto tributo aos Red Hot Chili Peppers no Parque de Campismo das Cinco Ribeiras, no âmbito do 23.º aniversário do Terceiraçor Moto Clube. A energia dos Red Hot Chili Peppers ao vivo — os maiores hits, energia, atitude e diversão."
+  description_en: "Red Hot Chili Peppers tribute concert at Cinco Ribeiras campsite, celebrating the 23rd anniversary of Terceiraçor Moto Clube. The energy of the Red Hot Chili Peppers live — the biggest hits, energy, attitude, and fun."
+  organizer: "Terceiraçor Moto Clube"
+  tags:
+  - live-music
+  - outdoor
+
 - date: 2026-05-16
   name: "Encontros de Origami — Pássaros"
   name_en: "Origami Meet-ups — Birds"
