@@ -234,6 +234,24 @@
   - workshop
   - kid-friendly
 
+- date: 2026-05-23
+  name: "Aikido — Aula Aberta com Mário Medeiros"
+  name_en: "Aikido — Open Class with Mário Medeiros"
+  venue: "Ginásio da ADA (Academia Desportiva dos Açores)"
+  address: "Jardim dos Cortes Reais, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Jardim+dos+Cortes+Reais+Angra+do+Heroísmo
+  time: "09:00–12:00 / 15:00–18:00"
+  description: "Aula aberta de Aikido, a arte marcial que desenvolve corpo, mente e espírito. Para jovens, adultos e séniores — sem limite de idade. Aula ministrada por Mário Medeiros, responsável técnico da Associação de Aikido dos Açores. Defesa pessoal eficaz, desenvolvimento físico (coordenação, força, equilíbrio, flexibilidade) e harmonia interior. Inscrição e informações: a.aikidoacores@gmail.com."
+  description_en: "Open Aikido class — the martial art that develops body, mind, and spirit. Open to youth, adults, and seniors — no age limit. Taught by Mário Medeiros, technical lead of the Aikido Association of the Azores. Effective self-defence, physical development (coordination, strength, balance, flexibility), and inner harmony. Info and registration: a.aikidoacores@gmail.com."
+  organizer: "ADA — Academia Desportiva dos Açores / Associação de Aikido dos Açores"
+  features:
+  - "09:00–12:00 — Sessão da manhã"
+  - "15:00–18:00 — Sessão da tarde"
+  instagram: https://www.facebook.com/aikidoacores
+  tags:
+  - workshop
+  - kid-friendly
+
 - date: 2026-05-24
   name: "Concerto 3HP"
   name_en: "Concert by 3HP"
