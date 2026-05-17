@@ -13,6 +13,15 @@
 #   reservation_label — button text (default "Make a dinner reservation")
 #   schema_type       — Schema.org subtype for JSON-LD (default LocalBusiness)
 #   telephone         — E.164 phone for JSON-LD (used when reservation_phone is set, defaults to a normalised reservation_phone)
+#   category          — section slug used to group venues on the page.
+#                       Known slugs (label_en / label_pt):
+#                         arts-culture     Arts & Culture / Arte e Cultura
+#                         food-drink       Food & Drink / Comida e Bebida
+#                         nightlife        Bars & Nightlife / Bares e Vida Noturna
+#                         sports-outdoor   Sports & Outdoor / Desporto e Ar Livre
+#                         civic            Civic / Cívico
+#                       Anything else (or missing) falls under "Other / Outros".
+#                       Section labels and ordering live in venues.md.
 #
 # Localized siblings (optional, used when page lang resolves to that
 # locale): `description_pt`, `description_after_weekly_pt`,
@@ -36,6 +45,7 @@
   description_after_weekly: "Also hosts live concerts and special events throughout the year."
   description_after_weekly_pt: "Também recebe concertos ao vivo e eventos especiais ao longo do ano."
   schema_type: BarOrPub
+  category: nightlife
 
 - name: "The Texan / The Garden Club"
   address: "Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo"
@@ -59,6 +69,7 @@
   reservation_label: "Make a dinner reservation"
   reservation_label_pt: "Reservar uma mesa"
   schema_type: Restaurant
+  category: food-drink
 
 - name: "Sala 319"
   address: "Praça Almeida Garrett 11, Angra do Heroísmo"
@@ -70,6 +81,7 @@
   reservation_phone: "+351 967 021 868"
   telephone: "+351967021868"
   schema_type: Restaurant
+  category: food-drink
 
 - name: "Wine Not"
   address: "Rua Direita 8, Angra do Heroísmo"
@@ -84,6 +96,7 @@
   links:
     - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/winenot.terceira/" }
   schema_type: BarOrPub
+  category: nightlife
 
 - name: "Porta 42"
   address: "Rua de São João, Angra do Heroísmo"
@@ -104,6 +117,7 @@
   links:
     - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/porta_42/" }
   schema_type: BarOrPub
+  category: nightlife
 
 - name: "Lar Doce Livro"
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -116,6 +130,7 @@
       name: "Clube de Leitura (Reading Club) at 18:15"
       name_pt: "Clube de Leitura, às 18:15"
   schema_type: Store
+  category: arts-culture
 
 - name: "Teatro Angrense"
   address: "Rua da Esperança 48-52, 9700-073 Angra do Heroísmo"
@@ -126,6 +141,7 @@
     - { label: "Website", label_pt: "Site", url: "https://angradoheroismo.pt/local/teatro-angrense-2/" }
     - { label: "Tickets (Ticketline)", label_pt: "Bilhetes (Ticketline)", url: "https://ticketline.sapo.pt/en/salas/sala/1293" }
   schema_type: PerformingArtsTheater
+  category: arts-culture
 
 - name: "CCCAH (Centro Cultural e de Congressos)"
   address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
@@ -136,6 +152,7 @@
     - { label: "Website", label_pt: "Site", url: "https://angradoheroismo.pt/local/centro-cultural-e-de-congressos-de-angra-do-heroismo/" }
     - { label: "Tickets (Ticketline)", label_pt: "Bilhetes (Ticketline)", url: "https://ticketline.sapo.pt/en/salas/sala/1294" }
   schema_type: PerformingArtsTheater
+  category: arts-culture
 
 - name: "Havanna Club"
   address: "Porto das Pipas 154, 9700-167 Angra do Heroísmo"
@@ -147,6 +164,7 @@
   reservation_phone: "917 746 773"
   telephone: "+351917746773"
   schema_type: BarOrPub
+  category: nightlife
 
 - name: "Casa do Sal / Oficina d'Angra"
   address: "Estrada Gaspar Corte-Real, Angra do Heroísmo"
@@ -156,6 +174,7 @@
   links:
     - { label: "Facebook", label_pt: "Facebook", url: "https://www.facebook.com/oficinadangra/" }
   schema_type: LocalBusiness
+  category: arts-culture
 
 - name: "Paços do Concelho (Town Hall)"
   name_pt: "Paços do Concelho"
@@ -164,6 +183,7 @@
   description: "The historic town hall at Praça Velha square. Hosts book presentations, exhibitions, and civic cultural events."
   description_pt: "A câmara municipal histórica na Praça Velha. Recebe apresentações de livros, exposições e eventos culturais cívicos."
   schema_type: GovernmentBuilding
+  category: civic
 
 - name: "Praça de Toiros da Ilha Terceira"
   address: "Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo"
@@ -171,6 +191,7 @@
   description: "Terceira's bullring, home to the Arraial Taurino and traditional bullfighting festivals during the season (May–October)."
   description_pt: "A praça de toiros da Terceira, casa do Arraial Taurino e dos festivais tradicionais de tauromaquia durante a época (maio a outubro)."
   schema_type: StadiumOrArena
+  category: sports-outdoor
 
 - name: "Auditório AMIT (Academia Musical da Ilha Terceira)"
   address: "Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo"
@@ -180,3 +201,37 @@
   links:
     - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/auditorioamit/" }
   schema_type: PerformingArtsTheater
+  category: arts-culture
+
+- name: "Museu de Angra do Heroísmo"
+  name_en: "Angra do Heroísmo Museum"
+  address: "Ladeira de São Francisco, 9700-182 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo"
+  description: "Regional museum housed in the former Convent of São Francisco. Permanent exhibition 'Of Sea and Land: A History of the Atlantic' covers the role of Terceira and the Azores in Portuguese history; the museum also programs temporary exhibitions, talks, concerts (Sundays with Music), book clubs, and family activities. Closed Mondays and public holidays."
+  description_pt: "Museu regional instalado no antigo Convento de São Francisco. Exposição permanente 'Do Mar e da Terra: Uma História no Atlântico' sobre o papel da Terceira e dos Açores na história portuguesa; programa também exposições temporárias, palestras, concertos (Domingos com Música), clubes de leitura e atividades para famílias. Encerra à segunda-feira e feriados."
+  links:
+    - { label: "Website", label_pt: "Site", url: "https://museu-angra.cultura.azores.gov.pt/" }
+    - { label: "Facebook", label_pt: "Facebook", url: "https://www.facebook.com/MuseuDeAngraDoHeroismo/" }
+  schema_type: Museum
+  category: arts-culture
+
+- name: "Terceira Weaving Cabin / Ebru Art Terceira"
+  address: "EN1-1A 57, 9700 Terceira (exact directions provided on booking)"
+  address_pt: "EN1-1A 57, 9700 Terceira (indicações exatas fornecidas após reserva)"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Terceira+Weaving+Cabin+Ebru+Art+Terceira"
+  description: "Small-group craft studio on Terceira offering Ebru water marbling (paint on water, transfer to fabric, paper, wood, or ceramic) and private weaving lessons on traditional looms. Beginners and experienced weavers welcome; tea or coffee served on the covered terrace. Booking required; sessions cap at four people."
+  description_pt: "Atelier de pequenos grupos na Terceira com workshops de Ebru (pintura sobre água, transferência para tecido, papel, madeira ou cerâmica) e aulas privadas de tecelagem em teares tradicionais. Aberto a iniciantes e tecelões experientes; chá ou café servidos na esplanada coberta. Marcação prévia; sessões até quatro pessoas."
+  weekly:
+    - day: "Tuesday, Thursday, Saturday"
+      day_pt: "Terça, Quinta, Sábado"
+      name: "Weaving lessons, 14:00–17:00 (by appointment)"
+      name_pt: "Aulas de tecelagem, 14:00–17:00 (mediante marcação)"
+  description_after_weekly: "Ebru sessions run by appointment year-round (typical start 14:00). Bookings via Instagram, Viator, or Pelago."
+  description_after_weekly_pt: "Sessões de Ebru por marcação ao longo do ano (início habitual às 14:00). Reservas pelo Instagram, Viator ou Pelago."
+  links:
+    - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/ebruartterceira/" }
+    - { label: "Viator (Ebru)", label_pt: "Viator (Ebru)", url: "https://www.viator.com/tours/Terceira/Ebru-Art-Water-Marbling/d4539-314168P2" }
+    - { label: "Pelago (Ebru)", label_pt: "Pelago (Ebru)", url: "https://www.pelago.com/en/activity/p68yxvyvi-painting-on-water-ebru-art-water-marbling-terceira/" }
+    - { label: "Power Traveller (Weaving)", label_pt: "Power Traveller (Tecelagem)", url: "https://powertraveller.com/private-small-group-weaving-activity-in-terceira-island/" }
+  schema_type: LocalBusiness
+  category: arts-culture

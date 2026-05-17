@@ -12,7 +12,32 @@ lang_alt: /venues/
 
 <p class="section-intro">Bares, restaurantes, espaços culturais e outros locais que recebem eventos em Angra do Heroísmo.</p>
 
-{% for venue in site.data.venues %}
+{%- comment -%}
+  Mantém os slugs e a ordem em sintonia com `venues.md` (EN). Qualquer
+  `category` desconhecida (ou em falta) cai em "outros" e é renderizada
+  no fim.
+{%- endcomment -%}
+{% assign category_slugs = "arts-culture,food-drink,nightlife,sports-outdoor,civic,other" | split: "," %}
+{% assign category_labels_pt = "Arte e Cultura,Comida e Bebida,Bares e Vida Noturna,Desporto e Ar Livre,Cívico,Outros" | split: "," %}
+
+{% for category_slug in category_slugs %}
+  {%- if category_slug == "other" -%}
+    {%- assign category_venues = "" | split: "," -%}
+    {%- for venue in site.data.venues -%}
+      {%- assign vc = venue.category | default: "other" -%}
+      {%- unless category_slugs contains vc and vc != "other" -%}
+        {%- assign category_venues = category_venues | push: venue -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  {%- else -%}
+    {%- assign category_venues = site.data.venues | where: "category", category_slug -%}
+  {%- endif -%}
+  {%- if category_venues.size == 0 -%}{%- continue -%}{%- endif -%}
+  {%- assign category_label = category_labels_pt[forloop.index0] -%}
+
+<h3 class="venue-category" id="category-{{ category_slug }}">{{ category_label }}</h3>
+
+{% for venue in category_venues %}
 {% assign v_name = venue.name_pt | default: venue.name %}
 {% assign v_address = venue.address_pt | default: venue.address %}
 {% assign v_description = venue.description_pt | default: venue.description %}
@@ -80,4 +105,5 @@ lang_alt: /venues/
   "sameAs": {{ sameas | jsonify }}{% endif %}
 }
 </script>
+{% endfor %}
 {% endfor %}

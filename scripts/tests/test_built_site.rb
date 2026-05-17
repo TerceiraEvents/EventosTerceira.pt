@@ -139,13 +139,16 @@ end
 # Catches: regression in `_includes/postal_address.html` that would
 # silently degrade venue address structure.
 
+VENUE_SCHEMA_TYPES = %w[
+  LocalBusiness BarOrPub Restaurant PerformingArtsTheater MovieTheater
+  Store StadiumOrArena GovernmentBuilding Museum ArtGallery
+].freeze
+
 venue_path = "#{SITE}/venues/index.html"
 if File.exist?(venue_path)
   html = File.read(venue_path)
   blocks = html.scan(/<script\s+type=["']application\/ld\+json["']>(.*?)<\/script>/m).map { |m| JSON.parse(m[0]) rescue nil }
-  venues = blocks.compact.select do |b|
-    %w[LocalBusiness BarOrPub Restaurant PerformingArtsTheater MovieTheater Store StadiumOrArena GovernmentBuilding].include?(b["@type"])
-  end
+  venues = blocks.compact.select { |b| VENUE_SCHEMA_TYPES.include?(b["@type"]) }
   err(errors, "/venues/: expected at least 1 LocalBusiness-typed JSON-LD block, found 0") if venues.empty?
   venues.each_with_index do |v, i|
     err(errors, "/venues/: venue[#{i}] (#{(v["name"] || "?")[0, 40]}) missing name") unless v["name"]
@@ -155,6 +158,66 @@ if File.exist?(venue_path)
       err(errors, "/venues/: venue[#{i}] address.@type must be PostalAddress, got #{addr["@type"].inspect}") unless addr["@type"] == "PostalAddress"
       err(errors, "/venues/: venue[#{i}] addressCountry must be 'PT', got #{addr["addressCountry"].inspect}") unless addr["addressCountry"] == "PT"
     end
+  end
+end
+
+# ─────────────────────────────────────────────────────────────────────
+# 4b. Venues page: every venue card sits under a category section
+# ─────────────────────────────────────────────────────────────────────
+# Sections live in `venues.md` / `pt/venues.md` and are driven by the
+# `category:` field on each entry in `_data/venues.yml`. Pin the EN
+# and PT labels so a typo or untranslated label fails CI loudly, and
+# cross-check that the YAML categories actually surface on the page.
+
+require "yaml"
+venues_data = YAML.load_file("_data/venues.yml", permitted_classes: [Date, Time], aliases: true) rescue YAML.load_file("_data/venues.yml")
+yaml_categories = venues_data.map { |v| v["category"] }.compact.uniq
+
+EXPECTED_VENUE_CATEGORY_LABELS = {
+  "#{SITE}/venues/index.html" => {
+    "arts-culture"   => "Arts &amp; Culture",
+    "food-drink"     => "Food &amp; Drink",
+    "nightlife"      => "Bars &amp; Nightlife",
+    "sports-outdoor" => "Sports &amp; Outdoor",
+    "civic"          => "Civic",
+    "other"          => "Other",
+  },
+  "#{SITE}/pt/venues/index.html" => {
+    "arts-culture"   => "Arte e Cultura",
+    "food-drink"     => "Comida e Bebida",
+    "nightlife"      => "Bares e Vida Noturna",
+    "sports-outdoor" => "Desporto e Ar Livre",
+    "civic"          => "Cívico",
+    "other"          => "Outros",
+  },
+}.freeze
+
+EXPECTED_VENUE_CATEGORY_LABELS.each do |path, labels|
+  next unless File.exist?(path)
+  rel = path.sub(%r{^#{SITE}/?}, "/")
+  html = File.read(path)
+  # Each <h3 class="venue-category"> should match a category we have venues for.
+  rendered_sections = html.scan(/<h3 class="venue-category" id="category-([^"]+)">([^<]+)<\/h3>/)
+  rendered_slugs = rendered_sections.map(&:first)
+  yaml_categories.each do |slug|
+    err(errors, "#{rel}: venues data has category '#{slug}' but no <h3> section renders for it") unless rendered_slugs.include?(slug)
+  end
+  rendered_sections.each do |slug, label|
+    expected = labels[slug]
+    if expected.nil?
+      err(errors, "#{rel}: venues page rendered an unknown category '#{slug}' — add it to EXPECTED_VENUE_CATEGORY_LABELS or remove from data")
+    elsif label.strip != expected
+      err(errors, "#{rel}: category '#{slug}' label mismatch — got #{label.strip.inspect}, expected #{expected.inspect}")
+    end
+  end
+  # No venue card should appear before the first category header (every
+  # venue must live under a section, including Arts & Culture which is
+  # always first).
+  if (h3_idx = html.index('<h3 class="venue-category"'))
+    pre = html[0...h3_idx]
+    err(errors, "#{rel}: venue-card appears before the first <h3 class=\"venue-category\"> header") if pre.include?('class="venue-card"')
+  else
+    err(errors, "#{rel}: no <h3 class=\"venue-category\"> sections rendered at all")
   end
 end
 
