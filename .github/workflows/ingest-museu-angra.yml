@@ -1,0 +1,100 @@
+name: ingest Museu de Angra events
+
+# Daily ingestion of events from the Museu de Angra do Heroísmo
+# (https://museu-angra.cultura.azores.gov.pt/) into _data/special_events.yml.
+# Tries the WordPress + The Events Calendar REST API first, falls back to
+# the plugin's iCal endpoint. Opens a pull request with any new events for
+# human review before they land on main.
+#
+# See scripts/ingest_museu_angra.py for parsing logic and endpoint order.
+
+on:
+  schedule:
+    # 07:00 UTC — staggered 30 min after Ticketline's 06:30 UTC ingest so
+    # the Tribe events have a chance to dedup against any same-day cinema
+    # cross-listings.
+    - cron: "0 7 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: ingest-museu-angra
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install --quiet icalendar==7.0.3 pyyaml==6.0.2
+
+      - name: Run ingestion script
+        run: python scripts/ingest_museu_angra.py
+
+      - name: Validate _data/special_events.yml
+        # Mirror of the check in .github/workflows/validate-events.yml so
+        # we never open a PR with a broken file.
+        run: |
+          ruby -ryaml -rdate <<'RUBY'
+          path = "_data/special_events.yml"
+          data = YAML.safe_load(File.read(path), permitted_classes: [Date, Time])
+          abort "#{path}: expected top-level list, got #{data.class}" unless data.is_a?(Array)
+          errors = []
+          data.each_with_index do |event, i|
+            name = event["name"] || "(unnamed ##{i})"
+            date = event["date"]
+            if date.nil?
+              errors << "#{name}: missing `date` field"
+              next
+            end
+            unless date.is_a?(Date)
+              errors << "#{name}: `date` must be an unquoted ISO date, got #{date.class}"
+            end
+          end
+          if errors.any?
+            warn "event data validation failed:"
+            errors.each { |e| warn "  - #{e}" }
+            exit 1
+          end
+          puts "#{path}: OK (#{data.size} events)"
+          RUBY
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/museu-angra-ingest
+          delete-branch: true
+          commit-message: "Auto-ingest new events from Museu de Angra"
+          title: "Auto-ingest: new events from Museu de Angra"
+          body: |
+            Automated ingestion from https://museu-angra.cultura.azores.gov.pt/
+
+            This PR was opened by `.github/workflows/ingest-museu-angra.yml`.
+            Review the added events (titles, descriptions, tags), and merge.
+
+            **Coverage:** Museum events from The Events Calendar plugin —
+            exhibitions, Domingos com Música concerts, talks, book clubs,
+            family workshops, and the annual Museum Day / Night programmes.
+
+            **Known limitations:**
+            - The museum's site uses JavaScript-rendered HTML on `/agenda/`,
+              so we only ingest from the REST API and iCal endpoints. If
+              both stop returning events, the script no-ops; switch to a
+              JS-rendered scrape in a follow-up.
+            - Default tags are `exhibition` + `free` with keyword bumps
+              (concerto → live-music, palestra → literature, oficina →
+              workshop, família → kid-friendly). Spot-check before merging.
+            - Per-run cap: 20 events. Re-runs backfill the rest.
+
+            Script: `scripts/ingest_museu_angra.py`
+          labels: |
+            automated
+            events

@@ -1,0 +1,94 @@
+name: ingest CMPV events
+
+# Daily ingestion of events from the Câmara Municipal da Praia da Vitória
+# (https://www.cmpv.pt/) into _data/special_events.yml. The script probes a
+# short list of common iCal endpoints (events.ics, /eventos/?ical=1, ...)
+# and uses whichever returns parseable VEVENTs. CMAH's municipal iCal does
+# not cover Praia da Vitória; this fills that gap.
+#
+# See scripts/ingest_cmpv.py for endpoint discovery and parsing logic.
+
+on:
+  schedule:
+    # 07:30 UTC — staggered 30 min after the museum ingest at 07:00.
+    - cron: "30 7 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: ingest-cmpv
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install --quiet icalendar==7.0.3 pyyaml==6.0.2
+
+      - name: Run ingestion script
+        run: python scripts/ingest_cmpv.py
+
+      - name: Validate _data/special_events.yml
+        run: |
+          ruby -ryaml -rdate <<'RUBY'
+          path = "_data/special_events.yml"
+          data = YAML.safe_load(File.read(path), permitted_classes: [Date, Time])
+          abort "#{path}: expected top-level list, got #{data.class}" unless data.is_a?(Array)
+          errors = []
+          data.each_with_index do |event, i|
+            name = event["name"] || "(unnamed ##{i})"
+            date = event["date"]
+            if date.nil?
+              errors << "#{name}: missing `date` field"
+              next
+            end
+            unless date.is_a?(Date)
+              errors << "#{name}: `date` must be an unquoted ISO date, got #{date.class}"
+            end
+          end
+          if errors.any?
+            warn "event data validation failed:"
+            errors.each { |e| warn "  - #{e}" }
+            exit 1
+          end
+          puts "#{path}: OK (#{data.size} events)"
+          RUBY
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/cmpv-ingest
+          delete-branch: true
+          commit-message: "Auto-ingest new events from CMPV"
+          title: "Auto-ingest: new events from CMPV (Praia da Vitória)"
+          body: |
+            Automated ingestion from https://www.cmpv.pt/
+
+            This PR was opened by `.github/workflows/ingest-cmpv.yml`. Review
+            the added events, edit descriptions/tags as needed, then merge.
+
+            **Coverage:** Municipal events for Praia da Vitória — the half
+            of Terceira that CMAH's iCal doesn't cover. Includes Cine Clube
+            sessions, Festas da Praia programming, civic exhibitions, and
+            municipal sport/cultural happenings.
+
+            **Known limitations:**
+            - The script probes several common iCal endpoints and uses the
+              first that returns VEVENTs. If CMPV changes their CMS, the
+              script will start no-opping; we'll update the URL list.
+            - Per-run cap: 20 events. Re-runs backfill the rest.
+            - Descriptions are truncated to ~500 characters.
+
+            Script: `scripts/ingest_cmpv.py`
+          labels: |
+            automated
+            events
