@@ -192,6 +192,51 @@
   - free
   - kid-friendly
 
+- date: 2026-05-18
+  name: "Dia Internacional dos Museus — Museu de Angra do Heroísmo"
+  name_en: "International Museum Day — Angra do Heroísmo Museum"
+  venue: "Museu de Angra do Heroísmo"
+  address: "Ladeira de São Francisco, 9700-182 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Heroísmo
+  time: "12:00"
+  festival: "Dia e Noite dos Museus 2026"
+  description: "Programa do Dia Internacional dos Museus no Museu de Angra do Heroísmo. Almoço no claustro pelo Ambientes com Sabores (9€, reservas até 295 240 802 / museu.angra.info@azores.gov.pt), inauguração da Sala Frederico Vasconcelos, palestra aberta com o Prof. Nuno Martins (Departamento de Economia e Gestão da UAç) e abertura da exposição 'Tataros: o som íntimo das cordas'."
+  description_en: "International Museum Day programme at the Angra do Heroísmo Museum. Lunch in the cloister by Ambientes com Sabores (€9, reservations 295 240 802 / museu.angra.info@azores.gov.pt), inauguration of the Frederico Vasconcelos Room, open lecture by Prof. Nuno Martins (UAç Economics and Management), and the opening of the exhibition 'Tataros: o som íntimo das cordas'."
+  organizer: "Museu de Angra do Heroísmo"
+  features:
+  - "12:00–14:30 — Almoço no claustro (Ambientes com Sabores, 9€, reserva obrigatória)"
+  - "18:00 — Inauguração da Sala Frederico Vasconcelos"
+  - "19:00 — Palestra aberta: Prof. Nuno Martins (UAç)"
+  - "20:00 — Inauguração da exposição 'Tataros: o som íntimo das cordas'"
+  instagram: https://www.facebook.com/MuseuDeAngraDoHeroismo/
+  tags:
+  - exhibition
+  - literature
+  - free
+  - food-drink
+
+- date: 2026-05-19
+  name: "Noite dos Museus — Museu de Angra do Heroísmo"
+  name_en: "Night of Museums — Angra do Heroísmo Museum"
+  venue: "Museu de Angra do Heroísmo"
+  address: "Ladeira de São Francisco, 9700-182 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Heroísmo
+  time: "14:00"
+  festival: "Dia e Noite dos Museus 2026"
+  description: "Celebração da Noite dos Museus no Museu de Angra do Heroísmo. Visitas guiadas para famílias à exposição 'Do Mar e da Terra… uma história no Atlântico' às 14h e 16h, audições de alunos das classes de música e concerto de guitarra ao longo da tarde."
+  description_en: "Night of Museums at the Angra do Heroísmo Museum. Family-guided tours of the 'Do Mar e da Terra… uma história no Atlântico' exhibition at 14:00 and 16:00, music students' auditions, and an afternoon guitar concert."
+  organizer: "Museu de Angra do Heroísmo"
+  features:
+  - "14:00 — Visita guiada para famílias: 'Do Mar e da Terra…'"
+  - "16:00 — Visita guiada para famílias: 'Do Mar e da Terra…'"
+  - "15:00–18:00 — Audições dos alunos das classes de música e concerto de guitarra"
+  instagram: https://www.facebook.com/MuseuDeAngraDoHeroismo/
+  tags:
+  - exhibition
+  - live-music
+  - kid-friendly
+  - free
+
 - date: 2026-05-19
   name: "Cinema — Lagoa: Memórias de Abril"
   name_en: "Cinema — Lagoa: Memórias de Abril"
