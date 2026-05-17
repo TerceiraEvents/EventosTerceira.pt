@@ -280,15 +280,6 @@
   schema_type: NightClub
   category: nightlife
 
-- name: "Portas do Fundo Karaoke Bar"
-  address: "Angra do Heroísmo (exact address pending)"
-  address_pt: "Angra do Heroísmo (morada exata por confirmar)"
-  map_url: "https://www.google.com/maps/search/?api=1&query=Portas+do+Fundo+Karaoke+Bar+Terceira"
-  description: "Karaoke bar on Terceira hosting regular sing-along nights from 21:00. Good music, good company, good vibes."
-  description_pt: "Bar de karaoke na Terceira, com noites regulares a partir das 21h. Boa música, boa companhia, boa disposição."
-  schema_type: BarOrPub
-  category: nightlife
-
 - name: "Ginásio da ADA (Academia Desportiva dos Açores)"
   address: "Jardim dos Cortes Reais, Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Academia+Desportiva+dos+A%C3%A7ores+Angra+do+Hero%C3%ADsmo"
