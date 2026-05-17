@@ -193,11 +193,11 @@
   schema_type: StadiumOrArena
   category: sports-outdoor
 
-- name: "Auditório AMIT (Academia Musical da Ilha Terceira)"
+- name: "Auditório AMIT / Espaço AMIT (Academia Musical da Ilha Terceira)"
   address: "Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Hero%C3%ADsmo"
-  description: "Auditorium of the Musical Academy of Terceira Island. Hosts concerts, recitals, jazz courses, and choral performances."
-  description_pt: "Auditório da Academia Musical da Ilha Terceira. Recebe concertos, recitais, cursos de jazz e atuações corais."
+  description: "Auditorium and event space of the Musical Academy of Terceira Island. The auditorium hosts concerts, recitals, jazz courses, and choral performances; Espaço AMIT (the bar/event area, typically open Thu/Fri/Sat 20:00–02:00) runs DesaFINO karaoke nights, DJ sets, film screenings, and themed evenings like the Dragão metal nights."
+  description_pt: "Auditório e espaço de eventos da Academia Musical da Ilha Terceira. O auditório recebe concertos, recitais, cursos de jazz e atuações corais; o Espaço AMIT (zona de bar/eventos, habitualmente aberto qui/sex/sáb 20:00–02:00) acolhe as noites de karaoke DesaFINO, sets de DJ, sessões de cinema e ciclos temáticos como as noites Dragão de metal."
   links:
     - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/auditorioamit/" }
   schema_type: PerformingArtsTheater
@@ -235,3 +235,79 @@
     - { label: "Power Traveller (Weaving)", label_pt: "Power Traveller (Tecelagem)", url: "https://powertraveller.com/private-small-group-weaving-activity-in-terceira-island/" }
   schema_type: LocalBusiness
   category: arts-culture
+
+- name: "Edifício Cultural de São Bento"
+  address: "Val Linhares, São Bento, 9700 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Edif%C3%ADcio+Cultural+de+S%C3%A3o+Bento+Angra+do+Hero%C3%ADsmo"
+  description: "Parish cultural building in São Bento. Hosts book launches, talks, exhibitions, and community cultural events."
+  description_pt: "Edifício cultural da freguesia de São Bento. Recebe lançamentos de livros, palestras, exposições e eventos culturais da comunidade."
+  links:
+    - { label: "Website", label_pt: "Site", url: "https://angradoheroismo.pt/local/edificio-cultural-de-sao-bento/" }
+  schema_type: CommunityCenter
+  category: arts-culture
+
+- name: "Casa do Povo de Porto Judeu"
+  address: "Caminho da Esperança, 9700-368 Porto Judeu"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Casa+do+Povo+de+Porto+Judeu"
+  description: "Community association founded in 1936, programming concerts, theatre, and folk-culture events for the village of Porto Judeu."
+  description_pt: "Associação comunitária fundada em 1936, com programação de concertos, teatro e eventos de cultura popular na Vila de Porto Judeu."
+  links:
+    - { label: "Website", label_pt: "Site", url: "https://www.cppj.pt/" }
+  reservation_phone: "295 905 690"
+  telephone: "+351295905690"
+  schema_type: CommunityCenter
+  category: arts-culture
+
+- name: "Soundstore / The Vinyl Lounge"
+  address: "Rua da Guarita 86, 9700-096 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Soundstore+Angra+do+Hero%C3%ADsmo"
+  description: "Record shop in the historic centre selling new and second-hand vinyl, CDs, and DVDs. The Vinyl Lounge inside the store hosts listening nights, album launches, and small live sets."
+  description_pt: "Loja de discos no centro histórico com vinis, CDs e DVDs novos e em segunda mão. O Vinyl Lounge dentro da loja recebe noites de audição, lançamentos de álbuns e pequenos concertos."
+  links:
+    - { label: "Website", label_pt: "Site", url: "https://soundstore.pt/" }
+    - { label: "Facebook", label_pt: "Facebook", url: "https://www.facebook.com/soundstoreazores/" }
+  schema_type: Store
+  category: arts-culture
+
+- name: "Twins Club"
+  address: "Rua Diogo de Teive 54, 9700-065 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Twins+Club+Angra+do+Hero%C3%ADsmo"
+  description: "Two-floor nightclub in Angra known for late-night DJ sets and themed parties. Currently closed (see the blog) but expected to reopen — see Instagram for the latest."
+  description_pt: "Discoteca de dois pisos em Angra, conhecida pelas noites de DJ e festas temáticas. Encontra-se encerrada (ver o blogue) mas com reabertura prevista — vê o Instagram para novidades."
+  links:
+    - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/twinstheclub/" }
+    - { label: "Facebook", label_pt: "Facebook", url: "https://www.facebook.com/twinsclubazores/" }
+  schema_type: NightClub
+  category: nightlife
+
+- name: "Portas do Fundo Karaoke Bar"
+  address: "Angra do Heroísmo (exact address pending)"
+  address_pt: "Angra do Heroísmo (morada exata por confirmar)"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Portas+do+Fundo+Karaoke+Bar+Terceira"
+  description: "Karaoke bar on Terceira hosting regular sing-along nights from 21:00. Good music, good company, good vibes."
+  description_pt: "Bar de karaoke na Terceira, com noites regulares a partir das 21h. Boa música, boa companhia, boa disposição."
+  schema_type: BarOrPub
+  category: nightlife
+
+- name: "Ginásio da ADA (Academia Desportiva dos Açores)"
+  address: "Jardim dos Cortes Reais, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+Desportiva+dos+A%C3%A7ores+Angra+do+Hero%C3%ADsmo"
+  description: "Sports academy gym at Jardim dos Cortes Reais offering swimming, kickboxing, Krav Maga, yoga, Pilates, and functional training. Also hosts open martial-arts classes and demonstrations."
+  description_pt: "Ginásio da Academia Desportiva dos Açores, no Jardim dos Cortes Reais, com natação, kickboxing, Krav Maga, yoga, Pilates e treino funcional. Acolhe também aulas abertas e demonstrações de artes marciais."
+  links:
+    - { label: "Facebook", label_pt: "Facebook", url: "https://www.facebook.com/p/ADA-Academia-Desportiva-dos-A%C3%A7ores-100044012323496/" }
+  schema_type: ExerciseGym
+  category: sports-outdoor
+
+- name: "Parque de Campismo das Cinco Ribeiras"
+  name_en: "Cinco Ribeiras Camping Park"
+  address: "Canada do Porto, Cinco Ribeiras, 9700-321 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Parque+de+Campismo+das+Cinco+Ribeiras"
+  description: "The municipality's largest campsite (up to 385 tents) on the southwest coast, with bar, hot showers, laundry, and electricity. Walkable to the Cinco Ribeiras swimming area and dive cave; hosts club anniversaries and outdoor concerts in season."
+  description_pt: "O maior parque de campismo do concelho (até 385 tendas), na costa sudoeste, com bar, duches quentes, lavandaria e eletricidade. A pé da Zona Balnear das Cinco Ribeiras e da Gruta para mergulho; recebe aniversários de clubes e concertos ao ar livre na época."
+  links:
+    - { label: "Website", label_pt: "Site", url: "https://angradoheroismo.pt/parque-de-campismo-das-cinco-ribeiras-2/" }
+  reservation_phone: "295 907 200"
+  telephone: "+351295907200"
+  schema_type: Campground
+  category: sports-outdoor

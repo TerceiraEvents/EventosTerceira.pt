@@ -140,8 +140,9 @@ end
 # silently degrade venue address structure.
 
 VENUE_SCHEMA_TYPES = %w[
-  LocalBusiness BarOrPub Restaurant PerformingArtsTheater MovieTheater
+  LocalBusiness BarOrPub NightClub Restaurant PerformingArtsTheater MovieTheater
   Store StadiumOrArena GovernmentBuilding Museum ArtGallery
+  CommunityCenter ExerciseGym Campground
 ].freeze
 
 venue_path = "#{SITE}/venues/index.html"
