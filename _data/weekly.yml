@@ -21,6 +21,14 @@
     description: "Weekly live music: solo artists or DJs every Monday under rotating themed banners (Crazy Monday, Ya Monday for reggae, etc.). Check their Instagram for the week's lineup."
     description_pt: "Música ao vivo todas as segundas: artistas solo ou DJs sob temas rotativos (Crazy Monday, Ya Monday para reggae, etc.). Vê o Instagram para o cartaz da semana."
     instagram: https://www.instagram.com/winenot.terceira/
+  - name: Karaoke Night
+    name_pt: Noite de Karaoke
+    venue: Tasca do Camões
+    time: "20:30"
+    description: Weekly karaoke at Camões
+    description_pt: Karaoke semanal no Camões
+    address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
 
 - day: Tuesday
   day_pt: Terça-feira
