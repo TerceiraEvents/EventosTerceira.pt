@@ -657,12 +657,13 @@
   - live-music
 
 - date: 2026-05-22
-  name: "Fado: Denise Guilherme"
+  name: "Fado: Denise Guilherme (data reagendada)"
+  name_en: "Fado: Denise Guilherme (rescheduled date)"
   venue: Espaço AMIT
   address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
   map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
-  description: "Fado evening at Espaço AMIT with Denise Guilherme."
-  description_pt: "Noite de fado no Espaço AMIT com Denise Guilherme."
+  description: "Fado evening at Espaço AMIT with Denise Guilherme. Rescheduled from May 17 after the original night was called off due to an unexpected issue with the instrumentalist."
+  description_pt: "Noite de fado no Espaço AMIT com Denise Guilherme. Reagendada do dia 17 de maio, após o cancelamento da noite original devido a um imprevisto com o instrumentista."
   instagram: https://www.instagram.com/auditorioamit/
   tags:
   - live-music
