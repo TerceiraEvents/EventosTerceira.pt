@@ -1,0 +1,27 @@
+{%- comment -%}
+  App Store + Google Play badges.
+
+  Picks Portuguese badges/alt text when the including page sets
+  `page.lang == "pt"`, otherwise English. Pass `align="left"` to
+  left-align (default is centred).
+{%- endcomment -%}
+{%- assign badge_align = include.align | default: "center" -%}
+{%- if page.lang == "pt" -%}
+  {%- assign apple_badge = "/assets/images/app-store-badges/apple-app-store-pt.svg" -%}
+  {%- assign apple_alt = "Disponível na App Store" -%}
+  {%- assign google_badge = "/assets/images/app-store-badges/google-play-pt.png" -%}
+  {%- assign google_alt = "Disponível no Google Play" -%}
+{%- else -%}
+  {%- assign apple_badge = "/assets/images/app-store-badges/apple-app-store-en.svg" -%}
+  {%- assign apple_alt = "Download on the App Store" -%}
+  {%- assign google_badge = "/assets/images/app-store-badges/google-play-en.png" -%}
+  {%- assign google_alt = "Get it on Google Play" -%}
+{%- endif -%}
+<div class="app-store-badges app-store-badges--{{ badge_align }}">
+  <a href="https://apps.apple.com/us/app/terceira-events/id6766769428" class="app-store-badge app-store-badge--apple" target="_blank" rel="noopener">
+    <img src="{{ apple_badge | relative_url }}" alt="{{ apple_alt }}" loading="lazy" width="160" height="54">
+  </a>
+  <a href="https://play.google.com/store/apps/details?id=com.terceiraevents.app" class="app-store-badge app-store-badge--google" target="_blank" rel="noopener">
+    <img src="{{ google_badge | relative_url }}" alt="{{ google_alt }}" loading="lazy" width="180" height="54">
+  </a>
+</div>

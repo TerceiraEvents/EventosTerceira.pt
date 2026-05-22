@@ -978,6 +978,80 @@ main a {
   }
 }
 
+/* ── App store badges ── */
+.app-store-section {
+  max-width: 760px;
+  margin: 2.5rem auto 0;
+  padding: 1.75rem 1.5rem;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px var(--shadow);
+  text-align: center;
+}
+
+.app-store-section h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+  border: none;
+  padding: 0;
+}
+
+.app-store-section p {
+  margin: 0 0 1.25rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.app-store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.app-store-badges--center {
+  justify-content: center;
+}
+
+.app-store-badges--left {
+  justify-content: flex-start;
+}
+
+.app-store-badge {
+  display: inline-block;
+  line-height: 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.app-store-badge:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.app-store-badge img {
+  display: block;
+  height: 54px;
+  width: auto;
+}
+
+/* Google's official badge has built-in clear-space padding; trim a bit
+   so it visually matches the Apple badge height. */
+.app-store-badge--google img {
+  height: 64px;
+  margin: -5px 0;
+}
+
+@media (max-width: 480px) {
+  .app-store-badge img {
+    height: 48px;
+  }
+  .app-store-badge--google img {
+    height: 58px;
+  }
+}
+
 /* ── Footer ── */
 .site-footer {
   background: var(--green-dark);
