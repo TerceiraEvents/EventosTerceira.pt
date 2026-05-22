@@ -353,6 +353,27 @@
   - free
 
 - date: 2026-05-30
+  name: "Summer Break Party — The Vinyl Lounge"
+  name_pt: "Festa de Férias de Verão — The Vinyl Lounge"
+  venue: "The Vinyl Lounge (inside Soundstore)"
+  venue_pt: "The Vinyl Lounge (dentro da Soundstore)"
+  address: "Rua da Guarita 86, 9700-096 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Soundstore+Angra+do+Heroísmo
+  time: "21:00"
+  description: "Open jam night and last big party at The Vinyl Lounge before the summer break in promoted events. Featuring K-9 Cat, Felix The First, Jonathan Afonso, Lucas Albuquerque, Marshall Jones, and more artists rotating on stage through the night. Specialty cocktails, intimate setting, no tickets required — seating first-come, first-served."
+  description_pt: "Noite de open jam e última grande festa no The Vinyl Lounge antes da pausa de verão dos eventos promovidos. Com K-9 Cat, Felix The First, Jonathan Afonso, Lucas Albuquerque, Marshall Jones e mais artistas a entrar no palco ao longo da noite. Cocktails especiais, ambiente intimista, sem bilhetes — lugares por ordem de chegada."
+  organizer: "Soundstore / The Vinyl Lounge"
+  features:
+  - "Open jam: K-9 Cat, Felix The First, Jonathan Afonso, Lucas Albuquerque, Marshall Jones, + mais"
+  - "Cocktails especiais e bebidas"
+  - "Entrada livre, lugares por ordem de chegada"
+  instagram: https://www.facebook.com/soundstoreazores/
+  tags:
+  - live-music
+  - nightlife
+  - free
+
+- date: 2026-05-30
   name: "III Azores Comedy Session"
   venue: "Sociedade Recreativa de São Bento"
   address: "São Bento, Angra do Heroísmo"
