@@ -1,0 +1,118 @@
+{%- comment -%}
+  One-time mobile-app smart banner.
+
+  Renders an empty <aside> that the script below populates only when
+  the visitor is on iOS or Android AND hasn't previously dismissed
+  the banner (tracked in localStorage under a versioned key).
+
+  Desktop visitors and dismissers see nothing — the script bails out
+  before any DOM is written, so there's no layout shift.
+
+  Localization: the visible strings live in the script as a small bag
+  keyed by `page.lang`, mirroring the pattern used by `window.__SITE_I18N`
+  in `_layouts/default.html`.
+
+  Suppression on form pages: pages whose path contains `/suggest/`
+  (the EN and PT submit-an-event forms) are skipped so the banner
+  doesn't interrupt the submission flow.
+
+  Versioned storage key: `tev_app_banner_dismissed_v1`. Bump the `_v`
+  suffix to re-show the banner to everyone after a redesign or new
+  app launch.
+{%- endcomment -%}
+<aside id="app-banner" class="app-banner" hidden></aside>
+<script>
+(function() {
+  var STORAGE_KEY = 'tev_app_banner_dismissed_v1';
+  var IOS_URL = 'https://apps.apple.com/us/app/terceira-events/id6766769428';
+  var ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.terceiraevents.app';
+
+  // Skip the suggest/submit form pages — don't interrupt that flow.
+  try {
+    if (location.pathname.indexOf('/suggest') !== -1) return;
+  } catch (e) { /* ignore */ }
+
+  // Honour prior dismissal. If localStorage is unavailable (private
+  // mode, disabled by user), silently fall through to showing the
+  // banner every page load — that's the requested degrade behaviour.
+  try {
+    if (window.localStorage && window.localStorage.getItem(STORAGE_KEY)) return;
+  } catch (e) { /* ignore */ }
+
+  var ua = navigator.userAgent || '';
+  var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+  var isAndroid = /Android/.test(ua);
+  if (!isIOS && !isAndroid) return;
+
+  var storeUrl = isIOS ? IOS_URL : ANDROID_URL;
+
+  // Locale: prefer the <html lang> attribute (set by the default
+  // layout from page.lang) and fall back to the URL path. Anything
+  // other than explicit `pt` is treated as English.
+  var lang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+  if (!lang) lang = location.pathname.indexOf('/pt/') === 0 || location.pathname === '/pt' ? 'pt' : 'en';
+  var isPT = lang.indexOf('pt') === 0;
+
+  var STRINGS = {
+    en: {
+      message: 'Get the Terceira Events app for a better mobile experience',
+      open: 'Open',
+      close: 'Dismiss'
+    },
+    pt: {
+      message: 'Instala a app Terceira Events para uma melhor experiência móvel',
+      open: 'Abrir',
+      close: 'Dispensar'
+    }
+  };
+  var t = isPT ? STRINGS.pt : STRINGS.en;
+
+  var banner = document.getElementById('app-banner');
+  if (!banner) return;
+
+  // Build the markup with DOM APIs (avoids any innerHTML escaping
+  // concerns and keeps the script tiny).
+  var icon = document.createElement('span');
+  icon.className = 'app-banner-icon';
+  icon.setAttribute('aria-hidden', 'true');
+  icon.textContent = '📱'; // mobile phone emoji
+
+  var msg = document.createElement('span');
+  msg.className = 'app-banner-msg';
+  msg.textContent = t.message;
+
+  var open = document.createElement('a');
+  open.className = 'app-banner-open';
+  open.href = storeUrl;
+  open.rel = 'noopener';
+  open.target = '_blank';
+  open.textContent = t.open;
+  open.addEventListener('click', function() {
+    // Tapping the install link counts as resolved intent — don't
+    // pester them on the next page load.
+    try {
+      if (window.localStorage) window.localStorage.setItem(STORAGE_KEY, '1');
+    } catch (e) { /* ignore */ }
+  });
+
+  var close = document.createElement('button');
+  close.type = 'button';
+  close.className = 'app-banner-close';
+  close.setAttribute('aria-label', t.close);
+  close.textContent = '×';
+  close.addEventListener('click', function() {
+    try {
+      if (window.localStorage) window.localStorage.setItem(STORAGE_KEY, '1');
+    } catch (e) { /* ignore */ }
+    banner.hidden = true;
+    banner.classList.remove('active');
+  });
+
+  banner.appendChild(icon);
+  banner.appendChild(msg);
+  banner.appendChild(open);
+  banner.appendChild(close);
+  banner.hidden = false;
+  banner.classList.add('active');
+})();
+</script>
