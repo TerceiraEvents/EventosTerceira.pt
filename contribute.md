@@ -35,12 +35,14 @@ lang_alt: /pt/contribute/
 
 <h2 id="use-the-app">Suggesting an Event from the App</h2>
 
-<p class="section-intro">The easiest way to get an event on the site is to use the app. Here's how:</p>
+<p class="section-intro">The easiest way to get an event on the site is to use the app. Grab it here:</p>
+
+{% include app_store_badges.html %}
 
 <div class="venue-card">
   <div class="venue-regulars">
     <ol>
-      <li>Open the <strong>Terceira Events</strong> app on your phone</li>
+      <li>Open the <strong>Terceira Events</strong> app on your phone (<a href="https://apps.apple.com/us/app/terceira-events/id6766769428">iOS</a> / <a href="https://play.google.com/store/apps/details?id=com.terceiraevents.app">Android</a>)</li>
       <li>From the Home screen, tap <strong>Suggest Event</strong></li>
       <li>Fill in the form &mdash; only the event name, date, and venue are required</li>
       <li>Optionally add time, address, Google Maps link, description, Instagram link, and your name (for credit)</li>

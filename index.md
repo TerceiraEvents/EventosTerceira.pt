@@ -33,6 +33,12 @@ lang_alt: /pt/
   </a>
 </div>
 
+<section class="app-store-section" aria-labelledby="get-the-app">
+  <h2 id="get-the-app">Get the Terceira Events app</h2>
+  <p>Browse events on the go and suggest new ones in one tap.</p>
+  {% include app_store_badges.html %}
+</section>
+
 {%- comment -%}
   Build a list of upcoming special events (date >= today) and slice
   to the first 3, sorted ascending. Same `now_ts` / `event_ts` pattern

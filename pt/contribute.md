@@ -37,12 +37,14 @@ lang_alt: /contribute/
 
 <h2 id="use-the-app">Sugerir um Evento a partir da App</h2>
 
-<p class="section-intro">A maneira mais fácil de pôr um evento aqui no site é pela app. Vê como:</p>
+<p class="section-intro">A maneira mais fácil de pôr um evento aqui no site é pela app. Descarrega aqui:</p>
+
+{% include app_store_badges.html %}
 
 <div class="venue-card">
   <div class="venue-regulars">
     <ol>
-      <li>Abre a app <strong>Eventos da Terceira</strong> no telemóvel</li>
+      <li>Abre a app <strong>Eventos da Terceira</strong> no telemóvel (<a href="https://apps.apple.com/us/app/terceira-events/id6766769428">iOS</a> / <a href="https://play.google.com/store/apps/details?id=com.terceiraevents.app">Android</a>)</li>
       <li>No ecrã principal, toca em <strong>Sugerir Evento</strong></li>
       <li>Preenche o formulário &mdash; só o nome do evento, a data e o local são obrigatórios</li>
       <li>Opcionalmente acrescenta a hora, morada, link do Google Maps, descrição, link de Instagram e o teu nome (para créditos)</li>
