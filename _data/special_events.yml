@@ -2133,3 +2133,386 @@ Come join us and support our festivities!"
     - food-drink
     - kid-friendly
     - live-music
+
+# Late May / June / July / Oct / Nov 2026 — batch update
+
+- date: 2026-05-22
+  name: "Grande Entrevista: O CDS/Açores de Artur Lima aceitaria integrar uma AD?"
+  name_en: "Big Interview: Would the CDS/Azores under Artur Lima join a right-wing coalition?"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "18:15"
+  description: "Political debate moderated by Joel Neto, with guest Artur Lima, discussing whether the Azorean CDS would join a right-wing coalition including Chega."
+  description_pt: "Debate político moderado por Joel Neto, com Artur Lima, sobre se o CDS/Açores aceitaria integrar uma coligação de direita com o Chega."
+  instagram: https://www.instagram.com/p/DYo7xfuFAxg/
+  tags:
+  - literature
+  - free
+
+- date: 2026-05-22
+  name: "House Night com DJ JP"
+  name_en: "House Night with DJ JP"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "23:00"
+  description: "House night at Lar Doce Livro with DJ JP (Jota P)."
+  description_pt: "Noite de house music na Lar Doce Livro com DJ Jota P."
+  instagram: https://www.instagram.com/p/DYnHoLwlPXW/
+  tags:
+  - nightlife
+  - live-music
+
+- date: 2026-05-22
+  name: "Live Act: DJ Pedro Alves (warm-up by Rafa)"
+  venue: Havanna Club
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Havanna+Club+Angra+do+Heroísmo
+  time: "23:00"
+  description: "DJ Pedro Alves live act at Havanna Club, with warm-up set by Rafa."
+  description_pt: "Live act do DJ Pedro Alves no Havanna Club, com warm-up de Rafa."
+  instagram: https://www.instagram.com/p/DYnZS-Jj9ty/
+  tags:
+  - nightlife
+
+- date: 2026-05-23
+  name: "Danças Tradicionais do Mundo com Joana Loura"
+  name_en: "World Traditional Dances with Joana Loura"
+  venue: Casa do Sal
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa+do+Sal+Angra+do+Heroísmo
+  time: "18:00"
+  description: "A workshop/performance of traditional world dances with Joana Loura. Runs 18:00–19:30."
+  description_pt: "Oficina/espetáculo de danças tradicionais do mundo com Joana Loura. Das 18h às 19h30."
+  tags:
+  - dance
+  - free
+
+- date: 2026-05-23
+  name: "Apresentação da Revista Literária Ogygia com Avelina da Silveira"
+  name_en: "Launch of Literary Magazine Ogygia with Avelina da Silveira"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "17:00"
+  description: "Presentation of Ogygia, a literary magazine, with author Avelina da Silveira (also listed as Avelina Ferreira)."
+  description_pt: "Apresentação da revista literária Ogygia, com Avelina da Silveira (também referida como Avelina Ferreira)."
+  instagram: https://www.instagram.com/p/DYo_jwsgWaS/
+  tags:
+  - literature
+  - free
+
+- date: 2026-05-23
+  name: "Poetas da Ilha — Poesia Original Terceirense"
+  name_en: "Poets of the Island — Original Terceira Poetry"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "20:15"
+  description: "An evening of original poetry by Terceira poets, coordinated by Jorge Morais with musical interludes by Paulo M."
+  description_pt: "Tarde de poesia original terceirense com vários autores, coordenação de Jorge Morais e intervenções musicais de Paulo M."
+  instagram: https://www.instagram.com/p/DYnYrOiFN_w/
+  tags:
+  - literature
+  - live-music
+  - free
+
+- date: 2026-05-23
+  name: "Open Mic / Jam Session — Noite de Microfone Livre"
+  name_en: "Open Mic / Jam Session"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "21:30"
+  description: "Open mic and collective jam session, open to all musicians (professionals and amateurs). An initiative by Felix The First/K-9 Cat, Jonathan Afonso, and Lucas Albuquerque."
+  description_pt: "Noite de microfone livre e improvisação coletiva. Aberta a todos os músicos, profissionais ou amadores. Iniciativa de Felix The First/K-9 Cat, Jonathan Afonso e Lucas Albuquerque."
+  tags:
+  - live-music
+  - free
+
+- date: 2026-05-23
+  name: "Concerto Angra Convida Rui Massena — Parents' House (Piano Solo)"
+  name_en: "Concert: Angra Convida Rui Massena — Parents' House (Piano Solo)"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
+  time: "21:30"
+  description: "Part of the Angra Convida series — Rui Massena performs his 'Parents' House' album as a piano solo concert."
+  description_pt: "No âmbito da série Angra Convida — Rui Massena apresenta o álbum 'Parents' House' em concerto de piano solo."
+  tags:
+  - live-music
+
+- date: 2026-05-23
+  name: "Delta Project ao Vivo"
+  name_en: "Delta Project Live"
+  venue: Tasca do Camões
+  address: "Rua Da Rocha 64, 9700-169 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
+  time: "22:00"
+  description: "Live performance by Delta Project (André Freitas, Sérgio Ceitil, Ricardo Lourenço) at Tasca do Camões."
+  description_pt: "Concerto ao vivo do Delta Project (André Freitas, Sérgio Ceitil, Ricardo Lourenço) na Tasca do Camões."
+  instagram: https://www.facebook.com/photo?fbid=1604212121711575
+  tags:
+  - live-music
+  - nightlife
+
+- date: 2026-05-23
+  name: "Anos 2000 com DJ Adrix"
+  name_en: "2000s Night with DJ Adrix"
+  venue: Porta 42
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Porta+42+Angra+do+Heroísmo
+  time: "23:00"
+  description: "A night of the best 2000s hits with DJ Adrix at Porta 42."
+  description_pt: "Noite dos melhores hits dos anos 2000 com DJ Adrix no Porta 42."
+  instagram: https://www.instagram.com/p/DYnZberiNGA/
+  tags:
+  - nightlife
+
+- date: 2026-05-23
+  name: "Rafa & Artur M Connection"
+  venue: Havanna Club
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Havanna+Club+Angra+do+Heroísmo
+  description: "DJ set by Rafa & Artur M Connection at Havanna Club."
+  description_pt: "DJ set de Rafa & Artur M Connection no Havanna Club."
+  instagram: https://www.instagram.com/p/DYnZS-Jj9ty/
+  tags:
+  - nightlife
+
+- date: 2026-05-24
+  name: "DJ Residente: Rafa"
+  venue: Havanna Club
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Havanna+Club+Angra+do+Heroísmo
+  description: "Resident DJ Rafa at Havanna Club."
+  description_pt: "DJ Residente Rafa no Havanna Club."
+  instagram: https://www.instagram.com/p/DYnZS-Jj9ty/
+  tags:
+  - nightlife
+
+- date: 2026-05-24
+  name: "O Cinema da Minha Vida — 1.ª Temporada 2026: LOVE"
+  name_en: "The Cinema of My Life — 2026 Season 1: LOVE"
+  venue: Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Angra+do+Heroísmo
+  time: "18:00"
+  description: "A film screening event series. This session's theme is LOVE. Runs 18:00–20:00."
+  description_pt: "Ciclo de cinema. A sessão desta semana tem como tema o AMOR. Das 18h às 20h."
+  tags:
+  - cinema
+
+- date: 2026-05-27
+  name: "Apresentação do Festival Rua Direita 2026"
+  name_en: "Festival Rua Direita 2026 — Public Launch"
+  venue: Livraria Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "15:00"
+  description: "Public presentation of the 2026 Rua Direita Festival. This year's theme is 'Rua Direita — Nas Asas do Açor', marking 50 years of Azorean Autonomy. The festival itself runs July 9–11 and 16–18 in Angra do Heroísmo. Free entry. Production by Companhia de Teatro Cães do Mar, supported by CMAH."
+  description_pt: "Apresentação pública do Festival Rua Direita 2026, sob o tema «Rua Direita – Nas Asas do Açor», assinalando os 50 anos da Autonomia dos Açores. O festival decorre a 9–11 e 16–18 de julho em Angra do Heroísmo. Entrada livre. Produção da Companhia de Teatro Cães do Mar, com apoio da CMAH."
+  instagram: https://www.instagram.com/p/DYo16xqDNkI/
+  tags:
+  - free
+  - theater
+  - literature
+
+- date: 2026-05-28
+  name: "Cinema: Bucha e Estica — Cinefreguesias na N.ª Sr.ª da Conceição"
+  name_en: "Cinema: Bucha e Estica — Cinefreguesias at N.ª Sr.ª da Conceição"
+  venue: Angra do Heroísmo (N.ª Sr.ª da Conceição)
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Igreja+Nossa+Senhora+da+Conceição+Angra+do+Heroísmo
+  time: "22:00"
+  description: "Outdoor cinema screening of 'Bucha e Estica' as part of the Cinefreguesias outdoor film series. Runs until 23:45."
+  description_pt: "Sessão de cinema ao ar livre do filme 'Bucha e Estica' no âmbito das Cinefreguesias. Termina às 23h45."
+  tags:
+  - cinema
+  - free
+  - kid-friendly
+  - outdoor
+
+- date: 2026-05-29
+  name: "30 Minutos com Música"
+  name_en: "30 Minutes of Music"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+Pública+Angra+do+Heroísmo
+  time: "17:30"
+  description: "A 30-minute lunchtime/afternoon music event at the Public Library. Runs 17:30–18:00."
+  description_pt: "Momento musical de 30 minutos na Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro. Das 17h30 às 18h."
+  tags:
+  - live-music
+  - free
+
+- date: 2026-05-29
+  name: "Workshop de Vinhos — Apresentação e Provas com Amílcar Salgado"
+  name_en: "Wine Workshop — Presentation & Tasting with Amílcar Salgado"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "20:00"
+  description: "Wine tasting and presentation by enologist and producer Amílcar Salgado, featuring wines from Quinta de Arcossó (Trás-os-Montes). Tickets: €10 (wine and appetizers included). Booking via livrarialardocelivro@gmail.com or WhatsApp +351 917 817 2740, or pay at the counter."
+  description_pt: "Workshop de vinhos com o enólogo e produtor Amílcar Salgado, com vinhos da Quinta de Arcossó (Trás-os-Montes). Inscrição: 10€ (vinhos e aperitivos incluídos). Reservas por email livrarialardocelivro@gmail.com, WhatsApp ou ao balcão."
+  instagram: https://www.instagram.com/p/DYkhBBhCpXR/
+  tags:
+  - food-drink
+  - workshop
+
+- date: 2026-05-30
+  name: "3ª Prova Taça Etmal — Ciclismo"
+  name_en: "3rd Etmal Cup Race — Cycling"
+  venue: Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Angra+do+Heroísmo
+  time: "10:00"
+  description: "Third round of the Etmal cycling cup race in Angra do Heroísmo. Runs 10:00–12:30."
+  description_pt: "Terceira prova da Taça Etmal de ciclismo em Angra do Heroísmo. Das 10h às 12h30."
+  tags:
+  - outdoor
+
+- date: 2026-05-30
+  name: "A Magia da Poesia"
+  name_en: "The Magic of Poetry"
+  venue: Museu de Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Heroísmo
+  time: "14:00"
+  description: "Poetry event at the Museu de Angra do Heroísmo. Runs 14:00–15:30."
+  description_pt: "Evento de poesia no Museu de Angra do Heroísmo. Das 14h às 15h30."
+  tags:
+  - literature
+
+- date: 2026-05-31
+  name: "Encontro USK — Desenho na Macaronésia"
+  name_en: "USK Meetup — Drawing in Macaronesia"
+  venue: Museu de Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Heroísmo
+  time: "10:00"
+  description: "Urban Sketchers meetup for drawing around Angra do Heroísmo, hosted at/near the Museu de Angra do Heroísmo."
+  description_pt: "Encontro de Urban Sketchers para desenho em Angra do Heroísmo, junto ao Museu de Angra do Heroísmo."
+  tags:
+  - workshop
+  - outdoor
+
+- date: 2026-06-04
+  name: "shorts@fringe — Sessão de Animação para Crianças"
+  name_en: "shorts@fringe — Children's Animation Screening"
+  venue: Casa do Sal
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa+do+Sal+Angra+do+Heroísmo
+  time: "16:30"
+  description: "Children's animation short film session as part of the shorts@fringe programme at Casa do Sal. Runs 16:30–17:15."
+  description_pt: "Sessão de animação para crianças no âmbito do programa shorts@fringe na Casa do Sal. Das 16h30 às 17h15."
+  tags:
+  - cinema
+  - kid-friendly
+
+- date: 2026-06-06
+  name: "Concerto: Praia Mia — temas dos ABBA"
+  name_en: "Concert: Praia Mia — ABBA Tribute"
+  venue: Teatro Angrense
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
+  time: "21:30"
+  description: "A vibrant concert celebrating the greatest ABBA hits, performed by Filarmónica União Praiense and guest musicians. Tickets available at usual outlets; more info at angradoheroismo.pt."
+  description_pt: "Espetáculo 'Praia Mia', pela Filarmónica União Praiense e músicos convidados, dedicado aos temas dos ABBA. Bilhetes à venda nos locais habituais; mais informação em angradoheroismo.pt."
+  instagram: https://www.instagram.com/p/DYozqrEm3E-/
+  tags:
+  - live-music
+
+- date: 2026-06-08
+  name: "Exposição: Coleção Francisco Ernesto Oliveira Martins — Um Percurso Sentimental"
+  name_en: "Exhibition: Francisco Ernesto Oliveira Martins Collection — A Sentimental Journey"
+  venue: Centro Interpretativo de Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Interpretativo+Angra+do+Heroísmo
+  time: "17:30"
+  description: "Opening of an exhibition exploring the artistic and heritage legacy of the Francisco Ernesto Oliveira Martins collection, revealing Azorean cultural richness and the collector's contribution to the study of Azorean furniture and art. Free entry."
+  description_pt: "Abertura de exposição que revela o legado artístico e patrimonial da coleção de Francisco Ernesto Oliveira Martins, e o contributo do investigador para o estudo do mobiliário e da arte dos Açores. Entrada livre."
+  instagram: https://www.instagram.com/p/DYo0Bykl_4v/
+  tags:
+  - exhibition
+  - free
+
+- date: 2026-06-11
+  name: "Espetáculo: Angra Convida Ricardo Araújo Pereira — «Verificando se Você é Humano»"
+  name_en: "Show: Angra Convida Ricardo Araújo Pereira — «Verificando se Você é Humano»"
+  end_date: 2026-06-13
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
+  time: "21:30"
+  description: "Three-night run of Ricardo Araújo Pereira's stand-up show 'Verificando se Você é Humano' at the CCCAH as part of the Angra Convida series (Jun 11–13)."
+  description_pt: "Três noites do espetáculo de Ricardo Araújo Pereira «Verificando se Você é Humano» no CCCAH, no âmbito da série Angra Convida (11–13 de junho)."
+  tags:
+  - theater
+
+- date: 2026-06-12
+  name: "Exposição: Rostos Diferentes — De Maria Jorge"
+  name_en: "Exhibition: Different Faces — By Maria Jorge"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
+  time: "19:00"
+  description: "Opening of the 'Rostos Diferentes' painting exhibition by Maria Jorge. A series of portraits exploring identity and expressiveness through the human face. Free entry."
+  description_pt: "Abertura da exposição 'Rostos Diferentes', de Maria Jorge. Um conjunto de pinturas que exploram a identidade e a expressividade através do retrato. Entrada livre."
+  instagram: https://www.instagram.com/p/DYonxHvFRou/
+  tags:
+  - exhibition
+  - free
+
+- date: 2026-07-09
+  name: "Festival Rua Direita 2026 — Nas Asas do Açor"
+  name_en: "Rua Direita Festival 2026 — On the Wings of the Goshawk"
+  end_date: 2026-07-18
+  venue: Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Praça+Velha+Angra+do+Heroísmo
+  description: "Street theatre festival by Companhia de Teatro Cães do Mar, with this year's theme 'Nas Asas do Açor' marking 50 years of Azorean Autonomy. Runs July 9–11 and 16–18. Free entry."
+  description_pt: "Festival de teatro de rua da Companhia de Teatro Cães do Mar, sob o tema 'Nas Asas do Açor', comemorando os 50 anos da Autonomia dos Açores. Decorre a 9–11 e 16–18 de julho. Entrada livre."
+  instagram: https://www.instagram.com/p/DYo16xqDNkI/
+  tags:
+  - theater
+  - outdoor
+  - free
+
+- date: 2026-10-17
+  name: "Concerto: Angra Convida Alcoolémia — 30 anos de «Não Sei Se Mereço»"
+  name_en: "Concert: Angra Convida Alcoolémia — 30 years of «Não Sei Se Mereço»"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
+  time: "21:30"
+  description: "Alcoolémia celebrates 30 years of their iconic album 'Não Sei Se Mereço' in a special concert at the CCCAH as part of the Angra Convida series."
+  description_pt: "Os Alcoolémia celebram os 30 anos do álbum 'Não Sei Se Mereço' num concerto especial no CCCAH, no âmbito da série Angra Convida."
+  tags:
+  - live-music
+
+- date: 2026-11-14
+  name: "Concerto: Angra Convida Carolina Deslandes — Voz & Guitarra"
+  name_en: "Concert: Angra Convida Carolina Deslandes — Voice & Guitar"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
+  time: "21:30"
+  description: "Carolina Deslandes performs an intimate voice and guitar show at the CCCAH as part of the Angra Convida series."
+  description_pt: "Carolina Deslandes apresenta um concerto intimista de voz e guitarra no CCCAH, no âmbito da série Angra Convida."
+  tags:
+  - live-music
+
+- date: 2026-11-27
+  name: "Festival: III Azores Comedy Fest"
+  end_date: 2026-11-28
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
+  time: "21:30"
+  description: "The third edition of the Azores Comedy Fest returns to the CCCAH Grande Auditório for two nights. Line-up includes CommedIA a la Carte ('nem sempre usam Inteligência Artificial'), Fernando Rocha ('Rocha & Roll'), Teresa Guilherme ('As Vaginas e Eu — Tudo o que ficou por dizer'), João Dantas, Airton, and host Patrício Vieira. Production by AZORICA. Tickets at usual outlets and ticketline.pt."
+  description_pt: "O III Azores Comedy Fest regressa ao Grande Auditório do CCCAH em duas noites. Programa: CommedIA a la Carte, Fernando Rocha com 'Rocha & Roll', Teresa Guilherme com 'As Vaginas e Eu', João Dantas, Airton, e apresentação de Patrício Vieira. Produção AZORICA. Bilhetes nos locais habituais e na ticketline.pt."
+  instagram: https://www.instagram.com/p/DYokj1ujXdM/
+  tags:
+  - theater
