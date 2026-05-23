@@ -2563,3 +2563,23 @@ Come join us and support our festivities!"
   tags:
     - nightlife
     - dance
+
+- name: "Arraial dos Finalistas"
+  name_pt: "Arraial dos Finalistas"
+  name_en: "Tiny Graduates’ Party"
+  date: 2026-06-05
+  time: "18:00"
+  venue: "Campo de Jogos do Sport Club Barreiro"
+  address: "Caminho da Esperança, 1429700-368 Vila de Porto Judeu, Angra do Heroísmo"
+  map_url: "https://maps.app.goo.gl/gFUSwzZXJiHVDYGL9?g_st=ic"
+  description: "Venha celebrar connosco o Arraial dos Finalistas! 🎉 Uma tarde/noite cheia de animação, música, petiscos, bebidas e muita diversão para toda a família. Contamos com a atuação da Brava Charanga e música com DJ Artur M. 📍 Sport Club Barreiro, Ringue 📅 5 de Junho 🕕 18h00"
+  description_pt: "Venha celebrar connosco o Arraial dos Finalistas! 🎉 Uma tarde/noite cheia de animação, música, petiscos, bebidas e muita diversão para toda a família. Contamos com a atuação da Brava Charanga e música com DJ Artur M. 📍 Sport Club Barreiro, Ringue 📅 5 de Junho 🕕 18h00"
+  description_en: "Join us for the Little Graduates Festival! 🎉 An afternoon/evening full of fun, music, snacks, drinks, and entertainment for the whole family. Featuring live entertainment by Brava Charanga and music by DJ Artur M. 📍 Sport Club Barreiro, Ringue 📅 June 5th 🕕 6:00 PM"
+  tags:
+    - live-music
+    - dance
+    - nightlife
+    - karaoke
+    - food-drink
+    - outdoor
+    - free
