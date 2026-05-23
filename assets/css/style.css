@@ -93,6 +93,18 @@ h1, h2, h3 {
   background: rgba(26, 58, 42, 0.85);
   backdrop-filter: blur(6px);
   border-top: 1px solid rgba(255,255,255,0.1);
+  /* Allow the nav row to scroll sideways instead of being clipped when the
+     7 links + locale switcher exceed the viewport width (small phones). The
+     overflow is a no-op on desktops where everything fits. Scrollbar is
+     hidden to keep the band visually clean — the row still scrolls via
+     touch/trackpad. */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.site-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .site-nav .container {
@@ -1085,6 +1097,19 @@ main a {
   .site-nav a {
     padding: 0.7rem 0.9rem;
     font-size: 0.75rem;
+  }
+
+  /* On phones the row is wider than the viewport, so center alignment
+     symmetrically clips the first and last items (you see "PECIAL EVENTS
+     ... R" — both ends shaved). Pin to the left edge instead so "Home"
+     is the visible anchor and the user can scroll right through the
+     remaining links + locale switcher. */
+  .site-nav .container {
+    justify-content: flex-start;
+  }
+
+  .site-nav .locale-switcher {
+    margin-left: 0;
   }
 
   .special-event {
