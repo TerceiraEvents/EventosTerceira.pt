@@ -192,108 +192,164 @@ Each new special event goes as a new list item in `_data/special_events.yml`. Th
 ```yaml
 - date: YYYY-MM-DD          # required; use end_date: YYYY-MM-DD for multi-day events
   name: "Portuguese name"   # required
-    name_en: "English name"   # add if different from Portuguese
-      venue: Venue Name         # required; must match the name in venues.yml if the venue is listed there
-        address: "Full address, postcode Angra do Heroísmo"
-          map_url: https://www.google.com/maps/search/?api=1&query=...
-            time: "HH:MM"             # 24-hour, quoted string
-              description: "English description prose."
-                description_pt: "Portuguese description prose."
-                  instagram: https://www.instagram.com/p/...  # source post URL (use 'facebook:' key for FB sources)
-                    tags:
-                        - live-music            # see _data/event_tags.yml for valid tags
-                            - free
-                            ```
+  name_en: "English name"   # add if different from Portuguese
+  venue: Venue Name         # required; must match the name in venues.yml if the venue is listed there
+  address: "Full address, postcode Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=...
+  time: "HH:MM"             # 24-hour, quoted string
+  description: "English description prose."
+  description_pt: "Portuguese description prose."
+  instagram: https://www.instagram.com/p/...  # source post URL (use 'facebook:' key for FB sources)
+  tags:
+  - live-music              # see _data/event_tags.yml for valid tags — canonical only
+  - free
+```
 
-                            ### Valid tags (from `_data/event_tags.yml`)
+### Valid tags — canonical only
 
-                            `live-music` · `nightlife` · `concert` · `theatre` · `comedy` · `dance` · `film` · `literature` · `art` · `exhibition` · `festival` · `workshop` · `talk` · `food-drink` · `sports` · `outdoor` · `kid-friendly` · `free`
+These are the only valid tag slugs (source of truth: [`_data/event_tags.yml`](../_data/event_tags.yml)). **Anything outside this list is silently dropped from URL filtering on the calendar page** — it doesn't fail CI, it just doesn't filter.
 
-                            ### Ordering
+`kid-friendly` · `live-music` · `cinema` · `theater` · `dance` · `nightlife` · `karaoke` · `food-drink` · `exhibition` · `literature` · `workshop` · `free` · `outdoor` · `bullfighting`
 
-                            Insert new entries **in chronological order by `date:`**. The file has section comments like `# May 2026` — add your entries under the appropriate month heading, or create a new heading if needed.
+Common mistakes (do **not** use; map to the canonical slug instead):
 
-                            ### Addresses for common venues
+| Looks intuitive | Use this canonical slug |
+|---|---|
+| `concert` | `live-music` |
+| `theatre` (UK spelling) | `theater` |
+| `comedy` | `theater` |
+| `film` | `cinema` |
+| `talk` / `lecture` | `literature` |
+| `sports` | `outdoor` |
+| `art` (static) | `exhibition` |
+| `art` (hands-on) | `workshop` |
+| `festival` | (split between `live-music`, `theater`, `outdoor`, etc. — pick what actually describes it) |
 
-                            | Venue | Address |
-                            |---|---|
-                            | Lar Doce Livro | Rua de São João 22-24, 9700-184 Angra do Heroísmo |
-                            | Tasca do Camões | Rua Da Rocha 64, 9700-169 Angra do Heroísmo |
-                            | Havanna Club | Av. Infante D. Henrique, 9700-098 Angra do Heroísmo |
-                            | Teatro Angrense | Rua da Rosa, 9700-155 Angra do Heroísmo |
-                            | CCCAH | Rua Conselheiro Dr. José Pereira, 9700-040 Angra do Heroísmo |
-                            | Casa do Sal | Rua da Rosa 11, 9700-155 Angra do Heroísmo |
-                            | Museu de Angra do Heroísmo | Ladeira de São Francisco, 9701 Angra do Heroísmo |
-                            | Centro Interpretativo | Rua da Rosa, Angra do Heroísmo |
-                            | Biblioteca Pública | Rua da Biblioteca, Angra do Heroísmo |
-                            | Porta 42 | Rua de São João, Angra do Heroísmo |
+### Ordering
 
-                            ---
+Insert new entries **in chronological order by `date:`**. The file has section comments like `# May 2026` — add your entries under the appropriate month heading, or create a new heading if needed.
 
-                            ## Step 9 — Open a PR
+### Addresses for common venues
 
-                            Once you've added your entries to the YAML, open a pull request:
+| Venue | Address |
+|---|---|
+| Lar Doce Livro | Rua de São João 22-24, 9700-184 Angra do Heroísmo |
+| Tasca do Camões | Rua Da Rocha 64, 9700-169 Angra do Heroísmo |
+| Havanna Club | Av. Infante D. Henrique, 9700-098 Angra do Heroísmo |
+| Teatro Angrense | Rua da Rosa, 9700-155 Angra do Heroísmo |
+| CCCAH | Rua Conselheiro Dr. José Pereira, 9700-040 Angra do Heroísmo |
+| Casa do Sal | Rua da Rosa 11, 9700-155 Angra do Heroísmo |
+| Museu de Angra do Heroísmo | Ladeira de São Francisco, 9701 Angra do Heroísmo |
+| Centro Interpretativo | Rua da Rosa, Angra do Heroísmo |
+| Biblioteca Pública | Rua da Biblioteca, Angra do Heroísmo |
+| Porta 42 | Rua de São João, Angra do Heroísmo |
 
-                            - **Title:** `Add [N] new events: [brief description] (#ISSUE_NUMBER)`
-                            - **Body:** Reference the tracking issue with `Closes #NNN` or `See #NNN`
-                            - **Branch:** Create from `main`, name it something like `events/may-22-scan`
+---
 
-                            The CI will run `validate-events.yml` automatically. If it passes, merge directly to `main` (no review required for data-only PRs).
+## Step 8b — Re-host any images before linking them
 
-                            After merging, the `daily-rebuild.yml` workflow will rebuild and deploy the site within ~5 minutes.
+If you want a flyer to render on the event card, you cannot reference the raw Instagram / Facebook / CDN URL directly — those image URLs rot within days (sometimes hours). The site repo has a re-hosting workflow that fetches the bytes once and stores them as a permanent GitHub release asset:
 
-                            ---
+- Script: [`scripts/rehost_image.py`](../scripts/rehost_image.py)
+- Workflow: [`.github/workflows/rehost-image.yml`](../.github/workflows/rehost-image.yml) (trigger via the **Actions** tab → *Rehost image* → *Run workflow*, paste the source URL + a slug)
 
-                            ## Step 10 — Close the tracking issue
+The output is a `https://github.com/.../releases/download/...` URL. Use **that** as the `image:` field on the event entry. If you skip this step, the image will work for a few days and then 404 — and the daily-rebuild won't catch it.
 
-                            Once the PR is merged, close the tracking issue (or it closes automatically if you used `Closes #NNN` in the PR body).
+> Background: the mobile-app submission worker does this automatically (it re-hosts before opening the PR). For manual scans you have to do it by hand or your flyers will silently die.
 
-                            ---
+---
 
-                            ## What NOT to add
+## Step 8c — Check the submission-worker PR queue before you write your PR
 
-                            - **Recurring weekly events** (karaoke nights, Noche Latina, DJ resident nights) → these belong in `_data/weekly.yml`, not `special_events.yml`. Check `weekly.yml` before adding.
-                            - **Events that have already passed** by the time you're writing the PR.
-                            - **Events with no confirmed date** (e.g. "coming soon" posts with no date).
-                            - **Events already auto-ingested** by the daily workflows (CMAH iCal, Ticketline, Museu Angra, Visit Azores, Whatson Azores). Double-check before adding manually.
+The mobile app's *Suggest* button and the website's `/suggest/` form both open PRs via [`event-submit-worker`](https://github.com/TerceiraEvents/event-submit-worker). Before you stack a manual scan PR on top of `main`, glance at:
 
-                            ---
+https://github.com/TerceiraEvents/EventosTerceira.pt/pulls
 
-                            ## Automated ingest coverage (what you do NOT need to scan manually)
+If there are open auto-submission PRs touching `_data/special_events.yml`, decide whether to merge those first (cleaner history) or pull their changes into your branch (avoids a later conflict).
 
-                            These sources are covered by daily GitHub Actions workflows and do not need manual scanning:
+---
 
-                            | Source | Workflow file | Script |
-                            |---|---|---|
-                            | CMAH iCal feed | `ingest-cmah.yml` | `scripts/ingest_cmah.py` |
-                            | Ticketline (Angra + Praia) | `ingest-ticketline.yml` | `scripts/ingest_ticketline.py` |
-                            | Museu de Angra do Heroísmo | `ingest-museu-angra.yml` | `scripts/ingest_museu_angra.py` |
-                            | Câmara Municipal Praia da Vitória | `ingest-cmpv.yml` | `scripts/ingest_cmpv.py` |
-                            | Visit Azores | `ingest-visit-azores.yml` | `scripts/ingest_visit_azores.py` |
-                            | Whatson Azores (government) | `ingest-whatson-azores.yml` | `scripts/ingest_whatson_azores.py` |
-                            | Touradas à corda | `ingest-touradas.yml` | `scripts/ingest_touradas.py` |
+## Step 8d — Pre-flight: validate tags against the canonical list
 
-                            If an automated workflow is producing errors or missing events, check the **Actions** tab: https://github.com/TerceiraEvents/EventosTerceira.pt/actions
+CI does not currently fail on non-canonical tags — they just silently don't filter. Before opening the PR, sanity-check from the repo root:
 
-                            ---
+```bash
+# extract every tag your branch added, dedupe
+git diff main..HEAD -- _data/special_events.yml | awk '/^\+  - / && !/^\+  - [a-z]+:/ {print $2}' | sort -u
 
-                            ## Kicking off with an AI assistant
+# compare against the canonical slug list
+yq '.[].slug' _data/event_tags.yml | sort -u
+```
 
-                            This whole workflow can be handed off to Claude (or another AI with browser access) with a single prompt:
+Every entry in the first list must also appear in the second. If not, fix it before opening the PR (map per the table in Step 8) or the tag won't filter.
 
-                            > "Scan Instagram and Facebook using my account to update events from the venues and resources listed at https://eventosterceira.pt/resources/ and give me the information to make a PR that adds new events."
+---
 
-                            The AI will:
-                            1. Load the resources page to get the account list
-                            2. Navigate to each Instagram/Facebook account
-                            3. Read recent posts and extract event details
-                            4. Cross-check against `special_events.yml` to avoid duplicates
-                            5. Return formatted YAML ready to paste into a PR, plus a draft tracking issue
+## Step 9 — Open a PR
 
-                            After the AI returns the findings, you review, open the issue (or ask the AI to open it), apply the YAML to the file, and open the PR.
+Once you've added your entries to the YAML, open a pull request:
 
-                            **Prompt for just the issue:**
-                            > "Write an internal GitHub issue detailing all the new events found, following the format of issue #141."
+- **Title:** `Add [N] new events: [brief description] (#ISSUE_NUMBER)`
+- **Body:** Reference the tracking issue with `Closes #NNN` or `See #NNN`
+- **Branch:** Create from `main`, name it something like `events/may-22-scan`
 
-                            **Prompt for the PR YAML only:**
-                            > "Format all new events as YAML entries for `_data/special_events.yml` using the schema in that file."
+The CI will run `validate-events.yml` automatically. If it passes, merge directly to `main` (no review required for data-only PRs).
+
+After merging, the `daily-rebuild.yml` workflow will rebuild and deploy the site within ~5 minutes.
+
+---
+
+## Step 10 — Close the tracking issue
+
+Once the PR is merged, close the tracking issue (or it closes automatically if you used `Closes #NNN` in the PR body).
+
+---
+
+## What NOT to add
+
+- **Recurring weekly events** (karaoke nights, Noche Latina, DJ resident nights) → these belong in `_data/weekly.yml`, not `special_events.yml`. Check `weekly.yml` before adding.
+- **Events that have already passed** by the time you're writing the PR.
+- **Events with no confirmed date** (e.g. "coming soon" posts with no date).
+- **Events already auto-ingested** by the daily workflows (CMAH iCal, Ticketline, Museu Angra, CMPV, Visit Azores, Whatson Azores, **Touradas à corda**). Double-check before adding manually — the touradas calendar in particular has 5–10 entries per week during the May–September season, all auto-added.
+
+---
+
+## Automated ingest coverage (what you do NOT need to scan manually)
+
+These sources are covered by daily GitHub Actions workflows and do not need manual scanning:
+
+| Source | Workflow file | Script |
+|---|---|---|
+| CMAH iCal feed | `ingest-cmah.yml` | `scripts/ingest_cmah.py` |
+| Ticketline (Angra + Praia) | `ingest-ticketline.yml` | `scripts/ingest_ticketline.py` |
+| Museu de Angra do Heroísmo | `ingest-museu-angra.yml` | `scripts/ingest_museu_angra.py` |
+| Câmara Municipal Praia da Vitória | `ingest-cmpv.yml` | `scripts/ingest_cmpv.py` |
+| Visit Azores | `ingest-visit-azores.yml` | `scripts/ingest_visit_azores.py` |
+| Whatson Azores (government) | `ingest-whatson-azores.yml` | `scripts/ingest_whatson_azores.py` |
+| Touradas à corda | `ingest-touradas.yml` | `scripts/ingest_touradas.py` |
+
+If an automated workflow is producing errors or missing events, check the **Actions** tab: https://github.com/TerceiraEvents/EventosTerceira.pt/actions
+
+---
+
+## Kicking off with an AI assistant
+
+This whole workflow can be handed off to Claude (or another AI with browser access) with a single prompt:
+
+> "Scan Instagram and Facebook using my account to update events from the venues and resources listed at https://eventosterceira.pt/resources/ and give me the information to make a PR that adds new events. Only use tags from this canonical set — anything else gets silently dropped from the calendar filter: `kid-friendly, live-music, cinema, theater, dance, nightlife, karaoke, food-drink, exhibition, literature, workshop, free, outdoor, bullfighting`. Map common look-alikes: concert→live-music, theatre→theater, comedy→theater, film→cinema, talk→literature, sports→outdoor, art (static)→exhibition, art (hands-on)→workshop. Skip touradas à corda — already auto-ingested. For any flyer image you want to display, point me at the source URL and I will re-host it (don't embed raw Instagram/Facebook URLs as `image:`, they rot)."
+
+The AI will:
+1. Load the resources page to get the account list
+2. Navigate to each Instagram/Facebook account
+3. Read recent posts and extract event details
+4. Cross-check against `special_events.yml` to avoid duplicates
+5. Return formatted YAML ready to paste into a PR, plus a draft tracking issue
+6. Flag any image URLs that need to go through the rehost workflow
+
+After the AI returns the findings, you review, open the issue (or ask the AI to open it), apply the YAML to the file, and open the PR.
+
+**Prompt for just the issue:**
+> "Write an internal GitHub issue detailing all the new events found, following the format of issue #141."
+
+**Prompt for the PR YAML only:**
+> "Format all new events as YAML entries for `_data/special_events.yml` using the schema in that file. Use only canonical tags from `_data/event_tags.yml` (kid-friendly, live-music, cinema, theater, dance, nightlife, karaoke, food-drink, exhibition, literature, workshop, free, outdoor, bullfighting)."
