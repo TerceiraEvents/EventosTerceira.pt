@@ -272,8 +272,19 @@
 - name: "Twins Club"
   address: "Rua Diogo de Teive 54, 9700-065 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Twins+Club+Angra+do+Hero%C3%ADsmo"
-  description: "Two-floor nightclub in Angra known for late-night DJ sets and themed parties. Currently closed (see the blog) but expected to reopen — see Instagram for the latest."
-  description_pt: "Discoteca de dois pisos em Angra, conhecida pelas noites de DJ e festas temáticas. Encontra-se encerrada (ver o blogue) mas com reabertura prevista — vê o Instagram para novidades."
+  description: "Two-floor nightclub in Angra known for late-night DJ sets and themed parties. Reopened May 23, 2026 after a temporary closure."
+  description_pt: "Discoteca de dois pisos em Angra, conhecida pelas noites de DJ e festas temáticas. Reabriu a 23 de maio de 2026 após uma pausa."
+  weekly:
+    - day: Friday
+      day_pt: Sexta-feira
+      name: "Club Night — DJ sets from midnight"
+      name_pt: "Noite de Club — sets de DJ a partir da meia-noite"
+    - day: Saturday
+      day_pt: Sábado
+      name: "Club Night — DJ sets from midnight"
+      name_pt: "Noite de Club — sets de DJ a partir da meia-noite"
+  description_after_weekly: "Headlining DJ + warm-up rotates each week. Check Instagram (@twinstheclub) for the current weekend's lineup."
+  description_after_weekly_pt: "DJ principal + warm-up rodam todas as semanas. Vê o Instagram (@twinstheclub) para saberes quem toca este fim-de-semana."
   links:
     - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/twinstheclub/" }
     - { label: "Facebook", label_pt: "Facebook", url: "https://www.facebook.com/twinsclubazores/" }

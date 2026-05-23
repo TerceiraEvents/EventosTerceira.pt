@@ -117,6 +117,17 @@
     note_pt: "Vê o Instagram para saberes o artista da semana; normalmente é anunciado com 1 ou 2 dias de antecedência."
     instagram: https://www.instagram.com/livraria_lardocelivro/
     url: https://www.lardocelivro.pt
+  - name: Club Night
+    name_pt: Noite de Club
+    venue: Twins Club
+    address: Rua Diogo de Teive 54, 9700-065 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=Twins+Club+Angra+do+Heroísmo
+    time: "00:00"
+    description: "Two-floor club nights with a headlining DJ + warm-up. Reopened in May 2026 after a temporary closure."
+    description_pt: "Noites de clube em dois pisos com um DJ principal e um warm-up. Reabriu em maio de 2026 após uma pausa."
+    note: "Doors at midnight; the lineup changes each week. Check Instagram (@twinstheclub) for who's playing."
+    note_pt: "Abre à meia-noite; o cartaz muda todas as semanas. Vê o Instagram (@twinstheclub) para saberes quem toca."
+    instagram: https://www.instagram.com/twinstheclub/
 
 - day: Saturday
   day_pt: Sábado
@@ -161,6 +172,17 @@
     description: "Bar specialising in 90s and 2000s music. The most consistent slot of the week. Themed banner varies (Rock/Pop Rock, 90s & 2000s Vibes, etc.); check Instagram for this week's."
     description_pt: "Bar dedicado a música dos anos 90 e 2000. O dia mais regular da semana. O tema varia (Rock/Pop Rock, 90s & 2000s Vibes, etc.); vê o Instagram para o desta semana."
     instagram: https://www.instagram.com/porta_42/
+  - name: Club Night
+    name_pt: Noite de Club
+    venue: Twins Club
+    address: Rua Diogo de Teive 54, 9700-065 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=Twins+Club+Angra+do+Heroísmo
+    time: "00:00"
+    description: "Two-floor club nights with a headlining DJ + warm-up. Reopened in May 2026 after a temporary closure."
+    description_pt: "Noites de clube em dois pisos com um DJ principal e um warm-up. Reabriu em maio de 2026 após uma pausa."
+    note: "Doors at midnight; the lineup changes each week. Check Instagram (@twinstheclub) for who's playing."
+    note_pt: "Abre à meia-noite; o cartaz muda todas as semanas. Vê o Instagram (@twinstheclub) para saberes quem toca."
+    instagram: https://www.instagram.com/twinstheclub/
 
 - day: Sunday
   day_pt: Domingo
