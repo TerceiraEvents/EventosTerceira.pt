@@ -326,6 +326,19 @@
   - live-music
 
 - date: 2026-05-24
+  name: "Final da Taça de Portugal — Transmissão no Espaço AMIT"
+  name_en: "Taça de Portugal Final — TV Broadcast at Espaço AMIT"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  time: "16:00"
+  description: "Live TV broadcast of the Taça de Portugal final, Sporting vs Torreense, at Espaço AMIT. Kick-off at 16:00."
+  description_pt: "Transmissão televisiva da final da Taça de Portugal, Sporting vs Torreense, no Espaço AMIT. Início às 16h00."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - food-drink
+
+- date: 2026-05-24
   name: "Concerto 3HP"
   name_en: "Concert by 3HP"
   venue: "Lar Doce Livro"
