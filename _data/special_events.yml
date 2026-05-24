@@ -297,6 +297,34 @@
   - workshop
   - kid-friendly
 
+- date: 2026-05-23
+  name: "Twins is Back — Massivedrum (warm-up Rodrigo)"
+  name_pt: "Twins Está de Volta — Massivedrum (warm-up Rodrigo)"
+  venue: "Twins Club"
+  address: "Rua Diogo de Teive 54, 9700-065 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Twins+Club+Angra+do+Heroísmo
+  time: "00:00"
+  description: "Reopening night at Twins after the temporary closure. Headlining DJ: Massivedrum. Warm-up: Rodrigo. 'Come early, leave late.'"
+  description_pt: "Noite de reabertura do Twins após o encerramento temporário. DJ principal: Massivedrum. Warm-up: Rodrigo. 'Come early, leave late.'"
+  instagram: https://www.instagram.com/twinstheclub/
+  tags:
+  - nightlife
+  - live-music
+
+- date: 2026-05-24
+  name: "Twins — Malvada (warm-up Vitor)"
+  name_pt: "Twins — Malvada (warm-up Vitor)"
+  venue: "Twins Club"
+  address: "Rua Diogo de Teive 54, 9700-065 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Twins+Club+Angra+do+Heroísmo
+  time: "00:00"
+  description: "Reopening-weekend second night at Twins (eve of public holiday). Headlining DJ: Malvada. Warm-up: Vitor."
+  description_pt: "Segunda noite do fim-de-semana de reabertura do Twins (véspera de feriado). DJ principal: Malvada. Warm-up: Vitor."
+  instagram: https://www.instagram.com/twinstheclub/
+  tags:
+  - nightlife
+  - live-music
+
 - date: 2026-05-24
   name: "Concerto 3HP"
   name_en: "Concert by 3HP"
