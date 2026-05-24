@@ -352,6 +352,38 @@
   - live-music
   - free
 
+- date: 2026-05-24
+  name: "Festas do Espírito Santo — Primeiro Bodo (Pentecostes)"
+  name_en: "Holy Spirit Festivals — First Bodo (Pentecost weekend)"
+  venue: "Island-wide (impérios across Terceira)"
+  venue_pt: "Em toda a ilha (impérios da Terceira)"
+  address: "Various impérios, Terceira"
+  address_pt: "Vários impérios, Terceira"
+  map_url: https://www.google.com/maps/search/?api=1&query=Impérios+Espírito+Santo+Terceira
+  description: "First of two island-wide Holy Spirit (Espírito Santo) weekends on Terceira, tied to Pentecost. On Sunday afternoon each império (the small chapels found in every freguesia, 58 of them across the island) holds the coronation, mass, and procession. Monday morning is the headline 'Bodo de Leite' — milk-and-bread parade with flower-decorated oxen — followed by auctions. Food traditions: alcatra, sopas, and massa sovada. Exact start times vary by freguesia; check the local império or angradoheroismo.pt for your village's schedule."
+  description_pt: "Primeiro dos dois fins-de-semana das Festas do Espírito Santo na ilha Terceira, ligado ao Pentecostes. Ao domingo à tarde, cada império (as pequenas capelas em cada freguesia, 58 ao todo na ilha) tem coroação, missa e procissão. Na segunda-feira de manhã decorre o 'Bodo de Leite' — desfile com bois enfeitados de flores a transportar leite e pão — seguido dos leilões. Tradição gastronómica: alcatra, sopas e massa sovada. Os horários exatos variam de freguesia para freguesia — vê o império local ou angradoheroismo.pt para o programa da tua localidade."
+  tags:
+  - outdoor
+  - food-drink
+  - kid-friendly
+  - free
+
+- date: 2026-05-31
+  name: "Festas do Espírito Santo — Segundo Bodo (Trindade)"
+  name_en: "Holy Spirit Festivals — Second Bodo (Trinity Sunday weekend)"
+  venue: "Island-wide (impérios across Terceira)"
+  venue_pt: "Em toda a ilha (impérios da Terceira)"
+  address: "Various impérios, Terceira"
+  address_pt: "Vários impérios, Terceira"
+  map_url: https://www.google.com/maps/search/?api=1&query=Impérios+Espírito+Santo+Terceira
+  description: "Second of two island-wide Holy Spirit weekends on Terceira, tied to Trinity Sunday. Same structure as the Pentecost weekend (May 24): Sunday afternoon coronations / mass / procession at each freguesia's império, then Monday morning's 'Bodo de Leite' milk-and-bread parade with flower-decorated oxen, followed by auctions. After this weekend the impérios keep going through the summer until the Império de São Carlos in September."
+  description_pt: "Segundo dos dois fins-de-semana das Festas do Espírito Santo na Terceira, ligado ao Domingo da Trindade. Estrutura igual à do fim-de-semana de Pentecostes (24 de maio): domingo à tarde com coroações / missa / procissão em cada império de freguesia, e segunda-feira de manhã com o 'Bodo de Leite' — desfile com bois enfeitados a transportar leite e pão — seguido dos leilões. Depois deste fim-de-semana os impérios continuam ao longo do verão, até ao Império de São Carlos em setembro."
+  tags:
+  - outdoor
+  - food-drink
+  - kid-friendly
+  - free
+
 - date: 2026-05-25
   name: "Open Mic / Jam Session"
   venue: "Lar Doce Livro"
