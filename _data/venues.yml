@@ -218,7 +218,7 @@
 - name: "Terceira Weaving Cabin / Ebru Art Terceira"
   address: "EN1-1A 57, 9700 Terceira (exact directions provided on booking)"
   address_pt: "EN1-1A 57, 9700 Terceira (indicações exatas fornecidas após reserva)"
-  map_url: "https://www.google.com/maps/search/?api=1&query=Terceira+Weaving+Cabin+Ebru+Art+Terceira"
+  map_url: "https://maps.app.goo.gl/U4vEqFN4na9VXLSq8"
   description: "Small-group craft studio on Terceira offering Ebru water marbling (paint on water, transfer to fabric, paper, wood, or ceramic) and private weaving lessons on traditional looms. Beginners and experienced weavers welcome; tea or coffee served on the covered terrace. Booking required; sessions cap at four people."
   description_pt: "Atelier de pequenos grupos na Terceira com workshops de Ebru (pintura sobre água, transferência para tecido, papel, madeira ou cerâmica) e aulas privadas de tecelagem em teares tradicionais. Aberto a iniciantes e tecelões experientes; chá ou café servidos na esplanada coberta. Marcação prévia; sessões até quatro pessoas."
   weekly:
@@ -226,10 +226,12 @@
       day_pt: "Terça, Quinta, Sábado"
       name: "Weaving lessons, 14:00–17:00 (by appointment)"
       name_pt: "Aulas de tecelagem, 14:00–17:00 (mediante marcação)"
-  description_after_weekly: "Ebru sessions run by appointment year-round (typical start 14:00). Bookings via Instagram, Viator, or Pelago."
-  description_after_weekly_pt: "Sessões de Ebru por marcação ao longo do ano (início habitual às 14:00). Reservas pelo Instagram, Viator ou Pelago."
+  description_after_weekly: "Ebru sessions run by appointment year-round (typical start 14:00). Bookings via Instagram, Airbnb Experiences, Viator, or Pelago."
+  description_after_weekly_pt: "Sessões de Ebru por marcação ao longo do ano (início habitual às 14:00). Reservas pelo Instagram, Airbnb Experiences, Viator ou Pelago."
   links:
     - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/ebruartterceira/" }
+    - { label: "Airbnb Experience (Ebru)", label_pt: "Experiência Airbnb (Ebru)", url: "https://www.airbnb.co.uk/experiences/6879500" }
+    - { label: "Airbnb Experience (Weaving)", label_pt: "Experiência Airbnb (Tecelagem)", url: "https://www.airbnb.co.uk/experiences/4463786" }
     - { label: "Viator (Ebru)", label_pt: "Viator (Ebru)", url: "https://www.viator.com/tours/Terceira/Ebru-Art-Water-Marbling/d4539-314168P2" }
     - { label: "Pelago (Ebru)", label_pt: "Pelago (Ebru)", url: "https://www.pelago.com/en/activity/p68yxvyvi-painting-on-water-ebru-art-water-marbling-terceira/" }
     - { label: "Power Traveller (Weaving)", label_pt: "Power Traveller (Tecelagem)", url: "https://powertraveller.com/private-small-group-weaving-activity-in-terceira-island/" }
