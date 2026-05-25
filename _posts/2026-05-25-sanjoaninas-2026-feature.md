@@ -60,6 +60,31 @@ The Bailão is the only paid stage. There are **three ways to buy**:
 
 ---
 
+## The Séquito Real (Royal Retinue) 2026
+
+Sanjoaninas each year names a **Queen** and a Royal Retinue who present the festival, lead the opening parade, and represent Angra in the official protocol moments through the ten days. The make-up of the retinue is itself a snapshot of how widely Terceira reaches — there are *Damas* (Ladies) representing both Portuguese cities and the major diaspora communities.
+
+**Rainha (Queen):** Laura Meneses
+**Chefe de Protocolo (Chief of Protocol):** Afonso Costa
+**Camareira (Lady-in-waiting):** Leonor Pereira
+**Pajens (Pages):** Carmen Terra, Francisco Pavão
+**Damas (Ladies):** Inês Tonel, Margarida Fins
+
+**Diaspora and twin-city Damas:**
+
+| Dama | Representing |
+|---|---|
+| Lara Remédios | Évora *(mainland Portugal)* |
+| Maria Camacho | Funchal *(Madeira)* |
+| Addison Capote | Tulare *(California diaspora)* |
+| Audrey Kaefer | Gilroy *(California diaspora)* |
+| Cláudia Xavier | Ribeira Grande de Santiago *(Cape Verde)* |
+| Micaela Borges | Costa Leste *(US East Coast diaspora)* |
+
+The retinue's traditional costumes are themselves an exhibition this year — the **"Trajes do Séquito Real das Sanjoaninas 2026"** display is on view in the Átrio Intermédio of the Paços do Concelho throughout the festival.
+
+---
+
 ## A small glossary
 
 A handful of Portuguese terms recur throughout this guide. We've left them in Portuguese where that's how everyone (locals and posters) refers to them, but here's what they mean:
@@ -388,6 +413,31 @@ By tradition the longest and rowdiest night of the year in Angra. The big adult 
 
 ---
 
+## The Official Sanjoaninas 2026 March
+
+The **Marcha Oficial das Sanjoaninas 2026** sets the tone for every other march in the parade.
+
+- **Theme:** "Angra e a Açorianidade"
+- **Lyrics:** Pedro Cravo Fernandes
+- **Music:** Gualter Silva
+- **Performed by:** Banda do Senhor Santo Cristo de Toronto *(the visiting Toronto diaspora band)*
+
+Excerpt from the official karaoke video:
+
+> Berço do Espírito Santo
+> E dos mistérios do mar
+>
+> E todos juntos nas Sanjoaninas da Ilha Terceira
+> Cantamos alto, com alegria, saltando à fogueira
+> As ruas de Angra engalanadas, as marchas que passam
+> É a raiz açoriana a celebrar o São João
+
+*(Loose translation: "Cradle of the Holy Spirit and of the mysteries of the sea / And all of us together at the Sanjoaninas of Terceira Island / We sing loud, with joy, jumping over the bonfire / The streets of Angra decked out, the marches passing by / It is the Azorean root celebrating São João.")*
+
+Full lyrics and the official karaoke video are at [sanjoaninas.cmah.pt](https://sanjoaninas.cmah.pt/?page_id=375) and on the CMAH YouTube channel.
+
+---
+
 ## Ordem das Marchas — 23 June (adult night)
 
 **34 adult marches** parade tonight, in this order. *Letra* = lyrics; *música* = music. We've translated the march themes inline so non-Portuguese readers can follow the cultural tagline of each troupe.
@@ -460,9 +510,11 @@ That's the full route from **Alto das Covas** through **Rua da Sé**, **Rua de S
 
 | Date / Time | Type | Cavaleiros (mounted) / Matador (on foot) | Forcados (catchers) | Ganadarias (breeders) |
 |---|---|---|---|---|
-| **Sun 21 Jun, 18:30** | Corrida à Portuguesa *(Portuguese-style, no kill)* | Tiago Pamplona, João Moura Jr., João Ribeiro Telles | Amadores Tertúlia Terceirense + Amadores de Turlock *(amateur clubs from Terceira + Turlock, CA)* | RB, JG |
-| **Mon 22 Jun, 19:30** | Grandiosa Corrida Mista *(Grand Mixed: mounted + on-foot)* | Cav: João Moura Jr., João Pamplona / Matador: Marco Pérez | Tertúlia + Turlock | JAF, JG |
-| **Wed 24 Jun, 18:30** | Corrida Mista de São João *(Saint John's Mixed Bullfight)* | Cav: João Moura Jr., João Ribeiro Telles / Matador: Fernando Adrián | Tertúlia + Ramo Grande *(amateur club from the eastern parishes)* | RB, JG |
+| **Sun 21 Jun, 18:30** | Corrida à Portuguesa *(Portuguese-style, no kill)* | Tiago Pamplona, João Moura Jr., João Ribeiro Telles | Amadores Tertúlia Terceirense + Amadores de Turlock *(amateur clubs from Terceira + Turlock, CA)* | Bego Botelho, João Gaspar |
+| **Mon 22 Jun, 19:30** | Grandiosa Corrida Mista *(Grand Mixed: mounted + on-foot)* | Cav: João Moura Jr., João Pamplona / Matador: Marco Pérez | Tertúlia + Turlock | José Aleixo Fernandes, João Gaspar |
+| **Wed 24 Jun, 18:30** | Corrida Mista de São João *(Saint John's Mixed Bullfight)* | Cav: João Moura Jr., João Ribeiro Telles / Matador: Fernando Adrián | Tertúlia + Ramo Grande *(amateur club from the eastern parishes)* | Bego Botelho, João Gaspar |
+
+The breeder shorthand on rope-tourada posters (RB / JAF / JG / etc.) refers to these same houses — **RB = Bego Botelho**, **JAF = José Aleixo Fernandes**, **JG = João Gaspar**.
 
 Plus on **Sunday 28 at 15:00**, the **Aula prática de toureio em família** *(Family Bullfighting Practical Class)* — a family-friendly bullring open session.
 
