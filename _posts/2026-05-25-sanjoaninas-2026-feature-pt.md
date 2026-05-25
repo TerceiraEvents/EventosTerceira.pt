@@ -61,6 +61,31 @@ O Bailão é o único palco pago. Há **três formas de comprar**:
 
 ---
 
+## Séquito Real 2026
+
+Todos os anos, as Sanjoaninas nomeiam uma **Rainha** e um Séquito Real que apresentam a festa, abrem o desfile inaugural e representam Angra nos momentos protocolares dos dez dias. A composição do séquito é, por si só, um retrato do alcance da Terceira — há *Damas* a representar cidades portuguesas e as grandes comunidades da diáspora.
+
+**Rainha:** Laura Meneses
+**Chefe de Protocolo:** Afonso Costa
+**Camareira:** Leonor Pereira
+**Pajens:** Carmen Terra, Francisco Pavão
+**Damas:** Inês Tonel, Margarida Fins
+
+**Damas da diáspora e cidades-irmãs:**
+
+| Dama | Representa |
+|---|---|
+| Lara Remédios | Évora *(continente)* |
+| Maria Camacho | Funchal *(Madeira)* |
+| Addison Capote | Tulare *(diáspora na Califórnia)* |
+| Audrey Kaefer | Gilroy *(diáspora na Califórnia)* |
+| Cláudia Xavier | Ribeira Grande de Santiago *(Cabo Verde)* |
+| Micaela Borges | Costa Leste *(diáspora nos EUA)* |
+
+Os trajes tradicionais do séquito são, este ano, uma exposição: **"Trajes do Séquito Real das Sanjoaninas 2026"**, no Átrio Intermédio dos Paços do Concelho, ao longo da festa.
+
+---
+
 ## Sexta-feira, 19 de junho — ABERTURA
 
 **Manhã / tarde**
@@ -346,6 +371,29 @@ Por tradição a noite mais longa e barulhenta do ano em Angra. As grandes march
 
 ---
 
+## Marcha Oficial das Sanjoaninas 2026
+
+A **Marcha Oficial das Sanjoaninas 2026** dá o tom às restantes 48 marchas do desfile.
+
+- **Tema:** "Angra e a Açorianidade"
+- **Letra:** Pedro Cravo Fernandes
+- **Música:** Gualter Silva
+- **Intérprete:** Banda do Senhor Santo Cristo de Toronto *(banda da diáspora de Toronto)*
+
+Excerto do vídeo oficial em formato karaoke:
+
+> Berço do Espírito Santo
+> E dos mistérios do mar
+>
+> E todos juntos nas Sanjoaninas da Ilha Terceira
+> Cantamos alto, com alegria, saltando à fogueira
+> As ruas de Angra engalanadas, as marchas que passam
+> É a raiz açoriana a celebrar o São João
+
+Letra completa e vídeo oficial em [sanjoaninas.cmah.pt](https://sanjoaninas.cmah.pt/?page_id=375) e no canal YouTube da Câmara Municipal de Angra do Heroísmo.
+
+---
+
 ## Ordem das Marchas — 23 de junho (noite dos adultos)
 
 **34 marchas de adultos** desfilam esta noite, por esta ordem:
@@ -418,9 +466,11 @@ Percurso completo: **Alto das Covas → Rua da Sé → Rua de São João → Rua
 
 | Data / Hora | Tipo | Cavaleiros / Matador | Forcados | Ganadarias |
 |---|---|---|---|---|
-| **Dom 21 jun, 18h30** | Corrida à Portuguesa | Tiago Pamplona, João Moura Jr., João Ribeiro Telles | Amadores Tertúlia Terceirense + Amadores de Turlock | RB, JG |
-| **Seg 22 jun, 19h30** | Grandiosa Corrida Mista | Cav: João Moura Jr., João Pamplona / Matador: Marco Pérez | Tertúlia + Turlock | JAF, JG |
-| **Qua 24 jun, 18h30** | Corrida Mista de São João | Cav: João Moura Jr., João Ribeiro Telles / Matador: Fernando Adrián | Tertúlia + Ramo Grande | RB, JG |
+| **Dom 21 jun, 18h30** | Corrida à Portuguesa | Tiago Pamplona, João Moura Jr., João Ribeiro Telles | Amadores Tertúlia Terceirense + Amadores de Turlock | Bego Botelho, João Gaspar |
+| **Seg 22 jun, 19h30** | Grandiosa Corrida Mista | Cav: João Moura Jr., João Pamplona / Matador: Marco Pérez | Tertúlia + Turlock | José Aleixo Fernandes, João Gaspar |
+| **Qua 24 jun, 18h30** | Corrida Mista de São João | Cav: João Moura Jr., João Ribeiro Telles / Matador: Fernando Adrián | Tertúlia + Ramo Grande | Bego Botelho, João Gaspar |
+
+As siglas dos ganadeiros que aparecem nos cartazes das touradas à corda (RB / JAF / JG / etc.) referem-se às mesmas casas — **RB = Bego Botelho**, **JAF = José Aleixo Fernandes**, **JG = João Gaspar**.
 
 E no **domingo 28, às 15h00**, a **Aula prática de toureio em família** — sessão aberta à família na praça.
 
