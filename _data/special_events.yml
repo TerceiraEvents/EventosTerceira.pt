@@ -13,6 +13,351 @@
   - bullfighting
   - kid-friendly
 
+
+# Sanjoaninas 2026 — per-day headline events (paired with the umbrella entry above).
+# Each event is flagged `festival: "Sanjoaninas 2026"` so they group on the calendar.
+# Source: official CMAH program book (Sanjoaninas_2026_Completo.pdf).
+
+- date: 2026-06-19
+  name: "Sanjoaninas 2026 — Abertura, Desfile e «Sons da Autonomia»"
+  name_en: "Sanjoaninas 2026 — Opening, Parade and «Sons da Autonomia»"
+  venue: "Centro histórico de Angra do Heroísmo"
+  venue_en: "Historic centre of Angra do Heroísmo"
+  address: "Alto das Covas → Rua da Sé → Rua de São João → Rua Direita → Praça Velha, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:00"
+  festival: "Sanjoaninas 2026"
+  description: "Official opening of Sanjoaninas 2026: artillery salvo and city illumination at 21:00, philharmonic parade with the Toronto diaspora band joining the Fanfarra Operária Gago Coutinho e Sacadura Cabral and the Filarmónica dos Artistas (21:45), Opening Parade (22:00), Rainha's speech at the Town Hall, and the «Sons da Autonomia dos Açores» concert marking 50 years of Azorean Autonomy by the Orquestra de Sopros da Ilha Terceira on the Palco Continente."
+  description_pt: "Abertura oficial das Sanjoaninas 2026: salva de morteiros e abertura da iluminação (21h00), desfile de filarmónicas com a Banda do Senhor Santo Cristo de Toronto, a Fanfarra Operária Gago Coutinho e Sacadura Cabral e a Filarmónica de Instrução e Recreio dos Artistas (21h45), Desfile de Abertura (22h00), Discurso da Rainha nos Paços do Concelho e concerto comemorativo dos 50 anos da Autonomia «Sons da Autonomia dos Açores» pela Orquestra de Sopros da Ilha Terceira no Palco Continente."
+  tags:
+  - live-music
+  - outdoor
+  - free
+  - kid-friendly
+
+- date: 2026-06-19
+  name: "Wet Bed Gang @ Palco MEO Bailão (Sanjoaninas 2026)"
+  name_en: "Wet Bed Gang @ Palco MEO Bailão (Sanjoaninas 2026)"
+  venue: "Palco MEO — Cerrado do Bailão"
+  address: "Cerrado do Bailão, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Cerrado%20do%20Bail%C3%A3o%20Angra%20do%20Hero%C3%ADsmo
+  time: "00:00"
+  festival: "Sanjoaninas 2026"
+  description: "Concert by the Wet Bed Gang rap collective on the Palco MEO at Cerrado do Bailão — the opening big night of Sanjoaninas 2026. Wristband required (€30 weekly / €15 daily). DJs after: I Love 90's (01:30) and Simon R (03:00)."
+  description_pt: "Concerto do coletivo de rap Wet Bed Gang no Palco MEO, no Cerrado do Bailão — a primeira grande noite das Sanjoaninas 2026. Entrada com pulseira semanal (30€) ou diária (15€). DJs depois: I Love 90's (01h30) e Simon R (03h00)."
+  tags:
+  - live-music
+  - nightlife
+
+- date: 2026-06-20
+  name: "Ivo Lucas @ Palco MEO Bailão (Sanjoaninas 2026)"
+  venue: "Palco MEO — Cerrado do Bailão"
+  address: "Cerrado do Bailão, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Cerrado%20do%20Bail%C3%A3o%20Angra%20do%20Hero%C3%ADsmo
+  time: "00:30"
+  festival: "Sanjoaninas 2026"
+  description: "Concert by singer-songwriter Ivo Lucas on the Palco MEO. Earlier (23:00): UZOHMS on the same stage. DJs after: Oram (02:00) and Miranda (03:00). Wristband required."
+  description_pt: "Concerto do cantautor Ivo Lucas no Palco MEO. Antes (23h00): UZOHMS, também no Palco MEO. DJs depois: Oram (02h00) e Miranda (03h00). Entrada com pulseira."
+  tags:
+  - live-music
+  - nightlife
+
+- date: 2026-06-20
+  name: "Desfile do Desporto (Sanjoaninas 2026)"
+  name_en: "Sports Parade (Sanjoaninas 2026)"
+  venue: "Centro histórico de Angra do Heroísmo"
+  address: "Alto das Covas → Rua da Sé → Praça Velha, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:00"
+  festival: "Sanjoaninas 2026"
+  description: "Sports parade through the historic centre (Alto das Covas → Rua da Sé → Praça Velha) with sports clubs and associations. Followed by the Orquestra Angrajazz concert on the Palco Continente."
+  description_pt: "Desfile do Desporto pelas ruas do centro histórico (Alto das Covas → Rua da Sé → Praça Velha) com clubes e associações desportivas. A seguir: concerto da Orquestra Angrajazz no Palco Continente."
+  tags:
+  - outdoor
+  - free
+  - kid-friendly
+
+- date: 2026-06-21
+  name: "Corrida à Portuguesa — Feira de São João (Sanjoaninas 2026)"
+  name_en: "Portuguese-style Bullfight — Feira de São João (Sanjoaninas 2026)"
+  venue: "Praça de Toiros da Ilha Terceira"
+  address: "Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20de%20Toiros%20Ilha%20Terceira
+  time: "18:30"
+  festival: "Sanjoaninas 2026"
+  description: "Portuguese-style bullfight at the Praça de Toiros da Ilha Terceira, first night of the Feira Taurina de São João. Cavaleiros: Tiago Pamplona, João Moura Jr., João Ribeiro Telles. Forcados: Amadores da Tertúlia Tauromáquica Terceirense and Amadores de Turlock. Ganadarias: RB, JG."
+  description_pt: "Corrida à Portuguesa na Praça de Toiros da Ilha Terceira, primeira noite da Feira Taurina de São João. Cavaleiros: Tiago Pamplona, João Moura Jr., João Ribeiro Telles. Forcados: Amadores da Tertúlia Tauromáquica Terceirense e Amadores de Turlock. Ganadarias: RB, JG."
+  tags:
+  - bullfighting
+
+- date: 2026-06-21
+  name: "Matias Damásio @ Palco MEO Bailão (Sanjoaninas 2026)"
+  venue: "Palco MEO — Cerrado do Bailão"
+  address: "Cerrado do Bailão, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Cerrado%20do%20Bail%C3%A3o%20Angra%20do%20Hero%C3%ADsmo
+  time: "23:00"
+  festival: "Sanjoaninas 2026"
+  description: "Concert by Matias Damásio (Angolan-Portuguese romantic pop) on the Palco MEO. Also billed at the same time: P*ta da Loucura on the same stage (confirm on the night). DJ John C at 02:00. Earlier (22:30): Cantoria on Palco Continente and João da Ilha Quarteto on Palco Expert. Wristband required."
+  description_pt: "Concerto de Matias Damásio (pop romântica angolano-portuguesa) no Palco MEO. À mesma hora: P*ta da Loucura no Palco MEO (programa indica a mesma hora — confirma à porta). DJ John C às 02h00. Antes (22h30): Cantoria no Palco Continente e João da Ilha Quarteto no Palco Expert. Entrada com pulseira."
+  tags:
+  - live-music
+  - nightlife
+
+- date: 2026-06-22
+  name: "Grandiosa Corrida Mista — Feira de São João (Sanjoaninas 2026)"
+  name_en: "Grand Mixed Bullfight — Feira de São João (Sanjoaninas 2026)"
+  venue: "Praça de Toiros da Ilha Terceira"
+  address: "Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20de%20Toiros%20Ilha%20Terceira
+  time: "19:30"
+  festival: "Sanjoaninas 2026"
+  description: "Grand mixed bullfight at the Praça de Toiros, second night of the Feira Taurina. Cavaleiros: João Moura Jr., João Pamplona. Matador: Marco Pérez. Forcados: Tertúlia Terceirense + Turlock. Ganadarias: JAF, JG."
+  description_pt: "Grandiosa Corrida Mista na Praça de Toiros, segunda noite da Feira Taurina. Cavaleiros: João Moura Jr., João Pamplona. Matador: Marco Pérez. Forcados: Amadores da Tertúlia Tauromáquica Terceirense e Amadores de Turlock. Ganadarias: JAF, JG."
+  tags:
+  - bullfighting
+
+- date: 2026-06-22
+  name: "Desfile de Charangas e Desfile de Clássicos, Motas e Todo-o-Terreno (Sanjoaninas 2026)"
+  name_en: "Charangas Parade + Classics, Motorbikes and 4×4 Parade (Sanjoaninas 2026)"
+  venue: "Centro histórico de Angra do Heroísmo"
+  address: "Alto das Covas → Rua da Sé → Praça Velha"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:00"
+  festival: "Sanjoaninas 2026"
+  description: "Two back-to-back parades through the historic centre: Charangas parade at 21:00 with Scout groups 139 (Porto Judeu), 492 (Conceição), 630 (Santa Bárbara), 654 (Ribeirinha), 803 (São Carlos) and the Ribeira Grande firefighters' charanga; then at 22:00, the Classics + Motorbikes + 4×4 Parade. Followed by Ivo Silva on the Palco Continente."
+  description_pt: "Duas paradas seguidas pelo centro: Desfile de Charangas às 21h00 com os Agrupamentos de Escoteiros 139 (Porto Judeu), 492 (Conceição), 630 (Santa Bárbara), 654 (Ribeirinha), 803 (São Carlos) e a Charanga dos Bombeiros Voluntários da Ribeira Grande; depois, às 22h00, o Desfile de Clássicos, Motas e Todo-o-Terreno. A seguir, concerto de Ivo Silva no Palco Continente."
+  tags:
+  - outdoor
+  - free
+  - kid-friendly
+
+- date: 2026-06-22
+  name: "Vizinhos @ Palco MEO Bailão (Sanjoaninas 2026)"
+  venue: "Palco MEO — Cerrado do Bailão"
+  address: "Cerrado do Bailão, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Cerrado%20do%20Bail%C3%A3o%20Angra%20do%20Hero%C3%ADsmo
+  time: "23:00"
+  festival: "Sanjoaninas 2026"
+  description: "Vizinhos concert on the Palco MEO — one of the festival's big pop nights. Earlier (22:30): Quarto Crescente on Palco Expert. After: Miguel Ormonde on Palco Guarita (00:00), DJ Souza (00:30) and DJ Macow & Gonga (02:00) on Palco MEO. Wristband required."
+  description_pt: "Concerto dos Vizinhos no Palco MEO — uma das grandes noites pop do festival. Antes (22h30): Quarto Crescente no Palco Expert. Depois: Miguel Ormonde no Palco Guarita (00h00), DJ Souza (00h30) e DJ Macow & Gonga (02h00) no Palco MEO. Entrada com pulseira."
+  tags:
+  - live-music
+  - nightlife
+
+- date: 2026-06-23
+  name: "Noite de São João — Desfile das Marchas (Sanjoaninas 2026)"
+  name_en: "Noite de São João — Marches Parade (Sanjoaninas 2026)"
+  venue: "Centro histórico de Angra do Heroísmo"
+  address: "Alto das Covas → Rua da Sé → Rua de São João → Rua dos Minhas Terras → Rua Direita → Praça Velha"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:00"
+  festival: "Sanjoaninas 2026"
+  description: "Noite de São João — the longest and rowdiest night of the year in Angra. 34 adult marches parade along the full historic-centre route (Alto das Covas → Sé → São João → Minhas Terras → Direita → Praça Velha), led off by the Marcha Oficial das Sanjoaninas 2026 («Angra e a Açorianidade», Banda do Senhor Santo Cristo de Toronto). Afterwards, the traditional sardinhada and São João bonfires on Rua de São João. All four stages active deep into the morning; Bailão is DJs only tonight (Vitor 00:00, Wild do Ó 01:30, Brothers On Dish 03:00). Street animation with Transformers and Style Punk (Icarus et Lumen) 19:00–21:00."
+  description_pt: "Noite de São João — a noite mais longa e barulhenta do ano em Angra. 34 marchas de adultos desfilam pelo percurso completo (Alto das Covas → Sé → São João → Minhas Terras → Direita → Praça Velha), abertas pela Marcha Oficial das Sanjoaninas 2026 («Angra e a Açorianidade», Banda do Senhor Santo Cristo de Toronto). A seguir, tradicional sardinhada e fogueiras de São João na Rua de São João. Quatro palcos ativos até de madrugada; só DJs no Bailão esta noite (Vitor à 00h00, Wild do Ó à 01h30, Brothers On Dish às 03h00). Animação de rua com Transformers e Style Punk (Icarus et Lumen) das 19h às 21h."
+  tags:
+  - outdoor
+  - free
+  - live-music
+  - kid-friendly
+
+- date: 2026-06-24
+  name: "Dia de São João — Missa Solene e Procissão (Sanjoaninas 2026)"
+  name_en: "Saint John's Day — Solemn Mass and Procession (Sanjoaninas 2026)"
+  venue: "Igreja da Sé"
+  address: "Largo da Sé, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=S%C3%A9%20Catedral%20Angra%20do%20Hero%C3%ADsmo
+  time: "18:00"
+  festival: "Sanjoaninas 2026"
+  description: "Solemn mass for the birth of Saint John the Baptist at the Sé Catedral — Terceira's patron saint and a municipal holiday in Angra. Later, at 20:00 on the Palco Continente, the Angra EmCanto Sénior choir performs with members of the convívio centres."
+  description_pt: "Missa solene do nascimento de São João Batista na Sé Catedral, padroeiro da cidade e da ilha. Feriado municipal em Angra. Mais tarde, no Palco Continente (20h00), o coro Angra, EmCanto Sénior com utentes dos centros de convívio."
+  tags:
+  - free
+
+- date: 2026-06-24
+  name: "Corrida Mista de São João — Feira de São João (Sanjoaninas 2026)"
+  name_en: "Saint John's Mixed Bullfight — Feira de São João (Sanjoaninas 2026)"
+  venue: "Praça de Toiros da Ilha Terceira"
+  address: "Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20de%20Toiros%20Ilha%20Terceira
+  time: "18:30"
+  festival: "Sanjoaninas 2026"
+  description: "Saint John's Mixed Bullfight at the Praça de Toiros, third and final night of the Feira Taurina. Cavaleiros: João Moura Jr., João Ribeiro Telles. Matador: Fernando Adrián. Forcados: Tertúlia Terceirense + Ramo Grande. Ganadarias: RB, JG."
+  description_pt: "Corrida Mista de São João na Praça de Toiros, terceira e última noite da Feira Taurina. Cavaleiros: João Moura Jr., João Ribeiro Telles. Matador: Fernando Adrián. Forcados: Amadores da Tertúlia Tauromáquica Terceirense e Amadores do Ramo Grande. Ganadarias: RB, JG."
+  tags:
+  - bullfighting
+
+- date: 2026-06-24
+  name: "Desfile das Marchas de São João — Crianças e Adultos (Sanjoaninas 2026)"
+  name_en: "Saint John's Marches Parade — Children and Adults (Sanjoaninas 2026)"
+  venue: "Centro histórico de Angra do Heroísmo"
+  address: "Alto das Covas → Rua da Sé → Praça Velha (crianças); percurso completo (adultos restantes)"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:00"
+  festival: "Sanjoaninas 2026"
+  description: "Second night of marches: 9 children's marches open at 21:00 along the shorter Alto das Covas → Sé → Praça Velha route, followed by the 6 adult marches that didn't fit on the 23rd (Veteranos, Amigos da Ganadaria, Casa do Povo de São Brás, Casa do Benfica, Alegria da Ribeira and São Brás from São Miguel) on the full route."
+  description_pt: "Segunda noite de marchas: 9 marchas de pequeninos abrem às 21h00 pelo percurso curto (Alto das Covas → Sé → Praça Velha), seguidas das 6 marchas de adultos que não couberam na noite de 23 (Veteranos, Amigos da Ganadaria, Casa do Povo de São Brás, Casa do Benfica, Alegria da Ribeira de São Miguel e São Brás de São Miguel) no percurso completo."
+  tags:
+  - outdoor
+  - free
+  - kid-friendly
+
+- date: 2026-06-24
+  name: "Grande Noite de Fado — Guida Costa, Lisete Silva, Fábio Ourique (Sanjoaninas 2026)"
+  name_en: "Grand Fado Night — Guida Costa, Lisete Silva, Fábio Ourique (Sanjoaninas 2026)"
+  venue: "Palco Expert — Largo Prior do Crato"
+  address: "Largo Prior do Crato, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Largo%20Prior%20do%20Crato%20Angra%20do%20Hero%C3%ADsmo
+  time: "22:30"
+  festival: "Sanjoaninas 2026"
+  description: "Grand Fado Night on the Palco Expert at Largo Prior do Crato, with three of Terceira's biggest fado voices: Guida Costa, Lisete Silva and Fábio Ourique. Free entry."
+  description_pt: "Grande Noite de Fado no Palco Expert, no Largo Prior do Crato, com três das vozes maiores do fado terceirense: Guida Costa, Lisete Silva e Fábio Ourique. Entrada livre."
+  tags:
+  - live-music
+  - free
+
+- date: 2026-06-24
+  name: "Sippinpurpp + Jotta L @ Palco MEO Bailão (Sanjoaninas 2026)"
+  venue: "Palco MEO — Cerrado do Bailão"
+  address: "Cerrado do Bailão, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Cerrado%20do%20Bail%C3%A3o%20Angra%20do%20Hero%C3%ADsmo
+  time: "23:00"
+  festival: "Sanjoaninas 2026"
+  description: "Saint John's Day at the Bailão: Jotta L at 23:00, Sippinpurpp at 00:00 (Portuguese hip-hop). DJ The White Heads at 02:00. In parallel, Breeze on the Palco Guarita (00:00). Wristband required."
+  description_pt: "Dia de São João no Bailão: Jotta L às 23h00, Sippinpurpp à 00h00 (hip-hop português). DJ The White Heads às 02h00. Em paralelo, Breeze no Palco Guarita (00h00). Entrada com pulseira."
+  tags:
+  - live-music
+  - nightlife
+
+- date: 2026-06-25
+  name: "Desfile da Etnografia: «Entre Brumas e Memórias, a Etnografia da Açorianidade» (Sanjoaninas 2026)"
+  name_en: "Ethnographic Parade: «Between Mists and Memories» (Sanjoaninas 2026)"
+  venue: "Centro histórico de Angra do Heroísmo"
+  address: "Alto das Covas → Rua da Sé → Praça Velha"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:00"
+  festival: "Sanjoaninas 2026"
+  description: "Ethnographic parade through the historic centre, under the theme «Between Mists and Memories, the Ethnography of Açorianidade». Followed by folk-group performances on the Palco Continente. Earlier (16:00), the Emigrant Reception at the Town Hall."
+  description_pt: "Desfile da Etnografia pelas ruas do centro, sob o tema «Entre Brumas e Memórias, a Etnografia da Açorianidade». A seguir, atuação de Grupos Folclóricos no Palco Continente. Antes, às 16h00, Receção ao Emigrante nos Paços do Concelho."
+  tags:
+  - outdoor
+  - free
+  - kid-friendly
+
+- date: 2026-06-25
+  name: "Mariza @ Palco MEO Bailão (Sanjoaninas 2026)"
+  venue: "Palco MEO — Cerrado do Bailão"
+  address: "Cerrado do Bailão, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Cerrado%20do%20Bail%C3%A3o%20Angra%20do%20Hero%C3%ADsmo
+  time: "23:00"
+  festival: "Sanjoaninas 2026"
+  description: "Mariza on the Palco MEO — one of fado's biggest voices closing the ethnography night, fitting for the 50-years-of-Autonomy theme. Earlier (22:30): Cantoria e Velhas on Palco Expert. After: Kevin Floyd's Gang on Palco Guarita (00:00), DJ Kiss Kiss Bang Bang (00:30) and DJ Rodrigo (02:00) on Palco MEO. Wristband required."
+  description_pt: "Mariza no Palco MEO — uma das vozes maiores do fado a fechar a noite da etnografia, na noite simbólica para os 50 anos da Autonomia. Antes (22h30): Cantoria e Velhas no Palco Expert. Depois: Kevin Floyd's Gang no Palco Guarita (00h00), DJ Kiss Kiss Bang Bang (00h30) e DJ Rodrigo (02h00) no Palco MEO. Entrada com pulseira."
+  tags:
+  - live-music
+  - nightlife
+
+- date: 2026-06-26
+  name: "Desfile das Freguesias (Sanjoaninas 2026)"
+  name_en: "Parishes Parade (Sanjoaninas 2026)"
+  venue: "Centro histórico de Angra do Heroísmo"
+  address: "Alto das Covas → Rua da Sé → Praça Velha"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:00"
+  festival: "Sanjoaninas 2026"
+  description: "Parishes parade: all 19 freguesias of the Angra do Heroísmo municipality parade in order (São Bartolomeu de Regatos → Raminho → Posto Santo → Santa Bárbara → São Pedro → Altares → Conceição → Feteira → Doze Ribeiras → Serreta → Terra-Chã → Vila de São Mateus → Ribeirinha → Santa Luzia → São Bento → Vila do Porto Judeu → Cinco Ribeiras → Sé → Vila de São Sebastião). Followed by «Marco Paulo, um ano de Saudade» by the Filarmónica Rainha Santa Isabel das Doze Ribeiras on the Palco Continente."
+  description_pt: "Desfile das Freguesias: 19 freguesias do concelho de Angra desfilam por ordem (São Bartolomeu de Regatos, Raminho, Posto Santo, Santa Bárbara, São Pedro, Altares, Conceição, Feteira, Doze Ribeiras, Serreta, Terra-Chã, Vila de São Mateus, Ribeirinha, Santa Luzia, São Bento, Vila do Porto Judeu, Cinco Ribeiras, Sé, Vila de São Sebastião). A seguir: concerto «Marco Paulo, um ano de Saudade» pela Filarmónica Rainha Santa Isabel das Doze Ribeiras no Palco Continente."
+  tags:
+  - outdoor
+  - free
+  - kid-friendly
+
+- date: 2026-06-26
+  name: "Irina Barros @ Palco MEO Bailão (Sanjoaninas 2026)"
+  venue: "Palco MEO — Cerrado do Bailão"
+  address: "Cerrado do Bailão, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Cerrado%20do%20Bail%C3%A3o%20Angra%20do%20Hero%C3%ADsmo
+  time: "00:00"
+  festival: "Sanjoaninas 2026"
+  description: "Irina Barros concert on the Palco MEO. Earlier (23:00): Artur Miranda on Palco Expert. In parallel (00:00): De Lá e de Cá on Palco Guarita. DJs after: Overrule (01:30), Gaspar at Guarita (02:00), Carlos Fernandes (03:00). Wristband required."
+  description_pt: "Concerto de Irina Barros no Palco MEO. Antes (23h00): Artur Miranda no Palco Expert. Em paralelo (00h00): De Lá e de Cá no Palco Guarita. DJs depois: Overrule (01h30), Gaspar no Guarita (02h00), Carlos Fernandes (03h00). Entrada com pulseira."
+  tags:
+  - live-music
+  - nightlife
+
+- date: 2026-06-27
+  name: "Dia do Emigrante @ Green Café (Sanjoaninas 2026)"
+  name_en: "Emigrant Day @ Green Café (Sanjoaninas 2026)"
+  venue: "Green Café"
+  address: "Green Café, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Green%20Caf%C3%A9%20Angra%20do%20Hero%C3%ADsmo
+  time: "10:00"
+  festival: "Sanjoaninas 2026"
+  description: "Emigrant Day at the Green Café celebrating the Terceiran diaspora. 10:00 venue opens, 10:15 craft fair opens, 11:00 flag-raising ceremony with the Toronto philharmonic, 11:30 sweet bread + milk distribution, 12:00 Grupo de Baile da Canção Regional Terceirense, 12:30 regional food tasting, 13:30 fado with Vera Brasil and Fábio Ourique, 14:30 Os D'Improviso."
+  description_pt: "Dia do Emigrante no Green Café, a celebrar a diáspora terceirense. 10h00 abertura do recinto, 10h15 abertura do Artesanato, 11h00 hastear das bandeiras com a Filarmónica do Senhor Santo Cristo de Toronto, 11h30 distribuição de massa sovada e leite, 12h00 Grupo de Baile da Canção Regional Terceirense, 12h30 degustação de produtos regionais, 13h30 fadistas Vera Brasil e Fábio Ourique, 14h30 Os D'Improviso."
+  tags:
+  - live-music
+  - food-drink
+  - free
+  - kid-friendly
+
+- date: 2026-06-27
+  name: "Desfile Infantil (Sanjoaninas 2026)"
+  name_en: "Children's Parade (Sanjoaninas 2026)"
+  venue: "Centro histórico de Angra do Heroísmo"
+  address: "Alto das Covas → Rua da Sé → Rua de São João → Rua dos Minhas Terras → Rua Direita → Praça Velha"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:00"
+  festival: "Sanjoaninas 2026"
+  description: "Children's parade along the full historic-centre route. Followed by Fala Quem Sabe & Chico Maravilhas on the Palco Continente. Street animation with Bandilândia on bicycles (19:00–21:00). Earlier, the Academia Sénior Santa Casa Regional Dance at 18:00 on the Palco do Prior do Crato."
+  description_pt: "Desfile Infantil pelo percurso completo do centro histórico. A seguir, concerto Fala Quem Sabe & Chico Maravilhas no Palco Continente. Animação de rua com Bandilândia em bicicleta (19h-21h). Antes, Baile Regional da Academia Sénior da Santa Casa da Misericórdia às 18h00 no Palco do Prior do Crato."
+  tags:
+  - outdoor
+  - free
+  - kid-friendly
+
+- date: 2026-06-27
+  name: "Art' Fado + Nuno Ribeiro @ Palco MEO Bailão (Sanjoaninas 2026)"
+  venue: "Palco MEO — Cerrado do Bailão"
+  address: "Cerrado do Bailão, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Cerrado%20do%20Bail%C3%A3o%20Angra%20do%20Hero%C3%ADsmo
+  time: "23:00"
+  festival: "Sanjoaninas 2026"
+  description: "Final headliner night at the Bailão: Art' Fado (local) at 23:00 and Nuno Ribeiro (singer-songwriter) at 00:00. In parallel: Entreparentes on Palco Expert (23:00), Coxe on Palco Guarita (00:00). DJs after: Roberto Toste on Rua de São João (01:30), Doubleman on MEO (01:30), Cristiano on Guarita (02:00), Gaspar on MEO (03:00). Wristband required."
+  description_pt: "Última noite de cabeças de cartaz no Bailão: Art' Fado (banda local) às 23h00 e Nuno Ribeiro (cantautor) à 00h00. Em paralelo: Entreparentes no Palco Expert (23h00), Coxe no Palco Guarita (00h00). DJs depois: Roberto Toste na Rua de São João (01h30), Doubleman no MEO (01h30), Cristiano no Guarita (02h00), Gaspar no MEO (03h00). Entrada com pulseira."
+  tags:
+  - live-music
+  - nightlife
+
+- date: 2026-06-28
+  name: "Missa Dominical com Coroação (Sanjoaninas 2026)"
+  name_en: "Coronation Mass — Sunday closing (Sanjoaninas 2026)"
+  venue: "Igreja da Sé"
+  address: "Largo da Sé, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=S%C3%A9%20Catedral%20Angra%20do%20Hero%C3%ADsmo
+  time: "11:00"
+  festival: "Sanjoaninas 2026"
+  description: "Sunday coronation mass at the Sé Catedral. Beforehand at 10:15, the coronation procession leaves Pátio da Alfândega → Rua Direita → Praça Velha → Rua da Sé. After mass, the procession continues to the Império de São Bento (Rua da Sé → Praça Velha → Rua do Galo → Rua da Guarita → Largo de São Bento)."
+  description_pt: "Missa dominical com coroação na Sé Catedral. Antes, às 10h15, partida da coroação rumo à Sé (Pátio da Alfândega → Rua Direita → Praça Velha → Rua da Sé). Após a missa, partida rumo ao Império de São Bento (Rua da Sé → Praça Velha → Rua do Galo → Rua da Guarita → Largo de São Bento)."
+  tags:
+  - free
+  - outdoor
+
+- date: 2026-06-28
+  name: "Encerramento das Sanjoaninas 2026 — Desfile de Filarmónicas e Fogo"
+  name_en: "Sanjoaninas 2026 Closing — Philharmonics Parade and Fireworks"
+  venue: "Centro histórico de Angra do Heroísmo"
+  address: "Alto das Covas → Rua da Sé → Praça Velha; fogo a partir do Relvão"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:00"
+  festival: "Sanjoaninas 2026"
+  description: "Sanjoaninas 2026 closing night. Philharmonics parade from 21:00 (Alto das Covas → Sé → Praça Velha) with all 25 bands taking part — the oldest is the Filarmónica Recreio Serretense, founded in 1873. Earlier: Filarmónica União Católica da Serra da Ribeirinha (20:00) on Palco Continente, Filarmónica Recreio de Santa Bárbara (19:00) on Palco Expert. Closing fireworks at 00:00 from the Relvão."
+  description_pt: "Noite de encerramento das Sanjoaninas 2026. Desfile de Filarmónicas a partir das 21h00 (Alto das Covas → Sé → Praça Velha) com as 25 bandas presentes — a mais antiga, a Filarmónica Recreio Serretense, datada de 1873. Antes: Filarmónica União Católica da Serra da Ribeirinha (20h00) no Palco Continente, Filarmónica Recreio de Santa Bárbara (19h00) no Palco Expert. Espetáculo pirotécnico final à 00h00 a partir do Relvão."
+  tags:
+  - live-music
+  - outdoor
+  - free
+  - kid-friendly
+
 # May 2026
 
 - date: 2026-05-05
@@ -1597,6 +1942,7 @@
   address: "Largo de São Bento, 9700 Angra do Heroísmo"
   map_url: https://www.google.com/maps/search/?api=1&query=Largo%20de%20S%C3%A3o%20Bento%20Angra%20do%20Hero%C3%ADsmo
   time: "18:00"
+  festival: "Sanjoaninas 2026"
   description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiros: MR / RB / OTT / ALF."
   description_pt: "Tourada à corda — tourada tradicional com toiro preso por uma corda. Ganadeiros: MR / RB / OTT / ALF."
   instagram: https://www.facebook.com/groups/497907616961539
@@ -1611,6 +1957,7 @@
   address: "Alto das Covas, 9700 Angra do Heroísmo"
   map_url: https://www.google.com/maps/search/?api=1&query=Alto%20das%20Covas%20Angra%20do%20Hero%C3%ADsmo
   time: "13:00"
+  festival: "Sanjoaninas 2026"
   description: "Tourada à corda — traditional bullfighting on a rope. Espera de Gado. Ganadeiro: ER."
   description_pt: "Tourada à corda — tourada tradicional com toiro preso por uma corda. Espera de Gado. Ganadeiro: ER."
   instagram: https://www.facebook.com/groups/497907616961539
@@ -1625,6 +1972,7 @@
   address: "Rua de São João, Sé, 9700 Angra do Heroísmo"
   map_url: https://www.google.com/maps/search/?api=1&query=Rua%20de%20S%C3%A3o%20Jo%C3%A3o%2C%20S%C3%A9%20Angra%20do%20Hero%C3%ADsmo
   time: "12:00"
+  festival: "Sanjoaninas 2026"
   description: "Tourada à corda — traditional bullfighting on a rope. Espera de Gado Infantil. Ganadeiro: ER."
   description_pt: "Tourada à corda — tourada tradicional com toiro preso por uma corda. Espera de Gado Infantil. Ganadeiro: ER."
   instagram: https://www.facebook.com/groups/497907616961539
@@ -1639,6 +1987,7 @@
   address: "Largo da Igreja, Santa Bárbara, 9700 Angra do Heroísmo"
   map_url: https://www.google.com/maps/search/?api=1&query=Largo%20da%20Igreja%2C%20Santa%20B%C3%A1rbara%20Angra%20do%20Hero%C3%ADsmo
   time: "18:00"
+  festival: "Sanjoaninas 2026"
   description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiros: CAJAF / MR / ALF / FP."
   description_pt: "Tourada à corda — tourada tradicional com toiro preso por uma corda. Ganadeiros: CAJAF / MR / ALF / FP."
   instagram: https://www.facebook.com/groups/497907616961539
@@ -1681,6 +2030,7 @@
   address: "Porto das Pipas, 9700 Angra do Heroísmo"
   map_url: https://www.google.com/maps/search/?api=1&query=Porto%20das%20Pipas%20Angra%20do%20Hero%C3%ADsmo
   time: "18:00"
+  festival: "Sanjoaninas 2026"
   description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiros: RB / CAJAF / HF / JG."
   description_pt: "Tourada à corda — tourada tradicional com toiro preso por uma corda. Ganadeiros: RB / CAJAF / HF / JG."
   instagram: https://www.facebook.com/groups/497907616961539
