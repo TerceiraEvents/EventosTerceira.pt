@@ -1288,6 +1288,23 @@
   - kid-friendly
 
 - date: 2026-05-26
+  name: "Mostra bibliográfica «Angra do Heroísmo: cidade aberta ao mundo»"
+  name_en: "Bibliographic exhibition «Angra do Heroísmo: an open city to the world»"
+  end_date: 2026-06-30
+  venue: "Espaço Arte & Debates — BPARLSR"
+  venue_en: "Espaço Arte & Debates — Public Library and Regional Archive"
+  address: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro, Palácio Bettencourt, Rua da Rosa, 9700-129 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+Pública+Arquivo+Regional+Luís+da+Silva+Ribeiro+Angra+do+Heroísmo
+  description: "Bibliographic exhibition curated by the Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro (in its 70th-anniversary year), with a selection of works on the historic, cultural, architectural, and traditional moments that shaped Angra do Heroísmo's identity — a city that has held UNESCO World Heritage status since 1983. The exhibition charts how Angra has positioned itself as an Atlantic-rooted city open to the world, hosting cultural, artistic and community expressions in a dialogue between tradition and modernity. Open through 30 June; free entry."
+  description_pt: "Mostra bibliográfica organizada pela Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro (no seu 70.º aniversário), com uma seleção de obras que destacam os momentos que imprimiram identidade à cidade — histórica, cultural, arquitetónica e de tradição —, uma cidade que, desde 1983, tem a classificação de Património Mundial da Humanidade. Aberta até 30 de junho; entrada livre."
+  organizer: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
+  instagram: https://www.facebook.com/bparlsr
+  tags:
+  - exhibition
+  - literature
+  - free
+
+- date: 2026-05-26
   name: "Tourada à Corda — São Luís, São Bento"
   venue: "São Luís, São Bento"
   address: "São Luís, São Bento, 9700 Angra do Heroísmo"
@@ -1529,6 +1546,23 @@
   - outdoor
   - kid-friendly
 
+- date: 2026-06-01
+  name: "Dia Mundial da Criança no Centro Histórico"
+  name_en: "International Children's Day in the Historic Centre"
+  venue: "Centro Histórico de Angra do Heroísmo"
+  venue_en: "Historic Centre of Angra do Heroísmo"
+  address: "Centro Histórico, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Praça+Velha+Angra+do+Heroísmo
+  time: "10:00"
+  description: "International Children's Day morning in the historic centre. Activities: face painting, balloon modelling, pony rides, pedal cars, sports activities, bouncy castles, children's concert. Partners with their own activity stands: Centro de Ciência de Angra do Heroísmo, Museu de Angra do Heroísmo, Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro, TAC — Rally, Escola Segura (PSP), Serviço Regional de Proteção Civil e Bombeiros dos Açores, Bombeiros Voluntários de Angra do Heroísmo, Saúde Escolar (USIT), Os Montanheiros. Free entry. 10:00–13:00."
+  description_pt: "Manhã do Dia Mundial da Criança no centro histórico. Atividades: pinturas faciais, modelagem de balões, passeio de pónei, carrinhos a pedal, atividades desportivas, insufláveis, concerto infantil. Bancas dos parceiros: Centro de Ciência de Angra do Heroísmo, Museu de Angra do Heroísmo, Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro, TAC — Rally, Escola Segura (PSP), Serviço Regional de Proteção Civil e Bombeiros dos Açores, Bombeiros Voluntários de Angra do Heroísmo, Saúde Escolar (USIT), Os Montanheiros. Entrada livre. 10h00 às 13h00."
+  organizer: "Câmara Municipal de Angra do Heroísmo"
+  instagram: https://angradoheroismo.pt/
+  tags:
+  - kid-friendly
+  - free
+  - outdoor
+
 - date: 2026-06-02
   name: "Tourada à Corda — São Luís, São Bento"
   venue: "São Luís, São Bento"
@@ -1724,6 +1758,82 @@
   - bullfighting
   - outdoor
   - kid-friendly
+
+- date: 2026-06-06
+  name: "Dia de Portugal, de Camões e das Comunidades Portuguesas 2026 — EXPO Forças Armadas"
+  name_en: "Portugal Day 2026 — Armed Forces Expo"
+  end_date: 2026-06-10
+  venue: "Praia da Vitória"
+  address: "Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Praia+da+Vitória+Terceira
+  festival: "Dia de Portugal 2026"
+  description: "Five-day Armed Forces Expo at Praia da Vitória, June 6–10, as part of the national Portugal Day celebrations held on Terceira this year (with the President of the Republic in attendance). Demonstrations: explosive-ordnance neutralisation, K9 unit, climbing tower, airsoft course, ropes course, boat trips, Polaris off-road first-rides, low-altitude drone-piloting demo, scheduled visits to naval assets, and health screenings (hypertension and diabetes). Free entry."
+  description_pt: "Exposição das Forças Armadas durante cinco dias na Praia da Vitória, 6 a 10 de junho, integrada nas comemorações nacionais do Dia de Portugal, este ano em Terceira (com a presença de Sua Excelência o Presidente da República). Demonstrações: inativação de engenhos explosivos, cinotécnica, torre de escalada, pista de Airsoft, pista de cordas, passeio de botes, batismo de Polaris, demonstração de pilotagem de drone de muito baixa altitude, visitas programadas ao meio naval e rastreios (hipertensão e diabetes). Entrada livre."
+  organizer: "Forças Armadas Portuguesas / Câmara Municipal de Angra do Heroísmo"
+  tags:
+  - exhibition
+  - outdoor
+  - free
+  - kid-friendly
+
+- date: 2026-06-06
+  name: "Concerto: Banda de Música da Força Aérea com Coro PACTIS (Dia de Portugal)"
+  name_en: "Concert: Air Force Band with PACTIS Choir (Portugal Day)"
+  venue: "Auditório do Ramo Grande"
+  address: "Auditório do Ramo Grande, Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Auditório+Ramo+Grande+Praia+da+Vitória
+  time: "21:30"
+  festival: "Dia de Portugal 2026"
+  description: "Portugal Air Force Band in concert with the PACTIS Choir at the Auditório do Ramo Grande, as part of the Portugal Day celebrations."
+  description_pt: "Banda de Música da Força Aérea Portuguesa em concerto com o Coro PACTIS no Auditório do Ramo Grande, no âmbito das comemorações do Dia de Portugal."
+  tags:
+  - live-music
+  - free
+
+- date: 2026-06-07
+  name: "Concerto: Banda de Música da Força Aérea com Sónia Pereira e João Barros (Dia de Portugal)"
+  name_en: "Concert: Air Force Band with Sónia Pereira and João Barros (Portugal Day)"
+  venue: "Praça Velha"
+  address: "Praça Velha, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Praça+Velha+Angra+do+Heroísmo
+  time: "21:30"
+  festival: "Dia de Portugal 2026"
+  description: "Portugal Air Force Band in concert with vocalists Sónia Pereira and João Barros, on Praça Velha in Angra. Free outdoor concert as part of the Portugal Day celebrations."
+  description_pt: "Banda de Música da Força Aérea Portuguesa em concerto com Sónia Pereira e João Barros, na Praça Velha em Angra. Concerto ao ar livre, entrada livre, no âmbito das comemorações do Dia de Portugal."
+  tags:
+  - live-music
+  - free
+  - outdoor
+
+- date: 2026-06-09
+  name: "Dia de Portugal — Hastear da Bandeira, Cantigas ao Desafio + Coro AMIT + Myrica Faya, Fogo de Artifício"
+  name_en: "Portugal Day — Flag-raising, Cantigas ao Desafio + AMIT Choir + Myrica Faya, Fireworks"
+  venue: "Pátio da Alfândega / Praça Velha / Baía de Angra"
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Praça+Velha+Angra+do+Heroísmo
+  time: "15:00"
+  festival: "Dia de Portugal 2026"
+  description: "Eve of Portugal Day. 15:00 — National Flag-raising Ceremony at Pátio da Alfândega. 21:15 — Cantigas ao Desafio (sung folk improvisation) and the AMIT Choir with Myrica Faya at Praça Velha. 23:00 — Fireworks display over Baía de Angra."
+  description_pt: "Véspera do Dia de Portugal. 15h00 — Cerimónia do Hastear da Bandeira Nacional no Pátio da Alfândega. 21h15 — Concerto Cantigas ao Desafio e Coro AMIT com Myrica Faya na Praça Velha. 23h00 — Espetáculo de fogo de artifício na Baía de Angra."
+  tags:
+  - live-music
+  - free
+  - outdoor
+  - kid-friendly
+
+- date: 2026-06-10
+  name: "Dia de Portugal, de Camões e das Comunidades Portuguesas — Cerimónia Militar e Arriar da Bandeira"
+  name_en: "Portugal Day, Camões and the Portuguese Communities — Military Ceremony and Flag-lowering"
+  venue: "Cerrado do Bailão / Pátio da Alfândega"
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Cerrado+do+Bailão+Angra+do+Heroísmo
+  time: "10:15"
+  festival: "Dia de Portugal 2026"
+  description: "Portugal Day proper, with the President of the Republic in attendance. 10:15 — Military Ceremony at Cerrado do Bailão. 18:00 — National Flag-lowering Ceremony at Pátio da Alfândega, closing the four-day national programme in Terceira."
+  description_pt: "Dia de Portugal, com a presença de Sua Excelência o Presidente da República. 10h15 — Cerimónia Militar no Cerrado do Bailão. 18h00 — Cerimónia do Arriar da Bandeira Nacional no Pátio da Alfândega, encerramento das comemorações nacionais na Terceira."
+  tags:
+  - free
+  - outdoor
 
 - date: 2026-06-06
   name: "Tourada à Corda — Canada de Belém, Terra Chã (junto ao Centro Comunitário)"
