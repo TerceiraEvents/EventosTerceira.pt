@@ -769,6 +769,21 @@
   - live-music
   - nightlife
 
+- date: 2026-05-29
+  name: "Limpeza Costeira — Vamos Proteger o Mar"
+  name_en: "Coastal Cleanup — Let's Protect the Sea"
+  venue: "Porto de São Mateus"
+  address: "Porto de São Mateus, Vila de São Mateus, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Porto+de+São+Mateus+Angra+do+Heroísmo
+  time: "10:00"
+  organizer: "Turma do 3.º ano da EB1/JI Prof. Maximino Fernandes Rocha (projeto No Planet B — Cáritas Ilha Terceira)"
+  description: "Community coastal cleanup in front of the São Mateus fish auction (lota), organised by the 3rd-year class of EB1/JI Prof. Maximino Fernandes Rocha (Terra Chã) as part of the «Missão Agente de Mudança» of the No Planet B Cáritas project. The students identified marine litter — much of it tied to local fishing — as a local issue and are inviting the whole community, fishermen included, to help clean the coast. All welcome."
+  description_pt: "Limpeza costeira comunitária frente à lota do Porto de São Mateus, organizada pela turma do 3.º ano da EB1/JI Prof. Maximino Fernandes Rocha (Terra Chã) no âmbito da «Missão Agente de Mudança» do projeto No Planet B Cáritas. Os alunos identificaram os resíduos no mar — muitos associados à pesca local — como problemática e convidam toda a comunidade, incluindo os pescadores, a agir em conjunto pela proteção do mar. Aberto a todos."
+  tags:
+  - outdoor
+  - kid-friendly
+  - free
+
 - date: 2026-05-30
   name: "Concerto Unsure"
   name_en: "Concert by Unsure"
