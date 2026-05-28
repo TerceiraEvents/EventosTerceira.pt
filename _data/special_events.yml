@@ -1071,10 +1071,12 @@
   venue: Espaço AMIT
   address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
   map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
-  description: "Board game night at Espaço AMIT — bring friends and play."
-  description_pt: "Noite de jogos de tabuleiro no Espaço AMIT — traz amigos e joga."
+  time: "20:00"
+  description: "Board game night at Espaço AMIT with the Boardgamers da Terceira group. Open and free — bring friends or come on your own. Games for every level, from quick and chaotic to longer, strategic titles."
+  description_pt: "Noite de jogos de tabuleiro no Espaço AMIT com o grupo Boardgamers da Terceira. Evento aberto e gratuito — traz amigos ou aparece sozinho. Há jogos para todos os níveis, desde rápidos e caóticos até estratégicos e mais longos."
   instagram: https://www.instagram.com/auditorioamit/
-  tags: []
+  tags:
+  - free
 
 - date: 2026-05-23
   name: "Jazz Jam Session"
