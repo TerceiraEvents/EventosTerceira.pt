@@ -3740,3 +3740,17 @@ Come join us and support our festivities!"
     - food-drink
     - outdoor
     - free
+
+- name: "Festa de Férias de Verão no The Vinyl Lounge"
+  name_pt: "Festa de Férias de Verão no The Vinyl Lounge"
+  name_en: "Summer Break Party"
+  date: 2026-05-30
+  time: "21:00"
+  venue: "The Vinyl Lounge (SoundStore)"
+  address: "Rua da Guarita 82, 9700-096 Angra do Heroísmo, Portugal"
+  description: "🎸 Festa de Férias de Verão no The Vinyl Lounge 🎸 A última grande festa antes de darmos uma pausa nos eventos promovidos. Venha aproveitar ao máximo!  Apresentando: K-9 Cat • Felix The First • Jonathan Afonso • Lucas Albuquerque • Marshall Jones • e mais pulos no palco ao longo da noite 🎤 Não é preciso ingresso — é só chegar e curtir! Os lugares são ocupados por ordem de chegada, então chegue cedo para garantir o melhor lugar. Esta é a nossa despedida antes do recesso de verão — o bar continuará aberto durante o verão, mas esta será a última grande noite de festa antes de darmos uma pausa na programação de eventos. Então, venha, traga a sua turma e vamos encerrar esta fase com chave de ouro! Marque um amigo que merece uma última noite de festa incrível. Confirme sua presença para sabermos que você vem!"
+  description_pt: "🎸 Festa de Férias de Verão no The Vinyl Lounge 🎸 A última grande festa antes de darmos uma pausa nos eventos promovidos. Venha aproveitar ao máximo!  Apresentando: K-9 Cat • Felix The First • Jonathan Afonso • Lucas Albuquerque • Marshall Jones • e mais pulos no palco ao longo da noite 🎤 Não é preciso ingresso — é só chegar e curtir! Os lugares são ocupados por ordem de chegada, então chegue cedo para garantir o melhor lugar. Esta é a nossa despedida antes do recesso de verão — o bar continuará aberto durante o verão, mas esta será a última grande noite de festa antes de darmos uma pausa na programação de eventos. Então, venha, traga a sua turma e vamos encerrar esta fase com chave de ouro! Marque um amigo que merece uma última noite de festa incrível. Confirme sua presença para sabermos que você vem!"
+  description_en: "Featuring: K-9 Cat • Felix The First • Jonathan Afonso • Lucas Albuquerque • Marshall Jones • and more jumping on stage throughout the night 🎤 Expect a rotating cast of artists doing what they do best — and probably a few surprises along the way. Plus, specialty cocktails and drinks served in our intimate little environment. No tickets required — just show up and enjoy! Seating is first-come, first-served, so arrive early to grab the best spot.  This is our sendoff before the summer break — the bar will still be open in the summer, but this is the last big night out before we go a little quiet on the events front. So come out, bring your people, and let's go out on a high note! Tag a friend who deserves a great last night out. RSVP so we know you're coming! The Vinyl Lounge 🖤 Drop the Needle / Raise the Vibe!"
+  tags:
+    - live-music
+    - nightlife
