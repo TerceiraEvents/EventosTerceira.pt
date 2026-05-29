@@ -1776,6 +1776,19 @@
   - outdoor
   - kid-friendly
 
+- date: 2026-06-05
+  name: "Estreia do Documentário «TerrAzores — Onde a Terra molda a vida»"
+  name_en: "Documentary Premiere: «TerrAzores — Onde a Terra molda a vida»"
+  venue: "Sede da Associação Os Montanheiros"
+  address: "Rua da Rocha 8, 9700-169 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Associação+Os+Montanheiros+Angra+do+Heroísmo
+  time: "20:00"
+  description: "Premiere of «TerrAzores — Onde a Terra molda a vida» (Where the Earth Shapes Life), a documentary by Sébastien Lhoumeau and Stéphane Dupuy, at the headquarters of the Os Montanheiros association. Free entry."
+  description_pt: "Estreia do documentário «TerrAzores — Onde a Terra molda a vida», de Sébastien Lhoumeau e Stéphane Dupuy, na sede da Associação Os Montanheiros. Entrada livre."
+  tags:
+  - cinema
+  - free
+
 - date: 2026-06-06
   name: "Dia de Portugal, de Camões e das Comunidades Portuguesas 2026 — EXPO Forças Armadas"
   name_en: "Portugal Day 2026 — Armed Forces Expo"
