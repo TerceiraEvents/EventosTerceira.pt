@@ -38,5 +38,5 @@ lang_alt: /pt/special/
 </p>
 
 <div class="archive-link-section">
-  <a href="{{ '/archive' | relative_url }}" class="view-all">Event Archive</a>
+  <a href="{{ '/archive/' | relative_url }}" class="view-all">Event Archive</a>
 </div>

@@ -3,7 +3,7 @@ layout: post
 title: "Bodos do Espírito Santo: Terceira's two big Holy Spirit weekends, explained"
 subtitle: "Pentecost (May 24–25) and Trinity (May 31–June 1) are the headline weekends of a tradition the island has been keeping since the 1500s. Here's what's happening, what to eat, and how to join in."
 date: 2026-05-24
-category: news
+category: guide
 lang: en
 lang_alt: /pt/blog/2026/bodos-espirito-santo/
 source_url: "https://www.exploreterceiraisland.com/en/festas-do-divino-espirito-santo/"

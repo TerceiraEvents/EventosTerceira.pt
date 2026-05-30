@@ -3,7 +3,7 @@ layout: post
 title: "O Algar do Carvão reabriu, mas conta com as obras"
 subtitle: "Dias e horários limitados, sem infraestruturas no local, e a gruta pode fechar com pouco aviso enquanto o novo centro de interpretação não estiver pronto."
 date: 2026-03-21
-category: news
+category: guide
 lang: pt
 lang_alt: /blog/2026/algar-do-carvao-reopening/
 permalink: /pt/blog/2026/algar-do-carvao-reopening/

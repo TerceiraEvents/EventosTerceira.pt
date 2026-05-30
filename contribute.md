@@ -11,7 +11,7 @@ lang_alt: /pt/contribute/
 </div>
 
 <div class="homepage-buttons" style="max-width:580px;">
-  <a href="{{ '/suggest' | relative_url }}" class="homepage-btn btn-weekly">
+  <a href="{{ '/suggest/' | relative_url }}" class="homepage-btn btn-weekly">
     <span class="btn-icon">&#128221;</span>
     <span class="btn-title">Submit a Suggestion</span>
     <span class="btn-desc">Fill out the form and we'll review it</span>

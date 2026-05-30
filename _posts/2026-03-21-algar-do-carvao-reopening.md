@@ -3,7 +3,7 @@ layout: post
 title: "Algar do Carvão has reopened, but plan around the construction"
 subtitle: "Limited days and hours, no facilities on site, and the cave may close at short notice while the new visitor centre is finished."
 date: 2026-03-21
-category: news
+category: guide
 lang: en
 lang_alt: /pt/blog/2026/algar-do-carvao-reopening/
 source_url: "https://www.montanheiros.com/2026/03/20/reabertura-do-algar-do-carvao/"

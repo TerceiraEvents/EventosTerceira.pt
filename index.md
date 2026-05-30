@@ -11,22 +11,22 @@ lang_alt: /pt/
 </div>
 
 <div class="homepage-buttons">
-  <a href="{{ '/weekly' | relative_url }}" class="homepage-btn btn-weekly">
+  <a href="{{ '/weekly/' | relative_url }}" class="homepage-btn btn-weekly">
     <span class="btn-icon">&#127926;</span>
     <span class="btn-title">Weekly Events</span>
     <span class="btn-desc">Karaoke, dance nights, and other recurring events happening every week</span>
   </a>
-  <a href="{{ '/special' | relative_url }}" class="homepage-btn btn-special">
+  <a href="{{ '/special/' | relative_url }}" class="homepage-btn btn-special">
     <span class="btn-icon">&#127882;</span>
     <span class="btn-title">Special Events</span>
     <span class="btn-desc">Concerts, festivals, parties, and one-off events</span>
   </a>
-  <a href="{{ '/venues' | relative_url }}" class="homepage-btn btn-venues">
+  <a href="{{ '/venues/' | relative_url }}" class="homepage-btn btn-venues">
     <span class="btn-icon">&#127963;</span>
     <span class="btn-title">Venues</span>
     <span class="btn-desc">Bars, restaurants, and spaces hosting events around Terceira</span>
   </a>
-  <a href="{{ '/resources' | relative_url }}" class="homepage-btn btn-resources">
+  <a href="{{ '/resources/' | relative_url }}" class="homepage-btn btn-resources">
     <span class="btn-icon">&#128204;</span>
     <span class="btn-title">Other Resources</span>
     <span class="btn-desc">Bullfight Finder, city event pages, and more</span>
@@ -61,7 +61,7 @@ lang_alt: /pt/
   <ul class="home-events-list">
     {% for event in upcoming_preview %}
     <li class="home-events-item">
-      <a href="{{ '/special' | relative_url }}">
+      <a href="{{ '/special/' | relative_url }}">
         <span class="home-events-meta">
           <time class="home-events-date" datetime="{{ event.date | date: '%Y-%m-%d' }}">{{ event.date | date: "%-d %b" }}</time>
           {% if event.time %}<span class="home-events-time">{{ event.time }}</span>{% endif %}
@@ -72,7 +72,7 @@ lang_alt: /pt/
     </li>
     {% endfor %}
   </ul>
-  <a class="home-events-all" href="{{ '/special' | relative_url }}">All upcoming →</a>
+  <a class="home-events-all" href="{{ '/special/' | relative_url }}">All upcoming →</a>
 </section>
 {% endif %}
 
@@ -92,6 +92,6 @@ lang_alt: /pt/
     </li>
     {% endfor %}
   </ul>
-  <a class="home-blog-all" href="{{ '/blog' | relative_url }}">All posts →</a>
+  <a class="home-blog-all" href="{{ '/blog/' | relative_url }}">All posts →</a>
 </section>
 {% endif %}
