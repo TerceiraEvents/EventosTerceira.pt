@@ -3767,3 +3767,389 @@ Come join us and support our festivities!"
   tags:
     - live-music
     - nightlife
+
+
+# ---------------------------------------------------------------------------
+# Batch added from GitHub issue #141 (events May 8–17, 2026, sourced from
+# Instagram & Facebook). "Noite dos Museus 2026" from that issue is omitted
+# here because it is already present above (Dia e Noite dos Museus 2026).
+# ---------------------------------------------------------------------------
+
+- date: 2026-05-08
+  name: "Havanna Club — Live Act DJ Rafa"
+  name_pt: "Havanna Club — Live Act DJ Rafa"
+  venue: "Havanna Club"
+  address: "Porto das Pipas 154, 9700-167 Angra do Heroísmo"
+  time: "23:00"
+  description: "Live Act by DJ Rafa at Havanna Club — two nights of good energy and a packed dancefloor."
+  description_pt: "Live Act do DJ Rafa no Havanna Club — duas noites, boa energia e a pista pronta."
+  instagram: https://www.instagram.com/p/DYC89VsAQuG/
+  tags:
+  - nightlife
+  - live-music
+
+- date: 2026-05-09
+  name: "Havanna Club — Live Act DJ Santinha"
+  name_pt: "Havanna Club — Live Act DJ Santinha"
+  venue: "Havanna Club"
+  address: "Porto das Pipas 154, 9700-167 Angra do Heroísmo"
+  time: "23:00"
+  description: "Live Act by DJ Santinha at Havanna Club."
+  description_pt: "Live Act do DJ Santinha no Havanna Club."
+  instagram: https://www.instagram.com/p/DYC89VsAQuG/
+  tags:
+  - nightlife
+  - live-music
+
+- date: 2026-05-09
+  name: "Porta 42 — Artur M: Best of 90s & 2000s"
+  name_pt: "Porta 42 — Artur M: O Melhor dos Anos 90 & 2000"
+  venue: "Porta 42"
+  address: "Rua de São João, Angra do Heroísmo"
+  time: "21:30"
+  description: "Artur M plays the Best of the 90's & 2000's at Porta 42 — good music, cocktails, and a night full of classic hits."
+  description_pt: "Artur M com o melhor dos anos 90 & 2000 no Porta 42. Boa música, cocktails e uma noite cheia de clássicos."
+  instagram: https://www.instagram.com/p/DYC9lJ5kyxh/
+  tags:
+  - nightlife
+  - live-music
+
+- date: 2026-05-11
+  name: "Wine Not — Crazy Monday: Funk The Banks"
+  name_pt: "Wine Not — Crazy Monday: Funk The Banks"
+  venue: "Wine Not?"
+  address: "Rua Direita 8, 9700 Angra do Heroísmo"
+  time: "21:30"
+  description: "Crazy Monday with Funk The Banks at Wine Not — a Monday full of groove and good vibes."
+  description_pt: "Crazy Monday com Funk The Banks no Wine Not — uma segunda-feira cheia de groove e boa energia."
+  instagram: https://www.instagram.com/p/DYFib_KjRBh/
+  tags:
+  - live-music
+  - nightlife
+
+- date: 2026-05-13
+  name: "Angra Night Runners"
+  name_pt: "Angra Night Runners"
+  venue: "Praça Velha (Paços do Concelho)"
+  address: "Praça Velha, Angra do Heroísmo"
+  time: "20:00"
+  description: "Night running event at Praça Velha, promoting health through exercise while taking in the nighttime beauty of the UNESCO World Heritage city. Organised by Associação Atletismo Ilha Terceira."
+  description_pt: "Corrida noturna na Praça Velha. Promove a saúde através do exercício físico, aproveitando a beleza noturna da cidade Património da Humanidade. Organização da Associação Atletismo Ilha Terceira."
+  organizer: "Associação Atletismo Ilha Terceira"
+  tags:
+  - outdoor
+  - free
+
+- date: 2026-05-13
+  name: "Natas D'Ouro — Grand Opening (Angra do Heroísmo)"
+  name_pt: "Natas D'Ouro — Inauguração (Angra do Heroísmo)"
+  venue: "Natas D'Ouro Angra do Heroísmo"
+  address: "Rua de São João 31, Angra do Heroísmo"
+  time: "16:00"
+  description: "Grand opening of the new Natas D'Ouro pastry shop in Angra do Heroísmo."
+  description_pt: "Inauguração da nova pastelaria Natas D'Ouro em Angra do Heroísmo."
+  tags:
+  - food-drink
+  - free
+
+- date: 2026-05-17
+  name: "O Cinema da Minha Vida — DREAMS"
+  name_pt: "O Cinema da Minha Vida — DREAMS"
+  venue: "Cine-Clube da Ilha Terceira"
+  address: "Rua Recreio dos Artistas 52, Sé, 9700-026 Angra do Heroísmo"
+  time: "18:00"
+  description: "Screening of DREAMS by Dag Johan Haugerud (Norway, 110 min, M/14, Drama) — a delicate crossing of desire, memory and imagination following the emotional awakening of a young woman. Part of the 'O Cinema da Minha Vida' 2026 season."
+  description_pt: "Sessão do filme DREAMS de Dag Johan Haugerud (Noruega, 110 min, M/14, Drama). Num delicado cruzamento entre desejo, memória e imaginação, acompanha o despertar emocional de uma jovem. Integra a 1.ª temporada 2026 de «O Cinema da Minha Vida»."
+  organizer: "Cine-Clube da Ilha Terceira"
+  tags:
+  - cinema
+
+# ---------------------------------------------------------------------------
+# Batch added from GitHub issue #180 (events May 31 – Jul 4 + later, sourced
+# from Instagram & Facebook). Events already present above are omitted:
+# shorts@fringe Children's Animation (Jun 4), Praia Mia / ABBA (Jun 6),
+# Dia de Portugal concerts (Jun 6–10), Rostos Diferentes (Jun 12),
+# Festival Rua Direita 2026 (Jul), and III Azores Comedy Fest (Nov).
+# ---------------------------------------------------------------------------
+
+- date: 2026-05-31
+  name: "Chamber Ensemble AMIT — Presentation Concert"
+  name_pt: "Conjunto de Câmara da AMIT — Concerto de Apresentação"
+  venue: "CCCAH (Centro Cultural e de Congressos)"
+  address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
+  time: "19:00"
+  description: "Presentation concert of the new Chamber Music Ensemble of the Academia Musical da Ilha Terceira (AMIT). Free entry."
+  description_pt: "Concerto de apresentação do novo Conjunto de Câmara da Academia Musical da Ilha Terceira (AMIT). Entrada livre."
+  tags:
+  - live-music
+  - free
+
+- date: 2026-06-02
+  name: "Bric-a-Brac Talks — José Luís Neto hosts António Neves"
+  name_pt: "Bric-a-Brac Talks — José Luís Neto convida António Neves"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  description: "Bric-a-Brac Talks: José Luís Neto in conversation with guest António Neves at Lar Doce Livro."
+  description_pt: "Bric-a-Brac Talks: José Luís Neto à conversa com o convidado António Neves no Lar Doce Livro."
+  tags:
+  - literature
+
+- date: 2026-06-02
+  name: "REStartup — Round Table"
+  name_pt: "REStartup — Mesa Redonda"
+  venue: "Edifício da Startup Angra"
+  address: "Angra do Heroísmo"
+  time: "18:30"
+  description: "Round table with Débora Costa, Márcio Silva and Marco Bettencourt, moderated by Ricardo Rocha, at the Startup Angra building."
+  description_pt: "Mesa redonda com Débora Costa, Márcio Silva e Marco Bettencourt, moderada por Ricardo Rocha, no Edifício da Startup Angra."
+  tags:
+  - workshop
+
+- date: 2026-06-02
+  name: "Desenho A — Visual Arts Exhibition (2–16 Jun)"
+  name_pt: "Desenho A — Exposição de Artes Visuais (2–16 jun)"
+  venue: "Paços do Concelho (Town Hall)"
+  address: "Praça Velha, 9700-145 Angra do Heroísmo"
+  description: "Secondary-school drawing and painting exhibition on the work of António Dacosta, on show 2–16 June at the Town Hall. Free."
+  description_pt: "Exposição de desenho e pintura do ensino secundário sobre a obra de António Dacosta, patente de 2 a 16 de junho nos Paços do Concelho. Entrada livre."
+  tags:
+  - exhibition
+  - free
+
+- date: 2026-06-03
+  name: "'Gerações Invisíveis?' — Children's Day Seminar"
+  name_pt: "«Gerações Invisíveis?» — Seminário do Dia da Criança"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Praia da Vitória"
+  time: "09:30"
+  description: "Seminar on ageism in childhood and youth, organised by the Comissariado dos Açores para a Infância. Free."
+  description_pt: "Seminário sobre o idadismo na infância e juventude, organizado pelo Comissariado dos Açores para a Infância. Entrada livre."
+  tags:
+  - workshop
+  - free
+  - kid-friendly
+
+- date: 2026-06-04
+  name: "'Dependências, contingências e clichés' — Debate"
+  name_pt: "«Dependências, contingências e clichés» — Debate"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:00"
+  description: "Debate on the Azorean economy with António Maio, Nuno Cota, Rui Luís and Álamo Meneses at Lar Doce Livro."
+  description_pt: "Debate sobre a economia açoriana com António Maio, Nuno Cota, Rui Luís e Álamo Meneses no Lar Doce Livro."
+  tags:
+  - literature
+
+- date: 2026-06-05
+  name: "shorts@fringe — Out of the Box"
+  name_pt: "shorts@fringe — Out of the Box"
+  venue: "Casa do Sal / Oficina d'Angra"
+  address: "Estrada Gaspar Corte-Real, Angra do Heroísmo"
+  time: "21:00"
+  description: "Short film screening in the shorts@fringe festival by Miratecarts at Casa do Sal. Free."
+  description_pt: "Sessão de curtas-metragens no festival shorts@fringe da Miratecarts, na Casa do Sal. Entrada livre."
+  tags:
+  - cinema
+  - free
+
+- date: 2026-06-05
+  name: "Melo e Araújo — World Classics II (DJ Night)"
+  name_pt: "Melo e Araújo — World Classics II (Noite DJ)"
+  venue: "Casa do Sal / Oficina d'Angra"
+  address: "Estrada Gaspar Corte-Real, Angra do Heroísmo"
+  time: "22:00"
+  description: "DJ night with Melo e Araújo at Casa do Sal. Members €1.50 / non-members €3.00."
+  description_pt: "Noite de DJ com Melo e Araújo na Casa do Sal. Sócios 1,50€ / não-sócios 3,00€."
+  tags:
+  - nightlife
+
+- date: 2026-06-05
+  name: "Literature & Religion — The First Encyclical of Pope Leo XIV"
+  name_pt: "Literatura & Religião — A Primeira Encíclica de Leão XIV"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  description: "Talk on the first encyclical of Pope Leo XIV with Fr. Júlio Rocha at Lar Doce Livro."
+  description_pt: "Conversa sobre a primeira encíclica do Papa Leão XIV, com o Pe. Júlio Rocha, no Lar Doce Livro."
+  tags:
+  - literature
+
+- date: 2026-06-05
+  name: "80 Years Since the British Forces' Departure — Opening Day"
+  name_pt: "80 Anos da Partida das Forças Britânicas — Dia de Abertura"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Praia da Vitória"
+  time: "19:30"
+  description: "Opening day of the programme marking 80 years since the departure of the British forces from Terceira: 19:30 opening of the exhibition '80 anos da partida dos Britânicos'; 20:00 round table 'As raízes culturais da Base das Lajes'; 21:30 screening of the film 'Sarrado Grande'. Free."
+  description_pt: "Dia de abertura do programa que assinala os 80 anos da partida das Forças Britânicas da Terceira: 19h30 inauguração da mostra «80 anos da partida dos Britânicos»; 20h00 mesa redonda «As raízes culturais da Base das Lajes»; 21h30 projeção do filme «Sarrado Grande». Entrada livre."
+  tags:
+  - exhibition
+  - cinema
+  - literature
+  - free
+
+- date: 2026-06-06
+  name: "80 Years Since the British Forces' Departure — Talk with António José Telo"
+  name_pt: "80 Anos da Partida das Forças Britânicas — Palestra com António José Telo"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Praia da Vitória"
+  time: "17:00"
+  description: "17:00 talk 'Já passaram 80 anos?' with historian António José Telo, closing the programme marking 80 years since the British forces left Terceira. Free."
+  description_pt: "17h00 palestra «Já passaram 80 anos?» com o historiador António José Telo, a encerrar o programa dos 80 anos da partida das Forças Britânicas. Entrada livre."
+  tags:
+  - literature
+  - free
+
+- date: 2026-06-07
+  name: "Éditions Avec — Book Launch"
+  name_pt: "Edições Avec — Apresentação de Títulos"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  description: "Launch of two Éditions Avec titles with Julie Peigné and Nicolau Pessanha Gomes at Lar Doce Livro."
+  description_pt: "Apresentação de dois títulos das Edições Avec com Julie Peigné e Nicolau Pessanha Gomes no Lar Doce Livro."
+  tags:
+  - literature
+
+- date: 2026-06-09
+  name: "Wave Jazz Ensemble — Album Launch 'Horizonte'"
+  name_pt: "Wave Jazz Ensemble — Apresentação do Disco «Horizonte»"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  description: "Launch of the new Wave Jazz Ensemble album 'Horizonte' on the night of Dia de Portugal, preceded by a classical guitar recital and followed by 'Poesia ao Crepúsculo' dedicated to Lusophony."
+  description_pt: "Apresentação do novo disco «Horizonte» do Wave Jazz Ensemble, na noite do Dia de Portugal, precedida por recital de guitarra clássica e seguida de «Poesia ao Crepúsculo» dedicada à Lusofonia."
+  tags:
+  - live-music
+  - literature
+
+- date: 2026-06-12
+  name: "Grande Entrevista — José António Lima"
+  name_pt: "Grande Entrevista — José António Lima"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  description: "Public interview with José António Lima at Lar Doce Livro."
+  description_pt: "Grande entrevista com José António Lima no Lar Doce Livro."
+  tags:
+  - literature
+
+- date: 2026-06-14
+  name: "HUMAN — Yann Arthus-Bertrand (screening)"
+  name_pt: "HUMAN — Yann Arthus-Bertrand (sessão)"
+  venue: "Casa do Sal / Oficina d'Angra"
+  address: "Estrada Gaspar Corte-Real, Angra do Heroísmo"
+  time: "18:00"
+  description: "Screening of Yann Arthus-Bertrand's documentary HUMAN at Casa do Sal. Free."
+  description_pt: "Projeção do documentário HUMAN de Yann Arthus-Bertrand, na Casa do Sal. Entrada livre."
+  tags:
+  - cinema
+  - free
+
+- date: 2026-06-17
+  name: "Da Pedagogia à Criação — Exhibition (17–30 Jun)"
+  name_pt: "Da Pedagogia à Criação — Exposição (17–30 jun)"
+  venue: "Paços do Concelho (Town Hall)"
+  address: "Praça Velha, 9700-145 Angra do Heroísmo"
+  description: "'10 anos do Projeto didático-pedagógico Vida e Obra de António Dacosta', on show 17–30 June at the Town Hall. Free."
+  description_pt: "«10 anos do Projeto didático-pedagógico Vida e Obra de António Dacosta», patente de 17 a 30 de junho nos Paços do Concelho. Entrada livre."
+  tags:
+  - exhibition
+  - free
+
+- date: 2026-06-18
+  name: "Mercadinho do Livro Usado (18–25 Jun)"
+  name_pt: "Mercadinho do Livro Usado (18–25 jun)"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  festival: "Sanjoaninas 2026"
+  description: "Used-book market at Lar Doce Livro from 18 to 25 June, part of the Sanjoaninas 2026 programme. Free."
+  description_pt: "Mercadinho do livro usado no Lar Doce Livro, de 18 a 25 de junho, integrado no programa das Sanjoaninas 2026. Entrada livre."
+  tags:
+  - literature
+  - free
+
+- date: 2026-06-19
+  name: "Book Launch: 'Lin-Tchi-Fã – Flor de Lótus'"
+  name_pt: "Lançamento: «Lin-Tchi-Fã – Flor de Lótus»"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  festival: "Sanjoaninas 2026"
+  description: "Launch of 'Lin-Tchi-Fã – Flor de Lótus' at Lar Doce Livro, part of the Sanjoaninas 2026 programme."
+  description_pt: "Lançamento de «Lin-Tchi-Fã – Flor de Lótus» no Lar Doce Livro, integrado no programa das Sanjoaninas 2026."
+  tags:
+  - literature
+
+- date: 2026-06-20
+  name: "Carlos Alberto Moniz — 'Cantar Poetas'"
+  name_pt: "Carlos Alberto Moniz — «Cantar Poetas»"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  festival: "Sanjoaninas 2026"
+  description: "Concert 'Cantar Poetas' by Carlos Alberto Moniz at Lar Doce Livro, part of the Sanjoaninas 2026 programme."
+  description_pt: "Concerto «Cantar Poetas» de Carlos Alberto Moniz no Lar Doce Livro, integrado no programa das Sanjoaninas 2026."
+  tags:
+  - live-music
+
+- date: 2026-06-24
+  name: "Zezé Barbosa & Tó Barbosa — Concert"
+  name_pt: "Zezé Barbosa & Tó Barbosa — Concerto"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  festival: "Sanjoaninas 2026"
+  description: "Concert by Zezé Barbosa and Tó Barbosa at Lar Doce Livro, part of the Sanjoaninas 2026 programme."
+  description_pt: "Concerto de Zezé Barbosa e Tó Barbosa no Lar Doce Livro, integrado no programa das Sanjoaninas 2026."
+  tags:
+  - live-music
+
+- date: 2026-06-26
+  name: "Dom Roberto Puppet Theatre — 'O Barbeiro'"
+  name_pt: "Teatro Dom Roberto — «O Barbeiro»"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  festival: "Sanjoaninas 2026"
+  description: "Dom Roberto puppet theatre 'O Barbeiro' by Ricardo Ávila at Lar Doce Livro, part of the Sanjoaninas 2026 programme."
+  description_pt: "Teatro de fantoches Dom Roberto «O Barbeiro», de Ricardo Ávila, no Lar Doce Livro, integrado no programa das Sanjoaninas 2026."
+  tags:
+  - theater
+  - kid-friendly
+
+- date: 2026-06-27
+  name: "Public Reading — 'A Escrava Açoriana'"
+  name_pt: "Leitura Pública — «A Escrava Açoriana»"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  festival: "Sanjoaninas 2026"
+  description: "Public reading of 'A Escrava Açoriana' by Pedro Almeida Maia at Lar Doce Livro, part of the Sanjoaninas 2026 programme."
+  description_pt: "Leitura pública de «A Escrava Açoriana», de Pedro Almeida Maia, no Lar Doce Livro, integrada no programa das Sanjoaninas 2026."
+  tags:
+  - literature
+
+- date: 2026-06-30
+  name: "Poesia ao Crepúsculo — José Jorge Letria"
+  name_pt: "Poesia ao Crepúsculo — José Jorge Letria"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  description: "'Poesia ao Crepúsculo' with poet José Jorge Letria at Lar Doce Livro."
+  description_pt: "«Poesia ao Crepúsculo» com o poeta José Jorge Letria no Lar Doce Livro."
+  tags:
+  - literature
+
+- date: 2026-07-04
+  name: "shorts@fringe — Portugal Session: First Date"
+  name_pt: "shorts@fringe — Sessão Portugal: First Date"
+  venue: "Casa do Sal / Oficina d'Angra"
+  address: "Estrada Gaspar Corte-Real, Angra do Heroísmo"
+  time: "21:00"
+  description: "Short film screening 'First Date' in the shorts@fringe Portugal session at Casa do Sal. Free."
+  description_pt: "Sessão de curtas «First Date» no programa shorts@fringe (Sessão Portugal), na Casa do Sal. Entrada livre."
+  tags:
+  - cinema
+  - free
+
+- date: 2026-12-05
+  name: "Glenn Miller Orchestra — In the Christmas Mood"
+  name_pt: "Glenn Miller Orchestra — In the Christmas Mood"
+  venue: "CCCAH (Centro Cultural e de Congressos)"
+  address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
+  time: "21:30"
+  description: "The Glenn Miller Orchestra brings its 'In the Christmas Mood' show to the CCCAH Grande Auditório."
+  description_pt: "A Glenn Miller Orchestra apresenta o espetáculo «In the Christmas Mood» no Grande Auditório do CCCAH."
+  tags:
+  - live-music
