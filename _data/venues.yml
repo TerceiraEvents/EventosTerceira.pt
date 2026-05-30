@@ -315,3 +315,12 @@
   telephone: "+351295907200"
   schema_type: Campground
   category: sports-outdoor
+
+- name: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+da+Juventude+e+das+Artes+da+Ilha+Terceira+Praia+da+Vit%C3%B3ria"
+  description: "Youth and arts academy in Praia da Vitória, hosting exhibitions, talks, seminars, film screenings, and concerts."
+  description_pt: "Academia da juventude e das artes na Praia da Vitória, que acolhe exposições, palestras, seminários, sessões de cinema e concertos."
+  schema_type: CivicStructure
+  category: arts-culture
+  category: sports-outdoor
