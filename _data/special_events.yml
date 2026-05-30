@@ -3779,7 +3779,6 @@ Come join us and support our festivities!"
     - live-music
     - nightlife
 
-
 # ---------------------------------------------------------------------------
 # Batch added from GitHub issue #141 (events May 8–17, 2026, sourced from
 # Instagram & Facebook). "Noite dos Museus 2026" from that issue is omitted
@@ -4163,4 +4162,20 @@ Come join us and support our festivities!"
   description: "The Glenn Miller Orchestra brings its 'In the Christmas Mood' show to the CCCAH Grande Auditório."
   description_pt: "A Glenn Miller Orchestra apresenta o espetáculo «In the Christmas Mood» no Grande Auditório do CCCAH."
   tags:
+  - live-music
+
+# ---------------------------------------------------------------------------
+# Ad-hoc same-day addition (PR #184).
+# ---------------------------------------------------------------------------
+
+- date: 2026-05-30
+  name: "Sábado Retro com DJ Sofia Borges"
+  name_en: "Retro Saturday with DJ Sofia Borges"
+  venue: "Tasca do Camões"
+  address: "Rua Da Rocha 64, 9700-169 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Cam%C3%B5es+Angra+do+Hero%C3%ADsmo
+  description: "Retro Saturday with DJ Sofia Borges at Tasca do Camões — relive your best memories with the biggest hits of the 80s, 90s and 2000s."
+  description_pt: "Sábado Retro com a DJ Sofia Borges na Tasca do Camões — revive as tuas melhores memórias ao som dos maiores êxitos dos anos 80, 90 e 2000."
+  tags:
+  - nightlife
   - live-music
