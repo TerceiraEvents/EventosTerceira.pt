@@ -2,8 +2,9 @@
   day_pt: Segunda-feira
   events:
   - name: Clube de Leitura
+    name_pt: Clube de Leitura
     venue: Lar Doce Livro
-    address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+    address: Rua de São João 22-24, 9700-182 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
     time: "18:00"
     description: "Weekly book club. The book and exact start time vary each month (start typically falls between 18:00 and 18:30); the coordinator rotates monthly."
@@ -34,8 +35,9 @@
   day_pt: Terça-feira
   events:
   - name: O Novo Normal
+    name_pt: O Novo Normal
     venue: Lar Doce Livro
-    address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+    address: Rua de São João 22-24, 9700-182 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
     time: "18:15"
     description: "Live podcast and debate with Pedro Pereira, Francisco Simões, Joel Neto, and Luciano Barcelos. Same team every week; episodes also released on Spotify and Apple Podcasts (search 'O Novo Normal LDL')."
@@ -68,7 +70,6 @@
     note: "Salsa lesson at 19:00 with instructor Liliana Passos (@familiadancante) precedes the general Latin dancing from 20:30. Instructors stay around afterwards to help newcomers, so you can come with no prior dance experience."
     note_pt: "Aula de salsa às 19:00 com a instrutora Liliana Passos (@familiadancante) antes da dança latina aberta a partir das 20:30. Os instrutores ficam depois para ajudar quem chega de novas, por isso podes ir sem qualquer experiência de dança."
     address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
-
     map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
 - day: Friday
   day_pt: Sexta-feira
@@ -107,8 +108,9 @@
     note_pt: "Abre às 21:30. Às vezes fecha quando a sexta calha em feriado; em fins-de-semana prolongados às vezes passa para quinta-feira."
     instagram: https://www.instagram.com/porta_42/
   - name: Concerto ao Vivo
+    name_pt: Concerto ao Vivo
     venue: Lar Doce Livro
-    address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+    address: Rua de São João 22-24, 9700-182 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
     time: "21:00"
     description: "Weekly live music. House artists rotate (Pedro Xavier and João da Ilha both play regularly); the specific artist varies week to week."
@@ -188,8 +190,9 @@
   day_pt: Domingo
   events:
   - name: Poesia/Prosa ao Crepúsculo
+    name_pt: Poesia/Prosa ao Crepúsculo
     venue: Lar Doce Livro
-    address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+    address: Rua de São João 22-24, 9700-182 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
     time: "18:00"
     description: "Weekly literary gathering coordinated by Valter Peres with a regular group. The name alternates between Poesia (poetry) and Prosa (prose) depending on the week's format, but it's the same recurring event. Lar Doce Livro describes it as the gathering that defines them most."
@@ -199,6 +202,7 @@
     instagram: https://www.instagram.com/livraria_lardocelivro/
     url: https://www.lardocelivro.pt
   - name: Cine-Clube da Ilha Terceira
+    name_pt: Cine-Clube da Ilha Terceira
     venue: Recreio dos Artistas
     address: Rua Recreio dos Artistas, Sé, 9700 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Recreio+dos+Artistas+Angra+do+Heroísmo

@@ -2992,6 +2992,7 @@
   map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Teatro de Variedades de Porto Judeu"
+  description_en: "Performed by Teatro de Variedades de Porto Judeu (theatre group)."
   festival: Festival de Teatro 2026
   image: /assets/images/events/festival-teatro-2026.jpg
   tags:
@@ -3004,6 +3005,7 @@
   map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Alpendre Grupo de Teatro"
+  description_en: "Performed by Alpendre Grupo de Teatro (theatre group)."
   festival: Festival de Teatro 2026
   image: /assets/images/events/festival-teatro-2026.jpg
   tags:
@@ -3016,6 +3018,7 @@
   map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Teatrinho"
+  description_en: "Performed by Teatrinho (theatre group)."
   festival: Festival de Teatro 2026
   image: /assets/images/events/festival-teatro-2026.jpg
   tags:
@@ -3028,6 +3031,7 @@
   map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Gerónima"
+  description_en: "Performed by Gerónima (theatre group)."
   festival: Festival de Teatro 2026
   image: /assets/images/events/festival-teatro-2026.jpg
   tags:
@@ -3040,6 +3044,7 @@
   map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
   time: "21:30"
   description: "Cães do Mar"
+  description_en: "Performed by Cães do Mar (theatre group)."
   festival: Festival de Teatro 2026
   image: /assets/images/events/festival-teatro-2026.jpg
   tags:
@@ -3073,6 +3078,7 @@
   map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Pedra Mó Grupo de Teatro"
+  description_en: "Performed by Pedra Mó Grupo de Teatro (theatre group)."
   festival: Festival de Teatro 2026
   image: /assets/images/events/festival-teatro-2026.jpg
   tags:
@@ -3085,6 +3091,7 @@
   map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Grupo de Teatro a Sala"
+  description_en: "Performed by Grupo de Teatro a Sala (theatre group)."
   festival: Festival de Teatro 2026
   image: /assets/images/events/festival-teatro-2026.jpg
   tags:
@@ -3097,6 +3104,7 @@
   map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "11:00"
   description: "Ilhas Desconhecidas"
+  description_en: "Performed by Ilhas Desconhecidas (theatre group)."
   festival: Festival de Teatro 2026
   image: /assets/images/events/festival-teatro-2026.jpg
   tags:
@@ -3703,6 +3711,7 @@ Come join us and support our festivities!"
   venue: "Rossio - Praia da Vitória"
   description: "Festa de freguesia entre os dias 21 a 30 de maio"
   description_pt: "Festa de freguesia entre os dias 21 a 30 de maio"
+  description_en: "Parish festival running from 21 to 30 May."
   tags:
     - dance
     - nightlife
@@ -3719,6 +3728,7 @@ Come join us and support our festivities!"
   venue: "Zona de Lazer de São Brás"
   description: "Noitada entre o dia 22-24"
   description_pt: "Noitada entre o dia 22-24"
+  description_en: "Late-night festival from the 22nd to the 24th."
   tags:
     - dance
     - nightlife
@@ -3730,6 +3740,7 @@ Come join us and support our festivities!"
   venue: "Zona de lazer da mata da esperança"
   description: "Noitada dia 29 e 30 de maio"
   description_pt: "Noitada dia 29 e 30 de maio"
+  description_en: "Late-night festival on 29 and 30 May."
   tags:
     - nightlife
     - dance

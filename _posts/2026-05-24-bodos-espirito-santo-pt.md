@@ -3,7 +3,7 @@ layout: post
 title: "Bodos do Espírito Santo: os dois grandes fins-de-semana da Terceira, explicados"
 subtitle: "Pentecostes (24–25 maio) e Trindade (31 maio – 1 junho) são os dois fins-de-semana fortes de uma tradição que a ilha mantém desde os anos 1500. O que se passa, o que se come e como participar."
 date: 2026-05-24
-category: news
+category: guide
 lang: pt
 lang_alt: /blog/2026/bodos-espirito-santo/
 permalink: /pt/blog/2026/bodos-espirito-santo/

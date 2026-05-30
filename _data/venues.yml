@@ -33,7 +33,13 @@
 - name: "Tasca do Camões"
   address: "Rua Da Rocha 64, 9700-169 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Tasca+do+Cam%C3%B5es+Angra+do+Hero%C3%ADsmo"
+  description: "Bar and tasca in Angra do Heroísmo with weekly karaoke and Latin dance nights."
+  description_pt: "Bar e tasca em Angra do Heroísmo com noites semanais de karaoke e dança latina."
   weekly:
+    - day: Monday
+      day_pt: Segunda-feira
+      name: Karaoke Night
+      name_pt: Noite de Karaoke
     - day: Wednesday
       day_pt: Quarta-feira
       name: Karaoke Night
@@ -89,8 +95,8 @@
   description: "Wine bar with weekly live music nights bringing in solo artists or DJs."
   description_pt: "Bar de vinhos com noites semanais de música ao vivo, com artistas solo ou DJs."
   weekly:
-    - day: "Monday:"
-      day_pt: "Segunda-feira:"
+    - day: "Monday"
+      day_pt: "Segunda-feira"
       name: "Live music, around 21:30 (rotating themed nights: Crazy Monday, Ya Monday for reggae, etc.)"
       name_pt: "Música ao vivo, por volta das 21:30 (noites temáticas rotativas: Crazy Monday, Ya Monday para reggae, etc.)"
   links:
@@ -104,12 +110,12 @@
   description: "Bar specialising in 90s and 2000s music. Doors at 21:30. Themed banners rotate week to week (Rock/Pop Rock, 90s & 2000s Vibes, etc.); check Instagram for the current week."
   description_pt: "Bar especializado em música dos anos 90 e 2000. Abre às 21:30. Os temas vão rodando semana a semana (Rock/Pop Rock, 90s & 2000s Vibes, etc.); vê o Instagram para o tema da semana."
   weekly:
-    - day: "Friday:"
-      day_pt: "Sexta-feira:"
+    - day: "Friday"
+      day_pt: "Sexta-feira"
       name: "90s & 2000s Night"
       name_pt: "Noite Anos 90 & 2000"
-    - day: "Saturday:"
-      day_pt: "Sábado:"
+    - day: "Saturday"
+      day_pt: "Sábado"
       name: "90s & 2000s Night"
       name_pt: "Noite Anos 90 & 2000"
   description_after_weekly: "Sometimes closed when Friday falls on a holiday; on long weekends they occasionally shift to a Thursday instead. Saturday is the most consistent slot."
@@ -125,10 +131,10 @@
   description: "A bookstore-cafe in the historic center hosting cultural events, readings, and the weekly reading club."
   description_pt: "Livraria-café no centro histórico com eventos culturais, leituras e o clube de leitura semanal."
   weekly:
-    - day: Wednesday
-      day_pt: Quarta-feira
-      name: "Clube de Leitura (Reading Club) at 18:15"
-      name_pt: "Clube de Leitura, às 18:15"
+    - day: Monday
+      day_pt: Segunda-feira
+      name: "Clube de Leitura (Reading Club) at 18:00"
+      name_pt: "Clube de Leitura, às 18:00"
   schema_type: Store
   category: arts-culture
 
