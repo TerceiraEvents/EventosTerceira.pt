@@ -358,6 +358,45 @@
   - free
   - kid-friendly
 
+# Espaço AMIT — Junho 2026 program (open Thu/Fri/Sat 20:00–02:00).
+# Source: Espaço AMIT / AAIP. The "ESCAMA: de peixe" strand is the AAIP
+# series (cf. "ESCAMA: de dragão 2#" further down).
+- date: 2026-06-05
+  name: "FUNK THE BANKS"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  time: "22:00–02:00"
+  description: "Funk The Banks celebrates the global legacy of funk music, embracing it in full. The journey follows the genre's historical trail from its origins to the present day, crossing a vast range of cultures and social contexts. It seeks to unite human beings and planet Earth through the groovy rhythms that are the foundations of funk music."
+  description_pt: "Funk The Banks celebra o espólio global da funky music abraçando-o na sua plenitude. A jornada percorre o trilho histórico do género desde as suas origens até à atualidade, atravessando um vasto leque de culturas e contextos sociais. Visa a união entre seres humanos e o planeta Terra através dos ritmos groovy que são os alicerces da funky music."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - nightlife
+
+- date: 2026-06-06
+  name: "Noite de Vinil"
+  name_en: "Vinyl Night"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  time: "22:00–02:00"
+  description: "Vinyl night at Espaço AMIT: we share the sounds from our record collection — bring yours too so we can listen together!"
+  description_pt: "Noite de vinil no Espaço AMIT: partilhamos as sonoridades da nossa coleção de Vinis, traz os teus também para ouvirmos!"
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - nightlife
+
+- date: 2026-06-13
+  name: "ESCAMA: de peixe 1#"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "A vinyl set by JLSmooth, who explores a warmer, more hypnotic side of the dancefloor, moving between deep house, organic grooves, and soft textures. With no rush and no excess, he builds fluid, immersive spaces where the rhythm breathes and transforms slowly — a selection meant to move the body and to extend the more intimate, nocturnal side of ESCAMA: de peixe. Between deep layers, hand-picked records, and an elegant approach to dancing, the set seeks continuous movement without breaking the atmosphere of the gathering. Off the circuit. On the island."
+  description_pt: "JLSmooth explora um lado mais quente e hipnótico da pista, navegando entre deep house, grooves orgânicos e texturas suaves em vinyl set. Sem pressa nem excesso, constrói ambientes fluidos e imersivos onde o ritmo respira e se transforma lentamente. Uma seleção pensada para acompanhar o corpo e prolongar o lado mais íntimo e noturno do ESCAMA: de peixe. Entre camadas profundas, discos escolhidos à mão e uma abordagem elegante à dança, o set procura criar movimento contínuo sem quebrar a atmosfera do encontro. Fora do circuito. Dentro da ilha."
+  instagram: https://www.instagram.com/aaipazores/
+  tags:
+  - nightlife
+
 # May 2026
 
 - date: 2026-05-05
