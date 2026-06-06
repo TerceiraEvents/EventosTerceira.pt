@@ -391,10 +391,13 @@
   venue: Espaço AMIT
   address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
   map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
-  description: "A vinyl set by JLSmooth, who explores a warmer, more hypnotic side of the dancefloor, moving between deep house, organic grooves, and soft textures. With no rush and no excess, he builds fluid, immersive spaces where the rhythm breathes and transforms slowly — a selection meant to move the body and to extend the more intimate, nocturnal side of ESCAMA: de peixe. Between deep layers, hand-picked records, and an elegant approach to dancing, the set seeks continuous movement without breaking the atmosphere of the gathering. Off the circuit. On the island."
-  description_pt: "JLSmooth explora um lado mais quente e hipnótico da pista, navegando entre deep house, grooves orgânicos e texturas suaves em vinyl set. Sem pressa nem excesso, constrói ambientes fluidos e imersivos onde o ritmo respira e se transforma lentamente. Uma seleção pensada para acompanhar o corpo e prolongar o lado mais íntimo e noturno do ESCAMA: de peixe. Entre camadas profundas, discos escolhidos à mão e uma abordagem elegante à dança, o set procura criar movimento contínuo sem quebrar a atmosfera do encontro. Fora do circuito. Dentro da ilha."
+  festival: "ESCAMA"
+  description: "After Borboleta, we now dive into another skin. More intimate. Calmer. More immersive. A gathering built around listening, detail and slow movement — between strings, warm textures, deep rhythms and music that unfolds without rushing. On June 13th, Espaço AMIT transforms once again for another ESCAMA night. Line-up: Jonathan Afonso (contemporary folk from Terceira Island, where tradition, emotion and Atlantic identity meet in a raw, intimate take on song); O GAJO (Viola Campaniça, Mediterranean pulse and modern folk straight from Lisbon — a free journey between traditional and urban soundscapes); JLSMOOTH (a deep house vinyl set driven by warm, elegant and hypnotic grooves); and TECHCRICKET (a return to vinyl and to the roots — deep, physical techno shaped between Andorra and Barcelona). Outside the circuit. Inside the island."
+  description_pt: "Depois de Borboleta, mergulhamos agora noutra pele. Mais íntima. Mais calma. Mais imersiva. Um encontro pensado para a escuta, para o detalhe e para o movimento lento — entre cordas, texturas quentes, ritmos profundos e música que se constrói sem pressa. No dia 13 de junho, o Espaço AMIT volta a transformar-se para mais uma noite ESCAMA. Line-up: Jonathan Afonso (folk contemporâneo da Ilha Terceira, onde tradição, emoção e identidade atlântica se cruzam numa abordagem crua e intimista da canção); O GAJO (Viola Campaniça, pulsação mediterrânica e folk moderno vindo de Lisboa — uma viagem livre entre o tradicional e o urbano); JLSMOOTH (Deep House em Vinyl Set, guiado por grooves quentes, elegantes e hipnóticos); e TECHCRICKET (regresso ao vinil e às origens — techno profundo e físico, das influências entre Andorra e Barcelona). Fora do circuito. Dentro da ilha."
+  organizer: "AAIP — Associação de Artistas Independentes de Portugal"
   instagram: https://www.instagram.com/aaipazores/
   tags:
+  - live-music
   - nightlife
 
 # May 2026
@@ -2071,20 +2074,6 @@
   - bullfighting
   - outdoor
   - kid-friendly
-
-- date: 2026-06-13
-  name: "ESCAMA: de Peixe — Jonathan Afonso (Folk Contemporâneo)"
-  name_en: "ESCAMA: de Peixe — Jonathan Afonso (Contemporary Folk)"
-  venue: Espaço AMIT
-  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
-  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
-  festival: "ESCAMA"
-  description: "First night of ESCAMA: de Peixe at Espaço AMIT — solo concert by Jonathan Afonso, the Terceira-based guitarist who treats music as language, meditation and freedom. Self-taught, he moves between contemporary folk, fingerstyle, traditional guitar, flamenco, and more progressive offshoots, exploring how music alters space, time and perception. His sets are improvisatory and intimate: the same piece breathes differently every night."
-  description_pt: "Primeira noite do ESCAMA: de Peixe no Espaço AMIT — concerto a solo de Jonathan Afonso, o guitarrista terceirense que aproxima-se da música como linguagem, meditação e liberdade. Autodidata, percorre diferentes paisagens sonoras entre folk contemporâneo, fingerstyle, guitarra tradicional, flamenco e derivações mais progressivas, explorando a forma como a música altera o espaço, o tempo e a perceção. Concertos íntimos, orgânicos e em constante mutação — o mesmo tema respira de forma diferente a cada encontro. «Fora do circuito. Dentro da ilha.»"
-  organizer: "AAIP — Associação de Artistas Independentes de Portugal"
-  instagram: https://www.instagram.com/auditorioamit/
-  tags:
-  - live-music
 
 - date: 2026-06-13
   name: "Tourada à Corda — Corpo Santo, Conceição"
