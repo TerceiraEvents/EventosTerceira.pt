@@ -89,6 +89,14 @@
   schema_type: Restaurant
   category: food-drink
 
+- name: "I LOVE SUSHI Azores"
+  address: "Estrada Gaspar Cortes Reais, Edifício dos Cortes Reais, Espaço C, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Edif%C3%ADcio+dos+Cortes+Reais+Estrada+Gaspar+Cortes+Reais+Angra+do+Hero%C3%ADsmo"
+  description: "All-you-can-eat and à la carte sushi and Chinese food in Angra do Heroísmo. Open every day, 12:00–15:00 and 19:00–23:00."
+  description_pt: "All you can eat e à carta de sushi e comida chinesa em Angra do Heroísmo. Aberto todos os dias, das 12h às 15h e das 19h às 23h."
+  schema_type: Restaurant
+  category: food-drink
+
 - name: "Wine Not"
   address: "Rua Direita 8, Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Wine+Not+Angra+do+Hero%C3%ADsmo"

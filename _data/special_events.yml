@@ -1,3 +1,16 @@
+# I LOVE SUSHI Azores — grand opening
+- date: 2026-06-08
+  name: "I LOVE SUSHI Azores — Grande Abertura"
+  name_en: "I LOVE SUSHI Azores — Grand Opening"
+  venue: "I LOVE SUSHI Azores"
+  address: "Estrada Gaspar Cortes Reais, Edifício dos Cortes Reais, Espaço C, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Edifício+dos+Cortes+Reais+Estrada+Gaspar+Cortes+Reais+Angra+do+Heroísmo
+  time: "12h–15h · 19h–23h"
+  description: "Grande abertura do I LOVE SUSHI Azores. Um espaço pensado para reunir amigos, família e apaixonados por sushi, com all you can eat e à carta de sushi e comida chinesa. Aberto todos os dias, das 12h às 15h e das 19h às 23h."
+  description_en: "Grand opening of I LOVE SUSHI Azores — a new spot to bring together friends, family and sushi lovers, with all-you-can-eat and à la carte sushi and Chinese food. Open every day, 12:00–15:00 and 19:00–23:00."
+  tags:
+  - food-drink
+
 # Sanjoaninas 2026
 - date: 2026-06-19
   name: "Sanjoaninas 2026"
