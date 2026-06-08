@@ -4207,3 +4207,13 @@ Come join us and support our festivities!"
   tags:
   - nightlife
   - live-music
+
+- name: "Wine and Dine"
+  name_en: "Wine and Dine"
+  name_pt: "Jantar Vínico"
+  date: 2026-06-14
+  time: "20:00"
+  venue: "Restaurante Sintonia Experience"
+  instagram: "https://www.instagram.com/sintoniaexperience/"
+  tags:
+    - food-drink
