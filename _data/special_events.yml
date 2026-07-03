@@ -4217,3 +4217,126 @@ Come join us and support our festivities!"
   instagram: "https://www.instagram.com/sintoniaexperience/"
   tags:
     - food-drink
+
+# ---------------------------------------------------------------------------
+# Jul 2026 social scan — sourced from Instagram & Facebook & CMAH 2026-07-03
+# ---------------------------------------------------------------------------
+
+# July 2026
+
+- date: 2026-07-04
+  name: "4th of July Party"
+  name_en: "4th of July Party"
+  name_pt: "Festa 4 de Julho"
+  venue: "The Texan & The Garden Club"
+  address: "Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Hero%C3%ADsmo
+  time: "18:00"
+  description: "American-style 4th of July celebration with live music by Regalo Reggae, karaoke by Dancing Grandpa, and BBQ food (ribs, pulled pork, smash burger, mac & cheese). Runs until 02:00."
+  description_pt: "Festa 4 de julho ao estilo americano com música ao vivo dos Regalo Reggae, karaoke pela Dancing Grandpa e comida de churrasco (entrecosto, pulled pork, smash burger, mac & cheese). Até às 02h00."
+  instagram: https://www.instagram.com/p/DaJInvYCAlc/
+  tags:
+    - live-music
+    - food-drink
+    - nightlife
+
+- date: 2026-07-04
+  name: "Recital — Sara Bernardo & Júlia Silva"
+  name_en: "Recital — Sara Bernardo & Júlia Silva"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:00"
+  description: "Classical guitar recital by Sara Bernardo and Júlia Silva (voice), performing works of various styles. Free entry."
+  description_pt: "Recital com Sara Bernardo (guitarra clássica) e Júlia Silva (voz), interpretando obras de diferentes naturezas. Entrada livre."
+  instagram: https://www.instagram.com/p/DaS4Z-JEoxH/
+  tags:
+    - live-music
+    - free
+
+- date: 2026-07-09
+  name: "Festival Rua Direita 2026 — nas asas do açor"
+  name_en: "Festival Rua Direita 2026 — on the wings of the goshawk"
+  end_date: 2026-07-18
+  venue: "Rua Direita, Angra do Heroísmo"
+  address: "Rua Direita, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Rua+Direita+Angra+do+Hero%C3%ADsmo
+  description: "Street theatre and performing arts festival by Companhia Cães do Mar on Rua Direita, marking 50 years of Azorean Autonomy. Performances on 9–11 Jul and 16–18 Jul. Free."
+  description_pt: "Festival de teatro de rua e artes performativas da Companhia Cães do Mar na Rua Direita, a assinalar os 50 anos da Autonomia dos Açores. Espetáculos de 9 a 11 jul e de 16 a 18 jul. Entrada livre."
+  instagram: https://www.instagram.com/angradoheroismo/
+  tags:
+    - theater
+    - free
+    - outdoor
+
+- date: 2026-07-10
+  name: "NUANCE — Concerto + Karaoke (Garden Summer Sessions)"
+  name_en: "NUANCE — Concert + Karaoke (Garden Summer Sessions)"
+  venue: "The Garden Club"
+  address: "Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=The+Garden+Club+Angra+do+Hero%C3%ADsmo
+  description: "Concert by NUANCE followed by karaoke, part of the Garden Club Summer Sessions series."
+  description_pt: "Concerto dos NUANCE seguido de karaoke, inserido nas Garden Summer Sessions."
+  instagram: https://www.instagram.com/p/DaQP8GcM3Dy/
+  tags:
+    - live-music
+    - nightlife
+
+- date: 2026-07-11
+  name: "Açores Musical — 50 Anos"
+  name_en: "Açores Musical — 50 Years"
+  venue: "Praia da Riviera, Cabo da Praia"
+  address: "Praia da Riviera, Cabo da Praia, Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Praia+da+Riviera+Cabo+da+Praia+Praia+da+Vit%C3%B3ria
+  time: "22:00"
+  description: "Tribute concert marking 50 years of the Açores Musical festival. Lineup: Mini Bárbaros, Bárbaros, Os Sombras, Os Coxe. Organised by CMPV."
+  description_pt: "Concerto tributo a assinalar os 50 anos do festival Açores Musical. Atuações de Mini Bárbaros, Bárbaros, Os Sombras e Os Coxe. Organização CMPV."
+  facebook: https://www.facebook.com/agendapraiacultural
+  tags:
+    - live-music
+    - outdoor
+    - free
+
+- date: 2026-07-18
+  name: "Back to 2000s — Karaoke Night (Garden Summer Sessions)"
+  name_en: "Back to 2000s — Karaoke Night (Garden Summer Sessions)"
+  venue: "The Garden Club"
+  address: "Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=The+Garden+Club+Angra+do+Hero%C3%ADsmo
+  description: "Karaoke night featuring the biggest hits of 2000–2010, part of the Garden Club Summer Sessions."
+  description_pt: "Noite de karaoke com os maiores sucessos de 2000 a 2010, inserida nas Garden Summer Sessions."
+  instagram: https://www.instagram.com/p/DaQP8GcM3Dy/
+  tags:
+    - nightlife
+    - karaoke
+
+# October 2026
+
+- date: 2026-10-17
+  name: "Angra Convida Alcoolémia — 30 anos de «Não Sei Se Mereço»"
+  name_en: "Angra Convida Alcoolémia — 30 years of «Não Sei Se Mereço»"
+  venue: "CCCAH (Centro Cultural e de Congressos)"
+  address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=CCCAH+Angra+do+Hero%C3%ADsmo
+  time: "21:30"
+  description: "The Angra Convida concert series presents Alcoolémia celebrating 30 years of their album «Não Sei Se Mereço»."
+  description_pt: "A série Angra Convida apresenta os Alcoolémia a celebrar 30 anos do álbum «Não Sei Se Mereço»."
+  instagram: https://www.instagram.com/angradoheroismo/
+  tags:
+    - live-music
+
+# November 2026
+
+- date: 2026-11-14
+  name: "Angra Convida Carolina Deslandes — Voz & Guitarra"
+  name_en: "Angra Convida Carolina Deslandes — Voice & Guitar"
+  venue: "CCCAH (Centro Cultural e de Congressos)"
+  address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=CCCAH+Angra+do+Hero%C3%ADsmo
+  time: "21:30"
+  description: "The Angra Convida concert series presents Carolina Deslandes in an intimate Voz & Guitarra format."
+  description_pt: "A série Angra Convida apresenta Carolina Deslandes num formato intimista Voz & Guitarra."
+  instagram: https://www.instagram.com/angradoheroismo/
+  tags:
+    - live-music
+
