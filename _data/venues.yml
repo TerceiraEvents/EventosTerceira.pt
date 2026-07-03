@@ -205,7 +205,7 @@
   description: "Auditorium and event space of the Musical Academy of Terceira Island. The auditorium hosts concerts, recitals, jazz courses, and choral performances; Espaço AMIT (the bar/event area, typically open Thu/Fri/Sat 20:00–02:00) runs DesaFINO karaoke nights, DJ sets, film screenings, and themed evenings like the Dragão metal nights."
   description_pt: "Auditório e espaço de eventos da Academia Musical da Ilha Terceira. O auditório recebe concertos, recitais, cursos de jazz e atuações corais; o Espaço AMIT (zona de bar/eventos, habitualmente aberto qui/sex/sáb 20:00–02:00) acolhe as noites de karaoke DesaFINO, sets de DJ, sessões de cinema e ciclos temáticos como as noites Dragão de metal."
   links:
-    - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/auditorioamit/" }
+    - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/amit.academiamusical/" }
   schema_type: PerformingArtsTheater
   category: arts-culture
 
@@ -218,6 +218,7 @@
   links:
     - { label: "Website", label_pt: "Site", url: "https://museu-angra.cultura.azores.gov.pt/" }
     - { label: "Facebook", label_pt: "Facebook", url: "https://www.facebook.com/MuseuDeAngraDoHeroismo/" }
+      - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/museu.angra/" }
   schema_type: Museum
   category: arts-culture
 
