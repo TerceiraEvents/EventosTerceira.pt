@@ -4340,3 +4340,63 @@ Come join us and support our festivities!"
   tags:
     - live-music
 
+# ---------------------------------------------------------------------------
+# AMIT / Museu de Angra additions — social scan follow-up 2026-07-03
+# Source: @amit.academiamusical (correct Instagram handle; @auditorioamit is dead)
+# ---------------------------------------------------------------------------
+
+# July 2026 — Museu de Angra do Heroísmo
+
+- date: 2026-07-05
+  name: "Domingos com Música — Julho (I)"
+  name_en: "Sundays with Music — July (I)"
+  venue: "Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia"
+  address: "Ladeira de São Francisco, 9701 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo
+  time: "11:00"
+  description: "Weekly Sunday morning concert series at the Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia. Part of the July 2026 programme (5, 12, 19 & 26 Jul)."
+  description_pt: "Série de concertos dominicais de manhã no Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia. Parte do programa de julho de 2026 (5, 12, 19 e 26 jul)."
+  tags:
+    - live-music
+    - free
+
+- date: 2026-07-12
+  name: "Domingos com Música — Julho (II)"
+  name_en: "Sundays with Music — July (II)"
+  venue: "Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia"
+  address: "Ladeira de São Francisco, 9701 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo
+  time: "11:00"
+  description: "Weekly Sunday morning concert series at the Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia."
+  description_pt: "Série de concertos dominicais de manhã no Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia."
+  tags:
+    - live-music
+    - free
+
+- date: 2026-07-19
+  name: "Domingos com Música — Julho (III)"
+  name_en: "Sundays with Music — July (III)"
+  venue: "Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia"
+  address: "Ladeira de São Francisco, 9701 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo
+  time: "11:00"
+  description: "Weekly Sunday morning concert series at the Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia."
+  description_pt: "Série de concertos dominicais de manhã no Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia."
+  tags:
+    - live-music
+    - free
+
+- date: 2026-07-26
+  name: "Domingos com Música — Julho (IV)"
+  name_en: "Sundays with Music — July (IV)"
+  venue: "Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia"
+  address: "Ladeira de São Francisco, 9701 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo
+  time: "11:00"
+  description: "Weekly Sunday morning concert series at the Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia."
+  description_pt: "Série de concertos dominicais de manhã no Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia."
+  tags:
+    - live-music
+    - free
+
+
