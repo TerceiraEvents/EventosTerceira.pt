@@ -91,7 +91,9 @@ Navigate to each account below and scroll the grid looking for event flyers (pos
 | `@winenot.terceira` | Instagram | Occasional live music nights |
 | `@sala.319` | Instagram | Primarily daily lunch menus; skip unless something unusual |
 | `@fullrange_rave` | Instagram | Page was unavailable as of May 2026 — check if it's back |
-| `@auditorioamit` | Instagram | Page was unavailable as of May 2026 — check if it's back |
+| `@amit.academiamusical` | Instagram | Active (254 followers); formerly `@auditorioamit` which is dead |
+| `@museu.angra` | Instagram | 2,516 followers — official Museu de Angra do Heroísmo account |
+| `@twinstheclub` | Instagram | 7,375 followers — major nightclub; posts regular Fri/Sat DJ nights + special events |
 
 ### For each event post found
 
