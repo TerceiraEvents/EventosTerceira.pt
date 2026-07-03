@@ -4398,5 +4398,106 @@ Come join us and support our festivities!"
   tags:
     - live-music
     - free
+- date: 2026-07-04
+  name: "Baterias ao Luar 2026"
+  name_en: "Moonlight Batteries 2026"
+  venue: "Reserva Florestal de Recreio do Monte Brasil"
+  address: "Monte Brasil, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Reserva+Florestal+Monte+Brasil+Angra+do+Hero%C3%ADsmo"
+  time: "18:00"
+  description: "Annual outdoor night event by the Museu de Angra do Heroísmo at Monte Brasil. Guided tours of the São João Baptista fortress artillery pieces (18:00 and 18:45), horse rides by the Associação de Criadores e Amigos do Pónei da Terceira (18:00–21:00), a Sunset Session by Unlok & Araújo at Pico das Cruzinhas (18:00–23:00), WWII defensive history talk (20:00–21:00), and a night picnic with food by Donetes d'Avó Lúcia and bar by Full Range. Free entry; citizen card required to access the fortress."
+  description_pt: "Evento anual nocturno ao ar livre pelo Museu de Angra do Heroísmo no Monte Brasil. Visitas guiadas às peças de artilharia da Fortaleza de São João Baptista (18:00 e 18:45), passeios equestres (18:00–21:00), Sunset Session por Unlok & Araújo no Pico das Cruzinhas (18:00–23:00), palestra sobre a defesa da ilha na II Guerra Mundial (20:00–21:00) e piquenique noturno com Donetes d'Avó Lúcia e bar Full Range. Entrada livre; cartão de cidadão necessário para aceder à Fortaleza."
+  instagram: https://www.instagram.com/p/DZ4k6J6DdVq/
+  tags:
+  - free
+  - outdoor
+  - kid-friendly
+  - live-music
+
+- date: 2026-07-10
+  name: "Apresentação do Livro | Sem Palavras a Mais"
+  name_en: "Book Presentation | Sem Palavras a Mais"
+  venue: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
+  address: "Rua da Biblioteca, 9700 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+Arquivo+Regional+Angra+do+Hero%C3%ADsmo"
+  time: "21:00"
+  description: "Presentation of the poetry collection 'Sem Palavras a Mais' by Mário Duarte (Editora Vale das Amoras), introduced by Ana Raposo. Free entry."
+  description_pt: "Apresentação do livro de poemas 'Sem Palavras a Mais' de Mário Duarte (Editora Vale das Amoras), com apresentação de Ana Raposo. Entrada livre."
+  facebook: https://www.angradoheroismo.pt/evento/apresentacao-do-livro-sem-palavras-a-mais-de-mario-duarte/
+  tags:
+  - literature
+  - free
+
+- date: 2026-07-11
+  name: "Oficina para Famílias | A Menina que Vivia no País Azul"
+  name_en: "Family Workshop | The Girl Who Lived in the Blue Country"
+  venue: "Museu de Angra do Heroísmo"
+  address: "Ladeira de São Francisco, 9700-182 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo"
+  time: "14:00"
+  description: "Family workshop for children aged 2+ based on the picture book 'A Menina que Vivia no País Azul' by Antónia Rodrigues. Explores themes of childhood, affection, and inclusion; adapted for visually impaired children. Runs 14:00–17:00. Pre-registration required: +351 295 240 802 or museu.angra.agenda@azores.gov.pt."
+  description_pt: "Oficina para crianças a partir dos 2 anos inspirada na obra 'A Menina que Vivia no País Azul' de Antónia Rodrigues. Explora afetos, infância e inclusão; adaptada para crianças invisuais. 14:00–17:00. Inscrição prévia: 295 240 802 ou museu.angra.agenda@azores.gov.pt."
+  facebook: https://museu-angra.cultura.azores.gov.pt/events/oficina-para-familias-a-menina-que-vivia-no-pais-azul/
+  tags:
+  - kid-friendly
+  - workshop
+  - free
+
+- date: 2026-07-18
+  name: "À Conversa com… Anaísa Costa"
+  name_en: "In Conversation with… Anaísa Costa"
+  venue: "Museu de Angra do Heroísmo"
+  address: "Ladeira de São Francisco, 9700-182 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo"
+  time: "15:00"
+  description: "Informal talk with Anaísa Costa, the first female photographer of Terceira Island, moderated by Catarina Valadão (MAH). She will share stories from her career — from social events to portrait photography — and reflect on the role of women in photography and its social and technical evolution on the island. Free entry."
+  description_pt: "Tertúlia com Anaísa Costa, a primeira fotógrafa da Ilha Terceira, moderada por Catarina Valadão (MAH). Partilha de episódios do seu percurso — de eventos sociais a retratos de estúdio — e reflexão sobre o papel das mulheres na fotografia e as transformações técnicas e sociais na ilha. Entrada livre."
+  facebook: https://museu-angra.cultura.azores.gov.pt/events/a-conversa-com-anaisa-costa-2/
+  tags:
+  - literature
+  - free
+
+- date: 2026-07-20
+  name: "Lançamento de Livro | A Princesa de Limaland e a Decisão Crucial"
+  name_en: "Book Launch | The Princess of Limaland and the Crucial Decision"
+  venue: "Paços do Concelho (Town Hall)"
+  address: "Praça Velha, 9700-145 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os+do+Concelho+Angra+do+Hero%C3%ADsmo"
+  time: "20:00"
+  description: "Launch of 'A Princesa de Limaland e a Decisão Crucial' by Cláudia Ferreira, presented by Dr. José Paulo Lima. Free entry."
+  description_pt: "Lançamento de 'A Princesa de Limaland e a Decisão Crucial' de Cláudia Ferreira, com apresentação de Dr. José Paulo Lima. Entrada livre."
+  facebook: https://www.angradoheroismo.pt/evento/lancamento-de-livro-a-princesa-de-limaland-e-a-decisao-crucial/
+  tags:
+  - literature
+  - free
+
+- date: 2026-07-22
+  name: "Apresentação de Livro | Memória da Visita Régia à Ilha Terceira (2.ª edição)"
+  name_en: "Book Presentation | Memory of the Royal Visit to Terceira Island (2nd ed.)"
+  venue: "Paços do Concelho (Town Hall)"
+  address: "Praça Velha, 9700-145 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os+do+Concelho+Angra+do+Hero%C3%ADsmo"
+  time: "20:00"
+  description: "Presentation of the 2nd edition of 'Memória da visita régia à ilha Terceira' by Alfredo Luiz Campos, introduced by Álamo de Meneses. A landmark episode in Terceira's history revisited. Free entry."
+  description_pt: "Apresentação da 2.ª edição de 'Memória da visita régia à ilha Terceira' de Alfredo Luiz Campos, com apresentação de Álamo de Meneses. Entrada livre."
+  facebook: https://www.angradoheroismo.pt/evento/apresentacao-de-livro-memoria-da-visita-regia-a-ilha-terceira-2-a-edicao/
+  tags:
+  - literature
+  - free
+
+- date: 2026-07-25
+  name: "Inauguração | Belo Insubmisso de Miguel Rebelo"
+  name_en: "Exhibition Opening | Belo Insubmisso by Miguel Rebelo"
+  venue: "Museu de Angra do Heroísmo"
+  address: "Ladeira de São Francisco, 9700-182 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo"
+  time: "15:00"
+  description: "Opening of 'Belo Insubmisso', an exhibition of works by Miguel Rebelo recently donated to the Museu de Angra do Heroísmo by his son Raphael Rebelo. The paintings document a singular artistic trajectory built between the Azores, Lisbon, and Montreal — gestural, experimental, and deeply material. Free entry."
+  description_pt: "Inauguração de 'Belo Insubmisso', exposição de obras de Miguel Rebelo doadas ao Museu de Angra do Heroísmo pelo filho Raphael Rebelo. Percurso artístico construído entre os Açores, Lisboa e Montreal — gestual, experimental e profundamente matérico. Entrada livre."
+  facebook: https://museu-angra.cultura.azores.gov.pt/events/inauguracao-belo-insubmisso-de-miguel-rebelo/
+  tags:
+  - exhibition
+  - free
+
 
 
