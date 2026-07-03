@@ -51,6 +51,14 @@ This single page aggregates all municipally-supported events and is the most eff
 
 **URL:** https://www.angradoheroismo.pt/eventos
 
+Also check the Museu de Angra do Heroísmo events calendar — it often has upcoming cultural events not yet on the CMAH page:
+
+**URL:** https://museu-angra.cultura.azores.gov.pt/events/
+
+**Facebook:** https://www.facebook.com/MuseuDeAngraDoHeroismo/ (11K followers — often posts events same-day)
+
+**Instagram:** @museu.angra (2.5K followers)
+
 Scroll through the full list. For each upcoming event **not already in `special_events.yml`**, note:
 - Event name (PT and EN if bilingual)
 - Date(s) and time(s)
@@ -91,7 +99,9 @@ Navigate to each account below and scroll the grid looking for event flyers (pos
 | `@winenot.terceira` | Instagram | Occasional live music nights |
 | `@sala.319` | Instagram | Primarily daily lunch menus; skip unless something unusual |
 | `@fullrange_rave` | Instagram | Page was unavailable as of May 2026 — check if it's back |
-| `@auditorioamit` | Instagram | Page was unavailable as of May 2026 — check if it's back |
+| `@amit.academiamusical` | Instagram | Active (254 followers); formerly @auditorioamit which is dead |
+| `@museu.angra` | Instagram | Museu de Angra do Heroísmo — events, exhibitions, cultural programming (2.5K followers) |
+| `@twinstheclub` | Instagram | Major Angra nightclub — recurring Fri/Sat nights; check for special one-off events |
 
 ### For each event post found
 
@@ -118,6 +128,8 @@ Some venues post events primarily or exclusively on Facebook. Check these pages:
 | **Tasca do Camões** (`facebook.com/tascadocamoes`) | Live music acts — the Photos tab often shows flyers most clearly |
 | **Ilha Terceira - Eventos** (community group) | Community-shared events from sources not otherwise covered |
 | **Agenda Cultural Praia da Vitória** (Facebook page) | Events in Praia da Vitória specifically |
+| **Museu de Angra do Heroísmo** (facebook.com/MuseuDeAngraDoHeroismo/) | Facebook + Instagram (@museu.angra) | Museum events, exhibitions, and cultural programming — 11K FB followers, very active |
+| **Twins The Club** (facebook.com/twinsclubazores/) | Facebook + Instagram (@twinstheclub) | Major nightclub; posts weekly DJ/event schedule — mostly recurring Fri/Sat nights |
 
 > Note: Havanna Terceira and Teatro Angrense Facebook pages were inaccessible as of May 2026. Try searching for them by name if the direct URL fails.
 
