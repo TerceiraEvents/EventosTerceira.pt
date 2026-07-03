@@ -218,12 +218,12 @@
   links:
     - { label: "Website", label_pt: "Site", url: "https://museu-angra.cultura.azores.gov.pt/" }
     - { label: "Facebook", label_pt: "Facebook", url: "https://www.facebook.com/MuseuDeAngraDoHeroismo/" }
-      - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/museu.angra/" }
+    - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/museu.angra/" }
   schema_type: Museum
   category: arts-culture
 
 - name: "Terceira Weaving Cabin / Ebru Art Terceira"
-  address: "EN1-1A 57, 9700 Terceira (exact directions provided on booking)"
+  address: "EN1-1A 57, 9700 Terceira (exact directions provided on booking)"h
   address_pt: "EN1-1A 57, 9700 Terceira (indicações exatas fornecidas após reserva)"
   map_url: "https://maps.app.goo.gl/U4vEqFN4na9VXLSq8"
   description: "Small-group craft studio on Terceira offering Ebru water marbling (paint on water, transfer to fabric, paper, wood, or ceramic) and private weaving lessons on traditional looms. Beginners and experienced weavers welcome; tea or coffee served on the covered terrace. Booking required; sessions cap at four people."
