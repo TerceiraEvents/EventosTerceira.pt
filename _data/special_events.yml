@@ -4796,6 +4796,49 @@ Come join us and support our festivities!"
   - exhibition
   - free
 
+- date: 2026-07-08
+  name: "Cinema no Jardim: O Lugar dos Sonhos"
+  name_en: "Garden Cinema: O Lugar dos Sonhos"
+  venue: Jardim Duque da Terceira
+  address: "Rua Direita, Angra do Heroísmo, 9700"
+  map_url: https://www.google.com/maps/search/?api=1&query=Jardim%20Duque%20da%20Terceira%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:30"
+  description: "Outdoor Cinema no Jardim screening of 'O Lugar dos Sonhos' at Jardim Duque da Terceira."
+  description_pt: "Sessão ao ar livre do Cinema no Jardim com 'O Lugar dos Sonhos' no Jardim Duque da Terceira."
+  source_url: https://whatson.azores.gov.pt/en/agenda/
+  tags:
+  - cinema
+  - outdoor
+
+- date: 2026-07-09
+  end_date: 2026-07-10
+  name: "Oficinas nas Férias: Jogos do Futuro"
+  name_en: "Holiday Workshops: Jogos do Futuro"
+  venue: Jardim Duque da Terceira
+  address: "Rua Direita, Angra do Heroísmo, 9700"
+  map_url: https://www.google.com/maps/search/?api=1&query=Jardim%20Duque%20da%20Terceira%20Angra%20do%20Hero%C3%ADsmo
+  description: "Holiday workshop 'Jogos do Futuro' on 9 and 10 July at Jardim Duque da Terceira."
+  description_pt: "Oficina de férias 'Jogos do Futuro' nos dias 9 e 10 de julho no Jardim Duque da Terceira."
+  source_url: https://whatson.azores.gov.pt/en/agenda/
+  tags:
+  - kid-friendly
+  - workshop
+  - outdoor
+
+- date: 2026-07-09
+  end_date: 2026-07-10
+  name: "Oficinas nas Férias: Pinta a Manta"
+  name_en: "Holiday Workshops: Pinta a Manta"
+  venue: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
+  address: "Rua da Biblioteca, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca%20P%C3%BAblica%20Arquivo%20Regional%20Angra%20do%20Hero%C3%ADsmo
+  description: "Holiday workshop 'Pinta a Manta' on 9 and 10 July at Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro."
+  description_pt: "Oficina de férias 'Pinta a Manta' nos dias 9 e 10 de julho na Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro."
+  source_url: https://whatson.azores.gov.pt/en/agenda/
+  tags:
+  - kid-friendly
+  - workshop
+
 - date: 2026-07-13
   name: "Clube de Leitura na Casa de Nemésio — Yvette Centeno"
   name_en: "Reading Club at Casa de Nemésio — Yvette Centeno"
@@ -4808,6 +4851,23 @@ Come join us and support our festivities!"
   facebook: https://www.facebook.com/photo/?fbid=1340846681528401&set=pb.100068092452652.-2207520000
   tags:
   - literature
+
+- date: 2026-07-19
+  end_date: 2026-07-28
+  name: "Comemorações: Dia do Regimento de Guarnição N.º 1"
+  name_en: "Commemorations: 1st Garrison Regiment Day"
+  venue: "Vários locais de Angra do Heroísmo"
+  venue_en: "Several locations in Angra do Heroísmo"
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Angra%20do%20Hero%C3%ADsmo
+  description: "Free program marking the 1st Garrison Regiment Day, with sports activities, exhibitions, military demonstrations, commemorative ceremonies, and concerts around Angra do Heroísmo."
+  description_pt: "Programa gratuito das Comemorações do Dia do Regimento de Guarnição N.º 1, com atividades desportivas, exposições, demonstrações militares, cerimónias evocativas e concertos em vários locais de Angra do Heroísmo."
+  instagram: https://www.instagram.com/angradoheroismo/p/DaiXgnDFxrG/
+  tags:
+  - outdoor
+  - exhibition
+  - live-music
+  - free
 
 - date: 2026-08-04
   end_date: 2026-08-28
