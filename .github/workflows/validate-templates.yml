@@ -30,6 +30,11 @@ jobs:
       - name: Validate event tag vocabulary
         run: bundle exec ruby scripts/tests/test_tag_vocabulary.rb
 
+      # Catches near-identical manual/social-scan event listings that
+      # share a date/time bucket but differ by small title changes.
+      - name: Validate special event duplicates
+        run: bundle exec ruby scripts/tests/test_special_event_duplicates.rb
+
       # ── Blog post `lang:` front-matter ────────────────────────────
       # Catches typos like `lang: portugese` and EN/PT filename ↔
       # `lang:` mismatches before they break the bilingual permalinks

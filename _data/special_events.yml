@@ -3685,11 +3685,11 @@ Come join us and support our festivities!"
   name: "Festival Rua Direita 2026 — Nas Asas do Açor"
   name_en: "Rua Direita Festival 2026 — On the Wings of the Goshawk"
   end_date: 2026-07-18
-  venue: Angra do Heroísmo
-  address: "Angra do Heroísmo"
-  map_url: https://www.google.com/maps/search/?api=1&query=Praça+Velha+Angra+do+Heroísmo
-  description: "Street theatre festival by Companhia de Teatro Cães do Mar, with this year's theme 'Nas Asas do Açor' marking 50 years of Azorean Autonomy. Runs July 9–11 and 16–18. Free entry."
-  description_pt: "Festival de teatro de rua da Companhia de Teatro Cães do Mar, sob o tema 'Nas Asas do Açor', comemorando os 50 anos da Autonomia dos Açores. Decorre a 9–11 e 16–18 de julho. Entrada livre."
+  venue: "Rua Direita, Angra do Heroísmo"
+  address: "Rua Direita, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Rua+Direita+Angra+do+Hero%C3%ADsmo
+  description: "Street theatre and performing arts festival by Companhia de Teatro Cães do Mar on Rua Direita, with this year's theme 'Nas Asas do Açor' marking 50 years of Azorean Autonomy. Runs July 9–11 and 16–18. Free entry."
+  description_pt: "Festival de teatro de rua e artes performativas da Companhia de Teatro Cães do Mar na Rua Direita, sob o tema 'Nas Asas do Açor', comemorando os 50 anos da Autonomia dos Açores. Decorre a 9–11 e 16–18 de julho. Entrada livre."
   instagram: https://www.instagram.com/p/DYo16xqDNkI/
   tags:
   - theater
@@ -3700,11 +3700,12 @@ Come join us and support our festivities!"
   name: "Concerto: Angra Convida Alcoolémia — 30 anos de «Não Sei Se Mereço»"
   name_en: "Concert: Angra Convida Alcoolémia — 30 years of «Não Sei Se Mereço»"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
-  address: "Angra do Heroísmo"
-  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
+  address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=CCCAH+Angra+do+Hero%C3%ADsmo
   time: "21:30"
   description: "Alcoolémia celebrates 30 years of their iconic album 'Não Sei Se Mereço' in a special concert at the CCCAH as part of the Angra Convida series."
   description_pt: "Os Alcoolémia celebram os 30 anos do álbum 'Não Sei Se Mereço' num concerto especial no CCCAH, no âmbito da série Angra Convida."
+  instagram: https://www.instagram.com/angradoheroismo/
   tags:
   - live-music
 
@@ -3712,11 +3713,12 @@ Come join us and support our festivities!"
   name: "Concerto: Angra Convida Carolina Deslandes — Voz & Guitarra"
   name_en: "Concert: Angra Convida Carolina Deslandes — Voice & Guitar"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
-  address: "Angra do Heroísmo"
-  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
+  address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=CCCAH+Angra+do+Hero%C3%ADsmo
   time: "21:30"
   description: "Carolina Deslandes performs an intimate voice and guitar show at the CCCAH as part of the Angra Convida series."
   description_pt: "Carolina Deslandes apresenta um concerto intimista de voz e guitarra no CCCAH, no âmbito da série Angra Convida."
+  instagram: https://www.instagram.com/angradoheroismo/
   tags:
   - live-music
 
@@ -4254,21 +4256,6 @@ Come join us and support our festivities!"
     - live-music
     - free
 
-- date: 2026-07-09
-  name: "Festival Rua Direita 2026 — nas asas do açor"
-  name_en: "Festival Rua Direita 2026 — on the wings of the goshawk"
-  end_date: 2026-07-18
-  venue: "Rua Direita, Angra do Heroísmo"
-  address: "Rua Direita, Angra do Heroísmo"
-  map_url: https://www.google.com/maps/search/?api=1&query=Rua+Direita+Angra+do+Hero%C3%ADsmo
-  description: "Street theatre and performing arts festival by Companhia Cães do Mar on Rua Direita, marking 50 years of Azorean Autonomy. Performances on 9–11 Jul and 16–18 Jul. Free."
-  description_pt: "Festival de teatro de rua e artes performativas da Companhia Cães do Mar na Rua Direita, a assinalar os 50 anos da Autonomia dos Açores. Espetáculos de 9 a 11 jul e de 16 a 18 jul. Entrada livre."
-  instagram: https://www.instagram.com/angradoheroismo/
-  tags:
-    - theater
-    - free
-    - outdoor
-
 - date: 2026-07-10
   name: "NUANCE — Concerto + Karaoke (Garden Summer Sessions)"
   name_en: "NUANCE — Concert + Karaoke (Garden Summer Sessions)"
@@ -4312,33 +4299,7 @@ Come join us and support our festivities!"
 
 # October 2026
 
-- date: 2026-10-17
-  name: "Angra Convida Alcoolémia — 30 anos de «Não Sei Se Mereço»"
-  name_en: "Angra Convida Alcoolémia — 30 years of «Não Sei Se Mereço»"
-  venue: "CCCAH (Centro Cultural e de Congressos)"
-  address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
-  map_url: https://www.google.com/maps/search/?api=1&query=CCCAH+Angra+do+Hero%C3%ADsmo
-  time: "21:30"
-  description: "The Angra Convida concert series presents Alcoolémia celebrating 30 years of their album «Não Sei Se Mereço»."
-  description_pt: "A série Angra Convida apresenta os Alcoolémia a celebrar 30 anos do álbum «Não Sei Se Mereço»."
-  instagram: https://www.instagram.com/angradoheroismo/
-  tags:
-    - live-music
-
 # November 2026
-
-- date: 2026-11-14
-  name: "Angra Convida Carolina Deslandes — Voz & Guitarra"
-  name_en: "Angra Convida Carolina Deslandes — Voice & Guitar"
-  venue: "CCCAH (Centro Cultural e de Congressos)"
-  address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
-  map_url: https://www.google.com/maps/search/?api=1&query=CCCAH+Angra+do+Hero%C3%ADsmo
-  time: "21:30"
-  description: "The Angra Convida concert series presents Carolina Deslandes in an intimate Voz & Guitarra format."
-  description_pt: "A série Angra Convida apresenta Carolina Deslandes num formato intimista Voz & Guitarra."
-  instagram: https://www.instagram.com/angradoheroismo/
-  tags:
-    - live-music
 
 # ---------------------------------------------------------------------------
 # AMIT / Museu de Angra additions — social scan follow-up 2026-07-03
