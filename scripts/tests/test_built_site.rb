@@ -142,7 +142,7 @@ end
 VENUE_SCHEMA_TYPES = %w[
   LocalBusiness BarOrPub NightClub Restaurant PerformingArtsTheater MovieTheater
   Store StadiumOrArena GovernmentBuilding Museum ArtGallery
-  CommunityCenter ExerciseGym Campground
+  CommunityCenter ExerciseGym Campground Library
 ].freeze
 
 venue_path = "#{SITE}/venues/index.html"

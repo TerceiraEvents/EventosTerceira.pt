@@ -91,7 +91,7 @@ lang_alt: /pt/resources/
 
 <h2>Instagram Accounts to Follow</h2>
 
-<p class="section-intro">Follow these for event announcements, flyers, and what's happening around Angra.</p>
+<p class="section-intro">Follow these for event announcements, flyers, and what's happening around Terceira.</p>
 
 <div class="venue-card">
   <div class="venue-regulars">
@@ -104,7 +104,11 @@ lang_alt: /pt/resources/
       <li><a href="https://www.instagram.com/havannaangra/">@havannaangra</a> &middot; <a href="https://www.facebook.com/p/Havanna-Terceira-100059128671983/">Facebook</a> &mdash; Havanna Club</li>
       <li><a href="https://www.instagram.com/livraria_lardocelivro/">@livraria_lardocelivro</a> &middot; <a href="https://www.facebook.com/livrarialardocelivro/">Facebook</a> &mdash; Lar Doce Livro</li>
       <li><a href="https://www.instagram.com/fullrange_rave/">@fullrange_rave</a> &mdash; Full Range (rave/electronic events)</li>
-      <li><a href="https://www.instagram.com/auditorioamit/">@auditorioamit</a> &mdash; Audit&oacute;rio AMIT (Academia Musical da Ilha Terceira)</li>
+      <li><a href="https://www.instagram.com/amit.academiamusical/">@amit.academiamusical</a> &mdash; AMIT / Academia Musical da Ilha Terceira</li>
+      <li><a href="https://www.instagram.com/museu.angra/">@museu.angra</a> &mdash; Museu de Angra do Hero&iacute;smo</li>
+      <li><a href="https://www.instagram.com/twinstheclub/">@twinstheclub</a> &mdash; Twins Club</li>
+      <li><a href="https://www.instagram.com/winenot.terceira/">@winenot.terceira</a> &mdash; Wine Not?</li>
+      <li><a href="https://www.instagram.com/porta_42/">@porta_42</a> &mdash; Porta 42</li>
     </ul>
   </div>
 </div>
@@ -122,6 +126,7 @@ lang_alt: /pt/resources/
       <li><a href="https://www.facebook.com/livrarialardocelivro/">Lar Doce Livro</a> &mdash; readings, book launches, cultural events</li>
       <li><a href="https://www.facebook.com/casadosal.angra/">Casa do Sal</a> &mdash; live music and community events</li>
       <li><a href="https://www.facebook.com/MunicipioPraiaVitoria/">Munic&iacute;pio Praia da Vit&oacute;ria</a> &mdash; official Praia da Vit&oacute;ria city council page</li>
+      <li><a href="https://www.facebook.com/agendapraiacultural/">Agenda Praia Cultural</a> &mdash; cultural programming from Praia da Vit&oacute;ria</li>
       <li><a href="https://www.facebook.com/profile.php?id=1414455825467398">Teatro Angrense</a> &mdash; historic theater in Angra, performances and cultural programming</li>
       <li><a href="https://www.facebook.com/groups/308361896484142/">Ilha Terceira - Eventos</a> &mdash; community group for sharing events across the island</li>
     </ul>
