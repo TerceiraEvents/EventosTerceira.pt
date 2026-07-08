@@ -1,4 +1,4 @@
-# Venues hosting events in Angra do Heroísmo, Terceira.
+# Venues hosting events around Terceira.
 #
 # Schema (all fields optional except `name` and `address`):
 #   name              — venue display name (required)
@@ -328,6 +328,35 @@
   map_url: "https://www.google.com/maps/search/?api=1&query=Academia+da+Juventude+e+das+Artes+da+Ilha+Terceira+Praia+da+Vit%C3%B3ria"
   description: "Youth and arts academy in Praia da Vitória, hosting exhibitions, talks, seminars, film screenings, and concerts."
   description_pt: "Academia da juventude e das artes na Praia da Vitória, que acolhe exposições, palestras, seminários, sessões de cinema e concertos."
-  schema_type: CivicStructure
+  schema_type: CommunityCenter
   category: arts-culture
-  category: sports-outdoor
+
+- name: "Auditório do Ramo Grande"
+  address: "Auditório do Ramo Grande, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Audit%C3%B3rio+do+Ramo+Grande+Praia+da+Vit%C3%B3ria"
+  description: "Main performing-arts auditorium in Praia da Vitória's historic center, with a 453-seat hall, cinema screen, stage, sound and lighting systems, and studio facilities. Hosts concerts, theater, comedy, dance, cinema, conferences, and Ticketline-listed touring shows."
+  description_pt: "Principal auditório de artes performativas no centro histórico da Praia da Vitória, com sala de 453 lugares, ecrã de cinema, palco, sistemas de som e luz e estúdio. Recebe concertos, teatro, comédia, dança, cinema, conferências e espetáculos de digressão listados na Ticketline."
+  telephone: "+351295545700"
+  schema_type: PerformingArtsTheater
+  category: arts-culture
+
+- name: "Biblioteca Municipal Silvestre Ribeiro / Casa das Tias de Vitorino Nemésio"
+  address: "Rua Serpa Pinto 66 / Rua dos Remédios 5, 9760-438 Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Biblioteca+Municipal+Silvestre+Ribeiro+Praia+da+Vit%C3%B3ria"
+  description: "Praia da Vitória's municipal library, housed at Casa das Tias de Vitorino Nemésio. Hosts exhibitions, reading activities, children's programming, talks, and local cultural sessions."
+  description_pt: "Biblioteca municipal da Praia da Vitória, instalada na Casa das Tias de Vitorino Nemésio. Recebe exposições, atividades de leitura, programação infantil, palestras e sessões culturais locais."
+  links:
+    - { label: "Facebook (Agenda Praia Cultural)", label_pt: "Facebook (Agenda Praia Cultural)", url: "https://www.facebook.com/agendapraiacultural/" }
+  schema_type: Library
+  category: arts-culture
+
+- name: "Casa Museu Vitorino Nemésio"
+  address: "Rua de São Paulo, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Casa+Museu+Vitorino+Nem%C3%A9sio+Praia+da+Vit%C3%B3ria"
+  description: "Museum house dedicated to Vitorino Nemésio in the Praia da Vitória building where the writer was born. Hosts literary sessions, reading-club meetings, recitals, and programming around Nemésio's life and work."
+  description_pt: "Casa museu dedicada a Vitorino Nemésio, no edifício da Praia da Vitória onde o escritor nasceu. Recebe sessões literárias, encontros de leitura, recitais e programação ligada à vida e obra de Nemésio."
+  links:
+    - { label: "Facebook (Agenda Praia Cultural)", label_pt: "Facebook (Agenda Praia Cultural)", url: "https://www.facebook.com/agendapraiacultural/" }
+  telephone: "+351295540106"
+  schema_type: Museum
+  category: arts-culture

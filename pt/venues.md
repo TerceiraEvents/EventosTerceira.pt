@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Locais
-description: Bares, restaurantes, espaços culturais e outros locais que recebem eventos em Angra do Heroísmo, Terceira.
+description: Bares, restaurantes, espaços culturais e outros locais que recebem eventos pela Terceira.
 permalink: /pt/venues/
 lang: pt
 lang_alt: /venues/
@@ -10,7 +10,7 @@ lang_alt: /venues/
 {% assign page_lang = page.lang | default: "en" %}
 <h2>Locais</h2>
 
-<p class="section-intro">Bares, restaurantes, espaços culturais e outros locais que recebem eventos em Angra do Heroísmo.</p>
+<p class="section-intro">Bares, restaurantes, espaços culturais e outros locais que recebem eventos pela Terceira.</p>
 
 {%- comment -%}
   Mantém os slugs e a ordem em sintonia com `venues.md` (EN). Qualquer

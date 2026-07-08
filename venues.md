@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Venues
-description: Bars, restaurants, cultural spaces, and other venues hosting events in Angra do Heroísmo, Terceira.
+description: Bars, restaurants, cultural spaces, and other venues hosting events around Terceira.
 lang_alt: /pt/venues/
 ---
 
@@ -9,11 +9,11 @@ lang_alt: /pt/venues/
 {%- if page_lang == "pt" -%}
 <h2>Locais</h2>
 
-<p class="section-intro">Bares, restaurantes, espaços culturais e outros locais que recebem eventos em Angra do Heroísmo.</p>
+<p class="section-intro">Bares, restaurantes, espaços culturais e outros locais que recebem eventos pela Terceira.</p>
 {%- else -%}
 <h2>Venues</h2>
 
-<p class="section-intro">Bars, restaurants, cultural spaces, and other venues hosting events in Angra do Heroísmo.</p>
+<p class="section-intro">Bars, restaurants, cultural spaces, and other venues hosting events around Terceira.</p>
 {%- endif -%}
 
 {%- comment -%}
