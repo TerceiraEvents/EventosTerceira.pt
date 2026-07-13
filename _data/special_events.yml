@@ -4554,6 +4554,20 @@ Come join us and support our festivities!"
   tags:
   - cinema
 
+- date: 2026-07-17
+  name: "Novilhada do Ramo Grande"
+  name_en: "Ramo Grande Bullfighting Show"
+  venue: "Praça de Toiros da Ilha Terceira"
+  address: "Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a+de+Toiros+Ilha+Terceira
+  time: "19:30"
+  description: "Bullfighting show with riders Miguel Moura and António Prates, matador Ismael Martín, the Terceira ganaderias Rego Botelho, Casa Agrícola José Albino Fernandes and João Gaspar, and the amateur forcados from Lisbon and Ramo Grande."
+  description_pt: "Novilhada com os cavaleiros Miguel Moura e António Prates, o matador Ismael Martín, as ganadarias terceirenses Rego Botelho, Casa Agrícola José Albino Fernandes e João Gaspar, e os forcados amadores de Lisboa e do Ramo Grande."
+  source_url: https://www.ticketline.pt/evento/novilhada-do-ramo-grande-103312
+  source_uid: "103312@ticketline.pt"
+  tags:
+  - bullfighting
+
 - date: 2026-07-18
   name: "Cinema: Toy Story 5"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -4632,6 +4646,21 @@ Come join us and support our festivities!"
   tags:
   - cinema
 
+- date: 2026-07-31
+  end_date: 2026-08-09
+  name: "Festas da Praia 2026"
+  name_en: "Festas da Praia 2026"
+  venue: "Praia da Vitória"
+  address: "Praia da Vitória, Ilha Terceira"
+  map_url: https://www.google.com/maps/search/?api=1&query=Praia+da+Vit%C3%B3ria+Ilha+Terceira
+  description: "Praia da Vitória's annual municipal festival, featuring the Dreamzone, Marina, Tradições, Zona Verde and Gastronomy Fair stages, alongside the 25th Gastronomy Fair."
+  description_pt: "Festas municipais anuais da Praia da Vitória, com os palcos Dreamzone, Marina, Tradições, Zona Verde e Feira Gastronómica, além da 25.ª Feira de Gastronomia."
+  source_url: https://cmpv.pt/index.php?id=4573&op=noticias
+  tags:
+  - live-music
+  - food-drink
+  - outdoor
+
 - date: 2026-08-01
   name: "Cinema no Jardim 2026 - Agosto"
   venue: Jardim Duque da Terceira
@@ -4657,6 +4686,19 @@ Come join us and support our festivities!"
   - cinema
   - outdoor
   - free
+
+- date: 2026-08-03
+  name: "Grandiosa Corrida de Toiros das Festas da Praia 2026"
+  name_en: "Festas da Praia 2026 Grand Bullfight"
+  venue: "Praça de Toiros da Ilha Terceira"
+  address: "Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a+de+Toiros+Ilha+Terceira
+  time: "18:30"
+  description: "Festas da Praia bullfight with riders João Moura, Francisco Palha and João Pamplona, plus the amateur forcados from Tertúlia Tauromáquica Terceirense and Ramo Grande."
+  description_pt: "Corrida de toiros das Festas da Praia com os cavaleiros João Moura, Francisco Palha e João Pamplona, e os forcados amadores da Tertúlia Tauromáquica Terceirense e do Ramo Grande."
+  source_url: https://cmpv.pt/index.php?id=4571&op=noticias
+  tags:
+  - bullfighting
 
 - date: 2026-08-08
   name: "Cinema: O Meu Amigo Golfinho — Cinefreguesias no Raminho (2026)"
