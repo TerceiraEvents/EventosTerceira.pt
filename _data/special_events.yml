@@ -4813,6 +4813,91 @@ Come join us and support our festivities!"
   tags:
   - literature
 
+- date: 2026-07-15
+  name: "Apresentação do livro: Louvar, Celebrar e Edificar — Império do Divino Espírito Santo do Cantinho"
+  name_en: "Book presentation: Louvar, Celebrar e Edificar — Holy Spirit Empire of Cantinho"
+  venue: Paços do Concelho (Town Hall)
+  address: "Praça Velha, 9700-201 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os%20do%20Concelho%20Angra%20do%20Hero%C3%ADsmo
+  time: "20:00"
+  description: "Book presentation on the history, heritage, and cultural and religious importance of the Império do Divino Espírito Santo do Cantinho. Free entry."
+  description_pt: "Apresentação do livro sobre a história, o património e a relevância cultural e religiosa do Império do Divino Espírito Santo do Cantinho. Entrada livre."
+  instagram: https://www.instagram.com/angradoheroismo/p/Das7z6rAfNl/
+  tags:
+  - literature
+  - free
+
+- date: 2026-07-15
+  name: "Cinema: Bichos a Bordo"
+  venue: Jardim Duque da Terceira
+  address: "Rua Direita, Angra do Heroísmo, 9700"
+  map_url: https://www.google.com/maps/search/?api=1&query=Jardim%20Duque%20da%20Terceira%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:30"
+  description: "Outdoor Cinema no Jardim screening of 'Bichos a Bordo' at Jardim Duque da Terceira. Free entry."
+  description_pt: "Sessão ao ar livre do Cinema no Jardim com 'Bichos a Bordo' no Jardim Duque da Terceira. Entrada livre."
+  instagram: https://www.instagram.com/angradoheroismo/p/Das08bWDdKu/
+  tags:
+  - cinema
+  - outdoor
+  - free
+
+- date: 2026-07-15
+  name: "Palestra: A Revolta das Ilhas — o Revilharismo e a Luta contra a Ditadura Nacional"
+  name_en: "Talk: The Island Revolt — Revilharism and the Fight against the National Dictatorship"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Talk with Francisco Miguel Nogueira on the 1931 island revolt against the National Dictatorship."
+  description_pt: "Conversa com Francisco Miguel Nogueira sobre a revolta das ilhas de 1931 contra a Ditadura Nacional."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DatL0_gCA4x/
+  tags:
+  - literature
+
+- date: 2026-07-17
+  name: "White Party com Filipe Soares e Joana Pires"
+  name_en: "White Party with Filipe Soares and Joana Pires"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "19:00"
+  description: "White Party with Filipe Soares and Joana Pires live, followed by One Love — A Tribute to Queen at 20:30 and DJ Chris Lewis at 23:30. Free entry."
+  description_pt: "White Party com Filipe Soares e Joana Pires ao vivo, seguida de One Love — A Tribute to Queen às 20h30 e DJ Chris Lewis às 23h30. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DanQsBkFL5H/
+  tags:
+  - live-music
+  - nightlife
+  - free
+
+- date: 2026-07-18
+  name: "Recital com Sérgio Fernandes"
+  name_en: "Recital with Sérgio Fernandes"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:00"
+  description: "Classical-guitar recital with Sérgio Fernandes. Free entry."
+  description_pt: "Recital de guitarra clássica com Sérgio Fernandes. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DanQsBkFL5H/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-07-18
+  name: "Open Mic e Jam Session"
+  name_en: "Open Mic and Jam Session"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "22:00"
+  description: "Open microphone and group-improvisation night for professional and amateur musicians. Free entry."
+  description_pt: "Noite de microfone aberto e improvisação em grupo, aberta a músicos profissionais e amadores. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DanQsBkFL5H/
+  tags:
+  - live-music
+  - nightlife
+  - free
+
 - date: 2026-07-19
   end_date: 2026-07-28
   name: "Comemorações: Dia do Regimento de Guarnição N.º 1"
@@ -4828,6 +4913,102 @@ Come join us and support our festivities!"
   - outdoor
   - exhibition
   - live-music
+  - free
+
+- date: 2026-07-19
+  name: "Sunset Street Lounge com Sofia Borges e Noé Branco"
+  name_en: "Sunset Street Lounge with Sofia Borges and Noé Branco"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "19:00"
+  description: "Sunset Street Lounge with Sofia Borges and Noé Branco. Free entry."
+  description_pt: "Sunset Street Lounge com Sofia Borges e Noé Branco. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DanQsBkFL5H/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-07-24
+  name: "A Playlist By… Gonçalo Rosa"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "Music-selection evening curated by Gonçalo Rosa. Free entry."
+  description_pt: "Noite de seleção musical por Gonçalo Rosa. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DanQsBkFL5H/
+  tags:
+  - nightlife
+  - free
+
+- date: 2026-07-25
+  name: "Workshop Introdutório de Música com Isabel Barcelos"
+  name_en: "Introductory Music Workshop with Isabel Barcelos"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "11:30"
+  description: "60-minute introductory music workshop with Isabel Barcelos and Cantinho da Música for children aged six months and older. Admission: €5."
+  description_pt: "Workshop introdutório de música de 60 minutos com Isabel Barcelos e o Cantinho da Música, para crianças a partir dos seis meses. Entrada: 5 €."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DanQsBkFL5H/
+  tags:
+  - kid-friendly
+  - workshop
+
+- date: 2026-07-25
+  name: "Tomás Sampaio ao vivo"
+  name_en: "Tomás Sampaio Live"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "21:30"
+  description: "Live set by Tomás Sampaio, featuring singing and songwriting. Free entry."
+  description_pt: "Atuação ao vivo de Tomás Sampaio, com canto e composição. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DanQsBkFL5H/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-07-25
+  name: "DJ Set com Funk The Banks"
+  name_en: "DJ Set with Funk The Banks"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "23:00"
+  description: "DJ set with Funk The Banks. Free entry."
+  description_pt: "DJ set com Funk The Banks. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DanQsBkFL5H/
+  tags:
+  - nightlife
+  - free
+
+- date: 2026-07-26
+  name: "Piano-Bar com Duo Arquibelo"
+  name_en: "Piano Bar with Duo Arquibelo"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:30"
+  description: "Classical-music piano bar with Duo Arquibelo. Free entry."
+  description_pt: "Piano-bar de música clássica com o Duo Arquibelo. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DanQsBkFL5H/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-07-31
+  name: "A Playlist By… Daniel Gonçalves"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "Music-selection evening curated by Daniel Gonçalves. Free entry."
+  description_pt: "Noite de seleção musical por Daniel Gonçalves. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DanQsBkFL5H/
+  tags:
+  - nightlife
   - free
 
 - date: 2026-08-04
