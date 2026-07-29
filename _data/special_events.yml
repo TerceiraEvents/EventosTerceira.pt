@@ -5041,14 +5041,14 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-31
-name: "A Playlist By… António Neves — música de Vasco Martins"
+  name: "A Playlist By… António Neves — música de Vasco Martins"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
   map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
   time: "20:00"
-description: "Playlist evening hosted by António Neves, with music by Vasco Martins. Free entry."
-description_pt: "Noite de playlist apresentada por António Neves, com música de Vasco Martins. Entrada livre."
-instagram: https://www.instagram.com/livraria_lardocelivro/p/DbYQBjuiY8S/
+  description: "Playlist evening hosted by António Neves, with music by Vasco Martins. Free entry."
+  description_pt: "Noite de playlist apresentada por António Neves, com música de Vasco Martins. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbYQBjuiY8S/
   tags:
   - nightlife
   - free
