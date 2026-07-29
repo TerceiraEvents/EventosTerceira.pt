@@ -5093,3 +5093,187 @@ Come join us and support our festivities!"
   facebook: https://www.facebook.com/photo/?fbid=1328709386075464&set=pb.100068092452652.-2207520000
   tags:
   - theater
+
+
+# Manual social and official-agenda backfills (2026-07-29)
+
+- date: 2026-03-30
+  end_date: 2026-07-31
+  name: "Within the Breath of Oyá / Dentro do sopro de Oyá"
+  venue: "Instituto Açoriano de Cultura (IAC)"
+  address: "Alto das Covas, 9700-215 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Instituto+A%C3%A7oriano+de+Cultura+Angra+do+Hero%C3%ADsmo
+  description: "Paulo Arraiano's exhibition reflects on the Atlantic as a historical, symbolic and cultural space, connecting identity, migration, nature and technology. Open weekdays 10:00–12:30 and 13:30–18:30 through 31 July."
+  description_pt: "Exposição de Paulo Arraiano sobre o Atlântico enquanto espaço histórico, simbólico e cultural, cruzando identidade, migração, natureza e tecnologia. Patente nos dias úteis, 10h00–12h30 e 13h30–18h30, até 31 de julho."
+  source_url: https://angradoheroismo.pt/evento/exposicao-within-the-breath-of-oya/
+  tags:
+  - exhibition
+
+- date: 2026-04-27
+  end_date: 2026-08-24
+  name: "Museu Fora de Portas | Cesta, atribuída a Ngungunhane"
+  name_en: "Museum Beyond Its Walls | Basket attributed to Ngungunhane"
+  venue: "Aerogare Civil das Lajes"
+  address: "Aerogare Civil das Lajes, Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Aerogare+Civil+das+Lajes+Terceira
+  description: "A small lidded basket in straw and wicker attributed to Ngungunhane and his companions, made during their exile on Terceira, displayed at Lajes Civil Airport through 24 August."
+  description_pt: "Pequena cesta com tampa, em palha e vime, atribuída a Ngungunhane e aos seus companheiros, produzida durante o exílio na Terceira. Patente na Aerogare Civil das Lajes até 24 de agosto."
+  source_url: https://angradoheroismo.pt/evento/museu-fora-de-portas-cesta-atribuida-a-ngungunhane/
+  tags:
+  - exhibition
+
+- date: 2026-06-12
+  end_date: 2026-12-31
+  name: "Marcos da Autonomia: da Junta Administrativa ao I Governo Regional"
+  name_en: "Milestones of Autonomy: from the Administrative Board to the First Regional Government"
+  venue: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+Lu%C3%ADs+da+Silva+Ribeiro+Angra
+  description: "Documentary exhibition tracing milestones in Azorean autonomy from the Administrative Board to the first Regional Government."
+  description_pt: "Exposição documental sobre os marcos da Autonomia dos Açores, da Junta Administrativa ao I Governo Regional."
+  source_url: https://angradoheroismo.pt/eventos/
+  tags:
+  - exhibition
+
+- date: 2026-06-30
+  end_date: 2026-09-30
+  name: "Confluência — estruturas para um território descontínuo"
+  name_en: "Confluence — Structures for a Discontinuous Territory"
+  venue: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+Lu%C3%ADs+da+Silva+Ribeiro+Angra
+  description: "Outdoor installation by Paulo Ávila Sousa using connected pyramidal structures inspired by traditional corn-drying racks to evoke the archipelago and autonomy."
+  description_pt: "Instalação de Paulo Ávila Sousa no pátio da Biblioteca, composta por estruturas piramidais interligadas e alusivas às burras de milho, aproximando-se da ideia de arquipélago e autonomia."
+  source_url: https://angradoheroismo.pt/eventos/
+  tags:
+  - exhibition
+  - outdoor
+
+- date: 2026-07-01
+  end_date: 2026-08-31
+  name: "Documento do Mês | Paulo Gouveia: vida e obra de um arquiteto açoriano pós-moderno"
+  name_en: "Document of the Month | Paulo Gouveia: Life and Work of a Postmodern Azorean Architect"
+  venue: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+Lu%C3%ADs+da+Silva+Ribeiro+Angra
+  time: "09:00"
+  description: "The library's Document of the Month display explores the life and work of postmodern Azorean architect Paulo Gouveia. Open through 31 August during library hours."
+  description_pt: "O Documento do Mês da Biblioteca aborda a vida e obra do arquiteto açoriano pós-moderno Paulo Gouveia. Patente até 31 de agosto, no horário da Biblioteca."
+  source_url: https://angradoheroismo.pt/eventos/
+  tags:
+  - exhibition
+
+- date: 2026-07-30
+  name: "Poesia ao Crepúsculo — 120 anos de Mário Quintana"
+  name_en: "Poetry at Dusk — 120 Years of Mário Quintana"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Readings by friends, customers and bookshop staff celebrating 120 years since the birth of poet Mário Quintana."
+  description_pt: "Leituras pelos amigos, clientes e funcionários da livraria para celebrar os 120 anos do nascimento do poeta Mário Quintana."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbWafz-leWJ/
+  tags:
+  - literature
+  - free
+
+- date: 2026-07-31
+  name: "125 anos de Vitorino Nemésio"
+  name_en: "125 Years of Vitorino Nemésio"
+  venue: "Paços do Concelho / Casa Museu Vitorino Nemésio"
+  address: "Praia da Vitória, Ilha Terceira"
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa+Museu+Vitorino+Nem%C3%A9sio+Praia+da+Vit%C3%B3ria
+  time: "18:00"
+  description: "Commemoration of the 125th anniversary of Vitorino Nemésio's birth: commemorative stamp cancellation at Town Hall at 18:00, followed by the opening of the anniversary exhibition at Casa Museu Vitorino Nemésio at 18:15."
+  description_pt: "Comemoração dos 125 anos do nascimento de Vitorino Nemésio: obliteração do selo comemorativo nos Paços do Concelho às 18h00, seguida da inauguração da exposição evocativa na Casa Museu Vitorino Nemésio às 18h15."
+  source_url: https://www.cmpv.pt/index.php?id=857&op=agenda
+  tags:
+  - exhibition
+  - literature
+  - free
+
+- date: 2026-07-31
+  name: "Apresentação do livro | Ilhas Perdidas, de Dinis Carmo"
+  name_en: "Book Presentation | Lost Islands, by Dinis Carmo"
+  venue: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+Lu%C3%ADs+da+Silva+Ribeiro+Angra
+  time: "18:00"
+  description: "Presentation of Dinis Carmo's novel 'Ilhas Perdidas', based on real events and historical documentation about the Azores after the Carnation Revolution."
+  description_pt: "Apresentação do romance «Ilhas Perdidas», de Dinis Carmo, baseado em factos reais e documentação histórica sobre os Açores após a Revolução de Abril."
+  source_url: https://angradoheroismo.pt/evento/apresentacao-do-livro-ilhas-perdidas-de-dinis-carmo/
+  tags:
+  - literature
+
+- date: 2026-07-31
+  name: "Lizzard Chambers — See You Soon Vid"
+  venue: "Wine Not?"
+  address: "Rua Direita 8, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Wine+Not+Rua+Direita+Angra+do+Hero%C3%ADsmo
+  time: "22:00"
+  description: "Farewell live-music night for Vid de Graaf with Henrique ASM and Lizzard Chambers."
+  description_pt: "Noite de música ao vivo de despedida de Vid de Graaf, com Henrique ASM e Lizzard Chambers."
+  instagram: https://www.instagram.com/winenot.terceira/p/DbO37iZN3Uq/
+  tags:
+  - live-music
+  - nightlife
+
+- date: 2026-08-01
+  name: "Apresentação de «10 755 — Caminhos que se cruzam», de Eduardo Pinheiro"
+  name_en: "Presentation of '10 755 — Crossing Paths', by Eduardo Pinheiro"
+  venue: "Lar Doce Livro"
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:30"
+  description: "Presentation of Eduardo Pinheiro's book '10 755 — Caminhos que se cruzam'."
+  description_pt: "Sessão de apresentação do livro «10 755 — Caminhos que se cruzam», de Eduardo Pinheiro."
+  instagram: https://www.instagram.com/casadasletraslivros/p/DbTLOfwDaNW/
+  tags:
+  - literature
+
+- date: 2026-08-09
+  end_date: 2026-08-16
+  name: "Folk Azores — 40.º Festival Internacional de Folclore dos Açores"
+  name_en: "Folk Azores — 40th Azores International Folklore Festival"
+  venue: "Angra do Heroísmo"
+  address: "Angra do Heroísmo, Ilha Terceira"
+  map_url: https://www.google.com/maps/search/?api=1&query=Angra+do+Hero%C3%ADsmo
+  description: "National and international folklore groups gather on Terceira for a week of music, dance and cultural exchange. Free entry."
+  description_pt: "Grupos folclóricos nacionais e internacionais reúnem-se na Terceira para uma semana de música, dança e intercâmbio cultural. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/folk-azores-40-o-festival-internacional-de-folclore-dos-acores/
+  tags:
+  - dance
+  - live-music
+  - outdoor
+  - free
+
+- date: 2026-08-11
+  end_date: 2026-08-14
+  name: "Oficina de Jogos Tradicionais"
+  name_en: "Traditional Games Workshop"
+  venue: "Jardim Duque da Terceira"
+  address: "Rua Direita, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Jardim+Duque+da+Terceira+Angra+do+Hero%C3%ADsmo
+  time: "10:00"
+  description: "Workshop for children aged 6–12 led by Alexandre Freitas, developing dexterity, perception, competition and cooperation through traditional games. Runs daily 10:00–12:00."
+  description_pt: "Oficina para crianças dos 6 aos 12 anos, orientada por Alexandre Freitas, que trabalha destreza, perspicácia, competição e cooperação através de jogos tradicionais. Sessões diárias das 10h00 às 12h00."
+  source_url: https://whatson.azores.gov.pt/en/evento/traditional-games/
+  tags:
+  - kid-friendly
+  - workshop
+  - outdoor
+
+- date: 2026-08-15
+  name: "Lançamento de álbum: BWF ao VIVirtual"
+  name_en: "Album Launch: BWF at VIVirtual"
+  venue: "Centro Cultural e de Congressos de Angra do Heroísmo"
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=CCCAH+Angra+do+Hero%C3%ADsmo
+  time: "21:00"
+  description: "Public launch of the album 'BWF — Bruno Walter & Friends ao VIVirtual' at the CCCAH. Free entry."
+  description_pt: "Lançamento público do álbum «BWF — Bruno Walter & Friends ao VIVirtual» no CCCAH. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/lancamento-de-album-bwf-ao-vivirtual/
+  instagram: https://www.instagram.com/angradoheroismo/p/DbLXN_5EWLi/
+  tags:
+  - live-music
+  - free
