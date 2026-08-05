@@ -4447,14 +4447,15 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-25
-  name: "Inauguração | Belo Insubmisso de Miguel Rebelo"
-  name_en: "Exhibition Opening | Belo Insubmisso by Miguel Rebelo"
+  end_date: 2026-10-11
+  name: "Belo Insubmisso, de Miguel Rebelo"
+  name_en: "Belo Insubmisso, by Miguel Rebelo"
   venue: "Museu de Angra do Heroísmo"
   address: "Ladeira de São Francisco, 9700-182 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo"
   time: "15:00"
-  description: "Opening of 'Belo Insubmisso', an exhibition of works by Miguel Rebelo recently donated to the Museu de Angra do Heroísmo by his son Raphael Rebelo. The paintings document a singular artistic trajectory built between the Azores, Lisbon, and Montreal — gestural, experimental, and deeply material. Free entry."
-  description_pt: "Inauguração de 'Belo Insubmisso', exposição de obras de Miguel Rebelo doadas ao Museu de Angra do Heroísmo pelo filho Raphael Rebelo. Percurso artístico construído entre os Açores, Lisboa e Montreal — gestual, experimental e profundamente matérico. Entrada livre."
+  description: "Exhibition of works by Miguel Rebelo recently donated to the Museu de Angra do Heroísmo by his son Raphaël Rebelo. The paintings document a singular artistic trajectory built between the Azores, Lisbon, and Montreal. On view through 11 October. Free entry."
+  description_pt: "Exposição de obras de Miguel Rebelo doadas ao Museu de Angra do Heroísmo pelo filho Raphaël Rebelo. A mostra documenta um percurso artístico singular construído entre os Açores, Lisboa e Montreal. Patente até 11 de outubro. Entrada livre."
   facebook: https://museu-angra.cultura.azores.gov.pt/events/inauguracao-belo-insubmisso-de-miguel-rebelo/
   tags:
   - exhibition
@@ -5276,4 +5277,393 @@ Come join us and support our festivities!"
   instagram: https://www.instagram.com/angradoheroismo/p/DbLXN_5EWLi/
   tags:
   - live-music
+  - free
+
+# Manual social and official-agenda backfills (2026-08-05)
+
+- date: 2026-08-06
+  name: "Apresentação de livro: Between Silence and Vision: António Dacosta and the Sense of Belonging in Painting"
+  name_en: "Book Presentation: Between Silence and Vision: António Dacosta and the Sense of Belonging in Painting"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os%20do%20Concelho%20de%20Angra%20do%20Hero%C3%ADsmo
+  time: "20:00"
+  description: "Presentation of Assunção Melo's book about António Dacosta's artistic journey and the relationships between painting, identity, memory and belonging. Free entry."
+  description_pt: "Apresentação do livro de Assunção Melo sobre o percurso artístico de António Dacosta e as relações entre pintura, identidade, memória e pertença. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/apresentacao-de-livro-between-silence-and-vision-antonio-dacosta-and-the-sense-of-belonging-in-painting/
+  source_uid: "1862@angradoheroismo.pt"
+  tags:
+  - literature
+  - free
+
+- date: 2026-08-06
+  name: "O Livro do Amor — Diálogo Ecuménico"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Live podcast asking whether there are reasons to say that the Bible treats women badly, with Baptist pastor Rúben Couto, Catholic priest Júlio Rocha and atheist writer Joel Neto as moderator. Free entry."
+  description_pt: "Podcast ao vivo sobre se há razões para dizer que a Bíblia trata mal as mulheres, com o pastor baptista Rúben Couto, o padre católico Júlio Rocha e o escritor ateu Joel Neto como moderador. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - literature
+  - free
+
+- date: 2026-08-07
+  name: "Apresentação de Os Livros que Me Fizeram Americano, de Diniz Borges"
+  name_en: "Presentation of The Books That Made Me American, by Diniz Borges"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Diniz Borges presents his book as part of a special program marking 250 years of American independence, moderated by Joel Neto. Free entry."
+  description_pt: "Diniz Borges apresenta o seu livro num programa especial dos 250 anos da independência americana, com moderação de Joel Neto. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - literature
+  - free
+
+- date: 2026-08-07
+  name: "3HP ao vivo"
+  name_en: "3HP Live"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "22:00"
+  description: "Live covers by 3HP, followed by happy hour from midnight to 02:00. Free entry."
+  description_pt: "Concerto de covers pelos 3HP, seguido de happy hour das 00h00 às 02h00. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - live-music
+  - nightlife
+  - free
+
+- date: 2026-08-08
+  name: "TANGERINA — oficina para adultos"
+  name_en: "TANGERINE — Workshop for Adults"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu%20de%20Angra%20do%20Hero%C3%ADsmo
+  time: "14:00"
+  description: "Sensory creative-initiation workshop led by Flávia Medeiros, using aromas, guided visualization and self-discovery. Free with prior registration; adults only; limited to 20 participants."
+  description_pt: "Oficina sensorial de iniciação criativa orientada por Flávia Medeiros, com aromas, visualização guiada e autodescoberta. Participação livre mediante inscrição prévia; destinada a adultos e limitada a 20 participantes."
+  source_url: https://angradoheroismo.pt/evento/tangerina-oficina-p-adultos/
+  source_uid: "1866@angradoheroismo.pt"
+  tags:
+  - workshop
+  - free
+
+- date: 2026-08-08
+  name: "A Playlist De… Margarida Quinteiro"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "Songs in the feminine, selected by Margarida Quinteiro: pop, jazz, fado and other passions. Free entry."
+  description_pt: "Canções no feminino selecionadas por Margarida Quinteiro: pop, jazz, fado e outras paixões. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - nightlife
+  - free
+
+- date: 2026-08-09
+  name: "Sunset Street Lounge com Skapatória"
+  name_en: "Sunset Street Lounge with Skapatória"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "19:00"
+  description: "Reggae sunset session with Skapatória on the terrace. Free entry."
+  description_pt: "Sunset de reggae com Skapatória na esplanada. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - live-music
+  - outdoor
+  - free
+
+- date: 2026-08-11
+  name: "Poemas para Agosto"
+  name_en: "Poems for August"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Poetry readings with Madalena Ávila and musical accompaniment by Felix The First. Free entry."
+  description_pt: "Leituras de poesia com Madalena Ávila e acompanhamento musical de Felix The First. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - literature
+  - live-music
+  - free
+
+- date: 2026-08-12
+  name: "Dia Mundial da Juventude 2026"
+  name_en: "World Youth Day 2026"
+  venue: Zona Balnear da Prainha
+  address: "Baía de Angra do Heroísmo, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Zona%20Balnear%20da%20Prainha%20Angra%20do%20Hero%C3%ADsmo
+  time: "17:00"
+  description: "Free afternoon at Prainha with canoeing, sailing, freediving and paddleboarding from 17:00, Os Rapolhos at 19:00 and The Bubblegum Club at 21:00."
+  description_pt: "Tarde gratuita na Prainha com canoagem, vela, apneia e paddle a partir das 17h00, Os Rapolhos às 19h00 e The Bubblegum Club às 21h00."
+  source_url: https://angradoheroismo.pt/evento/dia-mundial-da-juventude-2026/
+  source_uid: "1867@angradoheroismo.pt"
+  tags:
+  - outdoor
+  - live-music
+  - free
+
+- date: 2026-08-13
+  name: "Debate: O bairrismo São Miguel vs. Terceira está mesmo de volta?"
+  name_en: "Debate: Is the São Miguel vs. Terceira Rivalry Really Back?"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Debate with José Guilherme Reis Leite, Francisco Coelho, Rodrigo Rodrigues and Armando Mendes, moderated by Luciano Barcelos. A Lar Doce Livro/Rádio Voz dos Açores partnership. Free entry."
+  description_pt: "Debate com José Guilherme Reis Leite, Francisco Coelho, Rodrigo Rodrigues e Armando Mendes, com moderação de Luciano Barcelos. Parceria Lar Doce Livro/Rádio Voz dos Açores. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - literature
+  - free
+
+- date: 2026-08-14
+  name: "A Playlist De… Pr. Rúben Couto"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "Christian rock and metal selected by Pastor Rúben Couto, in a softer version where possible. Free entry."
+  description_pt: "Rock e metal cristãos selecionados pelo Pr. Rúben Couto, numa versão tão suave quanto possível. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - nightlife
+  - free
+
+- date: 2026-08-15
+  name: "Unsure ao vivo"
+  name_en: "Unsure Live"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "21:30"
+  description: "Live covers by Unsure. Free entry."
+  description_pt: "Concerto de covers pelos Unsure. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-08-15
+  name: "DJ set com DJ Fox"
+  name_en: "DJ Set with DJ Fox"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "23:00"
+  description: "Varied DJ set with DJ Fox, with happy hour from midnight to 02:00. Free entry."
+  description_pt: "DJ set de música variada com DJ Fox, com happy hour das 00h00 às 02h00. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - nightlife
+  - free
+
+- date: 2026-08-16
+  name: "Sunset Street Lounge com datILHA"
+  name_en: "Sunset Street Lounge with datILHA"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "19:00"
+  description: "Chill-out sunset session with datILHA on the terrace. Free entry."
+  description_pt: "Sunset chill-out com datILHA na esplanada. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - live-music
+  - outdoor
+  - free
+
+- date: 2026-08-18
+  name: "Celebração de Bruno Walter Ferreira"
+  name_en: "Celebration of Bruno Walter Ferreira"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "20:30"
+  description: "Celebration of Bruno Walter Ferreira, including a presentation of the album 'BWF ao VIVirtual', with Vítor Tarau, Paulo Cunha and other guests. Free entry."
+  description_pt: "Celebração de Bruno Walter Ferreira, incluindo apresentação do disco «BWF ao VIVirtual», com Vítor Tarau, Paulo Cunha e outros convidados. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-08-19
+  name: "Pré-apresentação de O Faial à Volta da Mesa, de Carla Devesa Rodrigues"
+  name_en: "Preview of O Faial à Volta da Mesa, by Carla Devesa Rodrigues"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Preview of Carla Devesa Rodrigues's book with the author, moderated by Joel Neto, including a conversation about the collected recipes and nineteenth-century gastronomy, followed by a signing. Free entry."
+  description_pt: "Pré-apresentação do livro de Carla Devesa Rodrigues com a autora, moderada por Joel Neto, incluindo conversa sobre as receitas recolhidas e a gastronomia do século XIX, seguida de sessão de autógrafos. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - literature
+  - food-drink
+  - free
+
+- date: 2026-08-21
+  name: "A Playlist De… Sophie Anacleto"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "Songs for a farewell selected by Sophie Anacleto: country, war songs and return songs in French. Free entry."
+  description_pt: "Canções para uma despedida selecionadas por Sophie Anacleto: country, canções de guerra e de regresso em francês. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - nightlife
+  - free
+
+- date: 2026-08-22
+  name: "Apresentação dos vinhos Maretamenta"
+  name_en: "Maretamenta Wine Presentation"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:30"
+  description: "Presentation by creator and producer Luís Vasco Cunha of the 2025 Maretamenta Graciosa Arinto dos Açores, Verdelho and Arinto-Verdelho wines, plus Maria Encantada brandy and fortified wine. Admission: €15."
+  description_pt: "Apresentação pelo criador e produtor Luís Vasco Cunha dos vinhos Maretamenta Graciosa Arinto dos Açores, Verdelho e Arinto-Verdelho 2025, além da aguardente e do licoroso Maria Encantada. Entrada: 15 €."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - food-drink
+
+- date: 2026-08-22
+  name: "Tommy G ao vivo"
+  name_en: "Tommy G Live"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "21:30"
+  description: "Live covers by Tommy G. Free entry."
+  description_pt: "Concerto de covers por Tommy G. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-08-22
+  name: "DJ set com Sofia Borges e Noé Branco"
+  name_en: "DJ Set with Sofia Borges and Noé Branco"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "23:00"
+  description: "Varied DJ set with Sofia Borges and Noé Branco, with happy hour from midnight to 02:00. Free entry."
+  description_pt: "DJ set de música variada com Sofia Borges e Noé Branco, com happy hour das 00h00 às 02h00. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - nightlife
+  - free
+
+- date: 2026-08-23
+  name: "Sunset Street Lounge com DJ Jota P"
+  name_en: "Sunset Street Lounge with DJ Jota P"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "19:00"
+  description: "Indie sunset session with DJ Jota P on the terrace. Free entry."
+  description_pt: "Sunset indie com DJ Jota P na esplanada. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - nightlife
+  - outdoor
+  - free
+
+- date: 2026-08-24
+  name: "25 anos da aterragem de emergência do voo 236 da Air Transat"
+  name_en: "25 Years Since Air Transat Flight 236's Emergency Landing"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Commemoration with Joe Ponciano, Manuel Humberto Pereira, Francisco Gaspar Cardoso and Rui Gaspar, moderated by Joel Neto. A Lar Doce Livro/Rádio Voz dos Açores partnership. Free entry."
+  description_pt: "Comemoração com Joe Ponciano, Manuel Humberto Pereira, Francisco Gaspar Cardoso e Rui Gaspar, com moderação de Joel Neto. Parceria Lar Doce Livro/Rádio Voz dos Açores. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - literature
+  - free
+
+- date: 2026-08-27
+  name: "Memórias da Autonomia — José Henrique Ornelas"
+  name_en: "Memories of Autonomy — José Henrique Ornelas"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Fifty years of the Autonomous Region of the Azores through the testimony of professor and psychologist José Henrique Ornelas, moderated by Joel Neto. A Lar Doce Livro/Rádio Voz dos Açores partnership. Free entry."
+  description_pt: "Cinquenta anos de Região Autónoma dos Açores através do testemunho do professor catedrático e psicólogo José Henrique Ornelas, com moderação de Joel Neto. Parceria Lar Doce Livro/Rádio Voz dos Açores. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - literature
+  - free
+
+- date: 2026-08-28
+  name: "V Festa Americana — Fried Okra: Traditional Americana Open Jam Night"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "20:30"
+  description: "Traditional Americana open jam night featuring Brenda Koenig and Drew Philips, among other musicians. The jam is open to interested performers. Free entry."
+  description_pt: "Noite tradicional de open jam de música americana com Brenda Koenig e Drew Philips, entre outros músicos. Roda aberta aos interessados. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-08-29
+  name: "Double Trouble ao vivo"
+  name_en: "Double Trouble Live"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "22:30"
+  description: "Live covers by Double Trouble, with happy hour from midnight to 02:00. Free entry."
+  description_pt: "Concerto de covers pelos Double Trouble, com happy hour das 00h00 às 02h00. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - live-music
+  - nightlife
+  - free
+
+- date: 2026-08-30
+  name: "Sunset Street Lounge com MrApples"
+  name_en: "Sunset Street Lounge with MrApples"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "19:00"
+  description: "Electronic sunset session with MrApples on the terrace. Free entry."
+  description_pt: "Sunset de música eletrónica com MrApples na esplanada. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DbnpETYCLsv/
+  tags:
+  - nightlife
+  - outdoor
+  - free
+
+- date: 2026-09-01
+  end_date: 2026-09-10
+  name: "Hortênsia Music Festival — Erupção Musical"
+  name_en: "Hortênsia Music Festival — Musical Eruption"
+  venue: Vários locais de Angra do Heroísmo
+  venue_en: Several venues in Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Angra%20do%20Hero%C3%ADsmo
+  description: "Eighth edition of the classical-music festival, with concerts, recitals, a lecture-recital, workshops and masterclasses at the Public Library, Cathedral, Palace of the Captains-General, Teatro Angrense, city center, Church of the College, CCCAH and Tomás de Borba School. Free entry."
+  description_pt: "Oitava edição do festival de música erudita, com concertos, recitais, palestra-recital, workshops e masterclasses na Biblioteca Pública, Sé Catedral, Palácio dos Capitães-Generais, Teatro Angrense, centro da cidade, Igreja do Colégio, CCCAH e Escola Tomás de Borba. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/hortensia-music-festival-erupcao-musical/
+  source_uid: "1869@angradoheroismo.pt"
+  tags:
+  - live-music
+  - workshop
   - free
