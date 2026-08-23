@@ -5816,3 +5816,177 @@ Come join us and support our festivities!"
   source_uid: "1855@angradoheroismo.pt"
   tags:
   - cinema
+
+# Future events from the full documented-source scan (2026-08-23)
+
+- date: 2026-08-19
+  end_date: 2026-08-26
+  name: "Festas do Espírito Santo da Urbanização do Lameirinho"
+  name_en: "Holy Spirit Festivities at Urbanização do Lameirinho"
+  venue: Urbanização do Lameirinho
+  address: "Urbanização do Lameirinho, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Urbaniza%C3%A7%C3%A3o+do+Lameirinho+Angra+do+Hero%C3%ADsmo
+  description: "Traditional Holy Spirit festivities celebrating local traditions and community life, with activities according to the published programme."
+  description_pt: "Festas tradicionais do Espírito Santo, com celebrações das tradições locais e da vida comunitária segundo o programa publicado."
+  source_url: https://whatson.azores.gov.pt/en/evento/festivities-urbanizacao-do-lameirinho/
+  tags:
+  - outdoor
+  - free
+
+- date: 2026-08-21
+  end_date: 2026-08-28
+  name: "Festas de São Brás 2026"
+  name_en: "São Brás Festivities 2026"
+  venue: São Brás
+  address: "São Brás, Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=S%C3%A3o+Br%C3%A1s+Praia+da+Vit%C3%B3ria
+  description: "Eight days of parish festivities with concerts, cultural activities, religious celebrations and community gatherings."
+  description_pt: "Oito dias de festas da freguesia com concertos, atividades culturais, celebrações religiosas e convívio comunitário."
+  source_url: https://whatson.azores.gov.pt/en/evento/saint-bras-festivities/
+  tags:
+  - live-music
+  - kid-friendly
+  - outdoor
+  - free
+
+- date: 2026-08-28
+  name: "Tropical Night Party"
+  venue: Ilhéu Beach Bar
+  address: "Fajã do Fisher, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Faj%C3%A3+do+Fisher+Angra+do+Hero%C3%ADsmo
+  time: "18:00"
+  description: "Tropical party at Fajã do Fisher with Roma the DJ and Kafua presenting Back 2 Classics from 18:00, followed by Melo & Araújo from 22:00 to 01:00. Tropical shirt or necklace dress code includes a complimentary house drink."
+  description_pt: "Festa tropical na Fajã do Fisher com Roma the DJ e Kafua em Back 2 Classics a partir das 18h00, seguidos de Melo & Araújo das 22h00 à 01h00. Camisa tropical ou colar dá direito a uma bebida da casa."
+  facebook: https://www.facebook.com/photo/?fbid=122187837614919189&set=a.122100647744919189
+  tags:
+  - nightlife
+  - live-music
+  - outdoor
+
+- date: 2026-08-28
+  end_date: 2026-09-03
+  name: "Festas do Cabo da Praia 2026 em honra de Santa Catarina"
+  name_en: "Cabo da Praia Festivities 2026 in Honour of Saint Catherine"
+  venue: Cabo da Praia
+  address: "Cabo da Praia, Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Cabo+da+Praia+Praia+da+Vit%C3%B3ria
+  description: "Seven days of parish festivities in honour of Saint Catherine, bringing together tradition, faith, music and community celebrations. Free admission."
+  description_pt: "Sete dias de festas da freguesia em honra de Santa Catarina, reunindo tradição, fé, música e convívio comunitário. Entrada livre."
+  source_url: https://whatson.azores.gov.pt/en/evento/cabo-da-praia-festivities-2026-in-honour-of-saint-catherine/
+  tags:
+  - live-music
+  - outdoor
+  - free
+
+- date: 2026-08-28
+  end_date: 2026-09-05
+  name: "Festas de Santa Bárbara 2026"
+  name_en: "Santa Bárbara Festivities 2026"
+  venue: Santa Bárbara
+  address: "Santa Bárbara, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Santa+B%C3%A1rbara+Angra+do+Hero%C3%ADsmo
+  description: "Parish festivities featuring traditional parades, Holy Spirit celebrations and cultural performances."
+  description_pt: "Festas da freguesia com desfiles tradicionais, celebrações do Espírito Santo e atuações culturais."
+  source_url: https://whatson.azores.gov.pt/en/evento/saint-barbara-festivities/
+  tags:
+  - live-music
+  - outdoor
+  - free
+
+- date: 2026-09-04
+  end_date: 2026-09-08
+  name: "Festas de Nossa Senhora da Consolação - Ribeira Seca"
+  name_en: "Festivities of Our Lady of Consolation - Ribeira Seca"
+  venue: Ribeira Seca
+  address: "Ribeira Seca, Vila de São Sebastião, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Ribeira+Seca+Vila+de+S%C3%A3o+Sebasti%C3%A3o+Terceira
+  description: "Traditional religious and community festivities honouring Our Lady of Consolation, patron saint of Ribeira Seca."
+  description_pt: "Festas religiosas e comunitárias tradicionais em honra de Nossa Senhora da Consolação, padroeira da Ribeira Seca."
+  source_url: https://whatson.azores.gov.pt/en/evento/festivities-of-our-lady-of-consolation-ribeira-seca/
+  tags:
+  - outdoor
+  - free
+
+- date: 2026-09-05
+  end_date: 2026-09-12
+  name: "Festas de Santo António 2026 - São Bartolomeu dos Regatos"
+  name_en: "Saint Anthony Festivities 2026 - São Bartolomeu dos Regatos"
+  venue: Terreiro de São Bartolomeu dos Regatos
+  address: "Terreiro, São Bartolomeu dos Regatos, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Terreiro+S%C3%A3o+Bartolomeu+dos+Regatos+Terceira
+  description: "Eight days of festivities under the theme 'The Emigrant', honouring Azorean emigrants through religious, cultural and community programming. Free admission."
+  description_pt: "Oito dias de festas sob o tema «O Emigrante», homenageando os emigrantes açorianos através de programação religiosa, cultural e comunitária. Entrada livre."
+  source_url: https://whatson.azores.gov.pt/en/evento/saint-anthony-festivities-sao-bartolomeu-dos-regatos/
+  tags:
+  - live-music
+  - outdoor
+  - free
+
+- date: 2026-09-12
+  end_date: 2026-09-17
+  name: "Festas de Nossa Senhora dos Milagres - Serreta"
+  name_en: "Festivities of Our Lady of Miracles - Serreta"
+  venue: Serreta
+  address: "Serreta, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Serreta+Angra+do+Hero%C3%ADsmo
+  description: "One of Terceira's most emblematic religious celebrations, bringing residents, visitors and pilgrims together for six days of devotion and tradition."
+  description_pt: "Uma das celebrações religiosas mais emblemáticas da Terceira, reunindo residentes, visitantes e peregrinos durante seis dias de devoção e tradição."
+  source_url: https://whatson.azores.gov.pt/en/evento/festivities-of-our-lady-of-miracles-serreta/
+  tags:
+  - outdoor
+  - free
+
+- date: 2026-09-18
+  end_date: 2026-09-24
+  name: "Festas de Santa Margarida do Porto Martins 2026"
+  name_en: "Santa Margarida Festivities in Porto Martins 2026"
+  venue: Porto Martins
+  address: "Porto Martins, Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Porto+Martins+Praia+da+Vit%C3%B3ria
+  description: "A week of religious celebrations, cultural events, live entertainment and community gatherings in Porto Martins. Free admission."
+  description_pt: "Uma semana de celebrações religiosas, eventos culturais, animação ao vivo e convívio comunitário no Porto Martins. Entrada livre."
+  source_url: https://whatson.azores.gov.pt/en/evento/santa-margarida-festivity-porto-martins-2026/
+  tags:
+  - live-music
+  - kid-friendly
+  - outdoor
+  - free
+
+- date: 2026-09-25
+  end_date: 2026-09-27
+  name: "Festas do Porto dos Biscoitos 2026"
+  name_en: "Porto dos Biscoitos Festivities 2026"
+  venue: Porto dos Biscoitos
+  address: "Porto dos Biscoitos, Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Porto+dos+Biscoitos+Praia+da+Vit%C3%B3ria
+  description: "Three days of festivities, tradition, music and community gatherings marking the end of summer in Biscoitos."
+  description_pt: "Três dias de festa, tradição, música e convívio comunitário a assinalar o fim do verão nos Biscoitos."
+  source_url: https://whatson.azores.gov.pt/en/evento/porto-dos-biscoitos-festivities-2026/
+  tags:
+  - live-music
+  - outdoor
+  - free
+
+- date: 2026-10-03
+  name: "Azores Bravos Trail 2026"
+  venue: Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Angra+do+Hero%C3%ADsmo
+  description: "Trail-running event with 100 km, 65 km, 35 km and 15 km races plus a 10 km walk."
+  description_pt: "Prova de trail running com distâncias de 100 km, 65 km, 35 km e 15 km, além de uma caminhada de 10 km."
+  source_url: https://whatson.azores.gov.pt/en/evento/azores-bravos-trail-1770647453104/
+  tags:
+  - outdoor
+
+- date: 2026-10-03
+  name: "3HP ao vivo na Lar Doce Livro"
+  name_en: "3HP Live at Lar Doce Livro"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "21:45"
+  description: "Live concert by 3HP at Lar Doce Livro."
+  description_pt: "Concerto ao vivo dos 3HP na Lar Doce Livro."
+  source_url: https://whatson.azores.gov.pt/en/evento/3hp-1759327843988/
+  tags:
+  - live-music
