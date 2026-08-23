@@ -5667,3 +5667,152 @@ Come join us and support our festivities!"
   - live-music
   - workshop
   - free
+
+# Official-agenda backfills from the 2026-08-23 established-source scan
+
+- date: 2026-08-13
+  end_date: 2026-08-28
+  name: "Exposição As Ilhas Desconhecidas - Baltasar Pinheiro"
+  name_en: "The Unknown Islands Exhibition - Baltasar Pinheiro"
+  venue: Casa do Sal
+  address: "Rua da Rosa 11, 9700-155 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa+do+Sal+Angra+do+Heroismo
+  time: "16:00"
+  description: "Exhibition by sculptor Baltasar Pinheiro featuring sculptural works and two video installations. Open Monday to Friday from 16:00 to 18:30 through August 28."
+  description_pt: "Exposição do escultor Baltasar Pinheiro com peças escultóricas e duas instalações de vídeo. Patente de segunda a sexta-feira, das 16h00 às 18h30, até 28 de agosto."
+  source_url: https://angradoheroismo.pt/evento/exposicao-as-ilhas-desconheciadas-baltasar-pinheiro/
+  tags:
+  - exhibition
+
+- date: 2026-08-27
+  name: "Workshop | Fração"
+  name_en: "Workshop | Fraction"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+Publica+Arquivo+Regional+Luis+Silva+Ribeiro+Angra
+  time: "14:30"
+  description: "Workshop exploring the transition between recognizable landscape and interpretation through form, using observation, synthesis and transformation. Prior registration is required and places are limited."
+  description_pt: "Workshop que explora a passagem entre a paisagem reconhecível e a sua interpretação através da forma, recorrendo à observação, síntese e transformação. Inscrição prévia obrigatória e lugares limitados."
+  source_url: https://angradoheroismo.pt/evento/%f0%9d%97%aa%f0%9d%97%bc%f0%9d%97%bf%f0%9d%97%b8%f0%9d%98%80%f0%9d%97%b5%f0%9d%97%bc%f0%9d%97%bd-%f0%9d%97%99%f0%9d%97%bf%f0%9d%97%ae%f0%9d%97%b0%cc%a7%f0%9d%97%ae%cc%83%f0%9d%97%bc/
+  source_uid: "1876@angradoheroismo.pt"
+  tags:
+  - workshop
+
+- date: 2026-09-03
+  end_date: 2026-09-07
+  name: "Cinema: A Odisseia"
+  name_en: "Cinema: The Odyssey"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Congressos+Angra+Heroismo
+  time: "21:30"
+  description: "Christopher Nolan's epic adaptation of Homer's Odyssey, starring Matt Damon, Tom Holland, Anne Hathaway, Robert Pattinson and Lupita Nyong'o."
+  description_pt: "Adaptação épica de A Odisseia, de Homero, realizada por Christopher Nolan e protagonizada por Matt Damon, Tom Holland, Anne Hathaway, Robert Pattinson e Lupita Nyong'o."
+  source_url: https://angradoheroismo.pt/evento/cinema-the-odyssey/
+  source_uid: "1859@angradoheroismo.pt"
+  tags:
+  - cinema
+
+- date: 2026-09-04
+  name: "III Fórum Educativo - Vozes do Futuro: Escutar para Educar"
+  name_en: "III Educational Forum - Voices of the Future: Listening to Educate"
+  venue: Universidade dos Açores - Campus de Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Universidade+dos+Acores+Campus+Angra
+  description: "Free educational forum bringing together professionals, families and students to discuss participatory and inclusive education. Prior registration is required and capacity is limited."
+  description_pt: "Fórum educativo gratuito que reúne profissionais, famílias e estudantes para debater uma educação participativa e inclusiva. Inscrição prévia obrigatória e limitada à lotação disponível."
+  source_url: https://angradoheroismo.pt/evento/iii-forum-educativo-vozes-do-futuro-escutar-para-educar/
+  source_uid: "1879@angradoheroismo.pt"
+  tags:
+  - literature
+  - free
+
+- date: 2026-09-10
+  end_date: 2026-09-14
+  name: "Cinema: Insidious: O Longínquo"
+  name_en: "Cinema: Insidious: The Distant One"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Congressos+Angra+Heroismo
+  time: "21:30"
+  description: "Horror film about a young mother who discovers she can enter the Further and bring its supernatural entities into the real world."
+  description_pt: "Filme de terror sobre uma jovem mãe que descobre conseguir entrar no Further e trazer as suas entidades sobrenaturais para o mundo real."
+  source_url: https://angradoheroismo.pt/evento/cinema-insidious-o-longinquo/
+  source_uid: "1858@angradoheroismo.pt"
+  tags:
+  - cinema
+
+- date: 2026-09-11
+  name: "ICHTUS Open Air"
+  venue: Green Café
+  map_url: https://www.google.com/maps/search/?api=1&query=Green+Cafe+Angra+do+Heroismo
+  time: "22:00"
+  description: "Free open-air night with a live performance by Patrícia Duarte at 22:00 followed by DJ Fernando S at 23:00."
+  description_pt: "Noite gratuita ao ar livre com atuação de Patrícia Duarte às 22h00, seguida de DJ Fernando S às 23h00."
+  source_url: https://angradoheroismo.pt/evento/espetaculo-ichtus-open-air/
+  source_uid: "1873@angradoheroismo.pt"
+  tags:
+  - live-music
+  - nightlife
+  - outdoor
+  - free
+
+- date: 2026-09-12
+  name: "Palestra: Há cura para a Depressão?!"
+  name_en: "Talk: Is There a Cure for Depression?!"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Congressos+Angra+Heroismo
+  time: "15:00"
+  description: "Free community talk about depression, hope and recovery, with Cristina Valente, Sandra Abrantes and Eduardo Azevedo, plus music by Entreparênteses."
+  description_pt: "Palestra gratuita para a comunidade sobre depressão, esperança e recuperação, com Cristina Valente, Sandra Abrantes e Eduardo Azevedo, além de música dos Entreparênteses."
+  source_url: https://angradoheroismo.pt/evento/palestra-ha-cura-para-a-depressao/
+  source_uid: "1878@angradoheroismo.pt"
+  tags:
+  - literature
+  - live-music
+  - free
+
+- date: 2026-09-17
+  end_date: 2026-09-21
+  name: "Cinema: Spa Weekend"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Congressos+Angra+Heroismo
+  time: "21:30"
+  description: "Comedy about three friends whose luxury spa retreat turns chaotic when an unpredictable fourth friend arrives unexpectedly."
+  description_pt: "Comédia sobre três amigas cujo retiro de luxo num spa se transforma numa aventura caótica quando uma quarta amiga imprevisível aparece inesperadamente."
+  source_url: https://angradoheroismo.pt/evento/cinema-spa-weekend/
+  source_uid: "1857@angradoheroismo.pt"
+  tags:
+  - cinema
+
+- date: 2026-09-19
+  end_date: 2026-09-20
+  name: "Cinema: PAW Patrol: The Dino Movie"
+  name_en: "Cinema: Paw Patrol: The Dinosaur Movie"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Congressos+Angra+Heroismo
+  time: "15:00"
+  description: "Family film with screenings at 15:00 and 18:00 on both days, following the Paw Patrol on a dinosaur rescue mission."
+  description_pt: "Filme familiar com sessões às 15h00 e 18h00 nos dois dias, acompanhando a Patrulha Pata numa missão de salvamento com dinossauros."
+  source_url: https://angradoheroismo.pt/evento/cinema-paw-patrol-the-dino-movie/
+  source_uid: "1856@angradoheroismo.pt"
+  tags:
+  - cinema
+  - kid-friendly
+
+- date: 2026-09-26
+  end_date: 2026-09-28
+  name: "Cinema: Magia e Sedução: Segredos de Família"
+  name_en: "Cinema: Practical Magic: Family Secrets"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Congressos+Angra+Heroismo
+  time: "21:30"
+  description: "Sally and Gillian Owens reunite and use their powers to face a new threat and an old curse endangering their family."
+  description_pt: "Sally e Gillian Owens voltam a unir-se e recorrem aos seus poderes para enfrentar uma nova ameaça e uma antiga maldição que coloca a família em perigo."
+  source_url: https://angradoheroismo.pt/evento/cinema-magia-e-seducao-segredos-de-familia/
+  source_uid: "1855@angradoheroismo.pt"
+  tags:
+  - cinema
