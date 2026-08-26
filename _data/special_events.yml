@@ -5990,3 +5990,33 @@ Come join us and support our festivities!"
   source_url: https://whatson.azores.gov.pt/en/evento/3hp-1759327843988/
   tags:
   - live-music
+
+# Official-agenda backfills from the 2026-08-26 social scan
+
+- date: 2026-08-04
+  end_date: 2026-11-06
+  name: "Criação… para além da tela"
+  name_en: "Creation… Beyond the Canvas"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  description: "Drawing and painting exhibition in the library's Espaço Criativo, bringing together work by final-year students from Escola Básica e Secundária Tomás de Borba. Coordinated by teacher Vitória Cascais and architect Magda Gonçalves, the exhibition presents the students' artistic development, talent, creativity and dedication."
+  description_pt: "Exposição de desenho e pintura no Espaço Criativo da Biblioteca, reunindo trabalhos dos alunos finalistas do 12.º ano da Escola Básica e Secundária Tomás de Borba. Coordenada pela professora Vitória Cascais e pela arquiteta Magda Gonçalves, a mostra valoriza o percurso artístico, o talento, a criatividade e a dedicação dos estudantes."
+  source_url: https://angradoheroismo.pt/evento/%f0%9d%97%98%f0%9d%98%85%f0%9d%97%bd%f0%9d%97%bc%f0%9d%98%80%f0%9d%97%b6%f0%9d%97%b0%cc%a7%f0%9d%97%ae%cc%83%f0%9d%97%bc-%f0%9d%97%b1%f0%9d%97%b2-%f0%9d%97%b1%f0%9d%97%b2%f0%9d%98%80%f0%9d%97%b2/
+  tags:
+  - exhibition
+
+- date: 2026-09-09
+  name: "Apresentação de livro: Nevoeiro e Outros Contos"
+  name_en: "Book Presentation: Fog and Other Short Stories"
+  venue: Paços do Concelho (Town Hall)
+  address: "Praça Velha, 9700-145 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os+do+Concelho+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "Presentation of Norberto Ávila's book Nevoeiro e Outros Contos, marking the 90th anniversary of the Azorean writer and playwright's birth. With Luiz Fagundes Duarte, Paulo Enes da Silveira, Teresa Machado and Belarmino Ramos, plus a cultural performance by the Alpendre theatre group. Free entry."
+  description_pt: "Apresentação do livro «Nevoeiro e Outros Contos», de Norberto Ávila, integrada nas comemorações dos 90 anos do nascimento do escritor e dramaturgo açoriano. Com Luiz Fagundes Duarte, Paulo Enes da Silveira, Teresa Machado e Belarmino Ramos, além de um momento cultural pelo grupo de teatro Alpendre. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/apresentacao-de-livro-nevoeiro-e-outros-contos/
+  source_uid: "1882@angradoheroismo.pt"
+  tags:
+  - literature
+  - free
