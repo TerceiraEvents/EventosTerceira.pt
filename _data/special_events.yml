@@ -5952,6 +5952,21 @@ Come join us and support our festivities!"
   - outdoor
   - free
 
+# New primary-source discovery, verified 2026-09-04.
+- date: 2026-09-20
+  name: "BioBlitz Terceira 2026"
+  venue: Piscinas Naturais do Porto Martins
+  address: "Porto Martins, Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Piscinas+Naturais+do+Porto+Martins+Terceira
+  time: "09:30"
+  description: "Citizen-science activity documenting coastal biodiversity with photos and the MINKA app, plus a coastal cleanup. Everyone is welcome; no prior knowledge required. Free, with registration required through the organizer's page."
+  description_pt: "Atividade de ciência cidadã para documentar a biodiversidade costeira com fotografias e a aplicação MINKA, e participar numa limpeza costeira. Aberta a todos, sem conhecimentos prévios. Gratuita, com inscrição obrigatória na página da organização."
+  source_url: https://www.aircentre.org/pt/events/bioblitz-terceira-2026
+  tags:
+  - outdoor
+  - workshop
+  - free
+
 - date: 2026-09-25
   end_date: 2026-09-27
   name: "Festas do Porto dos Biscoitos 2026"
@@ -5969,12 +5984,10 @@ Come join us and support our festivities!"
 
 - date: 2026-10-03
   name: "Azores Bravos Trail 2026"
-  venue: Angra do Heroísmo
-  address: "Angra do Heroísmo"
-  map_url: https://www.google.com/maps/search/?api=1&query=Angra+do+Hero%C3%ADsmo
-  description: "Trail-running event with 100 km, 65 km, 35 km and 15 km races plus a 10 km walk."
-  description_pt: "Prova de trail running com distâncias de 100 km, 65 km, 35 km e 15 km, além de uma caminhada de 10 km."
-  source_url: https://whatson.azores.gov.pt/en/evento/azores-bravos-trail-1770647453104/
+  venue: "Ilha Terceira (vários locais de partida)"
+  description: "Trail races: 100 km at 00:00 from Miradouro do Facho (Praia da Vitória), 50 km at 08:00 from Rua da Igreja (Agualva), 35 km at 10:00 from Zona Balnear dos Biscoitos, and 15 km at 11:30 from Largo do Terreiro (Posto Santo). The 10 km walk starts at 11:45 in Posto Santo. Registration closed on 31 August; check the organizer's programme for updates."
+  description_pt: "Provas de trail: 100 km às 00h00 no Miradouro do Facho (Praia da Vitória), 50 km às 08h00 na Rua da Igreja (Agualva), 35 km às 10h00 na Zona Balnear dos Biscoitos e 15 km às 11h30 no Largo do Terreiro (Posto Santo). A caminhada de 10 km parte às 11h45 no Posto Santo. Inscrições encerradas a 31 de agosto; consultar atualizações no programa da organização."
+  source_url: https://azoresbravostrail.com/231-2/
   tags:
   - outdoor
 
