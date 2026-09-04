@@ -46,27 +46,30 @@
       name_pt: Noite de Karaoke
     - day: Thursday
       day_pt: Quinta-feira
-      name: Latin Night
-      name_pt: Noite Latina
+      name: "Latin Night, currently advertised from 22:00"
+      name_pt: "Noite Latina, atualmente anunciada a partir das 22h00"
+    - day: Sunday
+      day_pt: Domingo
+      name: Karaoke Night
+      name_pt: Noite de Karaoke
   description_after_weekly: "Also hosts live concerts and special events throughout the year."
   description_after_weekly_pt: "Também recebe concertos ao vivo e eventos especiais ao longo do ano."
+  links:
+    - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/tascadocamoes/" }
+    - { label: "Facebook", label_pt: "Facebook", url: "https://www.facebook.com/tascadocamoes/" }
   schema_type: BarOrPub
   category: nightlife
 
 - name: "The Texan / The Garden Club"
   address: "Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Hero%C3%ADsmo"
-  description: "Tex-Mex restaurant and bar with cocktails, large screens for sports, and a garden event space. The Texan handles dinner and karaoke; The Garden Club is the outdoor garden area for brunches, parties, and events."
-  description_pt: "Restaurante e bar Tex-Mex com cocktails, ecrãs grandes para desporto e um espaço de jardim para eventos. O Texan trata dos jantares e do karaoke; o Garden Club é a zona ao ar livre para brunchs, festas e eventos."
+  description: "Tex-Mex restaurant and bar with cocktails, large screens for sports, and a garden event space. On Tuesdays, children up to age 12 receive one free kids-menu meal per adult meal, with a family movie from 18:30. The Garden Club is the outdoor garden area for brunches, parties, and events."
+  description_pt: "Restaurante e bar Tex-Mex com cocktails, ecrãs grandes para desporto e um espaço de jardim para eventos. Às terças-feiras, crianças até aos 12 anos recebem uma refeição gratuita do menu infantil por cada refeição de adulto, com filme familiar a partir das 18h30. O Garden Club é a zona ao ar livre para brunchs, festas e eventos."
   weekly:
-    - day: Friday
-      day_pt: Sexta-feira
-      name: Karaoke Night
-      name_pt: Noite de Karaoke
-    - day: Saturday
-      day_pt: Sábado
-      name: Karaoke Night
-      name_pt: Noite de Karaoke
+    - day: Tuesday
+      day_pt: Terça-feira
+      name: "Kids Eat Free and Movie Night, 18:30"
+      name_pt: "Crianças Comem Grátis e Sessão de Cinema, 18h30"
   links:
     - { label: "Website", label_pt: "Site", url: "https://www.thetexan.pt" }
     - { label: "Instagram (Texan)", label_pt: "Instagram (Texan)", url: "https://www.instagram.com/thetexanbar/" }
@@ -92,13 +95,8 @@
 - name: "Wine Not"
   address: "Rua Direita 8, Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Wine+Not+Angra+do+Hero%C3%ADsmo"
-  description: "Wine bar with weekly live music nights bringing in solo artists or DJs."
-  description_pt: "Bar de vinhos com noites semanais de música ao vivo, com artistas solo ou DJs."
-  weekly:
-    - day: "Monday"
-      day_pt: "Segunda-feira"
-      name: "Live music, around 21:30 (rotating themed nights: Crazy Monday, Ya Monday for reggae, etc.)"
-      name_pt: "Música ao vivo, por volta das 21:30 (noites temáticas rotativas: Crazy Monday, Ya Monday para reggae, etc.)"
+  description: "Wine bar hosting live music, DJs, and rotating themed nights. Programming is announced on Instagram and is not currently confirmed as a fixed weekly schedule."
+  description_pt: "Bar de vinhos com música ao vivo, DJs e noites temáticas rotativas. A programação é anunciada no Instagram e não está atualmente confirmada como horário semanal fixo."
   links:
     - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/winenot.terceira/" }
   schema_type: BarOrPub
@@ -107,19 +105,8 @@
 - name: "Porta 42"
   address: "Rua de São João, Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Porta+42+Angra+do+Hero%C3%ADsmo"
-  description: "Bar specialising in 90s and 2000s music. Doors at 21:30. Themed banners rotate week to week (Rock/Pop Rock, 90s & 2000s Vibes, etc.); check Instagram for the current week."
-  description_pt: "Bar especializado em música dos anos 90 e 2000. Abre às 21:30. Os temas vão rodando semana a semana (Rock/Pop Rock, 90s & 2000s Vibes, etc.); vê o Instagram para o tema da semana."
-  weekly:
-    - day: "Friday"
-      day_pt: "Sexta-feira"
-      name: "90s & 2000s Night"
-      name_pt: "Noite Anos 90 & 2000"
-    - day: "Saturday"
-      day_pt: "Sábado"
-      name: "90s & 2000s Night"
-      name_pt: "Noite Anos 90 & 2000"
-  description_after_weekly: "Sometimes closed when Friday falls on a holiday; on long weekends they occasionally shift to a Thursday instead. Saturday is the most consistent slot."
-  description_after_weekly_pt: "Por vezes fecha quando a sexta cai num feriado; em fins-de-semana prolongados às vezes passa para quinta-feira. O sábado é o dia mais regular."
+  description: "Bar specialising in 90s and 2000s music, with DJ and themed nights announced individually. Saturday has historically been the most common slot, while Friday opening is not consistent. Check Instagram before attending."
+  description_pt: "Bar especializado em música dos anos 90 e 2000, com noites de DJ e temáticas anunciadas individualmente. Historicamente, o sábado tem sido o dia mais comum, enquanto a abertura à sexta-feira não é regular. Consulta o Instagram antes de ir."
   links:
     - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/porta_42/" }
   schema_type: BarOrPub
@@ -133,10 +120,40 @@
   weekly:
     - day: Monday
       day_pt: Segunda-feira
-      name: "Clube de Leitura (Reading Club) at 18:00"
-      name_pt: "Clube de Leitura, às 18:00"
+      name: "Clube de Leitura (Reading Club) at 18:15"
+      name_pt: "Clube de Leitura, às 18h15"
+  description_after_weekly: "Other talks, poetry sessions, live recordings, and concerts follow the pinned monthly agenda rather than a fixed weekly schedule."
+  description_after_weekly_pt: "As restantes conversas, sessões de poesia, gravações ao vivo e concertos seguem a agenda mensal afixada, e não um horário semanal fixo."
+  links:
+    - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/livraria_lardocelivro/" }
   schema_type: Store
   category: arts-culture
+
+- name: "Recreio dos Artistas"
+  address: "Rua Recreio dos Artistas 52, Sé, 9700-026 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Recreio+dos+Artistas+Angra+do+Hero%C3%ADsmo"
+  description: "Cinema and cultural hall of the Sociedade Filarmónica de Instrução e Recreio dos Artistas. It hosts the Cine-Clube da Ilha Terceira's dated seasonal screenings and other cultural activities."
+  description_pt: "Sala de cinema e espaço cultural da Sociedade Filarmónica de Instrução e Recreio dos Artistas. Recebe as sessões sazonais, em datas específicas, do Cine-Clube da Ilha Terceira e outras atividades culturais."
+  links:
+    - { label: "Cine-Clube Instagram", label_pt: "Instagram do Cine-Clube", url: "https://www.instagram.com/cineclubedailhaterceira/" }
+    - { label: "Cine-Clube Facebook", label_pt: "Facebook do Cine-Clube", url: "https://www.facebook.com/cineclubeilhaterceira" }
+  schema_type: MovieTheater
+  category: arts-culture
+
+- name: "Sabores da Horta"
+  address: "Canada do Saco, 9760-123 Praia da Vitória"
+  map_url: "https://maps.app.goo.gl/Jqw6MqjUWzjvEhPM9"
+  description: "Family farm experience with seasonal strawberry picking and activities including animal feeding, a trampoline, and tractor rides. Saturday picking is currently advertised from 09:00 to 13:00."
+  description_pt: "Experiência agrícola para famílias com apanha sazonal de morangos e atividades como alimentar animais, trampolim e passeios de trator. A apanha ao sábado está atualmente anunciada das 09h00 às 13h00."
+  weekly:
+    - day: Saturday
+      day_pt: Sábado
+      name: "Strawberry picking, 09:00–13:00"
+      name_pt: "Apanha de morangos, 09h00–13h00"
+  links:
+    - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/sabores_dahort_a/" }
+  schema_type: LocalBusiness
+  category: sports-outdoor
 
 - name: "Teatro Angrense"
   address: "Rua da Esperança 48-52, 9700-073 Angra do Heroísmo"
@@ -163,8 +180,8 @@
 - name: "Havanna Club"
   address: "Avenida Infante Dom Henrique, Porto das Pipas, 9700-098 Angra do Heroísmo"
   map_url: "https://maps.app.goo.gl/iUZ8CZWrjYoMjyuj6"
-  description: "One of the busiest bars at the marina. DJ nights, karaoke-to-dancing Saturdays, and themed party events. Covered terrace with sea views."
-  description_pt: "Um dos bares mais movimentados da marina. Noites de DJ, sábados de karaoke a dançar e festas temáticas. Esplanada coberta com vista para o mar."
+  description: "Marina bar with rotating DJs, live acts, and themed party events. Weekend programming changes and should be checked on Instagram. The venue announced reopening on September 11, 2026 after holiday, maintenance, and terrace work."
+  description_pt: "Bar na marina com DJs, atuações ao vivo e festas temáticas rotativas. A programação de fim de semana muda e deve ser confirmada no Instagram. O espaço anunciou a reabertura a 11 de setembro de 2026 após férias, manutenção e obras na esplanada."
   links:
     - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/havannaangra/" }
   reservation_phone: "917 746 773"
@@ -289,12 +306,12 @@
   weekly:
     - day: Friday
       day_pt: Sexta-feira
-      name: "Club Night — DJ sets from midnight"
-      name_pt: "Noite de Club — sets de DJ a partir da meia-noite"
+      name: "Club Night, opening between 00:00 and 00:30"
+      name_pt: "Noite de Club, abertura entre as 00h00 e as 00h30"
     - day: Saturday
       day_pt: Sábado
-      name: "Club Night — DJ sets from midnight"
-      name_pt: "Noite de Club — sets de DJ a partir da meia-noite"
+      name: "Club Night, opening between 00:00 and 00:30"
+      name_pt: "Noite de Club, abertura entre as 00h00 e as 00h30"
   description_after_weekly: "Headlining DJ + warm-up rotates each week. Check Instagram (@twinstheclub) for the current weekend's lineup."
   description_after_weekly_pt: "DJ principal + warm-up rodam todas as semanas. Vê o Instagram (@twinstheclub) para saberes quem toca este fim-de-semana."
   links:
