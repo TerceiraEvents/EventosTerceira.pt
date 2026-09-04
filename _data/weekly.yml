@@ -81,6 +81,20 @@
 - day: Friday
   day_pt: Sexta-feira
   events:
+  - name: Karaoke Night
+    name_pt: Noite de Karaoke
+    venue: The Texan
+    address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Heroísmo
+    time: "22:30"
+    description: "Weekly Friday karaoke at The Texan. The venue can fill early, with places often opening later in the evening."
+    description_pt: "Karaoke semanal à sexta-feira no The Texan. O espaço pode encher cedo, surgindo frequentemente lugares mais tarde."
+    note: "Karaoke is ongoing, but check the venue's current Events highlight for the week's exact start time. Dinner reservations are for dining, not reserved karaoke seating."
+    note_pt: "O karaoke continua, mas consulta o destaque Eventos do espaço para confirmar a hora exata da semana. As reservas de jantar são para refeições, não para lugares reservados no karaoke."
+    instagram: https://www.instagram.com/thetexanbar/
+    source_url: https://www.instagram.com/stories/highlights/17907883704059305/
+    verified_on: "2026-09-04"
+    url: https://www.thetexan.pt
   - name: Club Night
     name_pt: Noite de Club
     venue: Twins Club
@@ -109,6 +123,20 @@
     instagram: https://www.instagram.com/sabores_dahort_a/
     source_url: https://www.instagram.com/sabores_dahort_a/
     verified_on: "2026-09-04"
+  - name: Karaoke Night
+    name_pt: Noite de Karaoke
+    venue: The Texan
+    address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Heroísmo
+    time: "22:30"
+    description: "Weekly Saturday karaoke at The Texan. The venue can fill early, with places often opening later in the evening."
+    description_pt: "Karaoke semanal ao sábado no The Texan. O espaço pode encher cedo, surgindo frequentemente lugares mais tarde."
+    note: "Karaoke is ongoing, but check the venue's current Events highlight for the week's exact start time. Dinner reservations are for dining, not reserved karaoke seating."
+    note_pt: "O karaoke continua, mas consulta o destaque Eventos do espaço para confirmar a hora exata da semana. As reservas de jantar são para refeições, não para lugares reservados no karaoke."
+    instagram: https://www.instagram.com/thetexanbar/
+    source_url: https://www.instagram.com/stories/highlights/17907883704059305/
+    verified_on: "2026-09-04"
+    url: https://www.thetexan.pt
   - name: Club Night
     name_pt: Noite de Club
     venue: Twins Club

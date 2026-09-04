@@ -63,13 +63,21 @@
 - name: "The Texan / The Garden Club"
   address: "Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Hero%C3%ADsmo"
-  description: "Tex-Mex restaurant and bar with cocktails, large screens for sports, and a garden event space. On Tuesdays, children up to age 12 receive one free kids-menu meal per adult meal, with a family movie from 18:30. The Garden Club is the outdoor garden area for brunches, parties, and events."
-  description_pt: "Restaurante e bar Tex-Mex com cocktails, ecrãs grandes para desporto e um espaço de jardim para eventos. Às terças-feiras, crianças até aos 12 anos recebem uma refeição gratuita do menu infantil por cada refeição de adulto, com filme familiar a partir das 18h30. O Garden Club é a zona ao ar livre para brunchs, festas e eventos."
+  description: "Tex-Mex restaurant and bar with cocktails, large screens for sports, weekend karaoke, and a garden event space. On Tuesdays, children up to age 12 receive one free kids-menu meal per adult meal, with a family movie from 18:30. The Garden Club is the outdoor garden area for brunches, parties, and events."
+  description_pt: "Restaurante e bar Tex-Mex com cocktails, ecrãs grandes para desporto, karaoke ao fim de semana e um espaço de jardim para eventos. Às terças-feiras, crianças até aos 12 anos recebem uma refeição gratuita do menu infantil por cada refeição de adulto, com filme familiar a partir das 18h30. O Garden Club é a zona ao ar livre para brunchs, festas e eventos."
   weekly:
     - day: Tuesday
       day_pt: Terça-feira
       name: "Kids Eat Free and Movie Night, 18:30"
       name_pt: "Crianças Comem Grátis e Sessão de Cinema, 18h30"
+    - day: Friday
+      day_pt: Sexta-feira
+      name: "Karaoke Night, around 22:30"
+      name_pt: "Noite de Karaoke, por volta das 22h30"
+    - day: Saturday
+      day_pt: Sábado
+      name: "Karaoke Night, around 22:30"
+      name_pt: "Noite de Karaoke, por volta das 22h30"
   links:
     - { label: "Website", label_pt: "Site", url: "https://www.thetexan.pt" }
     - { label: "Instagram (Texan)", label_pt: "Instagram (Texan)", url: "https://www.instagram.com/thetexanbar/" }
