@@ -1,6 +1,6 @@
 # Runbook: Manual Social-Media Event Scan
 
-> **Purpose:** Step-by-step guide for kicking off a manual Instagram/Facebook scan to find new events and write them into `_data/special_events.yml` via a PR.
+> **Purpose:** Find and verify Terceira events across official calendars, organizer websites, search, Instagram, and Facebook, then update the data through a PR.
 > **Cadence:** Run once a week (or whenever you notice the upcoming-events list is getting thin).
 > **Time required:** ~30–60 minutes depending on how active venues have been.
 > **Source status last verified:** 2026-09-04.
@@ -9,10 +9,11 @@
 
 ## Context
 
-Several event sources post to Instagram and Facebook but are not fully covered by the automated ingest workflows. The manual scan has two jobs:
+Several event sources are not fully covered by the automated ingest workflows. The manual scan has three jobs:
 
 1. Check that the official automated sources are not lagging behind the live public agendas.
 2. Fill the gap for event flyers that only appear on social accounts.
+3. Discover organizers outside the existing culture/nightlife list, especially parish, sport, nature, science, and community activities.
 
 This covers both Angra do Heroísmo and Praia da Vitória. The manual scan is especially useful for:
 
@@ -22,6 +23,8 @@ This covers both Angra do Heroísmo and Praia da Vitória. The manual scan is es
 - Praia cultural events shared through Agenda Praia Cultural or the municipal Facebook page
 
 The canonical list of venue social handles lives in `_data/venues.yml`. The canonical list of other resources is at `eventosterceira.pt/resources/`.
+
+Use the [source-discovery playbook and dated audit](event-source-discovery.md) for reusable queries, newly tested sources, and unresolved leads. This runbook describes the procedure, not proof that every source was reached in a particular run.
 
 ## Source Inventory
 
@@ -44,7 +47,10 @@ Use this as a maintained starting list for Angra and Praia scans. It is not a gu
 | Casa Museu Vitorino Nemésio / Biblioteca Municipal Silvestre Ribeiro | Praia | Check CMPV and Agenda Praia Cultural directly. |
 | Cultura Açores (`culturacores.azores.gov.pt/agenda/`) | All islands | Current official culture agenda. The former `cultura.azores.gov.pt` address no longer resolves. The current site may require a browser because automated requests return 403. |
 | What's On Azores | All islands | Official discovery source, but automated access returned 403 on 2026-09-04. Use the Portuguese browser agenda for canonical place names because the English translation can mangle Terceira locations. |
-| byAçores Terceira agenda | Terceira | Discovery-only cross-check. Its server-rendered calendar appeared stale on 2026-09-04. `agendacores.pt` redirects here; verify every lead against a first-party source. |
+| byAçores Terceira agenda | Terceira | Discovery-only cross-check. The Portuguese `/terceira/` page showed September/October 2026 listings in a browser on 2026-09-04; the previously checked English route appeared stale. Check the exact route and year, then follow original sources. `agendacores.pt` redirects here. |
+| AIR Centre (`aircentre.org/pt/events`) | Regional/international | Primary source for citizen science and marine activities. Inspect event location and registration eligibility; the Terceira headquarters address does not make every event local. |
+| Azores Bravos Trail (`azoresbravostrail.com`) | Terceira | Primary organizer programme for races and walking. Check the current edition, actual start locations, and registration deadlines, not just a tourism summary. |
+| Festing (`festingapp.com/en/events`) | Portugal/all islands | Secondary discovery source with current local listings. Use browser pagination and place search, then follow organizer links; do not treat all results as Terceira events. |
 | Ticketline | Angra + Praia | Useful for paid shows. Multi-session event pages can be assigned the wrong city/date by the current parser, so verify the Terceira session manually before adding it. |
 | Songkick + Bandsintown | Angra/Terceira | Secondary music discovery. Bandsintown exposed more current local listings than Songkick on 2026-09-04. Confirm the date and venue with the artist, promoter, or venue. |
 | Eventbrite + Shotgun | Terceira | Discovery for organizer-posted workshops, festivals, and independent arts. Expect bot/rate limits and verify local venue details. |
@@ -54,26 +60,27 @@ Use this as a maintained starting list for Angra and Praia scans. It is not a gu
 | Cine-Clube da Ilha Terceira (`@cineclubedailhaterceira`) | Angra | First-party cinema source. Use its season announcement plus the CMAH season page; enter the actual dated screenings rather than a generic every-Sunday recurrence. |
 | Sabores da Horta (`@sabores_dahort_a`) | Praia | First-party source for strawberry-picking hours and family activities. Recheck the profile because hours can be seasonal. |
 
-Removed or downgraded sources as of 2026-09-04: `@fullrange_rave` and `@auditorioamit` were unavailable; the direct Casa do Sal Facebook page was unavailable; Agenda da Terceira had not posted a current agenda since February 2026; byAçores rendered stale relative dates; Explore Terceira was a business directory rather than an event calendar; Songkick had substantially fewer current listings than Bandsintown; the old Cultura Açores domain failed DNS; and the configured Visit Azores endpoint returned 404.
+Earlier checks on 2026-09-04 found `@fullrange_rave`, `@auditorioamit`, and the direct Casa do Sal Facebook page unavailable; Agenda da Terceira had not posted a current agenda since February 2026; Explore Terceira was a business directory rather than an event calendar; Songkick had substantially fewer current listings than Bandsintown; the old Cultura Açores domain failed DNS; and the configured Visit Azores endpoint returned 404. These are dated, route-specific observations, not permanent closures. The later browser check recovered a useful Portuguese byAçores route.
 
 ### Finding and qualifying new sources
 
 Do not limit discovery to the static account list. During each scan:
 
 1. Inspect co-authors, tagged accounts, venue tags, promoters, and recurring collaborators on confirmed local posts.
-2. Search the next 60 to 90 days by venue and artist on Songkick, Bandsintown, Eventbrite, Shotgun, and normal web search.
+2. Search the next 90 days using the geographic/category query matrix in the [discovery playbook](event-source-discovery.md). Include ongoing events and verified announcements beyond that horizon, not just weekend nightlife.
 3. Promote a candidate to the maintained list only when it has a clear first-party role or at least two recent, dated, Terceira-specific event posts.
 4. Use aggregators to find leads. Prefer the organizer, venue, artist, municipality, or ticket page for the final event details.
-5. Record the date checked, access failures, stale feeds, redirects, and parser errors in the PR body so the next scan starts from evidence rather than assumptions.
+5. Follow calendar pagination and detail pages. Try the site's linked Portuguese route or browser view when a cached/translated page is stale. Do not invent feed endpoints or call an inaccessible source empty.
+6. Record the exact URL, access method, date checked, observed date range, useful leads, access failures, redirects, and parser errors in the PR body. Use the source-status template in the discovery playbook.
 
 ### Maintaining recurring-event data
 
 Treat `_data/weekly.yml` as a current schedule, not a permanent catalogue:
 
 1. Recheck each affected venue's most recent first-party post or profile before changing a weekly record.
-2. Add `source_url` and `verified_on` to every weekly record touched by a scan.
-3. Keep an event weekly only when the organizer states a recurring day or the recent first-party history demonstrates a stable cadence. A single dated poster is not sufficient by itself.
-4. When a recurring event is paused, closed, or no longer supported by current evidence, remove it from the weekly page and document the reason in the PR. Add it back when the venue confirms its return.
+2. Record the evidence URL where available and the date and scope of verification. A dated YAML comment can distinguish organizer evidence from a maintainer's local confirmation. Never make `verified_on` imply that an unconfirmed start time was rechecked.
+3. Add a weekly event when the organizer states a recurring day, recent first-party history demonstrates a stable cadence, or a maintainer explicitly confirms the current recurrence. A single dated poster is not sufficient by itself.
+4. Remove or pause a weekly listing only with affirmative evidence of cancellation, closure, an expired seasonal programme, or a maintainer's correction. Sparse posts, login failures, and unsuccessful searches do not demonstrate cancellation. Preserve the existing listing and report what remains uncertain. The 2026-09-04 maintainer confirmations of Camões Thursday Latin night and ongoing Texan karaoke must not be undone merely because a fresh flyer is unavailable.
 5. Put monthly agendas, seasonal cinema programmes with skipped weeks, rotating concerts, and other specifically dated schedules in `_data/special_events.yml`.
 6. Update the matching summary in `_data/venues.yml` whenever a weekly schedule changes so the venue and weekly pages do not contradict one another.
 
@@ -90,11 +97,11 @@ Treat `_data/weekly.yml` as a current schedule, not a permanent catalogue:
 
 ## Step 1 — Check what's already in the file
 
-Before scanning, open `_data/special_events.yml` and note the most recent `date:` entries so you know what's already covered. Also inspect `_data/weekly.yml`: a matching weekly entry is not proof that the current schedule is still valid.
+Before scanning, read all of `_data/special_events.yml`, including entries whose start date has passed but whose `end_date` is still upcoming. Also inspect `_data/weekly.yml` and its evidence notes.
 
 Quick way: https://github.com/TerceiraEvents/EventosTerceira.pt/blob/main/_data/special_events.yml
 
-Scroll to the bottom. The file is sorted roughly chronologically. Note the latest date present so you don't duplicate.
+The file contains appended scan sections and is not globally chronological. The last entry or maximum date is not a coverage watermark. Search the whole file by date, distinctive title, venue, and `source_url`/`source_uid`; compare alternate-language titles too.
 
 Also check the **live site** for the current upcoming-events list: https://eventosterceira.pt/
 
@@ -102,7 +109,9 @@ Also check the **live site** for the current upcoming-events list: https://event
 
 ## Step 2 — Check open issues for an existing scan
 
-Before starting, look at https://github.com/TerceiraEvents/EventosTerceira.pt/issues to see if there is already an open issue titled "New events to add: [date range]". If one exists covering recent dates, read it to see what was already found and whether a PR was opened for it. Start your scan from the day after the last covered date.
+Before starting, inspect open issues and PRs at https://github.com/TerceiraEvents/EventosTerceira.pt for overlapping scans and submission-worker entries. Read their findings and avoid duplicating pending additions.
+
+Use an overlapping publication window: start at least 14 days before the last successful scan, or inspect at least the last 14 days of posts on a first pass. Also inspect pinned programmes, future-dated calendar pages, and corrections to existing upcoming events. Search events from today through the next 90 days, retaining any verified later announcements you find. Never start after the previous scan's event-date range: late announcements can concern dates that were already searched. Record publication and event windows separately.
 
 ---
 
@@ -117,19 +126,25 @@ Start with official web agendas before social media. They are faster to scan and
 | What's On Azores | https://whatson.azores.gov.pt/agenda/ | Filter or scan for `Terceira`; use Portuguese place names and compare against the repo because the feed can lag or miss items |
 | BPARLSR highlights | https://bparlsr.azores.gov.pt/destaques/ | First-party library calendar, BiblioAgenda, and calendar exports |
 | Cultura Açores Agenda Cultural | https://culturacores.azores.gov.pt/agenda/ | Filter to `Terceira`; useful for cultural listings and public institutions |
-| byAçores Terceira | https://byacores.com/en/agenda/terceira-island/ | Discovery fallback whose rendered page may be stale; verify every detail with a first-party source |
+| byAçores Terceira | https://byacores.com/terceira/ | Portuguese island page and its agenda links; verify absolute dates and original sources |
+| AIR Centre | https://www.aircentre.org/pt/events | Citizen science and marine activities; check local venue and whether attendance/registration is open |
+| Azores Bravos Trail | https://azoresbravostrail.com/ | Current organizer programme, walking/race start locations and registration status |
+| Festing | https://www.festingapp.com/en/events | Browser-based secondary discovery; paginate and confirm actual event geography |
 | Ticketline | https://ticketline.sapo.pt/ | Paid shows at Angra/Praia venues |
 | Songkick / Bandsintown | https://www.bandsintown.com/c/angra-do-heroismo-portugal | Touring concerts; also check Songkick, then cross-check artist and venue sources |
 | Eventbrite / Shotgun | https://www.eventbrite.pt/d/portugal--terceira/events/ | Organizer-posted workshops and independent ticketed events |
 
 For each upcoming event **not already in `special_events.yml`**, note:
+
 - Event name (PT and EN if bilingual)
 - Date(s) and time(s)
 - Venue name
 - Any ticket/price information visible
 - Source URL
+- Publication date/year, whether registration is open, and any eligibility restrictions
 
 Priority targets:
+
 - **Teatro Angrense** performances
 - **CCCAH (Centro Cultural e de Congressos)** concerts and shows (the "Angra Convida" series in particular)
 - **Casa do Sal** and **Museu de Angra do Heroísmo** cultural events
@@ -137,6 +152,7 @@ Priority targets:
 - **Cinefreguesias** outdoor cinema series (recurring summer programme)
 - **Auditório do Ramo Grande** shows in Praia
 - **Casa Museu Vitorino Nemésio** and **Biblioteca Municipal Silvestre Ribeiro** events in Praia
+- **Parish associations, sports organizers, and nature/science groups** from the discovery playbook; cover both municipalities, not only Angra's established venues
 
 > Note: Many of these are auto-ingested by daily workflows. Cross-check before adding. If the live official agenda has an upcoming event that the repo does not, add it as a manual backfill and mention the source in the PR.
 
@@ -144,7 +160,7 @@ Priority targets:
 
 ## Step 4 — Scan Instagram accounts
 
-Navigate to each account below and scroll the grid looking for event flyers (posts with dates, times, venue names). Click each flyer post to read the caption for full details. Focus on posts from the last 7–10 days, and note the relative timestamp ("X hours ago", "X days ago") to estimate the post date.
+Navigate to each account below and scroll the grid looking for event flyers. Read captions, every carousel slide, pinned programmes, highlights, and later corrections. Use Step 2's overlapping publication window, and record the actual publication date where available rather than treating search-result freshness as the event date.
 
 ### Priority accounts (most likely to have new events)
 
@@ -186,8 +202,8 @@ Navigate to each account below and scroll the grid looking for event flyers (pos
 
 - The pinned **monthly agenda carousel** from `@livraria_lardocelivro` is a multi-slide post. Swipe through every slide and enter dated items individually unless the agenda explicitly demonstrates a weekly cadence.
 - Havanna Club often posts a single reel listing **3 nights at once** (Fri/Sat/Sun) — one post, three events.
-- Posts from the `@angradoheroismo` account are almost always upcoming (they rarely post recaps without a date header).
-- If a post says "Amanhã" (Tomorrow) or "Este sábado" (This Saturday), use today's date to calculate the absolute date.
+- Even official accounts publish recaps. Confirm the event year and full date before adding anything.
+- Resolve "Amanhã" (tomorrow) or "Este sábado" (this Saturday) from the **post's publication date**, in `Atlantic/Azores`, not the date of the scan. A repost date may differ from the original. If the original timestamp/year is unavailable or contradictory, keep the item as an unresolved lead instead of guessing.
 
 ---
 
@@ -213,7 +229,7 @@ For Facebook, the **Photos** tab of a page is often the fastest way to spot even
 
 ## Step 6 — Deduplicate against `special_events.yml`
 
-Before writing anything up, do a quick browser search (Ctrl+F) on the raw file for key words from each event you found (venue name, partial event name, or date string like `2026-06-06`) to confirm it isn't already there.
+Search the complete file for each candidate's date, distinctive title, venue, and source identity. Account for Portuguese/English titles, date ranges, and alternative names. Compare detail fields, not just presence: a matching event may need its time, location, race distance, cancellation, or registration information corrected. Check open PRs as well. Run the duplicate validator in Step 8d after editing.
 
 Raw file URL for fast Ctrl+F: https://raw.githubusercontent.com/TerceiraEvents/EventosTerceira.pt/main/_data/special_events.yml
 
@@ -232,8 +248,9 @@ Use this template (matches the pattern of issues #141, #161):
 ```markdown
 ## Summary
 
-Scanned Instagram and Facebook sources from `venues.yml` on **[TODAY'S DATE]**.
-The following events were found that are not yet in `_data/special_events.yml`.
+Checked [actual sources and access methods] on **[DATE, TIMEZONE]**.
+Publication lookback: [range]. Event horizon: [range, plus any later announcements].
+List new events, corrections to existing entries, unresolved leads, and access gaps separately.
 
 ---
 
@@ -261,10 +278,9 @@ The following events were found that are not yet in `_data/special_events.yml`.
 
 ## Sources Scanned
 
-| Account | Platform | Status |
-|---|---|---|
-| @angradoheroismo | Instagram | ✅ Active — N new events found |
-| ... | | |
+| Source URL | Method | Observed date range | Status | New / corrected / duplicate / held |
+|---|---|---|---|---|
+| [Exact route or account] | [browser/feed/search] | [range] | [reachable/partial/blocked/empty-with-window/untested/stale] | [counts and evidence links] |
 ```
 
 This issue serves as both a paper trail and a checklist. Check off each event as you add it to the YAML.
@@ -285,6 +301,7 @@ Each new special event goes as a new list item in `_data/special_events.yml`. Th
   time: "HH:MM"             # 24-hour, quoted string
   description: "English description prose."
   description_pt: "Portuguese description prose."
+  source_url: https://...   # original organizer/venue event detail, when available
   instagram: https://www.instagram.com/p/...  # source post URL (use 'facebook:' key for FB sources)
   tags:
   - live-music              # see _data/event_tags.yml for valid tags — canonical only
@@ -293,7 +310,7 @@ Each new special event goes as a new list item in `_data/special_events.yml`. Th
 
 ### Valid tags — canonical only
 
-These are the only valid tag slugs (source of truth: [`_data/event_tags.yml`](../_data/event_tags.yml)). **Anything outside this list is silently dropped from URL filtering on the calendar page** — it doesn't fail CI, it just doesn't filter.
+These are the only valid tag slugs (source of truth: [`_data/event_tags.yml`](../_data/event_tags.yml)). Unknown tags fail the tag-vocabulary CI check and do not work correctly with calendar filtering.
 
 `kid-friendly` · `live-music` · `cinema` · `theater` · `dance` · `nightlife` · `karaoke` · `food-drink` · `exhibition` · `literature` · `workshop` · `free` · `outdoor` · `bullfighting`
 
@@ -313,7 +330,7 @@ Common mistakes (do **not** use; map to the canonical slug instead):
 
 ### Ordering
 
-Insert new entries **in chronological order by `date:`**. The file has section comments like `# May 2026` — add your entries under the appropriate month heading, or create a new heading if needed.
+Keep new entries chronological within their existing month or dated scan section. Do not reorder the entire file just to add an event; older scan sections are not globally sorted.
 
 ### Addresses for common venues
 
@@ -351,23 +368,24 @@ The mobile app's *Suggest* button and the website's `/suggest/` form both open P
 
 https://github.com/TerceiraEvents/EventosTerceira.pt/pulls
 
-If there are open auto-submission PRs touching `_data/special_events.yml`, decide whether to merge those first (cleaner history) or pull their changes into your branch (avoids a later conflict).
+If open auto-submission PRs touch `_data/special_events.yml`, inspect them and avoid overlapping additions. Note dependencies or likely conflicts in your PR. Do not merge another PR or incorporate its unrelated changes without authorization; the maintainer handles merging.
 
 ---
 
-## Step 8d — Pre-flight: validate tags against the canonical list
+## Step 8d — Pre-flight: run the repository validators
 
-CI does not currently fail on non-canonical tags — they just silently don't filter. Before opening the PR, sanity-check from the repo root:
+Run the actual checks from the repo root before committing. These validate the complete event file, not just a fragile extraction of added diff lines:
 
 ```bash
-# extract every tag your branch added, dedupe
-git diff main..HEAD -- _data/special_events.yml | awk '/^\+  - / && !/^\+  - [a-z]+:/ {print $2}' | sort -u
-
-# compare against the canonical slug list
-yq '.[].slug' _data/event_tags.yml | sort -u
+bundle exec ruby scripts/tests/test_tag_vocabulary.rb
+bundle exec ruby scripts/tests/test_special_event_duplicates.rb
+python3 scripts/validate_image_hosts.py _data/special_events.yml
+bundle exec jekyll build --trace
+bundle exec ruby scripts/tests/test_built_site.rb
+git diff --check
 ```
 
-Every entry in the first list must also appear in the second. If not, fix it before opening the PR (map per the table in Step 8) or the tag won't filter.
+Use the repository's documented Ruby/Bundler environment. Record actual results and any local environment limitations; do not claim a build passed unless it ran. After publishing, inspect both `validate event data` and `validate templates and structured data` in GitHub Actions.
 
 ---
 
@@ -402,7 +420,7 @@ Once the PR is merged, close the tracking issue (or it closes automatically if y
 
 ## Automated ingest coverage (spot-check, but do not duplicate)
 
-These sources are covered by daily GitHub Actions workflows. You usually do not need to transcribe them manually, but you should spot-check the live source against `_data/special_events.yml` during a social scan. If a workflow is lagging or missing a current upcoming event, add a manual backfill with the original source URL.
+These sources have configured daily GitHub Actions workflows. Configuration or a green run does not prove successful coverage: some ingesters return successfully after fetching no usable events. Spot-check the live source against `_data/special_events.yml`; backfill verified omissions with the original source URL.
 
 | Source | Workflow file | Status verified 2026-09-04 |
 |---|---|---|
@@ -416,23 +434,17 @@ These sources are covered by daily GitHub Actions workflows. You usually do not 
 
 If an automated workflow is producing errors or missing events, check the **Actions** tab: https://github.com/TerceiraEvents/EventosTerceira.pt/actions and mention the backfill in the PR body.
 
+For source-health checks, distinguish fetch status, parsed event count, Terceira candidate count, duplicates, and missing verified events. Report a failed/blocked/non-calendar response as such, not as zero events. CMPV currently tries guessed feed paths, while the What's On ingester inspects homepage JSON-LD; neither substitutes for paginating the live agenda. Do not assume an event is in Angra merely because its page mentions Terceira. Parser changes need their own tested implementation; this runbook does not repair those ingesters.
+
 ---
 
 ## Kicking off with an AI assistant
 
 This whole workflow can be handed off to Claude (or another AI with browser access) with a single prompt:
 
-> "Run the documented Terceira source scan, including official calendars, Instagram, Facebook, and the discovery sources in the source inventory. Check source health and look for new qualified sources through tagged organizers, artists, venues, Songkick, Bandsintown, Eventbrite, and Shotgun. Cross-check every candidate against `_data/special_events.yml` and `_data/weekly.yml`. Prefer first-party event details and label any source or group that could not be scanned; do not claim comprehensive social coverage when access is blocked. Only use tags from this canonical set: `kid-friendly, live-music, cinema, theater, dance, nightlife, karaoke, food-drink, exhibition, literature, workshop, free, outdoor, bullfighting`. Map common look-alikes: concert to live-music, theatre to theater, comedy to theater, film to cinema, talk to literature, sports to outdoor, static art to exhibition, and hands-on art to workshop. Skip touradas à corda unless its workflow is broken. Re-host any flyer before using it as `image:`. Create a feature branch, add verified events and source-documentation changes, run the repository validations, open a PR, and request review. Never merge the PR."
+> "Run `docs/runbook-social-scan.md` and its linked `docs/event-source-discovery.md` playbook. Check official calendars, organizer programmes, Instagram, Facebook, and discovery services. Use the geographic/category query matrix, overlapping publication window, ongoing events, and future announcements; do not stop at the existing venue list. Follow tagged organizers and collaborators to qualify new sources. Cross-check every candidate against all of `_data/special_events.yml`, `_data/weekly.yml`, and open PRs. Preserve maintainer-confirmed recurrences unless there is affirmative evidence of a change. Prefer first-party details, resolve relative dates from the original post timestamp, and report blocked/partial sources without claiming comprehensive coverage. Use canonical tags from `_data/event_tags.yml`. Skip touradas à corda unless its workflow is broken. Re-host any flyer before using it as `image:`. Create a feature branch from current main, add verified events and source-documentation changes, run repository validations, open a PR, and request review. Never merge the PR."
 
-The AI will:
-1. Load the resources page to get the account list
-2. Navigate to each Instagram/Facebook account
-3. Read recent posts and extract event details
-4. Cross-check against `special_events.yml` to avoid duplicates
-5. Return formatted YAML ready to paste into a PR, plus a draft tracking issue
-6. Flag any image URLs that need to go through the rehost workflow
-
-After the AI returns the findings, you review, open the issue (or ask the AI to open it), apply the YAML to the file, and open the PR.
+For an authorized implementation, the assistant follows this runbook and the linked discovery playbook, updates the data/docs on a fresh branch, validates locally, and opens the PR. It reports verified additions, corrections, source improvements, unresolved leads, and CI status. It does not merge. For a research-only request, return findings and suggested changes without publishing or changing the repository.
 
 **Prompt for just the issue:**
 > "Write an internal GitHub issue detailing all the new events found, following the format of issue #141."

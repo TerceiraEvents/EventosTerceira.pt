@@ -38,8 +38,8 @@ lang_alt: /resources/
 <div class="venue-card">
   <h3>byA&ccedil;ores &mdash; Agenda da Terceira</h3>
   <div class="venue-regulars">
-    <p>Fonte secundária de descoberta para festas, música, eventos comunitários e exposições. O calendário apresentado parecia desatualizado na verificação de 4 de setembro, por isso não deve ser a única fonte para datas ou locais. O antigo endereço Agenda&ccedil;ores redireciona para aqui.</p>
-    <p><a href="https://byacores.com/en/agenda/terceira-island/">byacores.com</a></p>
+    <p>Fonte secundária de descoberta para festas, música, eventos comunitários e exposições. A página portuguesa da Terceira apresentava listagens atuais a 4 de setembro de 2026, ao contrário da versão inglesa anteriormente consultada. Confirma datas e locais junto da organização original. O antigo endereço Agenda&ccedil;ores redireciona para aqui.</p>
+    <p><a href="https://byacores.com/terceira/">byacores.com/terceira</a></p>
   </div>
 </div>
 
@@ -104,6 +104,30 @@ lang_alt: /resources/
   <div class="venue-regulars">
     <p>Fonte de descoberta que requer sessão iniciada e pode revelar eventos ausentes noutros sítios. Os resultados podem estar limitados pelo login ou incompletos, por isso confirma cada listagem junto da organização ou do espaço.</p>
     <p><a href="https://www.facebook.com/events/">facebook.com/events</a></p>
+  </div>
+</div>
+
+<div class="venue-card">
+  <h3>AIR Centre</h3>
+  <div class="venue-regulars">
+    <p>Fonte da própria organização para atividades de ciência cidadã e do mar, incluindo eventos públicos na Terceira. A agenda também inclui eventos internacionais e online, por isso confirma o local, os requisitos de participação e o estado das inscrições.</p>
+    <p><a href="https://www.aircentre.org/pt/events">Eventos do AIR Centre</a></p>
+  </div>
+</div>
+
+<div class="venue-card">
+  <h3>Azores Bravos Trail</h3>
+  <div class="venue-regulars">
+    <p>Site da organização de provas de trail e caminhada na Terceira. Consulta o programa da edição atual para distâncias, locais de partida e prazos de inscrição; os resumos turísticos mais antigos podem divergir.</p>
+    <p><a href="https://azoresbravostrail.com/">Site da organização</a> &middot; <a href="https://azoresbravostrail.com/231-2/">Programa</a></p>
+  </div>
+</div>
+
+<div class="venue-card">
+  <h3>Festing</h3>
+  <div class="venue-regulars">
+    <p>Fonte secundária de descoberta de eventos em Portugal, incluindo a Terceira. Pesquisa por local e carrega mais resultados, seguindo depois as ligações da organização original. Confirma o ano, o local e o último dia no programa original antes de fazer planos.</p>
+    <p><a href="https://www.festingapp.com/en/events">Explorar eventos</a></p>
   </div>
 </div>
 
