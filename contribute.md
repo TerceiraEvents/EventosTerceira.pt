@@ -86,10 +86,13 @@ lang_alt: /pt/contribute/
   events:
     - name: Karaoke Night
       venue: Tasca do Cam&otilde;es
-      time: "20:30"
+      time: "22:00"
       description: Weekly karaoke at Cam&otilde;es
       address: Rua Da Rocha 64, Angra do Hero&iacute;smo
+      source_url: https://www.instagram.com/tascadocamoes/reel/DbQth6_owWN/
+      verified_on: "2026-09-04"
 </code></pre>
+    <p>Include a direct first-party <code>source_url</code> and the date it was checked in <code>verified_on</code>. Recheck recurring records during later scans because venue schedules change.</p>
   </div>
 </div>
 
