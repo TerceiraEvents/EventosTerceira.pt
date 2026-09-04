@@ -5984,10 +5984,11 @@ Come join us and support our festivities!"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
   map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
-  time: "21:45"
+  time: "23:30"
   description: "Live concert by 3HP at Lar Doce Livro."
   description_pt: "Concerto ao vivo dos 3HP na Lar Doce Livro."
   source_url: https://whatson.azores.gov.pt/en/evento/3hp-1759327843988/
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
   tags:
   - live-music
 
@@ -6019,4 +6020,647 @@ Come join us and support our festivities!"
   source_uid: "1882@angradoheroismo.pt"
   tags:
   - literature
+  - free
+
+# Manual source-audit backfills from the 2026-09-04 scan
+
+- date: 2026-09-04
+  end_date: 2026-10-09
+  name: "Exposição 50 Anos de Autonomia dos Açores"
+  name_en: "50 Years of Azorean Autonomy Exhibition"
+  venue: Paços do Concelho (Town Hall)
+  address: "Praça Velha, 9700-145 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os+do+Concelho+Angra+do+Hero%C3%ADsmo
+  description: "Exhibition marking 50 years of Azorean autonomy. The opening is at 15:00 on 4 September and the exhibition remains on view through 9 October during Town Hall opening hours."
+  description_pt: "Exposição comemorativa dos 50 anos da Autonomia dos Açores. A inauguração realiza-se às 15h00 de 4 de setembro e a mostra fica patente até 9 de outubro durante o horário dos Paços do Concelho."
+  source_url: https://angradoheroismo.pt/evento/exposicao-50-anos-de-autonomia-dos-acores/
+  tags:
+  - exhibition
+  - free
+
+- date: 2026-09-04
+  end_date: 2026-09-14
+  name: "Festas de Nossa Senhora da Penha de França 2026"
+  name_en: "Our Lady of Penha de França Festivities 2026"
+  venue: São Pedro
+  address: "São Pedro, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Penha+de+Fran%C3%A7a+S%C3%A3o+Pedro+Angra+do+Hero%C3%ADsmo
+  description: "Community and religious festivities in honour of Our Lady of Penha de França, with music and outdoor parish programming."
+  description_pt: "Festas comunitárias e religiosas em honra de Nossa Senhora da Penha de França, com música e programação ao ar livre na freguesia."
+  source_url: https://byacores.com/en/agenda/terceira/festividades/festas-de-nossa-senhora-da-penha-de-franca-ssqoka/
+  tags:
+  - live-music
+  - outdoor
+  - free
+
+- date: 2026-09-05
+  end_date: 2026-09-15
+  name: "O Caos em Mim"
+  name_en: "The Chaos in Me"
+  venue: Casa do Sal / Oficina d'Angra
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa+do+Sal+Oficina+Angra+do+Hero%C3%ADsmo
+  time: "21:00"
+  description: "Exhibition by ANOISER at Casa do Sal. Opening at 21:00 on 5 September; visits from 8 to 15 September, Monday to Friday, 18:00 to 19:30. Free entry."
+  description_pt: "Exposição de ANOISER na Casa do Sal. Inauguração às 21h00 de 5 de setembro; visitas de 8 a 15 de setembro, de segunda a sexta, das 18h00 às 19h30. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/o-caos-em-mim/
+  instagram: https://www.instagram.com/oficinadangra/p/Dcv_uMNjtjE/
+  tags:
+  - exhibition
+  - free
+
+- date: 2026-09-05
+  end_date: 2026-09-13
+  name: "Festas de Santa Luzia 2026"
+  name_en: "Santa Luzia Festivities 2026"
+  venue: Santa Luzia
+  address: "Santa Luzia, Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Santa+Luzia+Praia+da+Vit%C3%B3ria
+  description: "Nine days of community and religious festivities in Santa Luzia, with music and outdoor parish programming."
+  description_pt: "Nove dias de festas comunitárias e religiosas em Santa Luzia, com música e programação ao ar livre na freguesia."
+  source_url: https://byacores.com/agenda/terceira/festividades/festas-de-santa-luzia-2026-praia-da-vitoria-sibxdk/
+  tags:
+  - live-music
+  - outdoor
+  - free
+
+- date: 2026-09-05
+  name: "Tommy G ao vivo"
+  name_en: "Tommy G Live"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "21:30"
+  description: "Live covers by Tommy G, followed by a Funk The Banks DJ set at 23:30. Free entry."
+  description_pt: "Concerto de covers com Tommy G, seguido de DJ set de Funk The Banks às 23h30. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - live-music
+  - nightlife
+  - free
+
+- date: 2026-09-06
+  name: "Domingos com Música com Gustaaf van Manen"
+  name_en: "Sundays with Music with Gustaaf van Manen"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo
+  time: "11:00"
+  description: "Sunday-morning concert with Gustaaf van Manen at the Angra do Heroísmo Museum."
+  description_pt: "Concerto de domingo de manhã com Gustaaf van Manen no Museu de Angra do Heroísmo."
+  source_url: https://angradoheroismo.pt/evento/domingos-com-musica-com-gustaaf-van-manen-3/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-09-07
+  name: "Praticar Inglês com Daniel Burg"
+  name_en: "Practise English with Daniel Burg"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  time: "16:00"
+  description: "Informal English practice session with Daniel Burg at the public library."
+  description_pt: "Sessão informal de prática de inglês com Daniel Burg na Biblioteca Pública."
+  source_url: https://angradoheroismo.pt/evento/praticar-ingles-com-daniel-burg-7/
+  tags:
+  - workshop
+  - free
+
+- date: 2026-09-07
+  name: "Lindy Hop na Casa do Sal"
+  name_en: "Lindy Hop at Casa do Sal"
+  venue: Casa do Sal / Oficina d'Angra
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa+do+Sal+Oficina+Angra+do+Hero%C3%ADsmo
+  time: "18:30"
+  description: "Free Lindy Hop session with Arianna Meschia. A second session takes place at the same time on 9 September. Registration required."
+  description_pt: "Sessão gratuita de Lindy Hop com Arianna Meschia. Realiza-se uma segunda sessão à mesma hora no dia 9 de setembro. Inscrição obrigatória."
+  instagram: https://www.instagram.com/oficinadangra/reel/DcZmpTpjP4d/
+  tags:
+  - dance
+  - workshop
+  - free
+
+- date: 2026-09-08
+  name: "Bric-a-Brac: O tic-tac estalado das máquinas de escrever"
+  name_en: "Bric-a-Brac: The Sharp Tick-Tock of Typewriters"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Bric-a-Brac session with Luiz Fagundes Duarte, coordinated by José L. Neto. Free entry."
+  description_pt: "Sessão Bric-a-Brac com Luiz Fagundes Duarte, coordenada por José L. Neto. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - literature
+  - free
+
+- date: 2026-09-09
+  name: "Lançamento de A Utopia do Vazio"
+  name_en: "Launch of The Utopia of Emptiness"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Launch of A Utopia do Vazio by Tomás Ortins. Free entry."
+  description_pt: "Lançamento de «A Utopia do Vazio», de Tomás Ortins. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - literature
+  - free
+
+- date: 2026-09-10
+  name: "Dar Tempo ao Tempo"
+  name_en: "Giving Time to Time"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Poetry with Sílvia Laureano, Sofia Laureano, and guests, with music by João da Ilha. Free entry."
+  description_pt: "Poesia com Sílvia Laureano, Sofia Laureano e convidados, com música de João da Ilha. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - literature
+  - live-music
+  - free
+
+- date: 2026-09-11
+  name: "Conversa com Marta Silva: A Comunicação Social nos Açores"
+  name_en: "Conversation with Marta Silva: The Media in the Azores"
+  venue: Núcleo de História Militar Manuel Coelho Baptista de Lima
+  address: "Rua da Boa Nova, 9700-160 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=N%C3%BAcleo+de+Hist%C3%B3ria+Militar+Angra+do+Hero%C3%ADsmo
+  time: "18:00"
+  description: "Conversation with journalist Marta Silva about the media in the Azores. Free entry."
+  description_pt: "Conversa com a jornalista Marta Silva sobre a comunicação social nos Açores. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/conversa-com-marta-silva-a-comunicacao-social-nos-acores/
+  instagram: https://www.instagram.com/museu.angra/p/Dcsy64ptz_m/
+  tags:
+  - literature
+  - free
+
+- date: 2026-09-11
+  name: "Noite de Lindy Hop"
+  name_en: "Lindy Hop Night"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "Free Lindy Hop workshop with Arianna Meschia at 20:00, followed by social dancing at 20:45."
+  description_pt: "Oficina gratuita de Lindy Hop com Arianna Meschia às 20h00, seguida de baile às 20h45."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - dance
+  - workshop
+  - free
+
+- date: 2026-09-12
+  name: "Concerto Incertus Author"
+  name_en: "Incertus Author Concert"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo
+  time: "20:30"
+  description: "Concert by Incertus Author at the Angra do Heroísmo Museum."
+  description_pt: "Concerto de Incertus Author no Museu de Angra do Heroísmo."
+  source_url: https://angradoheroismo.pt/evento/concerto-incertus-author/
+  tags:
+  - live-music
+
+- date: 2026-09-12
+  name: "Felix The First e Tony Luca ao vivo"
+  name_en: "Felix The First and Tony Luca Live"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "21:30"
+  description: "Felix The First performs at 21:30, followed by live covers from Tony Luca at 23:30. Free entry."
+  description_pt: "Felix The First atua às 21h30, seguido de covers ao vivo por Tony Luca às 23h30. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - live-music
+  - nightlife
+  - free
+
+- date: 2026-09-12
+  name: "Angra Future Sound: Closing Summer Pool Party"
+  name_en: "Angra Future Sound: Closing Summer Pool Party"
+  venue: Zona Balnear do Refugo
+  address: "Refugo, Porto Judeu, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Zona+Balnear+do+Refugo+Terceira
+  time: "15:00"
+  description: "Free end-of-summer electronic music party at the Refugo bathing area, running from 15:00 to 02:00."
+  description_pt: "Festa gratuita de música eletrónica de encerramento do verão na zona balnear do Refugo, das 15h00 às 02h00."
+  source_url: https://byacores.com/agenda/terceira/musica/angra-future-sound-closing-summer-pool-party-sudane/
+  tags:
+  - nightlife
+  - live-music
+  - outdoor
+  - free
+
+- date: 2026-09-13
+  name: "Um Abraço pela Paz"
+  name_en: "An Embrace for Peace"
+  venue: Santuário de Nossa Senhora dos Milagres da Serreta
+  address: "Serreta, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Santu%C3%A1rio+da+Serreta+Terceira
+  description: "An 80-kilometre relay around Terceira in support of peace, starting and finishing at the Serreta sanctuary. Registration required."
+  description_pt: "Estafeta de 80 quilómetros à volta da Terceira em defesa da paz, com partida e chegada no Santuário da Serreta. Inscrição obrigatória."
+  source_url: https://angradoheroismo.pt/evento/um-abraco-pela-paz/
+  instagram: https://www.instagram.com/oficinadangra/p/Dceh4kygNfD/
+  tags:
+  - outdoor
+
+- date: 2026-09-13
+  name: "Domingos com Música com Gustaaf van Manen"
+  name_en: "Sundays with Music with Gustaaf van Manen"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo
+  time: "11:00"
+  description: "Sunday-morning concert with Gustaaf van Manen at the Angra do Heroísmo Museum."
+  description_pt: "Concerto de domingo de manhã com Gustaaf van Manen no Museu de Angra do Heroísmo."
+  source_url: https://angradoheroismo.pt/evento/domingos-com-musica-com-gustaaf-van-manen-4/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-09-15
+  name: "Curtas sobre a Ilha Terceira"
+  name_en: "Short Documentaries About Terceira"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Short documentaries on Terceira's landscape, history, heritage, parishes, and identities, presented with CMAH, VITEC, Hugo Tiago, and ShortCutz 2026. Free entry."
+  description_pt: "Curtas documentais sobre a paisagem, história, património, freguesias e identidades da Terceira, com CMAH, VITEC, Hugo Tiago e ShortCutz 2026. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - cinema
+  - free
+
+- date: 2026-09-16
+  name: "Conferências na Boa Nova: O Arreio Militar"
+  name_en: "Boa Nova Conferences: Military Harness"
+  venue: Núcleo de História Militar Manuel Coelho Baptista de Lima
+  address: "Rua da Boa Nova, 9700-160 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=N%C3%BAcleo+de+Hist%C3%B3ria+Militar+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "Boa Nova conference devoted to military harness and equipment."
+  description_pt: "Conferência na Boa Nova dedicada ao arreio e equipamento militar."
+  source_url: https://angradoheroismo.pt/evento/conferencias-na-boa-nova-o-arreio-militar/
+  tags:
+  - literature
+
+- date: 2026-09-16
+  name: "Oficina de aguarela para adultos"
+  name_en: "Adult Watercolour Workshop"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:00"
+  description: "Ninety-minute adult watercolour workshop led by Sá Vila. Registration required; €5 for adults and €4 for participants aged 17 or younger."
+  description_pt: "Oficina de aguarela para adultos, com duração de 90 minutos, orientada por Sá Vila. Inscrição obrigatória; 5 € para adultos e 4 € até aos 17 anos."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - workshop
+
+- date: 2026-09-17
+  name: "Horizonte Comum: Grupo de Leituras e Estudos Feministas"
+  name_en: "Common Horizon: Feminist Reading and Study Group"
+  venue: Casa do Sal / Oficina d'Angra
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa+do+Sal+Oficina+Angra+do+Hero%C3%ADsmo
+  time: "18:00"
+  description: "First meeting of a free feminist reading and study group, continuing every other Thursday from 18:00 to 19:30. Registration required."
+  description_pt: "Primeiro encontro de um grupo gratuito de leituras e estudos feministas, com continuidade quinzenal às quintas-feiras, das 18h00 às 19h30. Inscrição obrigatória."
+  source_url: https://angradoheroismo.pt/evento/horizonte-comum-grupo-de-leituras-e-estudos-feministas/
+  instagram: https://www.instagram.com/oficinadangra/p/Dcgu4r3Ed2K/
+  tags:
+  - literature
+  - workshop
+  - free
+
+- date: 2026-09-17
+  name: "Poemas para Setembro"
+  name_en: "Poems for September"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Poetry session with Madalena Ávila. Free entry."
+  description_pt: "Sessão de poesia com Madalena Ávila. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - literature
+  - free
+
+- date: 2026-09-18
+  name: "Encontro Monte Brasil Festival"
+  name_en: "Monte Brasil Festival Meeting"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Monte Brasil Festival meeting with Frederico Lourenço, Miguel Monjardino, and Father Júlio Rocha. Free entry."
+  description_pt: "Encontro Monte Brasil Festival com Frederico Lourenço, Miguel Monjardino e o Padre Júlio Rocha. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - literature
+  - free
+
+- date: 2026-09-18
+  name: "Jason Rubero: The Sun Machines"
+  name_en: "Jason Rubero: The Sun Machines"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "22:30"
+  description: "Jason Rubero presents The Sun Machines with guests K-9 Cat and Felix The First, followed at midnight by a JL Smooth electronic DJ set. Free entry."
+  description_pt: "Jason Rubero apresenta «The Sun Machines» com os convidados K-9 Cat e Felix The First, seguido à meia-noite por um DJ set eletrónico de JL Smooth. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - live-music
+  - nightlife
+  - free
+
+- date: 2026-09-19
+  name: "A Playlist de António Neves: Do groove ao silêncio"
+  name_en: "António Neves's Playlist: From Groove to Silence"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "António Neves shares a personal playlist moving from groove to silence. Free entry."
+  description_pt: "António Neves partilha uma seleção musical pessoal, do groove ao silêncio. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - live-music
+  - literature
+  - free
+
+- date: 2026-09-20
+  name: "Domingos com Música com Gustaaf van Manen"
+  name_en: "Sundays with Music with Gustaaf van Manen"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo
+  time: "11:00"
+  description: "Sunday-morning concert with Gustaaf van Manen at the Angra do Heroísmo Museum."
+  description_pt: "Concerto de domingo de manhã com Gustaaf van Manen no Museu de Angra do Heroísmo."
+  source_url: https://angradoheroismo.pt/evento/domingos-com-musica-com-gustaaf-van-manen-5/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-09-20
+  name: "O Cinema da Minha Vida: A Voz de Hind Rajab"
+  name_en: "The Cinema of My Life: The Voice of Hind Rajab"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Recreio+dos+Artistas+Angra+do+Hero%C3%ADsmo
+  time: "18:00"
+  description: "Screening of The Voice of Hind Rajab in the second season of O Cinema da Minha Vida."
+  description_pt: "Exibição de «A Voz de Hind Rajab» na segunda temporada de O Cinema da Minha Vida."
+  source_url: https://angradoheroismo.pt/evento/o-cinema-da-minha-vida-2-a-temporada-2026-%f0%9f%8e%aca-voz-de-hind-rajab/
+  tags:
+  - cinema
+
+- date: 2026-09-21
+  name: "Praticar Inglês com Daniel Burg"
+  name_en: "Practise English with Daniel Burg"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  time: "16:00"
+  description: "Informal English practice session with Daniel Burg at the public library."
+  description_pt: "Sessão informal de prática de inglês com Daniel Burg na Biblioteca Pública."
+  source_url: https://angradoheroismo.pt/evento/praticar-ingles-com-daniel-burg-7/
+  tags:
+  - workshop
+  - free
+
+- date: 2026-09-23
+  name: "O Filme que me Marcou: O Gosto dos Outros"
+  name_en: "The Film That Marked Me: The Taste of Others"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Ana Brum presents Agnès Jaoui's 2000 film The Taste of Others, moderated by Hugo Tiago. Free entry."
+  description_pt: "Ana Brum apresenta o filme «O Gosto dos Outros», de Agnès Jaoui (2000), com moderação de Hugo Tiago. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - cinema
+  - free
+
+- date: 2026-09-24
+  name: "Grandes Livros: Orgulho e Preconceito"
+  name_en: "Great Books: Pride and Prejudice"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Diogo Ourique discusses Jane Austen's Pride and Prejudice, moderated by Marta Cruz. Free entry."
+  description_pt: "Diogo Ourique conversa sobre «Orgulho e Preconceito», de Jane Austen, com moderação de Marta Cruz. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - literature
+  - free
+
+- date: 2026-09-24
+  name: "Davi Days nas Festas do Porto Martins"
+  name_en: "Davi Days at the Porto Martins Festivities"
+  venue: Porto Martins
+  address: "Porto Martins, Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Porto+Martins+Praia+da+Vit%C3%B3ria
+  time: "22:00"
+  description: "Closing-night concert by Davi Days during the Santa Margarida festivities in Porto Martins."
+  description_pt: "Concerto de encerramento de Davi Days nas Festas de Santa Margarida do Porto Martins."
+  source_url: https://praiaexpresso.com/2026/08/30/fpm2026/
+  tags:
+  - live-music
+  - outdoor
+
+- date: 2026-09-25
+  name: "Os Açores vão precisar de um resgate?"
+  name_en: "Will the Azores Need a Bailout?"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Debate with Sérgio Ávila, Tomaz Dentinho, António Lima, and Pedro Ferreira, moderated by Joel Neto. Free entry."
+  description_pt: "Debate com Sérgio Ávila, Tomaz Dentinho, António Lima e Pedro Ferreira, moderado por Joel Neto. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - literature
+  - free
+
+- date: 2026-09-25
+  name: "Festa Americana VI"
+  name_en: "American Party VI"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "20:30"
+  description: "Fried Okra Americana open jam with Brenda Koenig, Drew Philips, and guests. Free entry."
+  description_pt: "Open jam Fried Okra Americana com Brenda Koenig, Drew Philips e convidados. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-09-25
+  end_date: 2026-10-04
+  name: "Jazz na Rua 2026"
+  name_en: "Jazz in the Street 2026"
+  venue: Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Angra+do+Hero%C3%ADsmo
+  description: "Free ANGRAJAZZ outreach programme at public and partner spaces across Angra, with daily performances by Bruno Sebastien Quarteto, João Santos, Jazz O'Phonia, Marina Jazz O'Phonia, and Pedro Neves Trio, plus a Casa do Sal jam and a closing workshop. Check the source for the venue-by-venue schedule."
+  description_pt: "Programa gratuito de extensão do ANGRAJAZZ em espaços públicos e parceiros de Angra, com atuações diárias de Bruno Sebastien Quarteto, João Santos, Jazz O'Phonia, Marina Jazz O'Phonia e Pedro Neves Trio, além de jam na Casa do Sal e formação de encerramento. Consulta a fonte para o programa por local."
+  source_url: https://byacores.com/agenda/terceira/musica/angrajazz-2026-jazz-na-rua-si6sii/
+  tags:
+  - live-music
+  - outdoor
+  - free
+
+- date: 2026-09-25
+  name: ":PAPERCUTZ - Do.Outro.Lado.Do.Espelho"
+  name_en: ":PAPERCUTZ - On.The.Other.Side.Of.The.Mirror"
+  venue: Teatro Angrense
+  address: "Rua da Esperança 48-52, 9700-073 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense
+  time: "21:00"
+  description: "Concert by :PAPERCUTZ at Teatro Angrense, presented with the Conservatório Regional de Angra do Heroísmo."
+  description_pt: "Concerto de :PAPERCUTZ no Teatro Angrense, apresentado com o Conservatório Regional de Angra do Heroísmo."
+  source_url: https://papercutz.bandcamp.com/
+  tags:
+  - live-music
+
+- date: 2026-09-25
+  name: "Inauguração da Mostra de Jóias"
+  name_en: "Jewellery Exhibition Opening"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo
+  time: "18:00"
+  description: "Opening of a jewellery exhibition at the Angra do Heroísmo Museum."
+  description_pt: "Inauguração de uma mostra de joias no Museu de Angra do Heroísmo."
+  source_url: https://angradoheroismo.pt/evento/inauguracao-mostra-de-joias/
+  tags:
+  - exhibition
+
+- date: 2026-09-26
+  name: "Oficina de expressão musical para bebés e crianças"
+  name_en: "Music Expression Workshop for Babies and Children"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "11:30"
+  description: "Sixty-minute music-expression workshop for children aged six months and older, led by Isabel Barcelos of Cantinho da Música. Registration required; €5 per child."
+  description_pt: "Oficina de expressão musical de 60 minutos para crianças a partir dos seis meses, orientada por Isabel Barcelos, do Cantinho da Música. Inscrição obrigatória; 5 € por criança."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - kid-friendly
+  - workshop
+
+- date: 2026-09-26
+  name: "Sugarbush Road e datILHA"
+  name_en: "Sugarbush Road and datILHA"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "21:30"
+  description: "Live concert by Sugarbush Road at 21:30, followed by datILHA's global-beat DJ set at 23:00. Free entry."
+  description_pt: "Concerto dos Sugarbush Road às 21h30, seguido de DJ set global beat de datILHA às 23h00. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - live-music
+  - nightlife
+  - free
+
+- date: 2026-09-26
+  name: "Inauguração de The Journey, de Rohit Ferreira"
+  name_en: "Opening of The Journey by Rohit Ferreira"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu+de+Angra+do+Hero%C3%ADsmo
+  time: "15:00"
+  description: "Opening of The Journey, an exhibition by Rohit Ferreira, at the Angra do Heroísmo Museum."
+  description_pt: "Inauguração de «The Journey», exposição de Rohit Ferreira, no Museu de Angra do Heroísmo."
+  source_url: https://angradoheroismo.pt/evento/inauguracao-the-journey-de-rohit-ferreira-2/
+  tags:
+  - exhibition
+
+- date: 2026-09-29
+  name: "Eco-conversas: O preço da poluição"
+  name_en: "Eco Conversations: The Price of Pollution"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Discussion with João Roldão, Yara Sotto Mayor of GenZero, and Massimo Gelich. Free entry."
+  description_pt: "Conversa com João Roldão, Yara Sotto Mayor, da GenZero, e Massimo Gelich. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - literature
+  - free
+
+- date: 2026-09-30
+  name: "Criação, evolução ou ambas: como ler o Génesis?"
+  name_en: "Creation, Evolution, or Both: How Should Genesis Be Read?"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Live podcast discussion with Pastor Rúben Couto and Father Júlio Rocha, moderated by Joel Neto. Free entry."
+  description_pt: "Conversa em formato podcast com o Pastor Rúben Couto e o Padre Júlio Rocha, moderada por Joel Neto. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - literature
+  - free
+
+- date: 2026-10-01
+  name: "História da imprensa escrita da Terceira"
+  name_en: "History of Terceira's Press"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Talk by Francisco Miguel Nogueira on the history of Terceira's press, from the island's first newspaper to the present. Free entry."
+  description_pt: "Conversa com Francisco Miguel Nogueira sobre a história da imprensa escrita da Terceira, do primeiro jornal da ilha à atualidade. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - literature
+  - free
+
+- date: 2026-10-02
+  name: "11 de Setembro de 2001: entrevista ao Major Cândido Mendes"
+  name_en: "11 September 2001: Interview with Major Cândido Mendes"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-184 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo
+  time: "18:15"
+  description: "Joel Neto interviews Major Cândido Mendes about his experience at the Pentagon on 11 September 2001. Free entry."
+  description_pt: "Joel Neto entrevista o Major Cândido Mendes sobre a sua experiência no Pentágono a 11 de setembro de 2001. Entrada livre."
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/Dclfu54CNpn/
+  tags:
+  - literature
+  - free
+
+- date: 2026-10-30
+  name: "Apresentação do álbum Gratidão: Sónia Pereira Trio"
+  name_en: "Gratitude Album Presentation: Sónia Pereira Trio"
+  venue: Teatro Angrense
+  address: "Rua da Esperança 48-52, 9700-073 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense
+  time: "21:30"
+  description: "Sónia Pereira Trio presents the debut album Gratidão at Teatro Angrense. Free entry."
+  description_pt: "Sónia Pereira Trio apresenta o álbum de estreia «Gratidão» no Teatro Angrense. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/apresentacao-de-album-gratidao-sonia-pereira-trio/
+  instagram: https://www.instagram.com/angradoheroismo/p/Dcx7PwBl-xF/
+  tags:
+  - live-music
   - free

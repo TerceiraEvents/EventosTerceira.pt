@@ -3,6 +3,7 @@
 > **Purpose:** Step-by-step guide for kicking off a manual Instagram/Facebook scan to find new events and write them into `_data/special_events.yml` via a PR.
 > **Cadence:** Run once a week (or whenever you notice the upcoming-events list is getting thin).
 > **Time required:** ~30–60 minutes depending on how active venues have been.
+> **Source status last verified:** 2026-09-04.
 
 ---
 
@@ -24,38 +25,44 @@ The canonical list of venue social handles lives in `_data/venues.yml`. The cano
 
 ## Source Inventory
 
-Use this as the comprehensive starting list for Angra and Praia scans.
+Use this as a maintained starting list for Angra and Praia scans. It is not a guarantee of comprehensive social coverage: private groups, stories, login walls, bot protection, and short-lived posts can all hide events. Record any inaccessible source in the scan report instead of silently treating it as checked.
 
-| Source | Area | How it is handled | Manual scan action |
-|---|---|---|---|
-| CMAH events (`angradoheroismo.pt/eventos`) | Angra | `ingest-cmah.yml` | Compare the live page with `_data/special_events.yml`; backfill if the workflow missed a new listing |
-| `@angradoheroismo` | Angra | Manual | Follow and scan recent posts/carousels for events before they hit iCal |
-| Teatro Angrense / CCCAH | Angra | CMAH + Ticketline | Use CMAH/Ticketline as source of truth; avoid relying on unofficial/empty Facebook profiles |
-| Museu de Angra do Heroísmo + `@museu.angra` | Angra | `ingest-museu-angra.yml` + manual | Scan Instagram for early flyers and special family/outdoor events |
-| Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro | Angra | CMAH/Whatson/manual | Check Whatson and CMAH, then social posts for workshops and book events |
-| Lar Doce Livro (`@livraria_lardocelivro`) | Angra | Manual | Scan the weekly agenda carousel and event flyers |
-| Tasca do Camões (`@tascadocamoes`, Facebook) | Angra | Manual | Scan Instagram and Facebook Photos for live music flyers |
-| Havanna Club (`@havannaangra`, Facebook) | Angra | Manual | Scan weekly reels/posts for weekend DJ/live-act schedules |
-| Porta 42 (`@porta_42`) | Angra | Manual | Scan for Saturday DJ/theme nights and one-off parties |
-| The Texan / Garden Club (`@thetexanbar`, `@thegardenclub.angra`) | Angra | Manual | Check grid posts and story highlights for special nights |
-| Twins Club (`@twinstheclub`) | Angra/Praia nightlife | Manual | Distinguish recurring weekly nights from one-off guest DJ/special events |
-| Wine Not? (`@winenot.terceira`) | Angra | Manual | Scan for live music and tasting events |
-| Sala 319 (`@sala.319`) | Angra | Manual | Usually daily menus; only add unusual dated events |
-| AMIT (`@amit.academiamusical`) | Angra | Manual | Scan for academy concerts, auditions, and showcase events |
-| Full Range (`@fullrange_rave`) | Angra | Manual | Check whether the page is available; as of 2026-07-08 it was unavailable |
-| CMPV events | Praia | `ingest-cmpv.yml` | Compare the live municipal feed with `_data/special_events.yml` |
-| Município Praia da Vitória (`facebook.com/MunicipioPraiaVitoria`) | Praia | Manual | Follow and scan for municipal programs, exhibitions, and family activities |
-| Agenda Praia Cultural (`facebook.com/agendapraiacultural`) | Praia | Manual | Follow and scan posts for Praia-specific cultural events |
-| Auditório do Ramo Grande | Praia | CMPV/Ticketline/manual | Cross-check Ticketline and municipal Facebook posts |
-| Casa Museu Vitorino Nemésio / Biblioteca Municipal Silvestre Ribeiro | Praia | CMPV/manual | Scan Agenda Praia Cultural and the municipal Facebook page |
-| What's On Azores | All islands | `ingest-whatson-azores.yml` | Filter to Terceira and compare current live listings against the repo |
-| Cultura Açores Agenda Cultural | All islands | Manual/reference | Filter to Terceira for cultural listings that are missing elsewhere |
-| Ticketline | Angra + Praia | `ingest-ticketline.yml` | Check for paid shows not yet represented in the data |
-| Visit Azores | All islands | `ingest-visit-azores.yml` | Spot-check for regional/festival listings |
-| Touradas à corda | Terceira | `ingest-touradas.yml` | Do not transcribe manually unless the workflow is broken |
-| Ilha Terceira - Eventos Facebook group | Terceira | Manual | Scan for community-shared events from sources not otherwise covered |
+| Source | Area | Role and current scan action |
+|---|---|---|
+| CMAH events (`angradoheroismo.pt/eventos`) | Angra | Primary first-party calendar. Compare the page and iCal with the repo. The iCal is live, but imported descriptions and all-day times still need manual verification. |
+| `@angradoheroismo` | Angra | Primary municipal social account. Scan recent posts and every slide in carousels. |
+| Teatro Angrense / CCCAH | Angra | Use CMAH and the venue/ticket seller as primary evidence. Do not rely on unofficial or empty Facebook profiles. |
+| Museu de Angra do Heroísmo + `@museu.angra` | Angra | The website endpoints returned 403 on 2026-09-04. Treat Instagram and the CMAH calendar as the practical primary sources until the feed recovers. |
+| BPARLSR (`bparlsr.azores.gov.pt/destaques/`) | Angra | First-party library calendar and monthly BiblioAgenda. The site is Cloudflare-protected, so scan it in a browser and use its calendar/iCal export when available. |
+| Casa do Sal / Oficina d'Angra (`@oficinadangra`) | Angra | Primary source for Casa do Sal. The old direct Casa do Sal Facebook page remains unavailable. |
+| Lar Doce Livro (`@livraria_lardocelivro`) | Angra | Scan the complete monthly agenda carousel and individual corrections. |
+| AMIT (`@amit.academiamusical`, `@espacoamit`, `@cjazzamit`) | Angra | Check the academy, event-space, and jazz-course accounts. The former `@auditorioamit` handle is unavailable. |
+| AAIP (`@aaipazores`) | Angra | Independent arts source. Cross-check ticketed events on Shotgun when its search is accessible. |
+| Tasca do Camões, Havanna, Porta 42, Texan, Garden Club, Twins, Wine Not?, Sala 319 | Angra/Praia nightlife | Scan recent grids, reels, and highlights. Skip ordinary recurring nights already represented in `_data/weekly.yml`. |
+| CMPV, `@cmpraiadavitoria`, `@agendapraiacultural` | Praia | Primary municipal sources. The guessed automation endpoints returned 404 on 2026-09-04, so browser and social checks are required. Agenda Praia Cultural's newest visible grid post was from July 2026. |
+| Auditório do Ramo Grande | Praia | Cross-check CMPV, Agenda Praia Cultural, and Ticketline. |
+| Casa Museu Vitorino Nemésio / Biblioteca Municipal Silvestre Ribeiro | Praia | Check CMPV and Agenda Praia Cultural directly. |
+| Cultura Açores (`culturacores.azores.gov.pt/agenda/`) | All islands | Current official culture agenda. The former `cultura.azores.gov.pt` address no longer resolves. The current site may require a browser because automated requests return 403. |
+| What's On Azores | All islands | Official discovery source, but automated access returned 403 on 2026-09-04. Use browser/search results or byAçores as a discovery fallback and verify against the organizer when possible. |
+| byAçores Terceira agenda | Terceira | Current discovery and cross-check source. `agendacores.pt` now redirects here. Treat aggregator entries as leads, not sole evidence when a first-party source exists. |
+| Ticketline | Angra + Praia | Useful for paid shows. Multi-session event pages can be assigned the wrong city/date by the current parser, so verify the Terceira session manually before adding it. |
+| Songkick + Bandsintown | Angra/Terceira | Music discovery sources that can expose touring artists before municipal calendars. Confirm the date and venue with the artist, promoter, or venue. |
+| Eventbrite + Shotgun | Terceira | Discovery for organizer-posted workshops, festivals, and independent arts. Expect bot/rate limits and verify local venue details. |
+| Visit Azores | All islands | The configured `/en/events` URL returned 404 on 2026-09-04. Do not count it as scanned until a replacement endpoint is found. |
+| Touradas à corda | Terceira | Covered by `ingest-touradas.yml`. Do not transcribe manually unless the workflow is broken. |
+| Ilha Terceira - Eventos Facebook group | Terceira | Community discovery only. Report explicitly when the group feed could not be scanned completely. |
 
-Follow status from the 2026-07-08 scan: the browser account follows the active Instagram and Facebook pages above where a follow button was available. `facebook.com/casadosal.angra` was unavailable, so use Oficina d'Angra/Casa do Sal or official CMAH sources for Casa do Sal events.
+Removed or downgraded sources as of 2026-09-04: `@fullrange_rave` and `@auditorioamit` were unavailable; the direct Casa do Sal Facebook page was unavailable; Agenda da Terceira had not posted a current agenda since February 2026; the old Cultura Açores domain failed DNS; and the configured Visit Azores endpoint returned 404.
+
+### Finding and qualifying new sources
+
+Do not limit discovery to the static account list. During each scan:
+
+1. Inspect co-authors, tagged accounts, venue tags, promoters, and recurring collaborators on confirmed local posts.
+2. Search the next 60 to 90 days by venue and artist on Songkick, Bandsintown, Eventbrite, Shotgun, and normal web search.
+3. Promote a candidate to the maintained list only when it has a clear first-party role or at least two recent, dated, Terceira-specific event posts.
+4. Use aggregators to find leads. Prefer the organizer, venue, artist, municipality, or ticket page for the final event details.
+5. Record the date checked, access failures, stale feeds, redirects, and parser errors in the PR body so the next scan starts from evidence rather than assumptions.
 
 ---
 
@@ -95,8 +102,12 @@ Start with official web agendas before social media. They are faster to scan and
 | CMAH official events | https://www.angradoheroismo.pt/eventos | Angra municipal events, Teatro Angrense, CCCAH, Casa do Sal, Museu, Biblioteca, Cinefreguesias |
 | Praia da Vitória municipal events | https://www.cmpv.pt/ | Praia municipal events, Auditório do Ramo Grande, Biblioteca Municipal, Casa Museu Vitorino Nemésio |
 | What's On Azores | https://whatson.azores.gov.pt/en/agenda/ | Filter or scan for `Terceira`; compare against the repo because the feed can lag or miss items |
-| Cultura Açores Agenda Cultural | https://cultura.azores.gov.pt/agenda-cultural | Filter `Localização` to `Terceira`; useful for cultural listings and public institutions |
+| BPARLSR highlights | https://bparlsr.azores.gov.pt/destaques/ | First-party library calendar, BiblioAgenda, and calendar exports |
+| Cultura Açores Agenda Cultural | https://culturacores.azores.gov.pt/agenda/ | Filter to `Terceira`; useful for cultural listings and public institutions |
+| byAçores Terceira | https://byacores.com/en/agenda/terceira-island/ | Discovery fallback for official and community listings; verify first-party details where possible |
 | Ticketline | https://ticketline.sapo.pt/ | Paid shows at Angra/Praia venues |
+| Songkick / Bandsintown | https://www.songkick.com/metro-areas/53979-portugal-angra-do-heroismo | Touring concerts; cross-check artist and venue sources |
+| Eventbrite / Shotgun | https://www.eventbrite.pt/d/portugal--terceira/events/ | Organizer-posted workshops and independent ticketed events |
 
 For each upcoming event **not already in `special_events.yml`**, note:
 - Event name (PT and EN if bilingual)
@@ -129,6 +140,9 @@ Navigate to each account below and scroll the grid looking for event flyers (pos
 | `@angradoheroismo` | Instagram | CMAH-sponsored concerts, exhibitions, festival announcements |
 | `@museu.angra` | Instagram | Official Museu de Angra do Heroísmo account; exhibitions, family programs, outdoor museum events |
 | `@amit.academiamusical` | Instagram | Academy concerts, showcases, auditions |
+| `@espacoamit`, `@cjazzamit` | Instagram | AMIT event-space programme and jazz-course events |
+| `@oficinadangra` | Instagram + Facebook | Primary Casa do Sal programme, workshops, concerts, and community projects |
+| `@aaipazores` | Instagram | Independent arts events and Shotgun-ticketed programmes |
 | `@livraria_lardocelivro` | Instagram | Weekly agenda carousel, concert/workshop/poetry posts |
 | `@havannaangra` | Instagram | Weekend DJ/live-act schedule posts (Fri/Sat/Sun) |
 | `@porta_42` | Instagram | Saturday night DJ/theme nights |
@@ -143,7 +157,8 @@ Navigate to each account below and scroll the grid looking for event flyers (pos
 |---|---|---|
 | `@winenot.terceira` | Instagram | Occasional live music nights |
 | `@sala.319` | Instagram | Primarily daily lunch menus; skip unless something unusual |
-| `@fullrange_rave` | Instagram | Page was unavailable as of 2026-07-08 — check if it's back |
+| `@caes.do.mar`, `@ruadireita.azores` | Instagram | Seasonal independent culture and festival programmes |
+| `@cmpraiadavitoria`, `@agendapraiacultural` | Instagram | Praia municipal and cultural programmes; note stale posting periods |
 
 ### For each event post found
 
@@ -175,7 +190,7 @@ Some venues post events primarily or exclusively on Facebook. Check these pages:
 | **Agenda Praia Cultural** (`facebook.com/agendapraiacultural`) | Praia-specific cultural events and venue posts |
 | **Ilha Terceira - Eventos** (community group) | Community-shared events from sources not otherwise covered |
 
-> Note: The direct Casa do Sal page (`facebook.com/casadosal.angra`) and an apparent Teatro Angrense Facebook profile were not useful as of 2026-07-08. Use CMAH, Ticketline, Oficina d'Angra/Casa do Sal, and venue websites instead.
+> Note: The direct Casa do Sal page (`facebook.com/casadosal.angra`) and an apparent Teatro Angrense Facebook profile were still not useful on 2026-09-04. Use CMAH, Ticketline, `@oficinadangra`, and venue websites instead.
 
 For Facebook, the **Photos** tab of a page is often the fastest way to spot event flyers. Click a flyer photo to open it and read the post caption.
 
@@ -292,12 +307,12 @@ Insert new entries **in chronological order by `date:`**. The file has section c
 | Lar Doce Livro | Rua de São João 22-24, 9700-184 Angra do Heroísmo |
 | Tasca do Camões | Rua Da Rocha 64, 9700-169 Angra do Heroísmo |
 | Havanna Club | Av. Infante D. Henrique, 9700-098 Angra do Heroísmo |
-| Teatro Angrense | Rua da Rosa, 9700-155 Angra do Heroísmo |
+| Teatro Angrense | Rua da Esperança 48-52, 9700-073 Angra do Heroísmo |
 | CCCAH | Rua Conselheiro Dr. José Pereira, 9700-040 Angra do Heroísmo |
-| Casa do Sal | Rua da Rosa 11, 9700-155 Angra do Heroísmo |
-| Museu de Angra do Heroísmo | Ladeira de São Francisco, 9701 Angra do Heroísmo |
+| Casa do Sal | Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo |
+| Museu de Angra do Heroísmo | Ladeira de São Francisco, 9700-181 Angra do Heroísmo |
 | Centro Interpretativo | Rua da Rosa, Angra do Heroísmo |
-| Biblioteca Pública | Rua da Biblioteca, Angra do Heroísmo |
+| Biblioteca Pública | Rua do Morrão 42, 9700-054 Angra do Heroísmo |
 | Porta 42 | Rua de São João, Angra do Heroísmo |
 
 ---
@@ -349,7 +364,7 @@ Once you've added your entries to the YAML, open a pull request:
 - **Body:** Reference the tracking issue with `Closes #NNN` or `See #NNN`
 - **Branch:** Create from `main`, name it something like `events/may-22-scan`
 
-The CI will run `validate-events.yml` automatically. If it passes, merge directly to `main` (no review required for data-only PRs).
+Request review after the CI checks finish. The repository maintainer decides when to merge; this runbook must not merge its own PR into `main`.
 
 After merging, the `daily-rebuild.yml` workflow will rebuild and deploy the site within ~5 minutes.
 
@@ -366,7 +381,7 @@ Once the PR is merged, close the tracking issue (or it closes automatically if y
 - **Recurring weekly events** (karaoke nights, Noche Latina, DJ resident nights) → these belong in `_data/weekly.yml`, not `special_events.yml`. Check `weekly.yml` before adding.
 - **Events that have already passed** by the time you're writing the PR.
 - **Events with no confirmed date** (e.g. "coming soon" posts with no date).
-- **Events already auto-ingested** by the daily workflows (CMAH iCal, Ticketline, Museu Angra, CMPV, Visit Azores, Whatson Azores, **Touradas à corda**). Double-check before adding manually — the touradas calendar in particular has 5–10 entries per week during the May–September season, all auto-added.
+- **Events already represented** in the repo, whether manually entered or auto-ingested. A configured workflow is not proof that its current source is healthy. Use the status table below and backfill missing events from verified sources.
 
 ---
 
@@ -374,15 +389,15 @@ Once the PR is merged, close the tracking issue (or it closes automatically if y
 
 These sources are covered by daily GitHub Actions workflows. You usually do not need to transcribe them manually, but you should spot-check the live source against `_data/special_events.yml` during a social scan. If a workflow is lagging or missing a current upcoming event, add a manual backfill with the original source URL.
 
-| Source | Workflow file | Script |
+| Source | Workflow file | Status verified 2026-09-04 |
 |---|---|---|
-| CMAH iCal feed | `ingest-cmah.yml` | `scripts/ingest_cmah.py` |
-| Ticketline (Angra + Praia) | `ingest-ticketline.yml` | `scripts/ingest_ticketline.py` |
-| Museu de Angra do Heroísmo | `ingest-museu-angra.yml` | `scripts/ingest_museu_angra.py` |
-| Câmara Municipal Praia da Vitória | `ingest-cmpv.yml` | `scripts/ingest_cmpv.py` |
-| Visit Azores | `ingest-visit-azores.yml` | `scripts/ingest_visit_azores.py` |
-| Whatson Azores (government) | `ingest-whatson-azores.yml` | `scripts/ingest_whatson_azores.py` |
-| Touradas à corda | `ingest-touradas.yml` | `scripts/ingest_touradas.py` |
+| CMAH iCal feed | `ingest-cmah.yml` | Healthy enough to produce candidates; manually verify times, descriptions, and duplicates |
+| Ticketline (Angra + Praia) | `ingest-ticketline.yml` | Reachable; multi-session pages can be assigned the wrong city/date |
+| Museu de Angra do Heroísmo | `ingest-museu-angra.yml` | Website REST and iCal requests returned 403; use Instagram/CMAH |
+| Câmara Municipal Praia da Vitória | `ingest-cmpv.yml` | Configured endpoint guesses returned 404; scan the live site/social accounts |
+| Visit Azores | `ingest-visit-azores.yml` | Configured events URL returned 404 |
+| Whatson Azores (government) | `ingest-whatson-azores.yml` | Automated request returned 403; browser/search/byAçores fallback required |
+| Touradas à corda | `ingest-touradas.yml` | Keep as the canonical automated source and spot-check Actions |
 
 If an automated workflow is producing errors or missing events, check the **Actions** tab: https://github.com/TerceiraEvents/EventosTerceira.pt/actions and mention the backfill in the PR body.
 
@@ -392,7 +407,7 @@ If an automated workflow is producing errors or missing events, check the **Acti
 
 This whole workflow can be handed off to Claude (or another AI with browser access) with a single prompt:
 
-> "Scan Instagram and Facebook using my account to update events from the venues and resources listed at https://eventosterceira.pt/resources/ and give me the information to make a PR that adds new events. Only use tags from this canonical set — anything else gets silently dropped from the calendar filter: `kid-friendly, live-music, cinema, theater, dance, nightlife, karaoke, food-drink, exhibition, literature, workshop, free, outdoor, bullfighting`. Map common look-alikes: concert→live-music, theatre→theater, comedy→theater, film→cinema, talk→literature, sports→outdoor, art (static)→exhibition, art (hands-on)→workshop. Skip touradas à corda — already auto-ingested. For any flyer image you want to display, point me at the source URL and I will re-host it (don't embed raw Instagram/Facebook URLs as `image:`, they rot)."
+> "Run the documented Terceira source scan, including official calendars, Instagram, Facebook, and the discovery sources in the source inventory. Check source health and look for new qualified sources through tagged organizers, artists, venues, Songkick, Bandsintown, Eventbrite, and Shotgun. Cross-check every candidate against `_data/special_events.yml` and `_data/weekly.yml`. Prefer first-party event details and label any source or group that could not be scanned; do not claim comprehensive social coverage when access is blocked. Only use tags from this canonical set: `kid-friendly, live-music, cinema, theater, dance, nightlife, karaoke, food-drink, exhibition, literature, workshop, free, outdoor, bullfighting`. Map common look-alikes: concert to live-music, theatre to theater, comedy to theater, film to cinema, talk to literature, sports to outdoor, static art to exhibition, and hands-on art to workshop. Skip touradas à corda unless its workflow is broken. Re-host any flyer before using it as `image:`. Create a feature branch, add verified events and source-documentation changes, run the repository validations, open a PR, and request review. Never merge the PR."
 
 The AI will:
 1. Load the resources page to get the account list
