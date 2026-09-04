@@ -7,13 +7,21 @@ lang_alt: /pt/resources/
 
 <h2>Other Places to Find Events</h2>
 
-<p class="section-intro">We're not the only game in town. These sources were checked on 4 September 2026. Aggregators are useful for discovery, but confirm dates and venues with the organizer whenever possible.</p>
+<p class="section-intro">We're not the only game in town. These sources were checked on 4 September 2026. Prefer official municipal, organizer, and venue sources for final details. Aggregators and community listings are discovery tools and may be incomplete or stale.</p>
 
 <div class="venue-card">
   <h3>Bullfight Finder App</h3>
   <div class="venue-regulars">
-    <p>The go-to app for finding <em>touradas &agrave; corda</em> (rope bullfights) across Terceira. Real-time alerts, event calendar, GPS directions, and weather updates. The bull season runs from May 1 to October 15, with over 200 events per year across the island.</p>
+    <p>The go-to app for finding <em>touradas &agrave; corda</em> (rope bullfights) across Terceira. Its calendar is updated from Terceira's municipalities and includes real-time alerts, GPS directions, and weather. The bull season runs from May 1 to October 15.</p>
     <p><a href="https://apps.apple.com/us/app/bullfight-finder/id1659230479">App Store</a> &middot; <a href="https://play.google.com/store/apps/details?id=com.eventfinder.bullfightfinderandroid">Google Play</a> &middot; <a href="https://bullfightfinder-landing-page.web.app/">Website</a></p>
+  </div>
+</div>
+
+<div class="venue-card">
+  <h3>C&acirc;mara Municipal da Praia da Vit&oacute;ria &mdash; Agenda Cultural</h3>
+  <div class="venue-regulars">
+    <p>The official Praia da Vit&oacute;ria municipal agenda. It provides a direct calendar for municipal events and a dedicated category for bullfighting events.</p>
+    <p><a href="https://www.cmpv.pt/index.php?op=agenda">Agenda Cultural</a> &middot; <a href="https://www.cmpv.pt/index.php?ano=0&amp;catid=1&amp;mes=0&amp;op=agenda">Touradas</a></p>
   </div>
 </div>
 
@@ -28,7 +36,7 @@ lang_alt: /pt/resources/
 <div class="venue-card">
   <h3>byA&ccedil;ores &mdash; Terceira Agenda</h3>
   <div class="venue-regulars">
-    <p>Current island agenda for festivals, music, community events, and exhibitions. The former Agenda&ccedil;ores address now redirects here. Use it to discover events, then check the organizer's details.</p>
+    <p>Secondary discovery source for festivals, music, community events, and exhibitions. Its rendered calendar appeared stale during the 4 September check, so never use it as the sole source for a date or venue. The former Agenda&ccedil;ores address redirects here.</p>
     <p><a href="https://byacores.com/en/agenda/terceira-island/">byacores.com</a></p>
   </div>
 </div>
@@ -36,7 +44,7 @@ lang_alt: /pt/resources/
 <div class="venue-card">
   <h3>Songkick and Bandsintown</h3>
   <div class="venue-regulars">
-    <p>Concert discovery pages for Angra and Terceira. They are particularly useful for touring artists, but artist and venue pages should confirm the final details.</p>
+    <p>Secondary concert discovery pages for Angra and Terceira. Bandsintown currently exposes more local listings than Songkick, but artist, promoter, or venue pages should confirm the final details.</p>
     <p><a href="https://www.songkick.com/metro-areas/53979-portugal-angra-do-heroismo">Songkick</a> &middot; <a href="https://www.bandsintown.com/c/angra-do-heroismo-portugal">Bandsintown</a></p>
   </div>
 </div>
@@ -44,7 +52,7 @@ lang_alt: /pt/resources/
 <div class="venue-card">
   <h3>Explore Terceira</h3>
   <div class="venue-regulars">
-    <p>Tourism site covering nightlife, local commerce, and cultural events across the island.</p>
+    <p>Tourism and local-business directory rather than a current event calendar. Use its venue links for discovery, then consult the direct municipal or organizer calendar.</p>
     <p><a href="https://www.exploreterceiraisland.com/en/discover/urban-life/">exploreterceiraisland.com</a></p>
   </div>
 </div>
@@ -68,8 +76,8 @@ lang_alt: /pt/resources/
 <div class="venue-card">
   <h3>Azores What's On</h3>
   <div class="venue-regulars">
-    <p>Official Azores government event platform covering sports, music, gastronomy, festivals, and more across all islands. Also available as a mobile app with event alerts and GPS directions.</p>
-    <p><a href="https://whatson.azores.gov.pt/en/agenda/">whatson.azores.gov.pt</a></p>
+    <p>Official Azores government event platform covering sports, music, gastronomy, festivals, and more across all islands. Use the Portuguese agenda for canonical place names; the automatic English version can mistranslate Terceira locations.</p>
+    <p><a href="https://whatson.azores.gov.pt/agenda/">whatson.azores.gov.pt/agenda</a></p>
   </div>
 </div>
 
@@ -92,7 +100,7 @@ lang_alt: /pt/resources/
 <div class="venue-card">
   <h3>Facebook Events</h3>
   <div class="venue-regulars">
-    <p>Search Facebook Events for upcoming events on Terceira. Many local venues and organizations post events here that aren't listed elsewhere.</p>
+    <p>Signed-in discovery source for events that may not appear elsewhere. Search results can be login-gated and incomplete, so confirm every listing with the organizer or venue.</p>
     <p><a href="https://www.facebook.com/events/">facebook.com/events</a></p>
   </div>
 </div>
@@ -113,6 +121,8 @@ lang_alt: /pt/resources/
       <li><a href="https://www.instagram.com/sala.319/">@sala.319</a> &mdash; Sala 319</li>
       <li><a href="https://www.instagram.com/havannaangra/">@havannaangra</a> &middot; <a href="https://www.facebook.com/p/Havanna-Terceira-100059128671983/">Facebook</a> &mdash; Havanna Club</li>
       <li><a href="https://www.instagram.com/livraria_lardocelivro/">@livraria_lardocelivro</a> &middot; <a href="https://www.facebook.com/livrarialardocelivro/">Facebook</a> &mdash; Lar Doce Livro</li>
+      <li><a href="https://www.instagram.com/cineclubedailhaterceira/">@cineclubedailhaterceira</a> &middot; <a href="https://www.facebook.com/cineclubeilhaterceira">Facebook</a> &mdash; Cine-Clube da Ilha Terceira</li>
+      <li><a href="https://www.instagram.com/sabores_dahort_a/">@sabores_dahort_a</a> &mdash; Sabores da Horta</li>
       <li><a href="https://www.instagram.com/amit.academiamusical/">@amit.academiamusical</a> &mdash; AMIT / Academia Musical da Ilha Terceira</li>
       <li><a href="https://www.instagram.com/espacoamit/">@espacoamit</a> &middot; <a href="https://www.instagram.com/cjazzamit/">@cjazzamit</a> &mdash; AMIT event space and jazz course</li>
       <li><a href="https://www.instagram.com/aaipazores/">@aaipazores</a> &mdash; independent arts and cultural events</li>
