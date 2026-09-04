@@ -9,7 +9,7 @@ lang_alt: /resources/
 
 <h2>Outros Sítios Para Encontrar Eventos</h2>
 
-<p class="section-intro">Não somos os únicos. Aqui ficam outras boas formas de saberes o que se passa na Terceira.</p>
+<p class="section-intro">Não somos os únicos. Estas fontes foram verificadas a 4 de setembro de 2026. Os agregadores são úteis para descobrir eventos, mas confirma datas e locais junto da organização sempre que possível.</p>
 
 <div class="venue-card">
   <h3>App Bullfight Finder</h3>
@@ -28,18 +28,18 @@ lang_alt: /resources/
 </div>
 
 <div class="venue-card">
-  <h3>Agenda&ccedil;ores</h3>
+  <h3>byA&ccedil;ores &mdash; Agenda da Terceira</h3>
   <div class="venue-regulars">
-    <p>Site de listagem de eventos a nível dos Açores, com uma etiqueta para Angra do Heroísmo onde encontras eventos locais.</p>
-    <p><a href="https://agendacores.pt/events/etiqueta/angra-do-heroismo/">agendacores.pt</a></p>
+    <p>Agenda atual da ilha com festas, música, eventos comunitários e exposições. O antigo endereço Agenda&ccedil;ores redireciona agora para aqui. Usa-o para descobrir eventos e depois confirma os dados junto da organização.</p>
+    <p><a href="https://byacores.com/en/agenda/terceira-island/">byacores.com</a></p>
   </div>
 </div>
 
 <div class="venue-card">
-  <h3>Songkick &mdash; Angra do Hero&iacute;smo</h3>
+  <h3>Songkick e Bandsintown</h3>
   <div class="venue-regulars">
-    <p>Listagens de concertos e festivais para a zona de Angra do Heroísmo. Útil para acompanhar artistas em digressão e os eventos musicais maiores.</p>
-    <p><a href="https://www.songkick.com/metro-areas/53979-portugal-angra-do-heroismo">songkick.com</a></p>
+    <p>Páginas de descoberta de concertos em Angra e na Terceira. São especialmente úteis para artistas em digressão, mas os dados finais devem ser confirmados nas páginas do artista e do espaço.</p>
+    <p><a href="https://www.songkick.com/metro-areas/53979-portugal-angra-do-heroismo">Songkick</a> &middot; <a href="https://www.bandsintown.com/c/angra-do-heroismo-portugal">Bandsintown</a></p>
   </div>
 </div>
 
@@ -52,10 +52,10 @@ lang_alt: /resources/
 </div>
 
 <div class="venue-card">
-  <h3>Agenda da Terceira</h3>
+  <h3>Destaques e Calendário da BPARLSR</h3>
   <div class="venue-regulars">
-    <p>Blogue que publica agendas mensais de eventos da Ilha Terceira, com listagens dia a dia de exposições, atividades culturais e eventos.</p>
-    <p><a href="https://agendadaterceira.blogspot.com/">agendadaterceira.blogspot.com</a></p>
+    <p>Programação oficial da Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro, incluindo a BiblioAgenda, conversas, oficinas, exposições e exportações de calendário.</p>
+    <p><a href="https://bparlsr.azores.gov.pt/destaques/">bparlsr.azores.gov.pt</a></p>
   </div>
 </div>
 
@@ -79,7 +79,15 @@ lang_alt: /resources/
   <h3>CulturA&ccedil;ores &mdash; Agenda Cultural</h3>
   <div class="venue-regulars">
     <p>Agenda cultural da Direção Regional da Cultura dos Açores. Reúne exposições, espectáculos e programação cultural por todo o arquipélago, com filtro por ilha.</p>
-    <p><a href="https://cultura.azores.gov.pt/agenda-cultural">cultura.azores.gov.pt</a></p>
+    <p><a href="https://culturacores.azores.gov.pt/agenda/">culturacores.azores.gov.pt</a></p>
+  </div>
+</div>
+
+<div class="venue-card">
+  <h3>Ticketline, Eventbrite e Shotgun</h3>
+  <div class="venue-regulars">
+    <p>Bilheteiras e listagens das organizações para espetáculos em digressão, oficinas, festivais e artes independentes. Na Ticketline, confirma com cuidado a data e o local da Terceira quando uma página reúne várias cidades.</p>
+    <p><a href="https://ticketline.sapo.pt/">Ticketline</a> &middot; <a href="https://www.eventbrite.pt/d/portugal--terceira/events/">Eventbrite</a> &middot; <a href="https://shotgun.live/">Shotgun</a></p>
   </div>
 </div>
 
@@ -99,14 +107,18 @@ lang_alt: /resources/
   <div class="venue-regulars">
     <ul>
       <li><a href="https://www.instagram.com/angradoheroismo/">@angradoheroismo</a> &mdash; C&acirc;mara Municipal de Angra do Hero&iacute;smo (página oficial da cidade)</li>
+      <li><a href="https://www.instagram.com/oficinadangra/">@oficinadangra</a> &mdash; Oficina d'Angra / Casa do Sal</li>
+      <li><a href="https://www.instagram.com/cmpraiadavitoria/">@cmpraiadavitoria</a> &middot; <a href="https://www.instagram.com/agendapraiacultural/">@agendapraiacultural</a> &mdash; programação municipal e cultural da Praia da Vit&oacute;ria</li>
       <li><a href="https://www.instagram.com/tascadocamoes/">@tascadocamoes</a> &middot; <a href="https://www.facebook.com/tascadocamoes/">Facebook</a> &mdash; Tasca do Cam&otilde;es</li>
       <li><a href="https://www.instagram.com/thetexanbar/">@thetexanbar</a> &mdash; The Texan</li>
       <li><a href="https://www.instagram.com/thegardenclub.angra/">@thegardenclub.angra</a> &mdash; The Garden Club</li>
       <li><a href="https://www.instagram.com/sala.319/">@sala.319</a> &mdash; Sala 319</li>
       <li><a href="https://www.instagram.com/havannaangra/">@havannaangra</a> &middot; <a href="https://www.facebook.com/p/Havanna-Terceira-100059128671983/">Facebook</a> &mdash; Havanna Club</li>
       <li><a href="https://www.instagram.com/livraria_lardocelivro/">@livraria_lardocelivro</a> &middot; <a href="https://www.facebook.com/livrarialardocelivro/">Facebook</a> &mdash; Lar Doce Livro</li>
-      <li><a href="https://www.instagram.com/fullrange_rave/">@fullrange_rave</a> &mdash; Full Range (eventos rave/eletrónica)</li>
       <li><a href="https://www.instagram.com/amit.academiamusical/">@amit.academiamusical</a> &mdash; AMIT / Academia Musical da Ilha Terceira</li>
+      <li><a href="https://www.instagram.com/espacoamit/">@espacoamit</a> &middot; <a href="https://www.instagram.com/cjazzamit/">@cjazzamit</a> &mdash; espaço de eventos da AMIT e curso de jazz</li>
+      <li><a href="https://www.instagram.com/aaipazores/">@aaipazores</a> &mdash; artes independentes e eventos culturais</li>
+      <li><a href="https://www.instagram.com/caes.do.mar/">@caes.do.mar</a> &middot; <a href="https://www.instagram.com/ruadireita.azores/">@ruadireita.azores</a> &mdash; cultura independente e festivais sazonais</li>
       <li><a href="https://www.instagram.com/museu.angra/">@museu.angra</a> &mdash; Museu de Angra do Hero&iacute;smo</li>
       <li><a href="https://www.instagram.com/twinstheclub/">@twinstheclub</a> &mdash; Twins Club</li>
       <li><a href="https://www.instagram.com/winenot.terceira/">@winenot.terceira</a> &mdash; Wine Not?</li>
@@ -126,10 +138,8 @@ lang_alt: /resources/
       <li><a href="https://www.facebook.com/oficinadangra/">Oficina d'Angra / Casa do Sal</a> &mdash; música alternativa e eventos culturais</li>
       <li><a href="https://www.facebook.com/p/Havanna-Terceira-100059128671983/">Havanna Terceira</a> &mdash; noites de festa e DJs</li>
       <li><a href="https://www.facebook.com/livrarialardocelivro/">Lar Doce Livro</a> &mdash; leituras, lançamentos e eventos culturais</li>
-      <li><a href="https://www.facebook.com/casadosal.angra/">Casa do Sal</a> &mdash; música ao vivo e eventos comunitários</li>
       <li><a href="https://www.facebook.com/MunicipioPraiaVitoria/">Munic&iacute;pio Praia da Vit&oacute;ria</a> &mdash; página oficial da Câmara Municipal da Praia da Vitória</li>
       <li><a href="https://www.facebook.com/agendapraiacultural/">Agenda Praia Cultural</a> &mdash; programação cultural da Praia da Vitória</li>
-      <li><a href="https://www.facebook.com/profile.php?id=1414455825467398">Teatro Angrense</a> &mdash; teatro histórico em Angra, espectáculos e programação cultural</li>
       <li><a href="https://www.facebook.com/groups/308361896484142/">Ilha Terceira - Eventos</a> &mdash; grupo comunitário para partilhar eventos por toda a ilha</li>
     </ul>
   </div>
