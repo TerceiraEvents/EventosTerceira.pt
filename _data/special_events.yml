@@ -6878,3 +6878,128 @@ Come join us and support our festivities!"
     - literature
     - theater
     - nightlife
+
+
+# September 12, 2026 official CMAH agenda delta scan.
+- date: 2026-09-25
+  name: "Conferência: Conversas ao Serão — Médicos Sem Fronteiras / Fraterune"
+  name_en: "Conference: Evening Conversations — Doctors Without Borders / Fraterune"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os+do+Concelho+de+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "A session of the Conversas ao Serão series on international humanitarian action, with João Antunes, Director-General of Médecins Sans Frontières in Portugal, in partnership with Fraterune. Free entry."
+  description_pt: "Sessão do ciclo Conversas ao Serão dedicada à ação humanitária internacional, com João Antunes, Diretor-Geral dos Médicos Sem Fronteiras em Portugal, em parceria com a Fraterune. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/conferencia-conversas-ao-serao-medicos-sem-fronteiras-fraterune/
+  tags:
+  - literature
+  - free
+
+- date: 2026-09-26
+  name: "Formação: Liderança de Equipas"
+  name_en: "Training: Team Leadership"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Congressos+Angra+Heroismo
+  time: "14:00–18:30"
+  description: "Four-hour theoretical-practical team-leadership training with Mestre Inês Vigário, for coaches, technical staff, and other interested participants. Sessions are 14:00–16:00 and 16:30–18:30; registration is through desporto@cmah.pt."
+  description_pt: "Ação de formação teórico-prática de quatro horas sobre liderança de equipas, com a Mestre Inês Vigário, destinada a treinadores, técnicos e outros interessados. Sessões das 14h00 às 16h00 e das 16h30 às 18h30; inscrições em desporto@cmah.pt."
+  source_url: https://angradoheroismo.pt/evento/formacao-lideranca-de-equipas/
+  tags:
+  - workshop
+
+- date: 2026-09-27
+  name: "Formação: Estratégia de Marketing para Clubes Desportivos"
+  name_en: "Training: Marketing Strategy for Sports Clubs"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Congressos+Angra+Heroismo
+  time: "09:00–12:30"
+  description: "A three-hour theoretical-practical course with Dr. José Carvalho for coaches, technical staff, and other interested participants, covering communication diagnosis, digital and relationship marketing, and social-media marketing for sports clubs. Registration is through desporto@cmah.pt."
+  description_pt: "Formação teórico-prática de três horas com o Dr. José Carvalho, para treinadores, técnicos e outros interessados, sobre diagnóstico da comunicação, marketing digital e relacional e marketing nas redes sociais para clubes desportivos. Inscrições em desporto@cmah.pt."
+  source_url: https://angradoheroismo.pt/evento/formacao-estrategia-de-marketing-para-clubes-desportivos/
+  tags:
+  - workshop
+
+- date: 2026-09-27
+  name: "Formação: Gestão da Organização Desportiva"
+  name_en: "Training: Sports Organization Management"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Congressos+Angra+Heroismo
+  time: "14:00–18:30"
+  description: "A four-hour theoretical-practical course with Dr. José Carvalho for directors, technical staff, and other interested participants, covering legal structure, strategy, membership, communications, and sports management. Registration is through desporto@cmah.pt."
+  description_pt: "Formação teórico-prática de quatro horas com o Dr. José Carvalho, para dirigentes, técnicos e outros interessados, sobre estrutura legal, estratégia, gestão de sócios, comunicação e gestão desportiva. Inscrições em desporto@cmah.pt."
+  source_url: https://angradoheroismo.pt/evento/formacao-gestao-da-organizacao-desportiva/
+  tags:
+  - workshop
+
+- date: 2026-09-29
+  name: "Conferência: OMNIMORPHIC ART — Defining a New Category of Ancient Visual Art"
+  name_en: "Conference: OMNIMORPHIC ART — Defining a New Category of Ancient Visual Art"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os+do+Concelho+de+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "A free lecture by Frankie Lindquist, organized by the Instituto Histórico da Ilha Terceira, proposing a new category of ancient visual art."
+  description_pt: "Conferência de Frankie Lindquist, uma iniciativa do Instituto Histórico da Ilha Terceira, que propõe uma nova categoria de arte visual antiga. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/conferencia-omnimorphic-art-defining-a-new-category-of-ancient-visual-art/
+  tags:
+  - literature
+  - free
+
+- date: 2026-10-18
+  name: "Concerto do Outono (Temporada de Música Clássica)"
+  name_en: "Autumn Concert (Classical Music Season)"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Congressos+Angra+Heroismo
+  time: "18:00"
+  description: "The Autumn Concert in the 2026 Classical Music Season, with Alla Lanova (soprano), Elena Kharambura (violin), Ostap Kharambura (viola), Orest Grytsyuk (cello), and Grygoriy Grytsyuk (piano). Free entry."
+  description_pt: "Concerto do Outono integrado na Temporada de Música Clássica 2026, com Alla Lanova (soprano), Elena Kharambura (violino), Ostap Kharambura (viola), Orest Grytsyuk (violoncelo) e Grygoriy Grytsyuk (piano). Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/concerto-do-outono-temporada-de-musica-classica/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-11-29
+  name: "Temporada de Música Clássica: Concerto do Advento"
+  name_en: "Classical Music Season: Advent Concert"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Congressos+Angra+Heroismo
+  time: "18:00"
+  description: "Advent Concert in the 2026 Classical Music Season with Olga Lysa (piano), Svitlana Poustovhar (cello), Elena Kharambura (violin), Ostap Kharambura (viola), and Taras Poustovgar (clarinet). Free entry."
+  description_pt: "Concerto do Advento integrado na Temporada de Música Clássica 2026, com Olga Lysa (piano), Svitlana Poustovhar (violoncelo), Elena Kharambura (violino), Ostap Kharambura (viola) e Taras Poustovgar (clarinete). Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/temporada-de-musica-classica-concerto-do-advento/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-12-20
+  name: "Temporada de Música Clássica: Concerto de Natal"
+  name_en: "Classical Music Season: Christmas Concert"
+  venue: Igreja do Colégio
+  address: "Rua do Palácio, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Igreja+do+Col%C3%A9gio+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "Christmas Concert in the 2026 Classical Music Season at Igreja do Colégio, with Alla Lanova (soprano), Olga Lysa (organ), Elena Kharambura (violin), Ostap Kharambura (viola), Orest Grytsyuk (cello), and Oleg Gunko (clarinet). Free entry."
+  description_pt: "Concerto de Natal integrado na Temporada de Música Clássica 2026, na Igreja do Colégio, com Alla Lanova (soprano), Olga Lysa (órgão), Elena Kharambura (violino), Ostap Kharambura (viola), Orest Grytsyuk (violoncelo) e Oleg Gunko (clarinete). Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/temporada-de-musica-classica-concerto-de-natal/
+  tags:
+  - live-music
+  - free
+
+- date: 2026-12-27
+  name: "Temporada de Música Clássica: Concerto de Fim de Ano"
+  name_en: "Classical Music Season: End-of-Year Concert"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os+do+Concelho+de+Angra+do+Hero%C3%ADsmo
+  time: "20:00"
+  description: "The concert closing the 2026 Classical Music Season, with Grygoriy Grytsyuk (piano), Svitlana Poustovhar (cello), and Taras Poustovgar (clarinet). Free entry."
+  description_pt: "Concerto que encerra a Temporada de Música Clássica 2026, com Grygoriy Grytsyuk (piano), Svitlana Poustovhar (violoncelo) e Taras Poustovgar (clarinete). Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/temporada-de-musica-classica-concerto-de-fim-de-ano/
+  tags:
+  - live-music
+  - free
