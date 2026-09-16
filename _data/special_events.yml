@@ -7095,9 +7095,11 @@ Come join us and support our festivities!"
   name_en: "Seminar: Sustainable Development Goals"
   venue: Academia de Juventude e das Artes da Ilha Terceira
   address: "Praia da Vitória"
-  description: "Think and Act Locally: Together for the 2030 Agenda, a free seminar organized by the municipality of Praia da Vitória. The start time is not published."
-  description_pt: "Pensar e Agir Localmente: Juntos pela Agenda 2030, seminário gratuito da Câmara Municipal da Praia da Vitória. Hora de início não divulgada."
+  time: "09:00"
+  description: "Think and Act Locally: Together for the 2030 Agenda, a free seminar organized by the municipality of Praia da Vitória. Starts at 09:00."
+    description_pt: "Pensar e Agir Localmente: Juntos pela Agenda 2030, seminário gratuito da Câmara Municipal da Praia da Vitória. Início às 09h00."
   source_url: https://www.cmpv.pt/index.php?op=agenda&id=898
+  instagram: https://www.instagram.com/cmpraiadavitoria/p/DdWMHzVDYDR/
   tags:
   - workshop
   - free
@@ -7154,3 +7156,83 @@ Come join us and support our festivities!"
   tags:
   - literature
   - kid-friendly
+
+
+# September 16 evening social and official-agenda scan.
+- date: 2026-09-01
+  end_date: 2026-10-31
+  name: "Documento do Mês: O fardamento militar português dos séculos XVIII e XIX"
+  name_en: "Document of the Month: Portuguese Military Uniforms of the 18th and 19th Centuries"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  description: "Display from the Azores Captaincy General archive tracing Portuguese military uniforms of the 18th and 19th centuries, in the archive consultation room."
+  description_pt: "Mostra de documentos do fundo da Capitania Geral dos Açores sobre a evolução do fardamento militar português dos séculos XVIII e XIX, na sala de consulta do Arquivo."
+  source_url: https://angradoheroismo.pt/evento/%F0%9D%97%97%F0%9D%97%BC%F0%9D%97%B0%F0%9D%98%82%F0%9D%97%BA%F0%9D%97%B2%F0%9D%97%BB%F0%9D%98%81%F0%9D%97%BC-%F0%9D%97%B1%F0%9D%97%BC-%F0%9D%97%A0%F0%9D%97%B2%CC%82%F0%9D%98%80-%F0%9D%97%A2/
+  tags:
+  - exhibition
+
+- date: 2026-09-16
+  end_date: 2026-10-14
+  name: "Mostra bibliográfica: Livros em Língua Estrangeira"
+  name_en: "Bibliographic Exhibition: Books in Foreign Languages"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  description: "Selection from the library's open-access foreign-language collection in the reading and home-loan room, with personalized bookmarks and a digital cultural quiz."
+  description_pt: "Seleção da coleção de livre acesso de livros em língua estrangeira na Sala de Leitura e Empréstimo Domiciliário, com marcadores de livros personalizados e um quiz cultural digital."
+  source_url: https://angradoheroismo.pt/evento/%f0%9d%97%a0%f0%9d%97%bc%f0%9d%98%80%f0%9d%98%81%f0%9d%97%bf%f0%9d%97%ae-%f0%9d%97%af%f0%9d%97%b6%f0%9d%97%af%f0%9d%97%b9%f0%9d%97%b6%f0%9d%97%bc%f0%9d%97%b4%f0%9d%97%bf%f0%9d%97%ae%f0%9d%97%b3-2/
+  tags:
+  - exhibition
+  - literature
+
+- date: 2026-09-26
+  name: "Cerimónia de descerramento da placa do Campo Municipal de Ténis Basílio Sousa"
+  name_en: "Basílio Sousa Municipal Tennis Court Naming Ceremony"
+  venue: Campo Municipal de Ténis de Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  time: "12:00"
+  description: "Public ceremony naming the municipal tennis court in honor of Basílio Sousa and his contribution to local tennis."
+  description_pt: "Cerimónia pública de atribuição do nome Basílio Sousa ao Campo Municipal de Ténis, em homenagem ao seu contributo para o ténis no concelho."
+  source_url: https://angradoheroismo.pt/evento/cerimonia-descerramento-de-placa-do-campo-municipal-de-tenis-basilio-sousa/
+  tags:
+  - free
+
+- date: 2026-09-26
+  name: "V Grande Concerto de Verão da AMIT"
+  name_en: "AMIT's Fifth Grand Summer Concert"
+  venue: Praça Velha
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  time: "21:00"
+  description: "Free family concert of film music by the AMIT chamber ensemble with soloists Alla Lanova, Inês Mariano, and Carlos Monteiro."
+  description_pt: "Concerto familiar gratuito de música de cinema pelo Conjunto de Câmara da AMIT, com os solistas Alla Lanova, Inês Mariano e Carlos Monteiro."
+  instagram: https://www.instagram.com/amit.academiamusical/p/DdXKroDsobe/
+  tags:
+  - live-music
+  - free
+  - outdoor
+  - kid-friendly
+
+- date: 2026-09-27
+  end_date: 2026-11-22
+  name: "Exposição: The Journey, de Rohit Ferreira"
+  name_en: "Exhibition: The Journey by Rohit Ferreira"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  description: "After the September 26 opening, Rohit Ferreira's exhibition explores physical and metaphorical journeys through the migrations of birds. On view in Sala Dacosta."
+  description_pt: "Após a inauguração de 26 de setembro, a exposição de Rohit Ferreira explora viagens físicas e metafóricas através das migrações das aves. Patente na Sala Dacosta."
+  source_url: https://angradoheroismo.pt/evento/inauguracao-the-journey-de-rohit-ferreira/
+  tags:
+  - exhibition
+  - free
+
+- date: 2026-10-17
+  name: "ESCAMA: de dragão 3#"
+  name_en: "ESCAMA: Dragon 3#"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "22:00"
+  description: "AAIP's ESCAMA series returns to Casa do Sal for a night of performance and electronic music. Further programme and ticket details are to be announced."
+  description_pt: "A série ESCAMA da AAIP regressa à Casa do Sal para uma noite de performance e música eletrónica. Programa e informações sobre bilhetes a anunciar."
+  instagram: https://www.instagram.com/aaipazores/p/DdXIAcKxod6/
+  tags:
+  - nightlife
+  - live-music
