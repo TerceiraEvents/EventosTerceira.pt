@@ -7003,3 +7003,154 @@ Come join us and support our festivities!"
   tags:
   - live-music
   - free
+
+# September 16, 2026 social and official-agenda scan.
+- date: 2026-09-07
+  end_date: 2026-10-31
+  name: "Escritores da Diáspora: Onésimo Teotónio Almeida"
+  name_en: "Diaspora Writers: Onésimo Teotónio Almeida"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  description: "Bibliographic exhibition of Onésimo Teotónio Almeida's work in the library's Arte e Debates space, during library opening hours."
+  description_pt: "Mostra bibliográfica da obra de Onésimo Teotónio Almeida no espaço Arte e Debates da biblioteca, durante o horário de funcionamento."
+  source_url: https://bparlsr.azores.gov.pt/destaque/mostra-bibliografica-escritores-da-diaspora-onesimo-teotonio-almeida/
+  tags:
+  - exhibition
+
+- date: 2026-09-17
+  end_date: 2026-09-20
+  name: "Festas de Nossa Senhora dos Milagres do Pesqueiro"
+  name_en: "Our Lady of Miracles Festivities in Pesqueiro"
+  venue: Pesqueiro, São Bartolomeu de Regatos
+  address: "Pesqueiro, São Bartolomeu de Regatos, Angra do Heroísmo"
+  description: "Community festivities in honour of Nossa Senhora dos Milagres; times vary by the local programme."
+  description_pt: "Festas comunitárias em honra de Nossa Senhora dos Milagres; horários conforme o programa local."
+  source_url: https://whatson.azores.gov.pt/evento/festas-de-nossa-senhora-dos-milagres-do-pesqueiro-sao-bartolomeu/
+  tags:
+  - outdoor
+
+- date: 2026-09-18
+  name: "Delta Project ao vivo na Tasca do Camões"
+  name_en: "Delta Project Live at Tasca do Camões"
+  venue: Tasca do Camões
+  address: "Rua da Rocha 64, 9700-169 Angra do Heroísmo"
+  time: "22:00"
+  description: "Live performance by Delta Project from 22:00."
+  description_pt: "Concerto ao vivo dos Delta Project a partir das 22h00."
+  instagram: https://www.instagram.com/tascadocamoes/p/DdRrlSjsEZp/
+  tags:
+  - live-music
+  - nightlife
+
+- date: 2026-09-19
+  name: "Ensemble Barroco/3"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  time: "20:00"
+  description: "Baroque concert with violinist Daniela Dahmen Quintas and organist Gustaaf van Manen in the São Francisco building."
+  description_pt: "Concerto barroco com a violinista Daniela Dahmen Quintas e o organista Gustaaf van Manen no edifício de São Francisco."
+  source_url: https://angradoheroismo.pt/evento/ensemble-barroco-3/
+  tags:
+  - live-music
+
+- date: 2026-09-19
+  name: "On the Road ao vivo no The Garden Club"
+  name_en: "On the Road Live at The Garden Club"
+  venue: The Garden Club
+  address: "Angra do Heroísmo"
+  time: "20:00–22:00"
+  description: "Live rock and covers by On the Road at The Garden Club; table reservations available."
+  description_pt: "Concerto de rock e covers dos On the Road no The Garden Club; aceitam reservas de mesa."
+  instagram: https://www.instagram.com/thegardenclub.angra/p/DdWLN7pMQG7/
+  tags:
+  - live-music
+  - food-drink
+
+- date: 2026-09-20
+  end_date: 2026-09-28
+  name: "Festas de São Carlos 2026"
+  name_en: "São Carlos Festivities 2026"
+  venue: São Carlos
+  address: "São Carlos, Angra do Heroísmo"
+  description: "Nine days of community festivities, tradition and entertainment in São Carlos; the full programme is pending."
+  description_pt: "Nove dias de festas comunitárias, tradição e animação em São Carlos; programa completo ainda por divulgar."
+  source_url: https://whatson.azores.gov.pt/evento/festas-de-sao-carlos-2026/
+  tags:
+  - outdoor
+
+- date: 2026-09-23
+  name: "Green Power Verde: Empreendedorismo na Ilha Terceira"
+  name_en: "Green Power Verde: Entrepreneurship on Terceira"
+  venue: StartUp Angra
+  address: "Angra do Heroísmo"
+  time: "18:30"
+  description: "Session on green entrepreneurship and organic agriculture on Terceira, organized with Bio Região da Ilha Terceira."
+  description_pt: "Sessão sobre empreendedorismo verde e agricultura biológica na Terceira, em parceria com a Bio Região da Ilha Terceira."
+  source_url: https://angradoheroismo.pt/evento/green-power-verde-empreendedorismo-na-ilha-terceira/
+  tags:
+  - workshop
+
+- date: 2026-09-25
+  name: "Seminário: Objetivos de Desenvolvimento Sustentável"
+  name_en: "Seminar: Sustainable Development Goals"
+  venue: Academia de Juventude e das Artes da Ilha Terceira
+  address: "Praia da Vitória"
+  description: "Think and Act Locally: Together for the 2030 Agenda, a free seminar organized by the municipality of Praia da Vitória. The start time is not published."
+  description_pt: "Pensar e Agir Localmente: Juntos pela Agenda 2030, seminário gratuito da Câmara Municipal da Praia da Vitória. Hora de início não divulgada."
+  source_url: https://www.cmpv.pt/index.php?op=agenda&id=898
+  tags:
+  - workshop
+  - free
+
+- date: 2026-09-26
+  name: "Praia by Night"
+  venue: Praia da Vitória
+  address: "Praia da Vitória"
+  time: "21:00"
+  description: "Evening 5 km walk or run and 10 km race organized by the Terceira Athletics Association and Praia da Vitória municipality."
+  description_pt: "Caminhada ou corrida noturna de 5 km e corrida de 10 km organizadas pela Associação de Atletismo da Ilha Terceira e Câmara Municipal da Praia da Vitória."
+  source_url: https://www.cmpv.pt/index.php?op=agenda&id=897
+  instagram: https://www.instagram.com/cmpraiadavitoria/p/DdTxHNejRa6/
+  tags:
+  - outdoor
+
+- date: 2026-09-26
+  name: "Cinema Infantil: Nina e o Segredo do Ouriço"
+  name_en: "Children's Cinema: Nina and the Hedgehog's Secret"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "15:00"
+  description: "Children's screening of Nina e o Segredo do Ouriço, ending around 16:12. Free for under-18s and accompanying adults."
+  description_pt: "Sessão infantil de Nina e o Segredo do Ouriço, até cerca das 16h12. Entrada gratuita para menores de 18 anos e adultos acompanhantes."
+  source_url: https://angradoheroismo.pt/evento/sessao-de-cinema-infantil-nina-e-o-segredo-do-ourico/
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DdIHNGds5Ll/
+  tags:
+  - cinema
+  - kid-friendly
+  - free
+
+- date: 2026-09-27
+  name: "Cãominhada Solidária"
+  name_en: "Charity Dog Walk"
+  venue: Zona de Lazer das Relheiras de São Brás
+  address: "São Brás, Praia da Vitória"
+  time: "09:30–11:30"
+  description: "An approximately one-hour community dog walk to support animal welfare and adoption; advance registration is limited to 15 participants."
+  description_pt: "Cãominhada comunitária de cerca de uma hora para apoiar o bem-estar animal e a adoção; inscrições limitadas a 15 participantes."
+  source_url: https://angradoheroismo.pt/evento/caominhada-solidaria/
+  instagram: https://www.instagram.com/angradoheroismo/p/DdWPONgAsKV/
+  tags:
+  - outdoor
+
+- date: 2026-10-03
+  name: "Hora do Conto"
+  name_en: "Story Time"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  time: "16:00–17:00"
+  description: "Family storytelling session in the library's Abracadabra room."
+  description_pt: "Sessão de contos para famílias na sala Abracadabra da biblioteca."
+  source_url: https://bparlsr.azores.gov.pt/destaque/hora-do-conto-81/
+  tags:
+  - literature
+  - kid-friendly
