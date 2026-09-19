@@ -7236,3 +7236,63 @@ Come join us and support our festivities!"
   tags:
   - nightlife
   - live-music
+
+# Auto-ingested from CMAH (2026-09-19)
+- date: 2026-09-20
+  name: "O CINEMA DA MINHA VIDA 2.ª temporada 2026"
+  venue: Angra do Heroísmo
+  address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "18:00"
+  description: "O Cinema da Minha Vida | 2.ª Temporada 2026 O Cine-Clube da Ilha Terceira (CCIT) dá continuidade ao projeto O Cinema da Minha Vida, iniciando, em setembro, a sua 2.ª Temporada de 2026. A iniciativa conta com o apoio do Governo dos Açores e da Câmara Municipal de Angra do Heroísmo e com a colaboração da Sociedade Filarmónica de Instrução e Recreio dos Artistas, cuja sala de cinema acolhe as sessões, aos domingos, pelas 18 horas. Ao longo desta segunda temporada, entre setembro e dezembro, serão…"
+  source_url: https://angradoheroismo.pt/evento/o-cinema-da-minha-vida-2-a-temporada-2026/
+  source_uid: "1880@angradoheroismo.pt"
+  tags:
+  - cinema
+
+- date: 2026-09-23
+  name: "Domingos com Música, com Gustaaf van Manen"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, Angra do Heroísmo, 9700-181"
+  map_url: https://www.google.com/maps/search/?api=1&query=Museu%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "11:00"
+  description: "Com a missão de valorizar e preservar o património musical da região, o Museu de Angra do Heroísmo prossegue com a sua programação de concertos barrocos no órgão histórico da Igreja de Nossa Senhora da Guia, construído em 1788 por António Xavier Machado e Cerveira e restaurado em 2011 por Dinarte Machado. Interpretado pelo organista residente Gustaaf van Manen, o programa reúne obras dos séculos XVI a XVIII, oferecendo ao público uma experiência sonora autêntica, num espaço de reconhecido valor…"
+  source_url: https://angradoheroismo.pt/evento/domingos-com-musica-com-gustaaf-van-manen-6/
+  source_uid: "1890@angradoheroismo.pt"
+  tags:
+  - live-music
+
+- date: 2026-09-23
+  name: "Apresentação de livro: ilhas de Portugal"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os%20do%20Concelho%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "20:00"
+  description: "O Salão Nobre dos Paços do Concelho de Angra do Heroísmo acolhe, no dia 23 de setembro de 2026, quarta-feira, às 20h00, a apresentação do livro «ilhas de Portugal», de Paulo Henrique Silva. A obra apresenta uma viagem pelos arquipélagos portugueses, documentando paisagens, património natural e a singularidade das ilhas Selvagens, Desertas, Madeira, Açores e Berlengas. A publicação constitui um importante contributo para a divulgação e valorização da riqueza natural e cultural dos territórios…"
+  source_url: https://angradoheroismo.pt/evento/apresentacao-de-livro-ilhas-de-portugal/
+  source_uid: "1930@angradoheroismo.pt"
+  tags:
+  - literature
+
+- date: 2026-09-26
+  name: "Dia Mundial do Turismo"
+  venue: Angra do Heroísmo
+  address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "14:00"
+  description: "Convidamos a descobrir Angra do Heroísmo numa visita enriquecedora e cheia de história, acompanhada por um guia certificado. Ao longo de cerca de 12 quilómetros, percorremos alguns dos mais emblemáticos recantos da cidade Património Mundial da UNESCO, numa viagem fascinante pela cultura, tradições e acontecimentos que moldaram a história da ilha Terceira. Serão realizadas duas excursões uma durante o período da manhã e outra no período da tarde, com uma duração máxima de 2 horas, esta…"
+  source_url: https://angradoheroismo.pt/evento/dia-mundial-do-turismo/
+  source_uid: "1903@angradoheroismo.pt"
+
+- date: 2026-10-02
+  name: "Angrajazz 2026"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Angra do Heroísmo, 9700-130"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20e%20de%20Congressos%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:30"
+  description: "O Centro Cultural e de Congressos acolhe, de 2 a 4 de outubro de 2026, sexta-feira a domingo, às 21h30, o 27.º Angrajazz. O festival reúne, ao longo de três noites, a Orquestra Angrajazz, Leïla Olivesi Octet, Pedro Neves Quarteto, Tyreek McDole Quartet, Aaron Parks & Walter Smith III Duo e SFJazz Collective, num programa dedicado ao jazz e às suas diferentes expressões. A programação inclui ainda o Jazz na Rua, entre 25 de setembro e 4 de outubro, levando o jazz a diferentes espaços de Angra do…"
+  source_url: https://angradoheroismo.pt/evento/angrajazz-2026/
+  source_uid: "1917@angradoheroismo.pt"
+  tags:
+  - live-music
+
