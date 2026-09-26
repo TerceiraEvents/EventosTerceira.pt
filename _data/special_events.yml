@@ -3709,16 +3709,18 @@ Come join us and support our festivities!"
   tags:
   - live-music
 
-- date: 2026-11-14
+- date: 2026-11-13
+  end_date: 2026-11-14
   name: "Concerto: Angra Convida Carolina Deslandes — Voz & Guitarra"
   name_en: "Concert: Angra Convida Carolina Deslandes — Voice & Guitar"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
   map_url: https://www.google.com/maps/search/?api=1&query=CCCAH+Angra+do+Hero%C3%ADsmo
   time: "21:30"
-  description: "Carolina Deslandes performs an intimate voice and guitar show at the CCCAH as part of the Angra Convida series."
-  description_pt: "Carolina Deslandes apresenta um concerto intimista de voz e guitarra no CCCAH, no âmbito da série Angra Convida."
-  instagram: https://www.instagram.com/angradoheroismo/
+  description: "Carolina Deslandes performs an intimate voice-and-guitar show on two nights at the CCCAH. The November 13 session was added after the original November 14 performance drew high demand."
+  description_pt: "Carolina Deslandes apresenta um concerto intimista de voz e guitarra em duas noites no CCCAH. A sessão de 13 de novembro foi acrescentada devido à elevada procura pelo espetáculo original de 14 de novembro."
+  source_url: https://angradoheroismo.pt/evento/concerto-angra-convida-carolina-deslandes-voz-guitarra/
+  instagram: https://www.instagram.com/angradoheroismo/p/DdoeeiTo3Iz/
   tags:
   - live-music
 
@@ -5076,9 +5078,11 @@ Come join us and support our festivities!"
   venue: CCCAH (Centro Cultural e de Congressos)
   address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
   map_url: https://www.google.com/maps/search/?api=1&query=CCCAH%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:30"
   description: "The 27th edition of the ANGRAJAZZ International Jazz Festival, with performances by Orquestra Angrajazz, Leïla Olivesi Octet, Pedro Neves Quarteto, Tyreek McDole Quartet, Aaron Parks & Walter Smith III Duo, and SFJAZZ Collective, plus Jazz na Rua public-space performances."
   description_pt: "27.ª edição do Festival Internacional de Jazz ANGRAJAZZ, com atuações da Orquestra Angrajazz, Leïla Olivesi Octet, Pedro Neves Quarteto, Tyreek McDole Quartet, Aaron Parks & Walter Smith III Duo e SFJAZZ Collective, além do projeto Jazz na Rua em espaços públicos."
-  instagram: https://www.instagram.com/angradoheroismo/p/DaftZw9F4he/
+  source_url: https://angradoheroismo.pt/evento/angrajazz-2026/
+  instagram: https://www.instagram.com/angradoheroismo/p/DduKUzjjXrR/
   tags:
   - live-music
 
@@ -5088,7 +5092,7 @@ Come join us and support our festivities!"
   venue: Auditório do Ramo Grande
   address: "Auditório do Ramo Grande, Praia da Vitória"
   map_url: https://www.google.com/maps/search/?api=1&query=Audit%C3%B3rio%20do%20Ramo%20Grande%20Praia%20da%20Vit%C3%B3ria
-  time: "21:30"
+  time: "21:00"
   description: "Stand-up comedy show by Hugo Sousa at Auditório do Ramo Grande. Tickets available through Ticketline and Academia da Juventude da Ilha Terceira."
   description_pt: "Espetáculo de stand-up comedy de Hugo Sousa no Auditório do Ramo Grande. Bilhetes disponíveis na Ticketline e na Academia da Juventude da Ilha Terceira."
   facebook: https://www.facebook.com/photo/?fbid=1328709386075464&set=pb.100068092452652.-2207520000
@@ -5813,6 +5817,7 @@ Come join us and support our festivities!"
   description: "Sally and Gillian Owens reunite and use their powers to face a new threat and an old curse endangering their family."
   description_pt: "Sally e Gillian Owens voltam a unir-se e recorrem aos seus poderes para enfrentar uma nova ameaça e uma antiga maldição que coloca a família em perigo."
   source_url: https://angradoheroismo.pt/evento/cinema-magia-e-seducao-segredos-de-familia/
+  instagram: https://www.instagram.com/angradoheroismo/p/Ddo51sACdUm/
   source_uid: "1855@angradoheroismo.pt"
   tags:
   - cinema
@@ -7235,4 +7240,195 @@ Come join us and support our festivities!"
   instagram: https://www.instagram.com/aaipazores/p/DdXIAcKxod6/
   tags:
   - nightlife
+  - live-music
+
+
+# September 26, 2026 social, official-agenda, and source-discovery scan.
+- date: 2026-08-31
+  end_date: 2026-11-23
+  name: "Museu Afora: Modelo de Avião TAP Lockheed Super Constellation"
+  name_en: "Museum Outside: TAP Lockheed Super Constellation Model"
+  venue: Aerogare Civil das Lajes
+  address: "Aeroporto das Lajes, Praia da Vitória"
+  description: "The Museu de Angra do Heroísmo presents a metal TAP Lockheed Super Constellation model from its aeronautical collection, donated by António Couto, at the Lajes civilian terminal."
+  description_pt: "O Museu de Angra do Heroísmo apresenta na Aerogare Civil das Lajes um modelo metálico de um TAP Lockheed Super Constellation da sua coleção aeronáutica, doado por António Couto."
+  source_url: https://culturacores.azores.gov.pt/agenda/?id=51326
+  tags:
+  - exhibition
+
+- date: 2026-09-01
+  end_date: 2026-10-04
+  name: "Vitrine de Curiosidades: Sycees — lingotes de prata chineses"
+  name_en: "Cabinet of Curiosities: Sycees — Chinese Silver Ingots"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  description: "Two Chinese sycee silver ingots from the Luís Filipe Thomaz donation are displayed with context about their use as currency during the Qing dynasty."
+  description_pt: "Dois lingotes de prata chineses sycee, provenientes da doação Luís Filipe Thomaz, são apresentados com informação sobre a sua utilização monetária durante a dinastia Qing."
+  source_url: https://culturacores.azores.gov.pt/agenda/?id=51324
+  tags:
+  - exhibition
+
+- date: 2026-09-11
+  end_date: 2026-10-31
+  name: "Exposição: Viola da Saudade"
+  name_en: "Exhibition: Viola da Saudade"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  description: "Exhibition honouring Mestre Miguel de Braga Pimentel and his work preserving and teaching the Azorean viola da terra."
+  description_pt: "Exposição de homenagem ao Mestre Miguel de Braga Pimentel e ao seu trabalho de preservação e ensino da viola da terra açoriana."
+  source_url: https://culturacores.azores.gov.pt/agenda/?id=51350
+  tags:
+  - exhibition
+
+- date: 2026-09-22
+  end_date: 2027-01-30
+  name: "Exposição: Jaime Brasil — da ilha ao mundo"
+  name_en: "Exhibition: Jaime Brasil — From the Island to the World"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  description: "Documents from the library's collection revisit the life, work, and civic intervention of Terceira journalist and writer Jaime Brasil, marking the 130th anniversary of his birth and the 60th anniversary of his death."
+  description_pt: "Documentos da coleção da biblioteca revisitam a vida, a obra e a intervenção cívica do jornalista e escritor terceirense Jaime Brasil, assinalando os 130 anos do nascimento e os 60 anos da morte."
+  source_url: https://angradoheroismo.pt/evento/%F0%9D%97%98%F0%9D%98%85%F0%9D%97%BD%F0%9D%97%BC%F0%9D%98%80%F0%9D%97%B6%F0%9D%97%B0%CC%A7%F0%9D%97%AE%CC%83%F0%9D%97%BC-%F0%9D%97%9D%F0%9D%97%AE%F0%9D%97%B6%F0%9D%97%BA%F0%9D%97%B2-%F0%9D%97%95/
+  tags:
+  - exhibition
+  - literature
+
+- date: 2026-09-27
+  end_date: 2026-10-09
+  name: "Exposição: De reüll, escull, de Laura Cano Calpe"
+  name_en: "Exhibition: De reüll, escull by Laura Cano Calpe"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "16:00–18:30"
+  description: "Laura Cano Calpe creates sculptural forms from dried dragon-tree leaves. The exhibition opens September 27 at 16:00 and is open Monday through Friday from 16:00 to 18:30."
+  description_pt: "Laura Cano Calpe cria formas escultóricas a partir de folhas secas de dragoeiro. A exposição inaugura a 27 de setembro, às 16h00, e pode ser visitada de segunda a sexta-feira, das 16h00 às 18h30."
+  source_url: https://angradoheroismo.pt/evento/exposicao-de-reull-escull-de-laura-cano-calpe/
+  tags:
+  - exhibition
+  - free
+
+- date: 2026-10-02
+  end_date: 2026-10-05
+  name: "Angra 4 Patas 2026"
+  name_en: "Angra Four Paws 2026"
+  venue: Parque Multissetorial da Ilha Terceira
+  address: "Vinha Brava, 9700-240 Angra do Heroísmo"
+  description: "Four-day World Animal Day programme bringing together animal-welfare associations, breeders, families, and animal lovers for dog shows, talks, concerts, and entertainment."
+  description_pt: "Programa de quatro dias dedicado ao Dia Mundial do Animal, reunindo associações de proteção animal, criadores, famílias e amigos dos animais para exposições caninas, palestras, concertos e animação."
+  source_url: https://angradoheroismo.pt/evento/angra-4-patas-2026/
+  tags:
+  - outdoor
+  - kid-friendly
+  - live-music
+
+- date: 2026-10-03
+  name: "Entradas de Peso: Isto Não É Gostar de Podcasts — ao vivo"
+  name_en: "Entradas de Peso: This Is Not Liking Podcasts — Live"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  time: "21:30"
+  description: "JARC and Airton bring the Entradas de Peso podcast to the stage with audience challenges, recurring segments, and local and regional guests. Tickets are available from Ticketline."
+  description_pt: "JARC e Airton levam o podcast Entradas de Peso ao palco, com desafios ao público, rubricas e convidados locais e regionais. Bilhetes disponíveis na Ticketline."
+  source_url: https://www.cmpv.pt/index.php?op=agenda&id=909
+  tags:
+  - theater
+
+- date: 2026-10-03
+  end_date: 2026-10-05
+  name: "Azores City Race 2026"
+  venue: Ilha Terceira
+  address: "Ilha Terceira, Açores"
+  description: "Four-stage orienteering competition with three urban stages and one forest-park stage. Open and competition classes accept non-federated participants, and a Formation class is available for children up to age 12; advance registration closed September 25."
+  description_pt: "Prova de orientação em quatro etapas, três urbanas e uma em parque florestal. Os escalões abertos e de competição aceitam participantes não federados e existe um escalão Formação até aos 12 anos; as inscrições antecipadas encerraram a 25 de setembro."
+  source_url: https://oricaos.com/449203485/azcr26
+  tags:
+  - outdoor
+
+- date: 2026-10-03
+  end_date: 2026-10-10
+  name: "Festas das Lajes 2026 — Rosairinhas"
+  name_en: "Lajes Festivities 2026 — Rosairinhas"
+  venue: Vila das Lajes
+  address: "Lajes, Praia da Vitória"
+  description: "Community festivities in Vila das Lajes with religious celebrations, live music, DJs, and evening entertainment. Check the organizing committee's page for the day-by-day programme."
+  description_pt: "Festas comunitárias na Vila das Lajes com celebrações religiosas, música ao vivo, DJs e animação noturna. Consulta a página da comissão organizadora para o programa diário."
+  source_url: https://byacores.com/es/agenda/terceira/festividades/festas-das-lajes-2026-shorez/
+  facebook: https://www.facebook.com/FestasDaVilaDasLajes
+  tags:
+  - outdoor
+  - live-music
+  - nightlife
+
+- date: 2026-10-08
+  end_date: 2026-10-10
+  name: "XLIII ProAm — Clube de Golfe da Ilha Terceira"
+  name_en: "43rd ProAm — Terceira Island Golf Club"
+  venue: Clube de Golfe da Ilha Terceira
+  address: "Terra Chã, Angra do Heroísmo"
+  time: "08:30"
+  description: "Three-day professional-amateur golf programme, beginning with the ProAm competition on October 8 and continuing with professional and amateur category rounds on October 9 and 10."
+  description_pt: "Programa de golfe profissional-amador de três dias, com a competição ProAm a 8 de outubro e provas das categorias profissional e amadoras nos dias 9 e 10."
+  source_url: https://terceiragolf.com/proam/
+  tags:
+  - outdoor
+
+- date: 2026-11-20
+  end_date: 2026-11-21
+  name: "Sons da Macaronésia — Festival de Música Atlântica"
+  name_en: "Sounds of Macaronesia — Atlantic Music Festival"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  time: "21:30"
+  description: "Atlantic music festival bringing artists from the Azores, Madeira, the Canary Islands, and Cape Verde to the CCCAH. Quarto Crescente e Amigos and Xarabanda perform November 20; El Batijero and Recado pa Terra perform November 21."
+  description_pt: "Festival de música atlântica que reúne no CCCAH artistas dos Açores, Madeira, Canárias e Cabo Verde. Quarto Crescente e Amigos e Xarabanda atuam a 20 de novembro; El Batijero e Recado pa Terra atuam a 21 de novembro."
+  source_url: https://angradoheroismo.pt/evento/sons-da-macaronesia-festival-de-musica-atlantica/
+  tags:
+  - live-music
+
+- date: 2027-01-16
+  name: "Concertos Únicos 2027: Ana Moura com João Barros"
+  name_en: "Unique Concerts 2027: Ana Moura with João Barros"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  time: "21:00"
+  description: "Ana Moura opens the fifth Concertos Únicos season, with Terceira singer João Barros performing the first part. Ticket sales open September 28 on BlueTicket."
+  description_pt: "Ana Moura abre a quinta edição dos Concertos Únicos, com o cantor terceirense João Barros na primeira parte. Os bilhetes ficam à venda a 28 de setembro na BlueTicket."
+  source_url: https://www.cmpv.pt/index.php?op=noticias&id=4604
+  tags:
+  - live-music
+
+- date: 2027-01-29
+  end_date: 2027-01-31
+  name: "Azores GameFest 2027"
+  venue: Parque Multissetorial da Ilha Terceira
+  address: "Vinha Brava, 9700-240 Angra do Heroísmo"
+  time: "10:00"
+  description: "Gaming and esports festival with tournaments, guests, workshops, panels, and family-oriented activities at the Parque Multissetorial's Pavilhão Multiusos."
+  description_pt: "Festival de gaming e esports com torneios, convidados, workshops, painéis e atividades para toda a família no Pavilhão Multiusos do Parque Multissetorial."
+  source_url: https://angradoheroismo.pt/evento/azores-gamefest/
+  tags:
+  - kid-friendly
+
+- date: 2027-03-13
+  name: "Concertos Únicos 2027: Luís Trigacheiro com Pedro Xavier"
+  name_en: "Unique Concerts 2027: Luís Trigacheiro with Pedro Xavier"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  time: "21:00"
+  description: "Luís Trigacheiro performs in the fifth Concertos Únicos season, with Terceira singer Pedro Xavier opening the concert."
+  description_pt: "Luís Trigacheiro atua na quinta edição dos Concertos Únicos, com o cantor terceirense Pedro Xavier na primeira parte."
+  source_url: https://www.cmpv.pt/index.php?op=noticias&id=4604
+  tags:
+  - live-music
+
+- date: 2027-04-17
+  name: "Concertos Únicos 2027: Nena com Tommy G"
+  name_en: "Unique Concerts 2027: Nena with Tommy G"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  time: "21:00"
+  description: "Singer-songwriter Nena closes the fifth Concertos Únicos season, with Terceira singer Tommy G performing the first part."
+  description_pt: "A cantautora Nena encerra a quinta edição dos Concertos Únicos, com o cantor terceirense Tommy G na primeira parte."
+  source_url: https://www.cmpv.pt/index.php?op=noticias&id=4604
+  tags:
   - live-music
