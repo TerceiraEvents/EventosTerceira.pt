@@ -7432,3 +7432,283 @@ Come join us and support our festivities!"
   source_url: https://www.cmpv.pt/index.php?op=noticias&id=4604
   tags:
   - live-music
+
+# October 7, 2026 social, official-agenda, and source-discovery scan.
+- date: 2026-10-10
+  end_date: 2026-10-11
+  name: "Cinema: A Ovelha Choné — Trapalhada na Quinta"
+  name_en: "Cinema: Shaun the Sheep — The Beast of Mossy Bottom"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  time: "15:00 and 18:00"
+  description: "Family screenings of a Shaun the Sheep Halloween adventure, with sessions at 15:00 and 18:00 on October 10 and 11. Tickets are available through the usual municipal outlets."
+  description_pt: "Sessões familiares de uma aventura de Halloween da Ovelha Choné, às 15h00 e 18h00 nos dias 10 e 11 de outubro. Bilhetes disponíveis nos locais habituais do município."
+  source_url: https://angradoheroismo.pt/evento/cinema-a-ovelha-chone-trapalhada-na-quinta/
+  instagram: https://www.instagram.com/angradoheroismo/p/DeH6PJBDeyO/
+  tags:
+  - cinema
+  - kid-friendly
+
+- date: 2026-10-11
+  name: "Cinema: A Ovelha Choné — Trapalhada na Quinta (Praia da Vitória)"
+  name_en: "Cinema: Shaun the Sheep — The Beast of Mossy Bottom (Praia da Vitória)"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  time: "15:00"
+  description: "Praia da Vitória screening of the Shaun the Sheep family film. Tickets are available through Ticketline, AJAIT, and at the auditorium before the session."
+  description_pt: "Sessão na Praia da Vitória do filme familiar da Ovelha Choné. Bilhetes disponíveis na Ticketline, na AJAIT e no auditório antes da sessão."
+  instagram: https://www.instagram.com/agendapraiacultural/p/Dd6JqrHDp2u/
+  tags:
+  - cinema
+  - kid-friendly
+
+- date: 2026-10-11
+  end_date: 2026-10-30
+  name: "Exposição Entre Terra e Consolações"
+  name_en: "Between Earth and Consolations Exhibition"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  description: "Exhibition at Casa do Sal, open from 16:00 to 18:30 during the published programme period."
+  description_pt: "Exposição na Casa do Sal, visitável das 16h00 às 18h30 durante o período anunciado."
+  source_url: https://angradoheroismo.pt/evento/exposicao-entre-terra-e-consolacoes/
+  tags:
+  - exhibition
+
+- date: 2026-10-12
+  name: "Apresentação: Guia de Boas Práticas — Inclusão Social através da Arte"
+  name_en: "Presentation: Good Practice Guide — Social Inclusion through Art"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  time: "11:00"
+  description: "Daniela Silveira of Get Art presents a guide for developing arts-based social-inclusion projects in schools, social institutions, and associations. Free entry."
+  description_pt: "Daniela Silveira, da Get Art, apresenta um guia para desenvolver projetos de inclusão social através da arte em escolas, IPSS e associações. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/apresentacao-guia-de-boas-praticas-inclusao-social-atraves-da-arte/
+  instagram: https://www.instagram.com/angradoheroismo/p/DeM8_QvDljH/
+  tags:
+  - literature
+  - free
+
+- date: 2026-10-14
+  name: "Apresentação: MONTE BRASIL 2026 — I Festival de Literatura & História"
+  name_en: "Presentation: MONTE BRASIL 2026 — First Literature and History Festival"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  time: "11:00"
+  description: "Public presentation of the first MONTE BRASIL Festival of Literature and History, a new meeting point for literature, history, heritage, and Angra's cultural identity. Free entry."
+  description_pt: "Apresentação pública do I Festival de Literatura & História MONTE BRASIL, novo espaço de encontro entre literatura, história, património e identidade cultural de Angra. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/apresentacao-monte-brasil-2026-i-festival-de-literatura-historia-de-angra-do-heroismo/
+  instagram: https://www.instagram.com/angradoheroismo/p/DeM2Jz8iWzL/
+  tags:
+  - literature
+  - free
+
+- date: 2026-10-15
+  end_date: 2026-10-19
+  name: "Cinema: Verity"
+  name_en: "Cinema: Verity"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  time: "21:00"
+  description: "Evening screenings of Verity at the municipal cultural and congress centre."
+  description_pt: "Sessões noturnas de «Verity» no Centro Cultural e de Congressos de Angra do Heroísmo."
+  source_url: https://angradoheroismo.pt/evento/cinema-verity/
+  tags:
+  - cinema
+
+- date: 2026-10-16
+  name: "Lançamento de livro: A Propósito do Bicentenário do Nascimento do Pe. Jerónimo Emiliano de Andrade"
+  name_en: "Book Launch: On the Bicentenary of Father Jerónimo Emiliano de Andrade's Birth"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  time: "20:00"
+  description: "Book launch commemorating the bicentenary of Father Jerónimo Emiliano de Andrade's birth."
+  description_pt: "Lançamento de livro comemorativo do bicentenário do nascimento do Pe. Jerónimo Emiliano de Andrade."
+  source_url: https://angradoheroismo.pt/evento/lancamento-de-livro-a-proposito-do-bicentenario-do-nascimento-do-pe-jeronimo-emiliano-de-andrade/
+  tags:
+  - literature
+
+- date: 2026-10-16
+  name: "Cine Atlântico: Mudar de Vida"
+  name_en: "Cine Atlântico: Change of Life"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "18:30"
+  description: "Screening of Paulo Rocha's 1966 film Mudar de Vida in the Cine Atlântico retrospective Paulo Rocha: As Sombras de Portugal. Tickets cost €3; members pay €1.50."
+  description_pt: "Exibição do filme «Mudar de Vida» (1966), de Paulo Rocha, na retrospetiva «Paulo Rocha: As Sombras de Portugal» do Cine Atlântico. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DeAZm2IjVAz/
+  tags:
+  - cinema
+
+- date: 2026-10-16
+  name: "Cine Atlântico: O Desejado ou As Montanhas da Lua"
+  name_en: "Cine Atlântico: The Desired One or The Mountains of the Moon"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "21:30"
+  description: "Screening of Paulo Rocha's 1987 film O Desejado ou As Montanhas da Lua in the Cine Atlântico retrospective Paulo Rocha: As Sombras de Portugal. Tickets cost €3; members pay €1.50."
+  description_pt: "Exibição do filme «O Desejado ou As Montanhas da Lua» (1987), de Paulo Rocha, na retrospetiva «Paulo Rocha: As Sombras de Portugal» do Cine Atlântico. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DeAZm2IjVAz/
+  tags:
+  - cinema
+
+- date: 2026-10-17
+  name: "Danças Tradicionais do Mundo com Miguel Lopes"
+  name_en: "World Traditional Dances with Miguel Lopes"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "18:00"
+  description: "Inclusive world traditional-dance workshop with Miguel Lopes; no prior experience is required. Admission is €8 for members and €10 for non-members."
+  description_pt: "Oficina inclusiva de danças tradicionais do mundo com Miguel Lopes; não é necessária experiência prévia. Inscrição a 8 € para sócios e 10 € para não-sócios."
+  source_url: https://angradoheroismo.pt/evento/dancas-tradicionais-do-mundo-com-miguel-lopes/
+  instagram: https://www.instagram.com/oficinadangra/p/Dd43KrkCaC0/
+  tags:
+  - dance
+  - workshop
+
+- date: 2026-10-17
+  name: "Cine Atlântico: O Rio do Ouro"
+  name_en: "Cine Atlântico: River of Gold"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "18:30"
+  description: "Screening of Paulo Rocha's 1998 film O Rio do Ouro in the Cine Atlântico retrospective Paulo Rocha: As Sombras de Portugal. Tickets cost €3; members pay €1.50."
+  description_pt: "Exibição do filme «O Rio do Ouro» (1998), de Paulo Rocha, na retrospetiva «Paulo Rocha: As Sombras de Portugal» do Cine Atlântico. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DeKsz3eAFG4/
+  tags:
+  - cinema
+
+- date: 2026-10-17
+  name: "Cine Atlântico: A Raiz do Coração"
+  name_en: "Cine Atlântico: The Root of the Heart"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "21:30"
+  description: "Screening of Paulo Rocha's 2000 film A Raiz do Coração in the Cine Atlântico retrospective Paulo Rocha: As Sombras de Portugal. Tickets cost €3; members pay €1.50."
+  description_pt: "Exibição do filme «A Raiz do Coração» (2000), de Paulo Rocha, na retrospetiva «Paulo Rocha: As Sombras de Portugal» do Cine Atlântico. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DeKsz3eAFG4/
+  tags:
+  - cinema
+
+- date: 2026-10-20
+  name: "Conferência: A(s) polícia(s) na construção histórica de um estado de direito"
+  name_en: "Conference: Police Institutions in the Historical Construction of the Rule of Law"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  time: "20:00"
+  description: "Conference on the role of police institutions in the evolution of democratic regimes and the consolidation of the rule of law. Free entry."
+  description_pt: "Conferência sobre o papel das instituições policiais na evolução dos regimes democráticos e na consolidação do Estado de Direito. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/conferencia-as-policias-na-construcao-historica-de-um-estado-de-direito/
+  instagram: https://www.instagram.com/angradoheroismo/p/DeAFAYvmRjJ/
+  tags:
+  - free
+
+- date: 2026-10-23
+  name: "Cinema: Verity (Praia da Vitória)"
+  name_en: "Cinema: Verity (Praia da Vitória)"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  time: "21:00"
+  description: "Praia da Vitória screening of Verity. Tickets are available through Ticketline, AJAIT, and at the auditorium before the session."
+  description_pt: "Sessão de «Verity» na Praia da Vitória. Bilhetes disponíveis na Ticketline, na AJAIT e no auditório antes da sessão."
+  instagram: https://www.instagram.com/agendapraiacultural/p/Dd6JqrHDp2u/
+  tags:
+  - cinema
+
+- date: 2026-10-24
+  name: "Evento Solidário: Crescer com Esperança"
+  name_en: "Charity Event: Growing with Hope"
+  venue: Teatro Angrense
+  address: "Rua da Esperança 48-52, 9700-073 Angra do Heroísmo"
+  time: "21:00"
+  description: "Charity event at Teatro Angrense."
+  description_pt: "Evento solidário no Teatro Angrense."
+  source_url: https://angradoheroismo.pt/evento/evento-solidario-crescer-com-esperanca/
+  tags:
+  - theater
+
+- date: 2026-10-24
+  end_date: 2026-10-26
+  name: "Cinema: Digger"
+  name_en: "Cinema: Digger"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  time: "21:00"
+  description: "Evening screenings of Digger at the municipal cultural and congress centre."
+  description_pt: "Sessões noturnas de «Digger» no Centro Cultural e de Congressos de Angra do Heroísmo."
+  source_url: https://angradoheroismo.pt/evento/cinema-digger/
+  tags:
+  - cinema
+
+- date: 2026-10-24
+  name: "Festival Internacional dos Açores: Rafael Kyrychenko"
+  name_en: "Azores International Festival: Rafael Kyrychenko"
+  venue: Palácio dos Capitães Generais
+  address: "Rua do Palácio, 9700-143 Angra do Heroísmo"
+  description: "Rafael Kyrychenko performs on Terceira as part of the 20th Azores International Festival. Further programme details are pending."
+  description_pt: "Rafael Kyrychenko atua na ilha Terceira no 20.º Festival Internacional dos Açores. Restantes detalhes do programa a anunciar."
+  source_url: https://festivalinternacionalacores.com/
+  tags:
+  - live-music
+
+- date: 2026-10-29
+  end_date: 2026-11-02
+  name: "Cinema: Sacrifício"
+  name_en: "Cinema: Sacrifice"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  time: "21:00"
+  description: "Evening screenings of Sacrifício at the municipal cultural and congress centre."
+  description_pt: "Sessões noturnas de «Sacrifício» no Centro Cultural e de Congressos de Angra do Heroísmo."
+  source_url: https://angradoheroismo.pt/evento/cinema-sacrificio/
+  tags:
+  - cinema
+
+- date: 2026-10-31
+  name: "Cinema: Other Mommy"
+  name_en: "Cinema: Other Mommy"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  time: "21:00"
+  description: "Praia da Vitória screening of Other Mommy. Tickets are available through Ticketline, AJAIT, and at the auditorium before the session."
+  description_pt: "Sessão de «Other Mommy» na Praia da Vitória. Bilhetes disponíveis na Ticketline, na AJAIT e no auditório antes da sessão."
+  instagram: https://www.instagram.com/agendapraiacultural/p/Dd6JqrHDp2u/
+  tags:
+  - cinema
+
+- date: 2026-10-01
+  end_date: 2026-12-31
+  name: "Exposição de fotografia: Angra da Humanidade, de Luís Godinho"
+  name_en: "Photography Exhibition: Angra of Humanity by Luís Godinho"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  description: "Luís Godinho's photography exhibition marking 43 years since Angra's historic centre was inscribed as a UNESCO World Heritage Site."
+  description_pt: "Exposição fotográfica de Luís Godinho que assinala os 43 anos da inscrição do centro histórico de Angra como Património Mundial da UNESCO."
+  source_url: https://angradoheroismo.pt/evento/exposicao-de-fotografia-angra-da-humanidade-de-luis-godinho/
+  tags:
+  - exhibition
+  - free
+
+- date: 2026-11-29
+  end_date: 2026-12-06
+  name: "Festival Internacional dos Açores: A ilha EnCena"
+  name_en: "Azores International Festival: The Island On Stage"
+  venue: Teatro Alpendre
+  address: "Angra do Heroísmo"
+  description: "Community workshop and creative project led by Custódia Gallego during the 20th Azores International Festival. Further programme details are pending."
+  description_pt: "Workshop comunitário e projeto de criação orientado por Custódia Gallego no 20.º Festival Internacional dos Açores. Restantes detalhes do programa a anunciar."
+  source_url: https://festivalinternacionalacores.com/
+  tags:
+  - theater
+  - workshop
+
+- date: 2026-11-29
+  name: "Conferência comemorativa da 20.ª edição do Festival Internacional dos Açores"
+  name_en: "20th Azores International Festival Commemorative Conference"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  time: "16:00"
+  description: "Conference commemorating the 20th edition of the Azores International Festival."
+  description_pt: "Conferência comemorativa da 20.ª edição do Festival Internacional dos Açores."
+  source_url: https://festivalinternacionalacores.com/
+  tags:
+  - literature
