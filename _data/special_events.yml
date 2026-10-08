@@ -7432,3 +7432,794 @@ Come join us and support our festivities!"
   source_url: https://www.cmpv.pt/index.php?op=noticias&id=4604
   tags:
   - live-music
+
+# October 7, 2026 social, official-agenda, and source-discovery scan.
+- date: 2026-10-10
+  end_date: 2026-10-11
+  name: "Cinema: A Ovelha Choné — Trapalhada na Quinta"
+  name_en: "Cinema: Shaun the Sheep — The Beast of Mossy Bottom"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  time: "15:00 and 18:00"
+  description: "Family screenings of a Shaun the Sheep Halloween adventure, with sessions at 15:00 and 18:00 on October 10 and 11. Tickets are available through the usual municipal outlets."
+  description_pt: "Sessões familiares de uma aventura de Halloween da Ovelha Choné, às 15h00 e 18h00 nos dias 10 e 11 de outubro. Bilhetes disponíveis nos locais habituais do município."
+  source_url: https://angradoheroismo.pt/evento/cinema-a-ovelha-chone-trapalhada-na-quinta/
+  instagram: https://www.instagram.com/angradoheroismo/p/DeH6PJBDeyO/
+  tags:
+  - cinema
+  - kid-friendly
+
+- date: 2026-10-11
+  name: "Cinema: A Ovelha Choné — Trapalhada na Quinta (Praia da Vitória)"
+  name_en: "Cinema: Shaun the Sheep — The Beast of Mossy Bottom (Praia da Vitória)"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  time: "15:00"
+  description: "Praia da Vitória screening of the Shaun the Sheep family film. Tickets are available through Ticketline, AJAIT, and at the auditorium before the session."
+  description_pt: "Sessão na Praia da Vitória do filme familiar da Ovelha Choné. Bilhetes disponíveis na Ticketline, na AJAIT e no auditório antes da sessão."
+  instagram: https://www.instagram.com/agendapraiacultural/p/Dd6JqrHDp2u/
+  tags:
+  - cinema
+  - kid-friendly
+
+- date: 2026-10-11
+  end_date: 2026-10-30
+  name: "Exposição Entre Terra e Consolações"
+  name_en: "Between Earth and Consolations Exhibition"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  description: "Exhibition at Casa do Sal, open from 16:00 to 18:30 during the published programme period."
+  description_pt: "Exposição na Casa do Sal, visitável das 16h00 às 18h30 durante o período anunciado."
+  source_url: https://angradoheroismo.pt/evento/exposicao-entre-terra-e-consolacoes/
+  tags:
+  - exhibition
+
+- date: 2026-10-12
+  name: "Apresentação: Guia de Boas Práticas — Inclusão Social através da Arte"
+  name_en: "Presentation: Good Practice Guide — Social Inclusion through Art"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  time: "11:00"
+  description: "Daniela Silveira of Get Art presents a guide for developing arts-based social-inclusion projects in schools, social institutions, and associations. Free entry."
+  description_pt: "Daniela Silveira, da Get Art, apresenta um guia para desenvolver projetos de inclusão social através da arte em escolas, IPSS e associações. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/apresentacao-guia-de-boas-praticas-inclusao-social-atraves-da-arte/
+  instagram: https://www.instagram.com/angradoheroismo/p/DeM8_QvDljH/
+  tags:
+  - literature
+  - free
+
+- date: 2026-10-14
+  name: "Apresentação: MONTE BRASIL 2026 — I Festival de Literatura & História"
+  name_en: "Presentation: MONTE BRASIL 2026 — First Literature and History Festival"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  time: "11:00"
+  description: "Public presentation of the first MONTE BRASIL Festival of Literature and History, a new meeting point for literature, history, heritage, and Angra's cultural identity. Free entry."
+  description_pt: "Apresentação pública do I Festival de Literatura & História MONTE BRASIL, novo espaço de encontro entre literatura, história, património e identidade cultural de Angra. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/apresentacao-monte-brasil-2026-i-festival-de-literatura-historia-de-angra-do-heroismo/
+  instagram: https://www.instagram.com/angradoheroismo/p/DeM2Jz8iWzL/
+  tags:
+  - literature
+  - free
+
+- date: 2026-10-15
+  end_date: 2026-10-19
+  name: "Cinema: Verity"
+  name_en: "Cinema: Verity"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  time: "21:00"
+  description: "Evening screenings of Verity at the municipal cultural and congress centre."
+  description_pt: "Sessões noturnas de «Verity» no Centro Cultural e de Congressos de Angra do Heroísmo."
+  source_url: https://angradoheroismo.pt/evento/cinema-verity/
+  tags:
+  - cinema
+
+- date: 2026-10-16
+  name: "Lançamento de livro: A Propósito do Bicentenário do Nascimento do Pe. Jerónimo Emiliano de Andrade"
+  name_en: "Book Launch: On the Bicentenary of Father Jerónimo Emiliano de Andrade's Birth"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  time: "20:00"
+  description: "Book launch commemorating the bicentenary of Father Jerónimo Emiliano de Andrade's birth."
+  description_pt: "Lançamento de livro comemorativo do bicentenário do nascimento do Pe. Jerónimo Emiliano de Andrade."
+  source_url: https://angradoheroismo.pt/evento/lancamento-de-livro-a-proposito-do-bicentenario-do-nascimento-do-pe-jeronimo-emiliano-de-andrade/
+  tags:
+  - literature
+
+- date: 2026-10-16
+  name: "Cine Atlântico: Mudar de Vida"
+  name_en: "Cine Atlântico: Change of Life"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "18:30"
+  description: "Screening of Paulo Rocha's 1966 film Mudar de Vida in the Cine Atlântico retrospective Paulo Rocha: As Sombras de Portugal. Tickets cost €3; members pay €1.50."
+  description_pt: "Exibição do filme «Mudar de Vida» (1966), de Paulo Rocha, na retrospetiva «Paulo Rocha: As Sombras de Portugal» do Cine Atlântico. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DeAZm2IjVAz/
+  tags:
+  - cinema
+
+- date: 2026-10-16
+  name: "Cine Atlântico: O Desejado ou As Montanhas da Lua"
+  name_en: "Cine Atlântico: The Desired One or The Mountains of the Moon"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "21:30"
+  description: "Screening of Paulo Rocha's 1987 film O Desejado ou As Montanhas da Lua in the Cine Atlântico retrospective Paulo Rocha: As Sombras de Portugal. Tickets cost €3; members pay €1.50."
+  description_pt: "Exibição do filme «O Desejado ou As Montanhas da Lua» (1987), de Paulo Rocha, na retrospetiva «Paulo Rocha: As Sombras de Portugal» do Cine Atlântico. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DeAZm2IjVAz/
+  tags:
+  - cinema
+
+- date: 2026-10-17
+  name: "Danças Tradicionais do Mundo com Miguel Lopes"
+  name_en: "World Traditional Dances with Miguel Lopes"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "18:00"
+  description: "Inclusive world traditional-dance workshop with Miguel Lopes; no prior experience is required. Admission is €8 for members and €10 for non-members."
+  description_pt: "Oficina inclusiva de danças tradicionais do mundo com Miguel Lopes; não é necessária experiência prévia. Inscrição a 8 € para sócios e 10 € para não-sócios."
+  source_url: https://angradoheroismo.pt/evento/dancas-tradicionais-do-mundo-com-miguel-lopes/
+  instagram: https://www.instagram.com/oficinadangra/p/Dd43KrkCaC0/
+  tags:
+  - dance
+  - workshop
+
+- date: 2026-10-17
+  name: "Cine Atlântico: O Rio do Ouro"
+  name_en: "Cine Atlântico: River of Gold"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "18:30"
+  description: "Screening of Paulo Rocha's 1998 film O Rio do Ouro in the Cine Atlântico retrospective Paulo Rocha: As Sombras de Portugal. Tickets cost €3; members pay €1.50."
+  description_pt: "Exibição do filme «O Rio do Ouro» (1998), de Paulo Rocha, na retrospetiva «Paulo Rocha: As Sombras de Portugal» do Cine Atlântico. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DeKsz3eAFG4/
+  tags:
+  - cinema
+
+- date: 2026-10-17
+  name: "Cine Atlântico: A Raiz do Coração"
+  name_en: "Cine Atlântico: The Root of the Heart"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "21:30"
+  description: "Screening of Paulo Rocha's 2000 film A Raiz do Coração in the Cine Atlântico retrospective Paulo Rocha: As Sombras de Portugal. Tickets cost €3; members pay €1.50."
+  description_pt: "Exibição do filme «A Raiz do Coração» (2000), de Paulo Rocha, na retrospetiva «Paulo Rocha: As Sombras de Portugal» do Cine Atlântico. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DeKsz3eAFG4/
+  tags:
+  - cinema
+
+- date: 2026-10-20
+  name: "Conferência: A(s) polícia(s) na construção histórica de um estado de direito"
+  name_en: "Conference: Police Institutions in the Historical Construction of the Rule of Law"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9701-857 Angra do Heroísmo"
+  time: "20:00"
+  description: "Conference on the role of police institutions in the evolution of democratic regimes and the consolidation of the rule of law. Free entry."
+  description_pt: "Conferência sobre o papel das instituições policiais na evolução dos regimes democráticos e na consolidação do Estado de Direito. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/conferencia-as-policias-na-construcao-historica-de-um-estado-de-direito/
+  instagram: https://www.instagram.com/angradoheroismo/p/DeAFAYvmRjJ/
+  tags:
+  - free
+
+- date: 2026-10-23
+  name: "Cinema: Verity (Praia da Vitória)"
+  name_en: "Cinema: Verity (Praia da Vitória)"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  time: "21:00"
+  description: "Praia da Vitória screening of Verity. Tickets are available through Ticketline, AJAIT, and at the auditorium before the session."
+  description_pt: "Sessão de «Verity» na Praia da Vitória. Bilhetes disponíveis na Ticketline, na AJAIT e no auditório antes da sessão."
+  instagram: https://www.instagram.com/agendapraiacultural/p/Dd6JqrHDp2u/
+  tags:
+  - cinema
+
+- date: 2026-10-24
+  name: "Evento Solidário: Crescer com Esperança"
+  name_en: "Charity Event: Growing with Hope"
+  venue: Teatro Angrense
+  address: "Rua da Esperança 48-52, 9700-073 Angra do Heroísmo"
+  time: "21:00"
+  description: "Charity event at Teatro Angrense."
+  description_pt: "Evento solidário no Teatro Angrense."
+  source_url: https://angradoheroismo.pt/evento/evento-solidario-crescer-com-esperanca/
+  tags:
+  - theater
+
+- date: 2026-10-24
+  end_date: 2026-10-26
+  name: "Cinema: Digger"
+  name_en: "Cinema: Digger"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  time: "21:00"
+  description: "Evening screenings of Digger at the municipal cultural and congress centre."
+  description_pt: "Sessões noturnas de «Digger» no Centro Cultural e de Congressos de Angra do Heroísmo."
+  source_url: https://angradoheroismo.pt/evento/cinema-digger/
+  tags:
+  - cinema
+
+- date: 2026-10-24
+  name: "Festival Internacional dos Açores: Rafael Kyrychenko"
+  name_en: "Azores International Festival: Rafael Kyrychenko"
+  venue: Palácio dos Capitães Generais
+  address: "Rua do Palácio, 9700-143 Angra do Heroísmo"
+  description: "Rafael Kyrychenko performs on Terceira as part of the 20th Azores International Festival. Further programme details are pending."
+  description_pt: "Rafael Kyrychenko atua na ilha Terceira no 20.º Festival Internacional dos Açores. Restantes detalhes do programa a anunciar."
+  source_url: https://festivalinternacionalacores.com/
+  tags:
+  - live-music
+
+- date: 2026-10-29
+  end_date: 2026-11-02
+  name: "Cinema: Sacrifício"
+  name_en: "Cinema: Sacrifice"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  time: "21:00"
+  description: "Evening screenings of Sacrifício at the municipal cultural and congress centre."
+  description_pt: "Sessões noturnas de «Sacrifício» no Centro Cultural e de Congressos de Angra do Heroísmo."
+  source_url: https://angradoheroismo.pt/evento/cinema-sacrificio/
+  tags:
+  - cinema
+
+- date: 2026-10-31
+  name: "Cinema: Other Mommy"
+  name_en: "Cinema: Other Mommy"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  time: "21:00"
+  description: "Praia da Vitória screening of Other Mommy. Tickets are available through Ticketline, AJAIT, and at the auditorium before the session."
+  description_pt: "Sessão de «Other Mommy» na Praia da Vitória. Bilhetes disponíveis na Ticketline, na AJAIT e no auditório antes da sessão."
+  instagram: https://www.instagram.com/agendapraiacultural/p/Dd6JqrHDp2u/
+  tags:
+  - cinema
+
+- date: 2026-10-01
+  end_date: 2026-12-31
+  name: "Exposição de fotografia: Angra da Humanidade, de Luís Godinho"
+  name_en: "Photography Exhibition: Angra of Humanity by Luís Godinho"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  description: "Luís Godinho's photography exhibition marking 43 years since Angra's historic centre was inscribed as a UNESCO World Heritage Site."
+  description_pt: "Exposição fotográfica de Luís Godinho que assinala os 43 anos da inscrição do centro histórico de Angra como Património Mundial da UNESCO."
+  source_url: https://angradoheroismo.pt/evento/exposicao-de-fotografia-angra-da-humanidade-de-luis-godinho/
+  tags:
+  - exhibition
+  - free
+
+- date: 2026-11-29
+  end_date: 2026-12-06
+  name: "Festival Internacional dos Açores: A ilha EnCena"
+  name_en: "Azores International Festival: The Island On Stage"
+  venue: Teatro Alpendre
+  address: "Angra do Heroísmo"
+  description: "Community workshop and creative project led by Custódia Gallego during the 20th Azores International Festival. Further programme details are pending."
+  description_pt: "Workshop comunitário e projeto de criação orientado por Custódia Gallego no 20.º Festival Internacional dos Açores. Restantes detalhes do programa a anunciar."
+  source_url: https://festivalinternacionalacores.com/
+  tags:
+  - theater
+  - workshop
+
+- date: 2026-11-29
+  name: "Conferência comemorativa da 20.ª edição do Festival Internacional dos Açores"
+  name_en: "20th Azores International Festival Commemorative Conference"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  time: "16:00"
+  description: "Conference commemorating the 20th edition of the Azores International Festival."
+  description_pt: "Conferência comemorativa da 20.ª edição do Festival Internacional dos Açores."
+  source_url: https://festivalinternacionalacores.com/
+  tags:
+  - literature
+
+# Lar Doce Livro — October 2026 programme
+- date: 2026-10-08
+  name: "Poesia com Cobertor: Poemas para Outubro"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Sessão de poesia com leituras de Madalena Ávila e outros participantes."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [literature, free]
+
+- date: 2026-10-09
+  name: "BRIC-A-BRAC Talks: A minha máquina do tempo"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Conversa com Luís Bettencourt, coordenada por José Luís Neto, integrada na 600 Years Mission."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [free]
+
+- date: 2026-10-09
+  name: "Aaron Grindland ao vivo"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "21:00"
+  description_pt: "Concerto de rock e country, com happy hour das 22h00 às 00h00."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, nightlife, free]
+
+- date: 2026-10-10
+  name: "Saúde Mental: Institucionalização, cuidados de saúde em contexto comunitário ou ambos?"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:00"
+  description_pt: "Conversa sobre modelos de cuidados de saúde mental com Carina Sarmento, Saul Machado, Helena Fagundes e outros convidados."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [free]
+
+- date: 2026-10-10
+  name: "Double Trouble ao vivo"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "21:00"
+  description_pt: "Concerto de versões pela banda Double Trouble."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, nightlife, free]
+
+- date: 2026-10-11
+  name: "World Music: Notes To Self — o regresso de Catrin Finch"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "20:30"
+  description_pt: "Sessão Sons do Planeta com Carlos Borges Ferreira dedicada ao álbum Notes To Self, de Catrin Finch."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, free]
+
+- date: 2026-10-12
+  name: "Clube de Leitura LDL: Acolher, de Claire Keegan"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Sessão do clube de leitura coordenada por Dulce Brasil."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [literature, free]
+
+- date: 2026-10-13
+  name: "Memórias da Autonomia: 50 Anos de Região Autónoma dos Açores"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Testemunho de José Guilherme Reis Leite, moderado por Joel Neto."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [free]
+
+- date: 2026-10-14
+  name: "Palestra: Ilha Coiba — um mundo à parte"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Palestra por João Pedro Barreiros sobre a ilha de Coiba."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [free]
+
+- date: 2026-10-15
+  name: "Pensar a Educação — Uma Conversa Antes do Congresso"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Conversa com Leiriane Sanches, Andreia Ferreira, Cláudio Gomes, Raíssa Santos, Ana Luísa Martinho e Paulo Mendes."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [free]
+
+- date: 2026-10-16
+  name: "Workshop de Lindy Hop com Arianna Meschia"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "20:00"
+  description_pt: "Workshop gratuito de Lindy Hop com Arianna Meschia."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [dance, workshop, free]
+
+- date: 2026-10-16
+  name: "Baile Lindy Hop com Arianna Meschia"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "20:45"
+  description_pt: "Baile gratuito de Lindy Hop com Arianna Meschia."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [dance, nightlife, free]
+
+- date: 2026-10-16
+  name: "Troca de Discos: Dos anos 90 aos dias de hoje — os muitos rostos do trip hop"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "22:00"
+  description_pt: "Sessão musical com JL Smooth e dA.iLHA."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, nightlife, free]
+
+- date: 2026-10-17
+  name: "Oficina de Pintura para Adultos: Iniciação à aguarela"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:00"
+  description_pt: "Oficina de 90 minutos com Sá Vila. Inscrição necessária e materiais de aguarela a cargo dos participantes. Preço: 5 € para adultos e 4 € até aos 17 anos."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [workshop]
+
+- date: 2026-10-17
+  name: "Falk Meutzner ao vivo"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "21:00"
+  description_pt: "Concerto de rock por Falk Meutzner."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, nightlife, free]
+
+- date: 2026-10-17
+  name: "A Playlist de António Neves: Herdeiras de Cesária 1 — Nancy Vieira"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "22:30"
+  description_pt: "Audição comentada de Sol Di Nha Vida, de Nancy Vieira, com happy hour das 22h00 às 00h00."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, nightlife, free]
+
+- date: 2026-10-18
+  name: "Oficina de Desenvolvimento Pessoal: Regressar a si"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "11:00"
+  description_pt: "Oficina de 90 minutos com Gabriela Juárez. Inscrição necessária; preço de 5 €."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [workshop]
+
+- date: 2026-10-18
+  name: "World Music: António Chainho — um outro olhar sobre a guitarra portuguesa"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "20:30"
+  description_pt: "Sessão Sons do Planeta com Carlos Borges Ferreira dedicada a António Chainho."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, free]
+
+- date: 2026-10-19
+  name: "Grande Entrevista: Tecnologia, ciência, filosofia — qual estabelecerá a finalidade última da espécie?"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "17:00"
+  description_pt: "Conversa entre Cláudio Gomes e Joel Neto sobre tecnologia, ciência e filosofia."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [free]
+
+- date: 2026-10-19
+  name: "Clube de Leitura LDL: Acolher, de Claire Keegan"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Sessão do clube de leitura dedicada a Acolher, de Claire Keegan."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [literature, free]
+
+- date: 2026-10-20
+  name: "Podcast O Novo Normal"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Gravação com Pedro Pereira, Francisco Simões, Joel Neto e Luciano Barcelos."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [free]
+
+- date: 2026-10-21
+  name: "An Evening by the Atlantic: Stories, Music, and Community"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:30"
+  description_pt: "Serão em inglês do OKEANO CSA, com histórias, música e comunidade, em parceria com o AIR Centre."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, free]
+
+- date: 2026-10-22
+  name: "Podcast: Quem são, segundo a Bíblia, os Judeus?"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Conversa com Ruben Couto, padre Júlio Rocha e Joel Neto sobre identidade, religião e eleição bíblica."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [free]
+
+- date: 2026-10-23
+  name: "Grandes Livros: Orgulho e Preconceito, de Jane Austen"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Conversa sobre o romance de Jane Austen com Diogo Ourique e Marta Cruz."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [literature, free]
+
+- date: 2026-10-23
+  name: "Filipe Soares ao vivo"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "21:30"
+  description_pt: "Concerto de versões por Filipe Soares."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, nightlife, free]
+
+- date: 2026-10-24
+  name: "Poetas da Ilha"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "20:15"
+  description_pt: "Sessão de poesia original da ilha Terceira, com música por Paulo M."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [literature, live-music, free]
+
+- date: 2026-10-24
+  name: "Double Trouble ao vivo"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "21:30"
+  description_pt: "Concerto de versões pela banda Double Trouble."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, nightlife, free]
+
+- date: 2026-10-25
+  name: "Poesia ao Crepúsculo: Emanuel Félix"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Sessão dedicada ao poeta angrense e combatente pela liberdade Emanuel Félix, coordenada por Hugo Tiago."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [literature, free]
+
+- date: 2026-10-25
+  name: "World Music: O melhor de 2025 segundo a WMCE — do 20.º ao 11.º lugar"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "20:30"
+  description_pt: "Sessão Sons do Planeta com Carlos Borges Ferreira, com happy hour das 22h00 às 00h00."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, free]
+
+- date: 2026-10-26
+  name: "Clube de Leitura LDL: Acolher, de Claire Keegan"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Sessão do clube de leitura dedicada a Acolher, de Claire Keegan."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [literature, free]
+
+- date: 2026-10-27
+  name: "Eco-Conversas: Sem desperdício — a sabedoria agrícola do reaproveitamento"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Conversa com Francisco Maduro Dias e Massimo Gelich, em parceria com a Gê-Questa."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [free]
+
+- date: 2026-10-28
+  name: "Lançamento e palestra: Escrever para (Sobre)Viver"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Apresentação pelo autor Francisco Cota Fagundes, seguida da palestra A verdade da história, a verdade da ficção, a verdade da autobiografia de e/imigrante."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [literature, free]
+
+- date: 2026-10-29
+  name: "O Filme que me Marcou para Sempre: José Olívio Mendes escolhe Ingmar Bergman"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Exibição de um filme de Ingmar Bergman escolhido por José Olívio Mendes, seguida de conversa com Hugo Tiago."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [cinema, free]
+
+- date: 2026-10-30
+  name: "Alcatra da Ilha Terceira: receita, história e classificação IGP"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "18:15"
+  description_pt: "Conversa com Carla Devesa Rodrigues e Joel Neto sobre a receita, a história e o projeto de classificação da alcatra como Indicação Geográfica Protegida."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [food-drink, free]
+
+- date: 2026-10-30
+  name: "Festa Americana: Fried Okra — Traditional Americana Open Night"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "20:30"
+  description_pt: "Noite aberta de música tradicional americana com Brenda Koenig e Drew Philips."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, nightlife, free]
+
+- date: 2026-10-31
+  name: "Concerto de homenagem a Jorge Palma"
+  venue: Lar Doce Livro
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
+  time: "21:00"
+  description_pt: "Concerto de homenagem a Jorge Palma com intérpretes profissionais e amadores, por iniciativa de João da Ilha."
+  instagram: https://www.instagram.com/p/Dd86ztliFpD/
+  tags: [live-music, nightlife, free]
+
+# Official municipal, cultural, museum and sports sources
+- date: 2026-10-08
+  end_date: 2026-11-30
+  name: "Cartografias da Memória: A Mulher na Imprensa Açoriana"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  description_pt: "Mostra documental sobre a representação e a participação das mulheres na imprensa açoriana."
+  source_url: https://angradoheroismo.pt/evento/cartografias-da-memoria-a-mulher-na-imprensa-acoriana/
+  tags: [exhibition, free]
+
+- date: 2026-10-08
+  end_date: 2027-01-30
+  name: "Exposição de fotografia: Romaria Cigana"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  description_pt: "Fotografias de Jorge Kol de Carvalho sobre a romaria anual da comunidade cigana a Santa Sara Kali, em Saintes-Maries-de-la-Mer."
+  source_url: https://angradoheroismo.pt/evento/%f0%9d%97%98%f0%9d%98%85%f0%9d%97%bd%f0%9d%97%bc%f0%9d%98%80%f0%9d%97%b6%f0%9d%97%b0%cc%a7%f0%9d%97%ae%cc%83%f0%9d%97%bc-%f0%9d%97%b1%f0%9d%97%b2-%f0%9d%97%99%f0%9d%97%bc%f0%9d%98%81%f0%9d%97%bc-2/
+  tags: [exhibition, free]
+
+- date: 2026-10-08
+  end_date: 2026-10-12
+  name: "Cinema: Heart of the Beast — Heróis Inseparáveis"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  time: "21:00"
+  description_pt: "Sessões do filme Heart of the Beast — Heróis Inseparáveis."
+  source_url: https://angradoheroismo.pt/evento/cinema-heart-of-the-beast-herois-inseparaveis/
+  tags: [cinema]
+
+- date: 2026-10-09
+  name: "Conferência: Os Usos do Passado — Patrimónios, Memórias e Lugares"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, 9700-091 Angra do Heroísmo"
+  time: "18:30"
+  description_pt: "Conferência inaugural sobre os usos sociais do património, da memória e dos lugares."
+  source_url: https://angradoheroismo.pt/evento/conferencia-inaugural-os-usos-do-passado-patrimonios-memorias-e-lugares/
+  tags: [free]
+
+- date: 2026-10-09
+  name: "Contos com Bru Junça"
+  venue: Casa do Sal
+  address: "Rua do Faleiro, Angra do Heroísmo"
+  time: "20:00"
+  description_pt: "Sessão de contos com Bru Junça."
+  source_url: https://angradoheroismo.pt/evento/contos-com-bru-junca/
+  tags: [literature, free]
+
+- date: 2026-10-10
+  name: "Tertúlia Paleográfica"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  time: "15:00"
+  description_pt: "Sessão presencial e online de leitura e interpretação de documentos históricos. Inscrição prévia junto da biblioteca."
+  source_url: https://angradoheroismo.pt/evento/tertulia-paleografica-13/
+  tags: [literature, workshop, free]
+
+- date: 2026-10-16
+  name: "Espetáculo de Dança: Escola Artística de Dança do Conservatório Nacional"
+  venue: Teatro Angrense
+  address: "Rua da Esperança 48, 9700-073 Angra do Heroísmo"
+  time: "21:30"
+  description_pt: "Espetáculo da Escola Artística de Dança do Conservatório Nacional."
+  source_url: https://angradoheroismo.pt/evento/espetaculo-de-danca-escola-artistica-de-danca-do-conservatorio-nacional-2/
+  tags: [dance, theater]
+
+- date: 2026-10-17
+  end_date: 2027-06-13
+  name: "Curso de História da Arte para Crianças"
+  venue: Casa do Sal
+  address: "Rua do Faleiro, Angra do Heroísmo"
+  time: "10:00"
+  description_pt: "Curso prático de história da arte para crianças dos 6 aos 10 anos, com sessões entre 17 de outubro e 13 de junho."
+  source_url: https://angradoheroismo.pt/evento/curso-de-historia-da-arte-para-criancas/
+  tags: [kid-friendly, workshop]
+
+- date: 2026-10-24
+  name: "Formação: Growth Mindset nas PME"
+  venue: Angra do Heroísmo
+  address: "Angra do Heroísmo"
+  description_pt: "Formação sobre mentalidade de crescimento nas pequenas e médias empresas, orientada para o desenvolvimento de pessoas e resultados."
+  source_url: https://angradoheroismo.pt/evento/growth-mindset-nas-pme-desenvolver-pessoas-e-resultados/
+  tags: [workshop]
+
+- date: 2026-10-10
+  name: "Festival Internacional dos Açores: Nicolás Pérez-Nievas Baquedano"
+  venue: Palácio dos Capitães Generais
+  address: "Rua do Palácio, 9700-143 Angra do Heroísmo"
+  description_pt: "Recital A Terra e o Sonho por Nicolás Pérez-Nievas Baquedano, integrado no 20.º Festival Internacional dos Açores. Entrada livre."
+  source_url: https://festivalinternacionalacores.com/
+  tags: [live-music, free]
+
+- date: 2026-10-31
+  name: "Torneio das Castanhas — Individual"
+  venue: Clube de Golfe da Ilha Terceira
+  address: "Fajãs da Agualva, 9760-403 Praia da Vitória"
+  description_pt: "Torneio individual do calendário desportivo do Clube de Golfe da Ilha Terceira."
+  source_url: https://terceiragolf.com/atividade-desportiva/
+  tags: [outdoor]
+
+- date: 2026-11-15
+  name: "Torneio Lions Terceira — Pares"
+  venue: Clube de Golfe da Ilha Terceira
+  address: "Fajãs da Agualva, 9760-403 Praia da Vitória"
+  description_pt: "Torneio de pares do calendário desportivo do Clube de Golfe da Ilha Terceira."
+  source_url: https://terceiragolf.com/atividade-desportiva/
+  tags: [outdoor]
+
+- date: 2026-12-05
+  name: "Torneio do Peru — Individual"
+  venue: Clube de Golfe da Ilha Terceira
+  address: "Fajãs da Agualva, 9760-403 Praia da Vitória"
+  description_pt: "Torneio individual do calendário desportivo do Clube de Golfe da Ilha Terceira."
+  source_url: https://terceiragolf.com/atividade-desportiva/
+  tags: [outdoor]
+
+- date: 2026-12-19
+  name: "Torneio de Natal — Individual"
+  venue: Clube de Golfe da Ilha Terceira
+  address: "Fajãs da Agualva, 9760-403 Praia da Vitória"
+  description_pt: "Torneio individual do calendário desportivo do Clube de Golfe da Ilha Terceira."
+  source_url: https://terceiragolf.com/atividade-desportiva/
+  tags: [outdoor]
+
+- date: 2026-10-10
+  name: "Visita guiada: Pedras que Falam"
+  venue: Igreja de Nossa Senhora da Guia
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  time: "15:00"
+  description_pt: "Visita guiada à Igreja de Nossa Senhora da Guia com Assunção Melo, promovida pelo Museu de Angra do Heroísmo."
+  source_url: https://museu-angra.cultura.azores.gov.pt/events/ciclo-de-visitas-guiadas-a-igreja-de-nossa-senhora-da-guia-pedras-que-falam-com-assuncao-melo-mah/
+  tags: [free]
+
+- date: 2026-10-11
+  name: "Domingos com Música"
+  venue: Igreja de Nossa Senhora da Guia
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  time: "11:00"
+  description_pt: "Momento musical ao órgão com Gustaaf van Manen, promovido pelo Museu de Angra do Heroísmo."
+  source_url: https://museu-angra.cultura.azores.gov.pt/events/domingos-com-musica-52/
+  tags: [live-music, free]
+
+- date: 2026-10-18
+  name: "Domingos com Música"
+  venue: Igreja de Nossa Senhora da Guia
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  time: "11:00"
+  description_pt: "Momento musical ao órgão com Gustaaf van Manen, promovido pelo Museu de Angra do Heroísmo."
+  source_url: https://museu-angra.cultura.azores.gov.pt/events/domingos-com-musica-52/
+  tags: [live-music, free]
+
+- date: 2026-10-25
+  name: "Domingos com Música"
+  venue: Igreja de Nossa Senhora da Guia
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  time: "11:00"
+  description_pt: "Momento musical ao órgão com Gustaaf van Manen, promovido pelo Museu de Angra do Heroísmo."
+  source_url: https://museu-angra.cultura.azores.gov.pt/events/domingos-com-musica-52/
+  tags: [live-music, free]
+
+- date: 2026-10-24
+  name: "Inauguração: Mare Nostrum — Da Ilha Terceira e suas Cartografias"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  time: "15:00"
+  description_pt: "Inauguração da exposição Mare Nostrum, dedicada à ilha Terceira e às suas cartografias."
+  source_url: https://byacores.com/en/agenda/terceira/exposicao/inauguracao-mare-nostrum-stjvvh/
+  tags: [exhibition, free]
+
+- date: 2026-10-31
+  name: "Oficina: Feltragem com Agulha — sessão 1"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  time: "14:00"
+  description_pt: "Primeira sessão da oficina de feltragem com agulha, integrada no projeto CADA."
+  source_url: https://byacores.com/en/agenda/terceira/oficinas-e-masterclasses/oficina-feltragem-com-agulha-sozzk2/
+  tags: [workshop]
+
+- date: 2026-11-07
+  name: "Oficina: Feltragem com Agulha — sessão 2"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  time: "14:00"
+  description_pt: "Segunda sessão da oficina de feltragem com agulha, integrada no projeto CADA."
+  source_url: https://byacores.com/en/agenda/terceira/oficinas-e-masterclasses/oficina-feltragem-com-agulha-surh2k/
+  tags: [workshop]
