@@ -1,6 +1,6 @@
 # Terceira event-source discovery
 
-Companion to [the scan runbook](runbook-social-scan.md). Last researched: **2026-09-04, Atlantic/Azores**. This was a public-source discovery and quality pass, not an exhaustive signed-in Instagram/Facebook scan. A source is useful when it supplies new, verifiable local events or corrects existing details, not simply when its homepage loads.
+Companion to [the scan runbook](runbook-social-scan.md). Last researched: **2026-10-08, Atlantic/Azores**. This was a public-source discovery and signed-in social quality pass, but not an exhaustive Facebook community-group scan. A source is useful when it supplies new, verifiable local events or corrects existing details, not simply when its homepage loads.
 
 ## Search procedure
 
@@ -9,6 +9,30 @@ Companion to [the scan runbook](runbook-social-scan.md). Last researched: **2026
 3. Use the query matrix below to look beyond the existing account inventory. Pair place names with the current year and each month in the next 90 days. Portuguese month names usually find more local announcements; repeat in English for visitor-facing and science sources. Date-search filters find recently indexed pages, not necessarily upcoming events.
 4. Follow the organizer, venue, co-author, and collaborators from each useful result. Read the original detail page or flyer. Record the source's role before promoting it to the runbook/resources pages.
 5. Measure useful yield: new events, corrections, duplicates, held leads, and access gaps. A duplicate with a corrected distance or registration deadline still improves the data.
+
+Keep a candidate ledger during the scan rather than reconstructing decisions afterward:
+
+```text
+source URL | event date | title | venue | first-party/secondary | dedup result | accepted/held/rejected | reason
+```
+
+For multi-page programmes, add the final carousel/PDF/calendar page inspected. For automated sources, add HTTP/fetch status and fetched, parsed, Terceira-candidate, duplicate, and missing-event counts. This makes a partial programme or green no-op visibly incomplete.
+
+## 2026-10-08 deep-audit findings
+
+The October audit demonstrated that source reachability and programme completeness must be measured separately:
+
+| Source | Observed result | Process consequence |
+|---|---|---|
+| Lar Doce Livro pinned October carousel | The earlier scan captured three listings but did not transcribe the remaining 36 dated events | Inspect every carousel page and reconcile the full monthly programme before marking the account checked |
+| CMAH iCal | Produced current candidates plus duplicate records with title and venue variation | Record dry-run counters and deduplicate candidates against the complete YAML, not only source UIDs |
+| Museu de Angra REST/iCal | Both automated endpoints returned 403 | Mark the ingester degraded and use first-party detail pages, signed-in social, and regional-government agenda mirrors |
+| CMPV ingester probes | Returned 404 or non-calendar responses | Do not treat zero parsed records as an empty Praia agenda; scan the public site and municipal social sources |
+| What's On Azores | Automated request returned 403 | Use browser-accessible government mirrors for discovery and follow original organizer links |
+| Ticketline | Returned candidates alongside parse failures and ambiguous Terceira details | Verify each session's venue, date, and time manually; hold underspecified listings |
+| Clube de Golfe da Ilha Terceira | The first-party sporting table exposed four dated tournaments absent from the social scan | Include full institutional schedules and tables in deep scans, even when they are not social feeds |
+
+The audit added PortugalEvents.eu as a secondary lead source and the [Terceira golf activity calendar](https://terceiragolf.com/atividade-desportiva/) as a first-party source. Municipal noise-licence notices are useful discovery leads, but they do not by themselves establish public attendance.
 
 ### Query matrix
 
