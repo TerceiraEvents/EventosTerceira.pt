@@ -3,7 +3,7 @@
 > **Purpose:** Find and verify Terceira events across official calendars, organizer websites, search, Instagram, and Facebook, then update the data through a PR.
 > **Cadence:** Run once a week (or whenever you notice the upcoming-events list is getting thin).
 > **Time required:** ~30–60 minutes depending on how active venues have been.
-> **Source status last verified:** 2026-09-04.
+> **Source status last verified:** 2026-10-08.
 
 ---
 
@@ -50,7 +50,9 @@ Use this as a maintained starting list for Angra and Praia scans. It is not a gu
 | byAçores Terceira agenda | Terceira | Discovery-only cross-check. The Portuguese `/terceira/` page showed September/October 2026 listings in a browser on 2026-09-04; the previously checked English route appeared stale. Check the exact route and year, then follow original sources. `agendacores.pt` redirects here. |
 | AIR Centre (`aircentre.org/pt/events`) | Regional/international | Primary source for citizen science and marine activities. Inspect event location and registration eligibility; the Terceira headquarters address does not make every event local. |
 | Azores Bravos Trail (`azoresbravostrail.com`) | Terceira | Primary organizer programme for races and walking. Check the current edition, actual start locations, and registration deadlines, not just a tourism summary. |
+| Clube de Golfe da Ilha Terceira (`terceiragolf.com/atividade-desportiva/`) | Terceira | First-party sporting calendar. Read the full dated table, including individual and pairs competitions beyond the 90-day social-post window. |
 | Festing (`festingapp.com/en/events`) | Portugal/all islands | Secondary discovery source with current local listings. Use browser pagination and place search, then follow organizer links; do not treat all results as Terceira events. |
+| PortugalEvents.eu | Portugal/all islands | Secondary discovery lead source. Filter by Terceira and follow the organizer or public-institution page before publishing. It can surface workshops omitted by the automated feeds. |
 | Ticketline | Angra + Praia | Useful for paid shows. Multi-session event pages can be assigned the wrong city/date by the current parser, so verify the Terceira session manually before adding it. |
 | Songkick + Bandsintown | Angra/Terceira | Secondary music discovery. Bandsintown exposed more current local listings than Songkick on 2026-09-04. Confirm the date and venue with the artist, promoter, or venue. |
 | Eventbrite + Shotgun | Terceira | Discovery for organizer-posted workshops, festivals, and independent arts. Expect bot/rate limits and verify local venue details. |
@@ -72,6 +74,17 @@ Do not limit discovery to the static account list. During each scan:
 4. Use aggregators to find leads. Prefer the organizer, venue, artist, municipality, or ticket page for the final event details.
 5. Follow calendar pagination and detail pages. Try the site's linked Portuguese route or browser view when a cached/translated page is stale. Do not invent feed endpoints or call an inaccessible source empty.
 6. Record the exact URL, access method, date checked, observed date range, useful leads, access failures, redirects, and parser errors in the PR body. Use the source-status template in the discovery playbook.
+
+### Deep-scan completion controls
+
+A deep scan is complete only when the following controls have evidence in the tracking issue or PR:
+
+1. Open every pinned monthly or seasonal programme and inspect every carousel page, PDF page, calendar row, and pagination page. A partially read programme is an incomplete source, not a checked source.
+2. Maintain a candidate ledger with source URL, event date, title, venue, evidence class, deduplication result, and one of `accepted`, `held`, or `rejected`, including the reason.
+3. Run the automated ingesters in dry-run mode and record fetched, parsed, local-candidate, duplicate, and missing-event counts. A successful process that parses zero events after a 403, 404, non-calendar response, or schema change is degraded, not healthy.
+4. Compare each candidate against the complete YAML by date, normalized title, venue, and source identity. Repeat an exact-title web/social search for held or ambiguous candidates.
+5. Audit each recurring venue's complete current monthly programme, not only its newest grid posts. Record the last page or date reached when access stops.
+6. Keep licence notices, cached snippets, and aggregators as leads until public attendance and the date, venue, and organizer are corroborated. Never turn a municipal noise licence alone into a public event listing.
 
 ### Maintaining recurring-event data
 
@@ -127,6 +140,7 @@ Start with official web agendas before social media. They are faster to scan and
 | BPARLSR highlights | https://bparlsr.azores.gov.pt/destaques/ | First-party library calendar, BiblioAgenda, and calendar exports |
 | Cultura Açores Agenda Cultural | https://culturacores.azores.gov.pt/agenda/ | Filter to `Terceira`; useful for cultural listings and public institutions |
 | byAçores Terceira | https://byacores.com/terceira/ | Portuguese island page and its agenda links; verify absolute dates and original sources |
+| Clube de Golfe da Ilha Terceira | https://terceiragolf.com/atividade-desportiva/ | Read the complete first-party tournament calendar and deduplicate by date and competition name |
 | AIR Centre | https://www.aircentre.org/pt/events | Citizen science and marine activities; check local venue and whether attendance/registration is open |
 | Azores Bravos Trail | https://azoresbravostrail.com/ | Current organizer programme, walking/race start locations and registration status |
 | Festing | https://www.festingapp.com/en/events | Browser-based secondary discovery; paginate and confirm actual event geography |
@@ -240,7 +254,7 @@ Raw file URL for fast Ctrl+F: https://raw.githubusercontent.com/TerceiraEvents/E
 Create a new GitHub issue titled:
 
 ```
-New events to add: [START DATE]–[END DATE], [YEAR] (sourced from Instagram, Facebook & CMAH)
+[MONTH/YEAR] event-source scan: [N] additions and source-health findings
 ```
 
 Use this template (matches the pattern of issues #141, #161):
@@ -422,12 +436,12 @@ Once the PR is merged, close the tracking issue (or it closes automatically if y
 
 These sources have configured daily GitHub Actions workflows. Configuration or a green run does not prove successful coverage: some ingesters return successfully after fetching no usable events. Spot-check the live source against `_data/special_events.yml`; backfill verified omissions with the original source URL.
 
-| Source | Workflow file | Status verified 2026-09-04 |
+| Source | Workflow file | Status verified 2026-10-08 |
 |---|---|---|
-| CMAH iCal feed | `ingest-cmah.yml` | Healthy enough to produce candidates; manually verify times, descriptions, and duplicates |
-| Ticketline (Angra + Praia) | `ingest-ticketline.yml` | Reachable; multi-session pages can be assigned the wrong city/date |
-| Museu de Angra do Heroísmo | `ingest-museu-angra.yml` | Website REST and iCal requests returned 403; use Instagram/CMAH |
-| Câmara Municipal Praia da Vitória | `ingest-cmpv.yml` | Configured endpoint guesses returned 404; scan the live site/social accounts |
+| CMAH iCal feed | `ingest-cmah.yml` | Live dry-run produced current candidates, but the source contains duplicate records with title/venue variation; manually deduplicate against the full YAML |
+| Ticketline (Angra + Praia) | `ingest-ticketline.yml` | Reachable; the 2026-10-08 dry-run found candidates and parse failures, and multi-session pages still require manual city/date verification |
+| Museu de Angra do Heroísmo | `ingest-museu-angra.yml` | Website REST and iCal requests returned 403; use first-party museum pages, Instagram, CMAH, and regional-government agenda mirrors |
+| Câmara Municipal Praia da Vitória | `ingest-cmpv.yml` | Configured endpoint guesses returned 404 or non-calendar responses; scan the live site and social accounts |
 | Visit Azores | `ingest-visit-azores.yml` | Configured events URL returned 404 |
 | Whatson Azores (government) | `ingest-whatson-azores.yml` | Automated request returned 403; browser/search/byAçores fallback required |
 | Touradas à corda | `ingest-touradas.yml` | Keep as the canonical automated source and spot-check Actions |
