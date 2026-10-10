@@ -1,6 +1,6 @@
 # Terceira event-source discovery
 
-Companion to [the scan runbook](runbook-social-scan.md). Last researched: **2026-10-08, Atlantic/Azores**. This was a public-source discovery and signed-in social quality pass, but not an exhaustive Facebook community-group scan. A source is useful when it supplies new, verifiable local events or corrects existing details, not simply when its homepage loads.
+Companion to [the scan runbook](runbook-social-scan.md). Last researched: **2026-10-10, Atlantic/Azores**. The [dated coverage and candidate ledger](audit-2026-10-10.md) records the checked sources and remaining gaps. A source is useful when it supplies new, verifiable local events or corrects existing details, not simply when its homepage loads.
 
 ## Search procedure
 
@@ -17,6 +17,23 @@ source URL | event date | title | venue | first-party/secondary | dedup result |
 ```
 
 For multi-page programmes, add the final carousel/PDF/calendar page inspected. For automated sources, add HTTP/fetch status and fetched, parsed, Terceira-candidate, duplicate, and missing-event counts. This makes a partial programme or green no-op visibly incomplete.
+
+## 2026-10-10 source contracts and completeness controls
+
+The [tested ingester repair](https://github.com/TerceiraEvents/EventosTerceira.pt/pull/230) provides source-health artifacts, failing exit codes for incomplete discovery, and fixture-based regressions. Live observations:
+
+| Source | Coverage observed | Status and manual action |
+|---|---|---|
+| CMPV public agenda | 16 unique cards across pagination; 4 upcoming cultural records; 4 duplicates; 10 tourada exclusions | Healthy discovery; review the reported Hugo Sousa time correction to 21:30 |
+| What's On public website data query | All 11 advertised pages, 208 records, 24 Terceira records, 25 sessions | Healthy discovery; use Portuguese displayed dates, explicit island references, and all pages; administrative start timestamps are not event dates |
+| Museu dated archives | Public `/events/`, `/exhibition/temporarias/`, `/exhibition/mostras/` and native article templates verified in Chrome | Automated HTTP 403; degraded exit 1 with data untouched. Browser verification and government mirrors remain necessary |
+| Cultura Açores | Browser search for Terceira and overlapping dates; all 4 result pages, 36 records | Mare Nostrum's complete exhibition period verified through 30 January. Keep native organizer dates when a mirror's start differs; reject institutional publications/virtual tours as physical events |
+| Oficina d'Angra October bulletin | [Organizer-linked public bulletin](https://tinyurl.com/mps3sasf), full text and dated event posters | Nine dated additions plus programme details for existing events; inspect newsletter images as well as social grids |
+| CMAH Hora do Conto poster | [October–December programme](https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/), all 12 printed dates | Twelve additions; the first six use CCCAH at 17:30 and the final six use Praça Velha at 11:00 |
+
+Require explicit evidence for every session, venue, admission tag, and time. An exhibition range is inclusive; a fortnightly class is not a continuous daily event. Keep door-opening, visiting, registration, ticket-office, and session times distinct. Prefer dates printed on current programmes over search crawl dates or CMS publication fields. A date/weekday conflict remains held until organizer or seller evidence resolves it.
+
+Public event groups broaden discovery, but a feed boundary and unread image sets must be recorded. The public [Eventos Ilha Terceira group](https://www.facebook.com/groups/1301827598546888/) was read back to 23 September; that does not establish coverage of private groups, stories, or every shared album. The library's October flipbook programme is unread despite its accessible cover. These limits prevent a claim of exhaustive coverage.
 
 ## 2026-10-08 deep-audit findings
 
@@ -75,7 +92,7 @@ Add AIR Centre, Bravos Trail, and Festing to the public EN/PT resource lists. Ke
 | [Festas & Arraiais Terceira](https://festasearraiais.pt/festas-este-mes/distrito/ilha-terceira) | September view exposed a Porto Martins lead already represented in the repo | Supplemental parish discovery, not a comprehensive island programme. |
 | [Viral Agenda Terceira archive](https://www.viralagenda.com/pt/p/107378262618969) | Historical listings and misleading relative "Hoje" labels in retrieved content | Organizer discovery only until the absolute date/year is verified. |
 | [CineEco extensions](https://cineeco.pt/extensoes-cineeco/) | Includes a 2026 Faial programme associated with Cine-Clube da Ilha Terceira | Organizer identity alone does not establish Terceira geography; do not import other-island events. |
-| [Côrte-Real symposium lead](https://plataforma9.com/congressos/1-simposio-corte-real.htm) / [IHIT](https://www.ihit.pt/) | Secondary announcement for 13–15 October in Angra; IHIT site timed out in the web fetch | Hold pending organizer programme and actual venue. A contact address is not a confirmed venue. |
+| [Côrte-Real symposium lead](https://plataforma9.com/congressos/1-simposio-corte-real.htm) / [IHIT](https://www.ihit.pt/) | The event header explicitly gives 13–15 October 2016; a current crawl/publication label does not establish a 2026 edition | Reject as a current event. Require a distinct first-party announcement for any future edition. |
 
 Additional source graph to investigate next: BioBlitz's named partners include Gê-Questa, Marine Waste on Terceira Island, and BioMUST4All/Universidade dos Açores. These are leads to locate through the organizer's links, not accounts claimed as scanned. Rotate parish committees and sports associations on subsequent passes rather than repeatedly searching only the existing bar list.
 
@@ -106,4 +123,4 @@ Next action: original organizer to verify, unread page range, or retry route
 
 `empty-with-window` means the relevant calendar/filter actually loaded and showed no events in the stated range. A 403, login wall, parser returning zero, or an unread page is not an empty calendar. For automated sources also record fetched/parsed/local-candidate counts when available; a green workflow alone does not establish source health.
 
-Suggested ingestion follow-up, not implemented here: replace guessed CMPV feeds and homepage-only discovery with verified live-agenda adapters, report partial/source failures separately from zero events, and test island filtering, multi-session dates, and exclusive iCal end dates. Keep automated touradas with their existing workflow.
+For implementation contracts and verification evidence, see [the official ingester repair](https://github.com/TerceiraEvents/EventosTerceira.pt/pull/230). Keep automated touradas with their dedicated workflow. Availability checks and offline parser tests answer different questions; record both.

@@ -5092,10 +5092,11 @@ Come join us and support our festivities!"
   venue: Auditório do Ramo Grande
   address: "Auditório do Ramo Grande, Praia da Vitória"
   map_url: https://www.google.com/maps/search/?api=1&query=Audit%C3%B3rio%20do%20Ramo%20Grande%20Praia%20da%20Vit%C3%B3ria
-  time: "21:00"
+  time: "21:30"
   description: "Stand-up comedy show by Hugo Sousa at Auditório do Ramo Grande. Tickets available through Ticketline and Academia da Juventude da Ilha Terceira."
   description_pt: "Espetáculo de stand-up comedy de Hugo Sousa no Auditório do Ramo Grande. Bilhetes disponíveis na Ticketline e na Academia da Juventude da Ilha Terceira."
   facebook: https://www.facebook.com/photo/?fbid=1328709386075464&set=pb.100068092452652.-2207520000
+  source_url: https://www.cmpv.pt/index.php?op=agenda&id=819
   tags:
   - theater
 
@@ -7235,16 +7236,16 @@ Come join us and support our festivities!"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
   time: "22:00"
-  description: "AAIP's ESCAMA series returns to Casa do Sal for a night of performance and electronic music. Further programme and ticket details are to be announced."
-  description_pt: "A série ESCAMA da AAIP regressa à Casa do Sal para uma noite de performance e música eletrónica. Programa e informações sobre bilhetes a anunciar."
-  instagram: https://www.instagram.com/aaipazores/p/DdXIAcKxod6/
+  description: "AAIP presents Trash Circus — Bloowitch, Eva Plaisir, Helkat Bizarre and Batjoy 669 — followed by GONGA. Admission costs €8 for AAIP members and €10 for non-members; places are limited."
+  description_pt: "A AAIP apresenta Trash Circus — Bloowitch, Eva Plaisir, Helkat Bizarre e Batjoy 669 — seguido de GONGA. Entrada a 8 € para sócios da AAIP e 10 € para não-sócios; lugares limitados."
+  instagram: https://www.instagram.com/aaipazores/p/DeRmQanNDm1/
   tags:
   - nightlife
   - live-music
 
 
 # September 26, 2026 social, official-agenda, and source-discovery scan.
-- date: 2026-08-31
+- date: 2026-08-04
   end_date: 2026-11-23
   name: "Museu Afora: Modelo de Avião TAP Lockheed Super Constellation"
   name_en: "Museum Outside: TAP Lockheed Super Constellation Model"
@@ -7252,7 +7253,7 @@ Come join us and support our festivities!"
   address: "Aeroporto das Lajes, Praia da Vitória"
   description: "The Museu de Angra do Heroísmo presents a metal TAP Lockheed Super Constellation model from its aeronautical collection, donated by António Couto, at the Lajes civilian terminal."
   description_pt: "O Museu de Angra do Heroísmo apresenta na Aerogare Civil das Lajes um modelo metálico de um TAP Lockheed Super Constellation da sua coleção aeronáutica, doado por António Couto."
-  source_url: https://culturacores.azores.gov.pt/agenda/?id=51326
+  source_url: https://museu-angra.cultura.azores.gov.pt/exhibitions/modelo-de-aviao-tap-lockheed-super-constellation-museu-fora-de-portas/
   tags:
   - exhibition
 
@@ -7468,9 +7469,10 @@ Come join us and support our festivities!"
   name_en: "Between Earth and Consolations Exhibition"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
-  description: "Exhibition at Casa do Sal, open from 16:00 to 18:30 during the published programme period."
-  description_pt: "Exposição na Casa do Sal, visitável das 16h00 às 18h30 durante o período anunciado."
+  description: "Exhibition by Carina Borges at Casa do Sal, opening on October 11 at 16:00. Visiting hours are 16:00 to 18:30 during the published programme period."
+  description_pt: "Exposição de Carina Borges na Casa do Sal, com inauguração a 11 de outubro às 16h00. Visitável das 16h00 às 18h30 durante o período anunciado."
   source_url: https://angradoheroismo.pt/evento/exposicao-entre-terra-e-consolacoes/
+  instagram: https://www.instagram.com/oficinadangra/reel/DeSiDe2DadA/
   tags:
   - exhibition
 
@@ -8039,13 +8041,13 @@ Come join us and support our festivities!"
   tags: [live-music, nightlife, free]
 
 # Official municipal, cultural, museum and sports sources
-- date: 2026-10-08
+- date: 2026-10-01
   end_date: 2026-11-30
   name: "Cartografias da Memória: A Mulher na Imprensa Açoriana"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
   address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
   description_pt: "Mostra documental sobre a representação e a participação das mulheres na imprensa açoriana."
-  source_url: https://angradoheroismo.pt/evento/cartografias-da-memoria-a-mulher-na-imprensa-acoriana/
+  source_url: https://bparlsr.azores.gov.pt/destaque/cartografias-da-memoria-a-mulher-na-imprensa-acoriana/
   tags: [exhibition, free]
 
 - date: 2026-10-08
@@ -8079,7 +8081,7 @@ Come join us and support our festivities!"
 - date: 2026-10-09
   name: "Contos com Bru Junça"
   venue: Casa do Sal
-  address: "Rua do Faleiro, Angra do Heroísmo"
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
   time: "20:00"
   description_pt: "Sessão de contos com Bru Junça."
   source_url: https://angradoheroismo.pt/evento/contos-com-bru-junca/
@@ -8104,12 +8106,12 @@ Come join us and support our festivities!"
   tags: [dance, theater]
 
 - date: 2026-10-17
-  end_date: 2027-06-13
   name: "Curso de História da Arte para Crianças"
   venue: Casa do Sal
-  address: "Rua do Faleiro, Angra do Heroísmo"
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
   time: "10:00"
-  description_pt: "Curso prático de história da arte para crianças dos 6 aos 10 anos, com sessões entre 17 de outubro e 13 de junho."
+  description: "Published October 17 session of the fortnightly Saturday art-history course for ages 6–10, from 10:00 to 11:30. Teachers: Cátia Guimarães and Carolina Rocha. Registration required; €25/month or €20/month for members' children."
+  description_pt: "Sessão publicada para 17 de outubro do curso quinzenal de História da Arte para crianças dos 6 aos 10 anos, aos sábados das 10h00 às 11h30. Formadoras: Cátia Guimarães e Carolina Rocha. Inscrição necessária; 25 €/mês ou 20 €/mês para filhos de sócios."
   source_url: https://angradoheroismo.pt/evento/curso-de-historia-da-arte-para-criancas/
   tags: [kid-friendly, workshop]
 
@@ -8198,21 +8200,22 @@ Come join us and support our festivities!"
   tags: [live-music, free]
 
 - date: 2026-10-24
-  name: "Inauguração: Mare Nostrum — Da Ilha Terceira e suas Cartografias"
+  end_date: 2027-01-30
+  name: "Exposição: Mare Nostrum — Da Ilha Terceira e suas Cartografias"
   venue: Museu de Angra do Heroísmo
   address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
-  time: "15:00"
-  description_pt: "Inauguração da exposição Mare Nostrum, dedicada à ilha Terceira e às suas cartografias."
-  source_url: https://byacores.com/en/agenda/terceira/exposicao/inauguracao-mare-nostrum-stjvvh/
-  tags: [exhibition, free]
+  description: "Exhibition exploring Terceira's cartography, history and social life, on view through January 30. The opening takes place on October 24 at 15:00 with free admission; confirm normal exhibition admission with the museum."
+  description_pt: "Exposição sobre a cartografia, a história e a vivência social da Terceira, patente até 30 de janeiro. Inauguração a 24 de outubro às 15h00, com entrada livre; confirmar com o museu as condições de visita à exposição."
+  source_url: https://culturacores.azores.gov.pt/agenda/?id=51444
+  tags: [exhibition]
 
 - date: 2026-10-31
   name: "Oficina: Feltragem com Agulha — sessão 1"
   venue: Museu de Angra do Heroísmo
   address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
   time: "14:00"
-  description_pt: "Primeira sessão da oficina de feltragem com agulha, integrada no projeto CADA."
-  source_url: https://byacores.com/en/agenda/terceira/oficinas-e-masterclasses/oficina-feltragem-com-agulha-sozzk2/
+  description_pt: "Primeira sessão da oficina de feltragem com agulha, das 14h00 às 18h00, integrada no projeto CADA. Inscrição prévia, limitada a oito adultos, com participação nas duas sessões."
+  source_url: https://museu-angra.cultura.azores.gov.pt/events/oficina-feltragem-com-agulha/
   tags: [workshop]
 
 - date: 2026-11-07
@@ -8220,6 +8223,407 @@ Come join us and support our festivities!"
   venue: Museu de Angra do Heroísmo
   address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
   time: "14:00"
-  description_pt: "Segunda sessão da oficina de feltragem com agulha, integrada no projeto CADA."
-  source_url: https://byacores.com/en/agenda/terceira/oficinas-e-masterclasses/oficina-feltragem-com-agulha-surh2k/
+  description_pt: "Segunda sessão da oficina de feltragem com agulha, das 14h00 às 18h00, integrada no projeto CADA, para participantes inscritos na primeira sessão."
+  source_url: https://museu-angra.cultura.azores.gov.pt/events/oficina-feltragem-com-agulha/
   tags: [workshop]
+
+- date: 2026-07-14
+  end_date: 2026-10-16
+  name: "Exposição: Ocasos…, de Bárbara Loução"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  description: "Drawings and watercolours by Bárbara Loução in the library's Arte & Debates space, during library opening hours."
+  description_pt: "Exposição de desenho e aguarela de Bárbara Loução no espaço Arte & Debates da biblioteca, durante o horário de funcionamento."
+  source_url: https://bparlsr.azores.gov.pt/destaque/ocasos-de-barbara-loucao/
+  tags: [exhibition]
+
+- date: 2026-10-05
+  end_date: 2026-10-13
+  name: "Festival da Geodiversidade: Exposição Rochas dos Açores"
+  venue: Museu Vulcanoespeleológico — Associação Os Montanheiros
+  address: "Angra do Heroísmo"
+  description: "Azores UNESCO Global Geopark exhibition about the origins and characteristics of the archipelago's rocks."
+  description_pt: "Exposição do Açores Geoparque Mundial da UNESCO sobre a origem e as características das rochas do arquipélago."
+  source_url: https://whatson.azores.gov.pt/evento/festival-da-geodiversidade-or-exposicao-rochas-dos-acores-1791198400494/
+  tags: [exhibition]
+
+- date: 2026-10-06
+  end_date: 2026-11-01
+  name: "Vitrine de Curiosidades: Diapasão com Caixa de Francisco de Lacerda"
+  venue: Museu de Angra do Heroísmo
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  description: "A Pleyel tuning fork and case belonging to composer Francisco de Lacerda, displayed in Edifício de São Francisco | Memórias."
+  description_pt: "Mostra de um diapasão Pleyel com caixa, pertencente ao compositor Francisco de Lacerda, no Edifício de São Francisco | Memórias."
+  source_url: https://museu-angra.cultura.azores.gov.pt/exhibitions/diapasao-com-caixa-de-francisco-de-lacerda/
+  tags: [exhibition]
+
+- date: 2026-10-14
+  name: "Conferência: O valor dos Açores nas Constituições portuguesas"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  time: "18:30"
+  description: "Arnaldo Ourique discusses the Azores in Portuguese constitutions and the region's political history in the library auditorium."
+  description_pt: "Conferência de Arnaldo Ourique sobre o valor dos Açores nas Constituições portuguesas e a história política da região, no auditório da biblioteca."
+  source_url: https://bparlsr.azores.gov.pt/destaque/conferencia-o-valor-dos-acores-nas-constituicoes-portuguesas-uma-perspetiva-para-a-historia-politica-dos-acores/
+  tags: [literature]
+
+- date: 2026-10-16
+  name: "Inovar na Intervenção Pedagógica — Congresso, dia 1"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  description: "First day of the pedagogical congress promoted by Município da Praia da Vitória and Praia Cultural. Day tickets cost €25 plus Ticketline fees. Confirm the organizer's programme time."
+  description_pt: "Primeiro dia do congresso de intervenção pedagógica promovido pelo Município da Praia da Vitória e pela Praia Cultural. Bilhete diário a 25 €, acrescido das taxas da Ticketline. Confirmar o horário no programa da organização."
+  source_url: https://www.ticketline.pt/evento/inovar-na-prev-pedagogicacongresso-olhar-po-106266
+  tags: [workshop]
+
+- date: 2026-10-16
+  name: "Workshop: Desenvolvimento de Competências Socioemocionais"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  description: "Workshop in the Inovar na Intervenção Pedagógica congress. Registration costs €5 plus fees; choose only one of the alternative workshops. Confirm the programme time with the organizer."
+  description_pt: "Workshop do congresso Inovar na Intervenção Pedagógica. Inscrição a 5 €, acrescida de taxas; escolher apenas um dos workshops alternativos. Confirmar o horário no programa da organização."
+  source_url: https://www.ticketline.pt/evento/desenvolvimento-competencsocioemocionais-106269
+  tags: [workshop]
+
+- date: 2026-10-16
+  name: "Workshop: A Importância do Brincar no Desenvolvimento Cognitivo e Emocional da Criança"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  description: "Workshop in the Inovar na Intervenção Pedagógica congress. Registration costs €5 plus fees; choose only one of the alternative workshops. Confirm the programme time with the organizer."
+  description_pt: "Workshop do congresso Inovar na Intervenção Pedagógica. Inscrição a 5 €, acrescida de taxas; escolher apenas um dos workshops alternativos. Confirmar o horário no programa da organização."
+  source_url: https://www.ticketline.pt/evento/a-importancia-do-brincar-no-des-cog-eemo-cr-106273
+  tags: [workshop]
+
+- date: 2026-10-16
+  name: "Workshop: Desenvolvimento de Competências Parentais"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  description: "Workshop in the Inovar na Intervenção Pedagógica congress. Registration costs €5 plus fees; choose only one of the alternative workshops. Confirm the programme time with the organizer."
+  description_pt: "Workshop do congresso Inovar na Intervenção Pedagógica. Inscrição a 5 €, acrescida de taxas; escolher apenas um dos workshops alternativos. Confirmar o horário no programa da organização."
+  source_url: https://www.ticketline.pt/evento/desenvolvimento-de-competencias-parentais-106274
+  tags: [workshop]
+
+- date: 2026-10-17
+  name: "Inovar na Intervenção Pedagógica — Congresso, dia 2"
+  venue: Auditório do Ramo Grande
+  address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
+  description: "Second day of the pedagogical congress promoted by Município da Praia da Vitória and Praia Cultural. Day tickets cost €25 plus fees. Confirm the organizer's programme time."
+  description_pt: "Segundo dia do congresso de intervenção pedagógica promovido pelo Município da Praia da Vitória e pela Praia Cultural. Bilhete diário a 25 €, acrescido de taxas. Confirmar o horário no programa da organização."
+  source_url: https://www.ticketline.pt/evento/inovar-na-inte-peda-gogica-dia-2-106881
+  tags: [workshop]
+
+- date: 2026-10-18
+  name: "Cine Atlântico: Vanitas ou o Outro Mundo"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "18:30"
+  description: "Paulo Rocha retrospective screening. Tickets cost €3; members pay €1.50."
+  description_pt: "Sessão da retrospetiva de Paulo Rocha. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DeP2X8LiHZa/
+  tags: [cinema]
+
+- date: 2026-10-23
+  name: "Cine Atlântico: Playback"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "21:00"
+  description: "Screening in O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Tickets cost €3; members pay €1.50."
+  description_pt: "Sessão do ciclo O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DdzL4SlCmhR/
+  tags: [cinema]
+
+- date: 2026-10-24
+  name: "Cine Atlântico: O Barqueiro"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "16:00"
+  description: "Screening in O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Tickets cost €3; members pay €1.50."
+  description_pt: "Sessão do ciclo O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DdzL4SlCmhR/
+  tags: [cinema]
+
+- date: 2026-10-24
+  name: "Cine Atlântico: Justa"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "18:00"
+  description: "Screening in O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Tickets cost €3; members pay €1.50."
+  description_pt: "Sessão do ciclo O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DdzL4SlCmhR/
+  tags: [cinema]
+
+- date: 2026-10-24
+  name: "Cine Atlântico: Entroncamento"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "21:00"
+  description: "Screening in O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Tickets cost €3; members pay €1.50."
+  description_pt: "Sessão do ciclo O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DdzL4SlCmhR/
+  tags: [cinema]
+
+- date: 2026-10-25
+  name: "Cine Atlântico: 18 Buracos para o Paraíso"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "16:00"
+  description: "Screening in O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Tickets cost €3; members pay €1.50."
+  description_pt: "Sessão do ciclo O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DdzL4SlCmhR/
+  tags: [cinema]
+
+- date: 2026-10-25
+  name: "Cine Atlântico: O Riso e a Faca"
+  venue: Recreio dos Artistas
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "18:00"
+  description: "Screening in O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Tickets cost €3; members pay €1.50."
+  description_pt: "Sessão do ciclo O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Bilhetes a 3 €; sócios pagam 1,50 €."
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DdzL4SlCmhR/
+  tags: [cinema]
+
+- date: 2026-11-27
+  end_date: 2026-12-06
+  name: "Monte Brasil — Festival Internacional de Literatura e História de Angra do Heroísmo"
+  venue: Centro Interpretativo de Angra do Heroísmo
+  address: "Rua da Rosa, Angra do Heroísmo"
+  description: "First edition of the literature and history festival organized by Dois Caminhos — Associação para a Promoção das Artes e da Cultura, based at the city's Interpretive Centre. Individual sessions and admission details depend on the organizer's programme."
+  description_pt: "Primeira edição do festival de literatura e história organizado pela Dois Caminhos — Associação para a Promoção das Artes e da Cultura, com sede no Centro Interpretativo da cidade. Consultar o programa da organização para as sessões e condições de entrada."
+  source_url: https://www.facebook.com/livrarialardocelivro/posts/pfbid02nDL56mdiq2jDdPJgp6DeXvVm6hKG5UYwZgMhxqgeApBFZm38tGoesAZf9EkQ81iQl
+  tags: [literature]
+
+- date: 2026-10-10
+  name: "3HP ao vivo na Tasca do Camões"
+  venue: Tasca do Camões
+  address: "Rua da Rocha 64, 9700-169 Angra do Heroísmo"
+  time: "22:00"
+  description: "Live concert by 3HP; the venue invites guests to have dinner before the show."
+  description_pt: "Concerto dos 3HP; o espaço convida o público a jantar antes do espetáculo."
+  instagram: https://www.instagram.com/tascadocamoes/p/DeOfdRlk1PR/
+  tags: [live-music, nightlife]
+
+- date: 2026-10-10
+  name: "After Party Praxes UAç — DJ Marco Ferreira"
+  venue: Havanna Club
+  address: "Jardim do Corte Real, Angra do Heroísmo"
+  description: "Saturday's After Party Praxes UAç 2026 — Take 3, with DJ Marco Ferreira. Doors open at 21:30; the DJ start time is not specified."
+  description_pt: "Noite de sábado do After Party Praxes UAç 2026 — Take 3, com DJ Marco Ferreira. Abertura de portas às 21h30; o início do DJ não é especificado."
+  instagram: https://www.instagram.com/havannaangra/reel/DeRhibdCGwW/
+  tags: [nightlife]
+
+- date: 2026-10-10
+  name: "DJ John C no Twins"
+  venue: Twins Club
+  address: "Rua Diogo de Teive 54, 9700-065 Angra do Heroísmo"
+  description: "Saturday night with DJ John C. No admission charge, but minimum consumption is €5 for women and €10 for men. Confirm the night's opening time with the venue."
+  description_pt: "Noite de sábado com DJ John C. Sem cobrança de entrada, mas com consumo mínimo de 5 € para mulheres e 10 € para homens. Confirmar a hora de abertura com o espaço."
+  instagram: https://www.instagram.com/twinstheclub/reel/DeNKpIQssWC/
+  tags: [nightlife]
+
+- date: 2026-10-10
+  name: "X-X-X — 10 anos de Wild do Ó"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "22:00"
+  description: "Music and dancing to celebrate ten years of Wild do Ó, in Oficina d'Angra's October programme."
+  description_pt: "Noite de música e dança para celebrar dez anos de Wild do Ó, no programa de outubro da Oficina d'Angra."
+  source_url: https://tinyurl.com/mps3sasf
+  instagram: https://www.instagram.com/oficinadangra/p/DeHMHzKgM24/
+  tags: [nightlife, dance]
+
+- date: 2026-10-14
+  name: "Lindy Hop com Arianna Meschia — Casa do Sal"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "18:30"
+  description: "Swing-dance course session with Arianna Meschia, from 18:30 to 20:00, explicitly listed in the October bulletin."
+  description_pt: "Sessão do curso de swing dance com Arianna Meschia, das 18h30 às 20h00, publicada no boletim de outubro."
+  source_url: https://tinyurl.com/mps3sasf
+  tags: [dance, workshop]
+
+- date: 2026-10-15
+  name: "Horizonte Comum — Grupo de Leituras Feministas"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "18:00"
+  description: "Free feminist reading-group meeting, from 18:00 to 19:30. Registration required."
+  description_pt: "Encontro gratuito do grupo de leituras feministas, das 18h00 às 19h30. Inscrição necessária."
+  source_url: https://tinyurl.com/mps3sasf
+  tags: [literature, workshop, free]
+
+- date: 2026-10-16
+  name: "Travessias — Carvalhoski e Sicklebird"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  description: "Performance poetry by Carvalhoski and intimate songs by Sicklebird. Free admission; the bulletin's poster does not specify a start time."
+  description_pt: "Poesia performativa de Carvalhoski e canções intimistas de Sicklebird. Entrada livre; o cartaz do boletim não indica hora de início."
+  source_url: https://tinyurl.com/mps3sasf
+  tags: [literature, live-music, free]
+
+- date: 2026-10-18
+  name: "Nunca Mais!! — Human"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "18:00"
+  description: "Free screening of Human by Yann Arthus-Bertrand in the Nunca Mais!! programme."
+  description_pt: "Exibição gratuita do filme Human, de Yann Arthus-Bertrand, no projeto Nunca Mais!!."
+  source_url: https://tinyurl.com/mps3sasf
+  tags: [cinema, free]
+
+- date: 2026-10-21
+  name: "Lindy Hop com Arianna Meschia — Casa do Sal"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "18:30"
+  description: "Swing-dance course session with Arianna Meschia, from 18:30 to 20:00, explicitly listed in the October bulletin."
+  description_pt: "Sessão do curso de swing dance com Arianna Meschia, das 18h30 às 20h00, publicada no boletim de outubro."
+  source_url: https://tinyurl.com/mps3sasf
+  tags: [dance, workshop]
+
+- date: 2026-10-24
+  name: "Curso de Desenho com Sá Vila — início"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "10:00"
+  description: "Opening session of the fortnightly Saturday drawing course, from 10:00 to 11:30, for young people aged 15+ and adults. Registration required; €25/month or €20/month for members."
+  description_pt: "Sessão inicial do curso quinzenal de desenho aos sábados, das 10h00 às 11h30, para jovens a partir dos 15 anos e adultos. Inscrição necessária; 25 €/mês ou 20 €/mês para sócios."
+  source_url: https://tinyurl.com/mps3sasf
+  tags: [workshop]
+
+- date: 2026-10-24
+  name: "Laboratório do Movimento — início"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "15:30"
+  description: "Opening session of Andreia Simões's physical-theatre laboratory, held fortnightly on Saturdays from 15:30 to 17:30. Registration required."
+  description_pt: "Sessão inicial do laboratório de teatro físico com Andreia Simões, quinzenal aos sábados das 15h30 às 17h30. Inscrição necessária."
+  source_url: https://tinyurl.com/mps3sasf
+  tags: [theater, workshop]
+
+- date: 2026-10-31
+  name: "Abramacabra IV"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  description: "Dated announcement in Oficina d'Angra's October bulletin. Confirm the programme, admission and start time with the organizer."
+  description_pt: "Anúncio datado no boletim de outubro da Oficina d'Angra. Confirmar o programa, as condições de entrada e o horário com a organização."
+  source_url: https://tinyurl.com/mps3sasf
+
+- date: 2026-10-10
+  name: "Hora do Conto — Ana Couto e Paulo Freitas"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
+  time: "17:30"
+  description: "Free storytelling for children and families with Ana Couto and Paulo Freitas, in the published municipal October–December programme."
+  description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
+  instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
+  tags: [literature, kid-friendly, free]
+
+- date: 2026-10-17
+  name: "Hora do Conto — Ana Couto e Paulo Freitas"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
+  time: "17:30"
+  description: "Free storytelling for children and families with Ana Couto and Paulo Freitas, in the published municipal October–December programme."
+  description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
+  instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
+  tags: [literature, kid-friendly, free]
+
+- date: 2026-10-24
+  name: "Hora do Conto — Ana Couto e Paulo Freitas"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
+  time: "17:30"
+  description: "Free storytelling for children and families with Ana Couto and Paulo Freitas, in the published municipal October–December programme."
+  description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
+  instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
+  tags: [literature, kid-friendly, free]
+
+- date: 2026-10-31
+  name: "Hora do Conto — Ana Couto e Paulo Freitas"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
+  time: "17:30"
+  description: "Free storytelling for children and families with Ana Couto and Paulo Freitas, in the published municipal October–December programme."
+  description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
+  instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
+  tags: [literature, kid-friendly, free]
+
+- date: 2026-11-07
+  name: "Hora do Conto — Ana Couto e Paulo Freitas"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
+  time: "17:30"
+  description: "Free storytelling for children and families with Ana Couto and Paulo Freitas, in the published municipal October–December programme."
+  description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
+  instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
+  tags: [literature, kid-friendly, free]
+
+- date: 2026-11-14
+  name: "Hora do Conto — Ana Couto e Paulo Freitas"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
+  time: "17:30"
+  description: "Free storytelling for children and families with Ana Couto and Paulo Freitas, in the published municipal October–December programme."
+  description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
+  instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
+  tags: [literature, kid-friendly, free]
+
+- date: 2026-11-21
+  name: "Hora do Conto — Ana Couto e Paulo Freitas"
+  venue: Praça Velha
+  address: "Praça Velha, Angra do Heroísmo"
+  time: "11:00"
+  description: "Free storytelling for children and families with Ana Couto and Paulo Freitas, in the published municipal October–December programme."
+  description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
+  instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
+  tags: [literature, kid-friendly, free]
+
+- date: 2026-11-28
+  name: "Hora do Conto — Ana Couto e Paulo Freitas"
+  venue: Praça Velha
+  address: "Praça Velha, Angra do Heroísmo"
+  time: "11:00"
+  description: "Free storytelling for children and families with Ana Couto and Paulo Freitas, in the published municipal October–December programme."
+  description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
+  instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
+  tags: [literature, kid-friendly, free]
+
+- date: 2026-12-05
+  name: "Hora do Conto — Ana Couto e Paulo Freitas"
+  venue: Praça Velha
+  address: "Praça Velha, Angra do Heroísmo"
+  time: "11:00"
+  description: "Free storytelling for children and families with Ana Couto and Paulo Freitas, in the published municipal October–December programme."
+  description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
+  instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
+  tags: [literature, kid-friendly, free]
+
+- date: 2026-12-12
+  name: "Hora do Conto — Ana Couto e Paulo Freitas"
+  venue: Praça Velha
+  address: "Praça Velha, Angra do Heroísmo"
+  time: "11:00"
+  description: "Free storytelling for children and families with Ana Couto and Paulo Freitas, in the published municipal October–December programme."
+  description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
+  instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
+  tags: [literature, kid-friendly, free]
+
+- date: 2026-12-19
+  name: "Hora do Conto — Ana Couto e Paulo Freitas"
+  venue: Praça Velha
+  address: "Praça Velha, Angra do Heroísmo"
+  time: "11:00"
+  description: "Free storytelling for children and families with Ana Couto and Paulo Freitas, in the published municipal October–December programme."
+  description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
+  instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
+  tags: [literature, kid-friendly, free]
+
+- date: 2026-12-26
+  name: "Hora do Conto — Ana Couto e Paulo Freitas"
+  venue: Praça Velha
+  address: "Praça Velha, Angra do Heroísmo"
+  time: "11:00"
+  description: "Free storytelling for children and families with Ana Couto and Paulo Freitas, in the published municipal October–December programme."
+  description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
+  instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
+  tags: [literature, kid-friendly, free]
