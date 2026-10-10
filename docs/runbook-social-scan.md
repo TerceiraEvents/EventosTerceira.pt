@@ -3,7 +3,7 @@
 > **Purpose:** Find and verify Terceira events across official calendars, organizer websites, search, Instagram, and Facebook, then update the data through a PR.
 > **Cadence:** Run once a week (or whenever you notice the upcoming-events list is getting thin).
 > **Time required:** ~30–60 minutes depending on how active venues have been.
-> **Source status last verified:** 2026-10-08.
+> **Source status last verified:** 2026-10-10.
 
 ---
 
@@ -35,7 +35,7 @@ Use this as a maintained starting list for Angra and Praia scans. It is not a gu
 | CMAH events (`angradoheroismo.pt/eventos`) | Angra | Primary first-party calendar. Compare the page and iCal with the repo. The iCal is live, but imported descriptions and all-day times still need manual verification. |
 | `@angradoheroismo` | Angra | Primary municipal social account. Scan recent posts and every slide in carousels. |
 | Teatro Angrense / CCCAH | Angra | Use CMAH and the venue/ticket seller as primary evidence. Do not rely on unofficial or empty Facebook profiles. |
-| Museu de Angra do Heroísmo + `@museu.angra` | Angra | The website endpoints returned 403 on 2026-09-04. Treat Instagram and the CMAH calendar as the practical primary sources until the feed recovers. |
+| Museu de Angra do Heroísmo + `@museu.angra` | Angra | Read the events archive, both exhibition pages, monthly agenda, and Facebook/Instagram corrections. Automated HTTP remains Cloudflare-blocked; its ingester reports the failure explicitly. |
 | BPARLSR (`bparlsr.azores.gov.pt/destaques/`) | Angra | First-party library calendar and monthly BiblioAgenda. The site is Cloudflare-protected, so scan it in a browser and use its calendar/iCal export when available. |
 | Casa do Sal / Oficina d'Angra (`@oficinadangra`) | Angra | Primary source for Casa do Sal. The old direct Casa do Sal Facebook page remains unavailable. |
 | Lar Doce Livro (`@livraria_lardocelivro`) | Angra | Scan every slide of the pinned monthly agenda carousel and individual corrections. Do not infer a weekly recurrence from one month's dated programme. |
@@ -436,19 +436,19 @@ Once the PR is merged, close the tracking issue (or it closes automatically if y
 
 These sources have configured daily GitHub Actions workflows. Configuration or a green run does not prove successful coverage: some ingesters return successfully after fetching no usable events. Spot-check the live source against `_data/special_events.yml`; backfill verified omissions with the original source URL.
 
-| Source | Workflow file | Status verified 2026-10-08 |
+| Source | Workflow file | Status verified 2026-10-10 |
 |---|---|---|
 | CMAH iCal feed | `ingest-cmah.yml` | Live dry-run produced current candidates, but the source contains duplicate records with title/venue variation; manually deduplicate against the full YAML |
 | Ticketline (Angra + Praia) | `ingest-ticketline.yml` | Reachable; the 2026-10-08 dry-run found candidates and parse failures, and multi-session pages still require manual city/date verification |
-| Museu de Angra do Heroísmo | `ingest-museu-angra.yml` | Website REST and iCal requests returned 403; use first-party museum pages, Instagram, CMAH, and regional-government agenda mirrors |
-| Câmara Municipal Praia da Vitória | `ingest-cmpv.yml` | Configured endpoint guesses returned 404 or non-calendar responses; scan the live site and social accounts |
+| Museu de Angra do Heroísmo | `ingest-museu-angra.yml` | Event/exhibition archive parser is covered by fixtures; unattended HTTP receives Cloudflare 403 and fails with a health report; browser archives remain readable |
+| Câmara Municipal Praia da Vitória | `ingest-cmpv.yml` | Live agenda pagination and details are readable; the adapter returns current cultural events and reports exclusions and time corrections |
 | Visit Azores | `ingest-visit-azores.yml` | Configured events URL returned 404 |
-| Whatson Azores (government) | `ingest-whatson-azores.yml` | Automated request returned 403; browser/search/byAçores fallback required |
+| Whatson Azores (government) | `ingest-whatson-azores.yml` | Public website data query is readable and fully paginated; the adapter filters by explicit island identity and uses displayed event dates |
 | Touradas à corda | `ingest-touradas.yml` | Keep as the canonical automated source and spot-check Actions |
 
 If an automated workflow is producing errors or missing events, check the **Actions** tab: https://github.com/TerceiraEvents/EventosTerceira.pt/actions and mention the backfill in the PR body.
 
-For source-health checks, distinguish fetch status, parsed event count, Terceira candidate count, duplicates, and missing verified events. Report a failed/blocked/non-calendar response as such, not as zero events. CMPV currently tries guessed feed paths, while the What's On ingester inspects homepage JSON-LD; neither substitutes for paginating the live agenda. Do not assume an event is in Angra merely because its page mentions Terceira. Parser changes need their own tested implementation; this runbook does not repair those ingesters.
+For source-health checks, distinguish fetch status, parsed event count, Terceira candidate count, duplicates, and missing verified events. Report a failed/blocked/non-calendar response as such, not as zero events. The Museu, CMPV, and What's On workflows preserve health artifacts even when discovery fails. Use the [ingestion commands and source contracts](event-ingestion.md) for repeatable dry-runs and interpret changed-time reports as review work. An event's actual island and venue determine geography.
 
 ---
 

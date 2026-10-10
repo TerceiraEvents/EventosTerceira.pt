@@ -1,9 +1,9 @@
 name: ingest CMPV events
 
 # Daily ingestion of events from the Câmara Municipal da Praia da Vitória
-# (https://www.cmpv.pt/) into _data/special_events.yml. The script probes a
-# short list of common iCal endpoints (events.ics, /eventos/?ical=1, ...)
-# and uses whichever returns parseable VEVENTs. CMAH's municipal iCal does
+# (https://www.cmpv.pt/) into _data/special_events.yml. The script reads the
+# public agenda's pagination and detail pages and checks calendar coverage.
+# CMAH's municipal iCal does
 # not cover Praia da Vitória; this fills that gap.
 #
 # See scripts/ingest_cmpv.py for endpoint discovery and parsing logic.
@@ -32,10 +32,17 @@ jobs:
           python-version: "3.12"
 
       - name: Install Python dependencies
-        run: pip install --quiet icalendar==7.0.3 pyyaml==6.0.2
+        run: pip install --quiet pyyaml==6.0.2
 
       - name: Run ingestion script
-        run: python scripts/ingest_cmpv.py
+        run: python scripts/ingest_cmpv.py --health-report "${{ runner.temp }}/source-health.json"
+
+      - name: Preserve source health
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cmpv-source-health
+          path: ${{ runner.temp }}/source-health.json
 
       - name: Validate _data/special_events.yml
         run: |
@@ -66,6 +73,7 @@ jobs:
       - name: Open pull request
         uses: peter-evans/create-pull-request@v6
         with:
+          add-paths: _data/special_events.yml
           branch: auto/cmpv-ingest
           delete-branch: true
           commit-message: "Auto-ingest new events from CMPV"
@@ -82,13 +90,14 @@ jobs:
             municipal sport/cultural happenings.
 
             **Known limitations:**
-            - The script probes several common iCal endpoints and uses the
-              first that returns VEVENTs. If CMPV changes their CMS, the
-              script will start no-opping; we'll update the URL list.
+            - The script follows the public agenda's pagination and detail
+              links. Blocked pages, malformed dates, and incomplete details
+              fail ingestion and remain visible in the source-health report.
             - Per-run cap: 20 events. Re-runs backfill the rest.
             - Descriptions are truncated to ~500 characters.
 
             Script: `scripts/ingest_cmpv.py`
+            Health report: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           labels: |
             automated
             events

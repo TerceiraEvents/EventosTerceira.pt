@@ -2,10 +2,10 @@ name: ingest Whatson Azores events
 
 # Daily ingestion of Terceira events from Azores What's On
 # (https://whatson.azores.gov.pt/) into _data/special_events.yml.
-# Extracts JSON-LD `Event` blocks from the listing page and filters to
-# events whose name/description/venue mention "terceira".
+# Reads every page of the website's public agenda data query and filters
+# by the explicit Terceira island reference.
 #
-# See scripts/ingest_whatson_azores.py + scripts/ingest_jsonld.py.
+# See scripts/ingest_whatson_azores.py.
 
 on:
   schedule:
@@ -34,7 +34,14 @@ jobs:
         run: pip install --quiet pyyaml==6.0.2
 
       - name: Run ingestion script
-        run: python scripts/ingest_whatson_azores.py
+        run: python scripts/ingest_whatson_azores.py --health-report "${{ runner.temp }}/source-health.json"
+
+      - name: Preserve source health
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: whatson-source-health
+          path: ${{ runner.temp }}/source-health.json
 
       - name: Validate _data/special_events.yml
         run: |
@@ -65,6 +72,7 @@ jobs:
       - name: Open pull request
         uses: peter-evans/create-pull-request@v6
         with:
+          add-paths: _data/special_events.yml
           branch: auto/whatson-azores-ingest
           delete-branch: true
           commit-message: "Auto-ingest new events from Azores What's On"
@@ -77,20 +85,19 @@ jobs:
             merge.
 
             **Coverage:** Regional government events portal, filtered to
-            events that mention "terceira" anywhere in their name,
-            description, venue, or address. Catches Festivals (Sanjoaninas,
+            records explicitly assigned to Terceira. Catches Festivals (Sanjoaninas,
             Festas da Praia, etc.) and special programming the municipality
             sites don't always publish.
 
             **Known limitations:**
-            - We rely on the listing page embedding JSON-LD `Event` blocks
-              for SEO. If the page becomes JS-only, the script no-ops.
-            - The region filter is a loose keyword match, so events that
-              mention Terceira only in passing might slip through; review
-              before merging.
+            - Published event dates take precedence over CMS timestamps.
+              Discrete dates produce separate sessions; ambiguous dates and
+              incomplete pagination fail ingestion and retain a health report.
+            - Recurring programmes require weekly-data or session-level review.
             - Per-run cap: 20 events.
 
             Script: `scripts/ingest_whatson_azores.py`
+            Health report: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           labels: |
             automated
             events
