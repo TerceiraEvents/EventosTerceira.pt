@@ -16,7 +16,7 @@ lang_alt: /pt/calendar/
 
 {% assign has_upcoming = false %}
 {% for event in sorted_events %}
-  {% assign event_ts = event.date | date: "%s" | plus: 0 %}
+  {% assign event_ts = event.end_date | default: event.date | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
   {% if event_ts >= now_ts %}
     {% assign has_upcoming = true %}
   {% endif %}
@@ -24,7 +24,7 @@ lang_alt: /pt/calendar/
 
 {% if has_upcoming %}
 {% for event in sorted_events %}
-  {% assign event_ts = event.date | date: "%s" | plus: 0 %}
+  {% assign event_ts = event.end_date | default: event.date | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
   {% if event_ts >= now_ts %}
     {% include special_event_card.html event=event %}
   {% endif %}

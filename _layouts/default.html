@@ -326,15 +326,18 @@
       return new Date(+m[1], +m[2] - 1, +m[3]);
     }
 
-    function inRange(eventDate, range) {
-      if (!eventDate) return true;
+    function inRange(eventStart, eventEnd, range) {
+      if (!eventStart) return true;
       var today = new Date();
       today.setHours(0, 0, 0, 0);
-      if (eventDate < today) return false;
+      // Inclusive end day stays visible; the next day it drops out.
+      var end = eventEnd || eventStart;
+      if (end < today) return false;
       if (range === 'all' || !RANGE_DAYS[range]) return true;
-      var end = new Date(today);
-      end.setDate(end.getDate() + RANGE_DAYS[range]);
-      return eventDate < end;
+      // Any event overlapping today through the exclusive horizon counts.
+      var horizon = new Date(today);
+      horizon.setDate(horizon.getDate() + RANGE_DAYS[range]);
+      return eventStart < horizon;
     }
 
     bars.forEach(function(bar) {
@@ -362,8 +365,11 @@
                   document.querySelector('.event-search-empty');
 
       // Cache parsed dates so we don't re-parse on every keystroke.
+      // Cards without an end date fall back to their start date.
       var cardDates = cards.map(function(card) {
-        return parseEventDate(card.getAttribute('data-event-date'));
+        var start = parseEventDate(card.getAttribute('data-event-date'));
+        var endAttr = card.getAttribute('data-event-end-date');
+        return { start: start, end: endAttr ? parseEventDate(endAttr) : start };
       });
 
       function cardTags(card) {
@@ -389,7 +395,7 @@
           var matchesTag = !selectedTag || tags.indexOf(selectedTag) !== -1;
           // Skip range filtering on pages without a range select (e.g. /archive,
           // which is past-only and would otherwise be hidden by the >= today guard).
-          var matchesRange = !rangeSelect || inRange(cardDates[i], range);
+          var matchesRange = !rangeSelect || inRange(cardDates[i].start, cardDates[i].end, range);
           var show = matchesQuery && matchesTag && matchesRange;
           card.style.display = show ? '' : 'none';
           if (show) visibleCount++;

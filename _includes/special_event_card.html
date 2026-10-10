@@ -57,6 +57,7 @@
 <div class="special-event {% if event.image %}has-image{% endif %} {% if event.festival %}is-festival{% endif %}"
      data-event-tags="{{ event_tags_str }}"
      data-event-date="{{ event.date | date: "%Y-%m-%d" }}"
+     data-event-end-date="{{ event.end_date | default: event.date | date: "%Y-%m-%d" }}"
      data-event-name="{{ event_name | escape }}"
      data-event-venue="{{ event_venue | escape }}"
      data-event-description="{{ event_description | escape }}">
@@ -66,6 +67,7 @@
     <div class="year">{{ date_parts[0] }}</div>
   </div>
   <div class="event-details">
+    {% include event_date_range.html %}
     {% if event.festival %}
     {%- if page_lang == "pt" -%}
       {%- assign festival_label = event.festival_pt | default: event.festival -%}
@@ -208,8 +210,9 @@
   "@context": "https://schema.org",
   "@type": "Event",
   "name": {{ event_name | jsonify }},
+{%- assign end_raw = event.end_date | default: event.date -%}
   "startDate": "{{ event.date | date: '%Y-%m-%d' }}{% if time_iso != '' %}T{{ time_iso }}{% endif %}",
-  "endDate": "{{ event.date | date: '%Y-%m-%d' }}{% if time_iso != '' %}T{{ time_iso }}{% endif %}",
+  "endDate": "{{ end_raw | date: '%Y-%m-%d' }}{% if time_iso != '' and end_raw == event.date %}T{{ time_iso }}{% endif %}",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "location": {

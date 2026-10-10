@@ -46,7 +46,7 @@ lang_alt: /
 </section>
 
 {%- comment -%}
-  Build a list of upcoming special events (date >= today) and slice
+  Build a list of upcoming special events (end date >= today) and slice
   to the first 3, sorted ascending. Same `now_ts` / `event_ts` pattern
   as special.md / calendar.md so the cutoff is consistent. Translatable
   fields fall back to the bare field via `_pt`/`_en` siblings.
@@ -55,7 +55,7 @@ lang_alt: /
 {% assign sorted_events = site.data.special_events | sort: "date" %}
 {% assign upcoming_events = "" | split: "" %}
 {% for event in sorted_events %}
-  {% assign event_ts = event.date | date: "%s" | plus: 0 %}
+  {% assign event_ts = event.end_date | default: event.date | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
   {% if event_ts >= now_ts %}
     {% assign upcoming_events = upcoming_events | push: event %}
   {% endif %}
@@ -73,6 +73,7 @@ lang_alt: /
       <a href="{{ '/pt/special/' | relative_url }}">
         <span class="home-events-meta">
           <time class="home-events-date" datetime="{{ event.date | date: '%Y-%m-%d' }}">{{ event.date | date: "%-d %b" }}</time>
+          {% include event_date_range.html %}
           {% if event.time %}<span class="home-events-time">{{ event.time }}</span>{% endif %}
         </span>
         <span class="home-events-title">{{ ev_name }}</span>

@@ -20,6 +20,7 @@ From the repository root:
 python scripts/ingest_museu_angra.py --dry-run --health-report museum-health.json
 python scripts/ingest_cmpv.py --dry-run --health-report cmpv-health.json
 python scripts/ingest_whatson_azores.py --dry-run --health-report whatson-health.json
+ruby scripts/validate_event_data.rb _data/special_events.yml
 python -m unittest discover -s scripts/tests -p 'test_*.py' -v
 ```
 
@@ -32,3 +33,9 @@ The `validate event ingesters` workflow exercises fixtures and failure paths wit
 ## Shared parser contracts
 
 `SourceHealth.fetch` reads a public page or data query and counts successful responses; `SourceError` identifies incomplete discovery. `run_ingester` calls a source's `discover_events(today, lookahead, health)` and validates the complete YAML output before writing. `published_dates` returns inclusive ranges or discrete session dates and rejects ambiguous mixtures; `published_time` reads clock labels while excluding duration and ticket-office lines. `parse_html` produces `HtmlNode` elements with attributes, children, class-token checks, document-order traversal, and visible text without executing scripts.
+
+## Inclusive date ranges on the site
+
+Upcoming, home, calendar, and archive selection compare `event.end_date | default: event.date` against today, so the inclusive end day stays upcoming and the next day moves to the archive. Cards and home previews label the complete period (`event_date_range.html`, silent for single-day events) and expose it to the client filter through `data-event-end-date`. Event JSON-LD carries the inclusive end date as date-only for multi-day ranges; timed single-day events keep the start time on both `startDate` and `endDate`. The client range filter keeps any event overlapping today through its exclusive horizon.
+
+Both `date` and a present `end_date` must be unquoted ISO dates (YAML Date type) with `end_date` on or after `date`; `ruby scripts/validate_event_data.rb` rejects quoted or reversed ends before the site build.
