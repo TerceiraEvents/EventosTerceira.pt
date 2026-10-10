@@ -13,6 +13,8 @@ on:
       - "scripts/test_rehost_image.py"
       - "scripts/parse_rehost_request.py"
       - "scripts/test_parse_rehost_request.py"
+      - "scripts/validate_event_data.rb"
+      - "scripts/tests/test_event_data.rb"
   pull_request:
     paths:
       - "_data/special_events.yml"
@@ -24,6 +26,8 @@ on:
       - "scripts/test_rehost_image.py"
       - "scripts/parse_rehost_request.py"
       - "scripts/test_parse_rehost_request.py"
+      - "scripts/validate_event_data.rb"
+      - "scripts/tests/test_event_data.rb"
 
 jobs:
   validate:
@@ -52,47 +56,7 @@ jobs:
         run: python scripts/validate_image_hosts.py _data/special_events.yml
 
       - name: Validate _data/special_events.yml
-        run: |
-          ruby -ryaml -rdate <<'RUBY'
-          path = "_data/special_events.yml"
-          # Psych's safe_load (default since Ruby 3.1) refuses to instantiate
-          # Date unless it's in permitted_classes. Use safe_load explicitly
-          # with File.read so the keyword-argument form works across Ruby
-          # versions (the load_file API for permitted_classes shifted between
-          # 3.0 and 3.2).
-          data = YAML.safe_load(File.read(path), permitted_classes: [Date, Time])
+        run: ruby scripts/validate_event_data.rb _data/special_events.yml
 
-          unless data.is_a?(Array)
-            abort "#{path}: expected a top-level YAML list, got #{data.class}"
-          end
-
-          errors = []
-
-          # Every event must have a Date-typed `date` field.
-          # Mixed String/Date entries crash Liquid's `sort: "date"` in
-          # archive.md / special.md / calendar.md with the cryptic
-          # "comparison of Array with Array failed" — which is how this
-          # check was born in the first place (PR #57 postmortem).
-          data.each_with_index do |event, i|
-            name = event["name"] || "(unnamed ##{i})"
-            date = event["date"]
-
-            if date.nil?
-              errors << "#{name}: missing `date` field"
-              next
-            end
-
-            unless date.is_a?(Date)
-              errors << "#{name}: `date` must be an unquoted ISO date (YYYY-MM-DD), got #{date.class}: #{date.inspect}. " \
-                        "Do not wrap the date in quotes — YAML will parse it as a String and break the site build."
-            end
-          end
-
-          if errors.any?
-            warn "event data validation failed:"
-            errors.each { |e| warn "  - #{e}" }
-            exit 1
-          end
-
-          puts "#{path}: OK (#{data.size} events, all dates are Date-typed)"
-          RUBY
+      - name: Unit-test event data validation
+        run: ruby scripts/tests/test_event_data.rb

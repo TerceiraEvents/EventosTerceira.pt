@@ -1,0 +1,20 @@
+{%- comment -%}
+  Complete-period label for ranged events. Emits nothing for
+  single-day events (missing end_date, or end_date equal to date).
+{%- endcomment -%}
+{% assign range_end = event.end_date | default: event.date %}
+{% if range_end != event.date %}
+  {% assign range_lang = page.lang | default: "en" %}
+  {% if range_lang == "pt" %}
+    {% assign range_months = "Jan,Fev,Mar,Abr,Mai,Jun,Jul,Ago,Set,Out,Nov,Dez" | split: "," %}
+  {% else %}
+    {% assign range_months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," %}
+  {% endif %}
+  {% assign rs = event.date | split: "-" %}
+  {% assign re = range_end | split: "-" %}
+  {% assign rs_mi = rs[1] | plus: 0 | minus: 1 %}
+  {% assign re_mi = re[1] | plus: 0 | minus: 1 %}
+  {% assign rs_d = rs[2] | plus: 0 %}
+  {% assign re_d = re[2] | plus: 0 %}
+  <span class="event-date-range">📅 {% if rs[0] != re[0] %}{{ rs_d }} {{ range_months[rs_mi] }} {{ rs[0] }} – {{ re_d }} {{ range_months[re_mi] }} {{ re[0] }}{% elsif rs[1] != re[1] %}{{ rs_d }} {{ range_months[rs_mi] }} – {{ re_d }} {{ range_months[re_mi] }} {{ re[0] }}{% else %}{{ rs_d }} – {{ re_d }} {{ range_months[re_mi] }} {{ re[0] }}{% endif %}</span>
+{% endif %}

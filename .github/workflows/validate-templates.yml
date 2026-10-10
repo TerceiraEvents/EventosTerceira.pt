@@ -25,6 +25,12 @@ jobs:
       - name: Unit-test postal_address.html include
         run: bundle exec ruby scripts/tests/test_postal_address.rb
 
+      - name: Unit-test event range selection
+        run: bundle exec ruby scripts/tests/test_event_ranges.rb
+
+      - name: Unit-test client-side event filter
+        run: node --test scripts/tests/test_event_filter.js
+
       # ── Data-vocabulary consistency ───────────────────────────────
       # Catches typo'd or unknown tag slugs in special_events.yml.
       - name: Validate event tag vocabulary
