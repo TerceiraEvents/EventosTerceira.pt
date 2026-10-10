@@ -222,6 +222,8 @@ def format_event_yaml(event: dict) -> str:
     """Hand-format a single event as a YAML list item matching the file style."""
     out: list[str] = []
     out.append(f"- date: {event['date'].isoformat()}")
+    if event.get("end_date") and event["end_date"] > event["date"]:
+        out.append(f"  end_date: {event['end_date'].isoformat()}")
     out.append(f"  name: {yaml_double_quote(event['name'])}")
     out.append(f"  venue: {yaml_value(event['venue'])}")
     if event.get("address"):

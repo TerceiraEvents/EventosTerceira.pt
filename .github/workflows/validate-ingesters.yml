@@ -1,0 +1,32 @@
+name: validate event ingesters
+
+on:
+  pull_request:
+    paths:
+      - "scripts/ingest_*.py"
+      - "scripts/tests/**"
+      - ".github/workflows/ingest-*.yml"
+      - ".github/workflows/validate-ingesters.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/ingest_*.py"
+      - "scripts/tests/**"
+      - ".github/workflows/ingest-*.yml"
+      - ".github/workflows/validate-ingesters.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install parser test dependencies
+        run: pip install --quiet icalendar==7.0.3 pyyaml==6.0.2
+      - name: Test parser, pagination, deduplication, and source failures
+        run: python -m unittest discover -s scripts/tests -p 'test_*.py' -v

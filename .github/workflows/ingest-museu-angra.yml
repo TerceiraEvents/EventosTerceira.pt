@@ -2,11 +2,10 @@ name: ingest Museu de Angra events
 
 # Daily ingestion of events from the Museu de Angra do Heroísmo
 # (https://museu-angra.cultura.azores.gov.pt/) into _data/special_events.yml.
-# Tries the WordPress + The Events Calendar REST API first, falls back to
-# the plugin's iCal endpoint. Opens a pull request with any new events for
-# human review before they land on main.
+# Reads the published event and exhibition archives and detail pages.
+# Source failures fail the job and attach a health report for review.
 #
-# See scripts/ingest_museu_angra.py for parsing logic and endpoint order.
+# See scripts/ingest_museu_angra.py for parsing logic.
 
 on:
   schedule:
@@ -34,10 +33,17 @@ jobs:
           python-version: "3.12"
 
       - name: Install Python dependencies
-        run: pip install --quiet icalendar==7.0.3 pyyaml==6.0.2
+        run: pip install --quiet pyyaml==6.0.2
 
       - name: Run ingestion script
-        run: python scripts/ingest_museu_angra.py
+        run: python scripts/ingest_museu_angra.py --health-report "${{ runner.temp }}/source-health.json"
+
+      - name: Preserve source health
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: museu-source-health
+          path: ${{ runner.temp }}/source-health.json
 
       - name: Validate _data/special_events.yml
         # Mirror of the check in .github/workflows/validate-events.yml so
@@ -70,6 +76,7 @@ jobs:
       - name: Open pull request
         uses: peter-evans/create-pull-request@v6
         with:
+          add-paths: _data/special_events.yml
           branch: auto/museu-angra-ingest
           delete-branch: true
           commit-message: "Auto-ingest new events from Museu de Angra"
@@ -80,21 +87,19 @@ jobs:
             This PR was opened by `.github/workflows/ingest-museu-angra.yml`.
             Review the added events (titles, descriptions, tags), and merge.
 
-            **Coverage:** Museum events from The Events Calendar plugin —
+            **Coverage:** Museum event and exhibition archive pages —
             exhibitions, Domingos com Música concerts, talks, book clubs,
             family workshops, and the annual Museum Day / Night programmes.
 
             **Known limitations:**
-            - The museum's site uses JavaScript-rendered HTML on `/agenda/`,
-              so we only ingest from the REST API and iCal endpoints. If
-              both stop returning events, the script no-ops; switch to a
-              JS-rendered scrape in a follow-up.
-            - Default tags are `exhibition` + `free` with keyword bumps
-              (concerto → live-music, palestra → literature, oficina →
-              workshop, família → kid-friendly). Spot-check before merging.
+            - A blocked archive or required detail page fails ingestion.
+              Cloudflare restrictions require a browser check or permission
+              from the source operator; the script does not bypass them.
+            - Admission tags require explicit organizer evidence.
             - Per-run cap: 20 events. Re-runs backfill the rest.
 
             Script: `scripts/ingest_museu_angra.py`
+            Health report: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           labels: |
             automated
             events
