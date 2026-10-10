@@ -57,6 +57,7 @@ defaults:
       lang: pt
 
 exclude:
+  - scripts/tests/fixtures
   - Gemfile
   - Gemfile.lock
   - README.md

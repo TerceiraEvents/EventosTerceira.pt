@@ -19,6 +19,10 @@ warnings = []
 def err(errors, msg); errors << msg; end
 def warn_(warnings, msg); warnings << msg; end
 
+if Dir.exist?(File.join(SITE, "scripts/tests/fixtures"))
+  err(errors, "test fixtures must not be published in the built site")
+end
+
 # ─────────────────────────────────────────────────────────────────────
 # 1. Per-page meta tags + JSON-LD validity
 # ─────────────────────────────────────────────────────────────────────
