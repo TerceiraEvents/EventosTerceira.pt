@@ -1350,6 +1350,7 @@
   name: "Mostra bibliográfica «Angra do Heroísmo: cidade aberta ao mundo»"
   name_en: "Bibliographic exhibition «Angra do Heroísmo: an open city to the world»"
   end_date: 2026-06-30
+  kind: exhibition
   venue: "Espaço Arte & Debates — BPARLSR"
   venue_en: "Espaço Arte & Debates — Public Library and Regional Archive"
   address: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro, Palácio Bettencourt, Rua da Rosa, 9700-129 Angra do Heroísmo"
@@ -1835,6 +1836,7 @@
   name: "Dia de Portugal, de Camões e das Comunidades Portuguesas 2026 — EXPO Forças Armadas"
   name_en: "Portugal Day 2026 — Armed Forces Expo"
   end_date: 2026-06-10
+  kind: event
   venue: "Praia da Vitória"
   address: "Praia da Vitória"
   map_url: https://www.google.com/maps/search/?api=1&query=Praia+da+Vitória+Terceira
@@ -4463,6 +4465,7 @@ Come join us and support our festivities!"
 
 - date: 2026-07-25
   end_date: 2026-10-11
+  kind: exhibition
   name: "Belo Insubmisso, de Miguel Rebelo"
   name_en: "Belo Insubmisso, by Miguel Rebelo"
   venue: "Museu de Angra do Heroísmo"
@@ -4802,6 +4805,9 @@ Come join us and support our festivities!"
 
 - date: 2026-07-01
   end_date: 2026-07-31
+  kind: exhibition
+  visiting_hours: "Monday to Friday, 09:00-17:00"
+  visiting_hours_pt: "de segunda a sexta-feira, das 09h00 às 17h00"
   name: "Exposição: Álamo Oliveira — Da Vida à Escrita"
   name_en: "Exhibition: Álamo Oliveira — From Life to Writing"
   venue: Biblioteca Municipal Silvestre Ribeiro / Casa das Tias de Vitorino Nemésio
@@ -4958,6 +4964,7 @@ Come join us and support our festivities!"
 
 - date: 2026-07-19
   end_date: 2026-07-28
+  kind: event
   name: "Comemorações: Dia do Regimento de Guarnição N.º 1"
   name_en: "Commemorations: 1st Garrison Regiment Day"
   venue: "Vários locais de Angra do Heroísmo"
@@ -5118,6 +5125,7 @@ Come join us and support our festivities!"
 
 - date: 2026-03-30
   end_date: 2026-07-31
+  kind: exhibition
   name: "Within the Breath of Oyá / Dentro do sopro de Oyá"
   venue: "Instituto Açoriano de Cultura (IAC)"
   address: "Alto das Covas, 9700-215 Angra do Heroísmo"
@@ -5130,6 +5138,7 @@ Come join us and support our festivities!"
 
 - date: 2026-04-27
   end_date: 2026-08-24
+  kind: exhibition
   name: "Museu Fora de Portas | Cesta, atribuída a Ngungunhane"
   name_en: "Museum Beyond Its Walls | Basket attributed to Ngungunhane"
   venue: "Aerogare Civil das Lajes"
@@ -5143,6 +5152,7 @@ Come join us and support our festivities!"
 
 - date: 2026-06-12
   end_date: 2026-12-31
+  kind: exhibition
   name: "Marcos da Autonomia: da Junta Administrativa ao I Governo Regional"
   name_en: "Milestones of Autonomy: from the Administrative Board to the First Regional Government"
   venue: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
@@ -5156,6 +5166,7 @@ Come join us and support our festivities!"
 
 - date: 2026-06-30
   end_date: 2026-09-30
+  kind: exhibition
   name: "Confluência — estruturas para um território descontínuo"
   name_en: "Confluence — Structures for a Discontinuous Territory"
   venue: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
@@ -5170,6 +5181,7 @@ Come join us and support our festivities!"
 
 - date: 2026-07-01
   end_date: 2026-08-31
+  kind: exhibition
   name: "Documento do Mês | Paulo Gouveia: vida e obra de um arquiteto açoriano pós-moderno"
   name_en: "Document of the Month | Paulo Gouveia: Life and Work of a Postmodern Azorean Architect"
   venue: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
@@ -5690,6 +5702,7 @@ Come join us and support our festivities!"
 
 - date: 2026-08-13
   end_date: 2026-08-28
+  kind: exhibition
   name: "Exposição As Ilhas Desconhecidas - Baltasar Pinheiro"
   name_en: "The Unknown Islands Exhibition - Baltasar Pinheiro"
   venue: Casa do Sal
@@ -6028,6 +6041,7 @@ Come join us and support our festivities!"
 
 - date: 2026-08-04
   end_date: 2026-11-06
+  kind: exhibition
   name: "Criação… para além da tela"
   name_en: "Creation… Beyond the Canvas"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -6058,6 +6072,7 @@ Come join us and support our festivities!"
 
 - date: 2026-09-04
   end_date: 2026-10-09
+  kind: exhibition
   name: "Exposição 50 Anos de Autonomia dos Açores"
   name_en: "50 Years of Azorean Autonomy Exhibition"
   venue: Paços do Concelho (Town Hall)
@@ -6101,6 +6116,9 @@ Come join us and support our festivities!"
 
 - date: 2026-09-05
   end_date: 2026-09-15
+  kind: exhibition
+  visiting_hours: "Monday to Friday, 18:00 to 19:30"
+  visiting_hours_pt: "de segunda a sexta, das 18h00 às 19h30"
   name: "O Caos em Mim"
   name_en: "The Chaos in Me"
   venue: Casa do Sal / Oficina d'Angra
@@ -7026,6 +7044,7 @@ Come join us and support our festivities!"
 # September 16, 2026 social and official-agenda scan.
 - date: 2026-09-07
   end_date: 2026-10-31
+  kind: exhibition
   name: "Escritores da Diáspora: Onésimo Teotónio Almeida"
   name_en: "Diaspora Writers: Onésimo Teotónio Almeida"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -7180,6 +7199,7 @@ Come join us and support our festivities!"
 # September 16 evening social and official-agenda scan.
 - date: 2026-09-01
   end_date: 2026-10-31
+  kind: exhibition
   name: "Documento do Mês: O fardamento militar português dos séculos XVIII e XIX"
   name_en: "Document of the Month: Portuguese Military Uniforms of the 18th and 19th Centuries"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -7192,6 +7212,7 @@ Come join us and support our festivities!"
 
 - date: 2026-09-16
   end_date: 2026-10-14
+  kind: exhibition
   name: "Mostra bibliográfica: Livros em Língua Estrangeira"
   name_en: "Bibliographic Exhibition: Books in Foreign Languages"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -7232,6 +7253,7 @@ Come join us and support our festivities!"
 
 - date: 2026-09-27
   end_date: 2026-11-22
+  kind: exhibition
   name: "Exposição: The Journey, de Rohit Ferreira"
   name_en: "Exhibition: The Journey by Rohit Ferreira"
   venue: Museu de Angra do Heroísmo
@@ -7260,6 +7282,7 @@ Come join us and support our festivities!"
 # September 26, 2026 social, official-agenda, and source-discovery scan.
 - date: 2026-08-04
   end_date: 2026-11-23
+  kind: exhibition
   name: "Museu Afora: Modelo de Avião TAP Lockheed Super Constellation"
   name_en: "Museum Outside: TAP Lockheed Super Constellation Model"
   venue: Aerogare Civil das Lajes
@@ -7272,6 +7295,7 @@ Come join us and support our festivities!"
 
 - date: 2026-09-01
   end_date: 2026-10-04
+  kind: exhibition
   name: "Vitrine de Curiosidades: Sycees — lingotes de prata chineses"
   name_en: "Cabinet of Curiosities: Sycees — Chinese Silver Ingots"
   venue: Museu de Angra do Heroísmo
@@ -7284,6 +7308,7 @@ Come join us and support our festivities!"
 
 - date: 2026-09-11
   end_date: 2026-10-31
+  kind: exhibition
   name: "Exposição: Viola da Saudade"
   name_en: "Exhibition: Viola da Saudade"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -7296,6 +7321,7 @@ Come join us and support our festivities!"
 
 - date: 2026-09-22
   end_date: 2027-01-30
+  kind: exhibition
   name: "Exposição: Jaime Brasil — da ilha ao mundo"
   name_en: "Exhibition: Jaime Brasil — From the Island to the World"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -7309,6 +7335,9 @@ Come join us and support our festivities!"
 
 - date: 2026-09-27
   end_date: 2026-10-09
+  kind: exhibition
+  visiting_hours: "Monday through Friday from 16:00 to 18:30"
+  visiting_hours_pt: "de segunda a sexta-feira, das 16h00 às 18h30"
   name: "Exposição: De reüll, escull, de Laura Cano Calpe"
   name_en: "Exhibition: De reüll, escull by Laura Cano Calpe"
   venue: Casa do Sal
@@ -7478,6 +7507,9 @@ Come join us and support our festivities!"
 
 - date: 2026-10-11
   end_date: 2026-10-30
+  kind: exhibition
+  visiting_hours: "16:00 to 18:30 during the published programme period"
+  visiting_hours_pt: "das 16h00 às 18h30 durante o período anunciado"
   name: "Exposição Entre Terra e Consolações"
   name_en: "Between Earth and Consolations Exhibition"
   venue: Casa do Sal
@@ -7692,6 +7724,7 @@ Come join us and support our festivities!"
 
 - date: 2026-10-01
   end_date: 2026-12-31
+  kind: exhibition
   name: "Exposição de fotografia: Angra da Humanidade, de Luís Godinho"
   name_en: "Photography Exhibition: Angra of Humanity by Luís Godinho"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -8056,6 +8089,7 @@ Come join us and support our festivities!"
 # Official municipal, cultural, museum and sports sources
 - date: 2026-10-01
   end_date: 2026-11-30
+  kind: exhibition
   name: "Cartografias da Memória: A Mulher na Imprensa Açoriana"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
   address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
@@ -8065,6 +8099,7 @@ Come join us and support our festivities!"
 
 - date: 2026-10-08
   end_date: 2027-01-30
+  kind: exhibition
   name: "Exposição de fotografia: Romaria Cigana"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
   address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
@@ -8224,6 +8259,7 @@ Come join us and support our festivities!"
 
 - date: 2026-10-24
   end_date: 2027-01-30
+  kind: exhibition
   name: "Exposição: Mare Nostrum — Da Ilha Terceira e suas Cartografias"
   venue: Museu de Angra do Heroísmo
   address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
@@ -8252,6 +8288,7 @@ Come join us and support our festivities!"
 
 - date: 2026-07-14
   end_date: 2026-10-16
+  kind: exhibition
   name: "Exposição: Ocasos…, de Bárbara Loução"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
   address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
@@ -8262,6 +8299,7 @@ Come join us and support our festivities!"
 
 - date: 2026-10-05
   end_date: 2026-10-13
+  kind: exhibition
   name: "Festival da Geodiversidade: Exposição Rochas dos Açores"
   venue: Museu Vulcanoespeleológico — Associação Os Montanheiros
   address: "Angra do Heroísmo"
@@ -8272,6 +8310,7 @@ Come join us and support our festivities!"
 
 - date: 2026-10-06
   end_date: 2026-11-01
+  kind: exhibition
   name: "Vitrine de Curiosidades: Diapasão com Caixa de Francisco de Lacerda"
   venue: Museu de Angra do Heroísmo
   address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
