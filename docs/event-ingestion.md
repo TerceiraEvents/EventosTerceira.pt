@@ -45,3 +45,36 @@ Both `date` and a present `end_date` must be unquoted ISO dates (YAML Date type)
 `kind` is optional and accepts `event` or `exhibition`; an omitted value means `event`. For an exhibition, `date` and the inclusive `end_date` are the display period, and `end_date` must be strictly after `date`. The record must carry the `exhibition` tag. Every multi-day record carrying that tag declares `kind` explicitly, including a dated programme that remains `kind: event`; single-day openings, talks, and guided tours may omit `kind`.
 
 An opening reception, artist talk, or guided tour is a separate dated `kind: event` record naming the exhibition. Keep the longer display period on its own `kind: exhibition` record. An exhibition's `time` value is legacy data and is not an attendance time. `visiting_hours` and `visiting_hours_pt` are optional free-text schedules; include them only when the source states the hours in the corresponding language, and omit them when hours are unavailable. Older readers ignore these optional fields and continue reading existing event fields.
+
+## Persistent identity and discovery metadata
+
+Every event has an opaque `id` assigned once by `ruby scripts/assign_event_ids.rb`.
+Keep it when correcting a title, translation, date, venue, image, or price. Distinct
+occurrences receive distinct IDs even when their titles match. Ingestion workflows
+assign missing IDs before proposing data changes. Existing consumers can ignore this
+additive field. IDs use letters, numbers, underscores, and hyphens and are unique.
+The canonical share URL is `https://eventosterceira.pt/events/?id=<id>`; Portuguese
+uses `/pt/events/?id=<id>`. Unknown IDs show an unavailable state.
+
+`locality` is optional normalized curator metadata: `angra`, `praia`, or `other`.
+Set it from a verified event location; unknown records omit it and do not match a
+locality selection. Never infer locality from an artist's name. `price` and
+`price_pt` contain published price text; the `free` tag requires verified free
+admission. Missing price means unknown.
+
+Date shortcuts use Atlantic/Azores calendar days, including when a visitor's device
+uses another timezone. Today and Tomorrow each contain one calendar day. This
+weekend contains Saturday and Sunday, or the remaining Sunday when selected on
+Sunday. The next 7/31/365 days include today and exclude the following horizon.
+An exhibition matches by overlap with its published viewing period. Search removes
+accents and ignores case. Date, kind, locality, search, and tags combine with AND;
+every selected tag must match. Unknown locality and price remain unknown.
+
+## Artwork
+
+Use organizer artwork only with documented permission or a reusable license.
+Record `image_source`, `image_rights`, and `image_credit` with `image`; use
+`image_alt` and `image_alt_pt` for a useful description. Follow image-host validation
+and approved rehosting. Do not assume a public social-media post grants permission.
+Keep full posters uncropped in details. Missing or failed artwork leaves all textual
+event information available. Do not fabricate an event poster.

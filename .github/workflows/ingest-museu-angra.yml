@@ -45,6 +45,9 @@ jobs:
           name: museu-source-health
           path: ${{ runner.temp }}/source-health.json
 
+      - name: Assign persistent event identities
+        run: ruby scripts/assign_event_ids.rb
+
       - name: Validate _data/special_events.yml
         # Mirror of the check in .github/workflows/validate-events.yml so
         # we never open a PR with a broken file.
