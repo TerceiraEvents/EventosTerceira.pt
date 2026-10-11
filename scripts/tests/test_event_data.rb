@@ -48,6 +48,45 @@ assert_eq validate_events(
   [{ "name" => "Quoted Start", "date" => "2026-10-04" }]
 ).size, 1, "quoted date still fails"
 
+puts "kind and visiting-hours schema"
+
+kind_cases = [
+  ["valid event", { "name" => "Event", "date" => Date.new(2026, 10, 1), "kind" => "event" }, false],
+  ["valid exhibition", { "name" => "Exhibition", "date" => Date.new(2026, 10, 1),
+                          "end_date" => Date.new(2026, 10, 2), "kind" => "exhibition",
+                          "tags" => ["exhibition"] }, false],
+  ["unknown kind", { "name" => "Unknown", "date" => Date.new(2026, 10, 1), "kind" => "concert" }, true],
+  ["exhibition without end_date", { "name" => "No End", "date" => Date.new(2026, 10, 1),
+                                    "kind" => "exhibition", "tags" => ["exhibition"] }, true],
+  ["exhibition with end_date equal to date", { "name" => "Same Day", "date" => Date.new(2026, 10, 1),
+                                                "end_date" => Date.new(2026, 10, 1),
+                                                "kind" => "exhibition", "tags" => ["exhibition"] }, true],
+  ["exhibition without tag", { "name" => "No Tag", "date" => Date.new(2026, 10, 1),
+                                "end_date" => Date.new(2026, 10, 2), "kind" => "exhibition" }, true],
+  ["exhibition-tagged range with no kind", { "name" => "Implicit Exhibition",
+                                              "date" => Date.new(2026, 10, 1),
+                                              "end_date" => Date.new(2026, 10, 2),
+                                              "tags" => ["exhibition"] }, true],
+  ["exhibition-tagged range with kind event", { "name" => "Multi-day Event",
+                                                "date" => Date.new(2026, 10, 1),
+                                                "end_date" => Date.new(2026, 10, 2),
+                                                "kind" => "event", "tags" => ["exhibition"] }, false],
+  ["single-day exhibition-tagged record with no kind", { "name" => "Opening",
+                                                           "date" => Date.new(2026, 10, 1),
+                                                           "tags" => ["exhibition"] }, false],
+  ["empty visiting_hours", { "name" => "Empty Hours", "date" => Date.new(2026, 10, 1),
+                              "visiting_hours" => " " }, true],
+  ["empty visiting_hours_pt", { "name" => "Empty Hours PT", "date" => Date.new(2026, 10, 1),
+                                 "visiting_hours_pt" => "" }, true]
+]
+
+kind_cases.each do |name, event, should_fail|
+  errors = validate_events([event])
+  assert_eq errors.empty?, !should_fail, name
+  assert_eq errors.all? { |error| error.include?(event["name"]) }, true,
+            "#{name} errors name the record" if should_fail
+end
+
 assert_eq validate_events("nope").size, 1, "non-list top level fails"
 
 puts "validate-events workflow paths (actual parsed workflow)"

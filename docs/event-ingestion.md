@@ -39,3 +39,9 @@ The `validate event ingesters` workflow exercises fixtures and failure paths wit
 Upcoming, home, calendar, and archive selection compare `event.end_date | default: event.date` against today, so the inclusive end day stays upcoming and the next day moves to the archive. Cards and home previews label the complete period (`event_date_range.html`, silent for single-day events) and expose it to the client filter through `data-event-end-date`. Event JSON-LD carries the inclusive end date as date-only for multi-day ranges; timed single-day events keep the start time on both `startDate` and `endDate`. The client range filter keeps any event overlapping today through its exclusive horizon.
 
 Both `date` and a present `end_date` must be unquoted ISO dates (YAML Date type) with `end_date` on or after `date`; `ruby scripts/validate_event_data.rb` rejects quoted or reversed ends before the site build.
+
+## Listing kind and exhibition data
+
+`kind` is optional and accepts `event` or `exhibition`; an omitted value means `event`. For an exhibition, `date` and the inclusive `end_date` are the display period, and `end_date` must be strictly after `date`. The record must carry the `exhibition` tag. Every multi-day record carrying that tag declares `kind` explicitly, including a dated programme that remains `kind: event`; single-day openings, talks, and guided tours may omit `kind`.
+
+An opening reception, artist talk, or guided tour is a separate dated `kind: event` record naming the exhibition. Keep the longer display period on its own `kind: exhibition` record. An exhibition's `time` value is legacy data and is not an attendance time. `visiting_hours` and `visiting_hours_pt` are optional free-text schedules; include them only when the source states the hours in the corresponding language, and omit them when hours are unavailable. Older readers ignore these optional fields and continue reading existing event fields.

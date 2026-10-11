@@ -34,16 +34,32 @@ def validate_events(data)
     end
 
     ending = event["end_date"]
-    next if ending.nil?
-
-    unless ending.is_a?(Date)
+    if !ending.nil? && !ending.is_a?(Date)
       errors << "#{name}: `end_date` must be an unquoted ISO date (YYYY-MM-DD), got #{ending.class}: #{ending.inspect}. " \
                 "Do not wrap the date in quotes — YAML will parse it as a String and break range selection."
-      next
+    elsif ending.is_a?(Date) && ending < date
+      errors << "#{name}: `end_date` (#{ending}) is before `date` (#{date})"
     end
 
-    if ending < date
-      errors << "#{name}: `end_date` (#{ending}) is before `date` (#{date})"
+    kind = event["kind"]
+    unless kind.nil? || %w[event exhibition].include?(kind)
+      errors << "#{name}: `kind` must be `event` or `exhibition`, got #{kind.inspect}"
+    end
+
+    %w[visiting_hours visiting_hours_pt].each do |field|
+      value = event[field]
+      if !value.nil? && (!value.is_a?(String) || value.strip.empty?)
+        errors << "#{name}: `#{field}` must be a non-empty string"
+      end
+    end
+
+    tags = event["tags"]
+    tagged_exhibition = tags.is_a?(Array) && tags.include?("exhibition")
+    if kind == "exhibition"
+      errors << "#{name}: `kind: exhibition` requires a Date `end_date` strictly after `date`" unless ending.is_a?(Date) && ending > date
+      errors << "#{name}: `kind: exhibition` requires the `exhibition` tag" unless tagged_exhibition
+    elsif tagged_exhibition && ending.is_a?(Date) && ending > date && kind.nil?
+      errors << "#{name}: multi-day record tagged `exhibition` must declare `kind` explicitly"
     end
   end
 
