@@ -4193,6 +4193,19 @@ Come join us and support our festivities!"
   time: "21:30"
   description: "The Glenn Miller Orchestra brings its 'In the Christmas Mood' show to the CCCAH Grande Auditório."
   description_pt: "A Glenn Miller Orchestra apresenta o espetáculo «In the Christmas Mood» no Grande Auditório do CCCAH."
+  source_url: https://angradoheroismo.pt/evento/concerto-glenn-miller-orchestra-in-the-christmas-mood/
+  tags:
+  - live-music
+
+- date: 2026-12-06
+  name: "Glenn Miller Orchestra — In the Christmas Mood"
+  name_pt: "Glenn Miller Orchestra — In the Christmas Mood"
+  venue: "CCCAH (Centro Cultural e de Congressos)"
+  address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
+  time: "21:30"
+  description: "Additional session of the Glenn Miller Orchestra's 'In the Christmas Mood' show at the CCCAH Grande Auditório."
+  description_pt: "Data extra do espetáculo «In the Christmas Mood» da Glenn Miller Orchestra no Grande Auditório do CCCAH."
+  source_url: https://www.ticketline.pt/evento/glenn-miller-orchestra-in-the-christmas-moo-105182
   tags:
   - live-music
 
