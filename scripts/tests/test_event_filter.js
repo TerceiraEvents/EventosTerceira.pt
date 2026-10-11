@@ -41,21 +41,27 @@ function stubElement() {
 }
 
 // Stub search bar + card sibling chain. withRange=false omits the range select.
-function runPage({ cards, defaultRange = 'all', search = '', withRange = true, setRange = null }) {
+function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = null, withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null }) {
   const bar = {
-    getAttribute: (k) => (k === 'data-default-range' ? defaultRange : null),
+    getAttribute: (k) => k === 'data-default-range' ? defaultRange : k === 'data-default-kind' ? defaultKind : null,
     parentElement: null,
     nextElementSibling: null,
     querySelector(sel) {
       if (sel === '.event-search-input') return input;
-      if (sel === '.event-tag-filter') return null;
+      if (sel === '.event-tag-filter') return withTag ? tagSelect : null;
       if (sel === '.event-range-filter') return withRange ? rangeSelect : null;
+      if (sel === '.event-kind-filter') return withKind ? kindSelect : null;
       return null;
     },
   };
   const input = stubElement();
+  input.value = query;
+  const tagSelect = stubElement();
+  tagSelect.value = '';
   const rangeSelect = stubElement();
   rangeSelect.value = defaultRange;
+  const kindSelect = stubElement();
+  kindSelect.value = defaultKind === 'exhibitions' ? 'exhibition' : defaultKind === 'all' ? 'all' : 'event';
 
   const cardNodes = cards.map((c) => ({
     attrs: {
@@ -64,7 +70,8 @@ function runPage({ cards, defaultRange = 'all', search = '', withRange = true, s
       ...(c.end === 'missing' ? {} : { 'data-event-end-date': c.end || c.start }),
       'data-event-venue': '',
       'data-event-description': '',
-      'data-event-tags': '',
+      ...(c.kind === undefined ? {} : { 'data-event-kind': c.kind }),
+      'data-event-tags': c.tags || '',
     },
     style: {},
     classList: { contains: (cls) => cls === 'special-event' },
@@ -83,7 +90,11 @@ function runPage({ cards, defaultRange = 'all', search = '', withRange = true, s
   };
   bar.parentElement = scope;
 
+  const TestDate = today ? class extends Date {
+    constructor(...args) { super(...(args.length ? args : [`${today}T12:00:00Z`])); }
+  } : Date;
   const sandbox = {
+    Date: TestDate,
     window: { location: { search }, __SITE_I18N: {} },
     URLSearchParams,
     document: {
@@ -99,6 +110,14 @@ function runPage({ cards, defaultRange = 'all', search = '', withRange = true, s
   if (setRange !== null && withRange) {
     rangeSelect.value = setRange;
     for (const fn of rangeSelect.listeners.change || []) fn();
+  }
+  if (setKind !== null && withKind) {
+    kindSelect.value = setKind;
+    for (const fn of kindSelect.listeners.change || []) fn();
+  }
+  if (setTag !== null && withTag) {
+    tagSelect.value = setTag;
+    for (const fn of tagSelect.listeners.change || []) fn();
   }
   const visible = {};
   for (const card of cardNodes) visible[card.attrs['data-event-name']] = card.style.display !== 'none';
@@ -166,4 +185,46 @@ test('cards without an end-date attribute fall back to start', () => {
   });
   assert.equal(v['future-no-end-attr'], true, 'future card without end attr visible');
   assert.equal(v['past-no-end-attr'], false, 'past card without end attr hidden');
+});
+
+test('kind, range, tag, and search filters combine across inclusive ranges', () => {
+  const cases = [
+    {
+      name: 'default events keep an event ending today and hide exhibitions',
+      cards: [
+        { name: 'today event', start: daysFromToday(-2), end: daysFromToday(0), kind: 'event', tags: 'music' },
+        { name: 'on view', start: daysFromToday(-10), end: daysFromToday(10), kind: 'exhibition', tags: 'exhibition' },
+      ], withKind: true, withRange: true, setRange: 'week',
+      expected: { 'today event': true, 'on view': false },
+    },
+    {
+      name: 'URL kind selects an overlapping year-crossing exhibition with matching search',
+      cards: [
+        { name: 'Winter exhibition', start: '2026-12-31', end: '2027-01-02', kind: 'exhibition', tags: 'exhibition art' },
+        { name: 'Winter event', start: '2026-12-31', end: '2027-01-02', kind: 'event', tags: 'art' },
+      ], withKind: true, withRange: true, search: '?q=winter&kind=exhibition', today: '2026-10-11',
+      defaultKind: 'events',
+      expected: { 'Winter exhibition': true, 'Winter event': false },
+    },
+    {
+      name: 'ended exhibition is excluded by upcoming range and kind all still honors range',
+      cards: [
+        { name: 'ended display', start: daysFromToday(-60), end: daysFromToday(-1), kind: 'exhibition', tags: 'exhibition' },
+        { name: 'ongoing display', start: '2026-06-12', end: '2026-12-31', kind: 'exhibition', tags: 'exhibition' },
+      ], withKind: true, withTag: true, withRange: true, setKind: 'all', setTag: 'exhibition', setRange: 'week', today: '2026-10-11',
+      expected: { 'ended display': false, 'ongoing display': true },
+    },
+    {
+      name: 'kind all includes the default event record when no kind attribute exists',
+      cards: [
+        { name: 'legacy event', start: daysFromToday(1), end: daysFromToday(1), tags: 'music' },
+        { name: 'display', start: daysFromToday(1), end: daysFromToday(3), kind: 'exhibition', tags: 'exhibition' },
+      ], withKind: true, withTag: true, withRange: true, setKind: 'all', setTag: 'music', setRange: 'week', query: 'legacy',
+      expected: { 'legacy event': true, display: false },
+    },
+  ];
+  for (const scenario of cases) {
+    const { name, expected, ...options } = scenario;
+    assert.deepEqual(runPage(options), expected, name);
+  }
 });

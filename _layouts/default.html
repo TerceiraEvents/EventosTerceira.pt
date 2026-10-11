@@ -317,6 +317,7 @@
 
     var RANGE_DAYS = { week: 7, month: 31, year: 365 };
     var VALID_RANGES = { week: 1, month: 1, year: 1, all: 1 };
+    var VALID_KINDS = { event: 1, exhibition: 1, all: 1 };
 
     function normalize(s) { return (s || '').toLowerCase(); }
 
@@ -344,7 +345,9 @@
       var input = bar.querySelector('.event-search-input');
       var tagSelect = bar.querySelector('.event-tag-filter');
       var rangeSelect = bar.querySelector('.event-range-filter');
+      var kindSelect = bar.querySelector('.event-kind-filter');
       var defaultRange = bar.getAttribute('data-default-range') || 'all';
+      var defaultKind = bar.getAttribute('data-default-kind') === 'exhibitions' ? 'exhibition' : 'event';
 
       // Find the event cards that follow this bar.
       var scope = bar.parentElement;
@@ -381,6 +384,7 @@
         var query = normalize(input ? input.value.trim() : '');
         var selectedTag = tagSelect ? tagSelect.value : '';
         var range = rangeSelect ? rangeSelect.value : 'all';
+        var kind = kindSelect ? kindSelect.value : 'all';
 
         var visibleCount = 0;
         cards.forEach(function(card, i) {
@@ -393,10 +397,12 @@
             venue.indexOf(query) !== -1 ||
             desc.indexOf(query) !== -1;
           var matchesTag = !selectedTag || tags.indexOf(selectedTag) !== -1;
+          var cardKind = card.getAttribute('data-event-kind') || 'event';
+          var matchesKind = !kindSelect || kind === 'all' || cardKind === kind;
           // Skip range filtering on pages without a range select (e.g. /archive,
           // which is past-only and would otherwise be hidden by the >= today guard).
           var matchesRange = !rangeSelect || inRange(cardDates[i].start, cardDates[i].end, range);
-          var show = matchesQuery && matchesTag && matchesRange;
+          var show = matchesQuery && matchesTag && matchesRange && matchesKind;
           card.style.display = show ? '' : 'none';
           if (show) visibleCount++;
         });
@@ -409,11 +415,13 @@
       if (input) input.addEventListener('input', applyFilters);
       if (tagSelect) tagSelect.addEventListener('change', applyFilters);
       if (rangeSelect) rangeSelect.addEventListener('change', applyFilters);
+      if (kindSelect) kindSelect.addEventListener('change', applyFilters);
 
       // Initial state: pick range from URL ?range=, falling back to the
       // page default. URL also seeds search and tag filters.
       // Legacy ?kid=1 is honoured as ?tag=kid-friendly.
       var initialRange = defaultRange;
+      var initialKind = defaultKind;
       try {
         var params = new URLSearchParams(window.location.search);
         var q = params.get('q');
@@ -430,9 +438,12 @@
         }
         var rangeParam = params.get('range');
         if (rangeParam && VALID_RANGES[rangeParam]) initialRange = rangeParam;
+        var kindParam = params.get('kind');
+        if (kindParam && VALID_KINDS[kindParam]) initialKind = kindParam;
       } catch (e) { /* ignore */ }
 
       if (rangeSelect) rangeSelect.value = initialRange;
+      if (kindSelect) kindSelect.value = initialKind;
       // Always run once so the default range filter is applied on load.
       applyFilters();
     });
