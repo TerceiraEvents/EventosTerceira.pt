@@ -38,6 +38,9 @@ jobs:
       - name: Run ingestion script
         run: python scripts/ingest_touradas.py
 
+      - name: Assign persistent event identities
+        run: ruby scripts/assign_event_ids.rb
+
       - name: Validate _data/special_events.yml
         run: |
           ruby -ryaml -rdate <<'RUBY'

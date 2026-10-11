@@ -18,8 +18,17 @@ def validate_events(data)
   # Every event must have a Date-typed `date` field: mixed String/Date
   # entries crash Liquid's `sort: "date"` with
   # "comparison of Array with Array failed".
+  seen_ids = {}
   data.each_with_index do |event, i|
     name = event["name"] || "(unnamed ##{i})"
+    id = event["id"]
+    if id
+      errors << "#{name}: invalid or duplicate `id`" unless id.is_a?(String) && id.match?(/\A[a-zA-Z0-9_-]+\z/) && !seen_ids[id]
+      seen_ids[id] = true
+    end
+    if event["locality"] && !%w[angra praia other].include?(event["locality"])
+      errors << "#{name}: `locality` must be angra, praia, or other"
+    end
     date = event["date"]
 
     if date.nil?
