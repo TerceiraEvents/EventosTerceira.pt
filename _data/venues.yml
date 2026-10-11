@@ -38,20 +38,20 @@
   weekly:
     - day: Monday
       day_pt: Segunda-feira
-      name: Karaoke Night
-      name_pt: Noite de Karaoke
+      name: "Karaoke Night, 22:00–02:00"
+      name_pt: "Noite de Karaoke, 22h00–02h00"
     - day: Wednesday
       day_pt: Quarta-feira
-      name: Karaoke Night
-      name_pt: Noite de Karaoke
+      name: "Karaoke Night, 22:00–02:00"
+      name_pt: "Noite de Karaoke, 22h00–02h00"
     - day: Thursday
       day_pt: Quinta-feira
       name: "Latin Night, currently advertised from 22:00"
       name_pt: "Noite Latina, atualmente anunciada a partir das 22h00"
     - day: Sunday
       day_pt: Domingo
-      name: Karaoke Night
-      name_pt: Noite de Karaoke
+      name: "Karaoke Night, 22:00–02:00"
+      name_pt: "Noite de Karaoke, 22h00–02h00"
   description_after_weekly: "Also hosts live concerts and special events throughout the year."
   description_after_weekly_pt: "Também recebe concertos ao vivo e eventos especiais ao longo do ano."
   links:
@@ -72,12 +72,12 @@
       name_pt: "Crianças Comem Grátis e Sessão de Cinema, 18h30"
     - day: Friday
       day_pt: Sexta-feira
-      name: "Karaoke Night, around 22:30"
-      name_pt: "Noite de Karaoke, por volta das 22h30"
+      name: "Karaoke Night, 22:30–01:30"
+      name_pt: "Noite de Karaoke, 22h30–01h30"
     - day: Saturday
       day_pt: Sábado
-      name: "Karaoke Night, around 22:30"
-      name_pt: "Noite de Karaoke, por volta das 22h30"
+      name: "Karaoke Night, 22:30–01:30"
+      name_pt: "Noite de Karaoke, 22h30–01h30"
   links:
     - { label: "Website", label_pt: "Site", url: "https://www.thetexan.pt" }
     - { label: "Instagram (Texan)", label_pt: "Instagram (Texan)", url: "https://www.instagram.com/thetexanbar/" }
