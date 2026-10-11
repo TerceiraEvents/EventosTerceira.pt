@@ -55,116 +55,23 @@
 {% endif %}
 {% assign event_tags_str = event_tags | join: " " %}
 
-<div class="special-event {% if event.image %}has-image{% endif %} {% if event.festival %}is-festival{% endif %}"
-     data-event-kind="{{ event_kind }}"
-     data-event-tags="{{ event_tags_str }}"
-     data-event-date="{{ event.date | date: "%Y-%m-%d" }}"
-     data-event-end-date="{{ event.end_date | default: event.date | date: "%Y-%m-%d" }}"
-     data-event-name="{{ event_name | escape }}"
-     data-event-venue="{{ event_venue | escape }}"
-     data-event-description="{{ event_description | escape }}">
-  <div class="event-date-badge">
-    <div class="month">{{ months[month_index] }}</div>
-    <div class="day">{{ date_parts[2] | plus: 0 }}</div>
-    <div class="year">{{ date_parts[0] }}</div>
-  </div>
-  <div class="event-details">
-    {% if event_kind == "exhibition" %}
-      {% include exhibition_status.html %}
-    {% else %}
-      {% include event_date_range.html %}
-      {% include listing_range_label.html %}
-    {% endif %}
-    {% if event.festival %}
-    {%- if page_lang == "pt" -%}
-      {%- assign festival_label = event.festival_pt | default: event.festival -%}
-    {%- else -%}
-      {%- assign festival_label = event.festival_en | default: event.festival -%}
-    {%- endif -%}
-    <div class="festival-badge">🎭 {{ festival_label }}</div>
-    {% endif %}
-    {% if event_tags.size > 0 %}
-    <div class="event-tags">
-      {% for slug in event_tags %}
-        {% assign tag_meta = site.data.event_tags | where: "slug", slug | first %}
-        {% if tag_meta %}
-          {%- if page_lang == "pt" -%}
-            {%- assign tag_label = tag_meta.label_pt | default: tag_meta.label -%}
-          {%- else -%}
-            {%- assign tag_label = tag_meta.label_en | default: tag_meta.label -%}
-          {%- endif -%}
-          <span class="event-tag tag-{{ slug }}">{{ tag_meta.emoji }} {{ tag_label }}</span>
-        {% else %}
-          <span class="event-tag tag-{{ slug }}">🏷️ {{ slug }}</span>
-        {% endif %}
-      {% endfor %}
-    </div>
-    {% endif %}
-    <div class="event-name">{{ event_name }}</div>
-    <div class="event-venue">{{ event_venue }}</div>
-    {% if event_kind == "exhibition" and event.visiting_hours %}
-      {%- if page_lang == "pt" -%}
-        {%- assign visiting_hours = event.visiting_hours_pt | default: event.visiting_hours -%}
-      <div class="event-visiting-hours">Horário de visita: {{ visiting_hours }}</div>
-      {%- else -%}
-        {%- assign visiting_hours = event.visiting_hours -%}
-      <div class="event-visiting-hours">Visiting hours: {{ visiting_hours }}</div>
-      {%- endif -%}
-    {% endif %}
-    {% if event_address %}
-    <div class="event-address">{{ event_address }}</div>
-    {% endif %}
-    {% assign map_link = "" %}
-    {% if event.map_url %}
-      {% assign map_link = event.map_url %}
-    {% elsif event_address %}
-      {% assign map_query = event_address | url_encode %}
-      {% assign map_link = "https://www.google.com/maps/search/?api=1&query=" | append: map_query %}
-    {% elsif event_venue %}
-      {% assign map_query = event_venue | url_encode %}
-      {% assign map_link = "https://www.google.com/maps/search/?api=1&query=" | append: map_query %}
-    {% endif %}
-    {% if map_link != "" %}
-    <a class="event-map-link" href="{{ map_link }}" target="_blank" rel="noopener">📍 {% if page_lang == "pt" %}Abrir no Maps{% else %}Open in Maps{% endif %}</a>
-    {% endif %}
-    {% if event.time and event_kind != "exhibition" %}
-    <div class="event-time-info">{{ event.time }}</div>
-    {% endif %}
-    <div class="event-description">{{ event_description }}</div>
-    {% if event.organizer %}
-    {%- if page_lang == "pt" -%}
-      {%- assign event_organizer = event.organizer_pt | default: event.organizer -%}
-    <div class="event-organizer">Organizado por: {{ event_organizer }}</div>
-    {%- else -%}
-      {%- assign event_organizer = event.organizer_en | default: event.organizer -%}
-    <div class="event-organizer">Organized by: {{ event_organizer }}</div>
-    {%- endif -%}
-    {% endif %}
-    {% if event.features %}
-    <ul class="event-features">
-      {% for feature in event.features %}
-      <li>{{ feature }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-    {% if event.instagram %}
-    <a class="event-source" href="{{ event.instagram }}" target="_blank" rel="noopener">📸 {% if page_lang == "pt" %}Ver no Instagram{% else %}View on Instagram{% endif %}</a>
-    {% endif %}
-    <button type="button" class="event-flag-btn"
-      data-event-name="{{ event_name | escape }}"
-      data-event-date="{{ event.date }}"
-      data-event-venue="{{ event_venue | escape }}">
-      🚩 {% if page_lang == "pt" %}Sugerir uma alteração{% else %}Suggest an edit{% endif %}
-    </button>
-  </div>
-  {% if event.image %}
-  <div class="event-image">
-    <a href="{{ event.image | relative_url }}" target="_blank">
-      <img src="{{ event.image | relative_url }}" alt="{{ event_name | escape }} {% if page_lang == 'pt' %}cartaz{% else %}flyer{% endif %}">
-    </a>
-  </div>
+{% assign detail_prefix = "/events/?id=" %}{% if page_lang == "pt" %}{% assign detail_prefix = "/pt/events/?id=" %}{% endif %}
+<article class="special-event event-summary" data-event-id="{{ event.id }}" data-event-locality="{{ event.locality | escape }}"
+ data-event-kind="{{ event_kind }}" data-event-tags="{{ event_tags_str }}"
+ data-event-date="{{ event.date | date: '%Y-%m-%d' }}" data-event-end-date="{{ event.end_date | default: event.date | date: '%Y-%m-%d' }}"
+ data-event-name="{{ event_name | escape }}" data-event-venue="{{ event_venue | escape }}" data-event-description="{{ event_description | escape }}">
+ <div class="event-details">
+  <h3 class="event-name"><a href="{{ detail_prefix | append: event.id | relative_url }}">{{ event_name | escape }}</a></h3>
+  {% if event_kind == "exhibition" %}{% include exhibition_status.html %}{% else %}
+  <div class="event-attendance"><time datetime="{{ event.date | date: '%Y-%m-%d' }}">{{ event.date | date: '%d/%m/%Y' }}</time>{% if event.end_date and event.end_date != event.date %} – {{ event.end_date | date: '%d/%m/%Y' }}{% endif %}{% if event.time %} · {{ event.time | escape }}{% endif %}</div>
+  {% include event_date_range.html %}
+  {% include listing_range_label.html %}
   {% endif %}
-</div>
+  <div class="event-venue">{{ event_venue | escape }}</div>
+  {% if event.price %}<div>{{ event.price | escape }}</div>{% elsif event_tags contains 'free' %}<div>{% if page_lang == 'pt' %}Gratuito{% else %}Free{% endif %}</div>{% endif %}
+  <button class="save-event" type="button" data-save-id="{{ event.id }}" data-save-name="{{ event_name | escape }}" aria-pressed="false">{% if page_lang == 'pt' %}Guardar{% else %}Save{% endif %}</button>
+ </div>
+</article>
 
 {%- comment -%}
   JSON-LD `Event` schema per card. Powers Google's Event rich result

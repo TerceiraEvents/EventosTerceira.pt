@@ -24,6 +24,7 @@
     {%- if page_lang == "pt" -%}
     <span class="visually-hidden">Intervalo de datas</span>
     <select class="event-range-filter" id="event-range-filter" aria-label="Intervalo de datas">
+      <option value="today">Hoje</option><option value="tomorrow">Amanhã</option><option value="weekend">Este fim de semana</option>
       <option value="week">📅 Próximos 7 dias</option>
       <option value="month">📆 Próximos 31 dias</option>
       <option value="year">🗓️ Próximos 12 meses</option>
@@ -32,6 +33,7 @@
     {%- else -%}
     <span class="visually-hidden">Date range</span>
     <select class="event-range-filter" id="event-range-filter" aria-label="Date range">
+      <option value="today">Today</option><option value="tomorrow">Tomorrow</option><option value="weekend">This weekend</option>
       <option value="week">📅 Next 7 days</option>
       <option value="month">📆 Next 31 days</option>
       <option value="year">🗓️ Next 12 months</option>
@@ -80,4 +82,13 @@
     </select>
     {%- endif -%}
   </label>
+  <label>{% if page_lang == 'pt' %}Localidade{% else %}Locality{% endif %}
+    <select class="event-locality-filter"><option value="">{% if page_lang == 'pt' %}Todas{% else %}All{% endif %}</option><option value="angra">Angra</option><option value="praia">Praia</option><option value="other">{% if page_lang == 'pt' %}Outras localidades{% else %}Other localities{% endif %}</option></select>
+  </label>
+  <fieldset><legend>{% if page_lang == 'pt' %}Combinar: todas as opções selecionadas{% else %}Combine: every selected option{% endif %}</legend>
+    <label><input type="checkbox" data-facet value="free"> {% if page_lang == 'pt' %}Gratuito{% else %}Free{% endif %}</label>
+    <label><input type="checkbox" data-facet value="kid-friendly"> {% if page_lang == 'pt' %}Família{% else %}Family{% endif %}</label>
+  </fieldset>
+  <button type="button" class="filter-reset">{% if page_lang == 'pt' %}Limpar filtros{% else %}Reset filters{% endif %}</button>
+  <p class="result-count" role="status" aria-live="polite"></p>
 </div>

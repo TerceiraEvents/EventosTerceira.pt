@@ -1,0 +1,31 @@
+{% assign page_lang = page.lang | default: 'en' %}
+{% assign home_prefix = '' %}{% if page_lang == 'pt' %}{% assign home_prefix = '/pt' %}{% endif %}
+<section class="home-discovery">
+  <h2>{% if page_lang == 'pt' %}O que se passa na Terceira?{% else %}What's happening on Terceira?{% endif %}</h2>
+  <div class="date-shortcuts">
+    <a href="{{ home_prefix | append: '/special/?range=today' | relative_url }}">{% if page_lang == 'pt' %}Hoje{% else %}Today{% endif %}</a>
+    <a href="{{ home_prefix | append: '/special/?range=tomorrow' | relative_url }}">{% if page_lang == 'pt' %}Amanhã{% else %}Tomorrow{% endif %}</a>
+    <a href="{{ home_prefix | append: '/special/?range=weekend' | relative_url }}">{% if page_lang == 'pt' %}Este fim de semana{% else %}This weekend{% endif %}</a>
+  </div>
+  <p>{% if page_lang == 'pt' %}Datas e horas dos Açores.{% else %}Dates and times in the Azores.{% endif %}</p>
+  <h2>{% if page_lang == 'pt' %}Próximos eventos{% else %}Upcoming events{% endif %}</h2>
+  {% assign now_day = 'now' | date: '%Y-%m-%d' %}
+  {% assign preview_count = 0 %}
+  {% assign events = site.data.special_events | sort: 'date' %}
+  {% for event in events %}
+    {% assign ending = event.end_date | default: event.date | date: '%Y-%m-%d' %}
+    {% if ending >= now_day and event.kind != 'exhibition' and preview_count < 3 %}
+      {% include special_event_card.html event=event %}
+      {% assign preview_count = preview_count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+  {% if preview_count == 0 %}<p>{% if page_lang == 'pt' %}Sem eventos publicados. Consulta os eventos semanais.{% else %}No published upcoming events. Browse weekly regulars.{% endif %}</p>{% endif %}
+  <a class="view-all" href="{{ home_prefix | append: '/special/?range=all' | relative_url }}">{% if page_lang == 'pt' %}Explorar todas as datas{% else %}Explore all dates{% endif %}</a>
+</section>
+<section class="home-secondary"><h2>{% if page_lang == 'pt' %}Semanal{% else %}Weekly regulars{% endif %}</h2>
+ <p>{% if page_lang == 'pt' %}Horários recorrentes: confirma com o local antes de sair.{% else %}Recurring schedules: confirm with the venue before setting out.{% endif %}</p>
+ <a href="{{ home_prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Ver eventos semanais{% else %}Browse weekly regulars{% endif %}</a>
+ <h2>{% if page_lang == 'pt' %}Em exposição{% else %}On View{% endif %}</h2>
+ <a href="{{ home_prefix | append: '/special/?kind=exhibition&range=all' | relative_url }}">{% if page_lang == 'pt' %}Ver exposições{% else %}Browse exhibitions{% endif %}</a>
+</section>
+<section class="app-store-section"><h2>{% if page_lang == 'pt' %}Leva a Terceira contigo{% else %}Take Terceira with you{% endif %}</h2>{% include app_store_badges.html %}</section>

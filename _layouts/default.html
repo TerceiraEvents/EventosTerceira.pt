@@ -44,6 +44,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <a class="skip-link" href="#main">{% if page_lang == "pt" %}Saltar para o conteúdo{% else %}Skip to content{% endif %}</a>
   {% include app_banner.html %}
   <header class="site-header">
     <div class="hero-image"></div>
@@ -58,31 +59,27 @@
         {%- endif -%}
       </div>
     </div>
-    <nav class="site-nav">
+    {% assign prefix = "" %}{% if page_lang == "pt" %}{% assign prefix = "/pt" %}{% endif %}
+    <nav class="site-nav" aria-label="{% if page_lang == 'pt' %}Navegação principal{% else %}Primary navigation{% endif %}">
       <div class="container">
-        {%- if page_lang == "pt" -%}
-        <a href="{{ '/pt/' | relative_url }}">Início</a>
-        <a href="{{ '/pt/weekly/' | relative_url }}">Semanal</a>
-        <a href="{{ '/pt/special/' | relative_url }}">Especiais</a>
-        <a href="{{ '/pt/venues/' | relative_url }}">Locais</a>
-        <a href="{{ '/pt/blog/' | relative_url }}">Blogue</a>
-        <a href="{{ '/pt/contribute/' | relative_url }}">Contribuir</a>
-        <a href="{{ '/pt/resources/' | relative_url }}">Recursos</a>
-        {%- else -%}
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/weekly/' | relative_url }}">Weekly</a>
-        <a href="{{ '/special/' | relative_url }}">Special Events</a>
-        <a href="{{ '/venues/' | relative_url }}">Venues</a>
-        <a href="{{ '/blog/' | relative_url }}">Blog</a>
-        <a href="{{ '/contribute/' | relative_url }}">Contribute</a>
-        <a href="{{ '/resources/' | relative_url }}">Resources</a>
-        {%- endif -%}
+        <a href="{{ prefix | append: '/' | relative_url }}">{% if page_lang == 'pt' %}Início{% else %}Home{% endif %}</a>
+        <a href="{{ prefix | append: '/special/' | relative_url }}">{% if page_lang == 'pt' %}Explorar{% else %}Explore{% endif %}</a>
+        <a href="{{ prefix | append: '/venues/' | relative_url }}">{% if page_lang == 'pt' %}Locais{% else %}Places{% endif %}</a>
+        <details class="nav-more"><summary>{% if page_lang == 'pt' %}Mais{% else %}More{% endif %}</summary><div class="nav-menu">
+          <a href="{{ prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Semanal{% else %}Weekly regulars{% endif %}</a>
+          <a href="{{ prefix | append: '/special/?kind=exhibition&range=all' | relative_url }}">{% if page_lang == 'pt' %}Em exposição{% else %}On View{% endif %}</a>
+          <a href="{{ prefix | append: '/saved/' | relative_url }}">{% if page_lang == 'pt' %}Guardados{% else %}My Plans{% endif %}</a>
+          <a href="{{ prefix | append: '/blog/' | relative_url }}">{% if page_lang == 'pt' %}Blogue{% else %}Blog{% endif %}</a>
+          <a href="{{ prefix | append: '/resources/' | relative_url }}">{% if page_lang == 'pt' %}Recursos{% else %}Resources{% endif %}</a>
+          <a href="{{ prefix | append: '/suggest/' | relative_url }}">{% if page_lang == 'pt' %}Sugerir evento{% else %}Suggest an event{% endif %}</a>
+          <a href="{{ prefix | append: '/contribute/' | relative_url }}">{% if page_lang == 'pt' %}Contribuir{% else %}Contribute{% endif %}</a>
+        </div></details>
         {% include locale_switcher.html %}
       </div>
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container" id="main">
     {{ content }}
   </main>
 
@@ -121,7 +118,7 @@
           <input type="text" id="flag-website" name="website" tabindex="-1" autocomplete="off">
         </div>
         <button type="submit" id="flag-submit" class="form-submit">Enviar</button>
-        <div id="flag-message" class="form-message" style="display:none;"></div>
+        <div role="status" id="flag-message" class="form-message" style="display:none;"></div>
         {%- else -%}
         <div class="form-field">
           <label for="flag-reason">What needs to change? <span class="required">*</span></label>
@@ -138,7 +135,7 @@
           <input type="text" id="flag-website" name="website" tabindex="-1" autocomplete="off">
         </div>
         <button type="submit" id="flag-submit" class="form-submit">Submit</button>
-        <div id="flag-message" class="form-message" style="display:none;"></div>
+        <div role="status" id="flag-message" class="form-message" style="display:none;"></div>
         {%- endif -%}
       </form>
     </div>
@@ -162,6 +159,7 @@
       }
     };
   </script>
+  <script src="{{ "/assets/js/discovery.js" | relative_url }}"></script>
   <script>
   (function() {
     var overlay = document.getElementById('lightbox');
@@ -199,8 +197,10 @@
     var flagSubmit = document.getElementById('flag-submit');
     var flagMessage = document.getElementById('flag-message');
     var currentEvent = null;
+    var returnFocus = null;
 
     function openModal(eventData) {
+      returnFocus = document.activeElement;
       currentEvent = eventData;
       var parts = [];
       parts.push('<strong>' + escapeHtml(eventData.name) + '</strong>');
@@ -214,11 +214,16 @@
       flagSubmit.disabled = false;
       flagSubmit.textContent = (window.__SITE_I18N && window.__SITE_I18N.flag.submit) || 'Submit';
       flagOverlay.classList.add('active');
+      flagOverlay.setAttribute('aria-hidden', 'false');
+      document.querySelector('main').inert = true;
       setTimeout(function() { flagReason.focus(); }, 100);
     }
 
     function closeModal() {
       flagOverlay.classList.remove('active');
+      flagOverlay.setAttribute('aria-hidden', 'true');
+      document.querySelector('main').inert = false;
+      if (returnFocus) returnFocus.focus();
       currentEvent = null;
     }
 
@@ -254,6 +259,12 @@
       if (e.target === flagOverlay) closeModal();
     });
     document.addEventListener('keydown', function(e) {
+      if (e.key === 'Tab' && flagOverlay.classList.contains('active')) {
+        var fields = Array.prototype.filter.call(flagOverlay.querySelectorAll('button, textarea, input:not([tabindex="-1"])'), function(node) { return !node.disabled; });
+        var first = fields[0], last = fields[fields.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
       if (e.key === 'Escape' && flagOverlay.classList.contains('active')) {
         closeModal();
       }
@@ -316,29 +327,15 @@
     if (!bars.length) return;
 
     var RANGE_DAYS = { week: 7, month: 31, year: 365 };
-    var VALID_RANGES = { week: 1, month: 1, year: 1, all: 1 };
+    var VALID_RANGES = { today: 1, tomorrow: 1, weekend: 1, week: 1, month: 1, year: 1, all: 1 };
     var VALID_KINDS = { event: 1, exhibition: 1, all: 1 };
 
-    function normalize(s) { return (s || '').toLowerCase(); }
+    function normalize(s) { return EventDiscovery.normalize(s); }
 
-    function parseEventDate(s) {
-      var m = (s || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
-      if (!m) return null;
-      return new Date(+m[1], +m[2] - 1, +m[3]);
-    }
-
+    function parseEventDate(s) { return (s || '').match(/^\d{4}-\d{2}-\d{2}$/) ? s : null; }
     function inRange(eventStart, eventEnd, range) {
       if (!eventStart) return true;
-      var today = new Date();
-      today.setHours(0, 0, 0, 0);
-      // Inclusive end day stays visible; the next day it drops out.
-      var end = eventEnd || eventStart;
-      if (end < today) return false;
-      if (range === 'all' || !RANGE_DAYS[range]) return true;
-      // Any event overlapping today through the exclusive horizon counts.
-      var horizon = new Date(today);
-      horizon.setDate(horizon.getDate() + RANGE_DAYS[range]);
-      return eventStart < horizon;
+      return EventDiscovery.inRange(eventStart, eventEnd, range);
     }
 
     bars.forEach(function(bar) {
@@ -346,6 +343,10 @@
       var tagSelect = bar.querySelector('.event-tag-filter');
       var rangeSelect = bar.querySelector('.event-range-filter');
       var kindSelect = bar.querySelector('.event-kind-filter');
+      var localitySelect = bar.querySelector('.event-locality-filter');
+      var facets = bar.querySelectorAll ? bar.querySelectorAll('[data-facet]') : [];
+      var reset = bar.querySelector('.filter-reset');
+      var resultCount = bar.querySelector('.result-count');
       var defaultRange = bar.getAttribute('data-default-range') || 'all';
       var defaultKind = bar.getAttribute('data-default-kind') === 'exhibitions' ? 'exhibition' : 'event';
 
@@ -397,21 +398,40 @@
             venue.indexOf(query) !== -1 ||
             desc.indexOf(query) !== -1;
           var matchesTag = !selectedTag || tags.indexOf(selectedTag) !== -1;
+          Array.prototype.forEach.call(facets, function(f) { if (f.checked && tags.indexOf(f.value) === -1) matchesTag = false; });
+          var matchesLocality = !localitySelect || !localitySelect.value || card.getAttribute('data-event-locality') === localitySelect.value;
           var cardKind = card.getAttribute('data-event-kind') || 'event';
           var matchesKind = !kindSelect || kind === 'all' || cardKind === kind;
           // Skip range filtering on pages without a range select (e.g. /archive,
           // which is past-only and would otherwise be hidden by the >= today guard).
           var matchesRange = !rangeSelect || inRange(cardDates[i].start, cardDates[i].end, range);
-          var show = matchesQuery && matchesTag && matchesRange && matchesKind;
+          var show = matchesQuery && matchesTag && matchesRange && matchesKind && matchesLocality;
           card.style.display = show ? '' : 'none';
           if (show) visibleCount++;
         });
 
+        if (resultCount) resultCount.textContent = visibleCount + (document.documentElement.lang === 'pt' ? ' resultados' : ' results');
+        if (window.history && window.history.replaceState) {
+          var params = new URLSearchParams();
+          if (query) params.set('q', input.value.trim());
+          if (selectedTag) params.set('tag', selectedTag);
+          if (rangeSelect) params.set('range', range);
+          if (kindSelect) params.set('kind', kind);
+          if (localitySelect && localitySelect.value) params.set('locality', localitySelect.value);
+          var selected = Array.prototype.filter.call(facets, function(f) { return f.checked; }).map(function(f) { return f.value; });
+          if (selected.length) params.set('tags', selected.join(','));
+          window.history.replaceState(null, '', window.location.pathname + '?' + params.toString());
+          var locale = document.querySelector('.locale-other');
+          if (locale) locale.href = locale.href.split('?')[0] + '?' + params.toString();
+        }
         if (empty) {
           empty.classList.toggle('active', visibleCount === 0 && cards.length > 0);
         }
       }
 
+      if (localitySelect) localitySelect.addEventListener('change', applyFilters);
+      Array.prototype.forEach.call(facets, function(f) { f.addEventListener('change', applyFilters); });
+      if (reset) reset.addEventListener('click', function() { if (input) input.value = ''; if (tagSelect) tagSelect.value = ''; if (localitySelect) localitySelect.value = ''; if (kindSelect) kindSelect.value = 'event'; if (rangeSelect) rangeSelect.value = 'all'; Array.prototype.forEach.call(facets, function(f) { f.checked = false; }); applyFilters(); });
       if (input) input.addEventListener('input', applyFilters);
       if (tagSelect) tagSelect.addEventListener('change', applyFilters);
       if (rangeSelect) rangeSelect.addEventListener('change', applyFilters);
@@ -425,6 +445,9 @@
       try {
         var params = new URLSearchParams(window.location.search);
         var q = params.get('q');
+        if (localitySelect) localitySelect.value = params.get('locality') || '';
+        var selectedFacets = (params.get('tags') || '').split(',');
+        Array.prototype.forEach.call(facets, function(f) { f.checked = selectedFacets.indexOf(f.value) !== -1; });
         if (q && input) input.value = q;
         var tag = params.get('tag');
         if (!tag && params.get('kid') === '1') tag = 'kid-friendly';
@@ -450,6 +473,7 @@
   })();
   </script>
 
+  <script src="{{ "/assets/js/plans.js" | relative_url }}" defer></script>
   <footer class="site-footer">
     <div class="container">
       {%- if page_lang == "pt" -%}

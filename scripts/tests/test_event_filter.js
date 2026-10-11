@@ -22,7 +22,7 @@ function fmt(d) {
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }
 function daysFromToday(n) {
-  const d = new Date();
+  const d = new Date("2026-10-12T12:00:00Z");
   d.setHours(0, 0, 0, 0);
   d.setDate(d.getDate() + n);
   return fmt(d);
@@ -41,7 +41,7 @@ function stubElement() {
 }
 
 // Stub search bar + card sibling chain. withRange=false omits the range select.
-function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = null, withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null }) {
+function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = '2026-10-12', withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null }) {
   const bar = {
     getAttribute: (k) => k === 'data-default-range' ? defaultRange : k === 'data-default-kind' ? defaultKind : null,
     parentElement: null,
@@ -105,6 +105,8 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
     },
   };
   vm.createContext(sandbox);
+  vm.runInContext(fs.readFileSync('assets/js/discovery.js','utf8'), sandbox);
+  sandbox.EventDiscovery = sandbox.window.EventDiscovery;
   vm.runInContext(FILTER_SRC, sandbox, { filename: 'event-filter.js' });
 
   if (setRange !== null && withRange) {
@@ -209,7 +211,7 @@ test('kind, range, tag, and search filters combine across inclusive ranges', () 
     {
       name: 'ended exhibition is excluded by upcoming range and kind all still honors range',
       cards: [
-        { name: 'ended display', start: daysFromToday(-60), end: daysFromToday(-1), kind: 'exhibition', tags: 'exhibition' },
+        { name: 'ended display', start: '2026-08-01', end: '2026-10-10', kind: 'exhibition', tags: 'exhibition' },
         { name: 'ongoing display', start: '2026-06-12', end: '2026-12-31', kind: 'exhibition', tags: 'exhibition' },
       ], withKind: true, withTag: true, withRange: true, setKind: 'all', setTag: 'exhibition', setRange: 'week', today: '2026-10-11',
       expected: { 'ended display': false, 'ongoing display': true },
@@ -227,4 +229,9 @@ test('kind, range, tag, and search filters combine across inclusive ranges', () 
     const { name, expected, ...options } = scenario;
     assert.deepEqual(runPage(options), expected, name);
   }
+});
+
+test('Today excludes tomorrow and visitor timezone does not widen the window', () => {
+  const result = runPage({cards:[{name:'Tomorrow',start:'2026-10-13'}],today:'2026-10-12',setRange:'today'});
+  assert.equal(result.Tomorrow, false);
 });

@@ -28,7 +28,7 @@ class IncludesDir
     unless name =~ /\A[A-Za-z0-9_.-]+\.html\z/
       raise Liquid::FileSystemError, "blocked include: #{name}"
     end
-    File.read(File.join(@dir, name))
+    File.read(File.join(@dir, name)).gsub(/{%(-?)\s*include\s+(?!['"])([^\s%]+)/, '{%\1 include "\2"')
   end
 end
 Liquid::Template.file_system = IncludesDir.new("_includes")

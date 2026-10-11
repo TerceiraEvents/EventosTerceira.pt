@@ -1,0 +1,3 @@
+<div id="event-detail" class="event-detail" aria-live="polite"></div>
+<noscript>{% if page.lang == 'pt' %}Ativa JavaScript para abrir um evento específico, ou consulta{% else %}Enable JavaScript to open an exact event, or browse{% endif %} <a href="{% if page.lang == 'pt' %}/pt{% endif %}/special/?range=all">{% if page.lang == 'pt' %}todos os eventos{% else %}all events{% endif %}</a>.</noscript>
+{% include event_dataset.html %}
