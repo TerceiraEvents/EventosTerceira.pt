@@ -17,16 +17,17 @@
   - name: Karaoke Night
     name_pt: Noite de Karaoke
     venue: Tasca do Camões
-    time: "22:00"
+    # Hours maintainer-confirmed by Chris Rackauckas, 2026-10-11.
+    time: "22:00–02:00"
     description: "Weekly karaoke at Camões. Current recurring schedule: Monday, Wednesday, and Sunday."
     description_pt: "Karaoke semanal no Camões. Horário semanal atual: segunda, quarta e domingo."
-    note: "The recurring post confirms the days; start time can vary, so check the latest venue post."
-    note_pt: "A publicação recorrente confirma os dias; a hora pode variar, por isso consulta a publicação mais recente do espaço."
+    note: "The recurring post confirms the days."
+    note_pt: "A publicação recorrente confirma os dias."
     address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
     instagram: https://www.instagram.com/tascadocamoes/
     source_url: https://www.instagram.com/tascadocamoes/reel/DbQth6_owWN/
-    verified_on: "2026-09-04"
+    verified_on: "2026-10-11"
 
 - day: Tuesday
   day_pt: Terça-feira
@@ -52,14 +53,15 @@
   - name: Karaoke Night
     name_pt: Noite de Karaoke
     venue: Tasca do Camões
-    time: "22:00"
+    # Hours maintainer-confirmed by Chris Rackauckas, 2026-10-11.
+    time: "22:00–02:00"
     description: "Weekly karaoke at Camões. Current recurring schedule: Monday, Wednesday, and Sunday."
     description_pt: "Karaoke semanal no Camões. Horário semanal atual: segunda, quarta e domingo."
     address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
     instagram: https://www.instagram.com/tascadocamoes/
     source_url: https://www.instagram.com/tascadocamoes/p/DbXm5Vjlz_2/
-    verified_on: "2026-09-04"
+    verified_on: "2026-10-11"
 
 - day: Thursday
   day_pt: Quinta-feira
@@ -86,14 +88,15 @@
     venue: The Texan
     address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Heroísmo
-    time: "22:30"
+    # Hours maintainer-confirmed by Chris Rackauckas, 2026-10-11.
+    time: "22:30–01:30"
     description: "Weekly Friday karaoke at The Texan. The venue can fill early, with places often opening later in the evening."
     description_pt: "Karaoke semanal à sexta-feira no The Texan. O espaço pode encher cedo, surgindo frequentemente lugares mais tarde."
-    note: "Karaoke is ongoing, but check the venue's current Events highlight for the week's exact start time. Dinner reservations are for dining, not reserved karaoke seating."
-    note_pt: "O karaoke continua, mas consulta o destaque Eventos do espaço para confirmar a hora exata da semana. As reservas de jantar são para refeições, não para lugares reservados no karaoke."
+    note: "Dinner reservations are for dining, not reserved karaoke seating."
+    note_pt: "As reservas de jantar são para refeições, não para lugares reservados no karaoke."
     instagram: https://www.instagram.com/thetexanbar/
     source_url: https://www.instagram.com/stories/highlights/17907883704059305/
-    verified_on: "2026-09-04"
+    verified_on: "2026-10-11"
     url: https://www.thetexan.pt
   - name: Club Night
     name_pt: Noite de Club
@@ -128,14 +131,15 @@
     venue: The Texan
     address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Heroísmo
-    time: "22:30"
+    # Hours maintainer-confirmed by Chris Rackauckas, 2026-10-11.
+    time: "22:30–01:30"
     description: "Weekly Saturday karaoke at The Texan. The venue can fill early, with places often opening later in the evening."
     description_pt: "Karaoke semanal ao sábado no The Texan. O espaço pode encher cedo, surgindo frequentemente lugares mais tarde."
-    note: "Karaoke is ongoing, but check the venue's current Events highlight for the week's exact start time. Dinner reservations are for dining, not reserved karaoke seating."
-    note_pt: "O karaoke continua, mas consulta o destaque Eventos do espaço para confirmar a hora exata da semana. As reservas de jantar são para refeições, não para lugares reservados no karaoke."
+    note: "Dinner reservations are for dining, not reserved karaoke seating."
+    note_pt: "As reservas de jantar são para refeições, não para lugares reservados no karaoke."
     instagram: https://www.instagram.com/thetexanbar/
     source_url: https://www.instagram.com/stories/highlights/17907883704059305/
-    verified_on: "2026-09-04"
+    verified_on: "2026-10-11"
     url: https://www.thetexan.pt
   - name: Club Night
     name_pt: Noite de Club
@@ -157,13 +161,14 @@
   - name: Karaoke Night
     name_pt: Noite de Karaoke
     venue: Tasca do Camões
-    time: "22:00"
+    # Hours maintainer-confirmed by Chris Rackauckas, 2026-10-11.
+    time: "22:00–02:00"
     description: "Weekly Sunday karaoke at Camões, sometimes promoted as Domingoke with a featured host."
     description_pt: "Karaoke semanal de domingo no Camões, por vezes anunciado como Domingoke com um animador convidado."
-    note: "The recurring post confirms Sunday; check the latest post for the host and exact start time."
-    note_pt: "A publicação recorrente confirma o domingo; consulta a publicação mais recente para o animador e a hora exata."
+    note: "The recurring post confirms Sunday; check the latest post for the host."
+    note_pt: "A publicação recorrente confirma o domingo; consulta a publicação mais recente para o animador."
     address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
     instagram: https://www.instagram.com/tascadocamoes/
     source_url: https://www.instagram.com/tascadocamoes/reel/DbQth6_owWN/
-    verified_on: "2026-09-04"
+    verified_on: "2026-10-11"
