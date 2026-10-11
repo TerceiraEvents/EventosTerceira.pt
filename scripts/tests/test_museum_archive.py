@@ -7,6 +7,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), os.pardir))
 import ingest_museu_angra as museum
+from ingest_common import format_event_yaml
 from ingest_health import SourceError, SourceHealth
 
 ARCHIVE = b'''<h1>Eventos</h1><div class="card"><div class="card-body">
@@ -57,6 +58,16 @@ class MuseumArchiveTests(unittest.TestCase):
         self.assertEqual(event["end_date"], dt.date(2026, 11, 1))
         self.assertIn("exhibition", event["tags"])
         self.assertIsNone(event["time"])
+
+    def test_exhibition_fixture_yaml_declares_kind(self):
+        fixture = b'''<h1>Exposi\xc3\xa7\xc3\xb5es</h1><div class="card"><h5 class="card-title">
+        <a href="/exhibitions/diapasao/">Diapas\xc3\xa3o com Caixa</a></h5>
+        <p class="small">06.10.2026 - 01.11.2026</p></div>'''
+        record = museum.parse_archive(fixture, museum.ARCHIVES[1])[0][0]
+        detail = b'<div class="post-content"><p>MUSEU DE ANGRA DO HERO\xc3\x8dSMO. Instrumento.</p></div>'
+        event = museum.parse_detail(detail, record)[0]
+        event_yaml = format_event_yaml(event)
+        self.assertIn("  end_date: 2026-11-01\n  kind: exhibition\n", event_yaml)
 
     def test_blocked_non_archive_and_malformed_cards_fail(self):
         for payload in (b'<title>Just a moment</title>', ARCHIVE.replace(b'04.10.2026', b'31.02.2026')):

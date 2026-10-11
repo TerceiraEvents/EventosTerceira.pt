@@ -198,6 +198,13 @@ def matches_existing(
 # ---------------------------------------------------------------------------
 
 
+def listing_kind(tags: list[str] | None, date: dt.date, end_date: dt.date | None) -> str | None:
+    """Classify only tagged listings whose published period spans multiple days."""
+    if "exhibition" in (tags or []) and end_date is not None and end_date > date:
+        return "exhibition"
+    return None
+
+
 def yaml_double_quote(s: str) -> str:
     """Double-quote a string for YAML, escaping backslashes and quotes."""
     s = s.replace("\\", "\\\\").replace('"', '\\"')
@@ -224,6 +231,9 @@ def format_event_yaml(event: dict) -> str:
     out.append(f"- date: {event['date'].isoformat()}")
     if event.get("end_date") and event["end_date"] > event["date"]:
         out.append(f"  end_date: {event['end_date'].isoformat()}")
+    kind = listing_kind(event.get("tags"), event["date"], event.get("end_date"))
+    if kind:
+        out.append(f"  kind: {kind}")
     out.append(f"  name: {yaml_double_quote(event['name'])}")
     out.append(f"  venue: {yaml_value(event['venue'])}")
     if event.get("address"):
