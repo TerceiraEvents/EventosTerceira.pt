@@ -94,6 +94,10 @@ html_pages.each do |path|
   rel = path.sub(%r{^#{SITE}/?}, "/")
   html = File.read(path)
 
+  %w[assets/js/discovery.js assets/js/plans.js assets/css/style.css].each do |asset|
+    err(errors, "#{rel}: unversioned first-party asset #{asset}") unless html.match?(%r{#{Regexp.escape(asset)}\?v=\d+})
+  end
+
   # Title
   err(errors, "#{rel}: missing <title>") unless html.match?(/<title>[^<]+<\/title>/)
 
