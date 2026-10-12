@@ -309,6 +309,7 @@ Each new special event goes as a new list item in `_data/special_events.yml`. Th
 
 ```yaml
 - date: YYYY-MM-DD          # required
+  id: "<assigned opaque ID>" # required publication output; omit for new records until assignment
   end_date: YYYY-MM-DD       # inclusive; required for exhibitions and multi-day events
   kind: event               # optional; records without kind are events
   visiting_hours: "Mon–Fri 16:00–18:30"       # optional, only when stated by the source
@@ -327,6 +328,13 @@ Each new special event goes as a new list item in `_data/special_events.yml`. Th
   - live-music              # see _data/event_tags.yml for valid tags — canonical only
   - free
 ```
+
+For each new record, omit `id` while drafting, then run
+`ruby scripts/assign_event_ids.rb` followed by
+`ruby scripts/validate_event_data.rb _data/special_events.yml` before committing.
+Keep every existing ID when correcting metadata. Do not copy the schema's ID
+placeholder. A duplicate-record merge retains the older persisted ID; record both
+IDs and the retained ID in the PR body.
 
 `kind` accepts only `event` or `exhibition`; records without it are events. An exhibition is a visitable display whose `date` and inclusive `end_date` describe the display period. It must have an `end_date` strictly after `date` and the canonical `exhibition` tag. Every record tagged `exhibition` with a multi-day range must declare `kind` explicitly, including records that remain dated events. A single-day opening, talk, or guided tour tagged `exhibition` is a dated event and does not need `kind`. The `time` field on an exhibition is legacy information and is never an attendance time. Add `visiting_hours` and `visiting_hours_pt` only when the source explicitly states the visiting schedule; leave them absent otherwise. Older readers ignore these optional fields and continue to read the existing event fields.
 
