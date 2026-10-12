@@ -116,6 +116,10 @@ assert_eq workflow.fetch('jobs').fetch('validate').fetch('steps').any? { |step| 
 
 puts "published browser-source records"
 special = YAML.safe_load(File.read("_data/special_events.yml"), permitted_classes: [Date])
+advent = special.find { |event| event['id'] == '0be9ca7c-280e-4650-94be-9ac94545cb80' }
+assert_eq advent && advent['date'], Date.new(2026, 11, 28), 'Advent preserves official structured and poster date'
+assert_eq advent && advent['time'], '18:00', 'Advent preserves municipal poster time'
+assert_eq advent && advent['source_url'], 'https://angradoheroismo.pt/evento/temporada-de-musica-classica-concerto-do-advento/', 'Advent cites its municipal source'
 castanha = special.find { |event| event["name"] == "Festas da Castanha — Terra Chã" }
 assert_eq castanha.fetch("source_url"),
           "https://www.facebook.com/photo/?fbid=1783816519984160&set=a.609332960765861",
