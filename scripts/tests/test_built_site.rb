@@ -94,6 +94,12 @@ html_pages.each do |path|
   rel = path.sub(%r{^#{SITE}/?}, "/")
   html = File.read(path)
 
+  if %w[/index.html /pt/index.html].include?(rel)
+    main_end = html.index('</main>')
+    banner = html.index('id="app-banner"')
+    err(errors, "#{rel}: mobile app promotion must follow main content") unless main_end && banner && banner > main_end
+  end
+
   %w[assets/js/discovery.js assets/js/plans.js assets/css/style.css].each do |asset|
     err(errors, "#{rel}: unversioned first-party asset #{asset}") unless html.match?(%r{#{Regexp.escape(asset)}\?v=\d+})
   end

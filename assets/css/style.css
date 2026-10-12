@@ -1398,12 +1398,7 @@ main a {
   display: block;
 }
 
-/* ── Mobile-app smart banner ──
-   Shown only on iOS/Android (the include's script gates visibility).
-   Sits above the site header so it never overlaps the hero image
-   or the nav. Palette borrows from the green-deep / accent gold
-   used elsewhere on the site rather than the generic blue-bar
-   look. */
+/* Mobile app promotion follows page content on iOS and Android. */
 .app-banner {
   display: none;
   align-items: center;
@@ -1515,3 +1510,5 @@ main a {
 .site-nav a, .nav-more summary { white-space: normal; letter-spacing: 0; text-transform: none; }
 .detail-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1rem 0; }
 .detail-actions a, .detail-actions button { display: inline-flex; align-items: center; min-height: 44px; padding: .5rem; font: inherit; }
+
+.app-banner-open, .app-banner-close { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }

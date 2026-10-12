@@ -46,7 +46,6 @@
 </head>
 <body>
   <a class="skip-link" href="#main">{% if page_lang == "pt" %}Saltar para o conteúdo{% else %}Skip to content{% endif %}</a>
-  {% include app_banner.html %}
   <header class="site-header">
     <div class="hero-image"></div>
     <div class="header-content">
@@ -83,6 +82,7 @@
   <main class="container" id="main">
     {{ content }}
   </main>
+  {% include app_banner.html %}
 
   <!-- Lightbox overlay -->
   <div class="lightbox-overlay" id="lightbox">
