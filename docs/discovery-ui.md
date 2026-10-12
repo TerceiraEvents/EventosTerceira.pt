@@ -49,7 +49,6 @@ Invalid saved data has an explicit clear/recovery action and remains intact unti
 that action is chosen. Storage denial has separate feedback.
 
 Details and My Plans embed the full published dataset, including ended records.
-The uncompressed detail HTML measured 530,337 bytes on 12 October 2026 before the
-locality follow-up. This allows exact ended-event details without another request;
+The uncompressed detail HTML measured 532,260 bytes on 12 October 2026. This allows exact ended-event details without another request;
 per-event generated documents are a possible future payload improvement. A map
 action requires `map_url`; source and booking actions also require published URLs.

@@ -29,8 +29,7 @@ it allows the verified alias lookup to fill the corrected venue's locality.
 ## Coverage
 
 Snapshot for 12 October 2026 (inclusive end dates): 648 records, 135 active/upcoming.
-Before this change, no records had locality metadata. After mapping these five
-aliases, 99 records have metadata: 85 Angra and 14 Praia; 549 remain unknown.
+The five approved aliases cover 99 records with metadata: 85 Angra and 14 Praia; 549 remain unknown.
 Among active/upcoming records, 47 are Angra and 11 Praia; 77 remain unknown.
 These counts demonstrate a curated subset, not complete geographic coverage.
 The alias tests and data gate cover exact matches, unknown/ambiguous names, curator
