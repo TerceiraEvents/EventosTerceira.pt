@@ -96,10 +96,6 @@ h1, h2, h3 {
   overflow: visible;
 }
 
-.site-nav::-webkit-scrollbar {
-  display: none;
-}
-
 .site-nav .container {
   display: flex;
   justify-content: center;

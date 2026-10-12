@@ -2,7 +2,14 @@
   'use strict';
   var pt = document.documentElement.lang === 'pt', prefix = pt ? '/pt' : '';
   function t(en, po) { return pt ? po : en; }
-  document.querySelectorAll('.site-nav a').forEach(function(a) { if (a.pathname === location.pathname) a.setAttribute('aria-current', 'page'); });
+  document.querySelectorAll('.site-nav a').forEach(function(a) {
+    if (a.pathname !== location.pathname) return;
+    if (/\/special\/$/.test(location.pathname)) {
+      var onView = new URLSearchParams(location.search).get('kind') === 'exhibition';
+      if ((new URLSearchParams(a.search).get('kind') === 'exhibition') !== onView) return;
+    }
+    a.setAttribute('aria-current', 'page');
+  });
   var key = 'terceira-plans-v1', saved = {}, storageOK = true, invalidSaved = false, storedRaw = null;
   try { storedRaw = localStorage.getItem(key); } catch (err) { storageOK = false; }
   if (storageOK) {

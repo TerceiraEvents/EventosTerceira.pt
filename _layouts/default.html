@@ -65,13 +65,13 @@
         <a href="{{ prefix | append: '/' | relative_url }}">{% if page_lang == 'pt' %}Início{% else %}Home{% endif %}</a>
         <a href="{{ prefix | append: '/special/' | relative_url }}">{% if page_lang == 'pt' %}Explorar{% else %}Explore{% endif %}</a>
         <a href="{{ prefix | append: '/venues/' | relative_url }}">{% if page_lang == 'pt' %}Locais{% else %}Places{% endif %}</a>
-          <a href="{{ prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Semanal{% else %}Weekly regulars{% endif %}</a>
-          <a href="{{ prefix | append: '/special/?kind=exhibition&range=all' | relative_url }}">{% if page_lang == 'pt' %}Em exposição{% else %}On View{% endif %}</a>
-          <a href="{{ prefix | append: '/saved/' | relative_url }}">{% if page_lang == 'pt' %}Guardados{% else %}My Plans{% endif %}</a>
-          <a href="{{ prefix | append: '/blog/' | relative_url }}">{% if page_lang == 'pt' %}Blogue{% else %}Blog{% endif %}</a>
-          <a href="{{ prefix | append: '/resources/' | relative_url }}">{% if page_lang == 'pt' %}Recursos{% else %}Resources{% endif %}</a>
-          <a href="{{ prefix | append: '/suggest/' | relative_url }}">{% if page_lang == 'pt' %}Sugerir evento{% else %}Suggest an event{% endif %}</a>
-          <a href="{{ prefix | append: '/contribute/' | relative_url }}">{% if page_lang == 'pt' %}Contribuir{% else %}Contribute{% endif %}</a>
+        <a href="{{ prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Semanal{% else %}Weekly regulars{% endif %}</a>
+        <a href="{{ prefix | append: '/special/?kind=exhibition&range=all' | relative_url }}">{% if page_lang == 'pt' %}Em exposição{% else %}On View{% endif %}</a>
+        <a href="{{ prefix | append: '/saved/' | relative_url }}">{% if page_lang == 'pt' %}Guardados{% else %}My Plans{% endif %}</a>
+        <a href="{{ prefix | append: '/blog/' | relative_url }}">{% if page_lang == 'pt' %}Blogue{% else %}Blog{% endif %}</a>
+        <a href="{{ prefix | append: '/resources/' | relative_url }}">{% if page_lang == 'pt' %}Recursos{% else %}Resources{% endif %}</a>
+        <a href="{{ prefix | append: '/suggest/' | relative_url }}">{% if page_lang == 'pt' %}Sugerir evento{% else %}Suggest an event{% endif %}</a>
+        <a href="{{ prefix | append: '/contribute/' | relative_url }}">{% if page_lang == 'pt' %}Contribuir{% else %}Contribute{% endif %}</a>
         {% include locale_switcher.html %}
       </div>
     </nav>
