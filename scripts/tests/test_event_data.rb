@@ -90,6 +90,18 @@ texan = venues.find { |venue| venue["name"] == "The Texan / The Garden Club" }
 assert_eq texan.fetch("weekly").any? { |entry| entry["day"] == "Sunday" && entry["name"].include?("NFL") },
           true, "Texan venue summary includes Sunday NFL"
 
+halloween = special.select { |event| event["source_url"] == "https://www.instagram.com/thetexanbar/reel/DeWkNyxCVDz/" }
+assert_eq halloween.length, 1, "Texan Halloween has one source-backed occurrence"
+if halloween.length == 1
+  event = halloween.first
+  assert_eq event["date"], Date.new(2026, 10, 31), "Halloween preserves the announced date"
+  assert_eq event["venue"], "The Texan", "Halloween preserves the announced venue"
+  assert_eq event["time"], nil, "Halloween has no guessed start time"
+  assert_eq event["price"], nil, "Halloween has no guessed price"
+  assert_eq event["tags"].include?("free"), false, "missing price does not imply free admission"
+  assert_eq event["tags"].include?("kid-friendly"), true, "organizer states family-friendly attendance"
+end
+
 if @failed > 0
   puts "\nFAIL: #{@failed} assertion(s) failed"
   exit 1
