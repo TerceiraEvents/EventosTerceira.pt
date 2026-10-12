@@ -5,7 +5,7 @@ require_relative 'validate_event_data'
 
 def assign_event_ids(text)
   input = YAML.safe_load(text, permitted_classes: [Date, Time])
-  errors = validate_events(input, require_ids: false)
+  errors = validate_event_yaml(text, require_ids: false)
   raise ArgumentError, errors.join("\n") unless errors.empty?
   stream = Psych.parse_stream(text)
   raise ArgumentError, 'expected exactly one YAML document' unless stream.children.size == 1
@@ -15,6 +15,7 @@ def assign_event_ids(text)
   text.each_line { |line| offsets << offsets.last + line.length }
   edits = []
   input.each_with_index do |event, index|
+    raise ArgumentError, "#{event['name']}: null `id` key — remove the empty key before assigning" if event.key?('id') && event['id'].nil?
     next unless event['id'].nil?
     mapping = sequence.children.fetch(index)
     raise ArgumentError, "#{event['name']}: expected a mapping" unless mapping.is_a?(Psych::Nodes::Mapping)
@@ -33,7 +34,7 @@ def assign_event_ids(text)
   output = text.dup
   edits.sort_by(&:first).reverse_each { |offset, insertion| output.insert(offset, insertion) }
   records = YAML.safe_load(output, permitted_classes: [Date, Time])
-  errors = validate_events(records)
+  errors = validate_event_yaml(output)
   raise ArgumentError, errors.join("\n") unless errors.empty?
   raise ArgumentError, 'record count changed during assignment' unless records.size == input.size
   without_ids = ->(entries) { entries.map { |event| event.reject { |key, _| key == 'id' } } }
@@ -44,7 +45,7 @@ end
 if $PROGRAM_NAME == __FILE__
   path = ARGV.fetch(0, '_data/special_events.yml')
   begin
-    output, assigned, total = assign_event_ids(File.read(path))
+    output, assigned, total = assign_event_ids(File.read(path, encoding: 'UTF-8'))
     File.write(path, output) if assigned.positive?
     puts "Assigned #{assigned} IDs; #{total} distinct events"
   rescue Psych::Exception, ArgumentError => error

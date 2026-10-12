@@ -42,11 +42,37 @@ class EventIdentityTest < Minitest::Test
         _, stderr, status = Open3.capture3(RbConfig.ruby, VALIDATOR, path)
         assert status.success?, stderr
         assigned = File.read(path)
+        assert_no_duplicate_keys(assigned)
         _, stderr, status = assign(path)
         assert status.success?, stderr
         assert_equal assigned, File.read(path)
       end
     end
+  end
+
+  def test_null_id_keys_are_rejected_without_writing
+    ["id:", "id: ~", "\"id\": null"].each do |line|
+      Dir.mktmpdir do |dir|
+        path = File.join(dir, 'events.yml')
+        original = "- date: 2026-10-12\n  #{line}\n  name: Null identity\n"
+        File.write(path, original)
+        _, stderr, status = assign(path)
+        refute status.success?, line
+        assert_includes stderr, 'Null identity'
+        assert_equal original, File.read(path)
+      end
+    end
+  end
+
+  def assert_no_duplicate_keys(text)
+    visit = lambda do |node|
+      if node.is_a?(Psych::Nodes::Mapping)
+        keys = node.children.each_slice(2).map { |key, _| key.value }
+        assert_equal keys.uniq, keys, "duplicate keys at line #{node.start_line + 1}"
+      end
+      (node.children || []).each { |child| visit.call(child) } if node.respond_to?(:children)
+    end
+    visit.call(Psych.parse_stream(text))
   end
 
   def test_existing_ids_and_source_metadata_are_untouched_when_appending
