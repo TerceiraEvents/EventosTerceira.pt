@@ -120,6 +120,16 @@ advent = special.find { |event| event['id'] == '0be9ca7c-280e-4650-94be-9ac94545
 assert_eq advent && advent['date'], Date.new(2026, 11, 28), 'Advent preserves official structured and poster date'
 assert_eq advent && advent['time'], '18:00', 'Advent preserves municipal poster time'
 assert_eq advent && advent['source_url'], 'https://angradoheroismo.pt/evento/temporada-de-musica-classica-concerto-do-advento/', 'Advent cites its municipal source'
+december = special.select { |event| event['source_uid'] == 'cmah-classical-season-2026-next-2026-12-08' }
+assert_eq december.length, 1, 'municipal poster next concert has one occurrence'
+if december.length == 1
+  concert = december.first
+  assert_eq [concert['date'], concert['time'], concert['venue']], [Date.new(2026, 12, 8), '18:00', 'Centro Cultural e de Congressos de Angra do Heroísmo'], 'next concert preserves explicit poster date time and venue'
+  assert_eq [concert['kind'], concert['locality']], ['event', 'angra'], 'next concert is dated attendance in verified Angra venue'
+  assert_eq [concert['price'], concert['image'], concert['end_date']], [nil, nil, nil], 'next concert has no guessed admission artwork or end date'
+  assert_eq concert.fetch('tags').include?('free'), false, 'next-concert announcement does not imply free admission'
+  assert_eq concert['id'] == advent['id'], false, 'announced next concert has its own persisted identity'
+end
 castanha = special.find { |event| event["name"] == "Festas da Castanha — Terra Chã" }
 assert_eq castanha.fetch("source_url"),
           "https://www.facebook.com/photo/?fbid=1783816519984160&set=a.609332960765861",

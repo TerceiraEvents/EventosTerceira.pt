@@ -7559,6 +7559,23 @@ Come join us and support our festivities!"
   - live-music
   - free
 
+- date: 2026-12-08
+  id: f93702c3-2857-4c18-a297-fed1328b771f
+  source_uid: cmah-classical-season-2026-next-2026-12-08
+  kind: event
+  locality: angra
+  name: "Concerto da Temporada de Música Clássica"
+  name_en: "Classical Music Season concert"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, 9700-130 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Congressos+Angra+Heroismo
+  time: "18:00"
+  description: "The municipal Advent Concert poster for the 2026 Classical Music Season announces the next concert on 8 December at 18:00, at CCCAH. The announcement does not identify the programme, performers or admission terms. Poster: https://i0.wp.com/angradoheroismo.pt/wp-content/uploads/2026/10/Cartaz-54.jpg?w=800&ssl=1"
+  description_pt: "O cartaz municipal do Concerto do Advento da Temporada de Música Clássica 2026 anuncia o próximo concerto a 8 de dezembro, às 18h00, no CCCAH. O anúncio não identifica o programa, os intérpretes ou as condições de entrada. Cartaz: https://i0.wp.com/angradoheroismo.pt/wp-content/uploads/2026/10/Cartaz-54.jpg?w=800&ssl=1"
+  source_url: https://angradoheroismo.pt/evento/temporada-de-musica-classica-concerto-do-advento/
+  tags:
+  - live-music
+
 - date: 2026-12-20
   id: 9dfbf5df-cfb3-407f-b39f-aacacee42cda
   name: "Temporada de Música Clássica: Concerto de Natal"
