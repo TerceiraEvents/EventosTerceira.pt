@@ -112,6 +112,11 @@ puts "Found #{html_pages.size} HTML page(s) under #{SITE}/"
 html_pages.each do |path|
   rel = path.sub(%r{^#{SITE}/?}, "/")
   html = File.read(path)
+  footer = html[/<footer\b[^>]*>[\s\S]*?<\/footer>/]
+  if footer
+    privacy = footer[/<a\b[^>]*href="[^"]*\/privacy\/?"[^>]*>/]
+    err(errors, "#{rel}: footer Privacy requires a standalone 44px target") unless privacy && privacy.match?(/class="[^"]*\bstandalone-link\b/)
+  end
 
   if %w[/index.html /pt/index.html].include?(rel)
     main_end = html.index('</main>')
