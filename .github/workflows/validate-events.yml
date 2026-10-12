@@ -15,6 +15,8 @@ on:
       - "scripts/test_parse_rehost_request.py"
       - "scripts/validate_event_data.rb"
       - "scripts/tests/test_event_data.rb"
+      - "scripts/assign_event_ids.rb"
+      - "scripts/tests/test_event_identity.rb"
   pull_request:
     paths:
       - "_data/special_events.yml"
@@ -28,6 +30,8 @@ on:
       - "scripts/test_parse_rehost_request.py"
       - "scripts/validate_event_data.rb"
       - "scripts/tests/test_event_data.rb"
+      - "scripts/assign_event_ids.rb"
+      - "scripts/tests/test_event_identity.rb"
 
 jobs:
   validate:
@@ -60,3 +64,6 @@ jobs:
 
       - name: Unit-test event data validation
         run: ruby scripts/tests/test_event_data.rb
+
+      - name: Validate identity assignment and published IDs
+        run: ruby scripts/tests/test_event_identity.rb

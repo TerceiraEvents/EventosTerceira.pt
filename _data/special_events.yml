@@ -8910,6 +8910,21 @@ Come join us and support our festivities!"
   source_url: https://museu-angra.cultura.azores.gov.pt/events/ciclo-de-visitas-guiadas-a-igreja-de-nossa-senhora-da-guia-pedras-que-falam-com-assuncao-melo-mah/
   tags: [free]
 
+- date: 2026-10-31
+  id: b34fbe97-d63c-44b6-9d87-ab07e8e3bb10
+  source_uid: ig-thetexanbar-DeWkNyxCVDz
+  kind: event
+  locality: angra
+  name: "Halloween no The Texan"
+  name_en: "Halloween at The Texan"
+  venue: The Texan
+  address: "Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo"
+  description: "Family-friendly Halloween party at The Texan on 31 October. The organizer invites guests to wear a Halloween costume and reserve a table."
+  description_pt: "Festa de Halloween para toda a família no The Texan a 31 de outubro. A organização convida a levar um disfarce de Halloween e a reservar uma mesa."
+  source_url: https://www.instagram.com/thetexanbar/reel/DeWkNyxCVDz/
+  booking_url: https://the-texan-1755256381.resos.com/booking
+  tags: [kid-friendly]
+
 - date: 2026-10-11
   id: b524f146-9689-49c8-9066-6f2938d8b869
   name: "Domingos com Música"

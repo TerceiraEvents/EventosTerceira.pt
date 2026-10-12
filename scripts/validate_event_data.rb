@@ -9,7 +9,7 @@
 require "yaml"
 require "date"
 
-def validate_events(data)
+def validate_events(data, require_ids: true)
   errors = []
   unless data.is_a?(Array)
     return ["expected a top-level YAML list, got #{data.class}"]
@@ -20,13 +20,19 @@ def validate_events(data)
   # "comparison of Array with Array failed".
   seen_ids = {}
   data.each_with_index do |event, i|
+    unless event.is_a?(Hash)
+      errors << "record ##{i}: expected a YAML mapping, got #{event.class}"
+      next
+    end
     name = event["name"] || "(unnamed ##{i})"
     id = event["id"]
-    if id
+    if id.nil?
+      errors << "#{name}: missing `id` — run ruby scripts/assign_event_ids.rb" if require_ids
+    else
       errors << "#{name}: invalid or duplicate `id`" unless id.is_a?(String) && id.match?(/\A[a-zA-Z0-9_-]+\z/) && !seen_ids[id]
       seen_ids[id] = true
     end
-    if event["locality"] && !%w[angra praia other].include?(event["locality"])
+    if !event["locality"].nil? && !%w[angra praia other].include?(event["locality"])
       errors << "#{name}: `locality` must be angra, praia, or other"
     end
     date = event["date"]

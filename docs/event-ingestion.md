@@ -46,38 +46,29 @@ Both `date` and a present `end_date` must be unquoted ISO dates (YAML Date type)
 
 An opening reception, artist talk, or guided tour is a separate dated `kind: event` record naming the exhibition. Keep the longer display period on its own `kind: exhibition` record. An exhibition's `time` value is legacy data and is not an attendance time. `visiting_hours` and `visiting_hours_pt` are optional free-text schedules; include them only when the source states the hours in the corresponding language, and omit them when hours are unavailable. Older readers ignore these optional fields and continue reading existing event fields.
 
-## Persistent identity and discovery metadata
+## Persistent event identity
 
-Every event has an opaque `id` assigned once by `ruby scripts/assign_event_ids.rb`.
-Keep it when correcting a title, translation, date, venue, image, or price. Distinct
-occurrences receive distinct IDs even when their titles match. Ingestion workflows
-assign missing IDs before proposing data changes. Existing consumers can ignore this
-additive field. IDs use letters, numbers, underscores, and hyphens and are unique.
-The canonical share URL is `https://eventosterceira.pt/events/?id=<id>`; Portuguese
-uses `/pt/events/?id=<id>`. Unknown IDs show an unavailable state.
+Each published record has one unique opaque `id`. New IDs are UUIDs assigned by
+`ruby scripts/assign_event_ids.rb`; existing IDs accept letters, numbers,
+underscores, and hyphens. Keep the persisted ID when editing event metadata. New
+occurrences receive new IDs. Installed consumers can ignore this additive field.
 
-`locality` is optional normalized curator metadata: `angra`, `praia`, or `other`.
-Set it from a verified event location; unknown records omit it and do not match a
-locality selection. Never infer locality from an artist's name. `price` and
-`price_pt` contain published price text; the `free` tag requires verified free
-admission. Missing price means unknown.
+Run the assignment script after adding records and before validation. It preserves
+existing IDs and all other parsed metadata, supports block and flow mappings, and
+validates the complete output before writing. The publication gate is
+`ruby scripts/validate_event_data.rb _data/special_events.yml`; missing, duplicate,
+and malformed IDs fail with named errors. Assignment and validator tests run in
+the event-data workflow, including manual-curation changes.
 
-Date shortcuts use Atlantic/Azores calendar days, including when a visitor's device
-uses another timezone. Today and Tomorrow each contain one calendar day. This
-weekend contains Saturday and Sunday, or the remaining Sunday when selected on
-Sunday. The next 7/31/365 days include today and exclude the following horizon.
-An exhibition matches by overlap with its published viewing period. Search removes
-accents and ignores case. Date, kind, locality, search, and tags combine with AND;
-every selected tag must match. Unknown locality and price remain unknown.
+When merging duplicate records, retain the older persisted ID (check Git history),
+reconcile metadata into that record, and record both IDs and the retained ID in the
+PR body. Never reuse an event ID for a different occurrence. This schema does not
+define aliases or redirects for IDs from merged records.
 
-## Artwork
-
-Use organizer artwork only with documented permission or a reusable license.
-Record `image_source`, `image_rights`, and `image_credit` with `image`; use
-`image_alt` and `image_alt_pt` for a useful description. Follow image-host validation
-and approved rehosting. Do not assume a public social-media post grants permission.
-Keep full posters uncropped in details. Missing or failed artwork leaves all textual
-event information available. Do not fabricate an event poster.
+Optional `locality` is normalized curator metadata: `angra`, `praia`, or `other`.
+Unknown records omit it. Consumers can ignore this additive field. Venue lookup,
+geographic coverage, filter semantics, routes, and artwork policies have their own
+consumer/curation changes.
 
 The exact venue-locality registry and curation policy are documented in
 [locality-metadata.md](locality-metadata.md). Ingestion fills missing locality for
