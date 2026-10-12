@@ -20,6 +20,7 @@
   `description`. Months array is also localized for the date badge.
 {%- endcomment -%}
 {% assign page_lang = page.lang | default: "en" %}
+{% assign event_kind = event.kind | default: "event" %}
 {% assign date_parts = event.date | split: "-" %}
 {% if page_lang == "pt" %}
   {% assign months = "Jan,Fev,Mar,Abr,Mai,Jun,Jul,Ago,Set,Out,Nov,Dez" | split: "," %}
@@ -55,6 +56,7 @@
 {% assign event_tags_str = event_tags | join: " " %}
 
 <div class="special-event {% if event.image %}has-image{% endif %} {% if event.festival %}is-festival{% endif %}"
+     data-event-kind="{{ event_kind }}"
      data-event-tags="{{ event_tags_str }}"
      data-event-date="{{ event.date | date: "%Y-%m-%d" }}"
      data-event-end-date="{{ event.end_date | default: event.date | date: "%Y-%m-%d" }}"
@@ -67,7 +69,12 @@
     <div class="year">{{ date_parts[0] }}</div>
   </div>
   <div class="event-details">
-    {% include event_date_range.html %}
+    {% if event_kind == "exhibition" %}
+      {% include exhibition_status.html %}
+    {% else %}
+      {% include event_date_range.html %}
+      {% include listing_range_label.html %}
+    {% endif %}
     {% if event.festival %}
     {%- if page_lang == "pt" -%}
       {%- assign festival_label = event.festival_pt | default: event.festival -%}
@@ -95,6 +102,15 @@
     {% endif %}
     <div class="event-name">{{ event_name }}</div>
     <div class="event-venue">{{ event_venue }}</div>
+    {% if event_kind == "exhibition" and event.visiting_hours %}
+      {%- if page_lang == "pt" -%}
+        {%- assign visiting_hours = event.visiting_hours_pt | default: event.visiting_hours -%}
+      <div class="event-visiting-hours">Horário de visita: {{ visiting_hours }}</div>
+      {%- else -%}
+        {%- assign visiting_hours = event.visiting_hours -%}
+      <div class="event-visiting-hours">Visiting hours: {{ visiting_hours }}</div>
+      {%- endif -%}
+    {% endif %}
     {% if event_address %}
     <div class="event-address">{{ event_address }}</div>
     {% endif %}
@@ -111,7 +127,7 @@
     {% if map_link != "" %}
     <a class="event-map-link" href="{{ map_link }}" target="_blank" rel="noopener">📍 {% if page_lang == "pt" %}Abrir no Maps{% else %}Open in Maps{% endif %}</a>
     {% endif %}
-    {% if event.time %}
+    {% if event.time and event_kind != "exhibition" %}
     <div class="event-time-info">{{ event.time }}</div>
     {% endif %}
     <div class="event-description">{{ event_description }}</div>
@@ -168,7 +184,7 @@
 
 {%- comment -%} -- Parse event.time into HH:MM:SS if possible. -- {%- endcomment -%}
 {%- assign time_iso = "" -%}
-{%- if event.time -%}
+{%- if event.time and event_kind != "exhibition" -%}
   {%- assign t_raw = event.time | strip -%}
   {%- assign t_parts = t_raw | split: ":" -%}
   {%- if t_parts.size >= 2 -%}

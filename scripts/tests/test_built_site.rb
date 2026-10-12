@@ -10,7 +10,7 @@
 require "json"
 require "rexml/document"
 
-SITE = "_site"
+SITE = ENV.fetch("SITE", "_site")
 abort "missing #{SITE}/ — run `bundle exec jekyll build` first" unless Dir.exist?(SITE)
 
 errors = []
@@ -21,6 +21,47 @@ def warn_(warnings, msg); warnings << msg; end
 
 if Dir.exist?(File.join(SITE, "scripts/tests/fixtures"))
   err(errors, "test fixtures must not be published in the built site")
+end
+
+# Pin the visitor-facing component behavior when the canonical fixture is
+# classified as an exhibition in the data used for this build.
+special_path = "#{SITE}/special/index.html"
+if File.exist?(special_path)
+  special_html = File.read(special_path)
+  err(errors, "/special/: missing Next 7 days range label") unless special_html.include?("Next 7 days</option>")
+  exhibition_marker = 'data-event-kind="exhibition"'
+  if special_html.include?(exhibition_marker) && special_html.include?("Milestones of Autonomy: from the Administrative Board to the First Regional Government")
+    en_start = special_html.index(exhibition_marker)
+    en_end = special_html.index('<script type="application/ld+json">', en_start)
+    card = special_html[en_start...en_end]
+    err(errors, "/special/: Marcos exhibition missing its English status") unless card.include?("On view until 31 December")
+    err(errors, "/special/: Marcos exhibition renders an attendance time") if card.include?('class="event-time-info"')
+    jsonld_end = special_html.index("</script>", en_end)
+    jsonld = special_html[en_end...jsonld_end]
+    err(errors, "/special/: Marcos exhibition JSON-LD includes a time of day") if jsonld.match?(/"(?:startDate|endDate)":\s*"\d{4}-\d{2}-\d{2}T/)
+  end
+end
+
+pt_special_path = "#{SITE}/pt/special/index.html"
+if File.exist?(pt_special_path)
+  pt_html = File.read(pt_special_path)
+  if pt_html.include?('data-event-kind="exhibition"') && pt_html.include?("Milestones of Autonomy: from the Administrative Board to the First Regional Government")
+    start = pt_html.index('data-event-kind="exhibition"')
+    finish = pt_html.index('<script type="application/ld+json">', start)
+    err(errors, "/pt/special/: Marcos exhibition missing its Portuguese status") unless pt_html[start...finish].include?("Em exposição até 31 de dezembro")
+  end
+end
+
+archive_path = "#{SITE}/archive/index.html"
+if File.exist?(archive_path)
+  archive_html = File.read(archive_path)
+  err(errors, "/archive/: missing the English multi-day festival label") unless archive_html.include?("6–10 June · 5-day festival")
+end
+
+pt_archive_path = "#{SITE}/pt/archive/index.html"
+if File.exist?(pt_archive_path)
+  pt_archive_html = File.read(pt_archive_path)
+  err(errors, "/pt/archive/: missing the Portuguese multi-day festival label") unless pt_archive_html.include?("6–10 de junho · festival de 5 dias")
 end
 
 # ─────────────────────────────────────────────────────────────────────

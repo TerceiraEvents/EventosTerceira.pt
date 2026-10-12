@@ -1,0 +1,31 @@
+{% assign status_today = "now" | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
+{% assign status_start = event.date | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
+{% assign status_end_date = event.end_date | default: event.date %}
+{% assign status_end = status_end_date | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
+{% assign status_soon = status_today | plus: 1123200 %}
+{% assign status_end_parts = status_end_date | split: "-" %}
+{% assign status_end_month_index = status_end_parts[1] | plus: 0 | minus: 1 %}
+{% if page_lang == "pt" %}
+  {% assign status_months = "janeiro,fevereiro,março,abril,maio,junho,julho,agosto,setembro,outubro,novembro,dezembro" | split: "," %}
+{% else %}
+  {% assign status_months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
+{% endif %}
+{% if status_end < status_today %}
+  <div class="event-listing-status">
+    {% if page_lang == "pt" %}Terminou a {{ status_end_parts[2] | plus: 0 }} de {{ status_months[status_end_month_index] }}{% else %}Ended {{ status_end_parts[2] | plus: 0 }} {{ status_months[status_end_month_index] }}{% endif %}
+  </div>
+{% elsif status_start > status_today %}
+  {% assign status_open_parts = event.date | split: "-" %}
+  {% assign status_open_month_index = status_open_parts[1] | plus: 0 | minus: 1 %}
+  <div class="event-listing-status">
+    {% if page_lang == "pt" %}Abre a {{ status_open_parts[2] | plus: 0 }} de {{ status_months[status_open_month_index] }}{% else %}Opens {{ status_open_parts[2] | plus: 0 }} {{ status_months[status_open_month_index] }}{% endif %}
+  </div>
+{% elsif status_end <= status_soon %}
+  <div class="event-listing-status">
+    {% if page_lang == "pt" %}A terminar · até {{ status_end_parts[2] | plus: 0 }} de {{ status_months[status_end_month_index] }}{% else %}Ending soon · until {{ status_end_parts[2] | plus: 0 }} {{ status_months[status_end_month_index] }}{% endif %}
+  </div>
+{% else %}
+  <div class="event-listing-status">
+    {% if page_lang == "pt" %}Em exposição até {{ status_end_parts[2] | plus: 0 }} de {{ status_months[status_end_month_index] }}{% else %}On view until {{ status_end_parts[2] | plus: 0 }} {{ status_months[status_end_month_index] }}{% endif %}
+  </div>
+{% endif %}

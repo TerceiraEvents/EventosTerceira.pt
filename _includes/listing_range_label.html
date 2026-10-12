@@ -1,0 +1,48 @@
+{% assign range_end = event.end_date | default: event.date %}
+{% if range_end != event.date %}
+  {% assign range_start_parts = event.date | split: "-" %}
+  {% assign range_end_parts = range_end | split: "-" %}
+  {% assign range_start_year = range_start_parts[0] | plus: 0 %}
+  {% assign range_end_year = range_end_parts[0] | plus: 0 %}
+  {% assign range_start_previous_year = range_start_year | minus: 1 %}
+  {% assign range_end_previous_year = range_end_year | minus: 1 %}
+  {% assign range_start_year_days = range_start_year | times: 365 %}
+  {% assign range_start_leap_4 = range_start_previous_year | divided_by: 4 %}
+  {% assign range_start_leap_100 = range_start_previous_year | divided_by: 100 %}
+  {% assign range_start_leap_400 = range_start_previous_year | divided_by: 400 %}
+  {% assign range_start_year_days = range_start_year_days | plus: range_start_leap_4 | minus: range_start_leap_100 | plus: range_start_leap_400 %}
+  {% assign range_end_year_days = range_end_year | times: 365 %}
+  {% assign range_end_leap_4 = range_end_previous_year | divided_by: 4 %}
+  {% assign range_end_leap_100 = range_end_previous_year | divided_by: 100 %}
+  {% assign range_end_leap_400 = range_end_previous_year | divided_by: 400 %}
+  {% assign range_end_year_days = range_end_year_days | plus: range_end_leap_4 | minus: range_end_leap_100 | plus: range_end_leap_400 %}
+  {% assign range_start_ordinal = event.date | date: "%j" | plus: range_start_year_days %}
+  {% assign range_end_ordinal = range_end | date: "%j" | plus: range_end_year_days %}
+  {% assign range_days = range_end_ordinal | minus: range_start_ordinal | plus: 1 %}
+  {% assign range_start_month_index = range_start_parts[1] | plus: 0 | minus: 1 %}
+  {% assign range_end_month_index = range_end_parts[1] | plus: 0 | minus: 1 %}
+  {% if page_lang == "pt" %}
+    {% assign range_months = "janeiro,fevereiro,março,abril,maio,junho,julho,agosto,setembro,outubro,novembro,dezembro" | split: "," %}
+  {% else %}
+    {% assign range_months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
+  {% endif %}
+  {% if event.tags contains "cinema" %}
+    <div class="event-listing-range">{% if page_lang == "pt" %}Várias sessões{% else %}Multiple screenings{% endif %}</div>
+  {% elsif event.festival %}
+    {% if page_lang == "pt" %}
+      {% if range_start_parts[1] == range_end_parts[1] %}
+        <div class="event-listing-range">{{ range_start_parts[2] | plus: 0 }}–{{ range_end_parts[2] | plus: 0 }} de {{ range_months[range_end_month_index] }} · festival de {{ range_days }} dias</div>
+      {% else %}
+        <div class="event-listing-range">{{ range_start_parts[2] | plus: 0 }} de {{ range_months[range_start_month_index] }}–{{ range_end_parts[2] | plus: 0 }} de {{ range_months[range_end_month_index] }} · festival de {{ range_days }} dias</div>
+      {% endif %}
+    {% else %}
+      {% if range_start_parts[1] == range_end_parts[1] %}
+        <div class="event-listing-range">{{ range_start_parts[2] | plus: 0 }}–{{ range_end_parts[2] | plus: 0 }} {{ range_months[range_end_month_index] }} · {{ range_days }}-day festival</div>
+      {% else %}
+        <div class="event-listing-range">{{ range_start_parts[2] | plus: 0 }} {{ range_months[range_start_month_index] }}–{{ range_end_parts[2] | plus: 0 }} {{ range_months[range_end_month_index] }} · {{ range_days }}-day festival</div>
+      {% endif %}
+    {% endif %}
+  {% else %}
+    <div class="event-listing-range">{{ range_days }} {% if page_lang == "pt" %}dias{% else %}days{% endif %}</div>
+  {% endif %}
+{% endif %}
