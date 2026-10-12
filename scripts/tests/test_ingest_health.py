@@ -78,6 +78,19 @@ class SourceFailureTests(unittest.TestCase):
             health = json.loads(report.read_text())
             self.assertEqual((health["candidates"], health["duplicates"], health["deferred"], health["added"]), (2, 1, 1, 1))
 
+    def test_duplicate_reingest_preserves_curated_kind(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path, report = Path(tmp) / "events.yml", Path(tmp) / "health.json"
+            curated = [{"date": dt.date(2026, 10, 6), "end_date": dt.date(2026, 11, 1),
+                        "kind": "exhibition", "name": "Diapasão com Caixa", "venue": "Museu de Angra",
+                        "source_url": "https://example.test/diapasao"}]
+            path.write_text(yaml.safe_dump(curated, allow_unicode=True), encoding="utf-8")
+            candidate = dict(curated[0], kind=None)
+            with patch.object(sys, "argv", ["test", "--yaml-path", str(path), "--health-report", str(report),
+                                           "--today", "2026-10-10"]):
+                self.assertEqual(run_ingester("fixture", lambda *args: [candidate]), 0)
+            self.assertEqual(yaml.safe_load(path.read_text(encoding="utf-8")), curated)
+
     def test_same_movie_at_two_venues_is_not_collapsed(self):
         first = {"date": dt.date(2026, 10, 11), "name": "Cinema: Verity", "venue": "Auditório do Ramo Grande"}
         candidate = dict(first, name="Verity", venue="Centro Cultural e de Congressos de Angra do Heroísmo")

@@ -105,6 +105,30 @@ assert_eq pr_paths.include?("scripts/validate_event_data.rb"), true,
 assert_eq pr_paths.include?("scripts/tests/test_event_data.rb"), true,
           "PR paths run the gate tests"
 
+puts "published browser-source records"
+special = YAML.safe_load(File.read("_data/special_events.yml"), permitted_classes: [Date])
+castanha = special.find { |event| event["name"] == "Festas da Castanha — Terra Chã" }
+assert_eq castanha.fetch("source_url"),
+          "https://www.facebook.com/photo/?fbid=1783816519984160&set=a.609332960765861",
+          "Castanha cites the official programme"
+assert_eq [castanha["date"], castanha["end_date"]],
+          [Date.new(2026, 10, 30), Date.new(2026, 10, 31)], "Castanha preserves both days"
+assert_eq castanha["time"], nil, "different daily openings are not one festival time"
+%w[description description_pt].each do |field|
+  %w[18:00 12:00 14:00 14:10 20:00 21:00 21:30 23:00].each do |time|
+    assert_eq castanha.fetch(field).include?(time), true, "#{field} retains published #{time}"
+  end
+end
+weekly = YAML.safe_load(File.read("_data/weekly.yml"))
+nfl = weekly.find { |day| day["day"] == "Sunday" }.fetch("events").find { |event| event["name"] == "NFL Sundays" }
+assert_eq nfl && nfl["time"], "17:00", "NFL lists the venue-advertised kickoff"
+assert_eq nfl && nfl["source_url"], "https://www.instagram.com/thetexanbar/p/Ddqy2UfCY6S/",
+          "NFL cites the venue announcement"
+venues = YAML.safe_load(File.read("_data/venues.yml"))
+texan = venues.find { |venue| venue["name"] == "The Texan / The Garden Club" }
+assert_eq texan.fetch("weekly").any? { |entry| entry["day"] == "Sunday" && entry["name"].include?("NFL") },
+          true, "Texan venue summary includes Sunday NFL"
+
 if @failed > 0
   puts "\nFAIL: #{@failed} assertion(s) failed"
   exit 1
