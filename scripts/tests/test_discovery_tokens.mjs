@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { checkTokens, contrast } from '../check_discovery_tokens.js';
+import { checkTokens, contrast } from '../check_discovery_tokens.mjs';
 const manifest = JSON.parse(readFileSync(new URL('../../docs/discovery-tokens.json', import.meta.url), 'utf8'));
 const css = readFileSync(new URL('../../assets/css/style.css', import.meta.url), 'utf8');
 

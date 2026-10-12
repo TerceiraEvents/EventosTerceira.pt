@@ -27,7 +27,7 @@ and session changes remain usable. The website does not promise offline availabi
 Automated: Azores midnight/DST/device timezone date predicates; exact-ID uniqueness
 and preservation; combined facets; navigation and locale visibility; semantic controls.
 Manual required: EN/PT 390 px and desktop reflow, 200/400% zoom, keyboard navigation,
-More menu, details, saved removal, suggestion dialog, image failures, VoiceOver.
+visible wrapping navigation, details, saved removal, suggestion dialog, image failures, VoiceOver.
 Native VoiceOver/TalkBack and enlarged system text require real platform runs.
 A component test does not establish WCAG conformance.
 
@@ -55,7 +55,7 @@ action requires `map_url`; source and booking actions also require published URL
 
 ## Component inventory and synchronization
 
-The machine-readable [color inventory](discovery-tokens.json) records every six-digit semantic color in the website CSS and the native theme. The palettes share green/cream intent while retaining distinct values: website dark green `#1a3a2a`, cream `#f7f9f4`, body `#1a2e1a`, muted `#557555`; native primary `#2d5016`, background `#faf8f0`, body `#2c2c2c`, muted/inactive `#666666`, card white. Native primary dark is `#1a3009`; it is not the website dark green token. Website display headings use Playfair Display and body uses Source Sans 3 with system fallbacks. Native typography uses the platform font with 12/14/16/18/22/28-point roles and system scaling.
+The machine-readable [color inventory](discovery-tokens.json) records every color custom property in the website CSS and each native theme color. Hardcoded component color literals are outside this check; reviewing their contrast requires component measurements. The palettes share green/cream intent while retaining distinct values: website dark green `#1a3a2a`, cream `#f7f9f4`, body `#1a2e1a`, muted `#557555`; native primary `#2d5016`, background `#faf8f0`, body `#2c2c2c`, muted/inactive `#666666`, card white. Native primary dark is `#1a3009`; it is not the website dark green token. Website display headings use Playfair Display and body uses Source Sans 3 with system fallbacks. Native typography uses the platform font with 12/14/16/18/22/28-point roles and system scaling.
 
 | Component | Website | Native | Required state and sizing |
 | --- | --- | --- | --- |
@@ -69,8 +69,9 @@ The machine-readable [color inventory](discovery-tokens.json) records every six-
 
 Pressed feedback follows the browser/platform control. Website keyboard focus is a 3 px `--focus` outline with 3 px offset. Native touchables use their platform pressed feedback; there is no claim that every native control supplies a desktop keyboard focus treatment. Disabled actions retain an accessible disabled state and an explanation; Saved/reminder read failure must not become a false unselected state. Loading feedback must not prevent usable cached content being read. Website reduced-motion overrides animations, transitions and smooth scrolling. Native navigation animations and reduced-motion behavior need an actual system-setting audit.
 
-Run `node scripts/check_discovery_tokens.js` to check website token drift and the six declared body/action contrast pairs. Run `node scripts/check_discovery_tokens.js /absolute/path/to/TerceiraEventsApp/src/utils/theme.js` to check both source palettes. The optional source is deliberately explicit: CI checks website source and the documented native pairs, and does not fetch another repository at runtime. Run `node --test scripts/tests/test_discovery_tokens.js` to exercise drift and insufficient-contrast failures. The checker exports `contrast(foreground, background)` for six-digit sRGB WCAG ratios and `checkTokens(manifest, css, nativeTheme)` for inventory equality and minimum-contrast validation; the optional native source must be supplied explicitly. This is a synchronization check, not a visual regression or whole-product contrast audit. Token changes update the inventory and require side-by-side EN/PT home/navigation/card/detail screenshots, 320/390 px and desktop, plus Android/iOS enlarged-text checks. The checklist records the devices actually run.
+Run `node scripts/check_discovery_tokens.mjs` to check website token drift and the six declared body/action contrast pairs. Run `node scripts/check_discovery_tokens.mjs /absolute/path/to/TerceiraEventsApp/src/utils/theme.js` to check both source palettes. The optional source is deliberately explicit: CI checks website source and the documented native pairs, and does not fetch another repository at runtime. Run `node --test scripts/tests/test_discovery_tokens.mjs` to exercise drift and insufficient-contrast failures. The checker exports `contrast(foreground, background)` for six-digit sRGB WCAG ratios and `checkTokens(manifest, css, nativeTheme)` for inventory equality and minimum-contrast validation; the optional native source must be supplied explicitly. This is a synchronization check, not a visual regression or whole-product contrast audit. Token changes update the inventory and require side-by-side EN/PT home/navigation/card/detail screenshots, 320/390 px and desktop, plus Android/iOS enlarged-text checks. The checklist records the devices actually run.
 
 ## State and copy inventory
 
 [Data-state inventory](discovery-states.md) specifies the actual EN/PT feedback, recovery actions, timestamp meaning and unsupported states. It distinguishes the static website publication from native fetch/cache behavior. No new runtime dependency is needed for tokens or state documentation.
+Primary navigation displays every destination in normal document flow in both languages. Links wrap into rows at narrow widths, retain at least 44 px targets, and keep the language switch visible.

@@ -14,7 +14,7 @@ export function contrast(foreground, background) {
 
 /** Validate documented color values against source and the declared text contrast pairs. */
 export function checkTokens(manifest, css, nativeTheme) {
-  const source = { website: Object.fromEntries([...css.matchAll(/--([\w-]+):\s*(#[\da-fA-F]{6})/g)].map((match) => [match[1], match[2]])) };
+  const source = { website: Object.fromEntries([...css.matchAll(/--([\w-]+):\s*(#[\da-fA-F]{6}|rgba?\([^)]*\))/g)].map((match) => [match[1], match[2]])) };
   if (nativeTheme !== undefined) source.native = Object.fromEntries([...nativeTheme.matchAll(/(\w+): '(#[\da-fA-F]{6})'/g)].map((match) => [match[1], match[2]]));
   for (const [platform, tokens] of Object.entries(source)) {
     assert.deepEqual(tokens, manifest[platform], `${platform} color inventory differs from its source`);

@@ -36,8 +36,8 @@ jobs:
 
       - name: Check discovery color inventory and contrast
         run: |
-          node scripts/check_discovery_tokens.js
-          node --test scripts/tests/test_discovery_tokens.js
+          node scripts/check_discovery_tokens.mjs
+          node --test scripts/tests/test_discovery_tokens.mjs
 
       - name: Validate known venue locality metadata
         run: ruby scripts/tests/test_event_localities.rb

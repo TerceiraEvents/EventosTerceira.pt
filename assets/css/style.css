@@ -96,10 +96,6 @@ h1, h2, h3 {
   overflow: visible;
 }
 
-.site-nav::-webkit-scrollbar {
-  display: none;
-}
-
 .site-nav .container {
   display: flex;
   justify-content: center;
@@ -1476,10 +1472,7 @@ main a {
 .site-title { font-size: clamp(1.5rem, 5vw, 2.25rem); }
 .site-tagline { font-size: 1rem; margin-top: .25rem; }
 .site-nav .container { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; overflow: visible; }
-.site-nav a, .nav-more summary { min-height: 44px; padding: .5rem .7rem; display: inline-flex; align-items: center; cursor: pointer; }
-.nav-more { position: relative; }
-.nav-menu { position: absolute; z-index: 10; width: min(17rem, 70vw); right: 0; background: var(--green-dark); border-radius: var(--radius); box-shadow: 0 8px 24px var(--shadow); padding: .5rem; }
-.nav-menu a { display: flex; white-space: normal; }
+.site-nav a { min-width: 44px; max-width: 100%; justify-content: center; min-height: 44px; padding: .5rem .7rem; display: inline-flex; align-items: center; cursor: pointer; }
 .site-nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: .3rem; }
 .locale-switcher { margin-left: auto; }
 .skip-link { position: absolute; top: -100px; left: .5rem; z-index: 30; background: white; padding: .75rem; }
@@ -1503,11 +1496,10 @@ main a {
 .event-detail img { max-width: 100%; height: auto; object-fit: contain; }
 .event-detail p, .event-detail h2 { overflow-wrap: anywhere; }
 .data-status, .storage-status { font-size: 1rem; color: var(--text-light); }
-@media (max-width: 600px) { .site-nav .container { padding: 0 .4rem; } .site-nav a, .nav-more summary { padding: .5rem; font-size: 1rem; } main.container { padding: 0 .8rem; } }
+@media (max-width: 600px) { .site-nav .container { padding: 0 .4rem; } .site-nav a { padding: .5rem; font-size: 1rem; } main.container { padding: 0 .8rem; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
 
-.nav-more summary { color: var(--green-pale); }
-.site-nav a, .nav-more summary { white-space: normal; letter-spacing: 0; text-transform: none; }
+.site-nav a { white-space: normal; letter-spacing: 0; text-transform: none; }
 .detail-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1rem 0; }
 .detail-actions a, .detail-actions button { display: inline-flex; align-items: center; min-height: 44px; padding: .5rem; font: inherit; }
 

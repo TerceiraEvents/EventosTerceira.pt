@@ -30,10 +30,12 @@ Saving is browser/device local and does not request notification permission or c
 | Scenario | Automated evidence | Actual runtime evidence and remaining work |
 | --- | --- | --- |
 | Partial/all-invalid refresh | Native production fetch regression preserves valid records; static ingestion validation | Native failure injection pending |
-| Identity correction/missing snapshot | Native Saved/identity/detail tests; website actual renderer tests | Website and Pixel 8 exact-link/save/restart checked; iOS pending |
+| Identity correction/missing snapshot | Native Saved/identity/detail tests; website actual renderer tests | Website and task-local Pixel 8 API35 emulator exact-link/save/restart checked; parent agent reports equivalent standalone iOS26.5 simulator checks at app main `8c2c96c` in `outputs/ios-runtime-repair-proof.json` |
 | Detail Saved/reminder read rejection | Production native JSX/data-loading tests | Native storage-failure and reminder permission journeys pending |
-| Combined filters/no matches | Website production predicate and native date/facet tests | Website 320 px and Pixel 8 EN/PT combined-filter/Back checks; full keyboard/AT/iOS pending |
+| Combined filters/no matches | Website production predicate and native date/facet tests | Website 320 px and task-local Pixel 8 API35 emulator EN/PT combined-filter/Back checks; parent agent reports standalone iOS26.5 simulator facets/exact-detail/Back checks; full keyboard/AT pending |
 | Slow fetch, disk cache, reconnect | Complete production timing/reconnect matrix pending | Actual slow/offline/error runs on both native platforms pending |
-| Enlarged text | Native production layout tests and measured Pixel 8 200% before/after captures | iOS enlarged text, Android TalkBack, iOS VoiceOver and website 400% zoom pending |
+| Enlarged text | Native production layout tests and measured task-local Pixel 8 API35 emulator 200% before/after captures | iOS enlarged text, Android TalkBack, physical-device iOS VoiceOver and website 400% zoom pending |
 
 A passed JavaScript export validates bundles, not native accessibility, calendar permissions, notification behavior or offline operation. Use the task's criterion-level acceptance checklist to record later measurements rather than treating this inventory as conformance.
+
+The iOS simulator observations in this inventory are parent-agent reported evidence from Codex desktop app, model `gpt-6.1-sol`, local session ID `01a12d38-f796-77a1-b056-47c1eb6a90d5`; they were not independently run by the documentation author. The simulator checks do not establish physical-device VoiceOver coverage.
