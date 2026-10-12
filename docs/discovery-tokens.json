@@ -1,0 +1,78 @@
+{
+  "website": {
+    "green-dark": "#1a3a2a",
+    "green-deep": "#234d35",
+    "green-mid": "#2d6a4f",
+    "green-bright": "#40916c",
+    "green-light": "#52b788",
+    "green-pale": "#b7e4c7",
+    "green-wash": "#d8f3dc",
+    "cream": "#f7f9f4",
+    "white": "#ffffff",
+    "text": "#1a2e1a",
+    "text-light": "#4a6a4a",
+    "text-muted": "#557555",
+    "accent": "#d4a843",
+    "accent-dark": "#8a6614",
+    "accent-light": "#f0d78c",
+    "border": "#c8dcc8",
+    "focus": "#8a6614"
+  },
+  "native": {
+    "primary": "#2d5016",
+    "primaryLight": "#4a7a2e",
+    "primaryDark": "#1a3009",
+    "accent": "#80651b",
+    "background": "#faf8f0",
+    "card": "#ffffff",
+    "text": "#2c2c2c",
+    "textLight": "#666666",
+    "textMuted": "#666666",
+    "border": "#e8e4d8",
+    "white": "#ffffff",
+    "error": "#c0392b",
+    "festivalBadge": "#8b5e3c",
+    "kidFriendlyBadge": "#f5a623",
+    "kidFriendlyBadgeDark": "#d68f10",
+    "kidFriendlyBadgeText": "#3a2a00",
+    "kidFriendlyBadgeBg": "#fff8ea"
+  },
+  "contrast_pairs": [
+    {
+      "platform": "website",
+      "foreground": "text",
+      "background": "cream",
+      "minimum": 4.5
+    },
+    {
+      "platform": "website",
+      "foreground": "text-muted",
+      "background": "cream",
+      "minimum": 4.5
+    },
+    {
+      "platform": "website",
+      "foreground": "green-dark",
+      "background": "white",
+      "minimum": 4.5
+    },
+    {
+      "platform": "native",
+      "foreground": "text",
+      "background": "background",
+      "minimum": 4.5
+    },
+    {
+      "platform": "native",
+      "foreground": "textLight",
+      "background": "white",
+      "minimum": 4.5
+    },
+    {
+      "platform": "native",
+      "foreground": "primary",
+      "background": "white",
+      "minimum": 4.5
+    }
+  ]
+}

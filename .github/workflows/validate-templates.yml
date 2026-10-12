@@ -34,6 +34,11 @@ jobs:
       - name: Unit-test island discovery dates and facets
         run: node --test scripts/tests/test_discovery.js scripts/tests/test_detail_render.js
 
+      - name: Check discovery color inventory and contrast
+        run: |
+          node scripts/check_discovery_tokens.js
+          node --test scripts/tests/test_discovery_tokens.js
+
       - name: Validate known venue locality metadata
         run: ruby scripts/tests/test_event_localities.rb
 
