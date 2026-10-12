@@ -46,7 +46,7 @@
   if (data) { try { records = JSON.parse(data.textContent); } catch (err) { el('p', t('Event data is unavailable. Reload this page to try again.', 'Dados indisponíveis. Recarrega a página para tentar novamente.'), document.querySelector('main')); } }
   function field(event, name) { return event[name + (pt ? '_pt' : '_en')] || event[name] || event[name + (pt ? '_en' : '_pt')] || ''; }
   function safeLink(url) { if (typeof url !== 'string' || !url.trim()) return null; try { var u = new URL(url, location.origin); return u.protocol === 'https:' || u.protocol === 'http:' ? u.href : null; } catch (err) { return null; } }
-  function action(label, url, parent) { var href = safeLink(url); if (!href) return; var a = el('a',label,parent); a.href = href; a.rel = 'noopener'; return a; }
+  function action(label, url, parent) { var href = safeLink(url); if (!href) return; var a = el('a',label,parent); a.className='detail-link'; a.href = href; a.rel = 'noopener'; return a; }
   function renderDetail() {
     var target = document.getElementById('event-detail'); if (!target) return;
     var id = new URLSearchParams(location.search).get('id'), event = records.find(function(e) { return e.id === id; });
@@ -77,7 +77,7 @@
     var report=el('button',t('Suggest an edit','Sugerir uma alteração'),actions); report.type='button'; report.className='event-flag-btn'; report.dataset.eventName=name; report.dataset.eventDate=event.date; report.dataset.eventVenue=field(event,'venue');
     var share=el('button',t('Share link','Partilhar link'),actions); share.type='button';
     share.addEventListener('click',function() { var url=location.origin+prefix+'/events/?id='+encodeURIComponent(id); if (navigator.share) navigator.share({title:name,url:url}).catch(function() {}); else { var a=el('a',url,actions); a.href=url; } });
-    var back=el('button',t('Back to results','Voltar aos resultados'),target); back.type='button'; back.addEventListener('click',function() { if (document.referrer && new URL(document.referrer).origin===location.origin && history.length>1) history.back(); else location.href=prefix+'/special/?range=all'; });
+    var back=el('button',t('Back to results','Voltar aos resultados'),target); back.className='detail-link'; back.type='button'; back.addEventListener('click',function() { if (document.referrer && new URL(document.referrer).origin===location.origin && history.length>1) history.back(); else location.href=prefix+'/special/?range=all'; });
     action(t('Explore events','Explorar eventos'),prefix+'/special/?range=all',target);
     var locale=document.querySelector('.locale-other'); if (locale) locale.href=(pt?'':'/pt')+'/events/?id='+encodeURIComponent(id);
   }

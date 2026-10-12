@@ -1512,3 +1512,9 @@ main a {
 .detail-actions a, .detail-actions button { display: inline-flex; align-items: center; min-height: 44px; padding: .5rem; font: inherit; }
 
 .app-banner-open, .app-banner-close { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+
+.locale-other { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+.view-all { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+.standalone-link { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; }
+.detail-link { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; }
+.event-summary > a { display: flex; align-items: center; min-width: 44px; min-height: 44px; }

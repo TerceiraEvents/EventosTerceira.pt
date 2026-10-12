@@ -27,6 +27,19 @@ end
 
 # Pin the visitor-facing component behavior when the canonical fixture is
 # classified as an exhibition in the data used for this build.
+target_css = File.read(File.join(SITE, 'assets/css/style.css'))
+%w[locale-other view-all standalone-link detail-link].each do |name|
+  rule_body = target_css.scan(/\.#{name}\s*\{([^}]+)\}/m).last&.first
+  valid = rule_body && %w[height width].all? { |axis| rule_body.match?(/min-#{axis}:\s*44px/) } && rule_body.match?(/display:\s*inline-flex/)
+  err(errors, "standalone .#{name} requires 44px width and height in normal flow") unless valid
+end
+saved_rule = target_css.match(/\.event-summary > a\s*\{([^}]+)\}/m)
+err(errors, 'saved primary link requires a 44px normal-flow target') unless saved_rule && saved_rule[1].include?('min-height: 44px') && saved_rule[1].include?('display: flex')
+home_target_html = File.read(File.join(SITE, 'index.html'))
+err(errors, 'homepage standalone navigation requires target classes') unless home_target_html.scan('class="standalone-link"').length >= 4
+plans_source = File.read(File.join(SITE, 'assets/js/plans.js'))
+err(errors, 'detail back/explore links require standalone targets') unless plans_source.include?("a.className='detail-link'") && plans_source.include?("back.className='detail-link'")
+
 special_path = "#{SITE}/special/index.html"
 if File.exist?(special_path)
   special_html = File.read(special_path)

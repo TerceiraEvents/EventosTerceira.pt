@@ -3,9 +3,9 @@
 <section class="home-discovery">
   <h2>{% if page_lang == 'pt' %}O que se passa na Terceira?{% else %}What's happening on Terceira?{% endif %}</h2>
   <div class="date-shortcuts">
-    <a href="{{ home_prefix | append: '/special/?range=today' | relative_url }}">{% if page_lang == 'pt' %}Hoje{% else %}Today{% endif %}</a>
-    <a href="{{ home_prefix | append: '/special/?range=tomorrow' | relative_url }}">{% if page_lang == 'pt' %}Amanhã{% else %}Tomorrow{% endif %}</a>
-    <a href="{{ home_prefix | append: '/special/?range=weekend' | relative_url }}">{% if page_lang == 'pt' %}Este fim de semana{% else %}This weekend{% endif %}</a>
+    <a class="standalone-link" href="{{ home_prefix | append: '/special/?range=today' | relative_url }}">{% if page_lang == 'pt' %}Hoje{% else %}Today{% endif %}</a>
+    <a class="standalone-link" href="{{ home_prefix | append: '/special/?range=tomorrow' | relative_url }}">{% if page_lang == 'pt' %}Amanhã{% else %}Tomorrow{% endif %}</a>
+    <a class="standalone-link" href="{{ home_prefix | append: '/special/?range=weekend' | relative_url }}">{% if page_lang == 'pt' %}Este fim de semana{% else %}This weekend{% endif %}</a>
   </div>
   <p>{% if page_lang == 'pt' %}Datas e horas dos Açores.{% else %}Dates and times in the Azores.{% endif %}</p>
   <h2>{% if page_lang == 'pt' %}Próximos eventos{% else %}Upcoming events{% endif %}</h2>
@@ -24,9 +24,9 @@
 </section>
 <section class="home-secondary"><h2>{% if page_lang == 'pt' %}Semanal{% else %}Weekly regulars{% endif %}</h2>
  <p>{% if page_lang == 'pt' %}Horários recorrentes: confirma com o local antes de sair.{% else %}Recurring schedules: confirm with the venue before setting out.{% endif %}</p>
- <a href="{{ home_prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Ver eventos semanais{% else %}Browse weekly regulars{% endif %}</a>
+ <a class="standalone-link" href="{{ home_prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Ver eventos semanais{% else %}Browse weekly regulars{% endif %}</a>
  <h2>{% if page_lang == 'pt' %}Em exposição{% else %}On View{% endif %}</h2>
- <a href="{{ home_prefix | append: '/special/?kind=exhibition&range=all' | relative_url }}">{% if page_lang == 'pt' %}Ver exposições{% else %}Browse exhibitions{% endif %}</a>
+ <a class="standalone-link" href="{{ home_prefix | append: '/special/?kind=exhibition&range=all' | relative_url }}">{% if page_lang == 'pt' %}Ver exposições{% else %}Browse exhibitions{% endif %}</a>
 </section>
 <section class="homepage-intro">
  <h2>{% if page_lang == 'pt' %}Sobre este guia{% else %}About this guide{% endif %}</h2>
@@ -43,6 +43,6 @@
   {% endif %}
  {% endfor %}
  </ul>
- <a href="{{ home_prefix | append: '/blog/' | relative_url }}">{% if page_lang == 'pt' %}Todos os artigos{% else %}All posts{% endif %}</a>
+ <a class="standalone-link" href="{{ home_prefix | append: '/blog/' | relative_url }}">{% if page_lang == 'pt' %}Todos os artigos{% else %}All posts{% endif %}</a>
 </section>
 <section class="app-store-section"><h2>{% if page_lang == 'pt' %}Leva a Terceira contigo{% else %}Take Terceira with you{% endif %}</h2>{% include app_store_badges.html %}</section>
