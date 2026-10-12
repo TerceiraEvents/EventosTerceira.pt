@@ -78,3 +78,7 @@ Record `image_source`, `image_rights`, and `image_credit` with `image`; use
 and approved rehosting. Do not assume a public social-media post grants permission.
 Keep full posters uncropped in details. Missing or failed artwork leaves all textual
 event information available. Do not fabricate an event poster.
+
+The exact venue-locality registry and curation policy are documented in
+[locality-metadata.md](locality-metadata.md). Ingestion fills missing locality for
+those approved aliases; curators retain control of existing values.
