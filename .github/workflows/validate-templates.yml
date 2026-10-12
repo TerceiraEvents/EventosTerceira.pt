@@ -28,6 +28,9 @@ jobs:
       - name: Unit-test event range selection
         run: bundle exec ruby scripts/tests/test_event_ranges.rb
 
+      - name: Validate persistent event identities
+        run: ruby scripts/tests/test_event_identity.rb
+
       - name: Unit-test client-side event filter
         run: node --test scripts/tests/test_event_filter.js
 

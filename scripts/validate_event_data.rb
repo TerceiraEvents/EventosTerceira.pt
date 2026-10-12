@@ -7,7 +7,7 @@
 require "yaml"
 require "date"
 
-def validate_events(data)
+def validate_events(data, require_ids: true)
   errors = []
   unless data.is_a?(Array)
     return ["expected a top-level YAML list, got #{data.class}"]
@@ -16,8 +16,26 @@ def validate_events(data)
   # Every event must have a Date-typed `date` field: mixed String/Date
   # entries crash Liquid's `sort: "date"` with
   # "comparison of Array with Array failed".
+  seen_ids = {}
   data.each_with_index do |event, i|
+    unless event.is_a?(Hash)
+      errors << "record ##{i}: expected a YAML mapping, got #{event.class}"
+      next
+    end
     name = event["name"] || "(unnamed ##{i})"
+    id = event["id"]
+    if id.nil?
+      errors << "#{name}: missing `id` — run ruby scripts/assign_event_ids.rb" if require_ids
+    elsif !id.is_a?(String) || !id.match?(/\A[a-zA-Z0-9_-]+\z/)
+      errors << "#{name}: invalid `id`"
+    elsif seen_ids[id]
+      errors << "#{name}: duplicate `id` #{id.inspect}, also held by #{seen_ids[id]}; retain the older persisted ID"
+    else
+      seen_ids[id] = name
+    end
+    if !event["locality"].nil? && !%w[angra praia other].include?(event["locality"])
+      errors << "#{name}: `locality` must be angra, praia, or other"
+    end
     date = event["date"]
 
     if date.nil?
@@ -67,12 +85,42 @@ def validate_events(data)
   errors
 end
 
+def yaml_mapping_errors(text)
+  stream = Psych.parse_stream(text)
+  errors = []
+  errors << 'expected exactly one YAML document' unless stream.children.size == 1
+  visit = lambda do |node, context|
+    if node.is_a?(Psych::Nodes::Mapping)
+      pairs = node.children.each_slice(2).to_a
+      named = pairs.find { |key, value| key.is_a?(Psych::Nodes::Scalar) && key.value == 'name' && value.is_a?(Psych::Nodes::Scalar) }
+      context = named ? named.last.value : context
+      seen = {}
+      pairs.each do |key, _|
+        next unless key.is_a?(Psych::Nodes::Scalar)
+        errors << "#{context}: duplicate YAML key `#{key.value}` at line #{key.start_line + 1}" if seen[key.value]
+        seen[key.value] = true
+      end
+    end
+    (node.children || []).each { |child| visit.call(child, context) } if node.respond_to?(:children)
+  end
+  visit.call(stream, 'event data')
+  errors
+end
+
+def validate_event_yaml(text, require_ids: true)
+  errors = yaml_mapping_errors(text)
+  return errors unless errors.empty?
+  data = YAML.safe_load(text, permitted_classes: [Date, Time])
+  validate_events(data, require_ids: require_ids)
+end
+
 if $PROGRAM_NAME == __FILE__
   path = ARGV[0] || "_data/special_events.yml"
   # Psych instantiates Date only with permitted_classes; the explicit
   # File.read form accepts that keyword across Ruby versions.
-  data = YAML.safe_load(File.read(path), permitted_classes: [Date, Time])
-  errors = validate_events(data)
+  text = File.read(path, encoding: 'UTF-8')
+  errors = validate_event_yaml(text)
+  data = YAML.safe_load(text, permitted_classes: [Date, Time])
 
   if errors.any?
     warn "event data validation failed:"

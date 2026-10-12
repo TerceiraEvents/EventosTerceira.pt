@@ -17,34 +17,39 @@ def assert_eq(actual, expected, name)
   end
 end
 
+def validate_fixture_events(data)
+  records = data.is_a?(Array) ? data.each_with_index.map { |event, i| { 'id' => "fixture-#{i}" }.merge(event) } : data
+  validate_events(records)
+end
+
 @failed = 0
 puts "event data validation"
 
-assert_eq validate_events(
+assert_eq validate_fixture_events(
   [{ "name" => "Expo", "date" => Date.new(2026, 10, 1), "end_date" => Date.new(2026, 10, 5) }]
 ), [], "valid range passes"
 
-assert_eq validate_events(
+assert_eq validate_fixture_events(
   [{ "name" => "One Night", "date" => Date.new(2026, 10, 4) }]
 ), [], "single-day record passes"
 
-quoted = validate_events(
+quoted = validate_fixture_events(
   [{ "name" => "Quoted", "date" => Date.new(2026, 10, 4), "end_date" => "2026-10-05" }]
 )
 assert_eq quoted.size, 1, "quoted end_date fails"
 assert_eq quoted.first.include?("end_date"), true, "quoted end_date error names the field"
 
-reversed = validate_events(
+reversed = validate_fixture_events(
   [{ "name" => "Backwards", "date" => Date.new(2026, 10, 5), "end_date" => Date.new(2026, 10, 1) }]
 )
 assert_eq reversed.size, 1, "reversed end fails"
 assert_eq reversed.first.include?("Backwards"), true, "reversed end error names the event"
 
-assert_eq validate_events(
+assert_eq validate_fixture_events(
   [{ "name" => "Dateless" }]
 ).size, 1, "missing date still fails"
 
-assert_eq validate_events(
+assert_eq validate_fixture_events(
   [{ "name" => "Quoted Start", "date" => "2026-10-04" }]
 ).size, 1, "quoted date still fails"
 
@@ -81,13 +86,13 @@ kind_cases = [
 ]
 
 kind_cases.each do |name, event, should_fail|
-  errors = validate_events([event])
+  errors = validate_fixture_events([event])
   assert_eq errors.empty?, !should_fail, name
   assert_eq errors.all? { |error| error.include?(event["name"]) }, true,
             "#{name} errors name the record" if should_fail
 end
 
-assert_eq validate_events("nope").size, 1, "non-list top level fails"
+assert_eq validate_fixture_events("nope").size, 1, "non-list top level fails"
 
 puts "validate-events workflow paths (actual parsed workflow)"
 
@@ -104,6 +109,10 @@ assert_eq pr_paths.include?("scripts/validate_event_data.rb"), true,
           "PR paths run the data gate"
 assert_eq pr_paths.include?("scripts/tests/test_event_data.rb"), true,
           "PR paths run the gate tests"
+
+assert_eq push_paths.include?('scripts/assign_event_ids.rb'), true, 'assignment changes run publication gate'
+assert_eq pr_paths.include?('scripts/tests/test_event_identity.rb'), true, 'identity test changes run publication gate'
+assert_eq workflow.fetch('jobs').fetch('validate').fetch('steps').any? { |step| step['run'] == 'ruby scripts/tests/test_event_identity.rb' }, true, 'identity suite is wired into publication workflow'
 
 puts "published browser-source records"
 special = YAML.safe_load(File.read("_data/special_events.yml"), permitted_classes: [Date])
@@ -129,6 +138,29 @@ texan = venues.find { |venue| venue["name"] == "The Texan / The Garden Club" }
 assert_eq texan.fetch("weekly").any? { |entry| entry["day"] == "Sunday" && entry["name"].include?("NFL") },
           true, "Texan venue summary includes Sunday NFL"
 
+puts "identity and locality publication rules"
+identity_cases = [
+  ['valid UUID', '11111111-1111-4111-8111-111111111111', nil, false],
+  ['missing ID', nil, nil, true], ['integer ID', 12345, nil, true],
+  ['false ID', false, nil, true], ['space ID', 'has space', nil, true],
+  ['empty ID', '', nil, true], ['unknown locality', 'valid-id', 'Angra', true],
+  ['false locality', 'valid-id', false, true], ['valid locality', 'valid-id', 'angra', false]
+]
+identity_cases.each do |label, id, locality, should_fail|
+  event = { 'name' => "Identity #{label}", 'date' => Date.new(2026, 10, 12) }
+  event['id'] = id unless id.nil?
+  event['locality'] = locality unless locality.nil?
+  errors = validate_events([event])
+  assert_eq errors.empty?, !should_fail, label
+  assert_eq errors.any? && errors.all? { |error| error.include?(event['name']) }, true, "#{label} names record" if should_fail
+end
+duplicates = [
+  { 'name' => 'First identity', 'date' => Date.new(2026, 10, 12), 'id' => 'duplicate-id' },
+  { 'name' => 'Second identity', 'date' => Date.new(2026, 10, 13), 'id' => 'duplicate-id' }
+]
+duplicate_errors = validate_events(duplicates)
+assert_eq duplicate_errors.any? { |error| error.include?('Second identity') && error.include?('`id`') && error.include?('First identity') }, true, 'duplicate ID names offending record'
+
 halloween = special.select { |event| event["source_url"] == "https://www.instagram.com/thetexanbar/reel/DeWkNyxCVDz/" }
 assert_eq halloween.length, 1, "Texan Halloween has one source-backed occurrence"
 if halloween.length == 1
@@ -139,6 +171,12 @@ if halloween.length == 1
   assert_eq event["price"], nil, "Halloween has no guessed price"
   assert_eq event["tags"].include?("free"), false, "missing price does not imply free admission"
   assert_eq event["tags"].include?("kid-friendly"), true, "organizer states family-friendly attendance"
+end
+
+puts "strict YAML key publication rules"
+["- date: 2026-10-12\n  id: first\n  id: second\n  name: Duplicate key\n", "- date: 2026-10-12\n  id: existing\n  name: Nested duplicate\n  metadata: {key: one, key: two}\n"].each do |text|
+  errors = validate_event_yaml(text)
+  assert_eq errors.any? { |error| error.include?('duplicate YAML key') }, true, 'duplicate YAML mapping keys rejected'
 end
 
 puts "explicit exhibition visiting schedules"
@@ -153,7 +191,7 @@ puts "explicit exhibition visiting schedules"
 end
 [['EN-only hours', {'visiting_hours' => '16:00–18:30'}, true], ['PT-only hours', {'visiting_hours_pt' => '16h00–18h30'}, true], ['paired hours', {'visiting_hours' => '16:00–18:30', 'visiting_hours_pt' => '16h00–18h30'}, false]].each do |name, hours, should_fail|
   event = {'name' => name, 'date' => Date.new(2026,10,12)}.merge(hours)
-  errors = validate_events([event])
+  errors = validate_fixture_events([event])
   assert_eq errors.empty?, !should_fail, name
   assert_eq errors.any? { |error| error.include?(name) }, true, "#{name} error names record" if should_fail
 end

@@ -1,5 +1,6 @@
 # Sanjoaninas 2026
 - date: 2026-06-19
+  id: 5c135bcf-e695-46af-b4f3-df32d4908a2a
   name: "Sanjoaninas 2026"
   venue: Angra do Heroísmo
   address: Angra do Heroísmo
@@ -19,6 +20,7 @@
 # Source: official CMAH program book (Sanjoaninas_2026_Completo.pdf).
 
 - date: 2026-06-19
+  id: 926a7764-32f3-4b45-91ef-34b4685d6a5d
   name: "Sanjoaninas 2026 — Abertura, Desfile e «Sons da Autonomia»"
   name_en: "Sanjoaninas 2026 — Opening, Parade and «Sons da Autonomia»"
   venue: "Centro histórico de Angra do Heroísmo"
@@ -36,6 +38,7 @@
   - kid-friendly
 
 - date: 2026-06-19
+  id: 589c139a-1c2b-485a-a3d6-e25a1b301446
   name: "Wet Bed Gang @ Palco MEO Bailão (Sanjoaninas 2026)"
   name_en: "Wet Bed Gang @ Palco MEO Bailão (Sanjoaninas 2026)"
   venue: "Palco MEO — Cerrado do Bailão"
@@ -50,6 +53,7 @@
   - nightlife
 
 - date: 2026-06-20
+  id: c76e6660-b67c-4876-a583-bd126ea4f912
   name: "Ivo Lucas @ Palco MEO Bailão (Sanjoaninas 2026)"
   venue: "Palco MEO — Cerrado do Bailão"
   address: "Cerrado do Bailão, Angra do Heroísmo"
@@ -63,6 +67,7 @@
   - nightlife
 
 - date: 2026-06-20
+  id: f97c3a8a-b39f-4e80-8ef8-835ae9c89482
   name: "Desfile do Desporto (Sanjoaninas 2026)"
   name_en: "Sports Parade (Sanjoaninas 2026)"
   venue: "Centro histórico de Angra do Heroísmo"
@@ -78,6 +83,7 @@
   - kid-friendly
 
 - date: 2026-06-21
+  id: 4431cfbd-b4b1-4f2c-b167-ad457ec5e440
   name: "Corrida à Portuguesa — Feira de São João (Sanjoaninas 2026)"
   name_en: "Portuguese-style Bullfight — Feira de São João (Sanjoaninas 2026)"
   venue: "Praça de Toiros da Ilha Terceira"
@@ -91,6 +97,7 @@
   - bullfighting
 
 - date: 2026-06-21
+  id: 5b9d0495-aa68-4279-8e5b-2959e1f7d188
   name: "Matias Damásio @ Palco MEO Bailão (Sanjoaninas 2026)"
   venue: "Palco MEO — Cerrado do Bailão"
   address: "Cerrado do Bailão, Angra do Heroísmo"
@@ -104,6 +111,7 @@
   - nightlife
 
 - date: 2026-06-22
+  id: 8e205401-969b-494e-a2a4-fa286f5c78b6
   name: "Grandiosa Corrida Mista — Feira de São João (Sanjoaninas 2026)"
   name_en: "Grand Mixed Bullfight — Feira de São João (Sanjoaninas 2026)"
   venue: "Praça de Toiros da Ilha Terceira"
@@ -117,6 +125,7 @@
   - bullfighting
 
 - date: 2026-06-22
+  id: 7faccc5d-599c-474c-a0c6-f73cb65e1a09
   name: "Desfile de Charangas e Desfile de Clássicos, Motas e Todo-o-Terreno (Sanjoaninas 2026)"
   name_en: "Charangas Parade + Classics, Motorbikes and 4×4 Parade (Sanjoaninas 2026)"
   venue: "Centro histórico de Angra do Heroísmo"
@@ -132,6 +141,7 @@
   - kid-friendly
 
 - date: 2026-06-22
+  id: 94e03d04-4470-45b3-94b2-f014d6a4eb71
   name: "Vizinhos @ Palco MEO Bailão (Sanjoaninas 2026)"
   venue: "Palco MEO — Cerrado do Bailão"
   address: "Cerrado do Bailão, Angra do Heroísmo"
@@ -145,6 +155,7 @@
   - nightlife
 
 - date: 2026-06-23
+  id: b7f05169-23be-4fe5-994e-7b54ec617086
   name: "Noite de São João — Desfile das Marchas (Sanjoaninas 2026)"
   name_en: "Noite de São João — Marches Parade (Sanjoaninas 2026)"
   venue: "Centro histórico de Angra do Heroísmo"
@@ -161,6 +172,7 @@
   - kid-friendly
 
 - date: 2026-06-24
+  id: 51f84362-1c48-4145-85f7-6d23ac1782f4
   name: "Dia de São João — Missa Solene e Procissão (Sanjoaninas 2026)"
   name_en: "Saint John's Day — Solemn Mass and Procession (Sanjoaninas 2026)"
   venue: "Igreja da Sé"
@@ -174,6 +186,7 @@
   - free
 
 - date: 2026-06-24
+  id: 21100ae6-9a68-4e19-918c-f223ceb9e7c6
   name: "Corrida Mista de São João — Feira de São João (Sanjoaninas 2026)"
   name_en: "Saint John's Mixed Bullfight — Feira de São João (Sanjoaninas 2026)"
   venue: "Praça de Toiros da Ilha Terceira"
@@ -187,6 +200,7 @@
   - bullfighting
 
 - date: 2026-06-24
+  id: e918da4c-4cea-4596-a669-b40e972656f0
   name: "Desfile das Marchas de São João — Crianças e Adultos (Sanjoaninas 2026)"
   name_en: "Saint John's Marches Parade — Children and Adults (Sanjoaninas 2026)"
   venue: "Centro histórico de Angra do Heroísmo"
@@ -202,6 +216,7 @@
   - kid-friendly
 
 - date: 2026-06-24
+  id: 1ca538fa-c104-4545-8ade-5653dae3ac1f
   name: "Grande Noite de Fado — Guida Costa, Lisete Silva, Fábio Ourique (Sanjoaninas 2026)"
   name_en: "Grand Fado Night — Guida Costa, Lisete Silva, Fábio Ourique (Sanjoaninas 2026)"
   venue: "Palco Expert — Largo Prior do Crato"
@@ -216,6 +231,7 @@
   - free
 
 - date: 2026-06-24
+  id: 46b1edec-342f-4346-871f-61fd928cb0a2
   name: "Sippinpurpp + Jotta L @ Palco MEO Bailão (Sanjoaninas 2026)"
   venue: "Palco MEO — Cerrado do Bailão"
   address: "Cerrado do Bailão, Angra do Heroísmo"
@@ -229,6 +245,7 @@
   - nightlife
 
 - date: 2026-06-25
+  id: 12d5e34f-ff51-4cf1-98ab-4505cb576b64
   name: "Desfile da Etnografia: «Entre Brumas e Memórias, a Etnografia da Açorianidade» (Sanjoaninas 2026)"
   name_en: "Ethnographic Parade: «Between Mists and Memories» (Sanjoaninas 2026)"
   venue: "Centro histórico de Angra do Heroísmo"
@@ -244,6 +261,7 @@
   - kid-friendly
 
 - date: 2026-06-25
+  id: 81663053-5c49-4245-9697-444adc372b49
   name: "Mariza @ Palco MEO Bailão (Sanjoaninas 2026)"
   venue: "Palco MEO — Cerrado do Bailão"
   address: "Cerrado do Bailão, Angra do Heroísmo"
@@ -257,6 +275,7 @@
   - nightlife
 
 - date: 2026-06-26
+  id: 0cf53124-56b6-41ef-90a3-f7ce6de7480a
   name: "Desfile das Freguesias (Sanjoaninas 2026)"
   name_en: "Parishes Parade (Sanjoaninas 2026)"
   venue: "Centro histórico de Angra do Heroísmo"
@@ -272,6 +291,7 @@
   - kid-friendly
 
 - date: 2026-06-26
+  id: edfcc3ae-476a-44fd-b5cd-39099b4056ac
   name: "Irina Barros @ Palco MEO Bailão (Sanjoaninas 2026)"
   venue: "Palco MEO — Cerrado do Bailão"
   address: "Cerrado do Bailão, Angra do Heroísmo"
@@ -285,6 +305,7 @@
   - nightlife
 
 - date: 2026-06-27
+  id: 7f746875-9518-444f-8972-c8c475349ff3
   name: "Dia do Emigrante @ Green Café (Sanjoaninas 2026)"
   name_en: "Emigrant Day @ Green Café (Sanjoaninas 2026)"
   venue: "Green Café"
@@ -301,6 +322,7 @@
   - kid-friendly
 
 - date: 2026-06-27
+  id: 59eac056-8892-4961-8a46-d83fe8442147
   name: "Desfile Infantil (Sanjoaninas 2026)"
   name_en: "Children's Parade (Sanjoaninas 2026)"
   venue: "Centro histórico de Angra do Heroísmo"
@@ -316,6 +338,7 @@
   - kid-friendly
 
 - date: 2026-06-27
+  id: c176ef99-dec2-4269-8381-204ea274be70
   name: "Art' Fado + Nuno Ribeiro @ Palco MEO Bailão (Sanjoaninas 2026)"
   venue: "Palco MEO — Cerrado do Bailão"
   address: "Cerrado do Bailão, Angra do Heroísmo"
@@ -329,6 +352,7 @@
   - nightlife
 
 - date: 2026-06-28
+  id: 5a6e3018-f312-4f5a-8cdf-c4b47e96be99
   name: "Missa Dominical com Coroação (Sanjoaninas 2026)"
   name_en: "Coronation Mass — Sunday closing (Sanjoaninas 2026)"
   venue: "Igreja da Sé"
@@ -343,6 +367,7 @@
   - outdoor
 
 - date: 2026-06-28
+  id: 7b599cef-2e23-4f25-8290-d11112a0f33f
   name: "Encerramento das Sanjoaninas 2026 — Desfile de Filarmónicas e Fogo"
   name_en: "Sanjoaninas 2026 Closing — Philharmonics Parade and Fireworks"
   venue: "Centro histórico de Angra do Heroísmo"
@@ -362,6 +387,7 @@
 # Source: Espaço AMIT / AAIP. The "ESCAMA: de peixe" strand is the AAIP
 # series (cf. "ESCAMA: de dragão 2#" further down).
 - date: 2026-06-05
+  id: baca2985-26c8-4d38-afe2-6fdff8ed4fdc
   name: "FUNK THE BANKS"
   venue: Espaço AMIT
   address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
@@ -374,6 +400,7 @@
   - nightlife
 
 - date: 2026-06-06
+  id: e3175a06-001f-4845-adf5-ceafb1758bc6
   name: "Noite de Vinil"
   name_en: "Vinyl Night"
   venue: Espaço AMIT
@@ -387,6 +414,7 @@
   - nightlife
 
 - date: 2026-06-13
+  id: 860ac225-ec5a-4f32-bf14-256d0d4373bd
   name: "ESCAMA: de peixe 1#"
   venue: Espaço AMIT
   address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
@@ -403,6 +431,7 @@
 # May 2026
 
 - date: 2026-05-05
+  id: 777560e0-db97-47fa-bbd0-e0788ee39da0
   name: "Podcast 'O Novo Normal' — Pedro Pereira, Francisco Simões, Joel Neto & Luciano Barcelos"
   venue: "Lar Doce Livro"
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -416,6 +445,7 @@
   - free
 
 - date: 2026-05-07
+  id: 1307e999-d228-4d34-abb6-deb63390c24d
   name: "Palestra — O papel do Presidente da República na concepção da Autonomia açoriana"
   name_en: "Talk — The Role of the President of the Republic in shaping Azorean Autonomy"
   venue: "Lar Doce Livro"
@@ -430,6 +460,7 @@
   - free
 
 - date: 2026-05-08
+  id: 5eaacdd4-e81c-4912-95b8-b3f0b68a191e
   name: "Lançamento — A Fantasia da Possibilidade de Maria João Fraga"
   name_en: "Book launch — A Fantasia da Possibilidade by Maria João Fraga"
   venue: "Lar Doce Livro"
@@ -444,6 +475,7 @@
   - free
 
 - date: 2026-05-10
+  id: 4a45517b-5642-4364-a2f2-757b30e7ac74
   name: "Lançamento — A Linhagem do Atlântico de Ernesto do Carvalhal"
   name_en: "Book launch — A Linhagem do Atlântico by Ernesto do Carvalhal"
   venue: "Lar Doce Livro"
@@ -458,6 +490,7 @@
   - free
 
 - date: 2026-05-15
+  id: 064c7014-b281-48c3-94cb-b9df89fa764b
   name: "Grandioso Espetáculo Tauromáquico — Praça de Toiros da Ilha Terceira"
   name_en: "Grand Bullfighting Spectacle — Terceira Bullring"
   venue: Praça de Toiros da Ilha Terceira
@@ -471,6 +504,7 @@
   - outdoor
 
 - date: 2026-05-15
+  id: d67dc12e-6047-490e-98da-f29a2b7743f4
   name: "Poesia ao Crepúsculo — 90 Anos de Manuel Alegre"
   name_en: "Poetry at Dusk — 90 Years of Manuel Alegre"
   venue: "Lar Doce Livro"
@@ -485,6 +519,7 @@
   - free
 
 - date: 2026-05-15
+  id: c7fa1a6c-c1f3-4beb-8f65-5a9729d256b1
   name: "Concerto Double Trouble"
   name_en: "Concert by Double Trouble"
   venue: "Lar Doce Livro"
@@ -499,6 +534,7 @@
   - free
 
 - date: 2026-05-15
+  id: 125d9c69-495b-469e-87f4-91faa3c6fc36
   name: "The Red Hot Tribute — 23º aniversário do Terceiraçor Moto Clube"
   name_en: "The Red Hot Tribute — Terceiraçor Moto Clube 23rd anniversary"
   venue: "Parque de Campismo das Cinco Ribeiras"
@@ -513,6 +549,7 @@
   - outdoor
 
 - date: 2026-05-15
+  id: 974569bf-8fae-4773-b204-040dd77a44cf
   name: "Karaoke — Portas do Fundo (Noite 1)"
   name_en: "Karaoke — Portas do Fundo (Night 1)"
   venue: "Portas do Fundo Karaoke Bar"
@@ -525,6 +562,7 @@
   - nightlife
 
 - date: 2026-05-16
+  id: b5b384a2-535b-4506-b299-4e961b6bbe73
   name: "Karaoke — Portas do Fundo (Noite 2)"
   name_en: "Karaoke — Portas do Fundo (Night 2)"
   venue: "Portas do Fundo Karaoke Bar"
@@ -537,6 +575,7 @@
   - nightlife
 
 - date: 2026-05-16
+  id: 79de9647-a5f1-4cae-87b9-926562e5bac6
   name: "Encontros de Origami — Pássaros"
   name_en: "Origami Meet-ups — Birds"
   venue: "Lar Doce Livro"
@@ -552,6 +591,7 @@
   - kid-friendly
 
 - date: 2026-05-16
+  id: cd1a95bc-b9b6-4cd7-b4f1-4961a6946edf
   name: "Concerto Nuance"
   name_en: "Concert by Nuance"
   venue: "Lar Doce Livro"
@@ -566,6 +606,7 @@
   - free
 
 - date: 2026-05-17
+  id: 1f1607d5-2352-48c1-86c2-df6e5c9bf1c1
   name: "Torneio de Xadrez LDL — 6.º Torneio"
   name_en: "LDL Chess Tournament — 6th Tournament"
   venue: "Lar Doce Livro"
@@ -580,6 +621,7 @@
   - kid-friendly
 
 - date: 2026-05-18
+  id: 311ebe22-1a6f-4d15-9313-c0ca3e57f51f
   name: "Dia Internacional dos Museus — Museu de Angra do Heroísmo"
   name_en: "International Museum Day — Angra do Heroísmo Museum"
   venue: "Museu de Angra do Heroísmo"
@@ -603,6 +645,7 @@
   - food-drink
 
 - date: 2026-05-19
+  id: 4d6c58e0-9672-4ee1-b476-0cc94134acd9
   name: "Noite dos Museus — Museu de Angra do Heroísmo"
   name_en: "Night of Museums — Angra do Heroísmo Museum"
   venue: "Museu de Angra do Heroísmo"
@@ -625,6 +668,7 @@
   - free
 
 - date: 2026-05-19
+  id: 4c5eade8-2fc7-4f7f-bde1-1a5c66beb111
   name: "Cinema — Lagoa: Memórias de Abril"
   name_en: "Cinema — Lagoa: Memórias de Abril"
   venue: "Lar Doce Livro"
@@ -639,6 +683,7 @@
   - free
 
 - date: 2026-05-22
+  id: 519a4069-7fc0-4461-bf3b-8e0cb5876366
   name: "Concerto Filipe Soares e Joana Pires"
   name_en: "Concert by Filipe Soares and Joana Pires"
   venue: "Lar Doce Livro"
@@ -653,6 +698,7 @@
   - free
 
 - date: 2026-05-23
+  id: 8677ba88-baf6-4c05-b4d0-e3706a531441
   name: "Oficina de Expressão Plástica para Crianças — O ABC das Cores"
   name_en: "Visual Arts Workshop for Children — The ABC of Colours"
   venue: "Lar Doce Livro"
@@ -667,6 +713,7 @@
   - kid-friendly
 
 - date: 2026-05-23
+  id: 30b75749-241b-480c-82ba-6b5a4c0d5aca
   name: "Aikido — Aula Aberta com Mário Medeiros"
   name_en: "Aikido — Open Class with Mário Medeiros"
   venue: "Ginásio da ADA (Academia Desportiva dos Açores)"
@@ -685,6 +732,7 @@
   - kid-friendly
 
 - date: 2026-05-23
+  id: 2ea20553-13d5-49cc-a853-5623f9228405
   name: "Twins is Back — Massivedrum (warm-up Rodrigo)"
   name_pt: "Twins Está de Volta — Massivedrum (warm-up Rodrigo)"
   venue: "Twins Club"
@@ -699,6 +747,7 @@
   - live-music
 
 - date: 2026-05-24
+  id: f0c57a17-be9f-4e71-ab0d-62b5a694e619
   name: "Twins — Malvada (warm-up Vitor)"
   name_pt: "Twins — Malvada (warm-up Vitor)"
   venue: "Twins Club"
@@ -713,6 +762,7 @@
   - live-music
 
 - date: 2026-05-24
+  id: ebb9d438-44f3-4b2d-8baa-b4a32c109791
   name: "Final da Taça de Portugal — Transmissão no Espaço AMIT"
   name_en: "Taça de Portugal Final — TV Broadcast at Espaço AMIT"
   venue: Espaço AMIT
@@ -726,6 +776,7 @@
   - food-drink
 
 - date: 2026-05-24
+  id: 290a86e3-575c-46de-883f-43adb3f983c2
   name: "Concerto 3HP"
   name_en: "Concert by 3HP"
   venue: "Lar Doce Livro"
@@ -740,6 +791,7 @@
   - free
 
 - date: 2026-05-24
+  id: e3d50696-6816-4d76-bd09-9ef3da047469
   name: "Festas do Espírito Santo — Primeiro Bodo (Pentecostes)"
   name_en: "Holy Spirit Festivals — First Bodo (Pentecost weekend)"
   venue: "Island-wide (impérios across Terceira)"
@@ -756,6 +808,7 @@
   - free
 
 - date: 2026-05-31
+  id: 9ab3b0a6-9718-412a-aa5f-7a7c2effdf6b
   name: "Festas do Espírito Santo — Segundo Bodo (Trindade)"
   name_en: "Holy Spirit Festivals — Second Bodo (Trinity Sunday weekend)"
   venue: "Island-wide (impérios across Terceira)"
@@ -772,6 +825,7 @@
   - free
 
 - date: 2026-05-25
+  id: 3d9a87e2-98e2-477e-b16f-976be7702f1d
   name: "Open Mic / Jam Session"
   venue: "Lar Doce Livro"
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -785,6 +839,7 @@
   - free
 
 - date: 2026-05-29
+  id: 2ae12427-570b-437b-906c-cd6cb72cad0f
   name: "Concerto Tommy G"
   name_en: "Concert by Tommy G"
   venue: "Lar Doce Livro"
@@ -799,6 +854,7 @@
   - free
 
 - date: 2026-05-29
+  id: 694a96dc-b6c8-4473-afde-ed6e176c651f
   name: "The Red Hot Tribute — Ao Vivo na Tasca do Camões"
   name_en: "The Red Hot Tribute — Live at Tasca do Camões"
   venue: "Tasca do Camões"
@@ -812,6 +868,7 @@
   - nightlife
 
 - date: 2026-05-29
+  id: a76dba44-4ab8-4923-8bb5-758cb99675d0
   name: "Limpeza Costeira — Vamos Proteger o Mar"
   name_en: "Coastal Cleanup — Let's Protect the Sea"
   venue: "Porto de São Mateus"
@@ -827,6 +884,7 @@
   - free
 
 - date: 2026-05-30
+  id: b893ee18-fee6-4eac-a6c6-a9f2877d5cb1
   name: "Concerto Unsure"
   name_en: "Concert by Unsure"
   venue: "Lar Doce Livro"
@@ -841,6 +899,7 @@
   - free
 
 - date: 2026-05-30
+  id: db50e2b6-806d-43c9-93ad-2765f83a4236
   name: "Summer Break Party — The Vinyl Lounge"
   name_pt: "Festa de Férias de Verão — The Vinyl Lounge"
   venue: "The Vinyl Lounge (inside Soundstore)"
@@ -862,6 +921,7 @@
   - free
 
 - date: 2026-05-30
+  id: 563a819e-7f49-46ee-8d8d-02198e389399
   name: "III Azores Comedy Session"
   venue: "Sociedade Recreativa de São Bento"
   address: "São Bento, Angra do Heroísmo"
@@ -873,6 +933,7 @@
   - theater
 
 - date: 2026-05-02
+  id: a4ed05ba-4994-4702-a7ec-0a47dc892d2d
   name: "DJ Night — The Hits of 2000's"
   venue: "Havanna"
   address: "Rua de São João 48, 9700-195 Angra do Heroísmo"
@@ -886,6 +947,7 @@
   - live-music
 
 - date: 2026-05-07
+  id: 67e933cd-8c8b-4351-bc37-f77ff0e13cd6
   name: "Lançamento de Livro"
   name_en: "Book Launch"
   venue: "Lar Doce Livro"
@@ -900,6 +962,7 @@
   - free
 
 - date: 2026-05-09
+  id: 9eb0700b-ee6c-4910-9c66-5e7d1d517550
   name: "Clube de Leitura"
   name_en: "Book Club"
   venue: "Lar Doce Livro"
@@ -914,6 +977,7 @@
   - free
 
 - date: 2026-05-14
+  id: 9db36c35-40a9-4bdc-a6bd-9e1912dee235
   name: "Poesia/Prosa ao Crepúsculo"
   name_en: "Poetry/Prose at Dusk"
   venue: "Lar Doce Livro"
@@ -928,6 +992,7 @@
   - free
 
 - date: 2026-05-16
+  id: ffaf02ff-bfdb-4415-a4f4-46492fef2806
   name: "Workshop de Escrita Criativa"
   name_en: "Creative Writing Workshop"
   venue: "Lar Doce Livro"
@@ -942,6 +1007,7 @@
   - workshop
 
 - date: 2026-05-21
+  id: 8c2c9bf7-d3e5-475f-a984-e45c8efa4281
   name: "Noite de Contos"
   name_en: "Storytelling Night"
   venue: "Lar Doce Livro"
@@ -956,6 +1022,7 @@
   - free
 
 - date: 2026-05-28
+  id: c83e09cf-507a-43eb-80f7-03882687e1b3
   name: "Prosa ao Crepúsculo — Maio"
   name_en: "Prose at Dusk — May"
   venue: "Lar Doce Livro"
@@ -970,6 +1037,7 @@
   - free
 
 - date: 2026-05-29
+  id: 10740e5c-32af-4a50-a276-74b1bc5fc21b
   name: "Hakuna Matata — Espectáculo de Dança"
   name_en: "Hakuna Matata — Dance Show"
   venue: Teatro Angrense
@@ -985,6 +1053,7 @@
   - theater
 
 - date: 2026-05-09
+  id: 6fb2e4a6-2675-486a-ab3e-25d989ef2c53
   name: "Oficina de Danças Tradicionais do Mundo — Miguel Lopes"
   name_en: "World Traditional Dance Workshop — Miguel Lopes"
   venue: Casa do Sal / Oficina d'Angra
@@ -1000,6 +1069,7 @@
   - free
 
 - date: 2026-05-09
+  id: c25f91c5-eff4-45bf-83f4-6b8c73c69988
   name: "Noite de Lindy Hop — Workshop & Baile"
   name_en: "Lindy Hop Night — Workshop & Social"
   venue: "Lar Doce Livro"
@@ -1014,6 +1084,7 @@
   - free
 
 - name: "ESCAMA: de dragão 2#"
+  id: c83116fc-e524-4980-becc-3144a71833a6
   date: 2026-05-09
   time: "21:30"
   venue: "AMIT"
@@ -1057,6 +1128,7 @@
   - nightlife
 
 - date: 2026-05-17
+  id: aa8e77d6-e134-4b2e-86ef-cf58e3c12d0e
   name: "Gentleman's Ride 2026"
   venue: Praia da Vitória
   address: Praia da Vitória
@@ -1069,6 +1141,7 @@
   - outdoor
 
 - date: 2026-05-16
+  id: 46790f46-1d69-489f-a01f-bff3f8f47590
   name: "XXXVI Encontro de Coros da Ilha Terceira"
   name_en: "XXXVI Choir Meet of Terceira Island"
   venue: CCCAH
@@ -1084,6 +1157,7 @@
   - free
 
 - date: 2026-05-08
+  id: 3a838419-c164-4772-9818-e5d730c1318e
   name: "K-9CAT Live"
   venue: Lar Doce Livro
   address: Rua de São João 22-24, 9700-182 Angra do Heroísmo
@@ -1099,6 +1173,7 @@
 # May 9 ESCAMA: de dragão 2# (Morbid Death / Damage Device / Boi) is
 # already listed above.
 - date: 2026-05-30
+  id: 884eb57e-d498-49d4-a95a-e9ffb5e834a5
   name: "DesaFINO — Noite de Karaoke da AMIT"
   name_en: "DesaFINO — AMIT's Karaoke Night"
   venue: Espaço AMIT
@@ -1111,6 +1186,7 @@
   - karaoke
 
 - date: 2026-05-29
+  id: a0cdf761-3058-4408-ac95-3046364efe2d
   name: "Open Decks: Eu Não Sou DJ — com Gira a Goiaba"
   name_en: "Open Decks: I'm Not a DJ — with Gira a Goiaba"
   venue: Espaço AMIT
@@ -1123,6 +1199,7 @@
   - nightlife
 
 - date: 2026-05-28
+  id: 41351c7f-12c6-4d8a-b890-8e36e209694e
   name: "Game Night: Jogos de Tabuleiro"
   name_en: "Game Night: Board Games"
   venue: Espaço AMIT
@@ -1136,6 +1213,7 @@
   - free
 
 - date: 2026-05-23
+  id: 729cab44-3a74-4026-b8f0-0d50ca9472b6
   name: "Jazz Jam Session"
   venue: Espaço AMIT
   address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
@@ -1147,6 +1225,7 @@
   - live-music
 
 - date: 2026-05-21
+  id: b3d2c704-cea0-443d-a47f-8973ff29f709
   name: "Game Night: Noite de Playstation"
   name_en: "Game Night: PlayStation Night"
   venue: Espaço AMIT
@@ -1158,6 +1237,7 @@
   tags: []
 
 - date: 2026-05-17
+  id: a87d9072-672d-49e5-a8da-655cc7def330
   name: "ESCAMA: de Borboleta — Dia 2 (Domingo)"
   name_en: "ESCAMA: de Borboleta — Day 2 (Sunday)"
   venue: Espaço AMIT
@@ -1180,6 +1260,7 @@
   - nightlife
 
 - date: 2026-05-16
+  id: 214efb35-4922-4fc4-b62e-9af583927c3a
   name: "ESCAMA: de Borboleta — Dia 1 (Sábado)"
   name_en: "ESCAMA: de Borboleta — Day 1 (Saturday)"
   venue: Espaço AMIT
@@ -1204,6 +1285,7 @@
   - nightlife
 
 - date: 2026-05-15
+  id: c773418d-4194-4876-ac0a-d81349358211
   name: "DesaFINO — Noite de Karaoke da AMIT"
   name_en: "DesaFINO — AMIT's Karaoke Night"
   venue: Espaço AMIT
@@ -1216,6 +1298,7 @@
   - karaoke
 
 - date: 2026-05-08
+  id: f9a36fad-700f-4fe7-962e-ad8d76a8a2ad
   name: "Documentary: Zeitgeist — The Movie"
   name_pt: "Documentário: Zeitgeist — O Filme"
   venue: Espaço AMIT
@@ -1228,6 +1311,7 @@
   - cinema
 
 - date: 2026-05-02
+  id: 682ce447-ae1c-44c0-8cc6-e74d4019ced3
   name: "DJ Set: LINO — British Music"
   name_pt: "DJ Set: LINO — Música Britânica"
   venue: Espaço AMIT
@@ -1240,6 +1324,7 @@
   - nightlife
 
 - date: 2026-05-01
+  id: ed647167-88bc-477e-aa88-fc1d24cff96f
   name: "Open Decks: Eu Não Sou DJ — com Henriqve"
   name_en: "Open Decks: I'm Not a DJ — with Henriqve"
   venue: Espaço AMIT
@@ -1256,6 +1341,7 @@
 # Dates, locations, or ganaderias may change — organizers are not responsible
 # for cancellations.
 - date: 2026-05-30
+  id: ece8b3f5-ed43-48b5-a3d2-cc926ff14614
   name: "Tourada à Corda — Outeiro, Conceição"
   venue: "Outeiro, Conceição"
   address: "Outeiro, Conceição, 9700 Angra do Heroísmo"
@@ -1269,6 +1355,7 @@
   - kid-friendly
 
 - date: 2026-05-30
+  id: eeb4792b-af6e-472a-93ba-afd1dd902fe8
   name: "Tourada à Corda — Rossio, Santa Cruz, Praia da Vitória"
   venue: "Rossio, Santa Cruz"
   address: "Rossio, Santa Cruz, 9760 Praia da Vitória"
@@ -1282,6 +1369,7 @@
   - kid-friendly
 
 - date: 2026-05-30
+  id: 7fcee7e6-f391-4f05-ace3-1e1a5a80c400
   name: "Bezerrada — Rua Recreio dos Artistas, Sé, Angra"
   venue: "Rua Recreio dos Artistas, Sé"
   address: "Rua Recreio dos Artistas, Sé, 9700 Angra do Heroísmo"
@@ -1295,6 +1383,7 @@
   - kid-friendly
 
 - date: 2026-05-29
+  id: 58c12e1e-262e-484a-91e9-5c5096aa7687
   name: "Bezerrada — Rossio, Santa Cruz, Praia da Vitória"
   venue: "Rossio, Santa Cruz"
   address: "Rossio, Santa Cruz, 9760 Praia da Vitória"
@@ -1308,6 +1397,7 @@
   - kid-friendly
 
 - date: 2026-05-28
+  id: d67eb690-4935-44ff-86dc-0a389757de64
   name: "Tourada à Corda — Rossio, Santa Cruz, Praia da Vitória"
   venue: "Rossio, Santa Cruz"
   address: "Rossio, Santa Cruz, 9760 Praia da Vitória"
@@ -1321,6 +1411,7 @@
   - kid-friendly
 
 - date: 2026-05-27
+  id: 2d614bbe-8096-4d99-aa7c-31d8d4d7b6bb
   name: "Tourada à Corda — Terreiro, Vila de São Mateus"
   venue: "Terreiro, Vila de São Mateus"
   address: "Terreiro, Vila de São Mateus, 9700 Angra do Heroísmo"
@@ -1334,6 +1425,7 @@
   - kid-friendly
 
 - date: 2026-05-26
+  id: a1aedb33-ce25-42d8-97c3-d0f5ec98f0b0
   name: "Tourada à Corda — Terreiro, São Bartolomeu"
   venue: "Terreiro, São Bartolomeu"
   address: "Terreiro, São Bartolomeu, 9700 Angra do Heroísmo"
@@ -1347,6 +1439,7 @@
   - kid-friendly
 
 - date: 2026-05-26
+  id: e675b56b-80a0-47e7-b2cc-13aa1d939184
   name: "Mostra bibliográfica «Angra do Heroísmo: cidade aberta ao mundo»"
   name_en: "Bibliographic exhibition «Angra do Heroísmo: an open city to the world»"
   end_date: 2026-06-30
@@ -1365,6 +1458,7 @@
   - free
 
 - date: 2026-05-26
+  id: b31ef7de-b201-4ce3-9666-3beab0990a10
   name: "Tourada à Corda — São Luís, São Bento"
   venue: "São Luís, São Bento"
   address: "São Luís, São Bento, 9700 Angra do Heroísmo"
@@ -1378,6 +1472,7 @@
   - kid-friendly
 
 - date: 2026-05-25
+  id: 339bdcad-8685-4f52-8ee0-75ebd3262f43
   name: "Tourada à Corda — Terreiro, Terra Chã"
   venue: "Terreiro, Terra Chã"
   address: "Terreiro, Terra Chã, 9700 Angra do Heroísmo"
@@ -1391,6 +1486,7 @@
   - kid-friendly
 
 - date: 2026-05-25
+  id: 1c1d578d-2193-4677-a386-88f9bb4f5358
   name: "Tourada à Corda — Rua Padre Alfredo Lucas, São Brás"
   venue: "Rua Padre Alfredo Lucas, São Brás"
   address: "Rua Padre Alfredo Lucas, São Brás, 9700 Angra do Heroísmo"
@@ -1404,6 +1500,7 @@
   - kid-friendly
 
 - date: 2026-05-25
+  id: e20ab5d5-d1e0-4722-84b2-67ce91b889e4
   name: "Tourada à Corda — Ao Lugar, Altares"
   venue: "Ao Lugar, Altares"
   address: "Ao Lugar, Altares, 9760 Praia da Vitória"
@@ -1417,6 +1514,7 @@
   - kid-friendly
 
 - date: 2026-05-23
+  id: e265fc2c-205b-4bd2-8d0c-05b7a03cedac
   name: "Tourada à Corda — Espadim Azul, Santa Rita, Santa Cruz"
   venue: "Espadim Azul, Santa Rita"
   address: "Espadim Azul, Santa Rita, 9760 Praia da Vitória"
@@ -1430,6 +1528,7 @@
   - kid-friendly
 
 - date: 2026-05-23
+  id: 0740ab66-213d-4d5f-b33b-bb411c8e1dd3
   name: "Tourada à Corda — Largo da Igreja, Vila de São Mateus"
   venue: "Largo da Igreja, Vila de São Mateus"
   address: "Largo da Igreja, Vila de São Mateus, 9700 Angra do Heroísmo"
@@ -1443,6 +1542,7 @@
   - kid-friendly
 
 - date: 2026-05-19
+  id: de35e98e-0117-471a-b5de-c4c3181340e7
   name: "Tourada à Corda — Espigão, Posto Santo"
   venue: "Espigão, Posto Santo"
   address: "Espigão, Posto Santo, 9700 Angra do Heroísmo"
@@ -1456,6 +1556,7 @@
   - kid-friendly
 
 - date: 2026-05-18
+  id: ba6a234f-b210-4d4e-a29b-9a910eb8ae24
   name: "Tourada à Corda — Pico da Urze, São Pedro, Angra"
   venue: "Pico da Urze, São Pedro"
   address: "Pico da Urze, São Pedro, 9700 Angra do Heroísmo"
@@ -1469,6 +1570,7 @@
   - kid-friendly
 
 - date: 2026-05-17
+  id: e978cac4-2a88-478b-bd42-100c18278e03
   name: "Tourada à Corda — Canada Nova, Santa Luzia, Angra"
   venue: "Canada Nova, Santa Luzia"
   address: "Canada Nova, Santa Luzia, 9700 Angra do Heroísmo"
@@ -1482,6 +1584,7 @@
   - kid-friendly
 
 - date: 2026-05-16
+  id: b8fc00d3-950f-4072-bd8e-15c108e513f9
   name: "Tourada à Corda — Ladeira Branca, Santa Luzia, Angra"
   venue: "Ladeira Branca, Santa Luzia"
   address: "Ladeira Branca, Santa Luzia, 9700 Angra do Heroísmo"
@@ -1495,6 +1598,7 @@
   - kid-friendly
 
 - date: 2026-05-11
+  id: baf1e356-fe7c-4f8c-83ed-fa46d14397d7
   name: "Tourada à Corda — Canada de Belém, Terra Chã"
   venue: "Canada de Belém, Terra Chã"
   address: "Canada de Belém, Terra Chã, 9700 Angra do Heroísmo"
@@ -1508,6 +1612,7 @@
   - kid-friendly
 
 - date: 2026-05-03
+  id: 84f9ae0d-5879-46d9-b541-eeb0dccf56e8
   name: "Tourada à Corda — Terreiro, Vila de São Mateus"
   venue: "Terreiro, Vila de São Mateus"
   address: "Terreiro, Vila de São Mateus, 9700 Angra do Heroísmo"
@@ -1521,6 +1626,7 @@
   - kid-friendly
 
 - date: 2026-05-02
+  id: efb5326a-12a9-4c7a-b5ff-27972604b20f
   name: "Tourada à Corda — Santa Rita, Santa Cruz"
   venue: "Santa Rita, Santa Cruz"
   address: "Santa Rita, Santa Cruz, 9760 Praia da Vitória"
@@ -1534,6 +1640,7 @@
   - kid-friendly
 
 - date: 2026-05-01
+  id: fa64f9b9-b8fc-4094-8428-86e3af9de644
   name: "Tourada à Corda — Canada de Belém, Terra Chã"
   venue: "Canada de Belém, Terra Chã"
   address: "Canada de Belém, Terra Chã, 9700 Angra do Heroísmo"
@@ -1547,6 +1654,7 @@
   - kid-friendly
 
 - date: 2026-05-01
+  id: 8139d7fb-3b00-478e-9547-691132207e51
   name: "Tourada à Corda — Fonte, Ribeirinha"
   venue: "Fonte, Ribeirinha"
   address: "Fonte, Ribeirinha, 9700 Angra do Heroísmo"
@@ -1560,6 +1668,7 @@
   - kid-friendly
 
 - date: 2026-05-01
+  id: 510d4ecd-155f-4603-a699-cbddd33a2e6c
   name: "Tourada à Corda — Cabouco, Fontinhas"
   venue: "Cabouco, Fontinhas"
   address: "Cabouco, Fontinhas, 9760 Praia da Vitória"
@@ -1579,6 +1688,7 @@
 # for cancellations.
 
 - date: 2026-06-01
+  id: fa2c636f-d45a-4c8c-b650-7b609576e18b
   name: "Tourada à Corda — Raminho"
   venue: "Raminho"
   address: "Raminho, 9700 Angra do Heroísmo"
@@ -1593,6 +1703,7 @@
   - kid-friendly
 
 - date: 2026-06-01
+  id: 7b875e72-98b5-4efe-a635-63454de9387e
   name: "Tourada à Corda — São João de Deus, Santa Luzia, Angra (2 puros)"
   venue: "São João de Deus, Santa Luzia"
   address: "São João de Deus, Santa Luzia, 9700 Angra do Heroísmo"
@@ -1607,6 +1718,7 @@
   - kid-friendly
 
 - date: 2026-06-01
+  id: 05d04e1f-d3ff-4b37-a262-13544c703f14
   name: "Dia Mundial da Criança no Centro Histórico"
   name_en: "International Children's Day in the Historic Centre"
   venue: "Centro Histórico de Angra do Heroísmo"
@@ -1624,6 +1736,7 @@
   - outdoor
 
 - date: 2026-06-02
+  id: 55d53253-6979-4cb0-ae84-04811cce62ca
   name: "Tourada à Corda — São Luís, São Bento"
   venue: "São Luís, São Bento"
   address: "São Luís, São Bento, 9700 Angra do Heroísmo"
@@ -1638,6 +1751,7 @@
   - kid-friendly
 
 - date: 2026-06-02
+  id: 4516df28-97f4-49ca-a7c7-9511fc48ba18
   name: "Tourada à Corda — Outeiros, Agualva"
   venue: "Outeiros, Agualva"
   address: "Outeiros, Agualva, 9760 Praia da Vitória"
@@ -1652,6 +1766,7 @@
   - kid-friendly
 
 - date: 2026-06-02
+  id: 10ace741-906e-405b-8904-573f28b45cfb
   name: "Tourada à Corda — Terra Alta, Vila de São Mateus"
   venue: "Terra Alta, Vila de São Mateus"
   address: "Terra Alta, Vila de São Mateus, 9700 Angra do Heroísmo"
@@ -1666,6 +1781,7 @@
   - kid-friendly
 
 - date: 2026-06-02
+  id: e09afa74-c9ac-4209-830c-1cc0d89bb830
   name: "Tourada à Corda — Largo da Fonte, São Sebastião"
   venue: "Largo da Fonte, São Sebastião"
   address: "Largo da Fonte, São Sebastião, 9700 Angra do Heroísmo"
@@ -1680,6 +1796,7 @@
   - kid-friendly
 
 - date: 2026-06-03
+  id: 346ae617-43ad-46e7-8be7-6df435d53d14
   name: "Tourada à Corda — Rua da Igreja, Ribeirinha"
   venue: "Rua da Igreja, Ribeirinha"
   address: "Rua da Igreja, Ribeirinha, 9700 Angra do Heroísmo"
@@ -1694,6 +1811,7 @@
   - kid-friendly
 
 - date: 2026-06-03
+  id: 9480265e-1066-4672-aa4c-6594aa503488
   name: "Tourada à Corda — Largo de S. João, Vila das Lajes"
   venue: "Largo de S. João, Vila das Lajes"
   address: "Largo de S. João, Vila das Lajes, 9760 Praia da Vitória"
@@ -1708,6 +1826,7 @@
   - kid-friendly
 
 - date: 2026-06-03
+  id: 1a0d2e1c-b904-45ab-a207-9cae5ef58f3c
   name: "Tourada à Corda — Terreiro, Vila de São Mateus"
   venue: "Terreiro, Vila de São Mateus"
   address: "Terreiro, Vila de São Mateus, 9700 Angra do Heroísmo"
@@ -1722,6 +1841,7 @@
   - kid-friendly
 
 - date: 2026-06-04
+  id: 8bf0fe33-8a5a-4be8-88c1-b524a1dd81ab
   name: "Tourada à Corda — Cantinho, Vila de São Mateus"
   venue: "Cantinho, Vila de São Mateus"
   address: "Cantinho, Vila de São Mateus, 9700 Angra do Heroísmo"
@@ -1736,6 +1856,7 @@
   - kid-friendly
 
 - date: 2026-06-04
+  id: bff9f502-4787-4c73-ab4a-db992936cd68
   name: "Tourada à Corda — Terreiro do Paço, Serra da Ribeirinha"
   venue: "Terreiro do Paço, Serra da Ribeirinha"
   address: "Terreiro do Paço, Serra da Ribeirinha, 9700 Angra do Heroísmo"
@@ -1750,6 +1871,7 @@
   - kid-friendly
 
 - date: 2026-06-04
+  id: 8cab0a1f-a247-4fd0-bdf9-d16e41a757ce
   name: "Tourada à Corda — Terreiro, Vila do Porto Judeu (Concurso de Ganadarias)"
   venue: "Terreiro, Vila do Porto Judeu"
   address: "Terreiro, Vila do Porto Judeu, 9700 Angra do Heroísmo"
@@ -1764,6 +1886,7 @@
   - kid-friendly
 
 - date: 2026-06-04
+  id: 72e9b607-d04c-43a8-97a9-3a24e3650c20
   name: "Tourada à Corda — Largo de S. João, Vila das Lajes"
   venue: "Largo de S. João, Vila das Lajes"
   address: "Largo de S. João, Vila das Lajes, 9760 Praia da Vitória"
@@ -1778,6 +1901,7 @@
   - kid-friendly
 
 - date: 2026-06-05
+  id: 5c7a51e0-1793-48dd-ab5e-a383cd3e5580
   name: "Tourada à Corda — Largo de S. João, Vila das Lajes (Concurso de Ganadarias)"
   venue: "Largo de S. João, Vila das Lajes"
   address: "Largo de S. João, Vila das Lajes, 9760 Praia da Vitória"
@@ -1792,6 +1916,7 @@
   - kid-friendly
 
 - date: 2026-06-05
+  id: cf7660ea-956c-440d-b394-c6218217e467
   name: "Tourada à Corda — Terreiro, Vila de São Mateus (Concurso de Ganadarias — touros puros)"
   venue: "Terreiro, Vila de São Mateus"
   address: "Terreiro, Vila de São Mateus, 9700 Angra do Heroísmo"
@@ -1806,6 +1931,7 @@
   - kid-friendly
 
 - date: 2026-06-05
+  id: ead51d87-f9c5-494a-a89c-1a60397b28bc
   name: "Tourada à Corda — Cinco Ribeiras"
   venue: "Cinco Ribeiras"
   address: "Cinco Ribeiras, 9700 Angra do Heroísmo"
@@ -1820,6 +1946,7 @@
   - kid-friendly
 
 - date: 2026-06-05
+  id: 0a86093c-362c-49a7-9836-71f7fb8be775
   name: "Estreia do Documentário «TerrAzores — Onde a Terra molda a vida»"
   name_en: "Documentary Premiere: «TerrAzores — Onde a Terra molda a vida»"
   venue: "Sede da Associação Os Montanheiros"
@@ -1833,6 +1960,7 @@
   - free
 
 - date: 2026-06-06
+  id: 60ebe7a2-565d-4241-8e32-42e7e6b3a5f3
   name: "Dia de Portugal, de Camões e das Comunidades Portuguesas 2026 — EXPO Forças Armadas"
   name_en: "Portugal Day 2026 — Armed Forces Expo"
   end_date: 2026-06-10
@@ -1851,6 +1979,7 @@
   - kid-friendly
 
 - date: 2026-06-06
+  id: 49b9259b-d9b6-4078-87bf-0a335a779821
   name: "Concerto: Banda de Música da Força Aérea com Coro PACTIS (Dia de Portugal)"
   name_en: "Concert: Air Force Band with PACTIS Choir (Portugal Day)"
   venue: "Auditório do Ramo Grande"
@@ -1865,6 +1994,7 @@
   - free
 
 - date: 2026-06-07
+  id: 35a21c56-f066-425c-9f8b-b41dcd095cf6
   name: "Concerto: Banda de Música da Força Aérea com Sónia Pereira e João Barros (Dia de Portugal)"
   name_en: "Concert: Air Force Band with Sónia Pereira and João Barros (Portugal Day)"
   venue: "Praça Velha"
@@ -1880,6 +2010,7 @@
   - outdoor
 
 - date: 2026-06-09
+  id: 68c63141-6bb7-45b9-b0cd-3b2a808cf6c2
   name: "Dia de Portugal — Hastear da Bandeira, Cantigas ao Desafio + Coro AMIT + Myrica Faya, Fogo de Artifício"
   name_en: "Portugal Day — Flag-raising, Cantigas ao Desafio + AMIT Choir + Myrica Faya, Fireworks"
   venue: "Pátio da Alfândega / Praça Velha / Baía de Angra"
@@ -1896,6 +2027,7 @@
   - kid-friendly
 
 - date: 2026-06-10
+  id: 07111072-61b8-4fd1-8f52-bc3cff674e30
   name: "Dia de Portugal, de Camões e das Comunidades Portuguesas — Cerimónia Militar e Arriar da Bandeira"
   name_en: "Portugal Day, Camões and the Portuguese Communities — Military Ceremony and Flag-lowering"
   venue: "Cerrado do Bailão / Pátio da Alfândega"
@@ -1910,6 +2042,7 @@
   - outdoor
 
 - date: 2026-06-06
+  id: 9a8c65d8-e1d2-4bcb-93a3-320ac455ed5d
   name: "Tourada à Corda — Canada de Belém, Terra Chã (junto ao Centro Comunitário)"
   venue: "Canada de Belém, Terra Chã"
   address: "Canada de Belém, Terra Chã, 9700 Angra do Heroísmo"
@@ -1924,6 +2057,7 @@
   - kid-friendly
 
 - date: 2026-06-06
+  id: 5af0d949-426c-447e-bef1-11102c3eaf57
   name: "Tourada à Corda — Largo do Império, Porto Martins"
   venue: "Largo do Império, Porto Martins"
   address: "Largo do Império, Porto Martins, 9760 Praia da Vitória"
@@ -1938,6 +2072,7 @@
   - kid-friendly
 
 - date: 2026-06-06
+  id: 90b6a02c-13ad-4419-b9c8-9d5471451faf
   name: "Tourada à Corda — Praça da Vila Nova"
   venue: "Praça da Vila Nova"
   address: "Praça da Vila Nova, 9760 Praia da Vitória"
@@ -1952,6 +2087,7 @@
   - kid-friendly
 
 - date: 2026-06-06
+  id: 9f9d5c7d-84fc-46e4-a74c-5dd6ad4af123
   name: "Tourada à Corda — Doze Ribeiras"
   venue: "Doze Ribeiras"
   address: "Doze Ribeiras, 9700 Angra do Heroísmo"
@@ -1966,6 +2102,7 @@
   - kid-friendly
 
 - date: 2026-06-07
+  id: 7d12a003-e350-47b5-bc29-5705ae984029
   name: "Tourada à Corda — Santo Amaro, Ribeirinha"
   venue: "Santo Amaro, Ribeirinha"
   address: "Santo Amaro, Ribeirinha, 9700 Angra do Heroísmo"
@@ -1980,6 +2117,7 @@
   - kid-friendly
 
 - date: 2026-06-07
+  id: 69e1c5aa-2f9f-4a29-9108-6d1b052c060b
   name: "Tourada à Corda — Canada de Belém, Terra Chã (junto ao Centro Comunitário)"
   venue: "Canada de Belém, Terra Chã"
   address: "Canada de Belém, Terra Chã, 9700 Angra do Heroísmo"
@@ -1994,6 +2132,7 @@
   - kid-friendly
 
 - date: 2026-06-07
+  id: 304db11b-a160-44b0-a1c7-42925a7d3f31
   name: "Tourada à Corda — Largo de S. João, Vila das Lajes"
   venue: "Largo de S. João, Vila das Lajes"
   address: "Largo de S. João, Vila das Lajes, 9760 Praia da Vitória"
@@ -2008,6 +2147,7 @@
   - kid-friendly
 
 - date: 2026-06-08
+  id: f3021681-c5e2-46da-8b95-000c921ca86e
   name: "Tourada à Corda — Largo da Igreja, Santa Bárbara"
   venue: "Largo da Igreja, Santa Bárbara"
   address: "Largo da Igreja, Santa Bárbara, 9700 Angra do Heroísmo"
@@ -2022,6 +2162,7 @@
   - kid-friendly
 
 - date: 2026-06-08
+  id: 840123d7-ea9a-4f50-b7d7-d49b752e6bbb
   name: "Tourada à Corda — Figueiras Pretas, S. Pedro, Angra"
   venue: "Figueiras Pretas, S. Pedro"
   address: "Figueiras Pretas, S. Pedro, 9700 Angra do Heroísmo"
@@ -2036,6 +2177,7 @@
   - kid-friendly
 
 - date: 2026-06-09
+  id: 3f45e26b-eb46-4924-85e3-ba1cd018289d
   name: "Tourada à Corda — Serra de Santiago, Vila das Lajes (Vacada)"
   venue: "Serra de Santiago, Vila das Lajes"
   address: "Serra de Santiago, Vila das Lajes, 9760 Praia da Vitória"
@@ -2050,6 +2192,7 @@
   - kid-friendly
 
 - date: 2026-06-12
+  id: ad2355e2-ea7c-4e8d-9f81-79eb474472ae
   name: "Tourada à Corda — Estrada Municipal, Vila Nova (Vacada)"
   venue: "Estrada Municipal, Vila Nova"
   address: "Estrada Municipal, Vila Nova, 9760 Praia da Vitória"
@@ -2064,6 +2207,7 @@
   - kid-friendly
 
 - date: 2026-06-13
+  id: d3e170ac-b9e5-4000-86b2-0d154bb1dda3
   name: "Tourada à Corda — Serra de Santiago, Vila das Lajes"
   venue: "Serra de Santiago, Vila das Lajes"
   address: "Serra de Santiago, Vila das Lajes, 9760 Praia da Vitória"
@@ -2078,6 +2222,7 @@
   - kid-friendly
 
 - date: 2026-06-13
+  id: 79c8951b-e7d3-4f3b-9a77-01aff689f974
   name: "Tourada à Corda — Corpo Santo, Conceição"
   venue: "Corpo Santo, Conceição"
   address: "Corpo Santo, Conceição, 9700 Angra do Heroísmo"
@@ -2092,6 +2237,7 @@
   - kid-friendly
 
 - date: 2026-06-14
+  id: 6761ade3-e500-4f8c-87c5-e5ec1fb17877
   name: "Tourada à Corda — Praça da Vila Nova"
   venue: "Praça da Vila Nova"
   address: "Praça da Vila Nova, 9760 Praia da Vitória"
@@ -2106,6 +2252,7 @@
   - kid-friendly
 
 - date: 2026-06-14
+  id: 8d50beb3-db7d-4fd1-870d-21422acd2469
   name: "Tourada à Corda — Bicas de Cabo Verde, S. Pedro, Angra"
   venue: "Bicas de Cabo Verde, S. Pedro"
   address: "Bicas de Cabo Verde, S. Pedro, 9700 Angra do Heroísmo"
@@ -2120,6 +2267,7 @@
   - kid-friendly
 
 - date: 2026-06-15
+  id: 9c65be3e-6e12-4359-b1e1-e96a808be206
   name: "Tourada à Corda — Boa Hora, Terra Chã"
   venue: "Boa Hora, Terra Chã"
   address: "Boa Hora, Terra Chã, 9700 Angra do Heroísmo"
@@ -2134,6 +2282,7 @@
   - kid-friendly
 
 - date: 2026-06-20
+  id: 34c68516-82e7-4523-9ce3-a1b3e6f9500a
   name: "Tourada à Corda — Largo de São Bento"
   venue: "Largo de São Bento"
   address: "Largo de São Bento, 9700 Angra do Heroísmo"
@@ -2149,6 +2298,7 @@
   - kid-friendly
 
 - date: 2026-06-24
+  id: 2acb19dd-6062-43c1-89b5-6088de429f81
   name: "Tourada à Corda — Alto das Covas, Angra (Espera de Gado)"
   venue: "Alto das Covas"
   address: "Alto das Covas, 9700 Angra do Heroísmo"
@@ -2164,6 +2314,7 @@
   - kid-friendly
 
 - date: 2026-06-25
+  id: 964b431b-d401-4f95-bc1d-d6308d5a156e
   name: "Tourada à Corda — Rua de São João, Sé, Angra (Espera de Gado Infantil)"
   venue: "Rua de São João, Sé"
   address: "Rua de São João, Sé, 9700 Angra do Heroísmo"
@@ -2179,6 +2330,7 @@
   - kid-friendly
 
 - date: 2026-06-26
+  id: 4924e081-6e0e-4aa0-8e85-a20fc2abd5d7
   name: "Tourada à Corda — Largo da Igreja, Santa Bárbara"
   venue: "Largo da Igreja, Santa Bárbara"
   address: "Largo da Igreja, Santa Bárbara, 9700 Angra do Heroísmo"
@@ -2194,6 +2346,7 @@
   - kid-friendly
 
 - date: 2026-06-27
+  id: 75cba765-e7c9-4fd6-af1c-06fc99672a66
   name: "Tourada à Corda — Largo da Igreja, Santa Bárbara"
   venue: "Largo da Igreja, Santa Bárbara"
   address: "Largo da Igreja, Santa Bárbara, 9700 Angra do Heroísmo"
@@ -2208,6 +2361,7 @@
   - kid-friendly
 
 - date: 2026-06-27
+  id: 8e89c2ea-2975-4155-99ef-2cda2ed96437
   name: "Tourada à Corda — Porto S. Fernando, Porto Martins"
   venue: "Porto S. Fernando, Porto Martins"
   address: "Porto S. Fernando, Porto Martins, 9760 Praia da Vitória"
@@ -2222,6 +2376,7 @@
   - kid-friendly
 
 - date: 2026-06-28
+  id: a01fb5d5-20bf-42c2-a51e-842d028ce912
   name: "Tourada à Corda — Porto das Pipas, Angra"
   venue: "Porto das Pipas"
   address: "Porto das Pipas, 9700 Angra do Heroísmo"
@@ -2237,6 +2392,7 @@
   - kid-friendly
 
 - date: 2026-06-29
+  id: 710bb944-0163-47e1-a1d0-e06f066ebeaa
   name: "Tourada à Corda — Caminho dos Galinheiros, Vila Nova"
   venue: "Caminho dos Galinheiros, Vila Nova"
   address: "Caminho dos Galinheiros, Vila Nova, 9760 Praia da Vitória"
@@ -2251,6 +2407,7 @@
   - kid-friendly
 
 - date: 2026-06-30
+  id: be8ca45d-3b7c-4eca-8d85-5b8fa0277964
   name: "Tourada à Corda — Nossa Senhora da Ajuda, Vila Nova"
   venue: "Nossa Senhora da Ajuda, Vila Nova"
   address: "Nossa Senhora da Ajuda, Vila Nova, 9760 Praia da Vitória"
@@ -2266,6 +2423,7 @@
 
 # April 2026
 - date: 2026-04-25
+  id: e0b4f780-be22-416f-ba4a-606e01827b5d
   name: "Sons da Revolução — Melo Rift"
   name_en: "Sounds of the Revolution — Melo Rift"
   venue: Auditório AMIT
@@ -2281,6 +2439,7 @@
   - live-music
 
 - date: 2026-04-24
+  id: b58e04c4-103e-4029-9244-9999ba8adc8b
   name: "Jantar de Angariação AMIT + Workshop de Dança + Live Music"
   name_en: "AMIT Fundraising Dinner + Dance Workshop + Live Music"
   venue: Auditório AMIT
@@ -2296,6 +2455,7 @@
   - workshop
 
 - date: 2026-04-23
+  id: 90e42403-60ec-470d-a5d9-0735aadc08ad
   name: "Game Night: Marralhinha"
   venue: Auditório AMIT
   address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
@@ -2306,6 +2466,7 @@
   tags: []
 
 - date: 2026-04-21
+  id: a87944b5-a0a1-469e-98f5-f4cf8b9cb43c
   name: "Torneio EAFC 26 — Playstation"
   name_en: "EA FC 26 Tournament — PlayStation"
   venue: Espaço AMIT
@@ -2320,6 +2481,7 @@
   - free
 
 - date: 2026-04-11
+  id: 9d40847a-099e-4549-b7d8-3be227345791
   name: "Jazz Jam Session"
   venue: Auditório AMIT
   address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
@@ -2331,6 +2493,7 @@
   - live-music
 
 - date: 2026-04-10
+  id: 8ede7aae-b908-4fcf-b7ba-be38e5d77600
   name: "Open Decks: Eu Não Sou DJ — com Guida Sabida"
   name_en: "Open Decks: I'm Not a DJ — with Guida Sabida"
   venue: Auditório AMIT
@@ -2343,6 +2506,7 @@
   - nightlife
 
 - date: 2026-04-09
+  id: e083a0fa-90cc-41fd-9a43-2f480d7d8b17
   name: "Game Night: Sueca"
   venue: Auditório AMIT
   address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
@@ -2353,6 +2517,7 @@
   tags: []
 
 - date: 2026-04-03
+  id: 2b846691-ce7b-4e1d-bcd0-d85015c419de
   name: "Open Decks: Eu Não Sou DJ — com Zé Grande"
   name_en: "Open Decks: I'm Not a DJ — with Zé Grande"
   venue: Auditório AMIT
@@ -2365,6 +2530,7 @@
   - nightlife
 
 - date: 2026-04-30
+  id: d1aed562-d4fb-4019-bd13-868eef237fbb
   name: "DesaFINO — Noite de Karaoke da AMIT"
   name_en: "DesaFINO — AMIT's Karaoke Night"
   venue: Auditório AMIT
@@ -2378,6 +2544,7 @@
   - karaoke
 
 - date: 2026-04-30
+  id: 87e96265-2765-46d6-a703-b77038d2c41b
   name: "Cinema: Projeto Hail Mary"
   name_en: "Cinema: Project Hail Mary"
   venue: CCCAH
@@ -2391,6 +2558,7 @@
   instagram: https://www.instagram.com/p/DWjE7iIiXqg/?img_index=6
 
 - date: 2026-04-25
+  id: 1cc32157-df5c-4bf1-8ded-22302e9c0a93
   name: "Desfile de Filarmónicas — 25 de Abril"
   name_en: "Brass Band Parade — April 25th"
   venue: Rua da Sé
@@ -2407,6 +2575,7 @@
   - free
 
 - date: 2026-04-23
+  id: c666762d-41ee-4bf1-930d-0a952589845b
   name: "Arraial Taurino 2026 — Quinta-feira (Dia 1)"
   name_en: "Arraial Taurino 2026 — Thursday (Day 1)"
   venue: Praça de Toiros da Ilha Terceira
@@ -2446,6 +2615,7 @@
   - outdoor
 
 - date: 2026-04-24
+  id: 9d2b1678-10cf-45ab-aa11-d28e39846425
   name: "Arraial Taurino 2026 — Sexta-feira (Dia 2)"
   name_en: "Arraial Taurino 2026 — Friday (Day 2)"
   venue: Praça de Toiros da Ilha Terceira
@@ -2477,6 +2647,7 @@
   - outdoor
 
 - date: 2026-04-25
+  id: 42fd61f2-16cb-48af-b100-41df36606edb
   name: "Arraial Taurino 2026 — Sábado (Dia 3)"
   name_en: "Arraial Taurino 2026 — Saturday (Day 3)"
   venue: Praça de Toiros da Ilha Terceira
@@ -2518,6 +2689,7 @@
   - outdoor
 
 - date: 2026-04-26
+  id: dbaa050e-f5ab-44b8-a7f5-720b41ad2870
   name: "Arraial Taurino 2026 — Domingo (Dia 4)"
   name_en: "Arraial Taurino 2026 — Sunday (Day 4)"
   venue: Praça de Toiros da Ilha Terceira
@@ -2553,6 +2725,7 @@
   - outdoor
 
 - date: 2026-04-23
+  id: 2333bed1-4742-490b-a31e-2bc0156d7bc0
   name: "Cinema: Ready or Not 2 — O Ritual"
   name_en: "Cinema: Ready or Not 2 — The Ritual"
   venue: CCCAH
@@ -2566,6 +2739,7 @@
   - cinema
 
 - date: 2026-04-22
+  id: 8a3ddca1-59ae-44c9-bfe7-bab581a76be4
   name: "Apresentação do Livro: A Lógica das Ideias"
   name_en: "Book Presentation: A Lógica das Ideias"
   venue: Paços do Concelho
@@ -2581,6 +2755,7 @@
 
 
 - date: 2026-04-18
+  id: 637e4c1c-54d0-4e9e-950c-ff9ff895e12e
   name: "III Festa Americana — Fried Okra: Traditional Americana Open Jam Night"
   venue: Lar Doce Livro
   address: Rua de São João 22-24, 9700-182 Angra do Heroísmo
@@ -2593,6 +2768,7 @@
   - live-music
 
 - date: 2026-04-18
+  id: 3a5d7832-bdf8-49d1-9660-da9a16536028
   name: "Don't Funk With My Disco — DJ Rúben Araújo"
   venue: Tasca do Camões
   address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
@@ -2605,6 +2781,7 @@
   - dance
 
 - date: 2026-04-18
+  id: a7ca9fce-8fab-4e8a-bf71-93ff7ec50bc3
   name: "Festival de Sopas — Marcha dos Veteranos"
   name_en: "Soup Festival — Marcha dos Veteranos"
   venue: Edifício Cultural São Bento
@@ -2619,6 +2796,7 @@
   - food-drink
 
 - date: 2026-04-18
+  id: 51f3d8ae-d20a-4341-a45f-bfc46f81c249
   name: "K-9CAT Live — Record Store Day"
   venue: The Vinyl Lounge
   address: Angra do Heroísmo
@@ -2631,6 +2809,7 @@
   - live-music
 
 - date: 2026-04-18
+  id: b5c34ce7-f073-4291-b79b-9a7af8889776
   name: "Pilot Meeting for Immigrants in Terceira"
   name_pt: "Encontro Piloto para Imigrantes na Terceira"
   venue: Auditório AMIT
@@ -2644,6 +2823,7 @@
   - food-drink
 
 - date: 2026-04-17
+  id: bf215825-5746-47c4-a6c4-3a500040fd34
   name: "International Day for Monuments and Sites"
   name_pt: "Dia Internacional dos Monumentos e Sítios"
   venue: "Meeting point at Largo da Luz / Largo do Conde da Praia da Vitória"
@@ -2655,6 +2835,7 @@
   - free
 
 - name: "Balas & Bolinhos - Só Mais uma coisa"
+  id: c2849a6b-0667-4401-a30d-5968512de991
   date: 2026-04-17
   time: "21:00"
   venue: "AMIT"
@@ -2677,6 +2858,7 @@
   - cinema
 
 - name: "ESCAMA: de dragão 1#"
+  id: d666964f-0605-41e8-ad53-8e8e4fe4708e
   date: 2026-04-17
   time: "23:30"
   venue: "AMIT"
@@ -2705,6 +2887,7 @@
   - nightlife
 
 - date: 2026-04-17
+  id: e7345844-cf82-4811-a0fe-c5d3abf6a9c1
   name: "Double Trouble — Concerto ao Vivo"
   name_en: "Double Trouble — Live Concert"
   venue: Tasca do Camões
@@ -2718,6 +2901,7 @@
   - nightlife
 
 - date: 2026-04-16
+  id: 338d7cc2-7dbd-4488-b911-f5efede47ae7
   name: "DesaFINO — Noite de Karaoke da AMIT"
   name_en: "DesaFINO — AMIT's Karaoke Night"
   venue: Auditório AMIT
@@ -2732,6 +2916,7 @@
   - karaoke
 
 - date: 2026-04-16
+  id: 5585709f-90ea-4876-9c28-ae79b0df2d5c
   name: "Cinema: Good Luck Have Fun Don't Die"
   venue: CCCAH
   address: Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo
@@ -2744,6 +2929,7 @@
   - cinema
 
 - date: 2026-04-14
+  id: 381d3e5c-4e5d-4bdd-88dc-3fefed5201ca
   name: "Palestra: Quem foi, afinal, esse Silvestre Ribeiro?"
   name_en: "Talk: Who, after all, was this Silvestre Ribeiro?"
   venue: Lar Doce Livro
@@ -2757,6 +2943,7 @@
   - literature
 
 - date: 2026-04-13
+  id: 5091e30f-e7a8-4b7c-83de-a0b8c3238a63
   name: "Clube de Leitura — Sessão Especial: O Último Avô"
   name_en: "Book Club — Special Session: O Último Avô"
   venue: Lar Doce Livro
@@ -2770,6 +2957,7 @@
   - literature
 
 - date: 2026-04-13
+  id: bb6976d6-7ac5-4ee9-9492-723d0f27ea82
   name: "Clube de Leitura — Filho do Pai"
   name_en: "Book Club — Filho do Pai"
   venue: Lar Doce Livro
@@ -2783,6 +2971,7 @@
   - literature
 
 - date: 2026-04-11
+  id: 7f77a5d4-8c07-4afe-abe7-a1878cc2fd1e
   name: "João da Ilha ao vivo no The Vinyl Lounge"
   name_en: "João da Ilha live at The Vinyl Lounge"
   venue: "The Vinyl Lounge - inside Soundstore"
@@ -2796,6 +2985,7 @@
   - free
 
 - date: 2026-04-11
+  id: c66b75ad-18d6-49ca-a6e0-f1a16046360b
   name: "K-9CAT Live"
   venue: Wine Not?
   address: Angra do Heroísmo
@@ -2808,6 +2998,7 @@
   - live-music
 
 - date: 2026-04-11
+  id: 1d35aea1-1b8a-4268-aac6-5cb20d133359
   name: "Cinema: Super Mario Galaxy — O Filme"
   name_en: "Cinema: Super Mario Galaxy — The Movie"
   venue: CCCAH
@@ -2822,6 +3013,7 @@
   - cinema
 
 - date: 2026-04-10
+  id: 818d41eb-77fd-4aba-b6cf-06ecab94c4b0
   name: "Expo Atlantic Terroir"
   venue: "Parque Multissetorial da Ilha Terceira"
   address: "Parque Multissetorial da Ilha Terceira, Angra do Heroísmo"
@@ -2833,6 +3025,7 @@
   - free
 
 - date: 2026-04-10
+  id: 1ab28b89-99b2-4fcc-82d9-befda6c29d76
   name: "Festival Termómetro"
   venue: CCCAH
   address: Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo
@@ -2846,6 +3039,7 @@
   - free
 
 - date: 2026-04-09
+  id: 55413907-196d-4efe-8c39-f71bf53d66c1
   name: "Cinema: A Noiva!"
   name_en: "Cinema: The Bride!"
   venue: CCCAH
@@ -2859,6 +3053,7 @@
   - cinema
 
 - date: 2026-04-07
+  id: 0c9ca629-b0ff-423c-8e93-32822c1285f1
   name: "Exposição: Tipografias de Angra"
   name_en: "Exhibition: Typographies of Angra"
   venue: Paços do Concelho
@@ -2873,6 +3068,7 @@
   - free
 
 - date: 2026-04-07
+  id: 8a6d4214-c5c0-4ff1-9ec6-27ce77f457d8
   name: "Jornadas Municipais da Saúde (4ª Edição)"
   name_en: "Municipal Health Conference (4th Edition)"
   venue: CCCAH
@@ -2886,6 +3082,7 @@
   - free
 
 - date: 2026-04-05
+  id: 2eecb174-39e5-43be-b213-19e36f7e682e
   name: "Brunch de Páscoa no Garden Club"
   name_en: "Easter Brunch at the Garden Club"
   venue: The Garden Club
@@ -2898,6 +3095,7 @@
   - food-drink
 
 - date: 2026-04-05
+  id: 0f20f9c1-0678-44f0-b9af-450709584a00
   name: "Almoço de Páscoa no The Texan"
   name_en: "Easter Lunch at The Texan"
   venue: The Texan
@@ -2910,6 +3108,7 @@
   - food-drink
 
 - date: 2026-04-04
+  id: 1168b3f5-991b-468f-b058-32a5795cdb26
   name: "Macow & Gonga — Drum & Bass Session"
   venue: Casa do Sal / Oficina d'Angra
   address: Estrada Gaspar Corte-Real, Angra do Heroísmo
@@ -2923,6 +3122,7 @@
   - nightlife
 
 - date: 2026-04-04
+  id: d2d692a7-2632-4c3d-ad8e-9dc31aa8f4bc
   name: "Art'Fado convida Marco Rodrigues"
   name_en: "Art'Fado invites Marco Rodrigues"
   venue: Teatro Angrense
@@ -2936,6 +3136,7 @@
   - live-music
 
 - date: 2026-04-02
+  id: b925e542-7ccc-4503-9b06-5306d60c5662
   name: "DesaFINO — Noite de Karaoke da AMIT"
   name_en: "DesaFINO — AMIT's Karaoke Night"
   venue: Auditório AMIT
@@ -2948,6 +3149,7 @@
   - karaoke
 
 - date: 2026-04-02
+  id: c7d8bd17-a9a0-4d30-b0d3-2f33a5ceb027
   name: "Havanna Easter Party"
   name_pt: "Festa de Páscoa no Havanna"
   venue: Havanna Club
@@ -2961,6 +3163,7 @@
 
 # AMIT Events - March 2026
 - date: 2026-03-28
+  id: 03d34681-ded1-4266-bcca-b6dca73f62d9
   name: "Curso de Jazz com Nuno Ferreira"
   name_en: "Jazz Course with Nuno Ferreira"
   venue: Auditório AMIT
@@ -2974,6 +3177,7 @@
   - live-music
 
 - date: 2026-03-28
+  id: 539bdd7c-38ba-4e25-94ce-f1d7ae7b2149
   name: "Jazz JAM Session com Nuno Ferreira"
   name_en: "Jazz JAM Session with Nuno Ferreira"
   venue: Auditório AMIT
@@ -2988,6 +3192,7 @@
   - free
 
 - date: 2026-03-14
+  id: 72420647-4771-48a9-91eb-78e5a803d5b9
   name: "Jazz JAM Session"
   venue: Auditório AMIT
   address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
@@ -3001,6 +3206,7 @@
   - free
 
 - date: 2026-03-08
+  id: f21074dd-41f4-4005-b202-03cf74fa246a
   name: 'Lançamento do livro "Despertar com Alma"'
   name_en: "Book launch: \"Despertar com Alma\""
   venue: Auditório AMIT
@@ -3016,6 +3222,7 @@
 
 # Festival de Teatro 2026 - Angra do Heroísmo
 - date: 2026-03-29
+  id: 04d7309f-4c78-45b6-821c-b9ed38b345bf
   name: '"O Melhor de Três"'
   venue: Teatro Angrense
   address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
@@ -3029,6 +3236,7 @@
   - theater
 
 - date: 2026-03-28
+  id: 6d2f9ca7-7eb7-4350-8758-1ceb53660e71
   name: '"O Cultivo de Flores de Plástico"'
   venue: Teatro Angrense
   address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
@@ -3042,6 +3250,7 @@
   - theater
 
 - date: 2026-03-27
+  id: 16392653-8641-4ec5-8e95-75a58e7850ad
   name: '"Álamo - a palavra encena"'
   venue: Teatro Angrense
   address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
@@ -3055,6 +3264,7 @@
   - theater
 
 - date: 2026-03-24
+  id: dfc61700-6b15-4494-b852-faea1086f330
   name: '"O Chão Começou-me a Faltar"'
   venue: Teatro Angrense
   address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
@@ -3068,6 +3278,7 @@
   - theater
 
 - date: 2026-03-21
+  id: 6fbbf32b-50ad-487e-9e8c-cd29f11a80be
   name: '"Cabalhau"'
   venue: CCCAH
   address: Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo
@@ -3081,6 +3292,7 @@
   - theater
 
 - date: 2026-03-21
+  id: 27f221be-eb77-442a-9516-7c26dbd993d2
   name: "Equinócio da Primavera"
   name_en: "Spring Equinox"
   venue: Zona de Lazer de São Brás
@@ -3102,6 +3314,7 @@
   - No unaccompanied minors
 
 - date: 2026-03-20
+  id: ee7b0544-568f-49f8-8a7f-dfaffe164702
   name: '"José Matias - Entretém Para Quatro Mulheres"'
   venue: Teatro Angrense
   address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
@@ -3115,6 +3328,7 @@
   - theater
 
 - date: 2026-03-15
+  id: b7fdac3e-cea8-455f-85f2-1ad6dc3ec950
   name: '"O Chá das Freiras"'
   venue: Teatro Angrense
   address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
@@ -3128,6 +3342,7 @@
   - theater
 
 - date: 2026-03-13
+  id: ea1d2a96-462a-4c9f-96af-b64e5284b123
   name: '"A Viagem Artificial"'
   venue: Teatro Angrense
   address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
@@ -3141,6 +3356,7 @@
   - theater
 
 - date: 2026-03-11
+  id: 8127b5fb-4b97-48ed-910c-47650a2cacb7
   name: '"Toc Toc" (19h00 + 21h00)'
   venue: Teatro Angrense
   address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
@@ -3154,6 +3370,7 @@
   - theater
 
 - date: 2026-03-10
+  id: d346be15-ef43-4580-9092-7964dd45b681
   name: '"Toc Toc"'
   venue: Teatro Angrense
   address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
@@ -3167,6 +3384,7 @@
   - theater
 
 - date: 2026-01-03
+  id: b2bfb22e-838c-4e17-ae75-c2f321e9bdd0
   name: "Concerto ao Vivo - Double Trouble"
   name_en: "Live Concert - Double Trouble"
   venue: Tasca do Camões
@@ -3178,6 +3396,7 @@
   - live-music
 
 - date: 2025-12-27
+  id: b4b0ba83-153b-456d-a751-fc032382eac2
   name: "The Big 90's Party - Com Red Hot Tribute"
   venue: Tasca do Camões
   address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
@@ -3189,6 +3408,7 @@
   - nightlife
 
 - date: 2025-12-26
+  id: fff2cea7-29f9-4f3e-abd4-45a98119c9d9
   name: "Sexta-Feira Karaoke"
   name_en: "Friday Karaoke"
   venue: Tasca do Camões
@@ -3200,6 +3420,7 @@
   - karaoke
 
 - date: 2025-12-20
+  id: 31e09db9-1718-451b-9b52-4034b182a2ee
   name: "Kevin Floyd: A Primeira Vez em Portugal"
   name_en: "Kevin Floyd: First Time in Portugal"
   venue: Tasca do Camões
@@ -3211,6 +3432,7 @@
   - live-music
 
 - date: 2025-12-19
+  id: 78573c66-f046-4e20-8985-5fd00ebcdc73
   name: "Noite de Karaoke"
   name_en: "Karaoke Night"
   venue: Tasca do Camões
@@ -3222,6 +3444,7 @@
   - karaoke
 
 - date: 2025-12-13
+  id: dc1bdaab-043d-47ec-b1a1-22ef2a835ee7
   name: "Concerto ao Vivo com Regalo Reggae"
   name_en: "Live Concert with Regalo Reggae"
   venue: Tasca do Camões
@@ -3233,6 +3456,7 @@
   - live-music
 
 - date: 2025-12-07
+  id: 5b2f3048-8235-4d74-bcd2-e426becb174b
   name: "Concerto Rock ao Vivo com 3 HP"
   name_en: "Live Rock Concert with 3 HP"
   venue: Tasca do Camões
@@ -3244,6 +3468,7 @@
   - live-music
 
 - date: 2025-12-03
+  id: 33cfe9b5-a282-441d-a0c7-4bec8fd20bc5
   name: "Concerto Rock com 3HP"
   name_en: "Rock Concert with 3HP"
   venue: Tasca do Camões
@@ -3255,6 +3480,7 @@
   - live-music
 
 - date: 2025-11-29
+  id: 3f84a41d-5abd-4b4b-a3a5-beca48ceee71
   name: "Sábado Noite de Samba"
   name_en: "Saturday Samba Night"
   venue: Tasca do Camões
@@ -3267,6 +3493,7 @@
   - nightlife
 
 - date: 2025-11-21
+  id: 8fcbc428-6a7b-43b7-8193-38698cc353fa
   name: "Concerto ao Vivo com Double Trouble & DJ Cosmic Clara"
   name_en: "Live Concert with Double Trouble & DJ Cosmic Clara"
   venue: Tasca do Camões
@@ -3279,6 +3506,7 @@
   - nightlife
 
 - date: 2025-02-27
+  id: ca731c43-7027-4895-b7c6-cad365bb0e94
   name: "Leitura de Poetas Delirantes"
   name_en: "Reading by Delirious Poets"
   venue: Lar Doce Livro
@@ -3290,6 +3518,7 @@
   - literature
 
 - name: "Training – Introduction to Organic Horticulture"
+  id: 8f5735bc-3512-48d5-9b43-f2677d40658f
   name_pt: "Formação – Introdução à Horticultura Biológica"
   date: 2026-05-04
   venue: "BioAzórica CRL Headquarters"
@@ -3320,6 +3549,7 @@ geral@bioazorica.pt
     - workshop
     
 - name: "Festival de Sopas"
+  id: 97bb3030-f16d-4d45-9ba9-d7a466162323
   name_en: "Soup Festival"
   date: 2026-05-09
   time: "19:30"
@@ -3355,6 +3585,7 @@ Come join us and support our festivities!"
 # Late May / June / July / Oct / Nov 2026 — batch update
 
 - date: 2026-05-22
+  id: 4bcf1fd2-fec9-48c7-bdef-39fd9343a858
   name: "Grande Entrevista: O CDS/Açores de Artur Lima aceitaria integrar uma AD?"
   name_en: "Big Interview: Would the CDS/Azores under Artur Lima join a right-wing coalition?"
   venue: Lar Doce Livro
@@ -3369,6 +3600,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-05-22
+  id: 478f65e5-8d0b-41a7-a23a-44c22b0badab
   name: "House Night com DJ JP"
   name_en: "House Night with DJ JP"
   venue: Lar Doce Livro
@@ -3383,6 +3615,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-05-22
+  id: 1568104b-baa1-4f98-a604-002f58bf93f6
   name: "Live Act: DJ Pedro Alves (warm-up by Rafa)"
   venue: Havanna Club
   address: "Angra do Heroísmo"
@@ -3395,6 +3628,7 @@ Come join us and support our festivities!"
   - nightlife
 
 - date: 2026-05-23
+  id: db27f4b3-2164-485b-a85a-619dc8c61414
   name: "Danças Tradicionais do Mundo com Joana Loura"
   name_en: "World Traditional Dances with Joana Loura"
   venue: Casa do Sal
@@ -3408,6 +3642,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-05-23
+  id: 9b97fe41-793c-4cb4-8514-2b645b712f2a
   name: "Apresentação da Revista Literária Ogygia com Avelina da Silveira"
   name_en: "Launch of Literary Magazine Ogygia with Avelina da Silveira"
   venue: Lar Doce Livro
@@ -3422,6 +3657,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-05-23
+  id: 8e45a63e-a974-4923-b184-5ba6c57d72d3
   name: "Poetas da Ilha — Poesia Original Terceirense"
   name_en: "Poets of the Island — Original Terceira Poetry"
   venue: Lar Doce Livro
@@ -3437,6 +3673,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-05-23
+  id: 1f8f0d11-69bd-4704-9bef-87c485c49d07
   name: "Open Mic / Jam Session — Noite de Microfone Livre"
   name_en: "Open Mic / Jam Session"
   venue: Lar Doce Livro
@@ -3450,6 +3687,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-05-23
+  id: 200ee3ff-51be-4fbc-82b5-3b70e3d5deaf
   name: "Concerto Angra Convida Rui Massena — Parents' House (Piano Solo)"
   name_en: "Concert: Angra Convida Rui Massena — Parents' House (Piano Solo)"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -3462,6 +3700,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-05-23
+  id: 1e12d139-a023-4f5b-a57f-0c9da3e48926
   name: "Delta Project ao Vivo"
   name_en: "Delta Project Live"
   venue: Tasca do Camões
@@ -3476,6 +3715,7 @@ Come join us and support our festivities!"
   - nightlife
 
 - date: 2026-05-23
+  id: fa0be902-a7f9-4ea6-ab72-1f72757afe2f
   name: "Anos 2000 com DJ Adrix"
   name_en: "2000s Night with DJ Adrix"
   venue: Porta 42
@@ -3489,6 +3729,7 @@ Come join us and support our festivities!"
   - nightlife
 
 - date: 2026-05-23
+  id: 5c27d6b3-3488-473f-91fb-641af7118898
   name: "Rafa & Artur M Connection"
   venue: Havanna Club
   address: "Angra do Heroísmo"
@@ -3500,6 +3741,7 @@ Come join us and support our festivities!"
   - nightlife
 
 - date: 2026-05-24
+  id: 790e872e-a275-45e2-aff7-cd7cc8e67c7f
   name: "DJ Residente: Rafa"
   venue: Havanna Club
   address: "Angra do Heroísmo"
@@ -3511,6 +3753,7 @@ Come join us and support our festivities!"
   - nightlife
 
 - date: 2026-05-24
+  id: ca5d1d9a-541d-4000-bf99-380fc5018f90
   name: "O Cinema da Minha Vida — 1.ª Temporada 2026: LOVE"
   name_en: "The Cinema of My Life — 2026 Season 1: LOVE"
   venue: Angra do Heroísmo
@@ -3523,6 +3766,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-05-27
+  id: b6714d14-2528-4230-b90d-8adefd2b65d7
   name: "Apresentação do Festival Rua Direita 2026"
   name_en: "Festival Rua Direita 2026 — Public Launch"
   venue: Livraria Lar Doce Livro
@@ -3538,6 +3782,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-05-28
+  id: df0b254a-6b83-4c44-8de2-8e9d63512ca0
   name: "Cinema: Bucha e Estica — Cinefreguesias na N.ª Sr.ª da Conceição"
   name_en: "Cinema: Bucha e Estica — Cinefreguesias at N.ª Sr.ª da Conceição"
   venue: Angra do Heroísmo (N.ª Sr.ª da Conceição)
@@ -3553,6 +3798,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-05-29
+  id: e1935dab-bfcc-42f2-9c6d-402b16ebfc23
   name: "30 Minutos com Música"
   name_en: "30 Minutes of Music"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -3566,6 +3812,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-05-29
+  id: 6d29a1dd-4cc4-4b0c-a70c-c02755bb6ed4
   name: "Workshop de Vinhos — Apresentação e Provas com Amílcar Salgado"
   name_en: "Wine Workshop — Presentation & Tasting with Amílcar Salgado"
   venue: Lar Doce Livro
@@ -3580,6 +3827,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-05-30
+  id: 2c8a2a89-092a-4574-8e60-f4d4e7b00334
   name: "3ª Prova Taça Etmal — Ciclismo"
   name_en: "3rd Etmal Cup Race — Cycling"
   venue: Angra do Heroísmo
@@ -3592,6 +3840,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-05-30
+  id: f38342ec-0dfe-4943-8946-ca3bed01031c
   name: "A Magia da Poesia"
   name_en: "The Magic of Poetry"
   venue: Museu de Angra do Heroísmo
@@ -3604,6 +3853,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-05-31
+  id: 58fd1759-1d69-4833-8c93-50cb189e8ddf
   name: "Encontro USK — Desenho na Macaronésia"
   name_en: "USK Meetup — Drawing in Macaronesia"
   venue: Museu de Angra do Heroísmo
@@ -3617,6 +3867,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-06-04
+  id: 6c91b312-d589-4c17-9aeb-5c6e5ad965fd
   name: "shorts@fringe — Sessão de Animação para Crianças"
   name_en: "shorts@fringe — Children's Animation Screening"
   venue: Casa do Sal
@@ -3630,6 +3881,7 @@ Come join us and support our festivities!"
   - kid-friendly
 
 - date: 2026-06-06
+  id: 7c55818f-f421-4c4a-8366-a1dda284fbcc
   name: "Concerto: Praia Mia — temas dos ABBA"
   name_en: "Concert: Praia Mia — ABBA Tribute"
   venue: Teatro Angrense
@@ -3643,6 +3895,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-06-08
+  id: e2ffb2a4-febf-437a-9955-7f74134ef0ba
   name: "Exposição: Coleção Francisco Ernesto Oliveira Martins — Um Percurso Sentimental"
   name_en: "Exhibition: Francisco Ernesto Oliveira Martins Collection — A Sentimental Journey"
   venue: Centro Interpretativo de Angra do Heroísmo
@@ -3657,6 +3910,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-06-11
+  id: e93a98bd-1546-4816-a1c5-3121b0536450
   name: "Espetáculo: Angra Convida Ricardo Araújo Pereira — «Verificando se Você é Humano»"
   name_en: "Show: Angra Convida Ricardo Araújo Pereira — «Verificando se Você é Humano»"
   end_date: 2026-06-13
@@ -3670,6 +3924,7 @@ Come join us and support our festivities!"
   - theater
 
 - date: 2026-06-12
+  id: a4eeb163-3bb3-4647-ae3f-d9427e0b5fc5
   name: "Exposição: Rostos Diferentes — De Maria Jorge"
   name_en: "Exhibition: Different Faces — By Maria Jorge"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -3684,6 +3939,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-09
+  id: b036438b-38f9-486f-a516-1b1be4d71c01
   name: "Festival Rua Direita 2026 — Nas Asas do Açor"
   name_en: "Rua Direita Festival 2026 — On the Wings of the Goshawk"
   end_date: 2026-07-18
@@ -3699,6 +3955,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-17
+  id: b306a398-6d27-4a24-8523-bb8e3f78e340
   name: "Concerto: Angra Convida Alcoolémia — 30 anos de «Não Sei Se Mereço»"
   name_en: "Concert: Angra Convida Alcoolémia — 30 years of «Não Sei Se Mereço»"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -3712,6 +3969,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-11-13
+  id: 7a3f4487-011b-4625-adfa-69dc96533c51
   end_date: 2026-11-14
   name: "Concerto: Angra Convida Carolina Deslandes — Voz & Guitarra"
   name_en: "Concert: Angra Convida Carolina Deslandes — Voice & Guitar"
@@ -3727,6 +3985,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-11-27
+  id: fb0e538b-0bfe-4f7b-8d87-dc1b252bf277
   name: "Festival: III Azores Comedy Fest"
   end_date: 2026-11-28
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -3740,6 +3999,7 @@ Come join us and support our festivities!"
   - theater
 
 - name: "Festas da Irmandade do Império do Rossio 2026"
+  id: 7b4788cb-3a05-4957-8dc3-8c90ff75e24c
   name_pt: "Festas da Irmandade do Império do Rossio 2026"
   date: 2026-05-21
   venue: "Rossio - Praia da Vitória"
@@ -3756,6 +4016,7 @@ Come join us and support our festivities!"
     - bullfighting
 
 - name: "Baldio Summer Fest"
+  id: f351dc71-6479-43ca-ae7b-bf56baeb1def
   name_pt: "Baldio Summer Fest"
   date: 2026-05-22
   time: "23:00"
@@ -3768,6 +4029,7 @@ Come join us and support our festivities!"
     - nightlife
 
 - name: "Angra Spring Fest"
+  id: 3a2b3358-ff6e-4078-bd5c-c60005a24697
   name_pt: "Angra Spring Fest"
   date: 2026-05-29
   time: "22:30"
@@ -3780,6 +4042,7 @@ Come join us and support our festivities!"
     - dance
 
 - name: "Arraial dos Finalistas"
+  id: 4c317729-404f-42bf-9309-6849439d7ea4
   name_pt: "Arraial dos Finalistas"
   name_en: "Tiny Graduates’ Party"
   date: 2026-06-05
@@ -3800,6 +4063,7 @@ Come join us and support our festivities!"
     - free
 
 - name: "Festa de Férias de Verão no The Vinyl Lounge"
+  id: 3c6d0984-e51e-4336-be16-e610b6c20c35
   name_pt: "Festa de Férias de Verão no The Vinyl Lounge"
   name_en: "Summer Break Party"
   date: 2026-05-30
@@ -3820,6 +4084,7 @@ Come join us and support our festivities!"
 # ---------------------------------------------------------------------------
 
 - date: 2026-05-08
+  id: d793fc95-43ae-4d9b-88cc-ba25f431f55b
   name: "Havanna Club — Live Act DJ Rafa"
   name_pt: "Havanna Club — Live Act DJ Rafa"
   venue: "Havanna Club"
@@ -3833,6 +4098,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-05-09
+  id: b8d384e7-996f-4662-b02b-8bb61a5e0056
   name: "Havanna Club — Live Act DJ Santinha"
   name_pt: "Havanna Club — Live Act DJ Santinha"
   venue: "Havanna Club"
@@ -3846,6 +4112,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-05-09
+  id: dfdf0494-11bd-4085-b35c-1cb33b86bd5e
   name: "Porta 42 — Artur M: Best of 90s & 2000s"
   name_pt: "Porta 42 — Artur M: O Melhor dos Anos 90 & 2000"
   venue: "Porta 42"
@@ -3859,6 +4126,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-05-11
+  id: 0ac25772-ab2b-4237-94df-a3387c85cb3e
   name: "Wine Not — Crazy Monday: Funk The Banks"
   name_pt: "Wine Not — Crazy Monday: Funk The Banks"
   venue: "Wine Not?"
@@ -3872,6 +4140,7 @@ Come join us and support our festivities!"
   - nightlife
 
 - date: 2026-05-13
+  id: 0a513a1c-dbc7-432c-a2dc-b0ae51b820ea
   name: "Angra Night Runners"
   name_pt: "Angra Night Runners"
   venue: "Praça Velha (Paços do Concelho)"
@@ -3885,6 +4154,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-05-13
+  id: b136c91e-9845-40f2-8b33-05a8647694f9
   name: "Natas D'Ouro — Grand Opening (Angra do Heroísmo)"
   name_pt: "Natas D'Ouro — Inauguração (Angra do Heroísmo)"
   venue: "Natas D'Ouro Angra do Heroísmo"
@@ -3897,6 +4167,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-05-17
+  id: 8239099e-1541-4e51-81da-18d4d8724e0e
   name: "O Cinema da Minha Vida — DREAMS"
   name_pt: "O Cinema da Minha Vida — DREAMS"
   venue: "Cine-Clube da Ilha Terceira"
@@ -3917,6 +4188,7 @@ Come join us and support our festivities!"
 # ---------------------------------------------------------------------------
 
 - date: 2026-05-31
+  id: 52f0de3b-471c-4d11-a81a-fcf18b81d93b
   name: "Chamber Ensemble AMIT — Presentation Concert"
   name_pt: "Conjunto de Câmara da AMIT — Concerto de Apresentação"
   venue: "CCCAH (Centro Cultural e de Congressos)"
@@ -3929,6 +4201,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-06-02
+  id: 21691757-b1ff-4c5b-a109-5d074de4e42d
   name: "Bric-a-Brac Talks — José Luís Neto hosts António Neves"
   name_pt: "Bric-a-Brac Talks — José Luís Neto convida António Neves"
   venue: "Lar Doce Livro"
@@ -3939,6 +4212,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-06-02
+  id: c3dad527-fc26-4744-a7e1-61f9f79441cd
   name: "REStartup — Round Table"
   name_pt: "REStartup — Mesa Redonda"
   venue: "Edifício da Startup Angra"
@@ -3950,6 +4224,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-06-02
+  id: 5180bfe4-31de-4f48-aa92-adae949f6886
   name: "Desenho A — Visual Arts Exhibition (2–16 Jun)"
   name_pt: "Desenho A — Exposição de Artes Visuais (2–16 jun)"
   venue: "Paços do Concelho (Town Hall)"
@@ -3961,6 +4236,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-06-03
+  id: 1fb4cf8b-4ebf-42f8-9568-bc98aacd1ceb
   name: "'Gerações Invisíveis?' — Children's Day Seminar"
   name_pt: "«Gerações Invisíveis?» — Seminário do Dia da Criança"
   venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
@@ -3974,6 +4250,7 @@ Come join us and support our festivities!"
   - kid-friendly
 
 - date: 2026-06-04
+  id: 1224f518-a9c4-475f-8a23-977f0122ee9a
   name: "'Dependências, contingências e clichés' — Debate"
   name_pt: "«Dependências, contingências e clichés» — Debate"
   venue: "Lar Doce Livro"
@@ -3985,6 +4262,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-06-05
+  id: 5efd02b9-89c4-4b62-804c-3890e8a8997d
   name: "shorts@fringe — Out of the Box"
   name_pt: "shorts@fringe — Out of the Box"
   venue: "Casa do Sal / Oficina d'Angra"
@@ -3997,6 +4275,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-06-05
+  id: 11d96190-d134-4d79-a9c1-d294dafd29a3
   name: "Melo e Araújo — World Classics II (DJ Night)"
   name_pt: "Melo e Araújo — World Classics II (Noite DJ)"
   venue: "Casa do Sal / Oficina d'Angra"
@@ -4008,6 +4287,7 @@ Come join us and support our festivities!"
   - nightlife
 
 - date: 2026-06-05
+  id: 8c927f6e-5591-49a4-a591-f284747172d3
   name: "Literature & Religion — The First Encyclical of Pope Leo XIV"
   name_pt: "Literatura & Religião — A Primeira Encíclica de Leão XIV"
   venue: "Lar Doce Livro"
@@ -4018,6 +4298,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-06-05
+  id: 0fa87ed5-48fe-443d-bb60-099bb881f1d4
   name: "80 Years Since the British Forces' Departure — Opening Day"
   name_pt: "80 Anos da Partida das Forças Britânicas — Dia de Abertura"
   venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
@@ -4032,6 +4313,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-06-06
+  id: e7e37812-3676-47c2-8de7-b0aa626b9536
   name: "80 Years Since the British Forces' Departure — Talk with António José Telo"
   name_pt: "80 Anos da Partida das Forças Britânicas — Palestra com António José Telo"
   venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
@@ -4044,6 +4326,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-06-07
+  id: c2e7ed74-3deb-42b7-a6a6-337815156584
   name: "Éditions Avec — Book Launch"
   name_pt: "Edições Avec — Apresentação de Títulos"
   venue: "Lar Doce Livro"
@@ -4054,6 +4337,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-06-09
+  id: b562eb65-87c6-4ea0-9180-78ba37d9144b
   name: "Wave Jazz Ensemble — Album Launch 'Horizonte'"
   name_pt: "Wave Jazz Ensemble — Apresentação do Disco «Horizonte»"
   venue: "Lar Doce Livro"
@@ -4065,6 +4349,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-06-12
+  id: 615b4247-10db-43ea-afb2-2d29767cfb4f
   name: "Grande Entrevista — José António Lima"
   name_pt: "Grande Entrevista — José António Lima"
   venue: "Lar Doce Livro"
@@ -4075,6 +4360,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-06-14
+  id: 95aa7da5-0787-42b1-846a-18de1ba2cc75
   name: "HUMAN — Yann Arthus-Bertrand (screening)"
   name_pt: "HUMAN — Yann Arthus-Bertrand (sessão)"
   venue: "Casa do Sal / Oficina d'Angra"
@@ -4087,6 +4373,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-06-17
+  id: 58a1227e-9541-449a-ba6a-f0b65a90d4f9
   name: "Da Pedagogia à Criação — Exhibition (17–30 Jun)"
   name_pt: "Da Pedagogia à Criação — Exposição (17–30 jun)"
   venue: "Paços do Concelho (Town Hall)"
@@ -4098,6 +4385,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-06-18
+  id: c7241543-c997-4390-a0b6-7361e26c5f48
   name: "Mercadinho do Livro Usado (18–25 Jun)"
   name_pt: "Mercadinho do Livro Usado (18–25 jun)"
   venue: "Lar Doce Livro"
@@ -4110,6 +4398,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-06-19
+  id: d517b5f2-f687-4174-a157-6304ed95b1e6
   name: "Book Launch: 'Lin-Tchi-Fã – Flor de Lótus'"
   name_pt: "Lançamento: «Lin-Tchi-Fã – Flor de Lótus»"
   venue: "Lar Doce Livro"
@@ -4121,6 +4410,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-06-20
+  id: ca0c9c42-5430-4f7d-883b-f3717d2aedce
   name: "Carlos Alberto Moniz — 'Cantar Poetas'"
   name_pt: "Carlos Alberto Moniz — «Cantar Poetas»"
   venue: "Lar Doce Livro"
@@ -4132,6 +4422,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-06-24
+  id: abd18f5c-07e0-41ee-b22d-1e84b383d26e
   name: "Zezé Barbosa & Tó Barbosa — Concert"
   name_pt: "Zezé Barbosa & Tó Barbosa — Concerto"
   venue: "Lar Doce Livro"
@@ -4143,6 +4434,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-06-26
+  id: 72636f57-74ce-4251-8399-d175a23f75ae
   name: "Dom Roberto Puppet Theatre — 'O Barbeiro'"
   name_pt: "Teatro Dom Roberto — «O Barbeiro»"
   venue: "Lar Doce Livro"
@@ -4155,6 +4447,7 @@ Come join us and support our festivities!"
   - kid-friendly
 
 - date: 2026-06-27
+  id: c8d22ab6-bbcc-4227-9322-d5617611b3cb
   name: "Public Reading — 'A Escrava Açoriana'"
   name_pt: "Leitura Pública — «A Escrava Açoriana»"
   venue: "Lar Doce Livro"
@@ -4166,6 +4459,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-06-30
+  id: 088cc438-d4ba-401f-836a-3c1764a4afa2
   name: "Poesia ao Crepúsculo — José Jorge Letria"
   name_pt: "Poesia ao Crepúsculo — José Jorge Letria"
   venue: "Lar Doce Livro"
@@ -4176,6 +4470,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-07-04
+  id: 6cffbbb7-803d-4263-a08e-21f273b15b84
   name: "shorts@fringe — Portugal Session: First Date"
   name_pt: "shorts@fringe — Sessão Portugal: First Date"
   venue: "Casa do Sal / Oficina d'Angra"
@@ -4188,6 +4483,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-12-05
+  id: bec8cfbe-8a6b-40fb-810f-6ba1ea921678
   name: "Glenn Miller Orchestra — In the Christmas Mood"
   name_pt: "Glenn Miller Orchestra — In the Christmas Mood"
   venue: "CCCAH (Centro Cultural e de Congressos)"
@@ -4200,6 +4496,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-12-06
+  id: 447f84df-2146-4cff-a83c-92e78ff648a0
   name: "Glenn Miller Orchestra — In the Christmas Mood"
   name_pt: "Glenn Miller Orchestra — In the Christmas Mood"
   venue: "CCCAH (Centro Cultural e de Congressos)"
@@ -4216,6 +4513,7 @@ Come join us and support our festivities!"
 # ---------------------------------------------------------------------------
 
 - date: 2026-05-30
+  id: 8f92e7bd-58a3-4433-b882-167a9584ca9d
   name: "Sábado Retro com DJ Sofia Borges"
   name_en: "Retro Saturday with DJ Sofia Borges"
   venue: "Tasca do Camões"
@@ -4228,6 +4526,7 @@ Come join us and support our festivities!"
   - live-music
 
 - name: "Wine and Dine"
+  id: b28bccee-d489-4c7a-9430-20ce7f71e81f
   name_en: "Wine and Dine"
   name_pt: "Jantar Vínico"
   date: 2026-06-14
@@ -4244,6 +4543,7 @@ Come join us and support our festivities!"
 # July 2026
 
 - date: 2026-07-04
+  id: bf403d24-177f-4537-a0ba-55ae59ff645d
   name: "4th of July Party"
   name_en: "4th of July Party"
   name_pt: "Festa 4 de Julho"
@@ -4260,6 +4560,7 @@ Come join us and support our festivities!"
     - nightlife
 
 - date: 2026-07-04
+  id: f8f18d9e-f829-4da0-ba69-6465a0cfc818
   name: "Recital — Sara Bernardo & Júlia Silva"
   name_en: "Recital — Sara Bernardo & Júlia Silva"
   venue: "Lar Doce Livro"
@@ -4274,6 +4575,7 @@ Come join us and support our festivities!"
     - free
 
 - date: 2026-07-10
+  id: 5b43835b-59b2-4285-b3fc-1cae3bee3d85
   name: "NUANCE — Concerto + Karaoke (Garden Summer Sessions)"
   name_en: "NUANCE — Concert + Karaoke (Garden Summer Sessions)"
   venue: "The Garden Club"
@@ -4287,6 +4589,7 @@ Come join us and support our festivities!"
     - nightlife
 
 - date: 2026-07-11
+  id: f94610a1-b433-465d-93ae-8ff4250e5699
   name: "Açores Musical — 50 Anos"
   name_en: "Açores Musical — 50 Years"
   venue: "Praia da Riviera, Cabo da Praia"
@@ -4302,6 +4605,7 @@ Come join us and support our festivities!"
     - free
 
 - date: 2026-07-18
+  id: c932fac3-c523-447a-8fd8-3e0c87deccab
   name: "Back to 2000s — Karaoke Night (Garden Summer Sessions)"
   name_en: "Back to 2000s — Karaoke Night (Garden Summer Sessions)"
   venue: "The Garden Club"
@@ -4326,6 +4630,7 @@ Come join us and support our festivities!"
 # July 2026 — Museu de Angra do Heroísmo
 
 - date: 2026-07-05
+  id: 503b684d-5bc5-4957-95ca-3de0d1c4431c
   name: "Domingos com Música — Julho (I)"
   name_en: "Sundays with Music — July (I)"
   venue: "Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia"
@@ -4339,6 +4644,7 @@ Come join us and support our festivities!"
     - free
 
 - date: 2026-07-12
+  id: a008d49c-b03e-4d58-b19b-ec175be87347
   name: "Domingos com Música — Julho (II)"
   name_en: "Sundays with Music — July (II)"
   venue: "Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia"
@@ -4352,6 +4658,7 @@ Come join us and support our festivities!"
     - free
 
 - date: 2026-07-19
+  id: a1ac31bb-67e5-4506-8ca0-0cf1b3f441d9
   name: "Domingos com Música — Julho (III)"
   name_en: "Sundays with Music — July (III)"
   venue: "Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia"
@@ -4365,6 +4672,7 @@ Come join us and support our festivities!"
     - free
 
 - date: 2026-07-26
+  id: bc8f079d-0589-454e-89c5-a13a0e95c11f
   name: "Domingos com Música — Julho (IV)"
   name_en: "Sundays with Music — July (IV)"
   venue: "Museu de Angra do Heroísmo — Igreja Nossa Senhora da Guia"
@@ -4377,6 +4685,7 @@ Come join us and support our festivities!"
     - live-music
     - free
 - date: 2026-07-04
+  id: a4480be3-c174-44e5-9399-11bb43a6fe57
   name: "Baterias ao Luar 2026"
   name_en: "Moonlight Batteries 2026"
   venue: "Reserva Florestal de Recreio do Monte Brasil"
@@ -4393,6 +4702,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-07-10
+  id: 41b8998f-e34a-449c-ad1e-9691c5c37be1
   name: "Apresentação do Livro | Sem Palavras a Mais"
   name_en: "Book Presentation | Sem Palavras a Mais"
   venue: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
@@ -4407,6 +4717,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-11
+  id: c732cf0f-c75b-46fe-b89e-9e898bbf744a
   name: "Oficina para Famílias | A Menina que Vivia no País Azul"
   name_en: "Family Workshop | The Girl Who Lived in the Blue Country"
   venue: "Museu de Angra do Heroísmo"
@@ -4422,6 +4733,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-18
+  id: af5463ae-3977-49e0-b14f-b923691dff1b
   name: "À Conversa com… Anaísa Costa"
   name_en: "In Conversation with… Anaísa Costa"
   venue: "Museu de Angra do Heroísmo"
@@ -4436,6 +4748,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-20
+  id: bb35cab4-ed91-499b-aa20-78722a282496
   name: "Lançamento de Livro | A Princesa de Limaland e a Decisão Crucial"
   name_en: "Book Launch | The Princess of Limaland and the Crucial Decision"
   venue: "Paços do Concelho (Town Hall)"
@@ -4450,6 +4763,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-22
+  id: f7c705ba-d621-44fb-9e90-bcf02d0f94a0
   name: "Apresentação de Livro | Memória da Visita Régia à Ilha Terceira (2.ª edição)"
   name_en: "Book Presentation | Memory of the Royal Visit to Terceira Island (2nd ed.)"
   venue: "Paços do Concelho (Town Hall)"
@@ -4464,6 +4778,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-25
+  id: fb482565-9387-4e6b-8831-5fdee3687a4f
   end_date: 2026-10-11
   kind: exhibition
   name: "Belo Insubmisso, de Miguel Rebelo"
@@ -4484,6 +4799,7 @@ Come join us and support our festivities!"
 
 # Auto-ingested from CMAH (2026-07-08)
 - date: 2026-07-09
+  id: 53c16eb9-7371-4898-9224-cf806e948994
   name: "Cinema: Perdidos em Alto-Mar"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Angra do Heroísmo, 9700-130"
@@ -4496,6 +4812,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-07-10
+  id: 0f239c99-0a95-4548-beb3-f697d4198083
   name: "FESTINATEL 2026"
   venue: Praça Velha
   address: "Praça Velha, 9700-201 Angra do Heroísmo"
@@ -4510,6 +4827,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-10
+  id: ffcb9d46-4462-49f7-9a04-c86b40cc95f8
   name: "Cinema: Dog Days: Vidas de Cão — Cinefreguesias na Feteira (2026)"
   venue: Angra do Heroísmo
   address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
@@ -4524,6 +4842,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-11
+  id: 8d6b383d-af31-4110-a737-27065e88430e
   name: "Cinema: Quem Brinca com o Fogo — Cinefreguesias nos Altares (2026)"
   venue: Angra do Heroísmo
   address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
@@ -4538,6 +4857,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-14
+  id: ed1e0605-82bc-4c33-b673-a798c2f9c3da
   name: "Exposição: Arte e Aventura"
   venue: Paços do Concelho (Town Hall)
   address: "Praça Velha, 9700-201 Angra do Heroísmo"
@@ -4551,6 +4871,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-16
+  id: e4a25221-8640-497d-bf12-14e0706cc21f
   name: "Seminário: Do Abandono ao Acolhimento"
   venue: Centro Interpretativo de Angra do Heroísmo
   address: "Rua do Marquês, Angra do Heroísmo, 9700-143"
@@ -4562,6 +4883,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-07-16
+  id: 101c6ca4-d435-40a3-8c8d-4dbaa242c541
   name: "Cinema: O Dia da Revelação"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Angra do Heroísmo, 9700-130"
@@ -4574,6 +4896,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-07-17
+  id: 754a413e-d73f-4c07-a0c8-4b1f1acc1929
   name: "Novilhada do Ramo Grande"
   name_en: "Ramo Grande Bullfighting Show"
   venue: "Praça de Toiros da Ilha Terceira"
@@ -4588,6 +4911,7 @@ Come join us and support our festivities!"
   - bullfighting
 
 - date: 2026-07-18
+  id: 8cbcfdf3-586e-463f-aa7f-d6854acb2ce9
   name: "Cinema: Toy Story 5"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Angra do Heroísmo, 9700-130"
@@ -4600,6 +4924,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-07-18
+  id: 8a725179-ed3d-4364-9c19-c6a6087758c7
   name: "Cinema: Clifford, o Cão Vermelho — Cinefreguesias em São Sebastião (2026)"
   venue: Angra do Heroísmo
   address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
@@ -4614,6 +4939,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-23
+  id: 875139b2-888c-4a21-a5c4-d1bd92ba260f
   name: "Cinema: Tuner – Ouvido Absoluto, Mão Leve"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Angra do Heroísmo, 9700-130"
@@ -4626,6 +4952,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-07-24
+  id: 913182b3-b1e7-4add-aaca-5d83248d6d25
   name: "Cinema: A Mãe é que Sabe — Cinefreguesias no Posto Santo (2026)"
   venue: Angra do Heroísmo
   address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
@@ -4640,6 +4967,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-25
+  id: 89f30374-4736-46d5-8c1b-3d1b002ec4fa
   name: "Cinema: O Meu Pai é Um Perigo — Cinefreguesias em São Mateus (2026)"
   venue: Angra do Heroísmo
   address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
@@ -4654,6 +4982,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-30
+  id: 6da4cd1a-2721-45df-986d-483afc827372
   name: "Cinema: Tudo o Que Nunca Fomos"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Angra do Heroísmo, 9700-130"
@@ -4666,6 +4995,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-07-31
+  id: 4f0b832b-7d31-4382-b471-0c1077bb1753
   end_date: 2026-08-09
   name: "Festas da Praia 2026"
   name_en: "Festas da Praia 2026"
@@ -4681,6 +5011,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-08-01
+  id: 0e7102d0-212f-46ad-a051-9721fdddbf06
   name: "Cinema no Jardim 2026 - Agosto"
   venue: Jardim Duque da Terceira
   address: "Rua Direita, Angra do Heroísmo, 9700"
@@ -4693,6 +5024,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-08-02
+  id: 439d8ae2-0769-48ca-8224-95e1b71e7b31
   name: "Cinema: O Meu Espião — Cinefreguesias na Sé (2026)"
   venue: Angra do Heroísmo
   address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
@@ -4707,6 +5039,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-03
+  id: 76d217f8-18fe-4b2f-af79-3d9484fd50b0
   name: "Grandiosa Corrida de Toiros das Festas da Praia 2026"
   name_en: "Festas da Praia 2026 Grand Bullfight"
   venue: "Praça de Toiros da Ilha Terceira"
@@ -4720,6 +5053,7 @@ Come join us and support our festivities!"
   - bullfighting
 
 - date: 2026-08-08
+  id: 32a97c2e-2794-4ea8-babd-d2cec5dc7a41
   name: "Cinema: O Meu Amigo Golfinho — Cinefreguesias no Raminho (2026)"
   venue: Angra do Heroísmo
   address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
@@ -4734,6 +5068,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-22
+  id: 86526a51-79f7-43cc-a084-e0985a38e9fa
   name: "Cinema: O Professor de Inglês — Cinefreguesias em São Pedro (2026)"
   venue: Angra do Heroísmo
   address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
@@ -4748,6 +5083,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-23
+  id: b444fb59-0662-4aee-8b49-4de9d20e521a
   name: "Cinema: O Teu Melhor Amigo — Cinefreguesias em Santa Bárbara (2026)"
   venue: Angra do Heroísmo
   address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
@@ -4762,6 +5098,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-29
+  id: cf5cef2b-f60a-4551-83c5-34529dbc3208
   name: "Cinema: Clifford, o Cão Vermelho — Cinefreguesias em São Bartolomeu (2026)"
   venue: Angra do Heroísmo
   address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
@@ -4776,6 +5113,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-29
+  id: 6e26c12e-b895-4476-b580-cad3b27bbf19
   name: "Corrida: Angra by Night"
   venue: Angra do Heroísmo
   address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
@@ -4788,6 +5126,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-10-23
+  id: b4dc7097-3428-4e8b-92e3-6cff81fe909d
   name: "Cinema: O Milagre do Whisky — Cinefreguesias em São Bento (2026)"
   venue: Angra do Heroísmo
   address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
@@ -4804,6 +5143,7 @@ Come join us and support our festivities!"
 # Manual social scan additions from Instagram/Facebook (2026-07-08)
 
 - date: 2026-07-01
+  id: 2207ea10-f89a-49ff-9881-31d69e1a0290
   end_date: 2026-07-31
   kind: exhibition
   visiting_hours: "Monday to Friday, 09:00-17:00"
@@ -4822,6 +5162,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-08
+  id: 5b57de1d-727c-4c9f-a18a-ad57e8bebcea
   name: "Cinema no Jardim: O Lugar dos Sonhos"
   name_en: "Garden Cinema: O Lugar dos Sonhos"
   venue: Jardim Duque da Terceira
@@ -4836,6 +5177,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-07-09
+  id: 6b6976ac-c107-4911-a005-583d6986f4f1
   end_date: 2026-07-10
   name: "Oficinas nas Férias: Jogos do Futuro"
   name_en: "Holiday Workshops: Jogos do Futuro"
@@ -4851,6 +5193,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-07-09
+  id: 5e685791-5204-4c6c-8f66-2d30ff397c5f
   end_date: 2026-07-10
   name: "Oficinas nas Férias: Pinta a Manta"
   name_en: "Holiday Workshops: Pinta a Manta"
@@ -4865,6 +5208,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-07-13
+  id: 2173ead4-7447-44ba-90d4-a3ce3a82ed4b
   name: "Clube de Leitura na Casa de Nemésio — Yvette Centeno"
   name_en: "Reading Club at Casa de Nemésio — Yvette Centeno"
   venue: Casa Museu Vitorino Nemésio
@@ -4878,6 +5222,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-07-15
+  id: b1ba9089-b6d2-4497-bdfa-7492f6343362
   name: "Apresentação do livro: Louvar, Celebrar e Edificar — Império do Divino Espírito Santo do Cantinho"
   name_en: "Book presentation: Louvar, Celebrar e Edificar — Holy Spirit Empire of Cantinho"
   venue: Paços do Concelho (Town Hall)
@@ -4892,6 +5237,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-15
+  id: 14eee869-ac5e-4258-baf3-a24343280ba0
   name: "Cinema: Bichos a Bordo"
   venue: Jardim Duque da Terceira
   address: "Rua Direita, Angra do Heroísmo, 9700"
@@ -4906,6 +5252,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-15
+  id: 08148059-f559-481b-9367-36957d0c4dc1
   name: "Palestra: A Revolta das Ilhas — o Revilharismo e a Luta contra a Ditadura Nacional"
   name_en: "Talk: The Island Revolt — Revilharism and the Fight against the National Dictatorship"
   venue: Lar Doce Livro
@@ -4919,6 +5266,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-07-17
+  id: 9f93951a-c53d-40d8-a1e6-05a726ab6bb4
   name: "White Party com Filipe Soares e Joana Pires"
   name_en: "White Party with Filipe Soares and Joana Pires"
   venue: Lar Doce Livro
@@ -4934,6 +5282,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-18
+  id: 1d9014e0-afd8-4968-9791-c0a47f156156
   name: "Recital com Sérgio Fernandes"
   name_en: "Recital with Sérgio Fernandes"
   venue: Lar Doce Livro
@@ -4948,6 +5297,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-18
+  id: 7dbd270b-f402-45ee-a1e0-0a832c8b411c
   name: "Open Mic e Jam Session"
   name_en: "Open Mic and Jam Session"
   venue: Lar Doce Livro
@@ -4963,6 +5313,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-19
+  id: 48c5036e-6f19-4c46-a06c-1fc5b362b8ef
   end_date: 2026-07-28
   kind: event
   name: "Comemorações: Dia do Regimento de Guarnição N.º 1"
@@ -4981,6 +5332,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-19
+  id: 056c438e-6bd6-4ff2-abb4-ad9c1147c681
   name: "Sunset Street Lounge com Sofia Borges e Noé Branco"
   name_en: "Sunset Street Lounge with Sofia Borges and Noé Branco"
   venue: Lar Doce Livro
@@ -4995,6 +5347,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-24
+  id: 72d43e1d-bffc-4e17-9dad-f188765a0760
   name: "A Playlist By… Gonçalo Rosa"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -5008,6 +5361,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-25
+  id: 358b7287-09dc-4e96-a7c4-fafa955a5148
   name: "Workshop Introdutório de Música com Isabel Barcelos"
   name_en: "Introductory Music Workshop with Isabel Barcelos"
   venue: Lar Doce Livro
@@ -5022,6 +5376,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-07-25
+  id: 7669a7d4-3087-4096-8263-dceb3221ad29
   name: "Tomás Sampaio ao vivo"
   name_en: "Tomás Sampaio Live"
   venue: Lar Doce Livro
@@ -5036,6 +5391,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-25
+  id: 853158d1-7be2-4159-809c-5869dc84bede
   name: "DJ Set com Funk The Banks"
   name_en: "DJ Set with Funk The Banks"
   venue: Lar Doce Livro
@@ -5050,6 +5406,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-26
+  id: 3ee5b447-a49b-40ec-835e-d714db58c5bc
   name: "Piano-Bar com Duo Arquibelo"
   name_en: "Piano Bar with Duo Arquibelo"
   venue: Lar Doce Livro
@@ -5064,6 +5421,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-31
+  id: ea724805-2366-4f33-9a0f-db359dd9cd83
   name: "A Playlist By… António Neves — música de Vasco Martins"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -5077,6 +5435,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-04
+  id: 9d62b8b6-e842-4dc5-89a2-ab96c40b69cd
   end_date: 2026-08-28
   name: "Biblioteca Divertida — Agosto 2026"
   name_en: "Fun Library — August 2026"
@@ -5092,6 +5451,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-02
+  id: d915073c-a4c0-4fff-baed-23e45df564fe
   end_date: 2026-10-04
   name: "27.ª edição do ANGRAJAZZ"
   name_en: "27th ANGRAJAZZ International Jazz Festival"
@@ -5107,6 +5467,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-10-24
+  id: a131c3f9-55a1-42ae-8572-881e67383921
   name: "Hugo Sousa — Aqui Entre Nós"
   name_en: "Hugo Sousa — Aqui Entre Nós"
   venue: Auditório do Ramo Grande
@@ -5124,6 +5485,7 @@ Come join us and support our festivities!"
 # Manual social and official-agenda backfills (2026-07-29)
 
 - date: 2026-03-30
+  id: 46d9a01e-fb67-44d3-b581-14d8ee2832db
   end_date: 2026-07-31
   kind: exhibition
   visiting_hours: "Weekdays, 10:00–12:30 and 13:30–18:30, through 31 July"
@@ -5139,6 +5501,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-04-27
+  id: f3562c22-f034-4188-b268-4c1bd7042007
   end_date: 2026-08-24
   kind: exhibition
   name: "Museu Fora de Portas | Cesta, atribuída a Ngungunhane"
@@ -5153,6 +5516,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-06-12
+  id: 5e8e1bc9-514b-41b1-99bb-88405ec4cc71
   end_date: 2026-12-31
   kind: exhibition
   name: "Marcos da Autonomia: da Junta Administrativa ao I Governo Regional"
@@ -5167,6 +5531,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-06-30
+  id: ba658ad2-7d03-4c09-a9b2-7e1e2b1146f2
   end_date: 2026-09-30
   kind: exhibition
   name: "Confluência — estruturas para um território descontínuo"
@@ -5182,6 +5547,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-07-01
+  id: e447dea0-79b8-4590-a9db-c88186d990a9
   end_date: 2026-08-31
   kind: exhibition
   name: "Documento do Mês | Paulo Gouveia: vida e obra de um arquiteto açoriano pós-moderno"
@@ -5197,6 +5563,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-07-30
+  id: 04c777c1-653b-4380-bf31-54c82ecfbf78
   name: "Poesia ao Crepúsculo — 120 anos de Mário Quintana"
   name_en: "Poetry at Dusk — 120 Years of Mário Quintana"
   venue: "Lar Doce Livro"
@@ -5211,6 +5578,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-31
+  id: 6d4afbf4-35db-49c0-ad4d-bd1d7161342f
   name: "125 anos de Vitorino Nemésio"
   name_en: "125 Years of Vitorino Nemésio"
   venue: "Paços do Concelho / Casa Museu Vitorino Nemésio"
@@ -5226,6 +5594,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-31
+  id: 7a06e0a4-3f97-4bb1-8342-e13abb334a7b
   name: "Apresentação do livro | Ilhas Perdidas, de Dinis Carmo"
   name_en: "Book Presentation | Lost Islands, by Dinis Carmo"
   venue: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
@@ -5239,6 +5608,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-07-31
+  id: 3cbdde00-26d9-40d0-a6ca-15c217b5c492
   name: "Lizzard Chambers — See You Soon Vid"
   venue: "Wine Not?"
   address: "Rua Direita 8, 9700 Angra do Heroísmo"
@@ -5252,6 +5622,7 @@ Come join us and support our festivities!"
   - nightlife
 
 - date: 2026-08-01
+  id: 467c1ada-9bcc-45de-9f00-1bd4ddf29a80
   name: "Apresentação de «10 755 — Caminhos que se cruzam», de Eduardo Pinheiro"
   name_en: "Presentation of '10 755 — Crossing Paths', by Eduardo Pinheiro"
   venue: "Lar Doce Livro"
@@ -5265,6 +5636,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-08-09
+  id: e3e9aa87-386e-4d6a-aba0-4d6674168d69
   end_date: 2026-08-16
   name: "Folk Azores — 40.º Festival Internacional de Folclore dos Açores"
   name_en: "Folk Azores — 40th Azores International Folklore Festival"
@@ -5281,6 +5653,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-11
+  id: f706dbc1-b6c8-4ea0-87c6-b8c8d8f91f3e
   end_date: 2026-08-14
   name: "Oficina de Jogos Tradicionais"
   name_en: "Traditional Games Workshop"
@@ -5297,6 +5670,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-08-15
+  id: a62095d3-5d86-40ca-9a1c-c2c07d37bccf
   name: "Lançamento de álbum: BWF ao VIVirtual"
   name_en: "Album Launch: BWF at VIVirtual"
   venue: "Centro Cultural e de Congressos de Angra do Heroísmo"
@@ -5314,6 +5688,7 @@ Come join us and support our festivities!"
 # Manual social and official-agenda backfills (2026-08-05)
 
 - date: 2026-08-06
+  id: dfdd9851-e790-4d7a-8b92-58affdbe2e9a
   name: "Apresentação de livro: Between Silence and Vision: António Dacosta and the Sense of Belonging in Painting"
   name_en: "Book Presentation: Between Silence and Vision: António Dacosta and the Sense of Belonging in Painting"
   venue: Paços do Concelho de Angra do Heroísmo
@@ -5329,6 +5704,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-06
+  id: 9ac34ac0-81dc-4caf-930e-6f1fbc127757
   name: "O Livro do Amor — Diálogo Ecuménico"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -5342,6 +5718,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-07
+  id: 84989b3d-9238-495a-af92-844016f52f6e
   name: "Apresentação de Os Livros que Me Fizeram Americano, de Diniz Borges"
   name_en: "Presentation of The Books That Made Me American, by Diniz Borges"
   venue: Lar Doce Livro
@@ -5356,6 +5733,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-07
+  id: f2950981-ac5b-4308-b5aa-b3186839b453
   name: "3HP ao vivo"
   name_en: "3HP Live"
   venue: Lar Doce Livro
@@ -5371,6 +5749,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-08
+  id: 0ad1e280-a011-4a35-afca-a641cdf9f69a
   name: "TANGERINA — oficina para adultos"
   name_en: "TANGERINE — Workshop for Adults"
   venue: Museu de Angra do Heroísmo
@@ -5386,6 +5765,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-08
+  id: 05e2a741-8702-45a6-b532-610a44b046d3
   name: "A Playlist De… Margarida Quinteiro"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -5399,6 +5779,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-09
+  id: 67691a9e-5a7e-41a5-8b79-817ca79aff33
   name: "Sunset Street Lounge com Skapatória"
   name_en: "Sunset Street Lounge with Skapatória"
   venue: Lar Doce Livro
@@ -5414,6 +5795,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-11
+  id: 8552652b-10f0-47fc-bf03-74d048610f33
   name: "Poemas para Agosto"
   name_en: "Poems for August"
   venue: Lar Doce Livro
@@ -5429,6 +5811,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-12
+  id: 84802c0f-9a91-4070-af6e-f858f60f8968
   name: "Dia Mundial da Juventude 2026"
   name_en: "World Youth Day 2026"
   venue: Zona Balnear da Prainha
@@ -5445,6 +5828,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-13
+  id: 3dcdf47e-077a-46fc-a937-f16a2ec06b59
   name: "Debate: O bairrismo São Miguel vs. Terceira está mesmo de volta?"
   name_en: "Debate: Is the São Miguel vs. Terceira Rivalry Really Back?"
   venue: Lar Doce Livro
@@ -5459,6 +5843,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-14
+  id: e8095dfc-41ab-4567-a9ed-0a13e9c8de0b
   name: "A Playlist De… Pr. Rúben Couto"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -5472,6 +5857,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-15
+  id: 1a3705ae-cef5-4f80-81ba-5d580f14aa23
   name: "Unsure ao vivo"
   name_en: "Unsure Live"
   venue: Lar Doce Livro
@@ -5486,6 +5872,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-15
+  id: 818763c7-1710-4fb9-91a5-39d085d924f2
   name: "DJ set com DJ Fox"
   name_en: "DJ Set with DJ Fox"
   venue: Lar Doce Livro
@@ -5500,6 +5887,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-16
+  id: 21377eaf-0084-458a-a32e-d12ba90801c2
   name: "Sunset Street Lounge com datILHA"
   name_en: "Sunset Street Lounge with datILHA"
   venue: Lar Doce Livro
@@ -5515,6 +5903,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-18
+  id: c5e7a267-d913-4a7f-8bc3-895b7d041a9f
   name: "Celebração de Bruno Walter Ferreira"
   name_en: "Celebration of Bruno Walter Ferreira"
   venue: Lar Doce Livro
@@ -5529,6 +5918,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-19
+  id: 92bbb9a2-2716-4087-8926-f4be6de12860
   name: "Pré-apresentação de O Faial à Volta da Mesa, de Carla Devesa Rodrigues"
   name_en: "Preview of O Faial à Volta da Mesa, by Carla Devesa Rodrigues"
   venue: Lar Doce Livro
@@ -5544,6 +5934,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-21
+  id: ee974324-5159-4d85-96f6-e9cdeb4f397d
   name: "A Playlist De… Sophie Anacleto"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -5557,6 +5948,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-22
+  id: 86fec03e-ee46-4bd1-b36c-1d12438b19e6
   name: "Apresentação dos vinhos Maretamenta"
   name_en: "Maretamenta Wine Presentation"
   venue: Lar Doce Livro
@@ -5570,6 +5962,7 @@ Come join us and support our festivities!"
   - food-drink
 
 - date: 2026-08-22
+  id: 30fb5f86-d394-4271-aa95-f48bb0dcacaf
   name: "Tommy G ao vivo"
   name_en: "Tommy G Live"
   venue: Lar Doce Livro
@@ -5584,6 +5977,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-22
+  id: fa49c5b4-5d4b-4872-b32a-b427d1637d70
   name: "DJ set com Sofia Borges e Noé Branco"
   name_en: "DJ Set with Sofia Borges and Noé Branco"
   venue: Lar Doce Livro
@@ -5598,6 +5992,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-23
+  id: 25d3b36a-f1a0-48ac-8453-73a0cc79f751
   name: "Sunset Street Lounge com DJ Jota P"
   name_en: "Sunset Street Lounge with DJ Jota P"
   venue: Lar Doce Livro
@@ -5613,6 +6008,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-24
+  id: 42fe5bb4-9901-417c-b825-72be1f933c9f
   name: "25 anos da aterragem de emergência do voo 236 da Air Transat"
   name_en: "25 Years Since Air Transat Flight 236's Emergency Landing"
   venue: Lar Doce Livro
@@ -5627,6 +6023,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-27
+  id: caa2d0c1-a1b0-46dd-b72e-a391f3682454
   name: "Memórias da Autonomia — José Henrique Ornelas"
   name_en: "Memories of Autonomy — José Henrique Ornelas"
   venue: Lar Doce Livro
@@ -5641,6 +6038,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-28
+  id: d83ffb46-900a-4e6c-951a-1bd4dcdd1fdf
   name: "V Festa Americana — Fried Okra: Traditional Americana Open Jam Night"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -5654,6 +6052,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-29
+  id: 3654e9eb-9e14-4b23-a0bc-9c497772d287
   name: "Double Trouble ao vivo"
   name_en: "Double Trouble Live"
   venue: Lar Doce Livro
@@ -5669,6 +6068,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-30
+  id: 88c171ba-716e-4559-b1a8-615a171097d7
   name: "Sunset Street Lounge com MrApples"
   name_en: "Sunset Street Lounge with MrApples"
   venue: Lar Doce Livro
@@ -5684,6 +6084,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-01
+  id: 35439a38-4f26-42c2-b883-56fed43c05d7
   end_date: 2026-09-10
   name: "Hortênsia Music Festival — Erupção Musical"
   name_en: "Hortênsia Music Festival — Musical Eruption"
@@ -5703,6 +6104,7 @@ Come join us and support our festivities!"
 # Official-agenda backfills from the 2026-08-23 established-source scan
 
 - date: 2026-08-13
+  id: 0efccb38-aec3-4ea5-9250-d08c55f760d2
   end_date: 2026-08-28
   kind: exhibition
   visiting_hours: "Monday to Friday, 16:00 to 18:30, through 28 August"
@@ -5720,6 +6122,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-08-27
+  id: c66c7e6f-e23f-4da2-bb16-891d12e6d900
   name: "Workshop | Fração"
   name_en: "Workshop | Fraction"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -5734,6 +6137,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-09-03
+  id: c49d8e37-8cc0-40a3-aebe-a5c5a626b3c9
   end_date: 2026-09-07
   name: "Cinema: A Odisseia"
   name_en: "Cinema: The Odyssey"
@@ -5749,6 +6153,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-09-04
+  id: 1da804db-5af7-4ed5-a9d4-9c8d5c3658c4
   name: "III Fórum Educativo - Vozes do Futuro: Escutar para Educar"
   name_en: "III Educational Forum - Voices of the Future: Listening to Educate"
   venue: Universidade dos Açores - Campus de Angra do Heroísmo
@@ -5762,6 +6167,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-10
+  id: a504575a-673d-4720-be5a-cacb4fbc7d6b
   end_date: 2026-09-14
   name: "Cinema: Insidious: O Longínquo"
   name_en: "Cinema: Insidious: The Distant One"
@@ -5777,6 +6183,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-09-11
+  id: 04c1fc81-f63a-468d-943c-d48e393a3cce
   name: "ICHTUS Open Air"
   venue: Green Café
   map_url: https://www.google.com/maps/search/?api=1&query=Green+Cafe+Angra+do+Heroismo
@@ -5792,6 +6199,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-12
+  id: f61ca666-06bb-4053-b025-2c0b3ff4d1b3
   name: "Palestra: Há cura para a Depressão?!"
   name_en: "Talk: Is There a Cure for Depression?!"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -5808,6 +6216,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-17
+  id: e4d57855-8cc8-4952-8d75-42c57ed49c01
   end_date: 2026-09-21
   name: "Cinema: Spa Weekend"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -5822,6 +6231,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-09-19
+  id: fcc2b3be-384c-4aa2-a440-9058ecb6bf24
   end_date: 2026-09-20
   name: "Cinema: PAW Patrol: The Dino Movie"
   name_en: "Cinema: Paw Patrol: The Dinosaur Movie"
@@ -5838,6 +6248,7 @@ Come join us and support our festivities!"
   - kid-friendly
 
 - date: 2026-09-26
+  id: 93dce386-f1ca-49bc-9661-47f5d8a74b20
   end_date: 2026-09-28
   name: "Cinema: Magia e Sedução: Segredos de Família"
   name_en: "Cinema: Practical Magic: Family Secrets"
@@ -5856,6 +6267,7 @@ Come join us and support our festivities!"
 # Future events from the full documented-source scan (2026-08-23)
 
 - date: 2026-08-19
+  id: 17bfebe3-4a22-418d-9338-16f3e3b69751
   end_date: 2026-08-26
   name: "Festas do Espírito Santo da Urbanização do Lameirinho"
   name_en: "Holy Spirit Festivities at Urbanização do Lameirinho"
@@ -5870,6 +6282,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-21
+  id: 36326f5e-eaee-47d6-9200-f2218b26b30e
   end_date: 2026-08-28
   name: "Festas de São Brás 2026"
   name_en: "São Brás Festivities 2026"
@@ -5886,6 +6299,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-28
+  id: eb7bdfd0-3057-4795-ba54-87d6fef7b7cb
   name: "Tropical Night Party"
   venue: Ilhéu Beach Bar
   address: "Fajã do Fisher, Angra do Heroísmo"
@@ -5900,6 +6314,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-08-28
+  id: 58372ee0-2578-4fa3-b3e1-a6ad70681d91
   end_date: 2026-09-03
   name: "Festas do Cabo da Praia 2026 em honra de Santa Catarina"
   name_en: "Cabo da Praia Festivities 2026 in Honour of Saint Catherine"
@@ -5915,6 +6330,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-08-28
+  id: 648283d6-522b-4b17-a90a-07224a10ce1d
   end_date: 2026-09-05
   name: "Festas de Santa Bárbara 2026"
   name_en: "Santa Bárbara Festivities 2026"
@@ -5930,6 +6346,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-04
+  id: 727af279-a1c1-4d80-9852-722ae8d4eb57
   end_date: 2026-09-08
   name: "Festas de Nossa Senhora da Consolação - Ribeira Seca"
   name_en: "Festivities of Our Lady of Consolation - Ribeira Seca"
@@ -5944,6 +6361,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-05
+  id: f9aed367-25f7-4dc5-a25f-2a1340e282c2
   end_date: 2026-09-12
   name: "Festas de Santo António 2026 - São Bartolomeu dos Regatos"
   name_en: "Saint Anthony Festivities 2026 - São Bartolomeu dos Regatos"
@@ -5959,6 +6377,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-12
+  id: 04753e14-bd9a-4b45-9af4-c9936d9a02de
   end_date: 2026-09-17
   name: "Festas de Nossa Senhora dos Milagres - Serreta"
   name_en: "Festivities of Our Lady of Miracles - Serreta"
@@ -5973,6 +6392,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-18
+  id: 71995201-3a3d-49aa-8eb8-7307d48e7f33
   end_date: 2026-09-24
   name: "Festas de Santa Margarida do Porto Martins 2026"
   name_en: "Santa Margarida Festivities in Porto Martins 2026"
@@ -5990,6 +6410,7 @@ Come join us and support our festivities!"
 
 # New primary-source discovery, verified 2026-09-04.
 - date: 2026-09-20
+  id: 5360886d-cfb1-40b9-a8bc-573f5da4a07b
   name: "BioBlitz Terceira 2026"
   venue: Piscinas Naturais do Porto Martins
   address: "Porto Martins, Praia da Vitória"
@@ -6004,6 +6425,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-25
+  id: d8f6e341-f9e5-4962-b8f4-51cf99284c4b
   end_date: 2026-09-27
   name: "Festas do Porto dos Biscoitos 2026"
   name_en: "Porto dos Biscoitos Festivities 2026"
@@ -6019,6 +6441,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-03
+  id: 3cfd17e0-6086-4b65-acc0-c3dac6885998
   name: "Azores Bravos Trail 2026"
   venue: "Ilha Terceira (vários locais de partida)"
   description: "Trail races: 100 km at 00:00 from Miradouro do Facho (Praia da Vitória), 50 km at 08:00 from Rua da Igreja (Agualva), 35 km at 10:00 from Zona Balnear dos Biscoitos, and 15 km at 11:30 from Largo do Terreiro (Posto Santo). The 10 km walk starts at 11:45 in Posto Santo. Registration closed on 31 August; check the organizer's programme for updates."
@@ -6028,6 +6451,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-10-03
+  id: c29c5c15-0b48-426f-8178-c844aeb8a0c5
   name: "3HP ao vivo na Lar Doce Livro"
   name_en: "3HP Live at Lar Doce Livro"
   venue: Lar Doce Livro
@@ -6044,6 +6468,7 @@ Come join us and support our festivities!"
 # Official-agenda backfills from the 2026-08-26 social scan
 
 - date: 2026-08-04
+  id: 8213a123-d17d-40a5-a40f-ebda971d0a87
   end_date: 2026-11-06
   kind: exhibition
   name: "Criação… para além da tela"
@@ -6058,6 +6483,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-09-09
+  id: f6f9ce5b-0248-4bf4-a831-0f9805d389e9
   name: "Apresentação de livro: Nevoeiro e Outros Contos"
   name_en: "Book Presentation: Fog and Other Short Stories"
   venue: Paços do Concelho (Town Hall)
@@ -6075,6 +6501,7 @@ Come join us and support our festivities!"
 # Manual source-audit backfills from the 2026-09-04 scan
 
 - date: 2026-09-04
+  id: 453e83a2-a82e-416a-a0d7-c7a60130561b
   end_date: 2026-10-09
   kind: exhibition
   name: "Exposição 50 Anos de Autonomia dos Açores"
@@ -6090,6 +6517,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-04
+  id: 8e8288e1-cb57-46a1-841c-69ba6c9c57cd
   end_date: 2026-09-14
   name: "Festas de Nossa Senhora da Penha de França 2026"
   name_en: "Our Lady of Penha de França Festivities 2026"
@@ -6105,6 +6533,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-04
+  id: f87b7147-a8e0-43e8-a918-7d29c5f88535
   name: "A Playlist De… Pr. Rúben Couto: 50 anos de Petra"
   name_en: "Pastor Rúben Couto's Playlist: 50 Years of Petra"
   venue: Lar Doce Livro
@@ -6119,6 +6548,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-05
+  id: f9dbaf5e-a51c-4b32-bfb7-106afa86ef62
   end_date: 2026-09-15
   kind: exhibition
   visiting_hours: "8–15 September, Monday to Friday, 18:00 to 19:30"
@@ -6138,6 +6568,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-05
+  id: a5916ecc-5044-40f6-a293-1c98a0479b32
   end_date: 2026-09-13
   name: "Festas de Santa Luzia 2026"
   name_en: "Santa Luzia Festivities 2026"
@@ -6153,6 +6584,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-05
+  id: a1362583-3f41-4797-ae58-77b96f343263
   name: "Tommy G ao vivo"
   name_en: "Tommy G Live"
   venue: Lar Doce Livro
@@ -6168,6 +6600,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-06
+  id: 0411c8a0-3206-4953-a534-bad888272066
   name: "Domingos com Música com Gustaaf van Manen"
   name_en: "Sundays with Music with Gustaaf van Manen"
   venue: Museu de Angra do Heroísmo
@@ -6182,6 +6615,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-07
+  id: d6187e6a-238d-48ec-a861-0500c0b04b7c
   name: "Praticar Inglês com Daniel Burg"
   name_en: "Practise English with Daniel Burg"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -6196,6 +6630,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-07
+  id: bc798bad-fc0d-4ea2-b9ae-ba84eb813392
   name: "Lindy Hop na Casa do Sal"
   name_en: "Lindy Hop at Casa do Sal"
   venue: Casa do Sal / Oficina d'Angra
@@ -6211,6 +6646,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-08
+  id: 92908a6b-bd9e-434d-8324-7531eedc385a
   name: "Bric-a-Brac: O tic-tac estalado das máquinas de escrever"
   name_en: "Bric-a-Brac: The Sharp Tick-Tock of Typewriters"
   venue: Lar Doce Livro
@@ -6225,6 +6661,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-09
+  id: 79e1536a-0a89-43ae-bdc8-8b3a0964fe92
   name: "Lançamento de A Utopia do Vazio"
   name_en: "Launch of The Utopia of Emptiness"
   venue: Lar Doce Livro
@@ -6239,6 +6676,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-10
+  id: 5dd56bf4-938c-48c4-8c15-887afb2428de
   name: "Dar Tempo ao Tempo"
   name_en: "Giving Time to Time"
   venue: Lar Doce Livro
@@ -6254,6 +6692,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-11
+  id: b1d645dc-01eb-4613-9826-b6bd1247d948
   name: "Conversa com Marta Silva: A Comunicação Social nos Açores"
   name_en: "Conversation with Marta Silva: The Media in the Azores"
   venue: Núcleo de História Militar Manuel Coelho Baptista de Lima
@@ -6269,6 +6708,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-11
+  id: 6b06762c-e161-4446-a10f-cbde7818b766
   name: "Noite de Lindy Hop"
   name_en: "Lindy Hop Night"
   venue: Lar Doce Livro
@@ -6284,6 +6724,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-11
+  id: ae97939c-9307-45ef-b4b1-dbf8ef1c4d24
   name: "Felt The First ao vivo"
   name_en: "Felt The First Live"
   venue: Lar Doce Livro
@@ -6298,6 +6739,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-12
+  id: bcaaba9d-ae84-4c2d-8760-dab9ee484b98
   name: "Concerto Incertus Author"
   name_en: "Incertus Author Concert"
   venue: Museu de Angra do Heroísmo
@@ -6311,6 +6753,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-09-12
+  id: 960ef12b-c4d5-4da5-bfbd-c8c93120606d
   name: "Tony Luca ao vivo"
   name_en: "Tony Luca Live"
   venue: Lar Doce Livro
@@ -6326,6 +6769,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-12
+  id: f58a43fe-aa43-4260-8859-e879ad19deec
   name: "Angra Future Sound: Closing Summer Pool Party"
   name_en: "Angra Future Sound: Closing Summer Pool Party"
   venue: Zona Balnear do Refugo
@@ -6342,6 +6786,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-13
+  id: e248bb8d-1a62-4336-8ed0-8d79d28eeaa5
   name: "Um Abraço pela Paz"
   name_en: "An Embrace for Peace"
   venue: Santuário de Nossa Senhora dos Milagres da Serreta
@@ -6355,6 +6800,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-09-13
+  id: e179cecd-e63b-48ba-ac30-f069f60fbed5
   name: "Domingos com Música com Gustaaf van Manen"
   name_en: "Sundays with Music with Gustaaf van Manen"
   venue: Museu de Angra do Heroísmo
@@ -6369,6 +6815,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-15
+  id: aade337b-5a97-4095-9854-1e231e01d4fa
   name: "Curtas sobre a Ilha Terceira"
   name_en: "Short Documentaries About Terceira"
   venue: Lar Doce Livro
@@ -6383,6 +6830,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-16
+  id: 3101f116-d755-46db-ab6b-5a2d189a935f
   name: "Conferências na Boa Nova: O Arreio Militar"
   name_en: "Boa Nova Conferences: Military Harness"
   venue: Núcleo de História Militar Manuel Coelho Baptista de Lima
@@ -6396,6 +6844,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-09-16
+  id: 6041269c-3a87-4225-a619-00b313662999
   name: "Oficina de aguarela para adultos"
   name_en: "Adult Watercolour Workshop"
   venue: Lar Doce Livro
@@ -6409,6 +6858,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-09-17
+  id: f6520d90-9720-47c3-b39a-e01efbb9d94b
   name: "Horizonte Comum: Grupo de Leituras e Estudos Feministas"
   name_en: "Common Horizon: Feminist Reading and Study Group"
   venue: Casa do Sal / Oficina d'Angra
@@ -6425,6 +6875,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-17
+  id: 2795fffb-bc81-4885-ba20-be00e39aa6f6
   name: "Poemas para Setembro"
   name_en: "Poems for September"
   venue: Lar Doce Livro
@@ -6439,6 +6890,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-18
+  id: 77e5ec27-5819-4482-b133-ad4fc793d46c
   name: "Encontro Monte Brasil Festival"
   name_en: "Monte Brasil Festival Meeting"
   venue: Lar Doce Livro
@@ -6453,6 +6905,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-18
+  id: 84c0c08e-4830-43a0-b09e-d8e356685d90
   name: "Jason Rubero: The Sun Machines"
   name_en: "Jason Rubero: The Sun Machines"
   venue: Lar Doce Livro
@@ -6468,6 +6921,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-19
+  id: 13bbd179-8daf-4cc5-a061-7f7cfb34b8da
   name: "A Playlist de António Neves: Do groove ao silêncio"
   name_en: "António Neves's Playlist: From Groove to Silence"
   venue: Lar Doce Livro
@@ -6483,6 +6937,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-20
+  id: 131727ab-65ef-4fbd-bbf9-175c4bb32d4e
   name: "Domingos com Música com Gustaaf van Manen"
   name_en: "Sundays with Music with Gustaaf van Manen"
   venue: Museu de Angra do Heroísmo
@@ -6497,6 +6952,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-20
+  id: 483f7464-ef83-43ef-9f6e-1c420e18001b
   name: "Poesia ao Crepúsculo: Natália Correia"
   name_en: "Twilight Poetry: Natália Correia"
   venue: Lar Doce Livro
@@ -6511,6 +6967,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-20
+  id: 4b03ecc1-3674-4f68-9970-657e6aff1322
   name: "O Cinema da Minha Vida: A Voz de Hind Rajab"
   name_en: "The Cinema of My Life: The Voice of Hind Rajab"
   venue: Recreio dos Artistas
@@ -6525,6 +6982,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-09-21
+  id: bee55e70-54cf-428b-a1b3-701f698596d0
   name: "Praticar Inglês com Daniel Burg"
   name_en: "Practise English with Daniel Burg"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -6539,6 +6997,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-22
+  id: e932a1d5-e0b0-460f-92ea-069ad7f72a8b
   name: "Podcast O Novo Normal"
   name_en: "The New Normal Podcast"
   venue: Lar Doce Livro
@@ -6553,6 +7012,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-23
+  id: 66f4099b-457e-420f-93f9-65934df1d87f
   name: "O Filme que me Marcou: O Gosto dos Outros"
   name_en: "The Film That Marked Me: The Taste of Others"
   venue: Lar Doce Livro
@@ -6567,6 +7027,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-24
+  id: ab355e30-0410-4907-974c-010244288e71
   name: "Grandes Livros: Orgulho e Preconceito"
   name_en: "Great Books: Pride and Prejudice"
   venue: Lar Doce Livro
@@ -6581,6 +7042,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-24
+  id: 9fe49f11-68c8-46a5-8afb-aa7aaf3a9034
   name: "Davi Days nas Festas do Porto Martins"
   name_en: "Davi Days at the Porto Martins Festivities"
   venue: Porto Martins
@@ -6595,6 +7057,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-09-25
+  id: 59c2a421-1d3f-422c-9396-cb43e2eebfbf
   name: "Os Açores vão precisar de um resgate?"
   name_en: "Will the Azores Need a Bailout?"
   venue: Lar Doce Livro
@@ -6609,6 +7072,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-25
+  id: 5ed47b33-2726-4322-9e98-9f2c68a201f0
   name: "Festa Americana VI"
   name_en: "American Party VI"
   venue: Lar Doce Livro
@@ -6623,6 +7087,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-25
+  id: 31bf818c-aa89-4c61-bba6-ee09595f6464
   end_date: 2026-10-04
   name: "Jazz na Rua 2026"
   name_en: "Jazz in the Street 2026"
@@ -6638,6 +7103,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-25
+  id: 941bf2af-d95c-4167-99e0-316bdefc7673
   name: ":PAPERCUTZ - Do.Outro.Lado.Do.Espelho"
   name_en: ":PAPERCUTZ - On.The.Other.Side.Of.The.Mirror"
   venue: Teatro Angrense
@@ -6651,6 +7117,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-09-25
+  id: 928f5896-5fd6-4c00-bcf4-ccb624e55b15
   name: "Inauguração da Mostra de Jóias"
   name_en: "Jewellery Exhibition Opening"
   venue: Museu de Angra do Heroísmo
@@ -6664,6 +7131,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-09-26
+  id: 2b2897ea-6599-401d-be29-c230c7b3a9bc
   name: "Oficina de expressão musical para bebés e crianças"
   name_en: "Music Expression Workshop for Babies and Children"
   venue: Lar Doce Livro
@@ -6678,6 +7146,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-09-26
+  id: 59b69644-f8aa-494c-86c2-515f04816d62
   name: "Sugarbush Road e datILHA"
   name_en: "Sugarbush Road and datILHA"
   venue: Lar Doce Livro
@@ -6693,6 +7162,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-26
+  id: 48b927c9-f2ac-4199-b6e0-9b6d0081ac66
   name: "Inauguração de The Journey, de Rohit Ferreira"
   name_en: "Opening of The Journey by Rohit Ferreira"
   venue: Museu de Angra do Heroísmo
@@ -6706,6 +7176,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-09-27
+  id: 7ba3bb81-9489-4d5b-81ef-969f9e0d3afd
   name: "O Cinema da Minha Vida: Brincar com Fogo"
   name_en: "The Cinema of My Life: The Quiet Son"
   venue: Recreio dos Artistas
@@ -6720,6 +7191,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-09-29
+  id: 93683ffa-fddd-4063-a9be-4f736af24c04
   name: "Eco-conversas: O preço da poluição"
   name_en: "Eco Conversations: The Price of Pollution"
   venue: Lar Doce Livro
@@ -6734,6 +7206,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-30
+  id: 6b3e9e63-98ed-404d-a0cd-f7c9ac21f99b
   name: "Criação, evolução ou ambas: como ler o Génesis?"
   name_en: "Creation, Evolution, or Both: How Should Genesis Be Read?"
   venue: Lar Doce Livro
@@ -6748,6 +7221,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-01
+  id: a854164f-47b3-480d-b862-5c03f26c65e5
   name: "História da imprensa escrita da Terceira"
   name_en: "History of Terceira's Press"
   venue: Lar Doce Livro
@@ -6762,6 +7236,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-02
+  id: 699d9835-b7f3-411c-b7ad-5ac877716520
   name: "11 de Setembro de 2001: entrevista ao Major Cândido Mendes"
   name_en: "11 September 2001: Interview with Major Cândido Mendes"
   venue: Lar Doce Livro
@@ -6776,6 +7251,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-04
+  id: e45f6bf9-b96c-4092-86c8-ed3ab7e8d924
   name: "O Cinema da Minha Vida: Valor Sentimental"
   name_en: "The Cinema of My Life: Sentimental Value"
   venue: Recreio dos Artistas
@@ -6790,6 +7266,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-11
+  id: 570d96c2-8874-4c83-b27d-7a9a3dc6cd5e
   name: "O Cinema da Minha Vida: Memórias de um Caracol"
   name_en: "The Cinema of My Life: Memoir of a Snail"
   venue: Recreio dos Artistas
@@ -6804,6 +7281,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-30
+  id: bf2944ac-2141-4c44-82b2-86731312dedf
   name: "Apresentação do álbum Gratidão: Sónia Pereira Trio"
   name_en: "Gratitude Album Presentation: Sónia Pereira Trio"
   venue: Teatro Angrense
@@ -6819,6 +7297,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-11-08
+  id: 71fe781f-4be7-48ba-b480-5c71724adf9b
   name: "O Cinema da Minha Vida: O Estrangeiro"
   name_en: "The Cinema of My Life: The Stranger"
   venue: Recreio dos Artistas
@@ -6833,6 +7312,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-11-15
+  id: c180631e-0aa1-4749-a486-c3cc12a86f7f
   name: "O Cinema da Minha Vida: Fellinopolis"
   name_en: "The Cinema of My Life: Fellinopolis"
   venue: Recreio dos Artistas
@@ -6847,6 +7327,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-11-22
+  id: a62a0bfc-ebb8-4cac-a989-436b14326458
   name: "O Cinema da Minha Vida: Sister Midnight"
   name_en: "The Cinema of My Life: Sister Midnight"
   venue: Recreio dos Artistas
@@ -6861,6 +7342,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-11-29
+  id: 9b08b49b-0cf6-48e1-88d0-18a84b3d212f
   name: "O Cinema da Minha Vida: A Irmandade da Sauna"
   name_en: "The Cinema of My Life: Smoke Sauna Sisterhood"
   venue: Recreio dos Artistas
@@ -6875,6 +7357,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-12-06
+  id: 6b021b64-01ca-4550-9944-246abedf7886
   name: "O Cinema da Minha Vida: Dois Procuradores"
   name_en: "The Cinema of My Life: Two Prosecutors"
   venue: Recreio dos Artistas
@@ -6889,6 +7372,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-12-13
+  id: a4d685e1-fdb1-4b95-94d8-ac3fc6d51bc4
   name: "O Cinema da Minha Vida: Nouvelle Vague"
   name_en: "The Cinema of My Life: Nouvelle Vague"
   venue: Recreio dos Artistas
@@ -6903,6 +7387,7 @@ Come join us and support our festivities!"
   - cinema
 
 - name: "ESCAMA: de borboleta 2#"
+  id: f4106bde-f02b-404d-913f-8e0e5ed7547e
   name_pt: "ESCAMA: de borboleta 2#"
   name_en: "ESCAMA: de borboleta 2#"
   date: 2026-09-12
@@ -6923,6 +7408,7 @@ Come join us and support our festivities!"
 
 # September 12, 2026 official CMAH agenda delta scan.
 - date: 2026-09-25
+  id: b5c7474f-ebc4-4cea-8965-0058e9bba14a
   name: "Conferência: Conversas ao Serão — Médicos Sem Fronteiras / Fraterune"
   name_en: "Conference: Evening Conversations — Doctors Without Borders / Fraterune"
   venue: Paços do Concelho de Angra do Heroísmo
@@ -6937,6 +7423,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-26
+  id: 25c5d989-ffad-4048-8481-b794aef83a33
   name: "Formação: Liderança de Equipas"
   name_en: "Training: Team Leadership"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -6950,6 +7437,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-09-27
+  id: d4b2b2ba-6d26-4c60-bbd7-09e630bdd38e
   name: "Formação: Estratégia de Marketing para Clubes Desportivos"
   name_en: "Training: Marketing Strategy for Sports Clubs"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -6963,6 +7451,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-09-27
+  id: 14983cfc-530d-44be-acc6-d042bfc79362
   name: "Formação: Gestão da Organização Desportiva"
   name_en: "Training: Sports Organization Management"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -6976,6 +7465,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-09-29
+  id: f3e21f78-de93-4852-a005-0758197f03ff
   name: "Conferência: OMNIMORPHIC ART — Defining a New Category of Ancient Visual Art"
   name_en: "Conference: OMNIMORPHIC ART — Defining a New Category of Ancient Visual Art"
   venue: Paços do Concelho de Angra do Heroísmo
@@ -6990,6 +7480,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-18
+  id: e0169287-77fa-4993-9e1c-54c5b16bcc37
   name: "Concerto do Outono (Temporada de Música Clássica)"
   name_en: "Autumn Concert (Classical Music Season)"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -7004,6 +7495,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-11-29
+  id: 0be9ca7c-280e-4650-94be-9ac94545cb80
   name: "Temporada de Música Clássica: Concerto do Advento"
   name_en: "Classical Music Season: Advent Concert"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -7018,6 +7510,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-12-20
+  id: 9dfbf5df-cfb3-407f-b39f-aacacee42cda
   name: "Temporada de Música Clássica: Concerto de Natal"
   name_en: "Classical Music Season: Christmas Concert"
   venue: Igreja do Colégio
@@ -7032,6 +7525,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-12-27
+  id: a501c566-600a-4799-b2b2-6ed9f8960c7c
   name: "Temporada de Música Clássica: Concerto de Fim de Ano"
   name_en: "Classical Music Season: End-of-Year Concert"
   venue: Paços do Concelho de Angra do Heroísmo
@@ -7047,6 +7541,7 @@ Come join us and support our festivities!"
 
 # September 16, 2026 social and official-agenda scan.
 - date: 2026-09-07
+  id: 548e5099-9253-4830-84ac-236528133c7e
   end_date: 2026-10-31
   kind: exhibition
   name: "Escritores da Diáspora: Onésimo Teotónio Almeida"
@@ -7060,6 +7555,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-09-17
+  id: 8ff259fc-ea67-47cc-807c-37953458667d
   end_date: 2026-09-20
   name: "Festas de Nossa Senhora dos Milagres do Pesqueiro"
   name_en: "Our Lady of Miracles Festivities in Pesqueiro"
@@ -7072,6 +7568,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-09-18
+  id: d9cd4f35-8674-4740-ba32-4b09dec8476b
   name: "Delta Project ao vivo na Tasca do Camões"
   name_en: "Delta Project Live at Tasca do Camões"
   venue: Tasca do Camões
@@ -7085,6 +7582,7 @@ Come join us and support our festivities!"
   - nightlife
 
 - date: 2026-09-19
+  id: a3db18da-8e17-4837-bd1c-e0f6916a3c42
   name: "Ensemble Barroco/3"
   venue: Museu de Angra do Heroísmo
   address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
@@ -7096,6 +7594,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-09-19
+  id: 6c559a86-a842-4671-a883-b70fae1cd092
   name: "On the Road ao vivo no The Garden Club"
   name_en: "On the Road Live at The Garden Club"
   venue: The Garden Club
@@ -7109,6 +7608,7 @@ Come join us and support our festivities!"
   - food-drink
 
 - date: 2026-09-20
+  id: 2d5984e6-5739-4670-82bd-73186195ceb7
   end_date: 2026-09-28
   name: "Festas de São Carlos 2026"
   name_en: "São Carlos Festivities 2026"
@@ -7121,6 +7621,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-09-23
+  id: c4cda736-75de-4aed-a709-4281d4290116
   name: "Green Power Verde: Empreendedorismo na Ilha Terceira"
   name_en: "Green Power Verde: Entrepreneurship on Terceira"
   venue: StartUp Angra
@@ -7133,6 +7634,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-09-25
+  id: 52b7b06a-beee-42af-a189-b62f1015d972
   name: "Seminário: Objetivos de Desenvolvimento Sustentável"
   name_en: "Seminar: Sustainable Development Goals"
   venue: Academia de Juventude e das Artes da Ilha Terceira
@@ -7147,6 +7649,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-26
+  id: 93cdcc49-07a3-4080-a346-ffc20c56a2e6
   name: "Praia by Night"
   venue: Praia da Vitória
   address: "Praia da Vitória"
@@ -7159,6 +7662,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-09-26
+  id: 6f527512-cee5-4550-81d5-5fcb5c47821b
   name: "Cinema Infantil: Nina e o Segredo do Ouriço"
   name_en: "Children's Cinema: Nina and the Hedgehog's Secret"
   venue: Recreio dos Artistas
@@ -7174,6 +7678,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-27
+  id: 46d5d796-1ef9-4965-93e6-baac8ea583f0
   name: "Cãominhada Solidária"
   name_en: "Charity Dog Walk"
   venue: Zona de Lazer das Relheiras de São Brás
@@ -7187,6 +7692,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-10-03
+  id: 3c08095e-90c6-4353-9129-d5f5c3a5851e
   name: "Hora do Conto"
   name_en: "Story Time"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -7202,6 +7708,7 @@ Come join us and support our festivities!"
 
 # September 16 evening social and official-agenda scan.
 - date: 2026-09-01
+  id: 855f3780-501c-4ab2-8146-d9b66ef4a5a3
   end_date: 2026-10-31
   kind: exhibition
   name: "Documento do Mês: O fardamento militar português dos séculos XVIII e XIX"
@@ -7215,6 +7722,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-09-16
+  id: b972f34d-6e79-4a4b-80ae-101f325ac1dd
   end_date: 2026-10-14
   kind: exhibition
   name: "Mostra bibliográfica: Livros em Língua Estrangeira"
@@ -7229,6 +7737,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-09-26
+  id: 52a25113-44ab-409b-be31-113b7f7b344b
   name: "Cerimónia de descerramento da placa do Campo Municipal de Ténis Basílio Sousa"
   name_en: "Basílio Sousa Municipal Tennis Court Naming Ceremony"
   venue: Campo Municipal de Ténis de Angra do Heroísmo
@@ -7241,6 +7750,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-26
+  id: d72aafba-5fd2-411b-a16e-153be110e625
   name: "V Grande Concerto de Verão da AMIT"
   name_en: "AMIT's Fifth Grand Summer Concert"
   venue: Praça Velha
@@ -7256,6 +7766,7 @@ Come join us and support our festivities!"
   - kid-friendly
 
 - date: 2026-09-27
+  id: e5220e68-ca48-4fcd-b6c0-b4fe220029c9
   end_date: 2026-11-22
   kind: exhibition
   name: "Exposição: The Journey, de Rohit Ferreira"
@@ -7270,6 +7781,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-17
+  id: c646ee49-9971-406b-91a2-39228097856e
   name: "ESCAMA: de dragão 3#"
   name_en: "ESCAMA: Dragon 3#"
   venue: Casa do Sal
@@ -7285,6 +7797,7 @@ Come join us and support our festivities!"
 
 # September 26, 2026 social, official-agenda, and source-discovery scan.
 - date: 2026-08-04
+  id: 8cd655d7-4927-4085-9584-6faf0312739c
   end_date: 2026-11-23
   kind: exhibition
   name: "Museu Afora: Modelo de Avião TAP Lockheed Super Constellation"
@@ -7298,6 +7811,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-09-01
+  id: 97de49b3-8aad-4037-b737-9e75e216c1b4
   end_date: 2026-10-04
   kind: exhibition
   name: "Vitrine de Curiosidades: Sycees — lingotes de prata chineses"
@@ -7311,6 +7825,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-09-11
+  id: f9207037-4ef1-4d67-b2e9-9a051e58ef59
   end_date: 2026-10-31
   kind: exhibition
   name: "Exposição: Viola da Saudade"
@@ -7324,6 +7839,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-09-22
+  id: c6abfe36-fc51-4c3d-b2dd-0cb90343b6ac
   end_date: 2027-01-30
   kind: exhibition
   name: "Exposição: Jaime Brasil — da ilha ao mundo"
@@ -7338,6 +7854,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-09-27
+  id: eb36e636-483e-425d-a3bb-00f6fcf99e06
   end_date: 2026-10-09
   kind: exhibition
   visiting_hours: "Monday through Friday from 16:00 to 18:30"
@@ -7355,6 +7872,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-02
+  id: c7507b26-0143-4c9c-8fcc-6aff543b4817
   end_date: 2026-10-05
   name: "Angra 4 Patas 2026"
   name_en: "Angra Four Paws 2026"
@@ -7369,6 +7887,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-10-03
+  id: 3ffba3b3-0287-4b5a-aae3-ddc67bec7294
   name: "Entradas de Peso: Isto Não É Gostar de Podcasts — ao vivo"
   name_en: "Entradas de Peso: This Is Not Liking Podcasts — Live"
   venue: Auditório do Ramo Grande
@@ -7381,6 +7900,7 @@ Come join us and support our festivities!"
   - theater
 
 - date: 2026-10-03
+  id: 905af0bb-8e78-4ed9-9724-586f0d24e6dd
   end_date: 2026-10-05
   name: "Azores City Race 2026"
   venue: Ilha Terceira
@@ -7392,6 +7912,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-10-03
+  id: 4cf95751-c7d7-4f15-97bf-f60e776e7342
   end_date: 2026-10-10
   name: "Festas das Lajes 2026 — Rosairinhas"
   name_en: "Lajes Festivities 2026 — Rosairinhas"
@@ -7407,6 +7928,7 @@ Come join us and support our festivities!"
   - nightlife
 
 - date: 2026-10-08
+  id: 10571331-5f39-41d7-abf0-6e4b6bc833b5
   end_date: 2026-10-10
   name: "XLIII ProAm — Clube de Golfe da Ilha Terceira"
   name_en: "43rd ProAm — Terceira Island Golf Club"
@@ -7420,6 +7942,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-11-20
+  id: 1bb7fccd-fcb0-4a0c-82be-fec1d049aaf8
   end_date: 2026-11-21
   name: "Sons da Macaronésia — Festival de Música Atlântica"
   name_en: "Sounds of Macaronesia — Atlantic Music Festival"
@@ -7433,6 +7956,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2027-01-16
+  id: 392e5af8-dc85-4983-9e2d-affd12d4df1d
   name: "Concertos Únicos 2027: Ana Moura com João Barros"
   name_en: "Unique Concerts 2027: Ana Moura with João Barros"
   venue: Auditório do Ramo Grande
@@ -7445,6 +7969,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2027-01-29
+  id: 65d77572-a275-4076-9da7-b628b6504ead
   end_date: 2027-01-31
   name: "Azores GameFest 2027"
   venue: Parque Multissetorial da Ilha Terceira
@@ -7457,6 +7982,7 @@ Come join us and support our festivities!"
   - kid-friendly
 
 - date: 2027-03-13
+  id: 271c54de-277c-4287-b0fe-b52f2a255174
   name: "Concertos Únicos 2027: Luís Trigacheiro com Pedro Xavier"
   name_en: "Unique Concerts 2027: Luís Trigacheiro with Pedro Xavier"
   venue: Auditório do Ramo Grande
@@ -7469,6 +7995,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2027-04-17
+  id: 667b20d8-1ba0-48d2-9978-6a66c7e058ac
   name: "Concertos Únicos 2027: Nena com Tommy G"
   name_en: "Unique Concerts 2027: Nena with Tommy G"
   venue: Auditório do Ramo Grande
@@ -7482,6 +8009,7 @@ Come join us and support our festivities!"
 
 # October 7, 2026 social, official-agenda, and source-discovery scan.
 - date: 2026-10-10
+  id: 7b15f9cd-3430-4c9a-8b35-5c1652027641
   end_date: 2026-10-11
   name: "Cinema: A Ovelha Choné — Trapalhada na Quinta"
   name_en: "Cinema: Shaun the Sheep — The Beast of Mossy Bottom"
@@ -7497,6 +8025,7 @@ Come join us and support our festivities!"
   - kid-friendly
 
 - date: 2026-10-11
+  id: d2ca5475-876c-4772-853f-6c15287d833b
   name: "Cinema: A Ovelha Choné — Trapalhada na Quinta (Praia da Vitória)"
   name_en: "Cinema: Shaun the Sheep — The Beast of Mossy Bottom (Praia da Vitória)"
   venue: Auditório do Ramo Grande
@@ -7510,6 +8039,7 @@ Come join us and support our festivities!"
   - kid-friendly
 
 - date: 2026-10-11
+  id: 717abb33-5352-48f7-a06b-1d971459881c
   end_date: 2026-10-30
   kind: exhibition
   visiting_hours: "16:00 to 18:30 during the published programme period"
@@ -7526,6 +8056,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-10-12
+  id: e44f400b-a4af-47be-9dcb-618034ee2876
   name: "Apresentação: Guia de Boas Práticas — Inclusão Social através da Arte"
   name_en: "Presentation: Good Practice Guide — Social Inclusion through Art"
   venue: Paços do Concelho de Angra do Heroísmo
@@ -7540,6 +8071,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-14
+  id: 29a67741-3eb8-40e2-b6b7-684d5e1182df
   name: "Apresentação: MONTE BRASIL 2026 — I Festival de Literatura & História"
   name_en: "Presentation: MONTE BRASIL 2026 — First Literature and History Festival"
   venue: Paços do Concelho de Angra do Heroísmo
@@ -7554,6 +8086,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-15
+  id: 9ed7d32f-8089-4eab-bcde-9941a6aa6192
   end_date: 2026-10-19
   name: "Cinema: Verity"
   name_en: "Cinema: Verity"
@@ -7567,6 +8100,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-16
+  id: c4e070f5-cafb-4aa7-84a6-d80890c3d6da
   name: "Lançamento de livro: A Propósito do Bicentenário do Nascimento do Pe. Jerónimo Emiliano de Andrade"
   name_en: "Book Launch: On the Bicentenary of Father Jerónimo Emiliano de Andrade's Birth"
   venue: Paços do Concelho de Angra do Heroísmo
@@ -7579,6 +8113,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-10-16
+  id: bc495fa8-7228-4ba1-b66e-67d141554bcd
   name: "Cine Atlântico: Mudar de Vida"
   name_en: "Cine Atlântico: Change of Life"
   venue: Recreio dos Artistas
@@ -7591,6 +8126,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-16
+  id: daf7b992-b14c-4290-bd69-4043da302ded
   name: "Cine Atlântico: O Desejado ou As Montanhas da Lua"
   name_en: "Cine Atlântico: The Desired One or The Mountains of the Moon"
   venue: Recreio dos Artistas
@@ -7603,6 +8139,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-17
+  id: 5a5eaf3b-5221-4a3f-abeb-9ada3f062c5c
   name: "Danças Tradicionais do Mundo com Miguel Lopes"
   name_en: "World Traditional Dances with Miguel Lopes"
   venue: Casa do Sal
@@ -7617,6 +8154,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-10-17
+  id: 10f0bffb-9a9e-46e6-86c8-23c46149b1f4
   name: "Cine Atlântico: O Rio do Ouro"
   name_en: "Cine Atlântico: River of Gold"
   venue: Recreio dos Artistas
@@ -7629,6 +8167,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-17
+  id: a6dc6612-bb32-403e-b26e-bca963987bdf
   name: "Cine Atlântico: A Raiz do Coração"
   name_en: "Cine Atlântico: The Root of the Heart"
   venue: Recreio dos Artistas
@@ -7641,6 +8180,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-20
+  id: 4010f853-bb0b-48df-80a0-1f56fe1c7c74
   name: "Conferência: A(s) polícia(s) na construção histórica de um estado de direito"
   name_en: "Conference: Police Institutions in the Historical Construction of the Rule of Law"
   venue: Paços do Concelho de Angra do Heroísmo
@@ -7654,6 +8194,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-23
+  id: f89e6f18-aacd-4628-a392-fa2f8b8d8d5a
   name: "Cinema: Verity (Praia da Vitória)"
   name_en: "Cinema: Verity (Praia da Vitória)"
   venue: Auditório do Ramo Grande
@@ -7666,6 +8207,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-24
+  id: bb26f5d1-613e-4369-bc45-7c44678569c9
   name: "Evento Solidário: Crescer com Esperança"
   name_en: "Charity Event: Growing with Hope"
   venue: Teatro Angrense
@@ -7678,6 +8220,7 @@ Come join us and support our festivities!"
   - theater
 
 - date: 2026-10-24
+  id: 11dfa001-8f72-47df-b7a1-c52fc1d664a2
   end_date: 2026-10-26
   name: "Cinema: Digger"
   name_en: "Cinema: Digger"
@@ -7691,6 +8234,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-24
+  id: 328e9dc7-25ea-45e3-9746-6cc10e70e68b
   name: "Festival Internacional dos Açores: Rafael Kyrychenko"
   name_en: "Azores International Festival: Rafael Kyrychenko"
   venue: Palácio dos Capitães Generais
@@ -7702,6 +8246,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-10-29
+  id: a881fae7-3806-46cb-a382-024593c28eb8
   end_date: 2026-11-02
   name: "Cinema: Sacrifício"
   name_en: "Cinema: Sacrifice"
@@ -7715,6 +8260,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-31
+  id: cddb41c0-2034-400e-9ca0-f1466659efe9
   name: "Cinema: Other Mommy"
   name_en: "Cinema: Other Mommy"
   venue: Auditório do Ramo Grande
@@ -7727,6 +8273,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-01
+  id: b8b28d36-4f1b-42b9-9636-fc4df7fafb23
   end_date: 2026-12-31
   kind: exhibition
   name: "Exposição de fotografia: Angra da Humanidade, de Luís Godinho"
@@ -7741,6 +8288,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-11-29
+  id: 31fd3b76-4342-4944-afa3-6d0d7ad064b9
   end_date: 2026-12-06
   name: "Festival Internacional dos Açores: A ilha EnCena"
   name_en: "Azores International Festival: The Island On Stage"
@@ -7754,6 +8302,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-11-29
+  id: 17132c29-8125-4f32-8e45-d3d1d34bc31a
   name: "Conferência comemorativa da 20.ª edição do Festival Internacional dos Açores"
   name_en: "20th Azores International Festival Commemorative Conference"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -7767,6 +8316,7 @@ Come join us and support our festivities!"
 
 # Lar Doce Livro — October 2026 programme
 - date: 2026-10-08
+  id: 5270f8ed-6467-49e1-8659-b34abc4bab16
   name: "Poesia com Cobertor: Poemas para Outubro"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7776,6 +8326,7 @@ Come join us and support our festivities!"
   tags: [literature, free]
 
 - date: 2026-10-09
+  id: 228a673f-0bb0-4b4f-a399-9ed9b58fe9ed
   name: "BRIC-A-BRAC Talks: A minha máquina do tempo"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7785,6 +8336,7 @@ Come join us and support our festivities!"
   tags: [free]
 
 - date: 2026-10-09
+  id: f0cd1f29-3503-48e4-af31-f52a5cab6134
   name: "Aaron Grindland ao vivo"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7794,6 +8346,7 @@ Come join us and support our festivities!"
   tags: [live-music, nightlife, free]
 
 - date: 2026-10-10
+  id: 20ca6435-041f-4858-8d28-71f0cbd0158e
   name: "Saúde Mental: Institucionalização, cuidados de saúde em contexto comunitário ou ambos?"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7803,6 +8356,7 @@ Come join us and support our festivities!"
   tags: [free]
 
 - date: 2026-10-10
+  id: 57950607-4ed7-48f8-be35-bb6438641c72
   name: "Double Trouble ao vivo"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7812,6 +8366,7 @@ Come join us and support our festivities!"
   tags: [live-music, nightlife, free]
 
 - date: 2026-10-11
+  id: 1b591af2-fead-426d-a2b1-248c9e35d19d
   name: "World Music: Notes To Self — o regresso de Catrin Finch"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7821,6 +8376,7 @@ Come join us and support our festivities!"
   tags: [live-music, free]
 
 - date: 2026-10-12
+  id: cf7e00cb-e342-4a8c-ae17-ab7308fffef7
   name: "Clube de Leitura LDL: Acolher, de Claire Keegan"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7830,6 +8386,7 @@ Come join us and support our festivities!"
   tags: [literature, free]
 
 - date: 2026-10-13
+  id: ac78c009-85da-442e-a585-0fed79254f7b
   name: "Memórias da Autonomia: 50 Anos de Região Autónoma dos Açores"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7839,6 +8396,7 @@ Come join us and support our festivities!"
   tags: [free]
 
 - date: 2026-10-14
+  id: 397aafc7-9122-44b3-a160-526e23200388
   name: "Palestra: Ilha Coiba — um mundo à parte"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7848,6 +8406,7 @@ Come join us and support our festivities!"
   tags: [free]
 
 - date: 2026-10-15
+  id: 0a6c1e66-ec11-47ca-a4cd-5dbb32fd7c88
   name: "Pensar a Educação — Uma Conversa Antes do Congresso"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7857,6 +8416,7 @@ Come join us and support our festivities!"
   tags: [free]
 
 - date: 2026-10-16
+  id: 70270641-2788-4910-bc62-bf585d8d0aa9
   name: "Workshop de Lindy Hop com Arianna Meschia"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7866,6 +8426,7 @@ Come join us and support our festivities!"
   tags: [dance, workshop, free]
 
 - date: 2026-10-16
+  id: 358aea31-f13f-47b2-a84a-e33cc251309f
   name: "Baile Lindy Hop com Arianna Meschia"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7875,6 +8436,7 @@ Come join us and support our festivities!"
   tags: [dance, nightlife, free]
 
 - date: 2026-10-16
+  id: 60b20f02-ae79-48ab-9b70-339c63a1d28e
   name: "Troca de Discos: Dos anos 90 aos dias de hoje — os muitos rostos do trip hop"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7884,6 +8446,7 @@ Come join us and support our festivities!"
   tags: [live-music, nightlife, free]
 
 - date: 2026-10-17
+  id: 529cc357-7075-4913-95fa-a29df23d4623
   name: "Oficina de Pintura para Adultos: Iniciação à aguarela"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7893,6 +8456,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-17
+  id: 0e4a29d8-0aec-4f47-8d92-c4038034f9af
   name: "Falk Meutzner ao vivo"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7902,6 +8466,7 @@ Come join us and support our festivities!"
   tags: [live-music, nightlife, free]
 
 - date: 2026-10-17
+  id: 67579a24-cdb8-43fc-9585-77f41f471770
   name: "A Playlist de António Neves: Herdeiras de Cesária 1 — Nancy Vieira"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7911,6 +8476,7 @@ Come join us and support our festivities!"
   tags: [live-music, nightlife, free]
 
 - date: 2026-10-18
+  id: 36c0f4f5-c50f-4d22-a5ee-d9ea82a5d97a
   name: "Oficina de Desenvolvimento Pessoal: Regressar a si"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7920,6 +8486,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-18
+  id: eb3904a0-d803-4f31-9847-cc1bae6510de
   name: "World Music: António Chainho — um outro olhar sobre a guitarra portuguesa"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7929,6 +8496,7 @@ Come join us and support our festivities!"
   tags: [live-music, free]
 
 - date: 2026-10-19
+  id: 6f52e494-ba99-4cf2-bd52-e683a5b16f09
   name: "Grande Entrevista: Tecnologia, ciência, filosofia — qual estabelecerá a finalidade última da espécie?"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7938,6 +8506,7 @@ Come join us and support our festivities!"
   tags: [free]
 
 - date: 2026-10-19
+  id: 331f1080-c65b-4e40-80e3-b9dfc3372f26
   name: "Clube de Leitura LDL: Acolher, de Claire Keegan"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7947,6 +8516,7 @@ Come join us and support our festivities!"
   tags: [literature, free]
 
 - date: 2026-10-20
+  id: cb8e3fb6-0944-44d8-9021-f029349a8c6f
   name: "Podcast O Novo Normal"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7956,6 +8526,7 @@ Come join us and support our festivities!"
   tags: [free]
 
 - date: 2026-10-21
+  id: ddb5fcf0-2bf3-4589-ab50-bbad777708b7
   name: "An Evening by the Atlantic: Stories, Music, and Community"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7965,6 +8536,7 @@ Come join us and support our festivities!"
   tags: [live-music, free]
 
 - date: 2026-10-22
+  id: fcf658cb-5a14-4914-a012-c71579792e12
   name: "Podcast: Quem são, segundo a Bíblia, os Judeus?"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7974,6 +8546,7 @@ Come join us and support our festivities!"
   tags: [free]
 
 - date: 2026-10-23
+  id: 548db73d-bb82-4d79-a2cf-faeb6d99db7e
   name: "Grandes Livros: Orgulho e Preconceito, de Jane Austen"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7983,6 +8556,7 @@ Come join us and support our festivities!"
   tags: [literature, free]
 
 - date: 2026-10-23
+  id: 4f51fb71-59e7-41c4-9d4d-c0f7ec760e4c
   name: "Filipe Soares ao vivo"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -7992,6 +8566,7 @@ Come join us and support our festivities!"
   tags: [live-music, nightlife, free]
 
 - date: 2026-10-24
+  id: 216f26dd-7217-4f73-9530-4da493c88f91
   name: "Poetas da Ilha"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -8001,6 +8576,7 @@ Come join us and support our festivities!"
   tags: [literature, live-music, free]
 
 - date: 2026-10-24
+  id: 69bffbdc-fd53-40f5-9b0e-df491524a94d
   name: "Double Trouble ao vivo"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -8010,6 +8586,7 @@ Come join us and support our festivities!"
   tags: [live-music, nightlife, free]
 
 - date: 2026-10-25
+  id: 5c033ca0-c526-46b3-ba72-764a653759e2
   name: "Poesia ao Crepúsculo: Emanuel Félix"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -8019,6 +8596,7 @@ Come join us and support our festivities!"
   tags: [literature, free]
 
 - date: 2026-10-25
+  id: 7d9527fc-4c9e-49f7-b484-d96ad66eacc8
   name: "World Music: O melhor de 2025 segundo a WMCE — do 20.º ao 11.º lugar"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -8028,6 +8606,7 @@ Come join us and support our festivities!"
   tags: [live-music, free]
 
 - date: 2026-10-26
+  id: 42b21ff9-cf0f-4a40-8a6d-d313a41e2ea5
   name: "Clube de Leitura LDL: Acolher, de Claire Keegan"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -8037,6 +8616,7 @@ Come join us and support our festivities!"
   tags: [literature, free]
 
 - date: 2026-10-27
+  id: 5af7120c-1415-4dc7-8071-504a7054beb5
   name: "Eco-Conversas: Sem desperdício — a sabedoria agrícola do reaproveitamento"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -8046,6 +8626,7 @@ Come join us and support our festivities!"
   tags: [free]
 
 - date: 2026-10-28
+  id: 929867bb-30bb-45a3-8f7a-db27aca5b182
   name: "Lançamento e palestra: Escrever para (Sobre)Viver"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -8055,6 +8636,7 @@ Come join us and support our festivities!"
   tags: [literature, free]
 
 - date: 2026-10-29
+  id: b0a2aa52-e260-4d65-bb9a-f906a2713612
   name: "O Filme que me Marcou para Sempre: José Olívio Mendes escolhe Ingmar Bergman"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -8064,6 +8646,7 @@ Come join us and support our festivities!"
   tags: [cinema, free]
 
 - date: 2026-10-30
+  id: b77e853a-9b22-4aa7-bb7a-b981a95083dd
   name: "Alcatra da Ilha Terceira: receita, história e classificação IGP"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -8073,6 +8656,7 @@ Come join us and support our festivities!"
   tags: [food-drink, free]
 
 - date: 2026-10-30
+  id: 0bd8ec8a-9ba4-4f08-8bfa-cac4491ee6ed
   name: "Festa Americana: Fried Okra — Traditional Americana Open Night"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -8082,6 +8666,7 @@ Come join us and support our festivities!"
   tags: [live-music, nightlife, free]
 
 - date: 2026-10-31
+  id: 1cfc9886-57f0-4518-af33-e702249cb451
   name: "Concerto de homenagem a Jorge Palma"
   venue: Lar Doce Livro
   address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
@@ -8092,6 +8677,7 @@ Come join us and support our festivities!"
 
 # Official municipal, cultural, museum and sports sources
 - date: 2026-10-01
+  id: 93f78a96-f10c-4765-a6d7-498a08c297e3
   end_date: 2026-11-30
   kind: exhibition
   name: "Cartografias da Memória: A Mulher na Imprensa Açoriana"
@@ -8102,6 +8688,7 @@ Come join us and support our festivities!"
   tags: [exhibition, free]
 
 - date: 2026-10-08
+  id: 59a7c410-0f47-4a2f-ae79-1b9c95b83568
   end_date: 2027-01-30
   kind: exhibition
   name: "Exposição de fotografia: Romaria Cigana"
@@ -8112,6 +8699,7 @@ Come join us and support our festivities!"
   tags: [exhibition, free]
 
 - date: 2026-10-08
+  id: 71b345ed-15d0-46db-92ae-c77615dd0c8e
   end_date: 2026-10-12
   name: "Cinema: Heart of the Beast — Heróis Inseparáveis"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -8122,6 +8710,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-09
+  id: 43bc8fc8-e565-47fe-8eba-caf88affbbb3
   name: "Conferência: Os Usos do Passado — Patrimónios, Memórias e Lugares"
   venue: Paços do Concelho de Angra do Heroísmo
   address: "Praça Velha, 9700-091 Angra do Heroísmo"
@@ -8131,6 +8720,7 @@ Come join us and support our festivities!"
   tags: [free]
 
 - date: 2026-10-09
+  id: dedac874-b617-4810-ad61-1a6e7ceafadb
   name: "Contos com Bru Junça"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
@@ -8140,6 +8730,7 @@ Come join us and support our festivities!"
   tags: [literature, free]
 
 - date: 2026-10-10
+  id: 02a37bf4-649d-46b3-b493-81fcc62561df
   name: "Tertúlia Paleográfica"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
   address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
@@ -8149,6 +8740,7 @@ Come join us and support our festivities!"
   tags: [literature, workshop, free]
 
 - date: 2026-10-16
+  id: 8f3543fe-6f98-4c78-baa0-ddeed28fba2c
   name: "Espetáculo de Dança: Escola Artística de Dança do Conservatório Nacional"
   venue: Teatro Angrense
   address: "Rua da Esperança 48, 9700-073 Angra do Heroísmo"
@@ -8158,6 +8750,7 @@ Come join us and support our festivities!"
   tags: [dance, theater]
 
 - date: 2026-10-17
+  id: ba8c7143-dc6f-4f3c-9034-f9c77dad56cf
   name: "Curso de História da Arte para Crianças"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
@@ -8168,6 +8761,7 @@ Come join us and support our festivities!"
   tags: [kid-friendly, workshop]
 
 - date: 2026-10-24
+  id: 99c0fdd6-9eaf-4429-b2b6-1584f680eed3
   name: "Formação: Growth Mindset nas PME"
   venue: Angra do Heroísmo
   address: "Angra do Heroísmo"
@@ -8176,6 +8770,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-10
+  id: 77beb226-fe05-48b8-be0f-ab41c0b6cb78
   name: "Festival Internacional dos Açores: Nicolás Pérez-Nievas Baquedano"
   venue: Palácio dos Capitães Generais
   address: "Rua do Palácio, 9700-143 Angra do Heroísmo"
@@ -8184,6 +8779,7 @@ Come join us and support our festivities!"
   tags: [live-music, free]
 
 - date: 2026-10-30
+  id: d1c771a5-d3cf-4b90-9f66-359b36151396
   end_date: 2026-10-31
   name: "Festas da Castanha — Terra Chã"
   venue: Terra Chã
@@ -8194,6 +8790,7 @@ Come join us and support our festivities!"
   source_url: https://www.facebook.com/photo/?fbid=1783816519984160&set=a.609332960765861
 
 - date: 2026-10-31
+  id: b52486cd-98e8-4197-8d3f-f625fc76502e
   name: "Torneio das Castanhas — Individual"
   venue: Clube de Golfe da Ilha Terceira
   address: "Fajãs da Agualva, 9760-403 Praia da Vitória"
@@ -8202,6 +8799,7 @@ Come join us and support our festivities!"
   tags: [outdoor]
 
 - date: 2026-11-15
+  id: d5494a64-caae-4588-95a6-f2c2a8586d02
   name: "Torneio Lions Terceira — Pares"
   venue: Clube de Golfe da Ilha Terceira
   address: "Fajãs da Agualva, 9760-403 Praia da Vitória"
@@ -8210,6 +8808,7 @@ Come join us and support our festivities!"
   tags: [outdoor]
 
 - date: 2026-12-05
+  id: 5a6bd86d-4c38-4be4-ad5f-54e571f2ba60
   name: "Torneio do Peru — Individual"
   venue: Clube de Golfe da Ilha Terceira
   address: "Fajãs da Agualva, 9760-403 Praia da Vitória"
@@ -8218,6 +8817,7 @@ Come join us and support our festivities!"
   tags: [outdoor]
 
 - date: 2026-12-19
+  id: 88c4a559-0784-47c9-baac-b40feb20e51e
   name: "Torneio de Natal — Individual"
   venue: Clube de Golfe da Ilha Terceira
   address: "Fajãs da Agualva, 9760-403 Praia da Vitória"
@@ -8226,6 +8826,7 @@ Come join us and support our festivities!"
   tags: [outdoor]
 
 - date: 2026-10-10
+  id: 7363d659-df84-4811-a90a-98ccc6c11516
   name: "Visita guiada: Pedras que Falam"
   venue: Igreja de Nossa Senhora da Guia
   address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
@@ -8250,6 +8851,7 @@ Come join us and support our festivities!"
   tags: [kid-friendly]
 
 - date: 2026-10-11
+  id: b524f146-9689-49c8-9066-6f2938d8b869
   name: "Domingos com Música"
   venue: Igreja de Nossa Senhora da Guia
   address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
@@ -8259,6 +8861,7 @@ Come join us and support our festivities!"
   tags: [live-music, free]
 
 - date: 2026-10-18
+  id: 9a0cd209-22c4-4d01-848f-e2d81343fb97
   name: "Domingos com Música"
   venue: Igreja de Nossa Senhora da Guia
   address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
@@ -8268,6 +8871,7 @@ Come join us and support our festivities!"
   tags: [live-music, free]
 
 - date: 2026-10-25
+  id: bac8f23d-38b1-4c32-88ca-816f7ea2c793
   name: "Domingos com Música"
   venue: Igreja de Nossa Senhora da Guia
   address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
@@ -8277,6 +8881,7 @@ Come join us and support our festivities!"
   tags: [live-music, free]
 
 - date: 2026-10-24
+  id: 122d92b5-affc-45c8-aab0-b47d861c76de
   end_date: 2027-01-30
   kind: exhibition
   name: "Exposição: Mare Nostrum — Da Ilha Terceira e suas Cartografias"
@@ -8288,6 +8893,7 @@ Come join us and support our festivities!"
   tags: [exhibition]
 
 - date: 2026-10-31
+  id: 0f1d7c45-bb4c-4e9a-8e17-120959651133
   name: "Oficina: Feltragem com Agulha — sessão 1"
   venue: Museu de Angra do Heroísmo
   address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
@@ -8297,6 +8903,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-11-07
+  id: da522c56-5ca1-4997-901e-8ed3823a6579
   name: "Oficina: Feltragem com Agulha — sessão 2"
   venue: Museu de Angra do Heroísmo
   address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
@@ -8306,6 +8913,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-07-14
+  id: 2308834e-7eac-4b2e-8dbc-8284904eb65c
   end_date: 2026-10-16
   kind: exhibition
   name: "Exposição: Ocasos…, de Bárbara Loução"
@@ -8317,6 +8925,7 @@ Come join us and support our festivities!"
   tags: [exhibition]
 
 - date: 2026-10-05
+  id: 894738a0-e161-4637-9d2b-3b19f0a6bc67
   end_date: 2026-10-13
   kind: exhibition
   name: "Festival da Geodiversidade: Exposição Rochas dos Açores"
@@ -8328,6 +8937,7 @@ Come join us and support our festivities!"
   tags: [exhibition]
 
 - date: 2026-10-06
+  id: 1f62447b-7d17-482f-a0d6-2d7c73c6fc58
   end_date: 2026-11-01
   kind: exhibition
   name: "Vitrine de Curiosidades: Diapasão com Caixa de Francisco de Lacerda"
@@ -8339,6 +8949,7 @@ Come join us and support our festivities!"
   tags: [exhibition]
 
 - date: 2026-10-14
+  id: 4e921899-29a4-4dfa-8f6f-ea9aadfae953
   name: "Conferência: O valor dos Açores nas Constituições portuguesas"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
   address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
@@ -8349,6 +8960,7 @@ Come join us and support our festivities!"
   tags: [literature]
 
 - date: 2026-10-16
+  id: 643a4d19-85d0-4d28-b239-bfc758caf008
   name: "Inovar na Intervenção Pedagógica — Congresso, dia 1"
   venue: Auditório do Ramo Grande
   address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
@@ -8358,6 +8970,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-16
+  id: 42007859-194f-4227-841e-1d1c864849b7
   name: "Workshop: Desenvolvimento de Competências Socioemocionais"
   venue: Auditório do Ramo Grande
   address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
@@ -8367,6 +8980,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-16
+  id: 8591fd23-d308-4caf-bd2e-b1e5620e585d
   name: "Workshop: A Importância do Brincar no Desenvolvimento Cognitivo e Emocional da Criança"
   venue: Auditório do Ramo Grande
   address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
@@ -8376,6 +8990,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-16
+  id: 5d9ab0b2-cfad-467e-ac61-166285abe490
   name: "Workshop: Desenvolvimento de Competências Parentais"
   venue: Auditório do Ramo Grande
   address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
@@ -8385,6 +9000,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-17
+  id: 3e58466e-0e65-4925-9ef2-f926f8bb7774
   name: "Inovar na Intervenção Pedagógica — Congresso, dia 2"
   venue: Auditório do Ramo Grande
   address: "Largo Conde da Praia da Vitória, 9760-438 Praia da Vitória"
@@ -8394,6 +9010,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-18
+  id: bb4a6cfd-ff0e-4884-b3d7-6c9d05e09773
   name: "Cine Atlântico: Vanitas ou o Outro Mundo"
   venue: Recreio dos Artistas
   address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
@@ -8404,6 +9021,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-23
+  id: 97143c46-57ba-4a38-8077-ad70a82df5f8
   name: "Cine Atlântico: Playback"
   venue: Recreio dos Artistas
   address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
@@ -8414,6 +9032,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-24
+  id: 9118a86c-20e0-43a9-a0c8-1e65757683d6
   name: "Cine Atlântico: O Barqueiro"
   venue: Recreio dos Artistas
   address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
@@ -8424,6 +9043,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-24
+  id: 7d217f32-2106-4478-b840-f1e222c1b140
   name: "Cine Atlântico: Justa"
   venue: Recreio dos Artistas
   address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
@@ -8434,6 +9054,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-24
+  id: 15e30097-57d2-4eb1-8b4b-5e79b59065c0
   name: "Cine Atlântico: Entroncamento"
   venue: Recreio dos Artistas
   address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
@@ -8444,6 +9065,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-25
+  id: c88ad503-0968-4cb9-8485-a74dd264c56c
   name: "Cine Atlântico: 18 Buracos para o Paraíso"
   venue: Recreio dos Artistas
   address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
@@ -8454,6 +9076,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-25
+  id: c822c56b-296e-4829-957f-916dfc769ddf
   name: "Cine Atlântico: O Riso e a Faca"
   venue: Recreio dos Artistas
   address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
@@ -8464,6 +9087,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-11-27
+  id: e6ad6a05-e6d1-4754-9dbf-7dc88b508d8a
   end_date: 2026-12-06
   name: "Monte Brasil — Festival Internacional de Literatura e História de Angra do Heroísmo"
   venue: Centro Interpretativo de Angra do Heroísmo
@@ -8474,6 +9098,7 @@ Come join us and support our festivities!"
   tags: [literature]
 
 - date: 2026-10-10
+  id: f7420645-d80a-4c5d-897b-efe7823401a7
   name: "3HP ao vivo na Tasca do Camões"
   venue: Tasca do Camões
   address: "Rua da Rocha 64, 9700-169 Angra do Heroísmo"
@@ -8484,6 +9109,7 @@ Come join us and support our festivities!"
   tags: [live-music, nightlife]
 
 - date: 2026-10-10
+  id: 57aedb19-6412-473f-b973-fc0a184d206c
   name: "After Party Praxes UAç — DJ Marco Ferreira"
   venue: Havanna Club
   address: "Jardim do Corte Real, Angra do Heroísmo"
@@ -8493,6 +9119,7 @@ Come join us and support our festivities!"
   tags: [nightlife]
 
 - date: 2026-10-10
+  id: bd00de29-adf7-4f1e-80b2-a5d2f95deb55
   name: "DJ John C no Twins"
   venue: Twins Club
   address: "Rua Diogo de Teive 54, 9700-065 Angra do Heroísmo"
@@ -8502,6 +9129,7 @@ Come join us and support our festivities!"
   tags: [nightlife]
 
 - date: 2026-10-10
+  id: 671b4e69-06ed-443a-b53d-e4c0bc404db6
   name: "X-X-X — 10 anos de Wild do Ó"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
@@ -8513,6 +9141,7 @@ Come join us and support our festivities!"
   tags: [nightlife, dance]
 
 - date: 2026-10-14
+  id: 58f8173c-823d-4327-838d-6ec5ce1af416
   name: "Lindy Hop com Arianna Meschia — Casa do Sal"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
@@ -8523,6 +9152,7 @@ Come join us and support our festivities!"
   tags: [dance, workshop]
 
 - date: 2026-10-15
+  id: 6b5f664e-cabe-473a-ae96-6221dd898b92
   name: "Horizonte Comum — Grupo de Leituras Feministas"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
@@ -8533,6 +9163,7 @@ Come join us and support our festivities!"
   tags: [literature, workshop, free]
 
 - date: 2026-10-16
+  id: e93d8773-1b01-4d00-9197-a43acf80f20e
   name: "Travessias — Carvalhoski e Sicklebird"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
@@ -8542,6 +9173,7 @@ Come join us and support our festivities!"
   tags: [literature, live-music, free]
 
 - date: 2026-10-18
+  id: 74b19a4c-c2b1-4fb5-94bc-912ce5c8ee34
   name: "Nunca Mais!! — Human"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
@@ -8552,6 +9184,7 @@ Come join us and support our festivities!"
   tags: [cinema, free]
 
 - date: 2026-10-21
+  id: 2e8069b0-e60c-4496-a04d-319acdef8c80
   name: "Lindy Hop com Arianna Meschia — Casa do Sal"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
@@ -8562,6 +9195,7 @@ Come join us and support our festivities!"
   tags: [dance, workshop]
 
 - date: 2026-10-24
+  id: fcbb190c-4f15-4fbc-b865-c7c673d215c7
   name: "Curso de Desenho com Sá Vila — início"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
@@ -8572,6 +9206,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-24
+  id: 8fefcd1b-7306-41b9-8362-03983b2b294b
   name: "Laboratório do Movimento — início"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
@@ -8582,6 +9217,7 @@ Come join us and support our festivities!"
   tags: [theater, workshop]
 
 - date: 2026-10-31
+  id: 327074d6-ed1c-4814-95e8-9ed595d51828
   name: "Abramacabra IV"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
@@ -8590,6 +9226,7 @@ Come join us and support our festivities!"
   source_url: https://tinyurl.com/mps3sasf
 
 - date: 2026-10-10
+  id: b3239480-9cb0-422d-a474-c1419c852a28
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
@@ -8600,6 +9237,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-10-17
+  id: c0165462-a730-4823-999d-aeb71d9f1a69
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
@@ -8610,6 +9248,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-10-24
+  id: 23935e7e-ec86-4933-9e3e-f7535ae5f413
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
@@ -8620,6 +9259,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-10-31
+  id: 01ca0b81-a10c-4e64-a474-e68e5666b161
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
@@ -8630,6 +9270,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-11-07
+  id: 9318a99c-061d-4ee9-80fb-31df8da521a2
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
@@ -8640,6 +9281,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-11-14
+  id: 8133063f-5119-4b57-b2c6-78a6530a4635
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
@@ -8650,6 +9292,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-11-21
+  id: 6f461243-7d81-43d7-8319-2905e39753e5
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Praça Velha
   address: "Praça Velha, Angra do Heroísmo"
@@ -8660,6 +9303,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-11-28
+  id: 3e536df1-fa6b-47c5-997c-7a456aa3e8d8
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Praça Velha
   address: "Praça Velha, Angra do Heroísmo"
@@ -8670,6 +9314,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-12-05
+  id: e3601cf6-5224-4595-92ed-d215e45d69f8
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Praça Velha
   address: "Praça Velha, Angra do Heroísmo"
@@ -8680,6 +9325,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-12-12
+  id: 3c326658-efbb-497d-82d0-6d40c422e4fd
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Praça Velha
   address: "Praça Velha, Angra do Heroísmo"
@@ -8690,6 +9336,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-12-19
+  id: 985f0bf2-6eed-449a-9de1-f3954f1a5ed6
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Praça Velha
   address: "Praça Velha, Angra do Heroísmo"
@@ -8700,6 +9347,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-12-26
+  id: 6cdc5163-62ae-4d32-a97f-9ae5c8d0771e
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Praça Velha
   address: "Praça Velha, Angra do Heroísmo"

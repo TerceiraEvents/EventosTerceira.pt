@@ -45,3 +45,27 @@ Both `date` and a present `end_date` must be unquoted ISO dates (YAML Date type)
 `kind` is optional and accepts `event` or `exhibition`; an omitted value means `event`. For an exhibition, `date` and the inclusive `end_date` are the display period, and `end_date` must be strictly after `date`. The record must carry the `exhibition` tag. Every multi-day record carrying that tag declares `kind` explicitly, including a dated programme that remains `kind: event`; single-day openings, talks, and guided tours may omit `kind`.
 
 An opening reception, artist talk, or guided tour is a separate dated `kind: event` record naming the exhibition. Keep the longer display period on its own `kind: exhibition` record. An exhibition's `time` value is legacy data and is not an attendance time. `visiting_hours` and `visiting_hours_pt` are optional free-text schedules; provide them together in EN/PT only for a source-stated schedule, preserve every date restriction, and omit both when hours are unavailable. Translate the published schedule faithfully without adding hours. Older readers ignore these optional fields and continue reading existing event fields.
+
+## Persistent event identity
+
+Each published record has one unique opaque `id`. New IDs are UUIDs assigned by
+`ruby scripts/assign_event_ids.rb`; existing IDs accept letters, numbers,
+underscores, and hyphens. Keep the persisted ID when editing event metadata. New
+occurrences receive new IDs. Installed consumers can ignore this additive field.
+
+Run the assignment script after adding records and before validation. It preserves
+existing IDs and all other parsed metadata, supports block and flow mappings, and
+validates the complete output before writing. The publication gate is
+`ruby scripts/validate_event_data.rb _data/special_events.yml`; missing, duplicate,
+and malformed IDs fail with named errors. Assignment and validator tests run in
+the event-data workflow, including manual-curation changes.
+
+When merging duplicate records, retain the older persisted ID (check Git history),
+reconcile metadata into that record, and record both IDs and the retained ID in the
+PR body. Never reuse an event ID for a different occurrence. This schema does not
+define aliases or redirects for IDs from merged records.
+
+Optional `locality` is normalized curator metadata: `angra`, `praia`, or `other`.
+Unknown records omit it. Consumers can ignore this additive field. Venue lookup,
+geographic coverage, filter semantics, routes, and artwork policies have their own
+consumer/curation changes.

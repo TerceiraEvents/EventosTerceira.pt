@@ -36,31 +36,11 @@ jobs:
       - name: Run ingestion script
         run: python scripts/ingest_visit_azores.py
 
+      - name: Assign persistent event identities
+        run: ruby scripts/assign_event_ids.rb
+
       - name: Validate _data/special_events.yml
-        run: |
-          ruby -ryaml -rdate <<'RUBY'
-          path = "_data/special_events.yml"
-          data = YAML.safe_load(File.read(path), permitted_classes: [Date, Time])
-          abort "#{path}: expected top-level list, got #{data.class}" unless data.is_a?(Array)
-          errors = []
-          data.each_with_index do |event, i|
-            name = event["name"] || "(unnamed ##{i})"
-            date = event["date"]
-            if date.nil?
-              errors << "#{name}: missing `date` field"
-              next
-            end
-            unless date.is_a?(Date)
-              errors << "#{name}: `date` must be an unquoted ISO date, got #{date.class}"
-            end
-          end
-          if errors.any?
-            warn "event data validation failed:"
-            errors.each { |e| warn "  - #{e}" }
-            exit 1
-          end
-          puts "#{path}: OK (#{data.size} events)"
-          RUBY
+        run: ruby scripts/validate_event_data.rb _data/special_events.yml
 
       - name: Open pull request
         uses: peter-evans/create-pull-request@v6
