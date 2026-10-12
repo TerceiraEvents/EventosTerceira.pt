@@ -9,6 +9,7 @@ function render({lang = 'pt', records, id = 'exhibition-one', stored = null, una
     return {tag, textContent:'', children:[], dataset:{}, attrs:{}, listeners:{}, className:'',
       appendChild(child) { this.children.push(child); child.parent=this; },
       replaceChildren() { this.children=[]; },
+      remove() {this.parent.children=this.parent.children.filter(child=>child!==this);},
       setAttribute(key,value) {this.attrs[key]=value;},
       addEventListener(type,handler) {this.listeners[type]=handler;},
       closest(selector) {return selector==='[data-save-id]' && this.dataset.saveId ? this : null;},
@@ -81,5 +82,52 @@ test('actual navigation script marks exactly the matching discovery destination 
   const document={documentElement:{lang:prefix?'pt':'en'},createElement:()=>({setAttribute:()=>{}}),querySelectorAll:selector=>selector==='.site-nav a'?links:[],querySelector:()=>null,getElementById:key=>key==='event-dataset'?{textContent:'[]'}:null,addEventListener:()=>{}};
   vm.runInNewContext(fs.readFileSync('assets/js/plans.js','utf8'),{document,localStorage:{getItem:()=>null},location:{origin:'https://eventosterceira.pt',pathname:prefix+'/special/',search:query},URL,URLSearchParams});
   assert.deepEqual(links.filter(link=>link.attrs['aria-current']==='page').map(link=>link.name),[expected]);
+ }
+});
+
+
+const artworkFixtures=JSON.parse(fs.readFileSync('scripts/tests/fixtures/artwork/events.json','utf8')).events;
+test('shared artwork fixtures expose complete localized alt and recorded provenance',()=>{
+ for(const lang of ['en','pt']) for(const shape of ['portrait','landscape','oversized']) {
+  const record=artworkFixtures.find(event=>event.id==='artwork-fixture-'+shape);
+  const page=render({lang,records:[record],id:record.id});
+  const image=page.all().find(node=>node.tag==='img');
+  assert.equal(image.src,new URL(record.image,'https://eventosterceira.pt').href);
+  assert.equal(image.alt,record['image_alt_'+lang]);
+  assert(page.all().some(node=>node.textContent.includes('CC0-1.0')));
+  assert(page.all().some(node=>node.href===record.image_source));
+  assert(page.all().some(node=>node.textContent.includes(record.image_credit)));
+ }
+});
+test('unavailable artwork retains the exact event and its detail actions in EN/PT',()=>{
+ for(const lang of ['en','pt']) {
+  const record=artworkFixtures.find(event=>event.id==='artwork-fixture-unavailable');
+  const page=render({lang,records:[record],id:record.id});
+  page.all().find(node=>node.tag==='img').listeners.error();
+  assert(!page.all().some(node=>node.tag==='img'));
+  assert(page.all().some(node=>node.textContent.includes(lang==='pt'?'Cartaz indisponível':'Artwork unavailable')));
+  assert(page.all().some(node=>node.textContent===record[lang==='pt'?'name_pt':'name']));
+  assert(page.all().some(node=>node.dataset.saveId===record.id));
+  assert(page.all().some(node=>node.textContent===(lang==='pt'?'Partilhar link':'Share link')));
+ }
+});
+test('missing and malformed shared artwork do not create unsafe image controls',()=>{
+ for(const shape of ['missing','malformed']) {
+  const record=artworkFixtures.find(event=>event.id==='artwork-fixture-'+shape);
+  const page=render({records:[record],id:record.id});
+  assert(!page.all().some(node=>node.tag==='img'));
+  assert(!page.all().some(node=>String(node.href).startsWith('javascript:')));
+  assert(page.all().some(node=>node.dataset.saveId===record.id));
+ }
+});
+test('shared poster has a safe localized full-size link independent of its source page',()=>{
+ for(const lang of ['en','pt']) {
+  const record={...artworkFixtures[0],image_source:'https://example.org/organizer-page'};
+  const page=render({lang,records:[record],id:record.id});
+  const link=page.all().find(node=>node.textContent===(lang==='pt'?'Abrir imagem completa':'Open full artwork'));
+  assert(link);
+  assert.equal(link.href,new URL(record.image,'https://eventosterceira.pt').href);
+  assert.equal(link.className,'detail-link');
+  assert.equal(link.rel,'noopener noreferrer');
  }
 });

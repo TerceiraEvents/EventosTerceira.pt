@@ -67,7 +67,7 @@ def main():
         data = _png(width, height)
         (TARGET / (name + '.png')).write_bytes(data)
         records.append({'name': name, 'width': width, 'height': height, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
-    (TARGET.parent / 'manifest.json').write_text(json.dumps({'license': 'CC0-1.0', 'purpose': 'Test-only geometry; not an organizer poster or real event', 'agent_attribution': ATTRIBUTION, 'images': records}, indent=2) + '\n')
+    (TARGET.parent / 'generated-manifest.json').write_text(json.dumps({'license': 'CC0-1.0', 'purpose': 'Test-only geometry; not an organizer poster or real event', 'agent_attribution': ATTRIBUTION, 'images': records}, indent=2) + '\n')
 
 
 if __name__ == '__main__':

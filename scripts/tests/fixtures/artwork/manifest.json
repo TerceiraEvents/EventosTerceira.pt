@@ -8,21 +8,31 @@
       "width": 600,
       "height": 900,
       "bytes": 8110,
-      "sha256": "5727cffef48d4ca1a076b884c25748be0768c30e837dfc7cd244e9a80e37abc2"
+      "sha256": "5727cffef48d4ca1a076b884c25748be0768c30e837dfc7cd244e9a80e37abc2",
+      "image_source": "https://raw.githubusercontent.com/TerceiraEvents/EventosTerceira.pt/ce25f19/scripts/tests/fixtures/artwork/source/portrait.png",
+      "repo_image": "/assets/images/test-fixtures/portrait.png",
+      "fetch_content_type": "image/png"
     },
     {
       "name": "landscape",
       "width": 900,
       "height": 600,
       "bytes": 7381,
-      "sha256": "a38578e11b2b8f0327199ee11356ce6854909482536e81f47ae92ff87b6d92f2"
+      "sha256": "a38578e11b2b8f0327199ee11356ce6854909482536e81f47ae92ff87b6d92f2",
+      "image_source": "https://raw.githubusercontent.com/TerceiraEvents/EventosTerceira.pt/ce25f19/scripts/tests/fixtures/artwork/source/landscape.png",
+      "repo_image": "/assets/images/test-fixtures/landscape.png",
+      "fetch_content_type": "image/png"
     },
     {
       "name": "oversized",
       "width": 4096,
       "height": 3072,
       "bytes": 85273,
-      "sha256": "4de311e37375698572c2efd092802ace3988c338617511dc9ef6bf0b7d7208fa"
+      "sha256": "4de311e37375698572c2efd092802ace3988c338617511dc9ef6bf0b7d7208fa",
+      "image_source": "https://raw.githubusercontent.com/TerceiraEvents/EventosTerceira.pt/ce25f19/scripts/tests/fixtures/artwork/source/oversized.png",
+      "repo_image": "/assets/images/test-fixtures/oversized.png",
+      "fetch_content_type": "image/png"
     }
-  ]
+  ],
+  "hosting": "Repository assets path; no release/tag creation or release upload"
 }
