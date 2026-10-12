@@ -1,0 +1,26 @@
+- key: cccah
+  locality: angra
+  aliases:
+    - Centro Cultural e de Congressos de Angra do Heroísmo
+    - CCCAH (Centro Cultural e de Congressos)
+  location_evidence:
+    - https://angradoheroismo.pt/local/centro-cultural-e-de-congressos-de-angra-do-heroismo/
+- key: bparlsr
+  locality: angra
+  aliases:
+    - Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  location_evidence:
+    - https://bparlsr.azores.gov.pt/biblio/espacos/localizacao/
+- key: recreio
+  locality: angra
+  aliases:
+    - Recreio dos Artistas
+  location_evidence:
+    - https://angradoheroismo.pt/evento/rua-de-sentido-unico/
+- key: ramo-grande
+  locality: praia
+  aliases:
+    - Auditório do Ramo Grande
+  location_evidence:
+    - https://turismo.azores.gov.pt/pin/auditorio-ramo-grande/
+    - https://www.cmpv.pt/index.php?op=70

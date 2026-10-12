@@ -1979,6 +1979,7 @@
   - kid-friendly
 
 - date: 2026-06-06
+  locality: praia
   id: 49b9259b-d9b6-4078-87bf-0a335a779821
   name: "Concerto: Banda de Música da Força Aérea com Coro PACTIS (Dia de Portugal)"
   name_en: "Concert: Air Force Band with PACTIS Choir (Portugal Day)"
@@ -3687,6 +3688,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-05-23
+  locality: angra
   id: 200ee3ff-51be-4fbc-82b5-3b70e3d5deaf
   name: "Concerto Angra Convida Rui Massena — Parents' House (Piano Solo)"
   name_en: "Concert: Angra Convida Rui Massena — Parents' House (Piano Solo)"
@@ -3798,6 +3800,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-05-29
+  locality: angra
   id: e1935dab-bfcc-42f2-9c6d-402b16ebfc23
   name: "30 Minutos com Música"
   name_en: "30 Minutes of Music"
@@ -3910,6 +3913,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-06-11
+  locality: angra
   id: e93a98bd-1546-4816-a1c5-3121b0536450
   name: "Espetáculo: Angra Convida Ricardo Araújo Pereira — «Verificando se Você é Humano»"
   name_en: "Show: Angra Convida Ricardo Araújo Pereira — «Verificando se Você é Humano»"
@@ -3924,6 +3928,7 @@ Come join us and support our festivities!"
   - theater
 
 - date: 2026-06-12
+  locality: angra
   id: a4eeb163-3bb3-4647-ae3f-d9427e0b5fc5
   name: "Exposição: Rostos Diferentes — De Maria Jorge"
   name_en: "Exhibition: Different Faces — By Maria Jorge"
@@ -3955,6 +3960,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-17
+  locality: angra
   id: b306a398-6d27-4a24-8523-bb8e3f78e340
   name: "Concerto: Angra Convida Alcoolémia — 30 anos de «Não Sei Se Mereço»"
   name_en: "Concert: Angra Convida Alcoolémia — 30 years of «Não Sei Se Mereço»"
@@ -3969,6 +3975,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-11-13
+  locality: angra
   id: 7a3f4487-011b-4625-adfa-69dc96533c51
   end_date: 2026-11-14
   name: "Concerto: Angra Convida Carolina Deslandes — Voz & Guitarra"
@@ -3985,6 +3992,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-11-27
+  locality: angra
   id: fb0e538b-0bfe-4f7b-8d87-dc1b252bf277
   name: "Festival: III Azores Comedy Fest"
   end_date: 2026-11-28
@@ -4188,6 +4196,7 @@ Come join us and support our festivities!"
 # ---------------------------------------------------------------------------
 
 - date: 2026-05-31
+  locality: angra
   id: 52f0de3b-471c-4d11-a81a-fcf18b81d93b
   name: "Chamber Ensemble AMIT — Presentation Concert"
   name_pt: "Conjunto de Câmara da AMIT — Concerto de Apresentação"
@@ -4483,6 +4492,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-12-05
+  locality: angra
   id: bec8cfbe-8a6b-40fb-810f-6ba1ea921678
   name: "Glenn Miller Orchestra — In the Christmas Mood"
   name_pt: "Glenn Miller Orchestra — In the Christmas Mood"
@@ -4496,6 +4506,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-12-06
+  locality: angra
   id: 447f84df-2146-4cff-a83c-92e78ff648a0
   name: "Glenn Miller Orchestra — In the Christmas Mood"
   name_pt: "Glenn Miller Orchestra — In the Christmas Mood"
@@ -4702,6 +4713,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-07-10
+  locality: angra
   id: 41b8998f-e34a-449c-ad1e-9691c5c37be1
   name: "Apresentação do Livro | Sem Palavras a Mais"
   name_en: "Book Presentation | Sem Palavras a Mais"
@@ -4799,6 +4811,7 @@ Come join us and support our festivities!"
 
 # Auto-ingested from CMAH (2026-07-08)
 - date: 2026-07-09
+  locality: angra
   id: 53c16eb9-7371-4898-9224-cf806e948994
   name: "Cinema: Perdidos em Alto-Mar"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -4883,6 +4896,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-07-16
+  locality: angra
   id: 101c6ca4-d435-40a3-8c8d-4dbaa242c541
   name: "Cinema: O Dia da Revelação"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -4911,6 +4925,7 @@ Come join us and support our festivities!"
   - bullfighting
 
 - date: 2026-07-18
+  locality: angra
   id: 8cbcfdf3-586e-463f-aa7f-d6854acb2ce9
   name: "Cinema: Toy Story 5"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -4939,6 +4954,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-23
+  locality: angra
   id: 875139b2-888c-4a21-a5c4-d1bd92ba260f
   name: "Cinema: Tuner – Ouvido Absoluto, Mão Leve"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -4982,6 +4998,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-30
+  locality: angra
   id: 6da4cd1a-2721-45df-986d-483afc827372
   name: "Cinema: Tudo o Que Nunca Fomos"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -5193,6 +5210,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-07-09
+  locality: angra
   id: 5e685791-5204-4c6c-8f66-2d30ff397c5f
   end_date: 2026-07-10
   name: "Oficinas nas Férias: Pinta a Manta"
@@ -5451,6 +5469,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-02
+  locality: angra
   id: d915073c-a4c0-4fff-baed-23e45df564fe
   end_date: 2026-10-04
   name: "27.ª edição do ANGRAJAZZ"
@@ -5467,6 +5486,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-10-24
+  locality: praia
   id: a131c3f9-55a1-42ae-8572-881e67383921
   name: "Hugo Sousa — Aqui Entre Nós"
   name_en: "Hugo Sousa — Aqui Entre Nós"
@@ -5516,6 +5536,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-06-12
+  locality: angra
   id: 5e8e1bc9-514b-41b1-99bb-88405ec4cc71
   end_date: 2026-12-31
   kind: exhibition
@@ -5531,6 +5552,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-06-30
+  locality: angra
   id: ba658ad2-7d03-4c09-a9b2-7e1e2b1146f2
   end_date: 2026-09-30
   kind: exhibition
@@ -5547,6 +5569,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-07-01
+  locality: angra
   id: e447dea0-79b8-4590-a9db-c88186d990a9
   end_date: 2026-08-31
   kind: exhibition
@@ -5594,6 +5617,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-07-31
+  locality: angra
   id: 7a06e0a4-3f97-4bb1-8342-e13abb334a7b
   name: "Apresentação do livro | Ilhas Perdidas, de Dinis Carmo"
   name_en: "Book Presentation | Lost Islands, by Dinis Carmo"
@@ -5670,6 +5694,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-08-15
+  locality: angra
   id: a62095d3-5d86-40ca-9a1c-c2c07d37bccf
   name: "Lançamento de álbum: BWF ao VIVirtual"
   name_en: "Album Launch: BWF at VIVirtual"
@@ -6122,6 +6147,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-08-27
+  locality: angra
   id: c66c7e6f-e23f-4da2-bb16-891d12e6d900
   name: "Workshop | Fração"
   name_en: "Workshop | Fraction"
@@ -6137,6 +6163,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-09-03
+  locality: angra
   id: c49d8e37-8cc0-40a3-aebe-a5c5a626b3c9
   end_date: 2026-09-07
   name: "Cinema: A Odisseia"
@@ -6167,6 +6194,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-10
+  locality: angra
   id: a504575a-673d-4720-be5a-cacb4fbc7d6b
   end_date: 2026-09-14
   name: "Cinema: Insidious: O Longínquo"
@@ -6199,6 +6227,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-12
+  locality: angra
   id: f61ca666-06bb-4053-b025-2c0b3ff4d1b3
   name: "Palestra: Há cura para a Depressão?!"
   name_en: "Talk: Is There a Cure for Depression?!"
@@ -6216,6 +6245,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-17
+  locality: angra
   id: e4d57855-8cc8-4952-8d75-42c57ed49c01
   end_date: 2026-09-21
   name: "Cinema: Spa Weekend"
@@ -6231,6 +6261,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-09-19
+  locality: angra
   id: fcc2b3be-384c-4aa2-a440-9058ecb6bf24
   end_date: 2026-09-20
   name: "Cinema: PAW Patrol: The Dino Movie"
@@ -6248,6 +6279,7 @@ Come join us and support our festivities!"
   - kid-friendly
 
 - date: 2026-09-26
+  locality: angra
   id: 93dce386-f1ca-49bc-9661-47f5d8a74b20
   end_date: 2026-09-28
   name: "Cinema: Magia e Sedução: Segredos de Família"
@@ -6468,6 +6500,7 @@ Come join us and support our festivities!"
 # Official-agenda backfills from the 2026-08-26 social scan
 
 - date: 2026-08-04
+  locality: angra
   id: 8213a123-d17d-40a5-a40f-ebda971d0a87
   end_date: 2026-11-06
   kind: exhibition
@@ -6615,6 +6648,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-07
+  locality: angra
   id: d6187e6a-238d-48ec-a861-0500c0b04b7c
   name: "Praticar Inglês com Daniel Burg"
   name_en: "Practise English with Daniel Burg"
@@ -6967,6 +7001,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-20
+  locality: angra
   id: 4b03ecc1-3674-4f68-9970-657e6aff1322
   name: "O Cinema da Minha Vida: A Voz de Hind Rajab"
   name_en: "The Cinema of My Life: The Voice of Hind Rajab"
@@ -6982,6 +7017,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-09-21
+  locality: angra
   id: bee55e70-54cf-428b-a1b3-701f698596d0
   name: "Praticar Inglês com Daniel Burg"
   name_en: "Practise English with Daniel Burg"
@@ -7176,6 +7212,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-09-27
+  locality: angra
   id: 7ba3bb81-9489-4d5b-81ef-969f9e0d3afd
   name: "O Cinema da Minha Vida: Brincar com Fogo"
   name_en: "The Cinema of My Life: The Quiet Son"
@@ -7251,6 +7288,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-04
+  locality: angra
   id: e45f6bf9-b96c-4092-86c8-ed3ab7e8d924
   name: "O Cinema da Minha Vida: Valor Sentimental"
   name_en: "The Cinema of My Life: Sentimental Value"
@@ -7266,6 +7304,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-11
+  locality: angra
   id: 570d96c2-8874-4c83-b27d-7a9a3dc6cd5e
   name: "O Cinema da Minha Vida: Memórias de um Caracol"
   name_en: "The Cinema of My Life: Memoir of a Snail"
@@ -7297,6 +7336,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-11-08
+  locality: angra
   id: 71fe781f-4be7-48ba-b480-5c71724adf9b
   name: "O Cinema da Minha Vida: O Estrangeiro"
   name_en: "The Cinema of My Life: The Stranger"
@@ -7312,6 +7352,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-11-15
+  locality: angra
   id: c180631e-0aa1-4749-a486-c3cc12a86f7f
   name: "O Cinema da Minha Vida: Fellinopolis"
   name_en: "The Cinema of My Life: Fellinopolis"
@@ -7327,6 +7368,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-11-22
+  locality: angra
   id: a62a0bfc-ebb8-4cac-a989-436b14326458
   name: "O Cinema da Minha Vida: Sister Midnight"
   name_en: "The Cinema of My Life: Sister Midnight"
@@ -7342,6 +7384,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-11-29
+  locality: angra
   id: 9b08b49b-0cf6-48e1-88d0-18a84b3d212f
   name: "O Cinema da Minha Vida: A Irmandade da Sauna"
   name_en: "The Cinema of My Life: Smoke Sauna Sisterhood"
@@ -7357,6 +7400,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-12-06
+  locality: angra
   id: 6b021b64-01ca-4550-9944-246abedf7886
   name: "O Cinema da Minha Vida: Dois Procuradores"
   name_en: "The Cinema of My Life: Two Prosecutors"
@@ -7372,6 +7416,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-12-13
+  locality: angra
   id: a4d685e1-fdb1-4b95-94d8-ac3fc6d51bc4
   name: "O Cinema da Minha Vida: Nouvelle Vague"
   name_en: "The Cinema of My Life: Nouvelle Vague"
@@ -7423,6 +7468,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-09-26
+  locality: angra
   id: 25c5d989-ffad-4048-8481-b794aef83a33
   name: "Formação: Liderança de Equipas"
   name_en: "Training: Team Leadership"
@@ -7437,6 +7483,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-09-27
+  locality: angra
   id: d4b2b2ba-6d26-4c60-bbd7-09e630bdd38e
   name: "Formação: Estratégia de Marketing para Clubes Desportivos"
   name_en: "Training: Marketing Strategy for Sports Clubs"
@@ -7451,6 +7498,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-09-27
+  locality: angra
   id: 14983cfc-530d-44be-acc6-d042bfc79362
   name: "Formação: Gestão da Organização Desportiva"
   name_en: "Training: Sports Organization Management"
@@ -7480,6 +7528,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-18
+  locality: angra
   id: e0169287-77fa-4993-9e1c-54c5b16bcc37
   name: "Concerto do Outono (Temporada de Música Clássica)"
   name_en: "Autumn Concert (Classical Music Season)"
@@ -7495,6 +7544,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-11-29
+  locality: angra
   id: 0be9ca7c-280e-4650-94be-9ac94545cb80
   name: "Temporada de Música Clássica: Concerto do Advento"
   name_en: "Classical Music Season: Advent Concert"
@@ -7541,6 +7591,7 @@ Come join us and support our festivities!"
 
 # September 16, 2026 social and official-agenda scan.
 - date: 2026-09-07
+  locality: angra
   id: 548e5099-9253-4830-84ac-236528133c7e
   end_date: 2026-10-31
   kind: exhibition
@@ -7662,6 +7713,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-09-26
+  locality: angra
   id: 6f527512-cee5-4550-81d5-5fcb5c47821b
   name: "Cinema Infantil: Nina e o Segredo do Ouriço"
   name_en: "Children's Cinema: Nina and the Hedgehog's Secret"
@@ -7692,6 +7744,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-10-03
+  locality: angra
   id: 3c08095e-90c6-4353-9129-d5f5c3a5851e
   name: "Hora do Conto"
   name_en: "Story Time"
@@ -7708,6 +7761,7 @@ Come join us and support our festivities!"
 
 # September 16 evening social and official-agenda scan.
 - date: 2026-09-01
+  locality: angra
   id: 855f3780-501c-4ab2-8146-d9b66ef4a5a3
   end_date: 2026-10-31
   kind: exhibition
@@ -7722,6 +7776,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-09-16
+  locality: angra
   id: b972f34d-6e79-4a4b-80ae-101f325ac1dd
   end_date: 2026-10-14
   kind: exhibition
@@ -7825,6 +7880,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-09-11
+  locality: angra
   id: f9207037-4ef1-4d67-b2e9-9a051e58ef59
   end_date: 2026-10-31
   kind: exhibition
@@ -7839,6 +7895,7 @@ Come join us and support our festivities!"
   - exhibition
 
 - date: 2026-09-22
+  locality: angra
   id: c6abfe36-fc51-4c3d-b2dd-0cb90343b6ac
   end_date: 2027-01-30
   kind: exhibition
@@ -7887,6 +7944,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-10-03
+  locality: praia
   id: 3ffba3b3-0287-4b5a-aae3-ddc67bec7294
   name: "Entradas de Peso: Isto Não É Gostar de Podcasts — ao vivo"
   name_en: "Entradas de Peso: This Is Not Liking Podcasts — Live"
@@ -7942,6 +8000,7 @@ Come join us and support our festivities!"
   - outdoor
 
 - date: 2026-11-20
+  locality: angra
   id: 1bb7fccd-fcb0-4a0c-82be-fec1d049aaf8
   end_date: 2026-11-21
   name: "Sons da Macaronésia — Festival de Música Atlântica"
@@ -7956,6 +8015,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2027-01-16
+  locality: praia
   id: 392e5af8-dc85-4983-9e2d-affd12d4df1d
   name: "Concertos Únicos 2027: Ana Moura com João Barros"
   name_en: "Unique Concerts 2027: Ana Moura with João Barros"
@@ -7982,6 +8042,7 @@ Come join us and support our festivities!"
   - kid-friendly
 
 - date: 2027-03-13
+  locality: praia
   id: 271c54de-277c-4287-b0fe-b52f2a255174
   name: "Concertos Únicos 2027: Luís Trigacheiro com Pedro Xavier"
   name_en: "Unique Concerts 2027: Luís Trigacheiro with Pedro Xavier"
@@ -7995,6 +8056,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2027-04-17
+  locality: praia
   id: 667b20d8-1ba0-48d2-9978-6a66c7e058ac
   name: "Concertos Únicos 2027: Nena com Tommy G"
   name_en: "Unique Concerts 2027: Nena with Tommy G"
@@ -8009,6 +8071,7 @@ Come join us and support our festivities!"
 
 # October 7, 2026 social, official-agenda, and source-discovery scan.
 - date: 2026-10-10
+  locality: angra
   id: 7b15f9cd-3430-4c9a-8b35-5c1652027641
   end_date: 2026-10-11
   name: "Cinema: A Ovelha Choné — Trapalhada na Quinta"
@@ -8025,6 +8088,7 @@ Come join us and support our festivities!"
   - kid-friendly
 
 - date: 2026-10-11
+  locality: praia
   id: d2ca5475-876c-4772-853f-6c15287d833b
   name: "Cinema: A Ovelha Choné — Trapalhada na Quinta (Praia da Vitória)"
   name_en: "Cinema: Shaun the Sheep — The Beast of Mossy Bottom (Praia da Vitória)"
@@ -8086,6 +8150,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-15
+  locality: angra
   id: 9ed7d32f-8089-4eab-bcde-9941a6aa6192
   end_date: 2026-10-19
   name: "Cinema: Verity"
@@ -8113,6 +8178,7 @@ Come join us and support our festivities!"
   - literature
 
 - date: 2026-10-16
+  locality: angra
   id: bc495fa8-7228-4ba1-b66e-67d141554bcd
   name: "Cine Atlântico: Mudar de Vida"
   name_en: "Cine Atlântico: Change of Life"
@@ -8126,6 +8192,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-16
+  locality: angra
   id: daf7b992-b14c-4290-bd69-4043da302ded
   name: "Cine Atlântico: O Desejado ou As Montanhas da Lua"
   name_en: "Cine Atlântico: The Desired One or The Mountains of the Moon"
@@ -8154,6 +8221,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-10-17
+  locality: angra
   id: 10f0bffb-9a9e-46e6-86c8-23c46149b1f4
   name: "Cine Atlântico: O Rio do Ouro"
   name_en: "Cine Atlântico: River of Gold"
@@ -8167,6 +8235,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-17
+  locality: angra
   id: a6dc6612-bb32-403e-b26e-bca963987bdf
   name: "Cine Atlântico: A Raiz do Coração"
   name_en: "Cine Atlântico: The Root of the Heart"
@@ -8194,6 +8263,7 @@ Come join us and support our festivities!"
   - free
 
 - date: 2026-10-23
+  locality: praia
   id: f89e6f18-aacd-4628-a392-fa2f8b8d8d5a
   name: "Cinema: Verity (Praia da Vitória)"
   name_en: "Cinema: Verity (Praia da Vitória)"
@@ -8220,6 +8290,7 @@ Come join us and support our festivities!"
   - theater
 
 - date: 2026-10-24
+  locality: angra
   id: 11dfa001-8f72-47df-b7a1-c52fc1d664a2
   end_date: 2026-10-26
   name: "Cinema: Digger"
@@ -8246,6 +8317,7 @@ Come join us and support our festivities!"
   - live-music
 
 - date: 2026-10-29
+  locality: angra
   id: a881fae7-3806-46cb-a382-024593c28eb8
   end_date: 2026-11-02
   name: "Cinema: Sacrifício"
@@ -8260,6 +8332,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-31
+  locality: praia
   id: cddb41c0-2034-400e-9ca0-f1466659efe9
   name: "Cinema: Other Mommy"
   name_en: "Cinema: Other Mommy"
@@ -8273,6 +8346,7 @@ Come join us and support our festivities!"
   - cinema
 
 - date: 2026-10-01
+  locality: angra
   id: b8b28d36-4f1b-42b9-9636-fc4df7fafb23
   end_date: 2026-12-31
   kind: exhibition
@@ -8302,6 +8376,7 @@ Come join us and support our festivities!"
   - workshop
 
 - date: 2026-11-29
+  locality: angra
   id: 17132c29-8125-4f32-8e45-d3d1d34bc31a
   name: "Conferência comemorativa da 20.ª edição do Festival Internacional dos Açores"
   name_en: "20th Azores International Festival Commemorative Conference"
@@ -8677,6 +8752,7 @@ Come join us and support our festivities!"
 
 # Official municipal, cultural, museum and sports sources
 - date: 2026-10-01
+  locality: angra
   id: 93f78a96-f10c-4765-a6d7-498a08c297e3
   end_date: 2026-11-30
   kind: exhibition
@@ -8688,6 +8764,7 @@ Come join us and support our festivities!"
   tags: [exhibition, free]
 
 - date: 2026-10-08
+  locality: angra
   id: 59a7c410-0f47-4a2f-ae79-1b9c95b83568
   end_date: 2027-01-30
   kind: exhibition
@@ -8699,6 +8776,7 @@ Come join us and support our festivities!"
   tags: [exhibition, free]
 
 - date: 2026-10-08
+  locality: angra
   id: 71b345ed-15d0-46db-92ae-c77615dd0c8e
   end_date: 2026-10-12
   name: "Cinema: Heart of the Beast — Heróis Inseparáveis"
@@ -8730,6 +8808,7 @@ Come join us and support our festivities!"
   tags: [literature, free]
 
 - date: 2026-10-10
+  locality: angra
   id: 02a37bf4-649d-46b3-b493-81fcc62561df
   name: "Tertúlia Paleográfica"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -8913,6 +8992,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-07-14
+  locality: angra
   id: 2308834e-7eac-4b2e-8dbc-8284904eb65c
   end_date: 2026-10-16
   kind: exhibition
@@ -8949,6 +9029,7 @@ Come join us and support our festivities!"
   tags: [exhibition]
 
 - date: 2026-10-14
+  locality: angra
   id: 4e921899-29a4-4dfa-8f6f-ea9aadfae953
   name: "Conferência: O valor dos Açores nas Constituições portuguesas"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
@@ -8960,6 +9041,7 @@ Come join us and support our festivities!"
   tags: [literature]
 
 - date: 2026-10-16
+  locality: praia
   id: 643a4d19-85d0-4d28-b239-bfc758caf008
   name: "Inovar na Intervenção Pedagógica — Congresso, dia 1"
   venue: Auditório do Ramo Grande
@@ -8970,6 +9052,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-16
+  locality: praia
   id: 42007859-194f-4227-841e-1d1c864849b7
   name: "Workshop: Desenvolvimento de Competências Socioemocionais"
   venue: Auditório do Ramo Grande
@@ -8980,6 +9063,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-16
+  locality: praia
   id: 8591fd23-d308-4caf-bd2e-b1e5620e585d
   name: "Workshop: A Importância do Brincar no Desenvolvimento Cognitivo e Emocional da Criança"
   venue: Auditório do Ramo Grande
@@ -8990,6 +9074,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-16
+  locality: praia
   id: 5d9ab0b2-cfad-467e-ac61-166285abe490
   name: "Workshop: Desenvolvimento de Competências Parentais"
   venue: Auditório do Ramo Grande
@@ -9000,6 +9085,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-17
+  locality: praia
   id: 3e58466e-0e65-4925-9ef2-f926f8bb7774
   name: "Inovar na Intervenção Pedagógica — Congresso, dia 2"
   venue: Auditório do Ramo Grande
@@ -9010,6 +9096,7 @@ Come join us and support our festivities!"
   tags: [workshop]
 
 - date: 2026-10-18
+  locality: angra
   id: bb4a6cfd-ff0e-4884-b3d7-6c9d05e09773
   name: "Cine Atlântico: Vanitas ou o Outro Mundo"
   venue: Recreio dos Artistas
@@ -9021,6 +9108,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-23
+  locality: angra
   id: 97143c46-57ba-4a38-8077-ad70a82df5f8
   name: "Cine Atlântico: Playback"
   venue: Recreio dos Artistas
@@ -9032,6 +9120,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-24
+  locality: angra
   id: 9118a86c-20e0-43a9-a0c8-1e65757683d6
   name: "Cine Atlântico: O Barqueiro"
   venue: Recreio dos Artistas
@@ -9043,6 +9132,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-24
+  locality: angra
   id: 7d217f32-2106-4478-b840-f1e222c1b140
   name: "Cine Atlântico: Justa"
   venue: Recreio dos Artistas
@@ -9054,6 +9144,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-24
+  locality: angra
   id: 15e30097-57d2-4eb1-8b4b-5e79b59065c0
   name: "Cine Atlântico: Entroncamento"
   venue: Recreio dos Artistas
@@ -9065,6 +9156,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-25
+  locality: angra
   id: c88ad503-0968-4cb9-8485-a74dd264c56c
   name: "Cine Atlântico: 18 Buracos para o Paraíso"
   venue: Recreio dos Artistas
@@ -9076,6 +9168,7 @@ Come join us and support our festivities!"
   tags: [cinema]
 
 - date: 2026-10-25
+  locality: angra
   id: c822c56b-296e-4829-957f-916dfc769ddf
   name: "Cine Atlântico: O Riso e a Faca"
   venue: Recreio dos Artistas
@@ -9226,6 +9319,7 @@ Come join us and support our festivities!"
   source_url: https://tinyurl.com/mps3sasf
 
 - date: 2026-10-10
+  locality: angra
   id: b3239480-9cb0-422d-a474-c1419c852a28
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -9237,6 +9331,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-10-17
+  locality: angra
   id: c0165462-a730-4823-999d-aeb71d9f1a69
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -9248,6 +9343,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-10-24
+  locality: angra
   id: 23935e7e-ec86-4933-9e3e-f7535ae5f413
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -9259,6 +9355,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-10-31
+  locality: angra
   id: 01ca0b81-a10c-4e64-a474-e68e5666b161
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -9270,6 +9367,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-11-07
+  locality: angra
   id: 9318a99c-061d-4ee9-80fb-31df8da521a2
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
@@ -9281,6 +9379,7 @@ Come join us and support our festivities!"
   tags: [literature, kid-friendly, free]
 
 - date: 2026-11-14
+  locality: angra
   id: 8133063f-5119-4b57-b2c6-78a6530a4635
   name: "Hora do Conto — Ana Couto e Paulo Freitas"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo

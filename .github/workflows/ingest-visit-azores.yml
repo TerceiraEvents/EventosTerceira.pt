@@ -39,6 +39,9 @@ jobs:
       - name: Assign persistent event identities
         run: ruby scripts/assign_event_ids.rb
 
+      - name: Assign known venue localities
+        run: ruby scripts/assign_event_localities.rb
+
       - name: Validate _data/special_events.yml
         run: ruby scripts/validate_event_data.rb _data/special_events.yml
 

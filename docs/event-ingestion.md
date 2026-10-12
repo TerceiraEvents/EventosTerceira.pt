@@ -69,3 +69,7 @@ Optional `locality` is normalized curator metadata: `angra`, `praia`, or `other`
 Unknown records omit it. Consumers can ignore this additive field. Venue lookup,
 geographic coverage, filter semantics, routes, and artwork policies have their own
 consumer/curation changes.
+
+The exact venue-locality registry and curation policy are documented in
+[locality-metadata.md](locality-metadata.md). Ingestion fills missing locality for
+those approved aliases; curators retain control of existing values.
