@@ -3,65 +3,102 @@ require 'tmpdir'
 require 'yaml'
 require 'date'
 require 'open3'
+require 'rbconfig'
 
 class EventIdentityTest < Minitest::Test
-  def test_id_assignment_and_corrections
-    Dir.mktmpdir do |dir|
-      path = File.join(dir, 'events.yml')
-      File.write(path, "- date: 2026-10-12\n  name: Same title\n- date: 2026-10-13\n  name: Same title\n")
-      _, status = Open3.capture2('ruby', 'scripts/assign_event_ids.rb', path)
-      assert status.success?
-      data = YAML.safe_load(File.read(path), permitted_classes: [Date])
-      assert_equal 2, data.map { |e| e['id'] }.uniq.length
-      original = File.read(path)
-      File.write(path, original.sub('Same title', 'Corrected title').sub('2026-10-12', '2026-10-14'))
-      corrected = File.read(path)
-      _, status = Open3.capture2('ruby', 'scripts/assign_event_ids.rb', path)
-      assert status.success?
-      assert_equal corrected, File.read(path)
+  ROOT = File.expand_path('../..', __dir__)
+  SCRIPT = File.join(ROOT, 'scripts/assign_event_ids.rb')
+  VALIDATOR = File.join(ROOT, 'scripts/validate_event_data.rb')
+
+  def assign(path, preload = nil)
+    args = [RbConfig.ruby]
+    args += ['-r', preload] if preload
+    stdout, stderr, status = Open3.capture3(*args, SCRIPT, path)
+    [stdout, stderr, status]
+  end
+
+  def test_supported_yaml_shapes_preserve_all_fields
+    shapes = [
+      "- name: |\n    Multi line title\n  date: 2026-10-12\n",
+      "- name: >-\n    Multi line title\n  date: 2026-10-12\n",
+      "- date: 2026-10-12\n  name: A\n- {date: 2026-10-13, name: B}\n",
+      "- \"date\": 2026-10-12\n  name: Quoted\n",
+      "- source-id: source-one\n  date: 2026-10-12\n  name: Hyphen\n",
+      "- date: 2026-10-12\n  name: No final newline",
+      "[{date: 2026-10-12, name: Música}, {date: 2026-10-13, name: B}]",
+      "- date: 2026-10-12\n  description: |\n    Published programme\n"
+    ]
+    shapes.each do |source|
+      Dir.mktmpdir do |dir|
+        path = File.join(dir, 'events.yml')
+        File.write(path, source)
+        before = YAML.safe_load(source, permitted_classes: [Date])
+        stdout, stderr, status = assign(path)
+        assert status.success?, "#{source.inspect}: #{stderr}"
+        records = YAML.safe_load(File.read(path), permitted_classes: [Date])
+        assert_equal before, records.map { |event| event.reject { |key, _| key == 'id' } }, source.inspect
+        assert_equal before.size, records.map { |event| event.fetch('id') }.uniq.size
+        assert_includes stdout, "#{before.size} distinct events"
+        _, stderr, status = Open3.capture3(RbConfig.ruby, VALIDATOR, path)
+        assert status.success?, stderr
+        assigned = File.read(path)
+        _, stderr, status = assign(path)
+        assert status.success?, stderr
+        assert_equal assigned, File.read(path)
+      end
     end
   end
 
-  def test_published_ids_are_distinct
-    data = YAML.safe_load(File.read('_data/special_events.yml'), permitted_classes: [Date, Time])
-    ids = data.map { |e| e['id'] }
-    assert ids.all? { |id| id && id.match?(/\A[a-zA-Z0-9_-]+\z/) }
-    assert_equal ids.length, ids.uniq.length
-  end
-end
-
-class EventIdentityTest
-  def test_first_field_can_be_name
+  def test_existing_ids_and_source_metadata_are_untouched_when_appending
     Dir.mktmpdir do |dir|
       path = File.join(dir, 'events.yml')
-      File.write(path, "- name: Example\n  date: 2026-10-12\n")
-      _, status = Open3.capture2('ruby', 'scripts/assign_event_ids.rb', path)
-      assert status.success?
-      assert YAML.safe_load(File.read(path), permitted_classes: [Date]).first['id']
+      source = "# Curated record\n- date: 2026-10-12\n  id: existing-id\n  name: Corrected title\n  venue: Corrected venue\n  source_uid: source-one\n"
+      File.write(path, source)
+      _, stderr, status = assign(path)
+      assert status.success?, stderr
+      assert_equal source, File.read(path)
+      File.write(path, source + "- date: 2026-10-12\n  name: Corrected title\n  source_uid: source-two\n")
+      _, stderr, status = assign(path)
+      assert status.success?, stderr
+      records = YAML.safe_load(File.read(path), permitted_classes: [Date])
+      assert_equal 'existing-id', records.first['id']
+      assert_equal 'source-one', records.first['source_uid']
+      refute_equal 'existing-id', records.last['id']
+      assert File.read(path).start_with?(source)
     end
   end
-end
 
-class EventIdentityTest
-  def test_source_identity_and_metadata_survive_new_ingestion
+  def test_invalid_generated_id_cannot_be_written
     Dir.mktmpdir do |dir|
       path = File.join(dir, 'events.yml')
-      File.write(path, "- date: 2026-10-12\n  name: Same title\n  source_uid: source-one\n  source_url: https://example.test/one\n  venue: Original venue\n")
-      _, status = Open3.capture2('ruby', 'scripts/assign_event_ids.rb', path)
-      assert status.success?
-      first = YAML.safe_load(File.read(path), permitted_classes: [Date]).first
-      original_id = first['id']
-      text = File.read(path).sub('Same title', 'Corrected title').sub('Original venue', 'Corrected venue')
-      text += "- date: 2026-10-12\n  name: Same title\n  source_uid: source-two\n  source_url: https://example.test/two\n"
-      File.write(path, text)
-      _, status = Open3.capture2('ruby', 'scripts/assign_event_ids.rb', path)
-      assert status.success?
-      data = YAML.safe_load(File.read(path), permitted_classes: [Date])
-      assert_equal original_id, data.first['id']
-      assert_equal 'source-one', data.first['source_uid']
-      assert_equal 'https://example.test/one', data.first['source_url']
-      assert_equal 'Corrected venue', data.first['venue']
-      refute_equal original_id, data.last['id']
+      original = "- date: 2026-10-12\n  name: Publication test\n"
+      File.write(path, original)
+      preload = File.join(dir, 'bad_uuid.rb')
+      File.write(preload, "require 'securerandom'\nmodule SecureRandom\n def self.uuid; 'has space'; end\nend\n")
+      _, stderr, status = assign(path, preload)
+      refute status.success?
+      assert_includes stderr, 'Publication test'
+      assert_equal original, File.read(path)
     end
+  end
+
+  def test_multiple_documents_are_rejected_without_writing
+    Dir.mktmpdir do |dir|
+      path = File.join(dir, 'events.yml')
+      original = "- date: 2026-10-12\n  name: First\n---\n- date: 2026-10-13\n  name: Second\n"
+      File.write(path, original)
+      _, stderr, status = assign(path)
+      refute status.success?
+      assert_includes stderr, 'exactly one YAML document'
+      assert_equal original, File.read(path)
+    end
+  end
+
+  def test_published_ids_are_distinct_and_named_errors_are_actionable
+    data = YAML.safe_load(File.read(File.join(ROOT, '_data/special_events.yml')), permitted_classes: [Date, Time])
+    invalid = data.select { |event| !event['id'].is_a?(String) || !event['id'].match?(/\A[a-zA-Z0-9_-]+\z/) }
+    assert_empty invalid, "Invalid/missing IDs: #{invalid.map { |event| event['name'] }.join(', ')}; run ruby scripts/assign_event_ids.rb"
+    groups = data.group_by { |event| event['id'] }.values.select { |events| events.size > 1 }
+    assert_empty groups, "Duplicate IDs: #{groups.flatten.map { |event| event['name'] }.join(', ')}"
   end
 end
