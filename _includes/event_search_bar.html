@@ -27,7 +27,7 @@
       <option value="today">Hoje</option><option value="tomorrow">Amanhã</option><option value="weekend">Este fim de semana</option>
       <option value="week">📅 Próximos 7 dias</option>
       <option value="month">📆 Próximos 31 dias</option>
-      <option value="year">🗓️ Próximos 12 meses</option>
+      <option value="year">🗓️ Próximos 365 dias</option>
       <option value="all">∞ Todos os próximos</option>
     </select>
     {%- else -%}
@@ -36,7 +36,7 @@
       <option value="today">Today</option><option value="tomorrow">Tomorrow</option><option value="weekend">This weekend</option>
       <option value="week">📅 Next 7 days</option>
       <option value="month">📆 Next 31 days</option>
-      <option value="year">🗓️ Next 12 months</option>
+      <option value="year">🗓️ Next 365 days</option>
       <option value="all">∞ All upcoming</option>
     </select>
     {%- endif -%}
@@ -82,9 +82,22 @@
     </select>
     {%- endif -%}
   </label>
+  {% assign has_angra = false %}{% assign has_praia = false %}{% assign has_other = false %}
+  {% for known_event in site.data.special_events %}
+    {% if known_event.locality == 'angra' %}{% assign has_angra = true %}{% endif %}
+    {% if known_event.locality == 'praia' %}{% assign has_praia = true %}{% endif %}
+    {% if known_event.locality == 'other' %}{% assign has_other = true %}{% endif %}
+  {% endfor %}
+  {% if has_angra or has_praia or has_other %}
   <label>{% if page_lang == 'pt' %}Localidade{% else %}Locality{% endif %}
-    <select class="event-locality-filter"><option value="">{% if page_lang == 'pt' %}Todas{% else %}All{% endif %}</option><option value="angra">Angra</option><option value="praia">Praia</option><option value="other">{% if page_lang == 'pt' %}Outras localidades{% else %}Other localities{% endif %}</option></select>
+    <select class="event-locality-filter"><option value="">{% if page_lang == 'pt' %}Todas{% else %}All{% endif %}</option>
+      {% if has_angra %}<option value="angra">Angra</option>{% endif %}
+      {% if has_praia %}<option value="praia">Praia</option>{% endif %}
+      {% if has_other %}<option value="other">{% if page_lang == 'pt' %}Outras localidades{% else %}Other localities{% endif %}</option>{% endif %}
+    </select>
   </label>
+  <p>{% if page_lang == 'pt' %}Apenas localidades confirmadas; a cobertura é parcial.{% else %}Verified localities only; coverage is partial.{% endif %}</p>
+  {% endif %}
   <fieldset><legend>{% if page_lang == 'pt' %}Combinar: todas as opções selecionadas{% else %}Combine: every selected option{% endif %}</legend>
     <label><input type="checkbox" data-facet value="free"> {% if page_lang == 'pt' %}Gratuito{% else %}Free{% endif %}</label>
     <label><input type="checkbox" data-facet value="kid-friendly"> {% if page_lang == 'pt' %}Família{% else %}Family{% endif %}</label>

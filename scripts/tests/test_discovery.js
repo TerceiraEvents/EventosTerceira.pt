@@ -29,3 +29,12 @@ test('detail actions reject absent values and executable URLs', () => {
  for (const value of [undefined,null,'','  ','javascript:alert(1)','data:text/html,hello']) assert.equal(safe(value),null);
  assert.equal(safe('https://example.com/tickets'),'https://example.com/tickets');
 });
+test('month and year horizons exclude the following calendar day',()=>{
+ const now=new Date('2026-10-12T12:00:00Z');
+ assert.deepEqual(d.windowFor('month',now),{start:'2026-10-12',end:'2026-11-12'});
+ assert.equal(d.inRange('2026-11-11',null,'month',now),true);
+ assert.equal(d.inRange('2026-11-12',null,'month',now),false);
+ assert.deepEqual(d.windowFor('year',now),{start:'2026-10-12',end:'2027-10-12'});
+ assert.equal(d.inRange('2027-10-11',null,'year',now),true);
+ assert.equal(d.inRange('2027-10-12',null,'year',now),false);
+});

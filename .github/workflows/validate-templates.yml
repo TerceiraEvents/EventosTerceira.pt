@@ -32,7 +32,7 @@ jobs:
         run: ruby scripts/tests/test_event_identity.rb
 
       - name: Unit-test island discovery dates and facets
-        run: node --test scripts/tests/test_discovery.js
+        run: node --test scripts/tests/test_discovery.js scripts/tests/test_detail_render.js
 
       - name: Unit-test client-side event filter
         run: node --test scripts/tests/test_event_filter.js

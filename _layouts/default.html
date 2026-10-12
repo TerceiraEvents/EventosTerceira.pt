@@ -326,17 +326,10 @@
     var bars = document.querySelectorAll('.event-search-bar');
     if (!bars.length) return;
 
-    var RANGE_DAYS = { week: 7, month: 31, year: 365 };
     var VALID_RANGES = { today: 1, tomorrow: 1, weekend: 1, week: 1, month: 1, year: 1, all: 1 };
     var VALID_KINDS = { event: 1, exhibition: 1, all: 1 };
 
-    function normalize(s) { return EventDiscovery.normalize(s); }
-
     function parseEventDate(s) { return (s || '').match(/^\d{4}-\d{2}-\d{2}$/) ? s : null; }
-    function inRange(eventStart, eventEnd, range) {
-      if (!eventStart) return true;
-      return EventDiscovery.inRange(eventStart, eventEnd, range);
-    }
 
     bars.forEach(function(bar) {
       var input = bar.querySelector('.event-search-input');
@@ -348,7 +341,8 @@
       var reset = bar.querySelector('.filter-reset');
       var resultCount = bar.querySelector('.result-count');
       var defaultRange = bar.getAttribute('data-default-range') || 'all';
-      var defaultKind = bar.getAttribute('data-default-kind') === 'exhibitions' ? 'exhibition' : 'event';
+      var kindDefault = bar.getAttribute('data-default-kind');
+      var defaultKind = kindDefault === 'all' ? 'all' : kindDefault === 'exhibitions' ? 'exhibition' : 'event';
 
       // Find the event cards that follow this bar.
       var scope = bar.parentElement;
@@ -382,30 +376,31 @@
       }
 
       function applyFilters() {
-        var query = normalize(input ? input.value.trim() : '');
+        var query = input ? input.value.trim() : '';
         var selectedTag = tagSelect ? tagSelect.value : '';
         var range = rangeSelect ? rangeSelect.value : 'all';
         var kind = kindSelect ? kindSelect.value : 'all';
-
+        var selectedTags = Array.prototype.filter.call(facets, function(f) { return f.checked; }).map(function(f) { return f.value; });
+        if (selectedTag) selectedTags.push(selectedTag);
         var visibleCount = 0;
         cards.forEach(function(card, i) {
-          var name = normalize(card.getAttribute('data-event-name'));
-          var venue = normalize(card.getAttribute('data-event-venue'));
-          var desc = normalize(card.getAttribute('data-event-description'));
-          var tags = cardTags(card);
-          var matchesQuery = !query ||
-            name.indexOf(query) !== -1 ||
-            venue.indexOf(query) !== -1 ||
-            desc.indexOf(query) !== -1;
-          var matchesTag = !selectedTag || tags.indexOf(selectedTag) !== -1;
-          Array.prototype.forEach.call(facets, function(f) { if (f.checked && tags.indexOf(f.value) === -1) matchesTag = false; });
-          var matchesLocality = !localitySelect || !localitySelect.value || card.getAttribute('data-event-locality') === localitySelect.value;
-          var cardKind = card.getAttribute('data-event-kind') || 'event';
-          var matchesKind = !kindSelect || kind === 'all' || cardKind === kind;
-          // Skip range filtering on pages without a range select (e.g. /archive,
-          // which is past-only and would otherwise be hidden by the >= today guard).
-          var matchesRange = !rangeSelect || inRange(cardDates[i].start, cardDates[i].end, range);
-          var show = matchesQuery && matchesTag && matchesRange && matchesKind && matchesLocality;
+          var event = {
+            name: card.getAttribute('data-event-name'),
+            venue: card.getAttribute('data-event-venue'),
+            description: card.getAttribute('data-event-description'),
+            date: cardDates[i].start,
+            end_date: cardDates[i].end,
+            tags: cardTags(card),
+            kind: card.getAttribute('data-event-kind') || 'event',
+            locality: card.getAttribute('data-event-locality')
+          };
+          var show = EventDiscovery.matches(event, {
+            query: query,
+            tags: selectedTags,
+            range: rangeSelect && event.date ? range : null,
+            kind: kindSelect ? kind : null,
+            locality: localitySelect ? localitySelect.value : null
+          });
           card.style.display = show ? '' : 'none';
           if (show) visibleCount++;
         });
@@ -431,7 +426,7 @@
 
       if (localitySelect) localitySelect.addEventListener('change', applyFilters);
       Array.prototype.forEach.call(facets, function(f) { f.addEventListener('change', applyFilters); });
-      if (reset) reset.addEventListener('click', function() { if (input) input.value = ''; if (tagSelect) tagSelect.value = ''; if (localitySelect) localitySelect.value = ''; if (kindSelect) kindSelect.value = 'event'; if (rangeSelect) rangeSelect.value = 'all'; Array.prototype.forEach.call(facets, function(f) { f.checked = false; }); applyFilters(); });
+      if (reset) reset.addEventListener('click', function() { if (input) input.value = ''; if (tagSelect) tagSelect.value = ''; if (localitySelect) localitySelect.value = ''; if (kindSelect) kindSelect.value = defaultKind; if (rangeSelect) rangeSelect.value = defaultRange; Array.prototype.forEach.call(facets, function(f) { f.checked = false; }); applyFilters(); });
       if (input) input.addEventListener('input', applyFilters);
       if (tagSelect) tagSelect.addEventListener('change', applyFilters);
       if (rangeSelect) rangeSelect.addEventListener('change', applyFilters);

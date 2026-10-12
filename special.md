@@ -34,7 +34,7 @@ lang_alt: /pt/special/
 {% endif %}
 
 <p class="event-search-empty">
-  No events match your filters. Use Reset filters above to explore all dates.
+  No events match your filters. Reset your filters or choose All upcoming to explore more dates.
 </p>
 
 <div class="archive-link-section">

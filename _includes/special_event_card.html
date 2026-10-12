@@ -63,8 +63,10 @@
  <div class="event-details">
   <h3 class="event-name"><a href="{{ detail_prefix | append: event.id | relative_url }}">{{ event_name | escape }}</a></h3>
   {% if event_kind == "exhibition" %}{% include exhibition_status.html %}{% else %}
-  <div class="event-attendance"><time datetime="{{ event.date | date: '%Y-%m-%d' }}">{{ event.date | date: '%d/%m/%Y' }}</time>{% if event.end_date and event.end_date != event.date %} – {{ event.end_date | date: '%d/%m/%Y' }}{% endif %}{% if event.time %} · {{ event.time | escape }}{% endif %}</div>
-  {% include event_date_range.html %}
+  <div class="event-attendance">
+   {% if event.end_date and event.end_date != event.date %}{% include event_date_range.html %}{% else %}<time datetime="{{ event.date | date: '%Y-%m-%d' }}">{{ event.date | date: '%d/%m/%Y' }}</time>{% endif %}
+   {% if event.time %} · {{ event.time | escape }}{% endif %}
+  </div>
   {% include listing_range_label.html %}
   {% endif %}
   <div class="event-venue">{{ event_venue | escape }}</div>

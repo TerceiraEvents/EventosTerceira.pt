@@ -39,3 +39,17 @@ Open verification/content items: curator locality coverage; permission-cleared
 artwork sample; canonical per-event social metadata (the static detail shell has
 page-level metadata); mobile screen-reader and zoom audits; offline website use.
 No native Android/iOS device is covered by the website tests.
+
+Locality controls list only localities present in curated metadata and remain absent
+when that metadata is unavailable. The live page filter delegates its full
+predicate to `EventDiscovery.matches`; page-level tests cover facet conjunction,
+accented search, locality, date/type URL round trips, locale links, and reset.
+Detail DOM tests execute the actual renderer for EN/PT fields and share URLs.
+Invalid saved data has an explicit clear/recovery action and remains intact until
+that action is chosen. Storage denial has separate feedback.
+
+Details and My Plans embed the full published dataset, including ended records.
+The uncompressed detail HTML measured 530,337 bytes on 12 October 2026 before the
+locality follow-up. This allows exact ended-event details without another request;
+per-event generated documents are a possible future payload improvement. A map
+action requires `map_url`; source and booking actions also require published URLs.

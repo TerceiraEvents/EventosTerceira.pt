@@ -4,14 +4,30 @@
   function t(en, po) { return pt ? po : en; }
   document.querySelectorAll('.site-nav a').forEach(function(a) { if (a.pathname === location.pathname) a.setAttribute('aria-current', 'page'); });
   document.addEventListener('keydown', function(e) { var menu=document.querySelector('.nav-more'); if (e.key==='Escape' && menu && menu.open) { menu.open=false; menu.querySelector('summary').focus(); } });
-  var key = 'terceira-plans-v1', saved = {}, storageOK = true;
-  try { saved = JSON.parse(localStorage.getItem(key) || '{}'); if (!saved || Array.isArray(saved) || typeof saved !== 'object' || Object.keys(saved).some(function(id) { return !saved[id] || typeof saved[id].name !== 'string'; })) throw new Error('Invalid saved data'); }
-  catch (err) { saved = {}; storageOK = false; }
+  var key = 'terceira-plans-v1', saved = {}, storageOK = true, invalidSaved = false, storedRaw = null;
+  try { storedRaw = localStorage.getItem(key); } catch (err) { storageOK = false; }
+  if (storageOK) {
+    try {
+      saved = JSON.parse(storedRaw || '{}');
+      if (!saved || Array.isArray(saved) || typeof saved !== 'object' || Object.keys(saved).some(function(id) { return !saved[id] || typeof saved[id].name !== 'string'; })) throw new Error('Invalid saved data');
+    } catch (err) { saved = {}; invalidSaved = true; }
+  }
   function el(tag, text, parent) { var node = document.createElement(tag); if (text) node.textContent = text; if (parent) parent.appendChild(node); return node; }
   function feedback() {
     var status = document.querySelector('.storage-status');
     if (!status) { status = el('p', '', document.querySelector('main')); status.className = 'storage-status'; status.setAttribute('role','status'); }
-    status.textContent = storageOK ? '' : t('Browser storage is unavailable. Changes last only while this page is open.', 'O armazenamento está indisponível. As alterações duram apenas enquanto esta página está aberta.');
+    status.textContent = !storageOK ? t('Browser storage is unavailable. Changes last only while this page is open.', 'O armazenamento está indisponível. As alterações duram apenas enquanto esta página está aberta.') : invalidSaved ? t('Saved data is unreadable. Existing browser data has not been changed. Clear it to restart saving.', 'Os dados guardados são ilegíveis. Os dados do navegador não foram alterados. Limpa-os para voltar a guardar.') : '';
+    var recovery = document.querySelector('.clear-invalid-plans');
+    if (invalidSaved && !recovery) {
+      recovery = el('button', t('Clear unreadable saved data', 'Limpar dados guardados ilegíveis'), document.querySelector('main'));
+      recovery.type = 'button'; recovery.className = 'clear-invalid-plans';
+      recovery.addEventListener('click', function() {
+        try { localStorage.removeItem(key); saved = {}; invalidSaved = false; storageOK = true; }
+        catch (err) { storageOK = false; }
+        renderSaved(); update();
+      });
+    }
+    if (recovery) recovery.hidden = !invalidSaved;
   }
   function saveButton(id, name, parent) {
     var b = el('button', '', parent); b.type = 'button'; b.className = 'save-event'; b.dataset.saveId = id; b.dataset.saveName = name; return b;
@@ -38,7 +54,7 @@
     if (event.status === 'cancelled') el('p',t('Cancelled','Cancelado'),target);
     el('p',event.kind === 'exhibition' ? t('On View','Em exposição') : t('Dated event','Evento com data'),target);
     el('p',event.date + (event.end_date && event.end_date !== event.date ? ' – ' + event.end_date : '') + ' · Atlantic/Azores',target);
-    el('p', event.kind === 'exhibition' ? (event.visiting_hours || t('Check visiting hours with the venue.','Confirma o horário de visita com o local.')) : (event.time || t('Time not published.','Hora não publicada.')),target);
+    el('p', event.kind === 'exhibition' ? (field(event,'visiting_hours') || t('Check visiting hours with the venue.','Confirma o horário de visita com o local.')) : (event.time || t('Time not published.','Hora não publicada.')),target);
     el('p',field(event,'venue'),target); el('p',field(event,'address'),target);
     el('p',field(event,'price') || ((event.tags || []).includes('free') ? t('Free','Gratuito') : t('Price not published.','Preço não publicado.')),target);
     saveButton(event.id,name,target);
@@ -57,7 +73,7 @@
     action(t('Map','Mapa'),event.map_url,actions);
     var report=el('button',t('Suggest an edit','Sugerir uma alteração'),actions); report.type='button'; report.className='event-flag-btn'; report.dataset.eventName=name; report.dataset.eventDate=event.date; report.dataset.eventVenue=field(event,'venue');
     var share=el('button',t('Share link','Partilhar link'),actions); share.type='button';
-    share.addEventListener('click',function() { var url=location.origin+'/events/?id='+encodeURIComponent(id); if (navigator.share) navigator.share({title:name,url:url}).catch(function() {}); else { var a=el('a',url,actions); a.href=url; } });
+    share.addEventListener('click',function() { var url=location.origin+prefix+'/events/?id='+encodeURIComponent(id); if (navigator.share) navigator.share({title:name,url:url}).catch(function() {}); else { var a=el('a',url,actions); a.href=url; } });
     var back=el('button',t('Back to results','Voltar aos resultados'),target); back.type='button'; back.addEventListener('click',function() { if (document.referrer && new URL(document.referrer).origin===location.origin && history.length>1) history.back(); else location.href=prefix+'/special/?range=all'; });
     action(t('Explore events','Explorar eventos'),prefix+'/special/?range=all',target);
     var locale=document.querySelector('.locale-other'); if (locale) locale.href=(pt?'':'/pt')+'/events/?id='+encodeURIComponent(id);
@@ -82,7 +98,7 @@
     var b=e.target.closest('[data-save-id]'); if (!b || !b.dataset.saveId) return;
     var id=b.dataset.saveId;
     if (saved[id]) delete saved[id]; else saved[id]={name:b.dataset.saveName};
-    try { localStorage.setItem(key,JSON.stringify(saved)); storageOK=true; } catch (err) { storageOK=false; }
+    if (!invalidSaved) { try { localStorage.setItem(key,JSON.stringify(saved)); storageOK=true; } catch (err) { storageOK=false; } }
     renderSaved(); update();
   });
   renderDetail(); renderSaved(); update();

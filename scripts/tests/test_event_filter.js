@@ -11,21 +11,16 @@ const vm = require('node:vm');
 function loadFilterScript() {
   const layout = fs.readFileSync('_layouts/default.html', 'utf8');
   const blocks = [...layout.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => m[1]);
-  const src = blocks.find((b) => b.includes('inRange'));
+  const src = blocks.find((b) => b.includes("document.querySelectorAll('.event-search-bar')"));
   assert.ok(src, 'event-search script block found in default.html');
   return src;
 }
 const FILTER_SRC = loadFilterScript();
 
-function fmt(d) {
-  const p = (n) => String(n).padStart(2, '0');
-  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
-}
 function daysFromToday(n) {
-  const d = new Date("2026-10-12T12:00:00Z");
-  d.setHours(0, 0, 0, 0);
-  d.setDate(d.getDate() + n);
-  return fmt(d);
+  const d = new Date('2026-10-12T12:00:00Z');
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0,10);
 }
 
 function stubElement() {
@@ -41,7 +36,7 @@ function stubElement() {
 }
 
 // Stub search bar + card sibling chain. withRange=false omits the range select.
-function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = '2026-10-12', withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null }) {
+function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = '2026-10-12', withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null, withFacets = false, withLocality = false, setFacets = null, setLocality = null, details = false, resetFilters = false }) {
   const bar = {
     getAttribute: (k) => k === 'data-default-range' ? defaultRange : k === 'data-default-kind' ? defaultKind : null,
     parentElement: null,
@@ -51,13 +46,20 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
       if (sel === '.event-tag-filter') return withTag ? tagSelect : null;
       if (sel === '.event-range-filter') return withRange ? rangeSelect : null;
       if (sel === '.event-kind-filter') return withKind ? kindSelect : null;
+      if (sel === '.event-locality-filter') return withLocality ? localitySelect : null;
+      if (sel === '.filter-reset') return reset;
+      if (sel === '.result-count') return resultCount;
       return null;
     },
   };
+  bar.querySelectorAll = () => withFacets ? facets : [];
+  const facets = ['free','kid-friendly'].map(value => ({...stubElement(), value, checked:false}));
+  const localitySelect = stubElement(), reset = stubElement(), resultCount = stubElement();
   const input = stubElement();
   input.value = query;
   const tagSelect = stubElement();
   tagSelect.value = '';
+  tagSelect.options = ['', 'free', 'kid-friendly', 'art'].map(value => ({value}));
   const rangeSelect = stubElement();
   rangeSelect.value = defaultRange;
   const kindSelect = stubElement();
@@ -68,8 +70,9 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
       'data-event-name': c.name,
       'data-event-date': c.start,
       ...(c.end === 'missing' ? {} : { 'data-event-end-date': c.end || c.start }),
-      'data-event-venue': '',
-      'data-event-description': '',
+      'data-event-venue': c.venue || '',
+      'data-event-locality': c.locality || '',
+      'data-event-description': c.description || '',
       ...(c.kind === undefined ? {} : { 'data-event-kind': c.kind }),
       'data-event-tags': c.tags || '',
     },
@@ -93,13 +96,16 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   const TestDate = today ? class extends Date {
     constructor(...args) { super(...(args.length ? args : [`${today}T12:00:00Z`])); }
   } : Date;
+  const locale = {href:'https://example.test/pt/special/'};
+  let currentURL = '/special/'+search;
   const sandbox = {
     Date: TestDate,
-    window: { location: { search }, __SITE_I18N: {} },
+    window: { location: { search, pathname:'/special/' }, history:{replaceState(data,title,url) {currentURL=url;}}, __SITE_I18N: {} },
     URLSearchParams,
     document: {
       querySelectorAll: (sel) => (sel === '.event-search-bar' ? [bar] : []),
-      querySelector: () => null,
+      querySelector: selector => selector === '.locale-other' ? locale : null,
+      documentElement:{lang:'en'},
       getElementById: () => stubElement(),
       addEventListener() {},
     },
@@ -121,9 +127,12 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
     tagSelect.value = setTag;
     for (const fn of tagSelect.listeners.change || []) fn();
   }
+  if (setLocality !== null && withLocality) { localitySelect.value=setLocality; for (const fn of localitySelect.listeners.change || []) fn(); }
+  if (setFacets !== null && withFacets) { for (const facet of facets) facet.checked=setFacets.includes(facet.value); for (const fn of facets[0].listeners.change || []) fn(); }
+  if (resetFilters) for (const fn of reset.listeners.click || []) fn();
   const visible = {};
   for (const card of cardNodes) visible[card.attrs['data-event-name']] = card.style.display !== 'none';
-  return visible;
+  return details ? {visible,url:currentURL,localeHref:locale.href,resultCount:resultCount.textContent} : visible;
 }
 
 const ONGOING = { name: 'ongoing', start: daysFromToday(-5), end: daysFromToday(5) };
@@ -234,4 +243,39 @@ test('kind, range, tag, and search filters combine across inclusive ranges', () 
 test('Today excludes tomorrow and visitor timezone does not widen the window', () => {
   const result = runPage({cards:[{name:'Tomorrow',start:'2026-10-13'}],today:'2026-10-12',setRange:'today'});
   assert.equal(result.Tomorrow, false);
+});
+
+test('actual page uses AND for both facets, locality and accented search',()=>{
+  const cards=[
+    {name:'Música em família',start:'2026-10-12',tags:'free kid-friendly',locality:'angra'},
+    {name:'Música paid',start:'2026-10-12',tags:'kid-friendly',locality:'angra'},
+    {name:'Música elsewhere',start:'2026-10-12',tags:'free kid-friendly',locality:'praia'},
+    {name:'Música unknown',start:'2026-10-12',tags:'free kid-friendly'},
+  ];
+  const page=runPage({cards,query:'musica',withFacets:true,withLocality:true,setFacets:['free','kid-friendly'],setLocality:'angra',details:true});
+  assert.deepEqual(page.visible,{'Música em família':true,'Música paid':false,'Música elsewhere':false,'Música unknown':false});
+  assert.equal(page.resultCount,'1 results');
+});
+test('actual page shares and restores range kind tags locality search and locale',()=>{
+  const cards=[{name:'Música',start:'2026-10-13',kind:'event',tags:'free kid-friendly',locality:'angra'},{name:'Another exhibition',start:'2026-10-13',kind:'exhibition',tags:'free kid-friendly',locality:'angra'}];
+  const options={cards,withFacets:true,withLocality:true,withKind:true,details:true};
+  const page=runPage({...options,query:'musica',setRange:'tomorrow',setKind:'event',setFacets:['free','kid-friendly'],setLocality:'angra'});
+  const params=new URLSearchParams(page.url.split('?')[1]);
+  assert.equal(params.get('range'),'tomorrow');
+  assert.equal(params.get('kind'),'event');
+  assert.equal(params.get('tags'),'free,kid-friendly');
+  assert.equal(params.get('locality'),'angra');
+  assert.equal(params.get('q'),'musica');
+  assert.equal(page.localeHref,'https://example.test/pt'+page.url);
+  const restored=runPage({...options,search:'?'+params.toString()});
+  assert.deepEqual(restored.visible,page.visible);
+  assert.equal(restored.url,page.url);
+});
+test('actual page respects all and exhibition defaults and restores them on reset',()=>{
+  const cards=[{name:'Event',start:'2026-10-13',kind:'event'},{name:'Exhibition',start:'2026-10-13',kind:'exhibition'}];
+  assert.deepEqual(runPage({cards,withKind:true,defaultKind:'all'}),{Event:true,Exhibition:true});
+  const page=runPage({cards,withKind:true,defaultKind:'exhibitions',defaultRange:'month',setKind:'event',setRange:'today',resetFilters:true,details:true});
+  assert.deepEqual(page.visible,{Event:false,Exhibition:true});
+  assert.equal(new URLSearchParams(page.url.split('?')[1]).get('kind'),'exhibition');
+  assert.equal(new URLSearchParams(page.url.split('?')[1]).get('range'),'month');
 });

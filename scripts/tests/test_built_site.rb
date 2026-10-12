@@ -8,6 +8,8 @@
 # of silently downgrading search/share quality on production.
 
 require "json"
+require "yaml"
+require "date"
 require "rexml/document"
 
 SITE = ENV.fetch("SITE", "_site")
@@ -29,13 +31,19 @@ special_path = "#{SITE}/special/index.html"
 if File.exist?(special_path)
   special_html = File.read(special_path)
   err(errors, "/special/: missing Next 7 days range label") unless special_html.include?("Next 7 days</option>")
+  events = YAML.safe_load(File.read('_data/special_events.yml'), permitted_classes: [Date, Time])
+  localities = events.map { |event| event['locality'] }.compact.uniq
+  err(errors, "/special/: locality control availability does not match curated metadata") unless special_html.include?('class="event-locality-filter"') == localities.any?
+  %w[angra praia other].each do |locality|
+    err(errors, "/special/: #{locality} option availability does not match curated metadata") unless special_html.include?(%(<option value="#{locality}">)) == localities.include?(locality)
+  end
   exhibition_marker = 'data-event-kind="exhibition"'
   if special_html.include?(exhibition_marker) && special_html.include?("Milestones of Autonomy: from the Administrative Board to the First Regional Government")
     en_start = special_html.index(exhibition_marker)
     en_end = special_html.index('<script type="application/ld+json">', en_start)
     card = special_html[en_start...en_end]
     err(errors, "/special/: Marcos exhibition missing its English status") unless card.include?("On view until 31 December")
-    err(errors, "/special/: Marcos exhibition renders an attendance time") if card.include?('class="event-time-info"')
+    err(errors, "/special/: Marcos exhibition renders an attendance time") if card.include?('class="event-attendance"')
     jsonld_end = special_html.index("</script>", en_end)
     jsonld = special_html[en_end...jsonld_end]
     err(errors, "/special/: Marcos exhibition JSON-LD includes a time of day") if jsonld.match?(/"(?:startDate|endDate)":\s*"\d{4}-\d{2}-\d{2}T/)

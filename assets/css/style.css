@@ -1475,10 +1475,6 @@ main a {
   font-weight: 600;
 }
 
-.special-event .event-date-range {
-  display: none;
-}
-
 :root { --space: .75rem; --radius: .75rem; --focus: #8a6614; }
 .site-header { min-height: 0; overflow: visible; }
 .header-content { padding: 1rem 0; text-align: left; }
@@ -1496,7 +1492,7 @@ main a {
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 .home-discovery h2 { margin: .75rem 0; }
 .date-shortcuts { display: flex; flex-wrap: wrap; gap: .5rem; }
-.date-shortcuts a, .save-event, .filter-reset { border: 1px solid var(--green-mid); border-radius: var(--radius); padding: .6rem .9rem; min-height: 44px; background: white; color: var(--green-dark); font: inherit; cursor: pointer; }
+.date-shortcuts a, .save-event, .filter-reset, .clear-invalid-plans { border: 1px solid var(--green-mid); border-radius: var(--radius); padding: .6rem .9rem; min-height: 44px; background: white; color: var(--green-dark); font: inherit; cursor: pointer; }
 .save-event[aria-pressed='true'] { background: var(--green-dark); color: white; }
 .event-summary { padding: 1rem; border-radius: var(--radius); display: block; }
 .event-summary .event-name { font-size: 1.3rem; margin-bottom: .35rem; overflow-wrap: anywhere; }
