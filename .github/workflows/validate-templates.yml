@@ -31,6 +31,9 @@ jobs:
       - name: Validate persistent event identities
         run: ruby scripts/tests/test_event_identity.rb
 
+      - name: Validate known venue locality metadata
+        run: ruby scripts/tests/test_event_localities.rb
+
       - name: Unit-test client-side event filter
         run: node --test scripts/tests/test_event_filter.js
 

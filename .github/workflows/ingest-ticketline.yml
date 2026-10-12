@@ -46,6 +46,9 @@ jobs:
       - name: Assign persistent event identities
         run: ruby scripts/assign_event_ids.rb
 
+      - name: Assign known venue localities
+        run: ruby scripts/assign_event_localities.rb
+
       - name: Validate _data/special_events.yml
         # Mirror of the check in .github/workflows/validate-events.yml so we
         # never open a PR with a broken file. Auto-opened PRs don't trigger
