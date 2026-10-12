@@ -41,3 +41,27 @@ class EventIdentityTest
     end
   end
 end
+
+class EventIdentityTest
+  def test_source_identity_and_metadata_survive_new_ingestion
+    Dir.mktmpdir do |dir|
+      path = File.join(dir, 'events.yml')
+      File.write(path, "- date: 2026-10-12\n  name: Same title\n  source_uid: source-one\n  source_url: https://example.test/one\n  venue: Original venue\n")
+      _, status = Open3.capture2('ruby', 'scripts/assign_event_ids.rb', path)
+      assert status.success?
+      first = YAML.safe_load(File.read(path), permitted_classes: [Date]).first
+      original_id = first['id']
+      text = File.read(path).sub('Same title', 'Corrected title').sub('Original venue', 'Corrected venue')
+      text += "- date: 2026-10-12\n  name: Same title\n  source_uid: source-two\n  source_url: https://example.test/two\n"
+      File.write(path, text)
+      _, status = Open3.capture2('ruby', 'scripts/assign_event_ids.rb', path)
+      assert status.success?
+      data = YAML.safe_load(File.read(path), permitted_classes: [Date])
+      assert_equal original_id, data.first['id']
+      assert_equal 'source-one', data.first['source_uid']
+      assert_equal 'https://example.test/one', data.first['source_url']
+      assert_equal 'Corrected venue', data.first['venue']
+      refute_equal original_id, data.last['id']
+    end
+  end
+end
