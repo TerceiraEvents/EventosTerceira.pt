@@ -56,3 +56,13 @@ test('actual storage denial remains distinct from malformed saved data',()=>{
  assert(page.all().some(n=>n.textContent.includes('Browser storage is unavailable')));
  assert(!page.all().some(n=>n.textContent.includes('Saved data is unreadable')));
 });
+test('missing scalar fields do not deny times or prices in the published programme',()=>{
+ const event={id:'exhibition-one',kind:'event',date:'2026-10-30',end_date:'2026-10-31',name:'Published programme',description:'30 October opens at 18:00; 31 October opens at 12:00. Tickets cost €3.'};
+ const page=render({lang:'en',records:[event]});
+ const text=page.detail.children.map(n=>n.textContent);
+ assert(!text.includes('Time not published.'));
+ assert(!text.includes('Price not published.'));
+ assert(text.includes(event.description));
+ assert(text.includes('See details or check with the organizer for times.'));
+ assert(text.includes('See details or check with the organizer for prices.'));
+});

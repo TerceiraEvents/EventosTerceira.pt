@@ -54,9 +54,9 @@
     if (event.status === 'cancelled') el('p',t('Cancelled','Cancelado'),target);
     el('p',event.kind === 'exhibition' ? t('On View','Em exposição') : t('Dated event','Evento com data'),target);
     el('p',event.date + (event.end_date && event.end_date !== event.date ? ' – ' + event.end_date : '') + ' · Atlantic/Azores',target);
-    el('p', event.kind === 'exhibition' ? (field(event,'visiting_hours') || t('Check visiting hours with the venue.','Confirma o horário de visita com o local.')) : (event.time || t('Time not published.','Hora não publicada.')),target);
+    el('p', event.kind === 'exhibition' ? (field(event,'visiting_hours') || t('Check visiting hours with the venue.','Confirma o horário de visita com o local.')) : (event.time || t('See details or check with the organizer for times.','Consulta os detalhes ou confirma os horários com a organização.')),target);
     el('p',field(event,'venue'),target); el('p',field(event,'address'),target);
-    el('p',field(event,'price') || ((event.tags || []).includes('free') ? t('Free','Gratuito') : t('Price not published.','Preço não publicado.')),target);
+    el('p',field(event,'price') || ((event.tags || []).includes('free') ? t('Free','Gratuito') : t('See details or check with the organizer for prices.','Consulta os detalhes ou confirma os preços com a organização.')),target);
     saveButton(event.id,name,target);
     el('p',field(event,'description'),target);
     if (event.image_credit) el('p',t('Artwork: ','Cartaz: ') + event.image_credit,target);
