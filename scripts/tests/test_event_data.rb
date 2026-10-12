@@ -48,6 +48,45 @@ assert_eq validate_events(
   [{ "name" => "Quoted Start", "date" => "2026-10-04" }]
 ).size, 1, "quoted date still fails"
 
+puts "kind and visiting-hours schema"
+
+kind_cases = [
+  ["valid event", { "name" => "Event", "date" => Date.new(2026, 10, 1), "kind" => "event" }, false],
+  ["valid exhibition", { "name" => "Exhibition", "date" => Date.new(2026, 10, 1),
+                          "end_date" => Date.new(2026, 10, 2), "kind" => "exhibition",
+                          "tags" => ["exhibition"] }, false],
+  ["unknown kind", { "name" => "Unknown", "date" => Date.new(2026, 10, 1), "kind" => "concert" }, true],
+  ["exhibition without end_date", { "name" => "No End", "date" => Date.new(2026, 10, 1),
+                                    "kind" => "exhibition", "tags" => ["exhibition"] }, true],
+  ["exhibition with end_date equal to date", { "name" => "Same Day", "date" => Date.new(2026, 10, 1),
+                                                "end_date" => Date.new(2026, 10, 1),
+                                                "kind" => "exhibition", "tags" => ["exhibition"] }, true],
+  ["exhibition without tag", { "name" => "No Tag", "date" => Date.new(2026, 10, 1),
+                                "end_date" => Date.new(2026, 10, 2), "kind" => "exhibition" }, true],
+  ["exhibition-tagged range with no kind", { "name" => "Implicit Exhibition",
+                                              "date" => Date.new(2026, 10, 1),
+                                              "end_date" => Date.new(2026, 10, 2),
+                                              "tags" => ["exhibition"] }, true],
+  ["exhibition-tagged range with kind event", { "name" => "Multi-day Event",
+                                                "date" => Date.new(2026, 10, 1),
+                                                "end_date" => Date.new(2026, 10, 2),
+                                                "kind" => "event", "tags" => ["exhibition"] }, false],
+  ["single-day exhibition-tagged record with no kind", { "name" => "Opening",
+                                                           "date" => Date.new(2026, 10, 1),
+                                                           "tags" => ["exhibition"] }, false],
+  ["empty visiting_hours", { "name" => "Empty Hours", "date" => Date.new(2026, 10, 1),
+                              "visiting_hours" => " " }, true],
+  ["empty visiting_hours_pt", { "name" => "Empty Hours PT", "date" => Date.new(2026, 10, 1),
+                                 "visiting_hours_pt" => "" }, true]
+]
+
+kind_cases.each do |name, event, should_fail|
+  errors = validate_events([event])
+  assert_eq errors.empty?, !should_fail, name
+  assert_eq errors.all? { |error| error.include?(event["name"]) }, true,
+            "#{name} errors name the record" if should_fail
+end
+
 assert_eq validate_events("nope").size, 1, "non-list top level fails"
 
 puts "validate-events workflow paths (actual parsed workflow)"
@@ -100,6 +139,23 @@ if halloween.length == 1
   assert_eq event["price"], nil, "Halloween has no guessed price"
   assert_eq event["tags"].include?("free"), false, "missing price does not imply free admission"
   assert_eq event["tags"].include?("kid-friendly"), true, "organizer states family-friendly attendance"
+end
+
+puts "explicit exhibition visiting schedules"
+[
+  ['Within the Breath of Oyá / Dentro do sopro de Oyá', 'Weekdays, 10:00–12:30 and 13:30–18:30, through 31 July', 'dias úteis, 10h00–12h30 e 13h30–18h30, até 31 de julho'],
+  ['Exposição As Ilhas Desconhecidas - Baltasar Pinheiro', 'Monday to Friday, 16:00 to 18:30, through 28 August', 'de segunda a sexta-feira, das 16h00 às 18h30, até 28 de agosto'],
+  ['O Caos em Mim', '8–15 September, Monday to Friday, 18:00 to 19:30', 'de 8 a 15 de setembro, de segunda a sexta, das 18h00 às 19h30']
+].each do |name, en, pt|
+  event = special.find { |record| record['name'] == name }
+  assert_eq event['visiting_hours'], en, "#{name} English published hours and qualifiers"
+  assert_eq event['visiting_hours_pt'], pt, "#{name} Portuguese published hours and qualifiers"
+end
+[['EN-only hours', {'visiting_hours' => '16:00–18:30'}, true], ['PT-only hours', {'visiting_hours_pt' => '16h00–18h30'}, true], ['paired hours', {'visiting_hours' => '16:00–18:30', 'visiting_hours_pt' => '16h00–18h30'}, false]].each do |name, hours, should_fail|
+  event = {'name' => name, 'date' => Date.new(2026,10,12)}.merge(hours)
+  errors = validate_events([event])
+  assert_eq errors.empty?, !should_fail, name
+  assert_eq errors.any? { |error| error.include?(name) }, true, "#{name} error names record" if should_fail
 end
 
 if @failed > 0

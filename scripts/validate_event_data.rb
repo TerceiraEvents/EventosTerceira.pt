@@ -1,9 +1,7 @@
 #!/usr/bin/env ruby
 # Validates _data/special_events.yml record shapes before the site build.
-# Every event needs a Date-typed `date`; a present `end_date` must also be
-# Date-typed and must not precede `date`. Mixed String/Date entries crash
-# Liquid's `sort: "date"` with "comparison of Array with Array failed",
-# and a quoted or reversed `end_date` silently breaks range selection.
+# Validates typed dates, inclusive ranges, listing kind, and paired EN/PT
+# published visiting schedules.
 # Run from the repo root:
 #   ruby scripts/validate_event_data.rb _data/special_events.yml
 require "yaml"
@@ -34,16 +32,35 @@ def validate_events(data)
     end
 
     ending = event["end_date"]
-    next if ending.nil?
-
-    unless ending.is_a?(Date)
+    if !ending.nil? && !ending.is_a?(Date)
       errors << "#{name}: `end_date` must be an unquoted ISO date (YYYY-MM-DD), got #{ending.class}: #{ending.inspect}. " \
                 "Do not wrap the date in quotes — YAML will parse it as a String and break range selection."
-      next
+    elsif ending.is_a?(Date) && ending < date
+      errors << "#{name}: `end_date` (#{ending}) is before `date` (#{date})"
     end
 
-    if ending < date
-      errors << "#{name}: `end_date` (#{ending}) is before `date` (#{date})"
+    kind = event["kind"]
+    unless kind.nil? || %w[event exhibition].include?(kind)
+      errors << "#{name}: `kind` must be `event` or `exhibition`, got #{kind.inspect}"
+    end
+
+    if event.key?('visiting_hours') != event.key?('visiting_hours_pt')
+      errors << "#{name}: provide `visiting_hours` and `visiting_hours_pt` together"
+    end
+    %w[visiting_hours visiting_hours_pt].each do |field|
+      value = event[field]
+      if !value.nil? && (!value.is_a?(String) || value.strip.empty?)
+        errors << "#{name}: `#{field}` must be a non-empty string"
+      end
+    end
+
+    tags = event["tags"]
+    tagged_exhibition = tags.is_a?(Array) && tags.include?("exhibition")
+    if kind == "exhibition"
+      errors << "#{name}: `kind: exhibition` requires a Date `end_date` strictly after `date`" unless ending.is_a?(Date) && ending > date
+      errors << "#{name}: `kind: exhibition` requires the `exhibition` tag" unless tagged_exhibition
+    elsif tagged_exhibition && ending.is_a?(Date) && ending > date && kind.nil?
+      errors << "#{name}: multi-day record tagged `exhibition` must declare `kind` explicitly"
     end
   end
 
