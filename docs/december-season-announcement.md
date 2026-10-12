@@ -4,5 +4,7 @@ The displayed municipal poster for the 2026 Advent Concert announces "PRÓXIMO C
 
 The parent agent read the whole official poster in CUA on 12 October 2026. An independent Opus reviewer fetched the poster and read the same next-concert announcement. The municipality's event page hosts that poster.
 
+Curators enrich the same persisted UUID when an official programme, performers, admission terms or municipal event UID becomes available. Update its fields and source identity in place; keep a single 8 December occurrence. The CMAH name/date fuzzy deduplication can retain the generic announcement and skip a richer listing, so an ingestion duplicate is a cue to update this record rather than create another event.
+
 - https://angradoheroismo.pt/evento/temporada-de-musica-classica-concerto-do-advento/ — municipal listing hosting the announcement.
 - https://i0.wp.com/angradoheroismo.pt/wp-content/uploads/2026/10/Cartaz-54.jpg?w=800&ssl=1 — official poster announcement.
