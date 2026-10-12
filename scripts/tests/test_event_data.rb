@@ -159,7 +159,7 @@ duplicates = [
   { 'name' => 'Second identity', 'date' => Date.new(2026, 10, 13), 'id' => 'duplicate-id' }
 ]
 duplicate_errors = validate_events(duplicates)
-assert_eq duplicate_errors.any? { |error| error.include?('Second identity') && error.include?('id') }, true, 'duplicate ID names offending record'
+assert_eq duplicate_errors.any? { |error| error.include?('Second identity') && error.include?('`id`') && error.include?('First identity') }, true, 'duplicate ID names offending record'
 
 halloween = special.select { |event| event["source_url"] == "https://www.instagram.com/thetexanbar/reel/DeWkNyxCVDz/" }
 assert_eq halloween.length, 1, "Texan Halloween has one source-backed occurrence"
@@ -171,6 +171,12 @@ if halloween.length == 1
   assert_eq event["price"], nil, "Halloween has no guessed price"
   assert_eq event["tags"].include?("free"), false, "missing price does not imply free admission"
   assert_eq event["tags"].include?("kid-friendly"), true, "organizer states family-friendly attendance"
+end
+
+puts "strict YAML key publication rules"
+["- date: 2026-10-12\n  id: first\n  id: second\n  name: Duplicate key\n", "- date: 2026-10-12\n  id: existing\n  name: Nested duplicate\n  metadata: {key: one, key: two}\n"].each do |text|
+  errors = validate_event_yaml(text)
+  assert_eq errors.any? { |error| error.include?('duplicate YAML key') }, true, 'duplicate YAML mapping keys rejected'
 end
 
 if @failed > 0
