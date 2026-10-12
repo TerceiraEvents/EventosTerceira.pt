@@ -9,7 +9,7 @@ lang_alt: /pt/special/
 
 <p class="section-intro">Concerts, festivals, parties, and one-off events in Angra do Heroísmo. Use the date range, search, or tag filter to narrow things down.</p>
 
-{% include event_search_bar.html default_range="week" %}
+{% include event_search_bar.html default_range="week" default_kind="events" %}
 
 {% assign now_ts = "now" | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
 {% assign sorted_events = site.data.special_events | sort: "date" %}
@@ -34,9 +34,11 @@ lang_alt: /pt/special/
 {% endif %}
 
 <p class="event-search-empty">
-  No events match your filters. Try a different range, search, or tag.
+  No events match your filters. Reset your filters or choose All upcoming to explore more dates.
 </p>
 
 <div class="archive-link-section">
   <a href="{{ '/archive/' | relative_url }}" class="view-all">Event Archive</a>
 </div>
+
+<p class="data-status">{% if page.lang == "pt" %}Página publicada em{% else %}Page built at{% endif %} {{ site.time | date_to_xmlschema }}. {% if page.lang == "pt" %}Esta hora não indica verificação pela organização.{% else %}This is not an organizer verification time.{% endif %}</p>

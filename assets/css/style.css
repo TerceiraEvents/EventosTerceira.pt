@@ -93,14 +93,7 @@ h1, h2, h3 {
   background: rgba(26, 58, 42, 0.85);
   backdrop-filter: blur(6px);
   border-top: 1px solid rgba(255,255,255,0.1);
-  /* Allow the nav row to scroll sideways instead of being clipped when the
-     7 links + locale switcher exceed the viewport width (small phones). The
-     overflow is a no-op on desktops where everything fits. Scrollbar is
-     hidden to keep the band visually clean — the row still scrolls via
-     touch/trackpad. */
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  overflow: visible;
 }
 
 .site-nav::-webkit-scrollbar {
@@ -1099,11 +1092,6 @@ main a {
     font-size: 0.75rem;
   }
 
-  /* On phones the row is wider than the viewport, so center alignment
-     symmetrically clips the first and last items (you see "PECIAL EVENTS
-     ... R" — both ends shaved). Pin to the left edge instead so "Home"
-     is the visible anchor and the user can scroll right through the
-     remaining links + locale switcher. */
   .site-nav .container {
     justify-content: flex-start;
   }
@@ -1410,12 +1398,7 @@ main a {
   display: block;
 }
 
-/* ── Mobile-app smart banner ──
-   Shown only on iOS/Android (the include's script gates visibility).
-   Sits above the site header so it never overlaps the hero image
-   or the nav. Palette borrows from the green-deep / accent gold
-   used elsewhere on the site rather than the generic blue-bar
-   look. */
+/* Mobile app promotion follows page content on iOS and Android. */
 .app-banner {
   display: none;
   align-items: center;
@@ -1487,6 +1470,51 @@ main a {
   font-weight: 600;
 }
 
-.special-event .event-date-range {
-  display: none;
-}
+:root { --space: .75rem; --radius: .75rem; --focus: #8a6614; }
+.site-header { min-height: 0; overflow: visible; }
+.header-content { padding: 1rem 0; text-align: left; }
+.site-title { font-size: clamp(1.5rem, 5vw, 2.25rem); }
+.site-tagline { font-size: 1rem; margin-top: .25rem; }
+.site-nav .container { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; overflow: visible; }
+.site-nav a, .nav-more summary { min-height: 44px; padding: .5rem .7rem; display: inline-flex; align-items: center; cursor: pointer; }
+.nav-more { position: relative; }
+.nav-menu { position: absolute; z-index: 10; width: min(17rem, 70vw); right: 0; background: var(--green-dark); border-radius: var(--radius); box-shadow: 0 8px 24px var(--shadow); padding: .5rem; }
+.nav-menu a { display: flex; white-space: normal; }
+.site-nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: .3rem; }
+.locale-switcher { margin-left: auto; }
+.skip-link { position: absolute; top: -100px; left: .5rem; z-index: 30; background: white; padding: .75rem; }
+.skip-link:focus { top: .5rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.home-discovery h2 { margin: .75rem 0; }
+.date-shortcuts { display: flex; flex-wrap: wrap; gap: .5rem; }
+.date-shortcuts a, .save-event, .filter-reset, .clear-invalid-plans { border: 1px solid var(--green-mid); border-radius: var(--radius); padding: .6rem .9rem; min-height: 44px; background: white; color: var(--green-dark); font: inherit; cursor: pointer; }
+.save-event[aria-pressed='true'] { background: var(--green-dark); color: white; }
+.event-summary { padding: 1rem; border-radius: var(--radius); display: block; }
+.event-summary .event-name { font-size: 1.3rem; margin-bottom: .35rem; overflow-wrap: anywhere; }
+.event-summary .event-name a { color: var(--green-dark); display: flex; align-items: center; min-height: 44px; }
+.event-summary .event-venue { margin: .25rem 0 .75rem; }
+.event-attendance { font-weight: 600; }
+.event-summary .event-details { min-width: 0; }
+.home-secondary { margin-top: 2rem; }
+.event-search-bar { flex-wrap: wrap; }
+.event-search-bar select, .event-search-bar input { max-width: 100%; min-height: 44px; }
+.event-search-bar fieldset { border: 0; display: flex; flex-wrap: wrap; gap: .5rem; width: 100%; }
+.event-search-bar fieldset label { padding: .5rem; }
+.event-detail img { max-width: 100%; height: auto; object-fit: contain; }
+.event-detail p, .event-detail h2 { overflow-wrap: anywhere; }
+.data-status, .storage-status { font-size: 1rem; color: var(--text-light); }
+@media (max-width: 600px) { .site-nav .container { padding: 0 .4rem; } .site-nav a, .nav-more summary { padding: .5rem; font-size: 1rem; } main.container { padding: 0 .8rem; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+
+.nav-more summary { color: var(--green-pale); }
+.site-nav a, .nav-more summary { white-space: normal; letter-spacing: 0; text-transform: none; }
+.detail-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1rem 0; }
+.detail-actions a, .detail-actions button { display: inline-flex; align-items: center; min-height: 44px; padding: .5rem; font: inherit; }
+
+.app-banner-open, .app-banner-close { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+
+.locale-other { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+.view-all { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+.standalone-link { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; }
+.detail-link { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; }
+.event-summary > a { display: flex; align-items: center; min-width: 44px; min-height: 44px; }

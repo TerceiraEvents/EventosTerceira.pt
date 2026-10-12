@@ -11,7 +11,7 @@ lang_alt: /special/
 
 <p class="section-intro">Concertos, festivais, festas e eventos pontuais em Angra do Heroísmo. Usa o intervalo de datas, a pesquisa ou a etiqueta para refinares a lista.</p>
 
-{% include event_search_bar.html default_range="week" %}
+{% include event_search_bar.html default_range="week" default_kind="events" %}
 
 {% assign now_ts = "now" | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
 {% assign sorted_events = site.data.special_events | sort: "date" %}
@@ -42,3 +42,5 @@ lang_alt: /special/
 <div class="archive-link-section">
   <a href="{{ '/pt/archive/' | relative_url }}" class="view-all">Arquivo de Eventos</a>
 </div>
+
+<p class="data-status">{% if page.lang == "pt" %}Página publicada em{% else %}Page built at{% endif %} {{ site.time | date_to_xmlschema }}. {% if page.lang == "pt" %}Esta hora não indica verificação pela organização.{% else %}This is not an organizer verification time.{% endif %}</p>

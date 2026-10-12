@@ -8,6 +8,8 @@
 # of silently downgrading search/share quality on production.
 
 require "json"
+require "yaml"
+require "date"
 require "rexml/document"
 
 SITE = ENV.fetch("SITE", "_site")
@@ -25,17 +27,42 @@ end
 
 # Pin the visitor-facing component behavior when the canonical fixture is
 # classified as an exhibition in the data used for this build.
+target_css = File.read(File.join(SITE, 'assets/css/style.css'))
+%w[locale-other view-all standalone-link detail-link].each do |name|
+  rule_body = target_css.scan(/\.#{name}\s*\{([^}]+)\}/m).last&.first
+  valid = rule_body && %w[height width].all? { |axis| rule_body.match?(/min-#{axis}:\s*44px/) } && rule_body.match?(/display:\s*inline-flex/)
+  err(errors, "standalone .#{name} requires 44px width and height in normal flow") unless valid
+end
+saved_rule = target_css.match(/\.event-summary > a\s*\{([^}]+)\}/m)
+err(errors, 'saved primary link requires a 44px normal-flow target') unless saved_rule && saved_rule[1].include?('min-height: 44px') && saved_rule[1].include?('display: flex')
+home_target_html = File.read(File.join(SITE, 'index.html'))
+err(errors, 'homepage standalone navigation requires target classes') unless home_target_html.scan('class="standalone-link"').length >= 4
+plans_source = File.read(File.join(SITE, 'assets/js/plans.js'))
+err(errors, 'detail back/explore links require standalone targets') unless plans_source.include?("a.className='detail-link'") && plans_source.include?("back.className='detail-link'")
+
 special_path = "#{SITE}/special/index.html"
 if File.exist?(special_path)
   special_html = File.read(special_path)
   err(errors, "/special/: missing Next 7 days range label") unless special_html.include?("Next 7 days</option>")
+  events = YAML.safe_load(File.read('_data/special_events.yml'), permitted_classes: [Date, Time])
+  localities = events.map { |event| event['locality'] }.compact.uniq
+  err(errors, "/special/: locality control availability does not match curated metadata") unless special_html.include?('class="event-locality-filter"') == localities.any?
+  %w[angra praia other].each do |locality|
+    err(errors, "/special/: #{locality} option availability does not match curated metadata") unless special_html.include?(%(<option value="#{locality}">)) == localities.include?(locality)
+  end
+  title_target = special_html.match?(%r{<article[^>]*class="[^"]*event-summary[^"]*"[\s\S]*?<h3 class="event-name"><a href=})
+  err(errors, '/special/: summary title anchor selector is absent') unless title_target
+  css = File.read(File.join(SITE, 'assets/css/style.css'))
+  title_rule = css.match(/\.event-summary \.event-name a\s*\{([^}]+)\}/m)
+  title_height = title_rule && title_rule[1].match(/min-height:\s*(\d+)px/)
+  err(errors, '/special/: primary title link requires a 44px normal-flow target') unless title_height && title_height[1].to_i >= 44 && title_rule[1].match?(/display:\s*(?:block|flex)/)
   exhibition_marker = 'data-event-kind="exhibition"'
   if special_html.include?(exhibition_marker) && special_html.include?("Milestones of Autonomy: from the Administrative Board to the First Regional Government")
     en_start = special_html.index(exhibition_marker)
     en_end = special_html.index('<script type="application/ld+json">', en_start)
     card = special_html[en_start...en_end]
     err(errors, "/special/: Marcos exhibition missing its English status") unless card.include?("On view until 31 December")
-    err(errors, "/special/: Marcos exhibition renders an attendance time") if card.include?('class="event-time-info"')
+    err(errors, "/special/: Marcos exhibition renders an attendance time") if card.include?('class="event-attendance"')
     jsonld_end = special_html.index("</script>", en_end)
     jsonld = special_html[en_end...jsonld_end]
     err(errors, "/special/: Marcos exhibition JSON-LD includes a time of day") if jsonld.match?(/"(?:startDate|endDate)":\s*"\d{4}-\d{2}-\d{2}T/)
@@ -85,6 +112,21 @@ puts "Found #{html_pages.size} HTML page(s) under #{SITE}/"
 html_pages.each do |path|
   rel = path.sub(%r{^#{SITE}/?}, "/")
   html = File.read(path)
+  footer = html[/<footer\b[^>]*>[\s\S]*?<\/footer>/]
+  if footer
+    privacy = footer[/<a\b[^>]*href="[^"]*\/privacy\/?"[^>]*>/]
+    err(errors, "#{rel}: footer Privacy requires a standalone 44px target") unless privacy && privacy.match?(/class="[^"]*\bstandalone-link\b/)
+  end
+
+  if %w[/index.html /pt/index.html].include?(rel)
+    main_end = html.index('</main>')
+    banner = html.index('id="app-banner"')
+    err(errors, "#{rel}: mobile app promotion must follow main content") unless main_end && banner && banner > main_end
+  end
+
+  %w[assets/js/discovery.js assets/js/plans.js assets/css/style.css].each do |asset|
+    err(errors, "#{rel}: unversioned first-party asset #{asset}") unless html.match?(%r{#{Regexp.escape(asset)}\?v=\d+})
+  end
 
   # Title
   err(errors, "#{rel}: missing <title>") unless html.match?(/<title>[^<]+<\/title>/)

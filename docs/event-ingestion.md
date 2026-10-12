@@ -70,6 +70,32 @@ Unknown records omit it. Consumers can ignore this additive field. Venue lookup,
 geographic coverage, filter semantics, routes, and artwork policies have their own
 consumer/curation changes.
 
-The exact venue-locality registry and curation policy are documented in
-[locality-metadata.md](locality-metadata.md). Ingestion fills missing locality for
-those approved aliases; curators retain control of existing values.
+## Website details and discovery
+
+The website detail and My Plans pages consume persisted IDs. The canonical share
+URL is `https://eventosterceira.pt/events/?id=<id>`; Portuguese uses
+`/pt/events/?id=<id>`. Unknown IDs show an unavailable state. My Plans stores IDs
+and fallback titles in this browser and uses current metadata when the record exists.
+
+Date shortcuts use Atlantic/Azores calendar days. Today and Tomorrow each contain
+one day. This weekend contains Saturday and Sunday, or the remaining Sunday.
+Next 7/31/365 days include today and exclude the following horizon. Exhibitions
+match by overlap with their published viewing periods. Search ignores case and
+accents. Every selected tag must match; date, kind, locality, search, and tags
+combine with AND. The exact locality registry and curation policy are in
+[locality-metadata.md](locality-metadata.md); unknown geography stays unknown.
+
+Details read optional `price`, `price_en`, and `price_pt` as published price text;
+a verified `free` tag identifies free admission. Missing scalar price or time
+points readers to the complete programme and organizer. It does not assert that
+the description contains no published price or schedule.
+
+## Website artwork
+
+The detail renderer reads `image`, localized `image_alt`, `image_credit`,
+`image_rights`, and `image_source`. It displays uncropped posters and retains
+textual event information when an image fails. Curators use organizer artwork only
+with documented permission or a reusable license, follow approved hosting and
+image-host validation, and record provenance/credit. A public social-media post
+alone does not establish reuse permission. Permission-cleared acquisition samples
+and native rendering coverage require their own verification.
