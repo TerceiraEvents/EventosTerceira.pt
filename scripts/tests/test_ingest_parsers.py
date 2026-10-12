@@ -25,6 +25,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), os.pardir))
 
 import ingest_jsonld
 import ingest_touradas
+from ingest_common import format_event_yaml, listing_kind
 
 
 class JsonLdHarvesterTests(unittest.TestCase):
@@ -122,6 +123,31 @@ class TouradasParserTests(unittest.TestCase):
         m = ingest_touradas.GANADEIRO_RE.search("Ganadeiro: Marcos Bastos")
         self.assertIsNotNone(m)
         self.assertEqual(m.group(1).strip(), "Marcos Bastos")
+
+
+class ListingKindTests(unittest.TestCase):
+    def test_classifies_only_multi_day_exhibition_tagged_records(self):
+        cases = (
+            (["exhibition"], dt.date(2026, 10, 1), dt.date(2026, 10, 2), "exhibition"),
+            (["exhibition"], dt.date(2026, 10, 1), dt.date(2026, 10, 1), None),
+            (["exhibition"], dt.date(2026, 10, 1), None, None),
+            (["live-music"], dt.date(2026, 10, 1), dt.date(2026, 10, 2), None),
+            (["festival"], dt.date(2026, 10, 1), dt.date(2026, 10, 2), None),
+        )
+        for tags, start, end, expected in cases:
+            with self.subTest(tags=tags, start=start, end=end):
+                self.assertEqual(listing_kind(tags, start, end), expected)
+
+    def test_non_exhibition_ranges_do_not_write_a_kind_key(self):
+        cases = (
+            {"date": dt.date(2026, 10, 1), "name": "Single day", "venue": "Venue",
+             "tags": ["exhibition"]},
+            {"date": dt.date(2026, 10, 1), "end_date": dt.date(2026, 10, 2),
+             "name": "Festival", "venue": "Venue", "tags": ["festival"]},
+        )
+        for event in cases:
+            with self.subTest(event=event):
+                self.assertNotIn("  kind:", format_event_yaml(event))
 
 
 if __name__ == "__main__":

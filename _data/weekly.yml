@@ -158,6 +158,20 @@
 - day: Sunday
   day_pt: Domingo
   events:
+  - name: NFL Sundays
+    name_pt: NFL aos Domingos
+    venue: The Texan
+    address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Heroísmo
+    time: "17:00"
+    description: "The Texan advertises NFL every Sunday during the game season, with kickoff at 17:00 and a two-for-one beer offer during games."
+    description_pt: "O The Texan anuncia NFL todos os domingos durante a temporada, com início anunciado às 17:00 e oferta de duas cervejas pelo preço de uma durante os jogos."
+    note: "17:00 is the venue's advertised time, not a verified kickoff for every game. Confirm this Sunday's games and hours with the venue, especially around clock changes and the postseason; season-end coverage is unconfirmed."
+    note_pt: "17:00 é a hora anunciada pelo espaço, não uma hora verificada para todos os jogos. Confirma os jogos e horários deste domingo com o espaço, sobretudo nas mudanças de hora e na fase final; a cobertura do fim da temporada não está confirmada."
+    instagram: https://www.instagram.com/thetexanbar/
+    source_url: https://www.instagram.com/thetexanbar/p/Ddqy2UfCY6S/
+    verified_on: "2026-10-12"
+    url: https://www.thetexan.pt
   - name: Karaoke Night
     name_pt: Noite de Karaoke
     venue: Tasca do Camões
