@@ -78,6 +78,10 @@
       day_pt: Sábado
       name: "Karaoke Night, 22:30–01:30"
       name_pt: "Noite de Karaoke, 22h30–01h30"
+    - day: Sunday
+      day_pt: Domingo
+      name: "NFL Sundays, advertised 17:00 during the season; confirm games and hours"
+      name_pt: "NFL aos domingos, 17h00 anunciadas durante a temporada; confirmar jogos e horários"
   links:
     - { label: "Website", label_pt: "Site", url: "https://www.thetexan.pt" }
     - { label: "Instagram (Texan)", label_pt: "Instagram (Texan)", url: "https://www.instagram.com/thetexanbar/" }
