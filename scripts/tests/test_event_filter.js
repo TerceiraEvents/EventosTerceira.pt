@@ -254,7 +254,7 @@ test('actual page uses AND for both facets, locality and accented search',()=>{
   ];
   const page=runPage({cards,query:'musica',withFacets:true,withLocality:true,setFacets:['free','kid-friendly'],setLocality:'angra',details:true});
   assert.deepEqual(page.visible,{'Música em família':true,'Música paid':false,'Música elsewhere':false,'Música unknown':false});
-  assert.equal(page.resultCount,'1 results');
+  assert.equal(page.resultCount,'1 result');
 });
 test('actual page shares and restores range kind tags locality search and locale',()=>{
   const cards=[{name:'Música',start:'2026-10-13',kind:'event',tags:'free kid-friendly',locality:'angra'},{name:'Another exhibition',start:'2026-10-13',kind:'exhibition',tags:'free kid-friendly',locality:'angra'}];

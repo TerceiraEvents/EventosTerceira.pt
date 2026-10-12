@@ -16,6 +16,7 @@
   function feedback() {
     var status = document.querySelector('.storage-status');
     if (!status) { status = el('p', '', document.querySelector('main')); status.className = 'storage-status'; status.setAttribute('role','status'); }
+    status.setAttribute('id', 'plans-storage-status');
     status.textContent = !storageOK ? t('Browser storage is unavailable. Changes last only while this page is open.', 'O armazenamento está indisponível. As alterações duram apenas enquanto esta página está aberta.') : invalidSaved ? t('Saved data is unreadable. Existing browser data has not been changed. Clear it to restart saving.', 'Os dados guardados são ilegíveis. Os dados do navegador não foram alterados. Limpa-os para voltar a guardar.') : '';
     var recovery = document.querySelector('.clear-invalid-plans');
     if (invalidSaved && !recovery) {
@@ -35,7 +36,9 @@
   function update() {
     document.querySelectorAll('[data-save-id]').forEach(function(b) {
       var selected = !!saved[b.dataset.saveId]; b.setAttribute('aria-pressed', String(selected));
-      b.textContent = selected ? t('Unsave', 'Remover dos guardados') : t('Save', 'Guardar');
+      b.disabled = invalidSaved;
+      b.setAttribute('aria-describedby', invalidSaved ? 'plans-storage-status' : '');
+      b.textContent = invalidSaved ? t('Clear unreadable saved data before saving', 'Limpa os dados guardados ilegíveis antes de guardar') : selected ? t('Unsave', 'Remover dos guardados') : t('Save', 'Guardar');
     });
     feedback();
   }
@@ -96,6 +99,7 @@
   }
   document.addEventListener('click',function(e) {
     var b=e.target.closest('[data-save-id]'); if (!b || !b.dataset.saveId) return;
+    if (invalidSaved) { feedback(); return; }
     var id=b.dataset.saveId;
     if (saved[id]) delete saved[id]; else saved[id]={name:b.dataset.saveName};
     if (!invalidSaved) { try { localStorage.setItem(key,JSON.stringify(saved)); storageOK=true; } catch (err) { storageOK=false; } }

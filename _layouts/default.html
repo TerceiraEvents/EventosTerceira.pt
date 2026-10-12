@@ -406,7 +406,7 @@
           if (show) visibleCount++;
         });
 
-        if (resultCount) resultCount.textContent = visibleCount + (document.documentElement.lang === 'pt' ? ' resultados' : ' results');
+        if (resultCount) resultCount.textContent = visibleCount + (document.documentElement.lang === 'pt' ? (visibleCount === 1 ? ' resultado' : ' resultados') : (visibleCount === 1 ? ' result' : ' results'));
         if (window.history && window.history.replaceState) {
           var params = new URLSearchParams();
           if (query) params.set('q', input.value.trim());

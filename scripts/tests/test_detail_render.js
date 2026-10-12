@@ -66,3 +66,11 @@ test('missing scalar fields do not deny times or prices in the published program
  assert(text.includes('See details or check with the organizer for times.'));
  assert(text.includes('See details or check with the organizer for prices.'));
 });
+test('unreadable saved data cannot make Save appear persistently pressed',()=>{
+ const page=render({lang:'en',records:[exhibition],stored:'[1,2]'});
+ const button=page.all().find(n=>n.dataset.saveId==='exhibition-one');
+ button.click();
+ assert.equal(button.attrs['aria-pressed'],'false');
+ assert.equal(button.disabled,true);
+ assert.equal(page.stored(),'[1,2]');
+});
