@@ -112,6 +112,15 @@ puts "Found #{html_pages.size} HTML page(s) under #{SITE}/"
 html_pages.each do |path|
   rel = path.sub(%r{^#{SITE}/?}, "/")
   html = File.read(path)
+  navigation = html[/<nav class="site-nav"[^>]*>[\s\S]*?<\/nav>/]
+  if navigation
+    err(errors, "#{rel}: primary destinations must be visible without opening a menu") if navigation.match?(/<details|\bhidden\b|aria-hidden="true"/)
+    prefix = rel.start_with?('/pt/') ? '/pt' : ''
+    ['/', '/weekly/', '/special/', '/venues/', '/blog/', '/contribute/', '/resources/', '/saved/', '/suggest/', '/special/?kind=exhibition&amp;range=all'].each do |route|
+      href = prefix + route
+      err(errors, "#{rel}: visible navigation missing #{href}") unless navigation.include?("href=\"#{href}\"") || navigation.include?("href=\"#{href.gsub('&amp;', '&')}\"")
+    end
+  end
   footer = html[/<footer\b[^>]*>[\s\S]*?<\/footer>/]
   if footer
     privacy = footer[/<a\b[^>]*href="[^"]*\/privacy\/?"[^>]*>/]

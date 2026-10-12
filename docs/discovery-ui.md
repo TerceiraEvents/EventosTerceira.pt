@@ -27,7 +27,7 @@ and session changes remain usable. The website does not promise offline availabi
 Automated: Azores midnight/DST/device timezone date predicates; exact-ID uniqueness
 and preservation; combined facets; navigation and locale visibility; semantic controls.
 Manual required: EN/PT 390 px and desktop reflow, 200/400% zoom, keyboard navigation,
-More menu, details, saved removal, suggestion dialog, image failures, VoiceOver.
+visible wrapping navigation, details, saved removal, suggestion dialog, image failures, VoiceOver.
 Native VoiceOver/TalkBack and enlarged system text require real platform runs.
 A component test does not establish WCAG conformance.
 
@@ -52,3 +52,5 @@ Details and My Plans embed the full published dataset, including ended records.
 The uncompressed detail HTML measured 532,260 bytes on 12 October 2026. This allows exact ended-event details without another request;
 per-event generated documents are a possible future payload improvement. A map
 action requires `map_url`; source and booking actions also require published URLs.
+
+Primary navigation displays every destination in normal document flow in both languages. Links wrap into rows at narrow widths, retain at least 44 px targets, and keep the language switch visible.

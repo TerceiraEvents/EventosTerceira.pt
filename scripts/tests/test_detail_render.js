@@ -74,3 +74,12 @@ test('unreadable saved data cannot make Save appear persistently pressed',()=>{
  assert.equal(button.disabled,true);
  assert.equal(page.stored(),'[1,2]');
 });
+
+test('actual navigation script marks exactly the matching discovery destination in EN/PT',()=>{
+ for(const prefix of ['', '/pt']) for(const [query,expected] of [['?kind=exhibition&range=all','view'],['?range=today&q=music','explore'],['?kind=event&free=1','explore']]) {
+  const links=[['explore',prefix+'/special/'],['view',prefix+'/special/?kind=exhibition&range=all']].map(([name,path])=>({name,...Object.fromEntries(['pathname','search'].map(key=>[key,new URL(path,'https://eventosterceira.pt')[key]])),attrs:{},setAttribute(key,value){this.attrs[key]=value;}}));
+  const document={documentElement:{lang:prefix?'pt':'en'},createElement:()=>({setAttribute:()=>{}}),querySelectorAll:selector=>selector==='.site-nav a'?links:[],querySelector:()=>null,getElementById:key=>key==='event-dataset'?{textContent:'[]'}:null,addEventListener:()=>{}};
+  vm.runInNewContext(fs.readFileSync('assets/js/plans.js','utf8'),{document,localStorage:{getItem:()=>null},location:{origin:'https://eventosterceira.pt',pathname:prefix+'/special/',search:query},URL,URLSearchParams});
+  assert.deepEqual(links.filter(link=>link.attrs['aria-current']==='page').map(link=>link.name),[expected]);
+ }
+});
