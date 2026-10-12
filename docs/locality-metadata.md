@@ -15,7 +15,7 @@ Praia da Vitória. These location pages were read on 12 October 2026. This is a
 location check, not new verification of event dates, schedules, or admission.
 
 `ruby scripts/assign_event_localities.rb` fills absent locality fields using exact
-venue aliases. Ingestion runs it before validation. It preserves IDs, source
+venue aliases. Ingestion runs it before validation. It uses YAML AST positions, validates the complete output, and preserves IDs, source
 metadata, comments, and existing curator fields. It does not examine titles,
 addresses, postal prefixes, translations, partial venue names, or GPS. Unknown
 aliases stay unknown. Add an alias only with evidence for that venue's physical
@@ -28,10 +28,9 @@ it allows the verified alias lookup to fill the corrected venue's locality.
 
 ## Coverage
 
-Snapshot for 12 October 2026 (inclusive end dates): 648 records, 135 active/upcoming.
-Before this change, no records had locality metadata. After mapping these five
-aliases, 99 records have metadata: 85 Angra and 14 Praia; 549 remain unknown.
-Among active/upcoming records, 47 are Angra and 11 Praia; 77 remain unknown.
+Snapshot for 12 October 2026 (inclusive end dates): 649 records, 136 active/upcoming.
+The five approved aliases cover 99 records with metadata: 85 Angra and 14 Praia; 550 remain unknown.
+Among active/upcoming records, 47 are Angra and 11 Praia; 78 remain unknown.
 These counts demonstrate a curated subset, not complete geographic coverage.
 The alias tests and data gate cover exact matches, unknown/ambiguous names, curator
 corrections, idempotence, and identity/source preservation.
