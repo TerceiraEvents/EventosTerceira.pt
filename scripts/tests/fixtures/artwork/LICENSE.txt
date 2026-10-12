@@ -1,0 +1,9 @@
+SPDX-License-Identifier: CC0-1.0
+
+These original deterministic geometric test fixtures are dedicated to the public domain under CC0 1.0 Universal:
+https://creativecommons.org/publicdomain/zero/1.0/
+
+To the extent possible under law, the authors waive copyright and related rights in the PNG fixture images and their simple glyph patterns. The images contain no organizer artwork, photographs, trademarks or event information. They are labelled TEST ONLY and must not be presented as event posters.
+
+AI-produced: Codex desktop app (version unknown), model gpt-6.1-sol.
+Conversation: local session ID 01a12d38-f796-77a1-b056-47c1eb6a90d5.
