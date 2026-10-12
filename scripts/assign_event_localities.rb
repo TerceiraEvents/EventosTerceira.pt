@@ -1,5 +1,6 @@
 require 'yaml'
 require 'date'
+require_relative 'validate_event_data'
 
 def load_locality_lookup(path)
   venues = YAML.safe_load(File.read(path))
@@ -16,18 +17,40 @@ def load_locality_lookup(path)
 end
 
 def apply_event_localities(text, lookup)
-  assigned = 0
-  blocks = text.split(/(?=^- [a-zA-Z_]+:)/)
-  blocks.map! do |block|
-    next block unless block.match?(/\A- [a-zA-Z_]+:/)
-    event = YAML.safe_load(block, permitted_classes: [Date, Time]).first
-    next block if event.key?('locality')
+  input = YAML.safe_load(text, permitted_classes: [Date, Time])
+  errors = validate_events(input, require_ids: false)
+  raise ArgumentError, errors.join("\n") unless errors.empty?
+  stream = Psych.parse_stream(text)
+  raise ArgumentError, 'expected exactly one YAML document' unless stream.children.size == 1
+  sequence = stream.children.first.root
+  raise ArgumentError, 'expected a YAML sequence' unless sequence.is_a?(Psych::Nodes::Sequence)
+  offsets = [0]
+  text.each_line { |line| offsets << offsets.last + line.length }
+  edits = []
+  input.each_with_index do |event, index|
+    next if event.key?('locality')
     locality = lookup[event['venue']]
-    next block unless locality
-    assigned += 1
-    block.sub(/(^- [a-zA-Z_]+:[^\n]*\n)/, "\\1  locality: #{locality}\n")
+    next unless locality
+    mapping = sequence.children.fetch(index)
+    if mapping.style == Psych::Nodes::Mapping::FLOW
+      offset = offsets.fetch(mapping.end_line) + mapping.end_column - 1
+      raise ArgumentError, "#{event['name']}: invalid flow boundary" unless text[offset] == '}'
+      separator = text[0...offset].rstrip.end_with?(',') ? '' : ','
+      edits << [offset, "#{separator} locality: #{locality}"]
+    else
+      offset = offsets.fetch(mapping.end_line, text.length)
+      prefix = offset == text.length && !text.end_with?("\n") ? "\n" : ''
+      edits << [offset, "#{prefix}#{' ' * mapping.start_column}locality: #{locality}\n"]
+    end
   end
-  [blocks.join, assigned]
+  output = text.dup
+  edits.sort_by(&:first).reverse_each { |offset, insertion| output.insert(offset, insertion) }
+  records = YAML.safe_load(output, permitted_classes: [Date, Time])
+  errors = validate_events(records, require_ids: false)
+  raise ArgumentError, errors.join("\n") unless errors.empty?
+  without_locality = ->(events) { events.map { |event| event.reject { |key, _| key == 'locality' } } }
+  raise ArgumentError, 'event metadata changed during locality assignment' unless without_locality.call(records) == without_locality.call(input)
+  [output, edits.size]
 end
 
 if $PROGRAM_NAME == __FILE__

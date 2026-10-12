@@ -36,13 +36,33 @@ class EventLocalitiesTest < Minitest::Test
     assert_equal 0, count
   end
 
-  def test_curator_can_clear_locality_after_venue_correction
+  def test_missing_locality_is_filled_for_a_verified_venue
     original = "- date: 2026-10-12\n  id: permanent-id\n  venue: Recreio dos Artistas\n"
     result, count = apply_event_localities(original, @lookup)
     data = YAML.safe_load(result, permitted_classes: [Date]).first
     assert_equal 1, count
     assert_equal 'angra', data['locality']
     assert_equal 'permanent-id', data['id']
+  end
+
+  def test_yaml_shapes_preserve_all_non_locality_fields
+    shapes = [
+      "- name: >-\n    A long folded\n    title\n  date: 2026-10-12\n  venue: Recreio dos Artistas\n",
+      "- name: |\n    A long title\n  date: 2026-10-12\n  venue: Recreio dos Artistas\n",
+      "- {date: 2026-10-12, name: Música, venue: Recreio dos Artistas}",
+      "- \"date\": 2026-10-12\n  venue: Recreio dos Artistas"
+    ]
+    shapes.each do |source|
+      before = YAML.safe_load(source, permitted_classes: [Date])
+      result, count = apply_event_localities(source, @lookup)
+      records = YAML.safe_load(result, permitted_classes: [Date])
+      assert_equal 1, count, source.inspect
+      assert_equal before, records.map { |event| event.reject { |key, _| key == 'locality' } }, source.inspect
+      assert_equal 'angra', records.first['locality']
+      repeated, count = apply_event_localities(result, @lookup)
+      assert_equal result, repeated
+      assert_equal 0, count
+    end
   end
 
   def test_published_subset_has_both_city_localities
