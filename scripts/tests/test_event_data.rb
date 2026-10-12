@@ -159,7 +159,7 @@ duplicates = [
   { 'name' => 'Second identity', 'date' => Date.new(2026, 10, 13), 'id' => 'duplicate-id' }
 ]
 duplicate_errors = validate_events(duplicates)
-assert_eq duplicate_errors.any? { |error| error.include?('Second identity') && error.include?('id') }, true, 'duplicate ID names offending record'
+assert_eq duplicate_errors.any? { |error| error.include?('Second identity') && error.include?('`id`') && error.include?('First identity') }, true, 'duplicate ID names offending record'
 
 halloween = special.select { |event| event["source_url"] == "https://www.instagram.com/thetexanbar/reel/DeWkNyxCVDz/" }
 assert_eq halloween.length, 1, "Texan Halloween has one source-backed occurrence"
@@ -171,6 +171,29 @@ if halloween.length == 1
   assert_eq event["price"], nil, "Halloween has no guessed price"
   assert_eq event["tags"].include?("free"), false, "missing price does not imply free admission"
   assert_eq event["tags"].include?("kid-friendly"), true, "organizer states family-friendly attendance"
+end
+
+puts "strict YAML key publication rules"
+["- date: 2026-10-12\n  id: first\n  id: second\n  name: Duplicate key\n", "- date: 2026-10-12\n  id: existing\n  name: Nested duplicate\n  metadata: {key: one, key: two}\n"].each do |text|
+  errors = validate_event_yaml(text)
+  assert_eq errors.any? { |error| error.include?('duplicate YAML key') }, true, 'duplicate YAML mapping keys rejected'
+end
+
+puts "explicit exhibition visiting schedules"
+[
+  ['Within the Breath of Oyá / Dentro do sopro de Oyá', 'Weekdays, 10:00–12:30 and 13:30–18:30, through 31 July', 'dias úteis, 10h00–12h30 e 13h30–18h30, até 31 de julho'],
+  ['Exposição As Ilhas Desconhecidas - Baltasar Pinheiro', 'Monday to Friday, 16:00 to 18:30, through 28 August', 'de segunda a sexta-feira, das 16h00 às 18h30, até 28 de agosto'],
+  ['O Caos em Mim', '8–15 September, Monday to Friday, 18:00 to 19:30', 'de 8 a 15 de setembro, de segunda a sexta, das 18h00 às 19h30']
+].each do |name, en, pt|
+  event = special.find { |record| record['name'] == name }
+  assert_eq event['visiting_hours'], en, "#{name} English published hours and qualifiers"
+  assert_eq event['visiting_hours_pt'], pt, "#{name} Portuguese published hours and qualifiers"
+end
+[['EN-only hours', {'visiting_hours' => '16:00–18:30'}, true], ['PT-only hours', {'visiting_hours_pt' => '16h00–18h30'}, true], ['paired hours', {'visiting_hours' => '16:00–18:30', 'visiting_hours_pt' => '16h00–18h30'}, false]].each do |name, hours, should_fail|
+  event = {'name' => name, 'date' => Date.new(2026,10,12)}.merge(hours)
+  errors = validate_fixture_events([event])
+  assert_eq errors.empty?, !should_fail, name
+  assert_eq errors.any? { |error| error.include?(name) }, true, "#{name} error names record" if should_fail
 end
 
 if @failed > 0

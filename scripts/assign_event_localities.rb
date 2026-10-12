@@ -18,7 +18,7 @@ end
 
 def apply_event_localities(text, lookup)
   input = YAML.safe_load(text, permitted_classes: [Date, Time])
-  errors = validate_events(input, require_ids: false)
+  errors = validate_event_yaml(text, require_ids: false)
   raise ArgumentError, errors.join("\n") unless errors.empty?
   stream = Psych.parse_stream(text)
   raise ArgumentError, 'expected exactly one YAML document' unless stream.children.size == 1
@@ -46,7 +46,7 @@ def apply_event_localities(text, lookup)
   output = text.dup
   edits.sort_by(&:first).reverse_each { |offset, insertion| output.insert(offset, insertion) }
   records = YAML.safe_load(output, permitted_classes: [Date, Time])
-  errors = validate_events(records, require_ids: false)
+  errors = validate_event_yaml(output, require_ids: false)
   raise ArgumentError, errors.join("\n") unless errors.empty?
   without_locality = ->(events) { events.map { |event| event.reject { |key, _| key == 'locality' } } }
   raise ArgumentError, 'event metadata changed during locality assignment' unless without_locality.call(records) == without_locality.call(input)
@@ -56,7 +56,7 @@ end
 if $PROGRAM_NAME == __FILE__
   path = ARGV.fetch(0, '_data/special_events.yml')
   lookup = load_locality_lookup(ARGV.fetch(1, '_data/venue_localities.yml'))
-  result, assigned = apply_event_localities(File.read(path), lookup)
+  result, assigned = apply_event_localities(File.read(path, encoding: 'UTF-8'), lookup)
   File.write(path, result) if assigned.positive?
   puts "Assigned #{assigned} localities from #{lookup.size} exact venue aliases"
 end
