@@ -1491,7 +1491,7 @@ main a {
 .save-event[aria-pressed='true'] { background: var(--green-dark); color: white; }
 .event-summary { padding: 1rem; border-radius: var(--radius); display: block; }
 .event-summary .event-name { font-size: 1.3rem; margin-bottom: .35rem; overflow-wrap: anywhere; }
-.event-summary .event-name a { color: var(--green-dark); }
+.event-summary .event-name a { color: var(--green-dark); display: flex; align-items: center; min-height: 44px; }
 .event-summary .event-venue { margin: .25rem 0 .75rem; }
 .event-attendance { font-weight: 600; }
 .event-summary .event-details { min-width: 0; }

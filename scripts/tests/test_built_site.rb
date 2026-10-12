@@ -37,6 +37,12 @@ if File.exist?(special_path)
   %w[angra praia other].each do |locality|
     err(errors, "/special/: #{locality} option availability does not match curated metadata") unless special_html.include?(%(<option value="#{locality}">)) == localities.include?(locality)
   end
+  title_target = special_html.match?(%r{<article[^>]*class="[^"]*event-summary[^"]*"[\s\S]*?<h3 class="event-name"><a href=})
+  err(errors, '/special/: summary title anchor selector is absent') unless title_target
+  css = File.read(File.join(SITE, 'assets/css/style.css'))
+  title_rule = css.match(/\.event-summary \.event-name a\s*\{([^}]+)\}/m)
+  title_height = title_rule && title_rule[1].match(/min-height:\s*(\d+)px/)
+  err(errors, '/special/: primary title link requires a 44px normal-flow target') unless title_height && title_height[1].to_i >= 44 && title_rule[1].match?(/display:\s*(?:block|flex)/)
   exhibition_marker = 'data-event-kind="exhibition"'
   if special_html.include?(exhibition_marker) && special_html.include?("Milestones of Autonomy: from the Administrative Board to the First Regional Government")
     en_start = special_html.index(exhibition_marker)
