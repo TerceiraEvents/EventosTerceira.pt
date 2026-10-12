@@ -5488,6 +5488,8 @@ Come join us and support our festivities!"
   id: 46d9a01e-fb67-44d3-b581-14d8ee2832db
   end_date: 2026-07-31
   kind: exhibition
+  visiting_hours: "Weekdays, 10:00–12:30 and 13:30–18:30, through 31 July"
+  visiting_hours_pt: "dias úteis, 10h00–12h30 e 13h30–18h30, até 31 de julho"
   name: "Within the Breath of Oyá / Dentro do sopro de Oyá"
   venue: "Instituto Açoriano de Cultura (IAC)"
   address: "Alto das Covas, 9700-215 Angra do Heroísmo"
@@ -6105,6 +6107,8 @@ Come join us and support our festivities!"
   id: 0efccb38-aec3-4ea5-9250-d08c55f760d2
   end_date: 2026-08-28
   kind: exhibition
+  visiting_hours: "Monday to Friday, 16:00 to 18:30, through 28 August"
+  visiting_hours_pt: "de segunda a sexta-feira, das 16h00 às 18h30, até 28 de agosto"
   name: "Exposição As Ilhas Desconhecidas - Baltasar Pinheiro"
   name_en: "The Unknown Islands Exhibition - Baltasar Pinheiro"
   venue: Casa do Sal
@@ -6547,8 +6551,8 @@ Come join us and support our festivities!"
   id: f9dbaf5e-a51c-4b32-bfb7-106afa86ef62
   end_date: 2026-09-15
   kind: exhibition
-  visiting_hours: "Monday to Friday, 18:00 to 19:30"
-  visiting_hours_pt: "de segunda a sexta, das 18h00 às 19h30"
+  visiting_hours: "8–15 September, Monday to Friday, 18:00 to 19:30"
+  visiting_hours_pt: "de 8 a 15 de setembro, de segunda a sexta, das 18h00 às 19h30"
   name: "O Caos em Mim"
   name_en: "The Chaos in Me"
   venue: Casa do Sal / Oficina d'Angra

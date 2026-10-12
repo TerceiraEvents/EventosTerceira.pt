@@ -311,7 +311,7 @@ Each new special event goes as a new list item in `_data/special_events.yml`. Th
 - date: YYYY-MM-DD          # required
   id: "<assigned opaque ID>" # required publication output; omit for new records until assignment
   end_date: YYYY-MM-DD       # inclusive; required for exhibitions and multi-day events
-  kind: event               # optional; records without kind are events
+  kind: event               # required for multi-day exhibition-tagged records; otherwise optional
   visiting_hours: "Mon–Fri 16:00–18:30"       # optional, only when stated by the source
   visiting_hours_pt: "Seg–Sex 16h00–18h30"   # optional Portuguese wording from the source
   name: "Portuguese name"   # required
@@ -332,11 +332,11 @@ Each new special event goes as a new list item in `_data/special_events.yml`. Th
 For each new record, omit `id` while drafting, then run
 `ruby scripts/assign_event_ids.rb` followed by
 `ruby scripts/validate_event_data.rb _data/special_events.yml` before committing.
-Keep every existing ID when correcting metadata. Do not copy the schema's ID
+Remove an empty or null `id` key instead of leaving a blank placeholder; assignment rejects null keys without writing. Keep every existing ID when correcting metadata. Do not copy the schema's ID
 placeholder. A duplicate-record merge retains the older persisted ID; record both
 IDs and the retained ID in the PR body.
 
-`kind` accepts only `event` or `exhibition`; records without it are events. An exhibition is a visitable display whose `date` and inclusive `end_date` describe the display period. It must have an `end_date` strictly after `date` and the canonical `exhibition` tag. Every record tagged `exhibition` with a multi-day range must declare `kind` explicitly, including records that remain dated events. A single-day opening, talk, or guided tour tagged `exhibition` is a dated event and does not need `kind`. The `time` field on an exhibition is legacy information and is never an attendance time. Add `visiting_hours` and `visiting_hours_pt` only when the source explicitly states the visiting schedule; leave them absent otherwise. Older readers ignore these optional fields and continue to read the existing event fields.
+`kind` accepts only `event` or `exhibition`; records without it are events. An exhibition is a visitable display whose `date` and inclusive `end_date` describe the display period. It must have an `end_date` strictly after `date` and the canonical `exhibition` tag. Every record tagged `exhibition` with a multi-day range must declare `kind` explicitly, including records that remain dated events. A single-day opening, talk, or guided tour tagged `exhibition` is a dated event and does not need `kind`. The `time` field on an exhibition is legacy information and is never an attendance time. Provide `visiting_hours` and `visiting_hours_pt` together for a source-stated schedule, translating faithfully and preserving every date restriction; leave both absent otherwise. Older readers ignore these optional fields and continue to read the existing event fields.
 
 An opening reception, artist talk, or guided tour is a separate dated `kind: event` record that names its exhibition. Keep the long display period in its own `kind: exhibition` record; do not duplicate one occurrence as both listings.
 
@@ -447,7 +447,7 @@ Once the PR is merged, close the tracking issue (or it closes automatically if y
 - **Events that have already passed** by the time you're writing the PR.
 - **Events with no confirmed date** (e.g. "coming soon" posts with no date).
 - **Events already represented** in the repo, whether manually entered or auto-ingested. A configured workflow is not proof that its current source is healthy. Use the status table below and backfill missing events from verified sources.
-- **Inferred exhibition classifications or hours.** Use `kind: exhibition` only for a visitable display with a verified inclusive display period; classify multi-day `exhibition`-tagged programmes as `event` when they represent attendance days. Declare `kind` explicitly for every multi-day record with the `exhibition` tag. Do not turn an exhibition's `time` into an attendance time or add visiting hours the source does not state in both languages.
+- **Inferred exhibition classifications or hours.** Use `kind: exhibition` only for a visitable display with a verified inclusive display period; classify multi-day `exhibition`-tagged programmes as `event` when they represent attendance days. Declare `kind` explicitly for every multi-day record with the `exhibition` tag. Do not turn an exhibition's `time` into an attendance time or add hours the source does not state. Provide both language fields together, translating the same published schedule faithfully and retaining date restrictions.
 - **A combined opening and display listing.** Record an opening reception, artist talk, or guided tour as its own dated event naming the exhibition, and keep the display period on the exhibition record.
 
 ---
