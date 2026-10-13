@@ -334,11 +334,6 @@
       var rangeSelect = bar.querySelector('.event-range-filter');
       var kindSelect = bar.querySelector('.event-kind-filter');
       var localitySelect = bar.querySelector('.event-locality-filter');
-      var savedSelect = bar.querySelector('.event-saved-filter');
-      var savedStatus = bar.querySelector('.saved-filter-status');
-      var missingSaved = bar.querySelector('.saved-unavailable');
-      var publication = document.getElementById('published-event-identities');
-      var publishedIDs = publication ? EventDiscovery.publicationIDs(publication.textContent, publication.getAttribute('data-event-count')) : null;
       var facets = bar.querySelectorAll ? bar.querySelectorAll('[data-facet]') : [];
       var reset = bar.querySelector('.filter-reset');
       var resultCount = bar.querySelector('.result-count');
@@ -359,11 +354,10 @@
         }
         node = node.nextElementSibling;
       }
-      if (!cards.length && !savedSelect) return;
+      if (!cards.length) return;
 
       var empty = scope.querySelector('.event-search-empty') ||
                   document.querySelector('.event-search-empty');
-      var defaultEmptyMessage = empty ? empty.textContent : '';
 
       // Cache parsed dates so we don't re-parse on every keystroke.
       // Cards without an end date fall back to their start date.
@@ -385,24 +379,6 @@
         var kind = kindSelect ? kindSelect.value : 'all';
         var selectedTags = Array.prototype.filter.call(facets, function(f) { return f.checked; }).map(function(f) { return f.value; });
         if (selectedTag) selectedTags.push(selectedTag);
-        var savedEntries = savedSelect ? EventDiscovery.savedEntries(window.localStorage) : [];
-        var savedIDs = savedEntries && savedEntries.map(function(entry) { return entry.id; });
-        if (savedSelect) savedSelect.disabled = savedIDs === null && !savedSelect.checked;
-        if (savedStatus) savedStatus.textContent = savedIDs === null ? (document.documentElement.lang === 'pt' ? 'Não foi possível ler os eventos guardados. Tenta novamente ou limpa este filtro.' : 'Saved events could not be read. Retry or clear this filter.') : '';
-        if (missingSaved) {
-          missingSaved.replaceChildren();
-          var missingEntries = savedSelect && savedSelect.checked && savedEntries ? savedEntries.filter(function(entry) {
-            return publishedIDs ? publishedIDs.indexOf(entry.id) === -1 : !cards.some(function(card) { return card.getAttribute('data-event-id') === entry.id; });
-          }) : [];
-          missingSaved.hidden = missingEntries.length === 0;
-          missingEntries.forEach(function(entry) {
-            var item = document.createElement('article'); item.className = 'saved-unavailable-item';
-            var name = document.createElement('h3'); name.textContent = entry.name || entry.id; item.appendChild(name);
-            var status = document.createElement('p'); status.textContent = publishedIDs ? (document.documentElement.lang === 'pt' ? 'Indisponível nesta lista publicada. Os filtros de datas e categorias não se aplicam a este registo.' : 'Unavailable in this published list. Date and category filters do not apply to this record.') : (document.documentElement.lang === 'pt' ? 'Não foi possível confirmar a disponibilidade. Recarrega a página para tentar novamente.' : 'Availability could not be confirmed. Reload this page to retry.'); item.appendChild(status);
-            var remove = document.createElement('button'); remove.type = 'button'; remove.dataset.saveId = entry.id; remove.dataset.saveName = entry.name; remove.setAttribute('aria-pressed', 'true'); remove.textContent = document.documentElement.lang === 'pt' ? 'Remover evento guardado' : 'Unsave'; item.appendChild(remove);
-            missingSaved.appendChild(item);
-          });
-        }
         var visibleCount = 0;
         cards.forEach(function(card, i) {
           var event = {
@@ -421,9 +397,7 @@
             tags: selectedTags,
             range: rangeSelect && event.date ? range : null,
             kind: kindSelect ? kind : null,
-            locality: localitySelect ? localitySelect.value : null,
-            savedOnly: savedSelect && savedSelect.checked,
-            savedIDs: savedIDs
+            locality: localitySelect ? localitySelect.value : null
           });
           card.style.display = show ? '' : 'none';
           if (show) visibleCount++;
@@ -433,7 +407,6 @@
         if (window.history && window.history.replaceState) {
           var params = new URLSearchParams();
           if (query) params.set('q', input.value.trim());
-          if (savedSelect && savedSelect.checked) params.set('saved', '1');
           if (selectedTag) params.set('tag', selectedTag);
           if (rangeSelect) params.set('range', range);
           if (kindSelect) params.set('kind', kind);
@@ -445,18 +418,13 @@
           if (locale) locale.href = locale.href.split('?')[0] + '?' + params.toString();
         }
         if (empty) {
-          var savedActive = savedSelect && savedSelect.checked;
-          if (savedActive) {
-            empty.textContent = savedEntries === null ? (document.documentElement.lang === 'pt' ? 'Não foi possível ler os eventos guardados. Tenta novamente.' : 'Saved events could not be read. Retry.') : !publishedIDs ? (document.documentElement.lang === 'pt' ? 'Não foi possível confirmar a disponibilidade. Recarrega a página para tentar novamente.' : 'Availability could not be confirmed. Reload this page to retry.') : savedEntries.length === 0 ? (document.documentElement.lang === 'pt' ? 'Ainda não há eventos guardados. Escolhe um evento e Guardar.' : 'No saved events yet. Choose an event and Save.') : (document.documentElement.lang === 'pt' ? 'Nenhum evento guardado corresponde a estes filtros.' : 'No saved events match these filters.');
-          } else empty.textContent = defaultEmptyMessage;
-          empty.classList.toggle('active', visibleCount === 0 && (cards.length > 0 || savedActive));
+          empty.classList.toggle('active', visibleCount === 0 && cards.length > 0);
         }
       }
 
       if (localitySelect) localitySelect.addEventListener('change', applyFilters);
-      if (savedSelect) { savedSelect.addEventListener('change', function() { if (savedSelect.checked && rangeSelect) rangeSelect.value = 'all'; applyFilters(); }); document.addEventListener('saved-events-change', applyFilters); window.addEventListener('storage', applyFilters); }
       Array.prototype.forEach.call(facets, function(f) { f.addEventListener('change', applyFilters); });
-      if (reset) reset.addEventListener('click', function() { if (input) input.value = ''; if (savedSelect) savedSelect.checked = false; if (tagSelect) tagSelect.value = ''; if (localitySelect) localitySelect.value = ''; if (kindSelect) kindSelect.value = defaultKind; if (rangeSelect) rangeSelect.value = defaultRange; Array.prototype.forEach.call(facets, function(f) { f.checked = false; }); applyFilters(); });
+      if (reset) reset.addEventListener('click', function() { if (input) input.value = ''; if (tagSelect) tagSelect.value = ''; if (localitySelect) localitySelect.value = ''; if (kindSelect) kindSelect.value = defaultKind; if (rangeSelect) rangeSelect.value = defaultRange; Array.prototype.forEach.call(facets, function(f) { f.checked = false; }); applyFilters(); });
       if (input) input.addEventListener('input', applyFilters);
       if (tagSelect) tagSelect.addEventListener('change', applyFilters);
       if (rangeSelect) rangeSelect.addEventListener('change', applyFilters);
@@ -471,7 +439,6 @@
         var params = new URLSearchParams(window.location.search);
         var q = params.get('q');
         if (localitySelect) localitySelect.value = params.get('locality') || '';
-        if (savedSelect) savedSelect.checked = params.get('saved') === '1';
         var selectedFacets = (params.get('tags') || '').split(',');
         Array.prototype.forEach.call(facets, function(f) { f.checked = selectedFacets.indexOf(f.value) !== -1; });
         if (q && input) input.value = q;
@@ -499,7 +466,7 @@
   })();
   </script>
 
-  <script src="{{ "/assets/js/plans.js" | relative_url }}?v={{ asset_version }}" defer></script>
+  <script src="{{ "/assets/js/event-details.js" | relative_url }}?v={{ asset_version }}" defer></script>
   <footer class="site-footer">
     <div class="container">
       <p>

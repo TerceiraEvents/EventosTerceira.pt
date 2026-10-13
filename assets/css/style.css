@@ -1480,8 +1480,7 @@ main a {
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 .home-discovery h2 { margin: .75rem 0; }
 .date-shortcuts { display: flex; flex-wrap: wrap; gap: .5rem; }
-.date-shortcuts a, .save-event, .filter-reset, .clear-invalid-plans { border: 1px solid var(--green-mid); border-radius: var(--radius); padding: .6rem .9rem; min-height: 44px; background: white; color: var(--green-dark); font: inherit; cursor: pointer; }
-.save-event[aria-pressed='true'] { background: var(--green-dark); color: white; }
+.date-shortcuts a, .filter-reset { border: 1px solid var(--green-mid); border-radius: var(--radius); padding: .6rem .9rem; min-height: 44px; background: white; color: var(--green-dark); font: inherit; cursor: pointer; }
 .event-summary { padding: 1rem; border-radius: var(--radius); display: block; }
 .event-summary .event-name { font-size: 1.3rem; margin-bottom: .35rem; overflow-wrap: anywhere; }
 .event-summary .event-name a { color: var(--green-dark); display: flex; align-items: center; min-height: 44px; }
@@ -1495,7 +1494,7 @@ main a {
 .event-search-bar fieldset label { padding: .5rem; }
 .event-detail img { max-width: 100%; height: auto; object-fit: contain; }
 .event-detail p, .event-detail h2 { overflow-wrap: anywhere; }
-.data-status, .storage-status { font-size: 1rem; color: var(--text-light); }
+.data-status { font-size: 1rem; color: var(--text-light); }
 @media (max-width: 600px) { .site-nav .container { padding: 0 .4rem; } .site-nav a { padding: .5rem; font-size: 1rem; } main.container { padding: 0 .8rem; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
 
@@ -1509,9 +1508,3 @@ main a {
 .view-all { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
 .standalone-link { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; }
 .detail-link { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; }
-
-.saved-filter-option { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; padding: .5rem; }
-
-.saved-unavailable { flex-basis: 100%; min-width: 0; }
-.saved-unavailable-item { padding: .75rem; border-top: 1px solid var(--border); overflow-wrap: anywhere; }
-.saved-unavailable-item button { min-width: 44px; min-height: 44px; }

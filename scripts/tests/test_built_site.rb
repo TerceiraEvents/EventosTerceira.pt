@@ -39,20 +39,18 @@ home_target_html = File.read(File.join(SITE, 'index.html'))
   err(errors, "#{route}: homepage app CTA is absent") unless home_html.include?('id="get-the-app"') && home_html.include?('apps.apple.com') && home_html.include?('play.google.com')
 end
 err(errors, 'homepage standalone navigation requires target classes') unless home_target_html.scan('class="standalone-link"').length >= 4
-plans_source = File.read(File.join(SITE, 'assets/js/plans.js'))
-err(errors, 'detail back/explore links require standalone targets') unless plans_source.include?("a.className='detail-link'") && plans_source.include?("back.className='detail-link'")
+detail_source = File.read(File.join(SITE, 'assets/js/event-details.js'))
+err(errors, 'browser-saving bundle must not be published') if File.exist?(File.join(SITE, 'assets/js/plans.js'))
+%w[assets/js/event-details.js assets/js/discovery.js].each do |asset|
+  err(errors, "#{asset}: event browsing must not access browser storage or notifications") if File.read(File.join(SITE, asset)).match?(/localStorage|sessionStorage|Notification|serviceWorker/)
+end
+err(errors, 'detail back/explore links require standalone targets') unless detail_source.include?("a.className='detail-link'") && detail_source.include?("back.className='detail-link'")
 
 special_path = "#{SITE}/special/index.html"
 if File.exist?(special_path)
   special_html = File.read(special_path)
   err(errors, "/special/: missing Next 7 days range label") unless special_html.include?("Next 7 days</option>")
   events = YAML.safe_load(File.read('_data/special_events.yml'), permitted_classes: [Date, Time])
-  registry = special_html.match(/<script[^>]*id="published-event-identities"[^>]*data-event-count="(\d+)"[^>]*>([\s\S]*?)<\/script>/)
-  err(errors, '/special/: complete published identity registry is absent') unless registry
-  if registry
-    ids = JSON.parse(registry[2])
-    err(errors, '/special/: publication identity registry differs from the validated dataset') unless ids == events.map { |event| event['id'] } && registry[1].to_i == events.length
-  end
   localities = events.map { |event| event['locality'] }.compact.uniq
   err(errors, "/special/: locality control availability does not match curated metadata") unless special_html.include?('class="event-locality-filter"') == localities.any?
   %w[angra praia other].each do |locality|
@@ -90,7 +88,6 @@ end
 archive_path = "#{SITE}/archive/index.html"
 if File.exist?(archive_path)
   archive_html = File.read(archive_path)
-  err(errors, '/archive/: Saved filter is absent') unless archive_html.include?('class="event-saved-filter"')
   err(errors, '/archive/: literal Events back link is absent') unless archive_html.include?('Back to Events</a>')
   err(errors, "/archive/: missing the English multi-day festival label") unless archive_html.include?("6–10 June · 5-day festival")
 end
@@ -98,7 +95,6 @@ end
 pt_archive_path = "#{SITE}/pt/archive/index.html"
 if File.exist?(pt_archive_path)
   pt_archive_html = File.read(pt_archive_path)
-  err(errors, '/pt/archive/: Saved filter is absent') unless pt_archive_html.include?('class="event-saved-filter"')
   err(errors, '/pt/archive/: literal Eventos back link is absent') unless pt_archive_html.include?('Voltar a Eventos</a>')
   err(errors, "/pt/archive/: missing the Portuguese multi-day festival label") unless pt_archive_html.include?("6–10 de junho · festival de 5 dias")
 end
@@ -124,17 +120,19 @@ puts "Found #{html_pages.size} HTML page(s) under #{SITE}/"
 html_pages.each do |path|
   rel = path.sub(%r{^#{SITE}/?}, "/")
   html = File.read(path)
-  if ['/index.html', '/pt/index.html', '/saved/index.html', '/pt/saved/index.html'].include?(rel)
+  if ['/saved/index.html', '/pt/saved/index.html'].include?(rel)
+    target = rel.start_with?('/pt/') ? '/pt/special/' : '/special/'
+    err(errors, "#{rel}: bookmarked route must point to Events without a saving query") unless html.include?("content=\"0; url=#{target}\"") && !html.include?('saved=')
+  end
+  err(errors, "#{rel}: browser-saving UI or activation is present") if html.match?(/data-save-id|save-event|event-saved-filter|saved-unavailable|plans\.js|terceira-plans-v1/)
+  if ['/index.html', '/pt/index.html'].include?(rel)
     labels = rel.start_with?('/pt/') ? ['Eventos', 'Exposições', 'Obter a aplicação'] : ['Events', 'Exhibitions', 'Get the app']
     labels.each { |label| err(errors, "#{rel}: literal navigation label #{label} is absent") unless html.match?(/<a[^>]*>#{Regexp.escape(label)}<\/a>/) }
-    if rel.include?('/saved/')
-      purpose = rel.start_with?('/pt/') ? 'Eventos que guardas neste navegador.' : 'Events you save in this browser.'
-      err(errors, "#{rel}: browser-local Saved purpose is absent") unless html.include?(purpose)
-    end
+
   end
   navigation = html[/<nav class="site-nav"[^>]*>[\s\S]*?<\/nav>/]
   if navigation
-    err(errors, "#{rel}: Saved events belongs in filters, not navigation") if navigation.match?(/<a (?!class="locale-other")[^>]*href="[^"]*\/saved\/"/)
+    err(errors, "#{rel}: bookmark destination is absent from primary navigation") if navigation.match?(/<a (?!class="locale-other")[^>]*href="[^"]*\/saved\/"/)
     err(errors, "#{rel}: primary destinations must be visible without opening a menu") if navigation.match?(/<details|\bhidden\b|aria-hidden="true"/)
     prefix = rel.start_with?('/pt/') ? '/pt' : ''
     ['/contribute/', '/#get-the-app'].each { |route| err(errors, "#{rel}: secondary destination remains in primary navigation: #{route}") if navigation.include?("href=\"#{prefix + route}\"") }
@@ -160,7 +158,7 @@ html_pages.each do |path|
     err(errors, "#{rel}: mobile app promotion must follow main content") unless main_end && banner && banner > main_end
   end
 
-  %w[assets/js/discovery.js assets/js/plans.js assets/css/style.css].each do |asset|
+  %w[assets/js/discovery.js assets/js/event-details.js assets/css/style.css].each do |asset|
     err(errors, "#{rel}: unversioned first-party asset #{asset}") unless html.match?(%r{#{Regexp.escape(asset)}\?v=\d+})
   end
 

@@ -18,11 +18,11 @@ Approved repository assets use `/assets/images/` and require a reviewable featur
 
 ## Consumer expectations
 
-Feed comparison remains name → attendance date/time → venue → published admission and works without an image. Artwork belongs to details with contain sizing, a complete-image link and useful accessibility description. Website details remove a failed image and retain the event, Saved and sharing controls. Native failure handling and provenance changes require their own reviewed app implementation and platform runs; JavaScript component tests alone are insufficient. Website full-size artwork has a separate labelled 44 px action with `noopener noreferrer`, independently of the provenance source link. Native details use a fixed image frame. Website images use responsive width and automatic height, so detail layout can move while an image decodes. Feed cards do not depend on images. Full-size opening exposes all poster text.
+Feed comparison remains name → attendance date/time → venue → published admission and works without an image. Artwork belongs to details with contain sizing, a complete-image link and useful accessibility description. Website details remove a failed image and retain the event and sharing controls. Native failure handling and provenance changes require their own reviewed app implementation and platform runs; JavaScript component tests alone are insufficient. Website full-size artwork has a separate labelled 44 px action with `noopener noreferrer`, independently of the provenance source link. Native details use a fixed image frame. Website images use responsive width and automatic height, so detail layout can move while an image decodes. Feed cards do not depend on images. Full-size opening exposes all poster text.
 
 | Case | Automated check | Actual rendering requirement |
 | --- | --- | --- |
-| Missing | No image control; event and save remain | Confirm text-first layout in website/Android/iOS |
+| Missing | No image control; event and sharing remain on the website; native Save remains available | Confirm text-first layout in website/Android/iOS |
 | Portrait / landscape | PNG dimensions/CRC/pixels, checksums, localized alt/provenance in actual website renderer | Decode native files, record intrinsic dimensions and all four edge markers; inspect full-size opening |
 | Oversized | 4096×3072 PNG decoded by stdlib zlib with complete rows and CRC | Record native decoding/performance; no inferred memory guarantee |
 | Malformed URL | No unsafe image/link control | Confirm failure feedback does not hide event/actions |

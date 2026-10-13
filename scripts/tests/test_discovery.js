@@ -23,7 +23,7 @@ test('all selected tags and locality combine with accent-insensitive query', () 
 });
 test('detail actions reject absent values and executable URLs', () => {
  const fs=require('node:fs'), vm=require('node:vm');
- const src=fs.readFileSync('assets/js/plans.js','utf8');
+ const src=fs.readFileSync('assets/js/event-details.js','utf8');
  const fn=src.slice(src.indexOf('function safeLink'),src.indexOf('function action'));
  const safe=vm.runInNewContext('('+fn.trim()+')',{URL,location:{origin:'https://eventosterceira.pt'}});
  for (const value of [undefined,null,'','  ','javascript:alert(1)','data:text/html,hello']) assert.equal(safe(value),null);
