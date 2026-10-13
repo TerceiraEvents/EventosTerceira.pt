@@ -20,8 +20,9 @@
   }
   function el(tag, text, parent) { var node = document.createElement(tag); if (text) node.textContent = text; if (parent) parent.appendChild(node); return node; }
   function feedback() {
+    var container = document.querySelector('.event-search-bar') || document.querySelector('main');
     var status = document.querySelector('.storage-status');
-    if (!status) { status = el('p', '', document.querySelector('main')); status.className = 'storage-status'; status.setAttribute('role','status'); }
+    if (!status) { status = el('p', '', container); status.className = 'storage-status'; status.setAttribute('role','status'); }
     status.setAttribute('id', 'plans-storage-status');
     status.textContent = !storageOK ? t('Browser storage is unavailable. Changes last only while this page is open.', 'O armazenamento está indisponível. As alterações duram apenas enquanto esta página está aberta.') : invalidSaved ? t('Saved data is unreadable. Existing browser data has not been changed. Clear it to restart saving.', 'Os dados guardados são ilegíveis. Os dados do navegador não foram alterados. Limpa-os para voltar a guardar.') : '';
     var recovery = document.querySelector('.clear-invalid-plans');
