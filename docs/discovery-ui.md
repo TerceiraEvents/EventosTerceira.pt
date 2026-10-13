@@ -70,4 +70,4 @@ Run `node scripts/check_discovery_tokens.mjs` to check website token drift and t
 ## State and copy inventory
 
 [Data-state inventory](discovery-states.md) specifies the actual EN/PT feedback, recovery actions, timestamp meaning and unsupported states. It distinguishes the static website publication from native fetch/cache behavior. No new runtime dependency is needed for tokens or state documentation.
-Primary navigation displays event discovery destinations in normal document flow in both languages. Contribute and Get the app are footer links. Links wrap into rows at narrow widths, retain at least 44 px targets, and keep the language switch visible.
+Primary navigation lists Home, Weekly, Events, Places, Blog, Contribute and Resources in both languages, followed by the language switch. The single row scrolls horizontally on narrow screens; links retain at least 44 px targets. Events exposes dated events and exhibitions through its in-page kind choice. Get the app is a footer link.

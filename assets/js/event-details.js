@@ -2,21 +2,9 @@
   'use strict';
   var pt = document.documentElement.lang === 'pt', prefix = pt ? '/pt' : '';
   function t(en, po) { return pt ? po : en; }
-  function syncNavigation() {
-    document.querySelectorAll('.site-nav a').forEach(function(a) {
-      a.removeAttribute('aria-current');
-      if (a.hash || a.pathname !== location.pathname) return;
-      if (/\/special\/$/.test(location.pathname)) {
-        var onView = new URLSearchParams(location.search).get('kind') === 'exhibition';
-        if ((new URLSearchParams(a.search).get('kind') === 'exhibition') !== onView) return;
-        if (!onView && ((new URLSearchParams(a.search).get('range') === 'today') !== (new URLSearchParams(location.search).get('range') === 'today'))) return;
-      }
-      a.setAttribute('aria-current', 'page');
-    });
-  }
-  syncNavigation();
-  document.addEventListener('discovery-filters-applied', syncNavigation);
-  window.addEventListener('popstate', syncNavigation);
+  document.querySelectorAll('.site-nav a').forEach(function(a) {
+    if (!a.hash && a.pathname === location.pathname) a.setAttribute('aria-current', 'page');
+  });
   function el(tag, text, parent) { var node = document.createElement(tag); if (text) node.textContent = text; if (parent) parent.appendChild(node); return node; }
   var records = [], data = document.getElementById('event-dataset');
   if (data) { try { records = JSON.parse(data.textContent); } catch (err) { el('p', t('Event data is unavailable. Reload this page to try again.', 'Dados indisponíveis. Recarrega a página para tentar novamente.'), document.querySelector('main')); } }
