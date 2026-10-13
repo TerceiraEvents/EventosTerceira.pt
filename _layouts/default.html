@@ -70,8 +70,6 @@
         <a href="{{ prefix | append: '/blog/' | relative_url }}">{% if page_lang == 'pt' %}Blogue{% else %}Blog{% endif %}</a>
         <a href="{{ prefix | append: '/resources/' | relative_url }}">{% if page_lang == 'pt' %}Recursos{% else %}Resources{% endif %}</a>
         <a href="{{ prefix | append: '/suggest/' | relative_url }}">{% if page_lang == 'pt' %}Sugerir evento{% else %}Suggest an event{% endif %}</a>
-        <a href="{{ prefix | append: '/contribute/' | relative_url }}">{% if page_lang == 'pt' %}Contribuir{% else %}Contribute{% endif %}</a>
-        <a href="{{ prefix | append: '/#get-the-app' | relative_url }}">{% if page_lang == 'pt' %}Obter a aplicação{% else %}Get the app{% endif %}</a>
         {% include locale_switcher.html %}
       </div>
     </nav>
@@ -504,6 +502,10 @@
   <script src="{{ "/assets/js/plans.js" | relative_url }}?v={{ asset_version }}" defer></script>
   <footer class="site-footer">
     <div class="container">
+      <p>
+        <a class="standalone-link" href="{{ prefix | append: '/contribute/' | relative_url }}">{% if page_lang == 'pt' %}Contribuir{% else %}Contribute{% endif %}</a>
+        <a class="standalone-link" href="{{ prefix | append: '/#get-the-app' | relative_url }}">{% if page_lang == 'pt' %}Obter a aplicação{% else %}Get the app{% endif %}</a>
+      </p>
       {%- if page_lang == "pt" -%}
       <p>Eventos da Terceira &mdash; Um guia comunitário da Ilha Terceira, A&ccedil;ores</p>
       <p class="attribution">Fotografia de capa de <a href="https://commons.wikimedia.org/wiki/File:Angra_do_Hero%C3%ADsmo_-_Sicht_vom_Obelisken_auf_Stadt_und_Hafenbucht_mit_Monte_Brasil.JPG">Franzfoto</a> / CC BY-SA 3.0</p>
