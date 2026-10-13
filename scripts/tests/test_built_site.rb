@@ -34,6 +34,10 @@ target_css = File.read(File.join(SITE, 'assets/css/style.css'))
   err(errors, "standalone .#{name} requires 44px width and height in normal flow") unless valid
 end
 home_target_html = File.read(File.join(SITE, 'index.html'))
+['index.html', 'pt/index.html'].each do |route|
+  home_html = File.read(File.join(SITE, route))
+  err(errors, "#{route}: homepage app CTA is absent") unless home_html.include?('id="get-the-app"') && home_html.include?('apps.apple.com') && home_html.include?('play.google.com')
+end
 err(errors, 'homepage standalone navigation requires target classes') unless home_target_html.scan('class="standalone-link"').length >= 4
 plans_source = File.read(File.join(SITE, 'assets/js/plans.js'))
 err(errors, 'detail back/explore links require standalone targets') unless plans_source.include?("a.className='detail-link'") && plans_source.include?("back.className='detail-link'")
@@ -133,13 +137,19 @@ html_pages.each do |path|
     err(errors, "#{rel}: Saved events belongs in filters, not navigation") if navigation.match?(/<a (?!class="locale-other")[^>]*href="[^"]*\/saved\/"/)
     err(errors, "#{rel}: primary destinations must be visible without opening a menu") if navigation.match?(/<details|\bhidden\b|aria-hidden="true"/)
     prefix = rel.start_with?('/pt/') ? '/pt' : ''
-    ['/', '/weekly/', '/special/', '/venues/', '/blog/', '/contribute/', '/resources/', '/suggest/', '/special/?kind=exhibition&amp;range=all'].each do |route|
+    ['/contribute/', '/#get-the-app'].each { |route| err(errors, "#{rel}: secondary destination remains in primary navigation: #{route}") if navigation.include?("href=\"#{prefix + route}\"") }
+    ['/', '/weekly/', '/special/', '/venues/', '/blog/', '/resources/', '/suggest/', '/special/?kind=exhibition&amp;range=all'].each do |route|
       href = prefix + route
       err(errors, "#{rel}: visible navigation missing #{href}") unless navigation.include?("href=\"#{href}\"") || navigation.include?("href=\"#{href.gsub('&amp;', '&')}\"")
     end
   end
   footer = html[/<footer\b[^>]*>[\s\S]*?<\/footer>/]
   if footer
+    prefix = rel.start_with?('/pt/') ? '/pt' : ''
+    secondary = rel.start_with?('/pt/') ? [['/contribute/', 'Contribuir'], ['/#get-the-app', 'Obter a aplicação']] : [['/contribute/', 'Contribute'], ['/#get-the-app', 'Get the app']]
+    secondary.each do |route, label|
+      err(errors, "#{rel}: footer secondary link #{label} needs its destination and 44px target") unless footer.match?(/<a class="standalone-link" href="#{Regexp.escape(prefix + route)}">#{Regexp.escape(label)}<\/a>/)
+    end
     privacy = footer[/<a\b[^>]*href="[^"]*\/privacy\/?"[^>]*>/]
     err(errors, "#{rel}: footer Privacy requires a standalone 44px target") unless privacy && privacy.match?(/class="[^"]*\bstandalone-link\b/)
   end
