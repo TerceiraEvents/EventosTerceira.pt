@@ -1515,3 +1515,5 @@ main a {
 .detail-link { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; }
 
 .tag-chip:focus-within span { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.form-tags .tag-chip span { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; }
