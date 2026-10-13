@@ -36,15 +36,24 @@
       (filters.tags || []).every(function(tag) { return tags.indexOf(tag) !== -1; }) &&
       (!filters.query || normalize([event.name, event.venue, event.description].join(' ')).indexOf(normalize(filters.query)) !== -1);
   }
-  /** Return persisted bookmark IDs, or null when browser storage is unreadable. */
-  function savedIDs(storage) {
+  /** Return stored bookmark identities and titles, or null for unreadable storage. */
+  function savedEntries(storage) {
     try {
       var saved = JSON.parse(storage.getItem('terceira-plans-v1') || '{}');
       if (!saved || Array.isArray(saved) || typeof saved !== 'object' || Object.keys(saved).some(function(id) { return !saved[id] || typeof saved[id].name !== 'string'; })) return null;
-      return Object.keys(saved);
+      return Object.keys(saved).map(function(id) { return {id: id, name: saved[id].name}; });
     } catch (error) { return null; }
   }
-  var api = {today: today, add: add, windowFor: windowFor, inRange: inRange, normalize: normalize, matches: matches, savedIDs: savedIDs};
+  /** Return persisted bookmark IDs, or null when browser storage is unreadable. */
+  function savedIDs(storage) { var entries = savedEntries(storage); return entries && entries.map(function(entry) { return entry.id; }); }
+  /** Validate the complete publication's UUID registry and declared record count. */
+  function publicationIDs(text, count) {
+    try {
+      var ids = JSON.parse(text);
+      return typeof count === 'string' && /^\d+$/.test(count) && Array.isArray(ids) && ids.length === Number(count) && ids.every(function(id, index) { return typeof id === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(id) && ids.indexOf(id) === index; }) ? ids : null;
+    } catch (error) { return null; }
+  }
+  var api = {today: today, add: add, windowFor: windowFor, inRange: inRange, normalize: normalize, matches: matches, savedIDs: savedIDs, savedEntries: savedEntries, publicationIDs: publicationIDs};
   if (typeof module !== 'undefined') module.exports = api;
   root.EventDiscovery = api;
 })(typeof window === 'undefined' ? globalThis : window);

@@ -77,3 +77,5 @@ Run `node scripts/check_discovery_tokens.mjs` to check website token drift and t
 Primary navigation displays every destination in normal document flow in both languages. Links wrap into rows at narrow widths, retain at least 44 px targets, and keep the language switch visible.
 
 Saved events is a discovery filter combined with the visible date, type and other facets. Enabling it selects all upcoming dates; Archive exposes ended records. Saved IDs stay in this browser and do not sync across devices. Get the app has its own navigation link. `EventDiscovery.savedIDs(storage)` returns validated bookmark IDs or null for unreadable storage; `matches` accepts savedOnly and savedIDs for conjunctive filtering.
+
+`EventDiscovery.savedEntries(storage)` returns retained IDs/titles or null for unreadable storage. `publicationIDs(text, count)` validates the page’s complete UUID registry and record count. The Saved filter retains absent bookmarks with their stored title and explicit Unsave, without assigning dates or facets. Unavailable status requires a valid published registry; parse failure produces unconfirmed availability. Rendering does not delete bookmarks.

@@ -43,6 +43,12 @@ if File.exist?(special_path)
   special_html = File.read(special_path)
   err(errors, "/special/: missing Next 7 days range label") unless special_html.include?("Next 7 days</option>")
   events = YAML.safe_load(File.read('_data/special_events.yml'), permitted_classes: [Date, Time])
+  registry = special_html.match(/<script[^>]*id="published-event-identities"[^>]*data-event-count="(\d+)"[^>]*>([\s\S]*?)<\/script>/)
+  err(errors, '/special/: complete published identity registry is absent') unless registry
+  if registry
+    ids = JSON.parse(registry[2])
+    err(errors, '/special/: publication identity registry differs from the validated dataset') unless ids == events.map { |event| event['id'] } && registry[1].to_i == events.length
+  end
   localities = events.map { |event| event['locality'] }.compact.uniq
   err(errors, "/special/: locality control availability does not match curated metadata") unless special_html.include?('class="event-locality-filter"') == localities.any?
   %w[angra praia other].each do |locality|
