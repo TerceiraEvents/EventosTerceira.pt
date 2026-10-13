@@ -61,8 +61,8 @@
     {%- endif -%}
   </label>
   {% endif %}
-  <details class="filter-dropdown event-tags-menu" data-empty-label="{% if page_lang == 'pt' %}Todas as etiquetas{% else %}All tags{% endif %}">
-    <summary><span class="filter-summary-text">{% if page_lang == 'pt' %}Todas as etiquetas{% else %}All tags{% endif %}</span></summary>
+  <details class="filter-dropdown event-tags-menu" data-empty-label="{% if page_lang == 'pt' %}Etiquetas{% else %}Tags{% endif %}">
+    <summary><span class="filter-summary-text">{% if page_lang == 'pt' %}Etiquetas{% else %}Tags{% endif %}</span></summary>
     <div class="filter-menu">
       <fieldset class="filter-choices">
         <legend class="visually-hidden">{% if page_lang == 'pt' %}Etiquetas{% else %}Tags{% endif %}</legend>
@@ -83,7 +83,7 @@
   {% endfor %}
   {% if has_angra or has_praia or has_other %}
   <details class="filter-dropdown event-locality-filter">
-    <summary><span class="filter-summary-text">{% if page_lang == 'pt' %}Todos os locais{% else %}All places{% endif %}</span></summary>
+    <summary><span class="filter-summary-text" data-more-label="{% if page_lang == 'pt' %}Mais filtros{% else %}More filters{% endif %}">{% if page_lang == 'pt' %}Mais filtros{% else %}More filters{% endif %}</span></summary>
     <div class="filter-menu">
       <fieldset class="filter-choices" aria-describedby="event-locality-note">
         <legend class="visually-hidden">{% if page_lang == 'pt' %}Local{% else %}Place{% endif %}</legend>
@@ -96,6 +96,6 @@
     </div>
   </details>
   {% endif %}
-  <button type="button" class="filter-reset">{% if page_lang == 'pt' %}Limpar filtros{% else %}Reset filters{% endif %}</button>
+  <button type="button" class="filter-reset" hidden>{% if page_lang == 'pt' %}Limpar filtros{% else %}Reset filters{% endif %}</button>
   <p class="result-count" role="status" aria-live="polite"></p>
 </div>

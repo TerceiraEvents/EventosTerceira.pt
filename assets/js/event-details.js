@@ -11,6 +11,8 @@
   function field(event, name) { return event[name + (pt ? '_pt' : '_en')] || event[name] || event[name + (pt ? '_en' : '_pt')] || ''; }
   function safeLink(url) { if (typeof url !== 'string' || !url.trim()) return null; try { var u = new URL(url, location.origin); return u.protocol === 'https:' || u.protocol === 'http:' ? u.href : null; } catch (err) { return null; } }
   function action(label, url, parent) { var href = safeLink(url); if (!href) return; var a = el('a',label,parent); a.className='detail-link'; a.href = href; a.rel = 'noopener'; return a; }
+  document.querySelectorAll('[data-safe-link]').forEach(function(link) { var href = safeLink(link.getAttribute('href')); if (href) link.href = href; else link.remove(); });
+  document.querySelectorAll('[data-card-artwork]').forEach(function(frame) { var url = safeLink(frame.getAttribute('data-card-artwork')); if (!url) { frame.remove(); return; } var link = el('a','',frame); link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer'; var img = el('img','',link); img.src = url; img.alt = frame.getAttribute('data-artwork-alt'); img.loading = 'lazy'; img.addEventListener('error',function() { img.remove(); el('p',t('Artwork unavailable.','Cartaz indisponível.'),frame).setAttribute('role','status'); }); });
   function renderDetail() {
     var target = document.getElementById('event-detail'); if (!target) return;
     var id = new URLSearchParams(location.search).get('id'), event = records.find(function(e) { return e.id === id; });

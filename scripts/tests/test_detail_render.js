@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 
-function render({lang = 'pt', records, id = 'exhibition-one', stored = null, unavailableStorage = false}) {
+function render({lang = 'pt', records, id = 'exhibition-one', stored = null, unavailableStorage = false, cardImage = null}) {
   const handlers = {}, roots = [];
   let storageAccesses = 0;
   function node(tag) {
@@ -12,14 +12,16 @@ function render({lang = 'pt', records, id = 'exhibition-one', stored = null, una
       replaceChildren() { this.children=[]; },
       remove() {this.parent.children=this.parent.children.filter(child=>child!==this);},
       setAttribute(key,value) {this.attrs[key]=value;},
+      getAttribute(key) {return this.attrs[key] || null;},
       addEventListener(type,handler) {this.listeners[type]=handler;},
       click() {if(this.listeners.click) this.listeners.click(); if(handlers.click) handlers.click({target:this});},
     };
   }
   const main=node('main'), detail=node('div'),  locale=node('a');
   main.appendChild(detail); roots.push(main,locale);
+  if (cardImage !== null) { const frame=node('div'); frame.attrs={'data-card-artwork':cardImage,'data-artwork-alt':'Published poster'}; main.appendChild(frame); }
   function all() {const result=[]; function visit(n) {result.push(n); n.children.forEach(visit);} roots.forEach(visit); return result;}
-  function matches(n,selector) {return selector==='main' ? n===main : selector.startsWith('.') ? n.className.split(' ').includes(selector.slice(1)) : false;}
+  function matches(n,selector) {if (selector==='[data-card-artwork]') return Object.hasOwn(n.attrs,'data-card-artwork'); return selector==='main' ? n===main : selector.startsWith('.') ? n.className.split(' ').includes(selector.slice(1)) : false;}
   const document={documentElement:{lang},referrer:'',createElement:node,
     querySelector(selector) {if(selector==='.locale-other')return locale; return all().find(n=>matches(n,selector)) || null;},
     querySelectorAll(selector) {return all().filter(n=>matches(n,selector));},
@@ -150,4 +152,18 @@ test('production artwork frame has bounded reserved height and uncropped image f
  const css=fs.readFileSync('assets/css/style.css','utf8');
  assert.match(css,/\.detail-artwork\s*\{[^}]*height:\s*clamp\(220px,\s*60vh,\s*480px\)/);
  assert.match(css,/\.detail-artwork img\s*\{[^}]*width:\s*100%;[^}]*height:\s*100%;[^}]*object-fit:\s*contain/);
+});
+
+test('actual card artwork uses a reserved uncropped frame and rejects executable URLs',()=>{
+ const page=render({records:[exhibition],cardImage:'https://example.com/poster.png'});
+ const frame=page.all().find(n=>n.attrs['data-card-artwork']);
+ const image=frame.children[0].children[0];
+ assert.equal(image.src,'https://example.com/poster.png');
+ assert.equal(image.loading,'lazy');
+ assert.equal(image.alt,'Published poster');
+ image.listeners.error();
+ assert.equal(frame.children[1].attrs.role,'status');
+ assert.equal(frame.children[1].textContent,'Cartaz indisponível.');
+ const rejected=render({records:[exhibition],cardImage:'javascript:alert(1)'});
+ assert.equal(rejected.all().filter(n=>n.attrs['data-card-artwork']).length,0);
 });
