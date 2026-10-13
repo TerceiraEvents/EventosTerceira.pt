@@ -98,7 +98,7 @@
       "image_alt_pt": "APENAS TESTE: PNG geométrico original truncado de propósito.",
       "image_credit": "Original deterministic fixture produced by Codex desktop app / gpt-6.1-sol",
       "image_rights": "CC0-1.0; test-only geometry, not organizer artwork",
-      "image_source": "https://github.com/TerceiraEvents/EventosTerceira.pt/blob/test/corrupt-artwork-decoder/assets/images/test-fixtures/corrupt-encoded.png"
+      "image_source": "https://github.com/TerceiraEvents/EventosTerceira.pt/blob/a2be85bbd3e79b60d3fae98e5eabc6b8896a1976/assets/images/test-fixtures/corrupt-encoded.png"
     }
   ]
 }
