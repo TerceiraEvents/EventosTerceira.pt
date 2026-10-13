@@ -18,7 +18,7 @@ The static website contains its dataset at publication. Event details do not fet
 another dataset. Publication time is labelled as a site build time, not organizer
 verification. A filter with no matches offers reset/all dates. No published events
 provides weekly browsing. Missing IDs show unavailable, ended records show ended,
-and absent prices/times remain unknown. My Plans stores IDs and fallback titles in
+and absent prices/times remain unknown. Saved events filtering uses IDs and fallback titles in
 this browser only; it does not create a notification. Storage failure is announced
 and session changes remain usable. The website does not promise offline availability.
 
@@ -48,8 +48,8 @@ Detail DOM tests execute the actual renderer for EN/PT fields and share URLs.
 Invalid saved data has an explicit clear/recovery action and remains intact until
 that action is chosen. Storage denial has separate feedback.
 
-Details and My Plans embed the full published dataset, including ended records.
-The uncompressed detail HTML measured 532,260 bytes on 12 October 2026. This allows exact ended-event details without another request;
+Details embed the full published dataset, including ended records. Saved URLs point to the discovery filter.
+The uncompressed detail HTML measured 535,876 bytes on 12 October 2026. This allows exact ended-event details without another request;
 per-event generated documents are a possible future payload improvement. A map
 action requires `map_url`; source and booking actions also require published URLs.
 
@@ -75,3 +75,7 @@ Run `node scripts/check_discovery_tokens.mjs` to check website token drift and t
 
 [Data-state inventory](discovery-states.md) specifies the actual EN/PT feedback, recovery actions, timestamp meaning and unsupported states. It distinguishes the static website publication from native fetch/cache behavior. No new runtime dependency is needed for tokens or state documentation.
 Primary navigation displays every destination in normal document flow in both languages. Links wrap into rows at narrow widths, retain at least 44 px targets, and keep the language switch visible.
+
+Saved events is a discovery filter combined with the visible date, type and other facets. Enabling it selects all upcoming dates; Archive exposes ended records. Saved IDs stay in this browser and do not sync across devices. Get the app has its own navigation link. `EventDiscovery.savedIDs(storage)` returns validated bookmark IDs or null for unreadable storage; `matches` accepts savedOnly and savedIDs for conjunctive filtering.
+
+`EventDiscovery.savedEntries(storage)` returns retained IDs/titles or null for unreadable storage. `publicationIDs(text, count)` validates the page’s complete UUID registry and record count. The Saved filter retains absent bookmarks with their stored title and explicit Unsave, without assigning dates or facets. Unavailable status requires a valid published registry; parse failure produces unconfirmed availability. Rendering does not delete bookmarks.

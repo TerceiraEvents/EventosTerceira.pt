@@ -1509,4 +1509,9 @@ main a {
 .view-all { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
 .standalone-link { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; }
 .detail-link { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; }
-.event-summary > a { display: flex; align-items: center; min-width: 44px; min-height: 44px; }
+
+.saved-filter-option { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; padding: .5rem; }
+
+.saved-unavailable { flex-basis: 100%; min-width: 0; }
+.saved-unavailable-item { padding: .75rem; border-top: 1px solid var(--border); overflow-wrap: anywhere; }
+.saved-unavailable-item button { min-width: 44px; min-height: 44px; }

@@ -46,9 +46,6 @@ jobs:
       - name: Validate known venue locality metadata
         run: ruby scripts/tests/test_event_localities.rb
 
-      - name: Unit-test client-side event filter
-        run: node --test scripts/tests/test_event_filter.js
-
       # ── Data-vocabulary consistency ───────────────────────────────
       # Catches typo'd or unknown tag slugs in special_events.yml.
       - name: Validate event tag vocabulary
@@ -74,6 +71,9 @@ jobs:
       # job in place it would have surfaced at PR review time.
       - name: Build site (jekyll)
         run: bundle exec jekyll build --trace
+
+      - name: Unit-test client-side event filter
+        run: node --test scripts/tests/test_event_filter.js
 
       # ── Built-site invariants ─────────────────────────────────────
       # Walks _site/ and asserts the SEO/structured-data invariants

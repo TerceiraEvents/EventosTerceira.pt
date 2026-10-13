@@ -36,7 +36,7 @@ function stubElement() {
 }
 
 // Stub search bar + card sibling chain. withRange=false omits the range select.
-function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = '2026-10-12', withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null, withFacets = false, withLocality = false, setFacets = null, setLocality = null, details = false, resetFilters = false }) {
+function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = '2026-10-12', withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null, withFacets = false, withLocality = false, setFacets = null, setLocality = null, details = false, resetFilters = false, withSaved = false, storedSaved = {}, setSaved = null, savedChange = null, publication = null, removeMissing = false }) {
   const bar = {
     getAttribute: (k) => k === 'data-default-range' ? defaultRange : k === 'data-default-kind' ? defaultKind : null,
     parentElement: null,
@@ -48,6 +48,9 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
       if (sel === '.event-kind-filter') return withKind ? kindSelect : null;
       if (sel === '.event-locality-filter') return withLocality ? localitySelect : null;
       if (sel === '.filter-reset') return reset;
+      if (sel === '.event-saved-filter') return withSaved ? savedSelect : null;
+      if (sel === '.saved-filter-status') return savedStatus;
+      if (sel === '.saved-unavailable') return missing;
       if (sel === '.result-count') return resultCount;
       return null;
     },
@@ -55,6 +58,10 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   bar.querySelectorAll = () => withFacets ? facets : [];
   const facets = ['free','kid-friendly'].map(value => ({...stubElement(), value, checked:false}));
   const localitySelect = stubElement(), reset = stubElement(), resultCount = stubElement();
+  function domNode(tag) { return { ...stubElement(), tag, dataset: {}, attrs: {}, children: [], appendChild(child) { this.children.push(child); }, replaceChildren() { this.children = []; }, setAttribute(key, value) { this.attrs[key] = value; }, closest() { return this.dataset.saveId ? this : null; } }; }
+  const missing = domNode('div'), storageStatus = domNode('p');
+  const descendants = (node) => [node, ...node.children.flatMap(descendants)];
+  const savedSelect = { ...stubElement(), checked: false }, savedStatus = stubElement(), documentListeners = {};
   const input = stubElement();
   input.value = query;
   const tagSelect = stubElement();
@@ -67,6 +74,7 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
 
   const cardNodes = cards.map((c) => ({
     attrs: {
+      'data-event-id': c.id || '',
       'data-event-name': c.name,
       'data-event-date': c.start,
       ...(c.end === 'missing' ? {} : { 'data-event-end-date': c.end || c.start }),
@@ -88,8 +96,9 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
     card.nextElementSibling = null;
     node = card;
   }
+  const empty = stubElement(); empty.textContent = 'No events match your filters. Reset your filters or choose All upcoming.';
   const scope = {
-    querySelector() { return null; },
+    querySelector(selector) { return selector === '.event-search-empty' ? empty : null; },
   };
   bar.parentElement = scope;
 
@@ -100,16 +109,19 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   let currentURL = '/special/'+search;
   const sandbox = {
     Date: TestDate,
-    window: { location: { search, pathname:'/special/' }, history:{replaceState(data,title,url) {currentURL=url;}}, __SITE_I18N: {} },
-    URLSearchParams,
+    window: { localStorage: { getItem: () => typeof storedSaved === 'string' ? storedSaved : JSON.stringify(storedSaved), setItem(key, value) { storedSaved = value; }, removeItem() { storedSaved = {}; } }, addEventListener() {}, location: { search, pathname:'/special/' }, history:{replaceState(data,title,url) {currentURL=url;}}, __SITE_I18N: {} },
+    URLSearchParams, Event: class { constructor(type) { this.type = type; } },
     document: {
-      querySelectorAll: (sel) => (sel === '.event-search-bar' ? [bar] : []),
-      querySelector: selector => selector === '.locale-other' ? locale : null,
+      querySelectorAll: (sel) => sel === '.event-search-bar' ? [bar] : sel === '[data-save-id]' ? descendants(missing).filter(node => node.dataset.saveId) : [],
+      querySelector: selector => selector === '.locale-other' ? locale : selector === '.storage-status' ? storageStatus : selector === '.event-search-bar' ? bar : null,
+      createElement: domNode,
+      dispatchEvent(event) { if (documentListeners[event.type]) documentListeners[event.type](event); },
       documentElement:{lang:'en'},
-      getElementById: () => stubElement(),
-      addEventListener() {},
+      getElementById: key => key === 'published-event-identities' ? (publication ? { textContent: publication.text, getAttribute: () => publication.count } : null) : ['event-detail','event-dataset'].includes(key) ? null : stubElement(),
+      addEventListener(type, handler) { documentListeners[type] = handler; },
     },
   };
+  sandbox.localStorage = sandbox.window.localStorage;
   vm.createContext(sandbox);
   vm.runInContext(fs.readFileSync('assets/js/discovery.js','utf8'), sandbox);
   sandbox.EventDiscovery = sandbox.window.EventDiscovery;
@@ -129,10 +141,13 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   }
   if (setLocality !== null && withLocality) { localitySelect.value=setLocality; for (const fn of localitySelect.listeners.change || []) fn(); }
   if (setFacets !== null && withFacets) { for (const facet of facets) facet.checked=setFacets.includes(facet.value); for (const fn of facets[0].listeners.change || []) fn(); }
+  if (setSaved !== null && withSaved) { savedSelect.checked = setSaved; for (const fn of savedSelect.listeners.change || []) fn(); }
+  if (savedChange !== null) { storedSaved = savedChange; if (documentListeners['saved-events-change']) documentListeners['saved-events-change'](); }
   if (resetFilters) for (const fn of reset.listeners.click || []) fn();
+  if (removeMissing) { vm.runInContext(fs.readFileSync('assets/js/plans.js','utf8'), sandbox); const button = descendants(missing).find(node => node.dataset.saveId); assert.ok(button, 'explicit Unsave action is rendered'); documentListeners.click({target:button}); }
   const visible = {};
   for (const card of cardNodes) visible[card.attrs['data-event-name']] = card.style.display !== 'none';
-  return details ? {visible,url:currentURL,localeHref:locale.href,resultCount:resultCount.textContent} : visible;
+  return details ? {visible,url:currentURL,localeHref:locale.href,resultCount:resultCount.textContent, missingText:descendants(missing).map(node=>node.textContent).join(' '), missingButtons:descendants(missing).filter(node=>node.dataset.saveId).map(node=>({id:node.dataset.saveId,label:node.textContent})), stored:storedSaved,emptyText:empty.textContent} : visible;
 }
 
 const ONGOING = { name: 'ongoing', start: daysFromToday(-5), end: daysFromToday(5) };
@@ -278,4 +293,77 @@ test('actual page respects all and exhibition defaults and restores them on rese
   assert.deepEqual(page.visible,{Event:false,Exhibition:true});
   assert.equal(new URLSearchParams(page.url.split('?')[1]).get('kind'),'exhibition');
   assert.equal(new URLSearchParams(page.url.split('?')[1]).get('range'),'month');
+});
+
+test('actual Saved events filter uses persisted IDs, combines facets and preserves URL/locale state',()=>{
+ const cards=[{id:'saved',name:'Saved free',start:daysFromToday(40),tags:'free',locality:'angra'},{id:'unsaved',name:'Unsaved free',start:daysFromToday(40),tags:'free',locality:'angra'},{id:'wrong-place',name:'Saved elsewhere',start:daysFromToday(40),tags:'free',locality:'praia'}];
+ const page=runPage({cards,defaultRange:'week',withSaved:true,storedSaved:{saved:{name:'Saved free'},'wrong-place':{name:'Saved elsewhere'}},setSaved:true,withFacets:true,setFacets:['free'],withLocality:true,setLocality:'angra',details:true});
+ assert.deepEqual(page.visible,{'Saved free':true,'Unsaved free':false,'Saved elsewhere':false});
+ assert(page.url.includes('saved=1') && page.url.includes('range=all'));
+ assert(page.localeHref.includes('saved=1'));
+ assert.deepEqual(runPage({cards,withSaved:true,storedSaved:{saved:{name:'Saved free'}},setSaved:true,savedChange:{}}),{'Saved free':false,'Unsaved free':false,'Saved elsewhere':false});
+ assert.deepEqual(runPage({cards,withSaved:true,storedSaved:{saved:{name:'Saved free'}},setSaved:true,resetFilters:true}),{'Saved free':true,'Unsaved free':true,'Saved elsewhere':true});
+});
+test('unreadable saved storage does not become a successful empty read',()=>{
+ assert.equal(require('../../assets/js/discovery.js').savedIDs({getItem:()=>'{invalid'}),null);
+ assert.equal(require('../../assets/js/discovery.js').savedIDs({getItem:()=>{throw new Error('denied');}}),null);
+ assert.deepEqual(require('../../assets/js/discovery.js').savedIDs({getItem:()=>null}),[]);
+});
+
+test('actual Saved filter retains an absent bookmark name and explicit Unsave against the real built publication',()=>{
+ const html=fs.readFileSync('_site/events/index.html','utf8');
+ const records=JSON.parse(html.match(/<script[^>]*id="event-dataset"[^>]*>([\s\S]*?)<\/script>/)[1]);
+ const id='00000000-0000-4000-8000-000000000001';
+ assert(!records.some(record=>record.id===id));
+ const published=fs.readFileSync('_site/special/index.html','utf8').match(/<script[^>]*id="published-event-identities"[^>]*data-event-count="(\d+)"[^>]*>([\s\S]*?)<\/script>/);
+ assert(published,'successful built page embeds the complete publication registry');
+ const publication={text:published[2],count:published[1]};
+ assert.deepEqual(JSON.parse(publication.text),records.map(record=>record.id));
+ const current=records.find(record=>record.date>='2026-11-01');
+ assert(current);
+ const config={cards:[{id:current.id,name:current.name,start:current.date,end:current.end_date}],withSaved:true,search:'?saved=1&range=all',storedSaved:{[id]:{name:'Saved bookmark title'}},publication,details:true};
+ const page=runPage(config);
+ assert(page.missingText.includes('Saved bookmark title'));
+ assert(page.missingText.includes('Unavailable in this published list'));
+ assert.deepEqual(page.missingButtons,[{id,label:'Unsave'}]);
+ assert.deepEqual(page.stored,config.storedSaved,'rendering does not delete bookmarks');
+ assert(runPage({...config,cards:[]}).missingText.includes('Saved bookmark title'));
+ assert(!runPage({...config,cards:[],storedSaved:{[current.id]:{name:current.name}}}).missingText.includes('Unavailable in this published list'));
+ const removed=runPage({...config,removeMissing:true});
+ assert(!removed.missingText.includes('Saved bookmark title'));
+ assert.equal(removed.stored,'{}');
+ const uncertain=runPage({...config,publication:{text:'{invalid',count:'650'}});
+ assert(!uncertain.missingText.includes('Unavailable in this published list'));
+ assert(uncertain.missingText.includes('Availability could not be confirmed'));
+});
+
+test('actual Saved filter empty state distinguishes no bookmarks, unmatched filters and unknown reads',()=>{
+ const html=fs.readFileSync('_site/events/index.html','utf8');
+ const records=JSON.parse(html.match(/<script[^>]*id="event-dataset"[^>]*>([\s\S]*?)<\/script>/)[1]);
+ const published=fs.readFileSync('_site/special/index.html','utf8').match(/<script[^>]*id="published-event-identities"[^>]*data-event-count="(\d+)"[^>]*>([\s\S]*?)<\/script>/);
+ const current=records.find(record=>record.date>='2026-11-01' && !(record.tags || []).includes('kid-friendly'));
+ assert(current && published);
+ const publication={text:published[2],count:published[1]};
+ const config={cards:[{id:current.id,name:current.name,start:current.date,end:current.end_date,tags:(current.tags || []).join(' ')}],withSaved:true,setSaved:true,publication,details:true};
+ assert(runPage({...config,storedSaved:{}}).emptyText.includes('No saved events yet. Choose an event and Save.'));
+ assert(runPage({...config,storedSaved:{[current.id]:{name:current.name}},withFacets:true,setFacets:['kid-friendly']}).emptyText.includes('No saved events match these filters.'));
+ assert(runPage({...config,storedSaved:'{invalid'}).emptyText.includes('Saved events could not be read'));
+ assert(runPage({...config,storedSaved:{},publication:{text:'{invalid',count:published[1]}}).emptyText.includes('Availability could not be confirmed'));
+ assert(!runPage({...config,storedSaved:{},resetFilters:true}).emptyText.includes('No saved events yet'));
+});
+
+test('actual Archive Saved filter exposes a published ended bookmark',()=>{
+ const records=JSON.parse(fs.readFileSync('_site/events/index.html','utf8').match(/<script[^>]*id="event-dataset"[^>]*>([\s\S]*?)<\/script>/)[1]);
+ const ended=records.find(record=>record.id==='71b345ed-15d0-46db-92ae-c77615dd0c8e');
+ assert(ended && ended.date<'2026-10-12');
+ for(const path of ['_site/archive/index.html','_site/pt/archive/index.html']){
+  const html=fs.readFileSync(path,'utf8');
+  assert(html.includes('class="event-saved-filter"'),'Archive exposes the Saved events filter');
+  assert(html.includes('data-save-id="'+ended.id+'"'),'ended card exposes Save/Unsave');
+  const published=html.match(/<script[^>]*id="published-event-identities"[^>]*data-event-count="(\d+)"[^>]*>([\s\S]*?)<\/script>/);
+  assert(published);
+  const page=runPage({cards:[{id:ended.id,name:ended.name,start:ended.date,end:ended.end_date}],withRange:false,withKind:true,defaultKind:'all',withSaved:true,search:'?saved=1&kind=all',storedSaved:{[ended.id]:{name:ended.name}},publication:{text:published[2],count:published[1]},details:true});
+  assert.equal(page.visible[ended.name],true);
+  assert(!page.missingText.includes('Unavailable'));
+ }
 });

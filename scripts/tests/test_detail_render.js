@@ -16,18 +16,19 @@ function render({lang = 'pt', records, id = 'exhibition-one', stored = null, una
       click() {if(this.listeners.click) this.listeners.click(); if(handlers.click) handlers.click({target:this});},
     };
   }
-  const main=node('main'), detail=node('div'), saved=node('div'), locale=node('a');
-  main.appendChild(detail); main.appendChild(saved); roots.push(main,locale);
+  const main=node('main'), detail=node('div'),  locale=node('a');
+  main.appendChild(detail); roots.push(main,locale);
   function all() {const result=[]; function visit(n) {result.push(n); n.children.forEach(visit);} roots.forEach(visit); return result;}
   function matches(n,selector) {return selector==='main' ? n===main : selector==='[data-save-id]' ? !!n.dataset.saveId : selector.startsWith('.') ? n.className.split(' ').includes(selector.slice(1)) : false;}
   const document={documentElement:{lang},referrer:'',createElement:node,
     querySelector(selector) {if(selector==='.locale-other')return locale; return all().find(n=>matches(n,selector)) || null;},
     querySelectorAll(selector) {return all().filter(n=>matches(n,selector));},
-    getElementById(key) {return {'event-detail':detail,'saved-events':saved,'event-dataset':{textContent:JSON.stringify(records)}}[key] || null;},
+    getElementById(key) {return {'event-detail':detail,'event-dataset':{textContent:JSON.stringify(records)}}[key] || null;},
     addEventListener(type,handler) {handlers[type]=handler;},
+    dispatchEvent(event) {if (handlers[event.type]) handlers[event.type](event);},
   };
   const localStorage={getItem() {if(unavailableStorage)throw new Error('denied'); return stored;}, setItem(key,value) {if(unavailableStorage)throw new Error('denied'); stored=value;},removeItem() {if(unavailableStorage)throw new Error('denied'); stored=null;}};
-  const context={document,localStorage,location:{origin:'https://eventosterceira.pt',pathname:lang==='pt'?'/pt/events/':'/events/',search:'?id='+id},navigator:{},history:{length:1},URL,URLSearchParams,EventDiscovery:require('../../assets/js/discovery.js')};
+  const context={document,localStorage,location:{origin:'https://eventosterceira.pt',pathname:lang==='pt'?'/pt/events/':'/events/',search:'?id='+id},navigator:{},Event,history:{length:1},URL,URLSearchParams,EventDiscovery:require('../../assets/js/discovery.js')};
   vm.runInNewContext(fs.readFileSync('assets/js/plans.js','utf8'),context);
   return {all, detail, stored:()=>stored, locale};
 }
@@ -79,8 +80,8 @@ test('unreadable saved data cannot make Save appear persistently pressed',()=>{
 test('actual navigation script marks exactly the matching discovery destination in EN/PT',()=>{
  for(const prefix of ['', '/pt']) for(const [query,expected] of [['?kind=exhibition&range=all','view'],['?range=today&q=music','explore'],['?kind=event&free=1','explore']]) {
   const links=[['explore',prefix+'/special/'],['view',prefix+'/special/?kind=exhibition&range=all']].map(([name,path])=>({name,...Object.fromEntries(['pathname','search'].map(key=>[key,new URL(path,'https://eventosterceira.pt')[key]])),attrs:{},setAttribute(key,value){this.attrs[key]=value;}}));
-  const document={documentElement:{lang:prefix?'pt':'en'},createElement:()=>({setAttribute:()=>{}}),querySelectorAll:selector=>selector==='.site-nav a'?links:[],querySelector:()=>null,getElementById:key=>key==='event-dataset'?{textContent:'[]'}:null,addEventListener:()=>{}};
-  vm.runInNewContext(fs.readFileSync('assets/js/plans.js','utf8'),{document,localStorage:{getItem:()=>null},location:{origin:'https://eventosterceira.pt',pathname:prefix+'/special/',search:query},URL,URLSearchParams});
+  const document={documentElement:{lang:prefix?'pt':'en'},createElement:()=>({setAttribute:()=>{}}),dispatchEvent:()=>{},querySelectorAll:selector=>selector==='.site-nav a'?links:[],querySelector:()=>null,getElementById:key=>key==='event-dataset'?{textContent:'[]'}:null,addEventListener:()=>{}};
+  vm.runInNewContext(fs.readFileSync('assets/js/plans.js','utf8'),{document,localStorage:{getItem:()=>null},location:{origin:'https://eventosterceira.pt',pathname:prefix+'/special/',search:query},Event,URL,URLSearchParams});
   assert.deepEqual(links.filter(link=>link.attrs['aria-current']==='page').map(link=>link.name),[expected]);
  }
 });

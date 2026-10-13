@@ -9,7 +9,7 @@ lang_alt: /pt/archive/
 
 <p class="section-intro">Past concerts, parties, festivals, and special nights in Angra do Heroísmo.</p>
 
-{% include event_search_bar.html %}
+{% include event_search_bar.html default_kind="all" %}
 
 {% assign now_ts = "now" | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
 {% assign sorted_events = site.data.special_events | sort: "date" | reverse %}
@@ -38,5 +38,5 @@ lang_alt: /pt/archive/
 </p>
 
 <div class="archive-link-section">
-  <a href="{{ '/special/' | relative_url }}" class="view-all">Back to Special Events</a>
+  <a href="{{ '/special/' | relative_url }}" class="view-all">Back to Events</a>
 </div>
