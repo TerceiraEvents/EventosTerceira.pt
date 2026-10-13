@@ -18,7 +18,7 @@ The static website contains its dataset at publication. Event details do not fet
 another dataset. Publication time is labelled as a site build time, not organizer
 verification. A filter with no matches offers reset/all dates. No published events
 provides weekly browsing. Missing IDs show unavailable, ended records show ended,
-and absent prices/times remain unknown. My Plans stores IDs and fallback titles in
+and absent prices/times remain unknown. Saved events filtering uses IDs and fallback titles in
 this browser only; it does not create a notification. Storage failure is announced
 and session changes remain usable. The website does not promise offline availability.
 
@@ -48,8 +48,8 @@ Detail DOM tests execute the actual renderer for EN/PT fields and share URLs.
 Invalid saved data has an explicit clear/recovery action and remains intact until
 that action is chosen. Storage denial has separate feedback.
 
-Details and My Plans embed the full published dataset, including ended records.
-The uncompressed detail HTML measured 532,260 bytes on 12 October 2026. This allows exact ended-event details without another request;
+Details embed the full published dataset, including ended records. Saved URLs point to the discovery filter.
+The uncompressed detail HTML measured 535,876 bytes on 12 October 2026. This allows exact ended-event details without another request;
 per-event generated documents are a possible future payload improvement. A map
 action requires `map_url`; source and booking actions also require published URLs.
 
