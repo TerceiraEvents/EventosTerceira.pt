@@ -103,6 +103,37 @@ if File.exist?(special_path)
   end
 end
 
+%w[special/index.html pt/special/index.html].each do |path|
+  html = File.read(File.join(SITE, path))
+  %w[event-date-badge event-address event-description event-tags event-map-link event-source event-flag-btn].each do |marker|
+    err(errors, "#{path}: full cards require #{marker}") unless html.include?("class=\"#{marker}\"")
+  end
+  err(errors, "#{path}: optional locality requires More filters disclosure") unless html.match?(/class="[^"]*event-locality-filter[^"]*"[\s\S]*?More filters|class="[^"]*event-locality-filter[^"]*"[\s\S]*?Mais filtros/)
+  err(errors, "#{path}: reset must start hidden") unless html.match?(/class="filter-reset" hidden/)
+end
+
+card_template = File.read('_includes/special_event_card.html')
+%w[event_address event_description organizer feature].each do |field|
+  err(errors, "card: #{field} requires escaped content") unless card_template.include?("{{ #{field} | escape }}")
+end
+err(errors, 'card: source and map actions require explicit HTTP schemes') unless card_template.include?('source_scheme == "https://"') && card_template.include?('map_scheme == "https://"')
+
+%w[index.html pt/index.html].each do |path|
+  html = File.read(File.join(SITE, path))
+  %w[btn-venues btn-resources home-blog-meta intro-text].each do |marker|
+    err(errors, "#{path}: homepage requires #{marker}") unless html.include?(marker)
+  end
+end
+err(errors, 'header alignment must be centered') if File.read('assets/css/style.css').match?(/\.header-content[^}]*text-align:\s*left/)
+
+card_css = File.read('assets/css/style.css')
+err(errors, 'card title requires readable inherited sans-serif typography') unless card_css.match?(/\.event-summary \.event-name[^}]*font-family:\s*inherit/) && card_css.match?(/\.event-summary \.event-name a[^}]*text-decoration:\s*none/)
+
+archive_cards = File.read(File.join(SITE, 'archive/index.html'))
+%w[event-organizer event-features].each do |marker|
+  err(errors, "archive: full card requires #{marker}") unless archive_cards.include?("class=\"#{marker}\"")
+end
+
 pt_special_path = "#{SITE}/pt/special/index.html"
 if File.exist?(pt_special_path)
   pt_html = File.read(pt_special_path)
@@ -166,9 +197,9 @@ html_pages.each do |path|
     err(errors, "#{rel}: primary destinations must be visible without opening a menu") if navigation.match?(/<details|\bhidden\b|aria-hidden="true"/)
     prefix = rel.start_with?('/pt/') ? '/pt' : ''
     routes = ['/', '/weekly/', '/special/', '/venues/', '/blog/', '/contribute/', '/resources/']
-    labels = prefix.empty? ? ['Home', 'Weekly', 'Events', 'Places', 'Blog', 'Contribute', 'Resources'] : ['Início', 'Semanal', 'Eventos', 'Locais', 'Blogue', 'Contribuir', 'Recursos']
+    labels = prefix.empty? ? ['Home', 'Weekly', 'Events', 'Venues', 'Blog', 'Contribute', 'Resources'] : ['Início', 'Semanal', 'Eventos', 'Locais', 'Blogue', 'Contribuir', 'Recursos']
     expected = routes.zip(labels).map { |route, label| [prefix + route, label] }
-    err(errors, "#{rel}: original seven primary routes/order with plain Events/Places labels are required") unless navigation.scan(/<a href="([^"]*)">([^<]*)<\/a>/) == expected
+    err(errors, "#{rel}: original seven primary routes/order with plain Events labels are required") unless navigation.scan(/<a href="([^"]*)">([^<]*)<\/a>/) == expected
     err(errors, "#{rel}: locale switcher is absent") unless navigation.include?('class="locale-other"')
   end
   footer = html[/<footer\b[^>]*>[\s\S]*?<\/footer>/]

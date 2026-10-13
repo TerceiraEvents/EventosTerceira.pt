@@ -43,6 +43,7 @@ function stubElement() {
 // Stub search bar + card sibling chain. withRange=false omits the range select.
 function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = '2026-10-12', withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null, withFacets = false, withLocality = false, setFacets = null, setLocality = null, details = false, resetFilters = false, withNavigation = false, lang = 'en', escapeMenu = false, menuGeometry = null }) {
   const bar = {
+    getBoundingClientRect() {return {bottom:240};},
     getAttribute: (k) => k === 'data-default-range' ? defaultRange : k === 'data-default-kind' ? defaultKind : null,
     parentElement: null,
     nextElementSibling: null,
@@ -62,8 +63,8 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   const facets = values.map(value => ({...stubElement(), value, checked:false, attrs:{'data-filter-label':value==='free'?(lang==='pt'?'Gratuito':'Free'):value==='kid-friendly'?(lang==='pt'?'Família':'Family'):value==='live-music'?(lang==='pt'?'Música ao Vivo':'Live Music'):value} }));
   const tagSummary = stubElement(), localitySummary = stubElement(), tagButton = stubElement(), localityButton = stubElement();
   const panel = {...stubElement(), getBoundingClientRect() { const anchor = menuGeometry ? (tagSummary.textContent.includes('Free') ? menuGeometry.selectedAnchor : menuGeometry.anchor) : 0; const left = this.style.left === undefined ? (menuGeometry.defaultLeft === undefined ? anchor : menuGeometry.defaultLeft) : anchor + parseFloat(this.style.left); return {left,right:left+menuGeometry.width,width:menuGeometry.width}; }};
-  const tagMenu = {...stubElement(), attrs:{'data-empty-label':lang==='pt'?'Todas as etiquetas':'All tags'}, querySelector: selector=>selector==='summary'?tagButton:selector==='.filter-menu'?panel:tagSummary};
-  const localityMenu = {...stubElement(), querySelector:selector=>selector==='summary'?localityButton:selector==='.filter-menu'?panel:localitySummary};
+  const tagMenu = {...stubElement(),getBoundingClientRect(){return {top:100};}, attrs:{'data-empty-label':lang==='pt'?'Etiquetas':'Tags'}, querySelector: selector=>selector==='summary'?tagButton:selector==='.filter-menu'?panel:tagSummary};
+  const localityMenu = {...stubElement(),getBoundingClientRect(){return {top:150};}, querySelector:selector=>selector==='summary'?localityButton:selector==='.filter-menu'?panel:localitySummary};
   const localities=['','angra','praia','other'].map(value=>({...stubElement(), value, checked:!value, attrs:{'data-filter-label':value||(lang==='pt'?'Todos os locais':'All places')}}));
   const reset = stubElement(), resultCount = stubElement();
   const input = stubElement();
@@ -159,7 +160,7 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   if(menuGeometry) popupHistory.push(panel.getBoundingClientRect());
   const visible = {};
   for (const card of cardNodes) visible[card.attrs['data-event-name']] = card.style.display !== 'none';
-  return details ? {visible,url:currentURL,localeHref:locale.href,resultCount:resultCount.textContent,emptyText:empty.textContent,navHistory,tagLabel:tagSummary.textContent,localityLabel:localitySummary.textContent,tagOpen:tagMenu.open,summaryFocused:tagButton.focused,popupBounds:menuGeometry?panel.getBoundingClientRect():null,popupHistory} : visible;
+  return details ? {resetHidden:reset.hidden,visible,url:currentURL,localeHref:locale.href,resultCount:resultCount.textContent,emptyText:empty.textContent,navHistory,tagLabel:tagSummary.textContent,localityLabel:localitySummary.textContent,tagOpen:tagMenu.open,localityOpen:localityMenu.open,summaryFocused:tagButton.focused,popupTop:panel.style.top,popupBounds:menuGeometry?panel.getBoundingClientRect():null,popupHistory} : visible;
 }
 
 const ONGOING = { name: 'ongoing', start: daysFromToday(-5), end: daysFromToday(5) };
@@ -330,7 +331,7 @@ for(const lang of ['en','pt']) test(`actual ${lang} compact Tags menu preserves 
  assert.deepEqual(restored.visible,page.visible);
  assert.equal(restored.tagLabel,page.tagLabel);
  const reset=runPage({...options,resetFilters:true});
- assert.equal(reset.tagLabel,lang==='pt'?'Todas as etiquetas':'All tags');
+ assert.equal(reset.tagLabel,lang==='pt'?'Etiquetas':'Tags');
  assert.equal(reset.localityLabel,lang==='pt'?'Todos os locais':'All places');
  assert.deepEqual(reset.visible,{'All selected':true,'Paid music':true,'Other topic':true});
 });
@@ -344,4 +345,27 @@ test('actual Tags Escape handler closes the popup and focuses its summary',()=>{
 for(const geometry of [{menu:'places',anchor:29.796875,selectedAnchor:29.796875,defaultLeft:-120.6171875,width:256},{menu:'tags',anchor:158.390625,selectedAnchor:29.796875,width:256}]) test(`actual ${geometry.menu} popup is clamped after opening and summary wrapping`,()=>{
  const page=runPage({cards:[{name:'Event',start:daysFromToday(1),tags:'free kid-friendly'}],withFacets:true,withLocality:true,menuGeometry:geometry,setFacets:['free','kid-friendly'],details:true});
  for(const bounds of page.popupHistory) { assert(bounds.left>=0,JSON.stringify(bounds)); assert(bounds.right<=320,JSON.stringify(bounds)); }
+});
+
+for (const lang of ['en','pt']) test(`actual ${lang} reset is absent at defaults and available only for active filters`,()=>{
+ const options={cards:[{name:'Event',start:'2026-10-12',kind:'event',tags:'free'}],defaultRange:'week',withKind:true,withFacets:true,withLocality:true,details:true,lang};
+ assert.equal(runPage(options).resetHidden,true);
+ for(const change of [{query:'Event'},{setRange:'today'},{setKind:'exhibition'},{setFacets:['free']},{setLocality:'angra'}]) {
+  assert.equal(runPage({...options,...change}).resetHidden,false);
+  assert.equal(runPage({...options,...change,resetFilters:true}).resetHidden,true);
+ }
+});
+
+test('actual reset clears combined query, tags, locality and date and closes menus',()=>{
+ const page=runPage({cards:[{name:'MONTE',start:'2026-10-12',kind:'event',tags:'free kid-friendly',locality:'angra'},{name:'Other',start:'2026-10-13',kind:'event'}],defaultRange:'week',withKind:true,withFacets:true,withLocality:true,query:'MONTE',setFacets:['free','kid-friendly'],setLocality:'praia',setRange:'today',resetFilters:true,details:true});
+ assert.deepEqual(page.visible,{MONTE:true,Other:true});
+ assert.equal(page.url,'/special/?range=week&kind=event');
+ assert.equal(page.resetHidden,true);
+ assert.equal(page.tagOpen,false);
+ assert.equal(page.localityOpen,false);
+});
+
+test('opened filter popup begins below the entire control panel so Reset remains exposed',()=>{
+ const page=runPage({cards:[{name:'Event',start:'2026-10-12',kind:'event'}],withFacets:true,withLocality:true,menuGeometry:{anchor:30,width:200,viewport:320},details:true});
+ assert.equal(page.popupTop,'146px');
 });

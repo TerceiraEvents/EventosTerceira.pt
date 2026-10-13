@@ -1472,10 +1472,8 @@ main a {
 }
 
 :root { --space: .75rem; --radius: .75rem; --focus: #8a6614; }
-.site-header { min-height: 0; overflow: visible; }
-.header-content { padding: 1rem 0; text-align: left; }
-.site-title { font-size: clamp(1.5rem, 5vw, 2.25rem); }
-.site-tagline { font-size: 1rem; margin-top: .25rem; }
+.home-page .site-header { min-height: 0; }
+.home-page .header-content { padding: 1rem 0; }
 .site-nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: .3rem; }
 .locale-switcher { margin-left: auto; }
 .skip-link { position: absolute; top: -100px; left: .5rem; z-index: 30; background: white; padding: .75rem; }
@@ -1484,10 +1482,10 @@ main a {
 .home-discovery h2 { margin: .75rem 0; }
 .date-shortcuts { display: flex; flex-wrap: wrap; gap: .5rem; }
 .date-shortcuts a, .filter-reset { border: 1px solid var(--green-mid); border-radius: var(--radius); padding: .6rem .9rem; min-height: 44px; background: white; color: var(--green-dark); font: inherit; cursor: pointer; }
-.event-summary { padding: 1rem; border-radius: var(--radius); display: block; }
-.event-summary .event-name { font-size: 1.3rem; margin-bottom: .35rem; overflow-wrap: anywhere; }
-.event-summary .event-name a { color: var(--green-dark); display: flex; align-items: center; min-height: 44px; }
-.event-summary .event-venue { margin: .25rem 0 .75rem; }
+
+.event-summary .event-name { font-family: inherit; font-size: 1.05rem; font-weight: 600; margin: 0; overflow-wrap: anywhere; }
+.event-summary .event-name a { color: var(--text); text-decoration: none; font-weight: inherit; display: flex; align-items: center; min-height: 44px; }
+
 .event-attendance { font-weight: 600; }
 .event-summary .event-details { min-width: 0; }
 .home-secondary { margin-top: 2rem; }
@@ -1525,3 +1523,15 @@ main a {
 .filter-choice input { min-height: 0; width: 1.1rem; height: 1.1rem; flex-shrink: 0; accent-color: var(--green-dark); }
 .filter-note { margin: .5rem .65rem; max-width: 22rem; font-size: .85rem; color: var(--text-light); }
 .event-search-bar .search-input:focus-visible, .event-range-filter:focus-visible, .event-kind-filter:focus-visible, .filter-dropdown > summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.event-search-bar .search-input { flex-basis: 100%; }
+.filter-reset[hidden] { display: none; }
+.event-card-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+.event-card-actions a, .event-card-actions button { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+.event-card-artwork:empty { display: none; }
+.event-card-artwork { width: 100%; height: clamp(220px, 60vh, 480px); }
+.event-card-artwork img { width: 100%; height: 100%; object-fit: contain; }
+
+.event-tags-menu > summary { padding-right: 1.5rem; }
+
+.event-card-artwork a { display: block; height: 100%; }

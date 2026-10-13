@@ -44,7 +44,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body{% if page.url == "/" or page.url == "/pt/" %} class="home-page"{% endif %}>
   <a class="skip-link" href="#main">{% if page_lang == "pt" %}Saltar para o conteúdo{% else %}Skip to content{% endif %}</a>
   <header class="site-header">
     <div class="hero-image"></div>
@@ -65,7 +65,7 @@
         <a href="{{ prefix | append: '/' | relative_url }}">{% if page_lang == 'pt' %}Início{% else %}Home{% endif %}</a>
         <a href="{{ prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Semanal{% else %}Weekly{% endif %}</a>
         <a href="{{ prefix | append: '/special/' | relative_url }}">{% if page_lang == 'pt' %}Eventos{% else %}Events{% endif %}</a>
-        <a href="{{ prefix | append: '/venues/' | relative_url }}">{% if page_lang == 'pt' %}Locais{% else %}Places{% endif %}</a>
+        <a href="{{ prefix | append: '/venues/' | relative_url }}">{% if page_lang == 'pt' %}Locais{% else %}Venues{% endif %}</a>
         <a href="{{ prefix | append: '/blog/' | relative_url }}">{% if page_lang == 'pt' %}Blogue{% else %}Blog{% endif %}</a>
         <a href="{{ prefix | append: '/contribute/' | relative_url }}">{% if page_lang == 'pt' %}Contribuir{% else %}Contribute{% endif %}</a>
         <a href="{{ prefix | append: '/resources/' | relative_url }}">{% if page_lang == 'pt' %}Recursos{% else %}Resources{% endif %}</a>
@@ -382,6 +382,7 @@
         if (!menu.open) return;
         var panel = menu.querySelector('.filter-menu');
         panel.style.left = '0px'; panel.style.right = 'auto';
+        if (bar.getBoundingClientRect && menu.getBoundingClientRect) panel.style.top = (bar.getBoundingClientRect().bottom - menu.getBoundingClientRect().top + 6) + 'px';
         var bounds = panel.getBoundingClientRect();
         var width = document.documentElement.clientWidth || window.innerWidth;
         var shift = Math.min(0, width - 8 - bounds.right);
@@ -402,7 +403,8 @@
         if (localityMenu) {
           var choice = Array.prototype.filter.call(localityChoices, function(item) { return item.checked; })[0];
           var label = choice ? filterLabel(choice) : (document.documentElement.lang === 'pt' ? 'Todos os locais' : 'All places');
-          localityMenu.querySelector('.filter-summary-text').textContent = label;
+          var summary = localityMenu.querySelector('.filter-summary-text');
+          summary.textContent = choice && choice.value ? label : (summary.getAttribute('data-more-label') || label);
         }
         Array.prototype.forEach.call(menus, positionMenu);
       }
@@ -417,6 +419,7 @@
         var kind = kindSelect ? kindSelect.value : 'all';
         var selectedTags = selected.map(function(choice) { return choice.value; });
         updateMenus(selected);
+        if (reset) reset.hidden = !query && !selected.length && !locality && (!rangeSelect || range === defaultRange) && (!kindSelect || kind === defaultKind);
         var visibleCount = 0;
         cards.forEach(function(card, i) {
           var event = {
@@ -460,7 +463,7 @@
         }
       }
 
-      Array.prototype.forEach.call(localityChoices, function(choice) { choice.addEventListener('change', applyFilters); });
+      Array.prototype.forEach.call(localityChoices, function(choice) { choice.addEventListener('change', function() { applyFilters(); if (localityMenu) { localityMenu.open = false; localityMenu.querySelector('summary').focus(); } }); });
       Array.prototype.forEach.call(facets, function(f) { f.addEventListener('change', function() { if (f.checked && !primaryTag && f.value !== 'free' && f.value !== 'kid-friendly') primaryTag = f.value; if (!f.checked && primaryTag === f.value) primaryTag = ''; applyFilters(); }); });
       Array.prototype.forEach.call(menus, function(menu) {
         menu.addEventListener('keydown', function(event) { if (event.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); event.preventDefault(); } });
@@ -468,7 +471,7 @@
       });
       window.addEventListener('resize', function() { Array.prototype.forEach.call(menus, positionMenu); });
       document.addEventListener('click', function(event) { Array.prototype.forEach.call(menus, function(menu) { if (menu.open && !menu.contains(event.target)) menu.open = false; }); });
-      if (reset) reset.addEventListener('click', function() { if (input) input.value = ''; primaryTag = ''; Array.prototype.forEach.call(localityChoices, function(choice) { choice.checked = choice.value === ''; }); if (kindSelect) kindSelect.value = defaultKind; if (rangeSelect) rangeSelect.value = defaultRange; Array.prototype.forEach.call(facets, function(f) { f.checked = false; }); applyFilters(); });
+      if (reset) reset.addEventListener('click', function() { Array.prototype.forEach.call(menus, function(menu) { menu.open = false; }); if (input) input.value = ''; primaryTag = ''; Array.prototype.forEach.call(localityChoices, function(choice) { choice.checked = choice.value === ''; }); if (kindSelect) kindSelect.value = defaultKind; if (rangeSelect) rangeSelect.value = defaultRange; Array.prototype.forEach.call(facets, function(f) { f.checked = false; }); applyFilters(); });
       if (input) input.addEventListener('input', applyFilters);
       if (rangeSelect) rangeSelect.addEventListener('change', applyFilters);
       if (kindSelect) kindSelect.addEventListener('change', applyFilters);

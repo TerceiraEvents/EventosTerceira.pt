@@ -60,6 +60,7 @@
  data-event-kind="{{ event_kind }}" data-event-tags="{{ event_tags_str }}"
  data-event-date="{{ event.date | date: '%Y-%m-%d' }}" data-event-end-date="{{ event.end_date | default: event.date | date: '%Y-%m-%d' }}"
  data-event-name="{{ event_name | escape }}" data-event-venue="{{ event_venue | escape }}" data-event-description="{{ event_description | escape }}">
+ <div class="event-date-badge" aria-hidden="true"><div class="month">{{ months[month_index] }}</div><div class="day">{{ date_parts[2] | plus: 0 }}</div><div class="year">{{ date_parts[0] }}</div></div>
  <div class="event-details">
   <h3 class="event-name"><a href="{{ detail_prefix | append: event.id | relative_url }}">{{ event_name | escape }}</a></h3>
   {% if event_kind == "exhibition" %}{% include exhibition_status.html %}{% else %}
@@ -71,6 +72,21 @@
   {% endif %}
   <div class="event-venue">{{ event_venue | escape }}</div>
   {% if event.price %}<div>{{ event.price | escape }}</div>{% elsif event_tags contains 'free' %}<div>{% if page_lang == 'pt' %}Gratuito{% else %}Free{% endif %}</div>{% endif %}
+
+  {% if event_address %}<div class="event-address">{{ event_address | escape }}</div>{% endif %}
+  {% if event_description %}<div class="event-description">{{ event_description | escape }}</div>{% endif %}
+  {% if event.festival %}<div class="festival-badge">{% if page_lang == "pt" %}{{ event.festival_pt | default: event.festival | escape }}{% else %}{{ event.festival_en | default: event.festival | escape }}{% endif %}</div>{% endif %}
+  {% if event_tags.size > 0 %}<div class="event-tags">{% for slug in event_tags %}{% assign tag_meta = site.data.event_tags | where: "slug", slug | first %}{% if page_lang == "pt" %}{% assign tag_label = tag_meta.label_pt | default: tag_meta.label | default: slug %}{% else %}{% assign tag_label = tag_meta.label_en | default: tag_meta.label | default: slug %}{% endif %}<span class="event-tag tag-{{ slug | escape }}">{{ tag_meta.emoji }} {{ tag_label | escape }}</span>{% endfor %}</div>{% endif %}
+  {% if event.organizer %}{% if page_lang == "pt" %}{% assign organizer = event.organizer_pt | default: event.organizer %}{% else %}{% assign organizer = event.organizer_en | default: event.organizer %}{% endif %}<div class="event-organizer">{% if page_lang == "pt" %}Organizado por: {% else %}Organized by: {% endif %}{{ organizer | escape }}</div>{% endif %}
+  {% if event.features %}<ul class="event-features">{% for feature in event.features %}<li>{{ feature | escape }}</li>{% endfor %}</ul>{% endif %}
+  <div class="event-card-actions">
+  {% assign map_query = event_address | default: event_venue | url_encode %}{% assign map_link = "https://www.google.com/maps/search/?api=1&query=" | append: map_query %}
+  {% assign map_scheme = event.map_url | slice: 0, 8 %}{% assign map_http = event.map_url | slice: 0, 7 %}{% if map_scheme == "https://" or map_http == "http://" %}{% assign map_link = event.map_url %}{% endif %}
+  <a class="event-map-link" data-safe-link href="{{ map_link | escape }}" target="_blank" rel="noopener noreferrer">📍 {% if page_lang == "pt" %}Abrir no Maps{% else %}Open in Maps{% endif %}</a>
+  {% assign source_link = event.instagram | default: event.source_url %}{% assign source_scheme = source_link | slice: 0, 8 %}{% assign source_http = source_link | slice: 0, 7 %}{% if source_scheme == "https://" or source_http == "http://" %}<a class="event-source" data-safe-link href="{{ source_link | escape }}" target="_blank" rel="noopener noreferrer">{% if source_link contains 'instagram.com' %}📸 {% if page_lang == "pt" %}Ver no Instagram{% else %}View on Instagram{% endif %}{% else %}{% if page_lang == "pt" %}Fonte{% else %}Source{% endif %}{% endif %}</a>{% endif %}
+  <button type="button" class="event-flag-btn" data-event-name="{{ event_name | escape }}" data-event-date="{{ event.date }}" data-event-venue="{{ event_venue | escape }}">🚩 {% if page_lang == "pt" %}Sugerir uma alteração{% else %}Suggest an edit{% endif %}</button>
+  </div>
+  {% if event.image %}<div class="event-card-artwork" data-card-artwork="{{ event.image | escape }}" data-artwork-alt="{{ event_name | escape }}"></div>{% endif %}
  </div>
 </article>
 

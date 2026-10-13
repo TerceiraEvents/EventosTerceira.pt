@@ -28,17 +28,74 @@
  <h2>{% if page_lang == 'pt' %}Exposições{% else %}Exhibitions{% endif %}</h2>
  <a class="standalone-link" href="{{ home_prefix | append: '/special/?kind=exhibition&range=all' | relative_url }}">{% if page_lang == 'pt' %}Ver exposições{% else %}Browse exhibitions{% endif %}</a>
 </section>
-<section class="homepage-intro">
- <h2>{% if page_lang == 'pt' %}Sobre este guia{% else %}About this guide{% endif %}</h2>
- <p>{% if page_lang == 'pt' %}Um guia comunitário do que se passa na Ilha Terceira: concertos, festivais, encontros e atividades culturais. Usa as datas acima para planear a tua próxima saída.{% else %}A community guide to what's happening on Terceira: concerts, festivals, gatherings, and cultural activities. Use the dates above to plan your next outing.{% endif %}</p>
-</section>
+{% if page_lang == 'pt' %}
+<div class="homepage-intro">
+  <p class="intro-text">A Terceira é conhecida como a ilha dos Açores onde está sempre tudo a acontecer. <em>"São 8 ilhas e 1 parque de diversões, e a Terceira é o parque de diversões"</em> &mdash; é o que ouves dizer aos locais.</p>
+  <p class="intro-text">Com touradas à corda, espectáculos musicais, festivais e muito mais, há quase sempre alguma coisa a acontecer. Mas se não és da ilha pode ser difícil perceberes-te de tudo.</p>
+  <p class="intro-text">O propósito deste site é ajudar-te a saber o que se passa!</p>
+</div>
+
+<div class="homepage-buttons">
+  <a href="{{ '/pt/weekly/' | relative_url }}" class="homepage-btn btn-weekly">
+    <span class="btn-icon">&#127926;</span>
+    <span class="btn-title">Eventos Semanais</span>
+    <span class="btn-desc">Karaoke, noites de dança e outros eventos que se repetem todas as semanas</span>
+  </a>
+  <a href="{{ '/pt/special/' | relative_url }}" class="homepage-btn btn-special">
+    <span class="btn-icon">&#127882;</span>
+    <span class="btn-title">Eventos</span>
+    <span class="btn-desc">Concertos, festivais, festas e eventos pontuais</span>
+  </a>
+  <a href="{{ '/pt/venues/' | relative_url }}" class="homepage-btn btn-venues">
+    <span class="btn-icon">&#127963;</span>
+    <span class="btn-title">Locais</span>
+    <span class="btn-desc">Bares, restaurantes e espaços que recebem eventos pela Terceira</span>
+  </a>
+  <a href="{{ '/pt/resources/' | relative_url }}" class="homepage-btn btn-resources">
+    <span class="btn-icon">&#128204;</span>
+    <span class="btn-title">Recursos</span>
+    <span class="btn-desc">Bullfight Finder, páginas das câmaras municipais e muito mais</span>
+  </a>
+</div>
+
+{% else %}
+<div class="homepage-intro">
+  <p class="intro-text">Terceira is known as the island in the Azores where everything is happening. <em>"There are 8 islands and 1 amusement park, and Terceira is the amusement park"</em> is what you'll hear the locals say.</p>
+  <p class="intro-text">With bull fights, musical shows, festivals, and more, there's almost always something going on. But if you're not from the island it can be difficult to figure it all out.</p>
+  <p class="intro-text">The purpose of this site is to help you figure out everything that's going on!</p>
+</div>
+
+<div class="homepage-buttons">
+  <a href="{{ '/weekly/' | relative_url }}" class="homepage-btn btn-weekly">
+    <span class="btn-icon">&#127926;</span>
+    <span class="btn-title">Weekly Events</span>
+    <span class="btn-desc">Karaoke, dance nights, and other recurring events happening every week</span>
+  </a>
+  <a href="{{ '/special/' | relative_url }}" class="homepage-btn btn-special">
+    <span class="btn-icon">&#127882;</span>
+    <span class="btn-title">Events</span>
+    <span class="btn-desc">Concerts, festivals, parties, and one-off events</span>
+  </a>
+  <a href="{{ '/venues/' | relative_url }}" class="homepage-btn btn-venues">
+    <span class="btn-icon">&#127963;</span>
+    <span class="btn-title">Venues</span>
+    <span class="btn-desc">Bars, restaurants, and spaces hosting events around Terceira</span>
+  </a>
+  <a href="{{ '/resources/' | relative_url }}" class="homepage-btn btn-resources">
+    <span class="btn-icon">&#128204;</span>
+    <span class="btn-title">Resources</span>
+    <span class="btn-desc">Bullfight Finder, city event pages, and more</span>
+  </a>
+</div>
+
+{% endif %}
 {% assign blog_count = 0 %}
 <section class="home-blog-preview"><h2>{% if page_lang == 'pt' %}Do blogue{% else %}From the blog{% endif %}</h2>
  <ul class="home-blog-list">
  {% for post in site.posts %}
   {% assign post_lang = post.lang | default: 'en' %}
   {% if post_lang == page_lang and blog_count < 3 %}
-   <li class="home-blog-item"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+   <li class="home-blog-item"><a href="{{ post.url | relative_url }}"><span class="home-blog-meta">{% if post.category %}<span class="post-category">{{ post.category | escape }}</span>{% endif %}<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time></span><span class="home-blog-title">{{ post.title | escape }}</span></a></li>
    {% assign blog_count = blog_count | plus: 1 %}
   {% endif %}
  {% endfor %}
