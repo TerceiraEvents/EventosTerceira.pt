@@ -22,7 +22,7 @@ Feed comparison remains name → attendance date/time → venue → published ad
 
 | Case | Automated check | Actual rendering requirement |
 | --- | --- | --- |
-| Missing | No image control; event and save remain | Confirm text-first layout in website/Android/iOS |
+| Missing | No image control; event and sharing remain on the website; native Save remains available | Confirm text-first layout in website/Android/iOS |
 | Portrait / landscape | PNG dimensions/CRC/pixels, checksums, localized alt/provenance in actual website renderer | Decode native files, record intrinsic dimensions and all four edge markers; inspect full-size opening |
 | Oversized | 4096×3072 PNG decoded by stdlib zlib with complete rows and CRC | Record native decoding/performance; no inferred memory guarantee |
 | Malformed URL | No unsafe image/link control | Confirm failure feedback does not hide event/actions |

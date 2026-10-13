@@ -56,7 +56,7 @@ The machine-readable [color inventory](discovery-tokens.json) records every colo
 | Component | Website | Native | Required state and sizing |
 | --- | --- | --- | --- |
 | Discovery heading/card | Name, attendance range/time, venue, published admission | Same field order; detail title spans card width | Long EN/PT text wraps; unknown time/admission remains explicit |
-| Primary action/Save | Bordered white; selected dark green/white with `aria-pressed` | Touchable action with accessible selected/disabled state | At least 44 px/points; state is expressed with text/semantics as well as color |
+| Detail actions | Share and reporting buttons; source, booking, map and full-artwork links | Touchable actions; Save/reminder expose accessible selected/disabled state | At least 44 px/points; state is expressed with text/semantics as well as color |
 | Search/input/select | Native HTML controls, visible global focus ring | Platform input/picker and text labels | Keyboard/system-text support; label remains associated with control |
 | Facet/type selector | Checkboxes/selects with preserved query state | Selected facet uses border-colored background and accessibility state | Selected, reset and unavailable choices remain distinguishable |
 | Navigation | Wrapping links and visible language control | Five tabs, two scalable label lines and safe-area space | Active location, every destination reachable; route and large-text checks remain platform-specific |
