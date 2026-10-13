@@ -104,7 +104,7 @@
   </fieldset>
   {% if include.default_kind %}
   <label class="saved-filter-option"><input type="checkbox" class="event-saved-filter"> {% if page_lang == 'pt' %}Eventos guardados{% else %}Saved events{% endif %}</label>
-  <p>{% if page_lang == 'pt' %}Eventos que guardas neste navegador. Não são sincronizados entre dispositivos.{% else %}Events you save in this browser. They do not sync across devices.{% endif %}</p>
+  <p>{% if page_lang == 'pt' %}Eventos que guardas neste navegador. Não são sincronizados entre dispositivos. Os outros filtros também se aplicam; usa o Arquivo para eventos terminados.{% else %}Events you save in this browser. They do not sync across devices. Other filters also apply; use Archive for ended events.{% endif %}</p>
   <p class="saved-filter-status" role="status" aria-live="polite"></p>
   {% endif %}
   <button type="button" class="filter-reset">{% if page_lang == 'pt' %}Limpar filtros{% else %}Reset filters{% endif %}</button>
