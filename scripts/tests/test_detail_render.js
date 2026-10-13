@@ -28,7 +28,7 @@ function render({lang = 'pt', records, id = 'exhibition-one', stored = null, una
     dispatchEvent(event) {if (handlers[event.type]) handlers[event.type](event);},
   };
   const localStorage={getItem() {storageAccesses++; if(unavailableStorage)throw new Error('denied'); return stored;}, setItem(key,value) {storageAccesses++; if(unavailableStorage)throw new Error('denied'); stored=value;},removeItem() {storageAccesses++; if(unavailableStorage)throw new Error('denied'); stored=null;}};
-  const context={document,localStorage,location:{origin:'https://eventosterceira.pt',pathname:lang==='pt'?'/pt/events/':'/events/',search:'?id='+id},navigator:{},Event,history:{length:1},URL,URLSearchParams,EventDiscovery:require('../../assets/js/discovery.js')};
+  const context={document,localStorage,window:{addEventListener(){}},location:{origin:'https://eventosterceira.pt',pathname:lang==='pt'?'/pt/events/':'/events/',search:'?id='+id},navigator:{},Event,history:{length:1},URL,URLSearchParams,EventDiscovery:require('../../assets/js/discovery.js')};
   vm.runInNewContext(fs.readFileSync('assets/js/event-details.js','utf8'),context);
   return {all, detail, stored:()=>stored, locale, storageAccesses:()=>storageAccesses};
 }
@@ -57,10 +57,10 @@ test('missing scalar fields do not deny times or prices in the published program
 });
 
 test('actual navigation script marks exactly the matching discovery destination in EN/PT',()=>{
- for(const prefix of ['', '/pt']) for(const [query,expected] of [['?kind=exhibition&range=all','view'],['?range=today&q=music','explore'],['?kind=event&free=1','explore']]) {
-  const links=[['explore',prefix+'/special/'],['view',prefix+'/special/?kind=exhibition&range=all']].map(([name,path])=>({name,...Object.fromEntries(['pathname','search'].map(key=>[key,new URL(path,'https://eventosterceira.pt')[key]])),attrs:{},setAttribute(key,value){this.attrs[key]=value;}}));
+ for(const prefix of ['', '/pt']) for(const [query,expected] of [['?kind=exhibition&range=all','view'],['?range=today&q=music','today'],['?kind=event&free=1','explore'],['?kind=event&range=today','today'],['?kind=exhibition&range=today','view']]) {
+  const links=[['explore',prefix+'/special/'],['today',prefix+'/special/?range=today'],['view',prefix+'/special/?kind=exhibition&range=all']].map(([name,path])=>({name,...Object.fromEntries(['pathname','search'].map(key=>[key,new URL(path,'https://eventosterceira.pt')[key]])),attrs:{},setAttribute(key,value){this.attrs[key]=value;},removeAttribute(key){delete this.attrs[key];}}));
   const document={documentElement:{lang:prefix?'pt':'en'},createElement:()=>({setAttribute:()=>{}}),dispatchEvent:()=>{},querySelectorAll:selector=>selector==='.site-nav a'?links:[],querySelector:()=>null,getElementById:key=>key==='event-dataset'?{textContent:'[]'}:null,addEventListener:()=>{}};
-  vm.runInNewContext(fs.readFileSync('assets/js/event-details.js','utf8'),{document,localStorage:{getItem:()=>null},location:{origin:'https://eventosterceira.pt',pathname:prefix+'/special/',search:query},Event,URL,URLSearchParams});
+  vm.runInNewContext(fs.readFileSync('assets/js/event-details.js','utf8'),{document,window:{addEventListener(){}},localStorage:{getItem:()=>null},location:{origin:'https://eventosterceira.pt',pathname:prefix+'/special/',search:query},Event,URL,URLSearchParams});
   assert.deepEqual(links.filter(link=>link.attrs['aria-current']==='page').map(link=>link.name),[expected]);
  }
 });

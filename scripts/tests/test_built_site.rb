@@ -36,6 +36,8 @@ end
 home_target_html = File.read(File.join(SITE, 'index.html'))
 ['index.html', 'pt/index.html'].each do |route|
   home_html = File.read(File.join(SITE, route))
+  weekly_heading = route.start_with?('pt/') ? 'Eventos semanais' : 'Weekly events'
+  err(errors, "#{route}: plain Weekly events homepage heading is absent") unless home_html.include?('<h2>' + weekly_heading + '</h2>')
   err(errors, "#{route}: homepage app CTA is absent") unless home_html.include?('id="get-the-app"') && home_html.include?('apps.apple.com') && home_html.include?('play.google.com')
 end
 err(errors, 'homepage standalone navigation requires target classes') unless home_target_html.scan('class="standalone-link"').length >= 4
@@ -135,8 +137,14 @@ html_pages.each do |path|
     err(errors, "#{rel}: bookmark destination is absent from primary navigation") if navigation.match?(/<a (?!class="locale-other")[^>]*href="[^"]*\/saved\/"/)
     err(errors, "#{rel}: primary destinations must be visible without opening a menu") if navigation.match?(/<details|\bhidden\b|aria-hidden="true"/)
     prefix = rel.start_with?('/pt/') ? '/pt' : ''
+    weekly = prefix + '/weekly/'
+    events = prefix + '/special/'
+    places = prefix + '/venues/'
+    err(errors, "#{rel}: Today and Weekly events must precede other discovery destinations") unless navigation.index('href="' + prefix + '/special/?range=today"') && navigation.index('href="' + prefix + '/special/?range=today"') < navigation.index('href="' + weekly + '"') && navigation.index('href="' + weekly + '"') < navigation.index('href="' + events + '"') && navigation.index('href="' + events + '"') < navigation.index('href="' + places + '"')
+    label = prefix.empty? ? 'Weekly events' : 'Eventos semanais'
+    err(errors, "#{rel}: plain Weekly events navigation label is absent") unless navigation.include?('>' + label + '</a>')
     ['/contribute/', '/#get-the-app'].each { |route| err(errors, "#{rel}: secondary destination remains in primary navigation: #{route}") if navigation.include?("href=\"#{prefix + route}\"") }
-    ['/', '/weekly/', '/special/', '/venues/', '/blog/', '/resources/', '/suggest/', '/special/?kind=exhibition&amp;range=all'].each do |route|
+    ['/', '/special/?range=today', '/weekly/', '/special/', '/venues/', '/blog/', '/resources/', '/suggest/', '/special/?kind=exhibition&amp;range=all'].each do |route|
       href = prefix + route
       err(errors, "#{rel}: visible navigation missing #{href}") unless navigation.include?("href=\"#{href}\"") || navigation.include?("href=\"#{href.gsub('&amp;', '&')}\"")
     end
