@@ -61,27 +61,20 @@
     {%- endif -%}
   </label>
   {% endif %}
-  <label class="event-filter-label" for="event-tag-filter">
-    {%- if page_lang == "pt" -%}
-    <span class="visually-hidden">Filtrar por etiqueta</span>
-    <select class="event-tag-filter" id="event-tag-filter" aria-label="Filtrar por etiqueta">
-      <option value="">🏷️ Todas as etiquetas</option>
-      {% for tag in site.data.event_tags %}
-        {%- assign tag_label = tag.label_pt | default: tag.label -%}
-      <option value="{{ tag.slug }}">{{ tag.emoji }} {{ tag_label }}</option>
-      {% endfor %}
-    </select>
-    {%- else -%}
-    <span class="visually-hidden">Filter by tag</span>
-    <select class="event-tag-filter" id="event-tag-filter" aria-label="Filter by tag">
-      <option value="">🏷️ All tags</option>
-      {% for tag in site.data.event_tags %}
-        {%- assign tag_label = tag.label_en | default: tag.label -%}
-      <option value="{{ tag.slug }}">{{ tag.emoji }} {{ tag_label }}</option>
-      {% endfor %}
-    </select>
-    {%- endif -%}
-  </label>
+  <details class="filter-dropdown event-tags-menu" data-empty-label="{% if page_lang == 'pt' %}Todas as etiquetas{% else %}All tags{% endif %}">
+    <summary><span class="filter-summary-text">{% if page_lang == 'pt' %}Todas as etiquetas{% else %}All tags{% endif %}</span></summary>
+    <div class="filter-menu">
+      <fieldset class="filter-choices">
+        <legend class="visually-hidden">{% if page_lang == 'pt' %}Etiquetas{% else %}Tags{% endif %}</legend>
+        <label class="filter-choice"><input type="checkbox" data-facet value="free" data-filter-label="{% if page_lang == 'pt' %}Gratuito{% else %}Free{% endif %}"><span>{% if page_lang == 'pt' %}Gratuito{% else %}Free{% endif %}</span></label>
+        <label class="filter-choice"><input type="checkbox" data-facet value="kid-friendly" data-filter-label="{% if page_lang == 'pt' %}Família{% else %}Family{% endif %}"><span>{% if page_lang == 'pt' %}Família{% else %}Family{% endif %}</span></label>
+        {% for tag in site.data.event_tags %}{% unless tag.slug == 'free' or tag.slug == 'kid-friendly' %}
+          {% if page_lang == 'pt' %}{% assign tag_label = tag.label_pt | default: tag.label %}{% else %}{% assign tag_label = tag.label_en | default: tag.label %}{% endif %}
+        <label class="filter-choice"><input type="checkbox" data-facet value="{{ tag.slug }}" data-filter-label="{{ tag_label | escape }}"><span><span aria-hidden="true">{{ tag.emoji }}</span> {{ tag_label | escape }}</span></label>
+        {% endunless %}{% endfor %}
+      </fieldset>
+    </div>
+  </details>
   {% assign has_angra = false %}{% assign has_praia = false %}{% assign has_other = false %}
   {% for known_event in site.data.special_events %}
     {% if known_event.locality == 'angra' %}{% assign has_angra = true %}{% endif %}
@@ -89,19 +82,20 @@
     {% if known_event.locality == 'other' %}{% assign has_other = true %}{% endif %}
   {% endfor %}
   {% if has_angra or has_praia or has_other %}
-  <label>{% if page_lang == 'pt' %}Localidade{% else %}Locality{% endif %}
-    <select class="event-locality-filter"><option value="">{% if page_lang == 'pt' %}Todas{% else %}All{% endif %}</option>
-      {% if has_angra %}<option value="angra">Angra</option>{% endif %}
-      {% if has_praia %}<option value="praia">Praia</option>{% endif %}
-      {% if has_other %}<option value="other">{% if page_lang == 'pt' %}Outras localidades{% else %}Other localities{% endif %}</option>{% endif %}
-    </select>
-  </label>
-  <p>{% if page_lang == 'pt' %}Apenas localidades confirmadas; a cobertura é parcial.{% else %}Verified localities only; coverage is partial.{% endif %}</p>
+  <details class="filter-dropdown event-locality-filter">
+    <summary><span class="filter-summary-text">{% if page_lang == 'pt' %}Todos os locais{% else %}All places{% endif %}</span></summary>
+    <div class="filter-menu">
+      <fieldset class="filter-choices" aria-describedby="event-locality-note">
+        <legend class="visually-hidden">{% if page_lang == 'pt' %}Local{% else %}Place{% endif %}</legend>
+        <label class="filter-choice"><input type="radio" name="event-locality" data-locality value="" checked data-filter-label="{% if page_lang == 'pt' %}Todos os locais{% else %}All places{% endif %}"><span>{% if page_lang == 'pt' %}Todos os locais{% else %}All places{% endif %}</span></label>
+        {% if has_angra %}<label class="filter-choice"><input type="radio" name="event-locality" data-locality value="angra" data-filter-label="Angra do Heroísmo"><span>Angra do Heroísmo</span></label>{% endif %}
+        {% if has_praia %}<label class="filter-choice"><input type="radio" name="event-locality" data-locality value="praia" data-filter-label="Praia da Vitória"><span>Praia da Vitória</span></label>{% endif %}
+        {% if has_other %}<label class="filter-choice"><input type="radio" name="event-locality" data-locality value="other" data-filter-label="{% if page_lang == 'pt' %}Outros locais{% else %}Other places{% endif %}"><span>{% if page_lang == 'pt' %}Outros locais{% else %}Other places{% endif %}</span></label>{% endif %}
+      </fieldset>
+      <p class="filter-note" id="event-locality-note">{% if page_lang == 'pt' %}Alguns eventos não têm uma localidade confirmada. Todos os locais incluem esses eventos.{% else %}Some events have no confirmed locality. All places includes them.{% endif %}</p>
+    </div>
+  </details>
   {% endif %}
-  <fieldset><legend>{% if page_lang == 'pt' %}Combinar: todas as opções selecionadas{% else %}Combine: every selected option{% endif %}</legend>
-    <label><input type="checkbox" data-facet value="free"> {% if page_lang == 'pt' %}Gratuito{% else %}Free{% endif %}</label>
-    <label><input type="checkbox" data-facet value="kid-friendly"> {% if page_lang == 'pt' %}Família{% else %}Family{% endif %}</label>
-  </fieldset>
   <button type="button" class="filter-reset">{% if page_lang == 'pt' %}Limpar filtros{% else %}Reset filters{% endif %}</button>
   <p class="result-count" role="status" aria-live="polite"></p>
 </div>
