@@ -54,3 +54,5 @@ per-event generated documents are a possible future payload improvement. A map
 action requires `map_url`; source and booking actions also require published URLs.
 
 Primary navigation displays every destination in normal document flow in both languages. Links wrap into rows at narrow widths, retain at least 44 px targets, and keep the language switch visible.
+
+Saved events is a discovery filter combined with the visible date, type and other facets. Enabling it selects all upcoming dates; Archive exposes ended records. Saved IDs stay in this browser and do not sync across devices. Get the app has its own navigation link. `EventDiscovery.savedIDs(storage)` returns validated bookmark IDs or null for unreadable storage; `matches` accepts savedOnly and savedIDs for conjunctive filtering.

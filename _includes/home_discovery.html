@@ -20,12 +20,12 @@
     {% endif %}
   {% endfor %}
   {% if preview_count == 0 %}<p>{% if page_lang == 'pt' %}Sem eventos publicados. Consulta os eventos semanais.{% else %}No published upcoming events. Browse weekly regulars.{% endif %}</p>{% endif %}
-  <a class="view-all" href="{{ home_prefix | append: '/special/?range=all' | relative_url }}">{% if page_lang == 'pt' %}Explorar todas as datas{% else %}Explore all dates{% endif %}</a>
+  <a class="view-all" href="{{ home_prefix | append: '/special/?range=all' | relative_url }}">{% if page_lang == 'pt' %}Eventos de todas as datas{% else %}Events on all dates{% endif %}</a>
 </section>
 <section class="home-secondary"><h2>{% if page_lang == 'pt' %}Semanal{% else %}Weekly regulars{% endif %}</h2>
  <p>{% if page_lang == 'pt' %}Horários recorrentes: confirma com o local antes de sair.{% else %}Recurring schedules: confirm with the venue before setting out.{% endif %}</p>
  <a class="standalone-link" href="{{ home_prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Ver eventos semanais{% else %}Browse weekly regulars{% endif %}</a>
- <h2>{% if page_lang == 'pt' %}Em exposição{% else %}On View{% endif %}</h2>
+ <h2>{% if page_lang == 'pt' %}Exposições{% else %}Exhibitions{% endif %}</h2>
  <a class="standalone-link" href="{{ home_prefix | append: '/special/?kind=exhibition&range=all' | relative_url }}">{% if page_lang == 'pt' %}Ver exposições{% else %}Browse exhibitions{% endif %}</a>
 </section>
 <section class="homepage-intro">
@@ -45,4 +45,4 @@
  </ul>
  <a class="standalone-link" href="{{ home_prefix | append: '/blog/' | relative_url }}">{% if page_lang == 'pt' %}Todos os artigos{% else %}All posts{% endif %}</a>
 </section>
-<section class="app-store-section"><h2>{% if page_lang == 'pt' %}Leva a Terceira contigo{% else %}Take Terceira with you{% endif %}</h2>{% include app_store_badges.html %}</section>
+<section class="app-store-section" id="get-the-app"><h2>{% if page_lang == 'pt' %}Leva a Terceira contigo{% else %}Take Terceira with you{% endif %}</h2>{% include app_store_badges.html %}</section>

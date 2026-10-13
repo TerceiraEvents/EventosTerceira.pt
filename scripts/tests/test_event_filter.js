@@ -36,7 +36,7 @@ function stubElement() {
 }
 
 // Stub search bar + card sibling chain. withRange=false omits the range select.
-function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = '2026-10-12', withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null, withFacets = false, withLocality = false, setFacets = null, setLocality = null, details = false, resetFilters = false }) {
+function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = '2026-10-12', withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null, withFacets = false, withLocality = false, setFacets = null, setLocality = null, details = false, resetFilters = false, withSaved = false, storedSaved = {}, setSaved = null, savedChange = null }) {
   const bar = {
     getAttribute: (k) => k === 'data-default-range' ? defaultRange : k === 'data-default-kind' ? defaultKind : null,
     parentElement: null,
@@ -48,6 +48,8 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
       if (sel === '.event-kind-filter') return withKind ? kindSelect : null;
       if (sel === '.event-locality-filter') return withLocality ? localitySelect : null;
       if (sel === '.filter-reset') return reset;
+      if (sel === '.event-saved-filter') return withSaved ? savedSelect : null;
+      if (sel === '.saved-filter-status') return savedStatus;
       if (sel === '.result-count') return resultCount;
       return null;
     },
@@ -55,6 +57,7 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   bar.querySelectorAll = () => withFacets ? facets : [];
   const facets = ['free','kid-friendly'].map(value => ({...stubElement(), value, checked:false}));
   const localitySelect = stubElement(), reset = stubElement(), resultCount = stubElement();
+  const savedSelect = { ...stubElement(), checked: false }, savedStatus = stubElement(), documentListeners = {};
   const input = stubElement();
   input.value = query;
   const tagSelect = stubElement();
@@ -67,6 +70,7 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
 
   const cardNodes = cards.map((c) => ({
     attrs: {
+      'data-event-id': c.id || '',
       'data-event-name': c.name,
       'data-event-date': c.start,
       ...(c.end === 'missing' ? {} : { 'data-event-end-date': c.end || c.start }),
@@ -100,14 +104,14 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   let currentURL = '/special/'+search;
   const sandbox = {
     Date: TestDate,
-    window: { location: { search, pathname:'/special/' }, history:{replaceState(data,title,url) {currentURL=url;}}, __SITE_I18N: {} },
+    window: { localStorage: { getItem: () => typeof storedSaved === 'string' ? storedSaved : JSON.stringify(storedSaved) }, addEventListener() {}, location: { search, pathname:'/special/' }, history:{replaceState(data,title,url) {currentURL=url;}}, __SITE_I18N: {} },
     URLSearchParams,
     document: {
       querySelectorAll: (sel) => (sel === '.event-search-bar' ? [bar] : []),
       querySelector: selector => selector === '.locale-other' ? locale : null,
       documentElement:{lang:'en'},
       getElementById: () => stubElement(),
-      addEventListener() {},
+      addEventListener(type, handler) { documentListeners[type] = handler; },
     },
   };
   vm.createContext(sandbox);
@@ -129,6 +133,8 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   }
   if (setLocality !== null && withLocality) { localitySelect.value=setLocality; for (const fn of localitySelect.listeners.change || []) fn(); }
   if (setFacets !== null && withFacets) { for (const facet of facets) facet.checked=setFacets.includes(facet.value); for (const fn of facets[0].listeners.change || []) fn(); }
+  if (setSaved !== null && withSaved) { savedSelect.checked = setSaved; for (const fn of savedSelect.listeners.change || []) fn(); }
+  if (savedChange !== null) { storedSaved = savedChange; if (documentListeners['saved-events-change']) documentListeners['saved-events-change'](); }
   if (resetFilters) for (const fn of reset.listeners.click || []) fn();
   const visible = {};
   for (const card of cardNodes) visible[card.attrs['data-event-name']] = card.style.display !== 'none';
@@ -278,4 +284,19 @@ test('actual page respects all and exhibition defaults and restores them on rese
   assert.deepEqual(page.visible,{Event:false,Exhibition:true});
   assert.equal(new URLSearchParams(page.url.split('?')[1]).get('kind'),'exhibition');
   assert.equal(new URLSearchParams(page.url.split('?')[1]).get('range'),'month');
+});
+
+test('actual Saved events filter uses persisted IDs, combines facets and preserves URL/locale state',()=>{
+ const cards=[{id:'saved',name:'Saved free',start:daysFromToday(40),tags:'free',locality:'angra'},{id:'unsaved',name:'Unsaved free',start:daysFromToday(40),tags:'free',locality:'angra'},{id:'wrong-place',name:'Saved elsewhere',start:daysFromToday(40),tags:'free',locality:'praia'}];
+ const page=runPage({cards,defaultRange:'week',withSaved:true,storedSaved:{saved:{name:'Saved free'},'wrong-place':{name:'Saved elsewhere'}},setSaved:true,withFacets:true,setFacets:['free'],withLocality:true,setLocality:'angra',details:true});
+ assert.deepEqual(page.visible,{'Saved free':true,'Unsaved free':false,'Saved elsewhere':false});
+ assert(page.url.includes('saved=1') && page.url.includes('range=all'));
+ assert(page.localeHref.includes('saved=1'));
+ assert.deepEqual(runPage({cards,withSaved:true,storedSaved:{saved:{name:'Saved free'}},setSaved:true,savedChange:{}}),{'Saved free':false,'Unsaved free':false,'Saved elsewhere':false});
+ assert.deepEqual(runPage({cards,withSaved:true,storedSaved:{saved:{name:'Saved free'}},setSaved:true,resetFilters:true}),{'Saved free':true,'Unsaved free':true,'Saved elsewhere':true});
+});
+test('unreadable saved storage does not become a successful empty read',()=>{
+ assert.equal(require('../../assets/js/discovery.js').savedIDs({getItem:()=>'{invalid'}),null);
+ assert.equal(require('../../assets/js/discovery.js').savedIDs({getItem:()=>{throw new Error('denied');}}),null);
+ assert.deepEqual(require('../../assets/js/discovery.js').savedIDs({getItem:()=>null}),[]);
 });

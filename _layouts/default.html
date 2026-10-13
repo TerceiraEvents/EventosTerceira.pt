@@ -63,15 +63,15 @@
     <nav class="site-nav" aria-label="{% if page_lang == 'pt' %}Navegação principal{% else %}Primary navigation{% endif %}">
       <div class="container">
         <a href="{{ prefix | append: '/' | relative_url }}">{% if page_lang == 'pt' %}Início{% else %}Home{% endif %}</a>
-        <a href="{{ prefix | append: '/special/' | relative_url }}">{% if page_lang == 'pt' %}Explorar{% else %}Explore{% endif %}</a>
+        <a href="{{ prefix | append: '/special/' | relative_url }}">{% if page_lang == 'pt' %}Eventos{% else %}Events{% endif %}</a>
         <a href="{{ prefix | append: '/venues/' | relative_url }}">{% if page_lang == 'pt' %}Locais{% else %}Places{% endif %}</a>
         <a href="{{ prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Semanal{% else %}Weekly regulars{% endif %}</a>
-        <a href="{{ prefix | append: '/special/?kind=exhibition&range=all' | relative_url }}">{% if page_lang == 'pt' %}Em exposição{% else %}On View{% endif %}</a>
-        <a href="{{ prefix | append: '/saved/' | relative_url }}">{% if page_lang == 'pt' %}Guardados{% else %}My Plans{% endif %}</a>
+        <a href="{{ prefix | append: '/special/?kind=exhibition&range=all' | relative_url }}">{% if page_lang == 'pt' %}Exposições{% else %}Exhibitions{% endif %}</a>
         <a href="{{ prefix | append: '/blog/' | relative_url }}">{% if page_lang == 'pt' %}Blogue{% else %}Blog{% endif %}</a>
         <a href="{{ prefix | append: '/resources/' | relative_url }}">{% if page_lang == 'pt' %}Recursos{% else %}Resources{% endif %}</a>
         <a href="{{ prefix | append: '/suggest/' | relative_url }}">{% if page_lang == 'pt' %}Sugerir evento{% else %}Suggest an event{% endif %}</a>
         <a href="{{ prefix | append: '/contribute/' | relative_url }}">{% if page_lang == 'pt' %}Contribuir{% else %}Contribute{% endif %}</a>
+        <a href="{{ prefix | append: '/#get-the-app' | relative_url }}">{% if page_lang == 'pt' %}Obter a aplicação{% else %}Get the app{% endif %}</a>
         {% include locale_switcher.html %}
       </div>
     </nav>
@@ -336,6 +336,8 @@
       var rangeSelect = bar.querySelector('.event-range-filter');
       var kindSelect = bar.querySelector('.event-kind-filter');
       var localitySelect = bar.querySelector('.event-locality-filter');
+      var savedSelect = bar.querySelector('.event-saved-filter');
+      var savedStatus = bar.querySelector('.saved-filter-status');
       var facets = bar.querySelectorAll ? bar.querySelectorAll('[data-facet]') : [];
       var reset = bar.querySelector('.filter-reset');
       var resultCount = bar.querySelector('.result-count');
@@ -381,9 +383,13 @@
         var kind = kindSelect ? kindSelect.value : 'all';
         var selectedTags = Array.prototype.filter.call(facets, function(f) { return f.checked; }).map(function(f) { return f.value; });
         if (selectedTag) selectedTags.push(selectedTag);
+        var savedIDs = savedSelect ? EventDiscovery.savedIDs(window.localStorage) : [];
+        if (savedSelect) savedSelect.disabled = savedIDs === null && !savedSelect.checked;
+        if (savedStatus) savedStatus.textContent = savedIDs === null ? (document.documentElement.lang === 'pt' ? 'Não foi possível ler os eventos guardados. Tenta novamente ou limpa este filtro.' : 'Saved events could not be read. Retry or clear this filter.') : '';
         var visibleCount = 0;
         cards.forEach(function(card, i) {
           var event = {
+            id: card.getAttribute('data-event-id'),
             name: card.getAttribute('data-event-name'),
             venue: card.getAttribute('data-event-venue'),
             description: card.getAttribute('data-event-description'),
@@ -398,7 +404,9 @@
             tags: selectedTags,
             range: rangeSelect && event.date ? range : null,
             kind: kindSelect ? kind : null,
-            locality: localitySelect ? localitySelect.value : null
+            locality: localitySelect ? localitySelect.value : null,
+            savedOnly: savedSelect && savedSelect.checked,
+            savedIDs: savedIDs
           });
           card.style.display = show ? '' : 'none';
           if (show) visibleCount++;
@@ -408,6 +416,7 @@
         if (window.history && window.history.replaceState) {
           var params = new URLSearchParams();
           if (query) params.set('q', input.value.trim());
+          if (savedSelect && savedSelect.checked) params.set('saved', '1');
           if (selectedTag) params.set('tag', selectedTag);
           if (rangeSelect) params.set('range', range);
           if (kindSelect) params.set('kind', kind);
@@ -424,8 +433,9 @@
       }
 
       if (localitySelect) localitySelect.addEventListener('change', applyFilters);
+      if (savedSelect) { savedSelect.addEventListener('change', function() { if (savedSelect.checked && rangeSelect) rangeSelect.value = 'all'; applyFilters(); }); document.addEventListener('saved-events-change', applyFilters); window.addEventListener('storage', applyFilters); }
       Array.prototype.forEach.call(facets, function(f) { f.addEventListener('change', applyFilters); });
-      if (reset) reset.addEventListener('click', function() { if (input) input.value = ''; if (tagSelect) tagSelect.value = ''; if (localitySelect) localitySelect.value = ''; if (kindSelect) kindSelect.value = defaultKind; if (rangeSelect) rangeSelect.value = defaultRange; Array.prototype.forEach.call(facets, function(f) { f.checked = false; }); applyFilters(); });
+      if (reset) reset.addEventListener('click', function() { if (input) input.value = ''; if (savedSelect) savedSelect.checked = false; if (tagSelect) tagSelect.value = ''; if (localitySelect) localitySelect.value = ''; if (kindSelect) kindSelect.value = defaultKind; if (rangeSelect) rangeSelect.value = defaultRange; Array.prototype.forEach.call(facets, function(f) { f.checked = false; }); applyFilters(); });
       if (input) input.addEventListener('input', applyFilters);
       if (tagSelect) tagSelect.addEventListener('change', applyFilters);
       if (rangeSelect) rangeSelect.addEventListener('change', applyFilters);
@@ -440,6 +450,7 @@
         var params = new URLSearchParams(window.location.search);
         var q = params.get('q');
         if (localitySelect) localitySelect.value = params.get('locality') || '';
+        if (savedSelect) savedSelect.checked = params.get('saved') === '1';
         var selectedFacets = (params.get('tags') || '').split(',');
         Array.prototype.forEach.call(facets, function(f) { f.checked = selectedFacets.indexOf(f.value) !== -1; });
         if (q && input) input.value = q;

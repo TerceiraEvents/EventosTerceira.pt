@@ -33,8 +33,6 @@ target_css = File.read(File.join(SITE, 'assets/css/style.css'))
   valid = rule_body && %w[height width].all? { |axis| rule_body.match?(/min-#{axis}:\s*44px/) } && rule_body.match?(/display:\s*inline-flex/)
   err(errors, "standalone .#{name} requires 44px width and height in normal flow") unless valid
 end
-saved_rule = target_css.match(/\.event-summary > a\s*\{([^}]+)\}/m)
-err(errors, 'saved primary link requires a 44px normal-flow target') unless saved_rule && saved_rule[1].include?('min-height: 44px') && saved_rule[1].include?('display: flex')
 home_target_html = File.read(File.join(SITE, 'index.html'))
 err(errors, 'homepage standalone navigation requires target classes') unless home_target_html.scan('class="standalone-link"').length >= 4
 plans_source = File.read(File.join(SITE, 'assets/js/plans.js'))
@@ -61,7 +59,7 @@ if File.exist?(special_path)
     en_start = special_html.index(exhibition_marker)
     en_end = special_html.index('<script type="application/ld+json">', en_start)
     card = special_html[en_start...en_end]
-    err(errors, "/special/: Marcos exhibition missing its English status") unless card.include?("On view until 31 December")
+    err(errors, "/special/: Marcos exhibition missing its English status") unless card.include?("Exhibition until 31 December")
     err(errors, "/special/: Marcos exhibition renders an attendance time") if card.include?('class="event-attendance"')
     jsonld_end = special_html.index("</script>", en_end)
     jsonld = special_html[en_end...jsonld_end]
@@ -75,7 +73,7 @@ if File.exist?(pt_special_path)
   if pt_html.include?('data-event-kind="exhibition"') && pt_html.include?("Milestones of Autonomy: from the Administrative Board to the First Regional Government")
     start = pt_html.index('data-event-kind="exhibition"')
     finish = pt_html.index('<script type="application/ld+json">', start)
-    err(errors, "/pt/special/: Marcos exhibition missing its Portuguese status") unless pt_html[start...finish].include?("Em exposição até 31 de dezembro")
+    err(errors, "/pt/special/: Marcos exhibition missing its Portuguese status") unless pt_html[start...finish].include?("Exposição até 31 de dezembro")
   end
 end
 
@@ -112,11 +110,20 @@ puts "Found #{html_pages.size} HTML page(s) under #{SITE}/"
 html_pages.each do |path|
   rel = path.sub(%r{^#{SITE}/?}, "/")
   html = File.read(path)
+  if ['/index.html', '/pt/index.html', '/saved/index.html', '/pt/saved/index.html'].include?(rel)
+    labels = rel.start_with?('/pt/') ? ['Eventos', 'Exposições', 'Obter a aplicação'] : ['Events', 'Exhibitions', 'Get the app']
+    labels.each { |label| err(errors, "#{rel}: literal navigation label #{label} is absent") unless html.match?(/<a[^>]*>#{Regexp.escape(label)}<\/a>/) }
+    if rel.include?('/saved/')
+      purpose = rel.start_with?('/pt/') ? 'Eventos que guardas neste navegador.' : 'Events you save in this browser.'
+      err(errors, "#{rel}: browser-local Saved purpose is absent") unless html.include?(purpose)
+    end
+  end
   navigation = html[/<nav class="site-nav"[^>]*>[\s\S]*?<\/nav>/]
   if navigation
+    err(errors, "#{rel}: Saved events belongs in filters, not navigation") if navigation.match?(/<a (?!class="locale-other")[^>]*href="[^"]*\/saved\/"/)
     err(errors, "#{rel}: primary destinations must be visible without opening a menu") if navigation.match?(/<details|\bhidden\b|aria-hidden="true"/)
     prefix = rel.start_with?('/pt/') ? '/pt' : ''
-    ['/', '/weekly/', '/special/', '/venues/', '/blog/', '/contribute/', '/resources/', '/saved/', '/suggest/', '/special/?kind=exhibition&amp;range=all'].each do |route|
+    ['/', '/weekly/', '/special/', '/venues/', '/blog/', '/contribute/', '/resources/', '/suggest/', '/special/?kind=exhibition&amp;range=all'].each do |route|
       href = prefix + route
       err(errors, "#{rel}: visible navigation missing #{href}") unless navigation.include?("href=\"#{href}\"") || navigation.include?("href=\"#{href.gsub('&amp;', '&')}\"")
     end

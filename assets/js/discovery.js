@@ -29,13 +29,22 @@
   function normalize(s) { return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
   function matches(event, filters, now) {
     var tags = event.tags || [];
-    return (!filters.range || inRange(event.date, event.end_date, filters.range, now)) &&
+    return (!filters.savedOnly || (filters.savedIDs || []).indexOf(event.id) !== -1) &&
+      (!filters.range || inRange(event.date, event.end_date, filters.range, now)) &&
       (!filters.kind || filters.kind === 'all' || (event.kind || 'event') === filters.kind) &&
       (!filters.locality || event.locality === filters.locality) &&
       (filters.tags || []).every(function(tag) { return tags.indexOf(tag) !== -1; }) &&
       (!filters.query || normalize([event.name, event.venue, event.description].join(' ')).indexOf(normalize(filters.query)) !== -1);
   }
-  var api = {today: today, add: add, windowFor: windowFor, inRange: inRange, normalize: normalize, matches: matches};
+  /** Return persisted bookmark IDs, or null when browser storage is unreadable. */
+  function savedIDs(storage) {
+    try {
+      var saved = JSON.parse(storage.getItem('terceira-plans-v1') || '{}');
+      if (!saved || Array.isArray(saved) || typeof saved !== 'object' || Object.keys(saved).some(function(id) { return !saved[id] || typeof saved[id].name !== 'string'; })) return null;
+      return Object.keys(saved);
+    } catch (error) { return null; }
+  }
+  var api = {today: today, add: add, windowFor: windowFor, inRange: inRange, normalize: normalize, matches: matches, savedIDs: savedIDs};
   if (typeof module !== 'undefined') module.exports = api;
   root.EventDiscovery = api;
 })(typeof window === 'undefined' ? globalThis : window);

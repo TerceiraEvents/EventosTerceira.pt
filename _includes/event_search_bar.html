@@ -102,6 +102,11 @@
     <label><input type="checkbox" data-facet value="free"> {% if page_lang == 'pt' %}Gratuito{% else %}Free{% endif %}</label>
     <label><input type="checkbox" data-facet value="kid-friendly"> {% if page_lang == 'pt' %}Família{% else %}Family{% endif %}</label>
   </fieldset>
+  {% if include.default_kind %}
+  <label class="saved-filter-option"><input type="checkbox" class="event-saved-filter"> {% if page_lang == 'pt' %}Eventos guardados{% else %}Saved events{% endif %}</label>
+  <p>{% if page_lang == 'pt' %}Eventos que guardas neste navegador. Não são sincronizados entre dispositivos.{% else %}Events you save in this browser. They do not sync across devices.{% endif %}</p>
+  <p class="saved-filter-status" role="status" aria-live="polite"></p>
+  {% endif %}
   <button type="button" class="filter-reset">{% if page_lang == 'pt' %}Limpar filtros{% else %}Reset filters{% endif %}</button>
   <p class="result-count" role="status" aria-live="polite"></p>
 </div>

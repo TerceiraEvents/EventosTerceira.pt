@@ -26,6 +26,6 @@
   </div>
 {% else %}
   <div class="event-listing-status">
-    {% if page_lang == "pt" %}Em exposição até {{ status_end_parts[2] | plus: 0 }} de {{ status_months[status_end_month_index] }}{% else %}On view until {{ status_end_parts[2] | plus: 0 }} {{ status_months[status_end_month_index] }}{% endif %}
+    {% if page_lang == "pt" %}Exposição até {{ status_end_parts[2] | plus: 0 }} de {{ status_months[status_end_month_index] }}{% else %}Exhibition until {{ status_end_parts[2] | plus: 0 }} {{ status_months[status_end_month_index] }}{% endif %}
   </div>
 {% endif %}

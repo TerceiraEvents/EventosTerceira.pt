@@ -3,7 +3,7 @@
   var pt = document.documentElement.lang === 'pt', prefix = pt ? '/pt' : '';
   function t(en, po) { return pt ? po : en; }
   document.querySelectorAll('.site-nav a').forEach(function(a) {
-    if (a.pathname !== location.pathname) return;
+    if (a.hash || a.pathname !== location.pathname) return;
     if (/\/special\/$/.test(location.pathname)) {
       var onView = new URLSearchParams(location.search).get('kind') === 'exhibition';
       if ((new URLSearchParams(a.search).get('kind') === 'exhibition') !== onView) return;
@@ -31,7 +31,7 @@
       recovery.addEventListener('click', function() {
         try { localStorage.removeItem(key); saved = {}; invalidSaved = false; storageOK = true; }
         catch (err) { storageOK = false; }
-        renderSaved(); update();
+        update();
       });
     }
     if (recovery) recovery.hidden = !invalidSaved;
@@ -47,6 +47,7 @@
       b.textContent = invalidSaved ? t('Clear unreadable saved data before saving', 'Limpa os dados guardados ilegíveis antes de guardar') : selected ? t('Unsave', 'Remover dos guardados') : t('Save', 'Guardar');
     });
     feedback();
+    document.dispatchEvent(new Event('saved-events-change'));
   }
   var records = [], data = document.getElementById('event-dataset');
   if (data) { try { records = JSON.parse(data.textContent); } catch (err) { el('p', t('Event data is unavailable. Reload this page to try again.', 'Dados indisponíveis. Recarrega a página para tentar novamente.'), document.querySelector('main')); } }
@@ -56,12 +57,12 @@
   function renderDetail() {
     var target = document.getElementById('event-detail'); if (!target) return;
     var id = new URLSearchParams(location.search).get('id'), event = records.find(function(e) { return e.id === id; });
-    if (!event) { el('h2',t('Event unavailable','Evento indisponível'),target); el('p',t('This link does not match a published record. It has not opened another event.','Este link não corresponde a um registo publicado.'),target); action(t('Browse events','Explorar eventos'),prefix+'/special/?range=all',target); return; }
+    if (!event) { el('h2',t('Event unavailable','Evento indisponível'),target); el('p',t('This link does not match a published record. It has not opened another event.','Este link não corresponde a um registo publicado.'),target); action(t('Events','Eventos'),prefix+'/special/?range=all',target); return; }
     var name = field(event,'name'); document.title = name + ' | Terceira Events';
     el('h2',name,target);
     if ((event.end_date || event.date) < EventDiscovery.today()) el('p',t('This event has ended.','Este evento terminou.'),target);
     if (event.status === 'cancelled') el('p',t('Cancelled','Cancelado'),target);
-    el('p',event.kind === 'exhibition' ? t('On View','Em exposição') : t('Dated event','Evento com data'),target);
+    el('p',event.kind === 'exhibition' ? t('Exhibition','Exposição') : t('Dated event','Evento com data'),target);
     el('p',event.date + (event.end_date && event.end_date !== event.date ? ' – ' + event.end_date : '') + ' · Atlantic/Azores',target);
     el('p', event.kind === 'exhibition' ? (field(event,'visiting_hours') || t('Check visiting hours with the venue.','Confirma o horário de visita com o local.')) : (event.time || t('See details or check with the organizer for times.','Consulta os detalhes ou confirma os horários com a organização.')),target);
     el('p',field(event,'venue'),target); el('p',field(event,'address'),target);
@@ -84,24 +85,8 @@
     var share=el('button',t('Share link','Partilhar link'),actions); share.type='button';
     share.addEventListener('click',function() { var url=location.origin+prefix+'/events/?id='+encodeURIComponent(id); if (navigator.share) navigator.share({title:name,url:url}).catch(function() {}); else { var a=el('a',url,actions); a.href=url; } });
     var back=el('button',t('Back to results','Voltar aos resultados'),target); back.className='detail-link'; back.type='button'; back.addEventListener('click',function() { if (document.referrer && new URL(document.referrer).origin===location.origin && history.length>1) history.back(); else location.href=prefix+'/special/?range=all'; });
-    action(t('Explore events','Explorar eventos'),prefix+'/special/?range=all',target);
+    action(t('Events','Eventos'),prefix+'/special/?range=all',target);
     var locale=document.querySelector('.locale-other'); if (locale) locale.href=(pt?'':'/pt')+'/events/?id='+encodeURIComponent(id);
-  }
-  function renderSaved() {
-    var target=document.getElementById('saved-events'); if (!target) return;
-    target.replaceChildren(); var ids=Object.keys(saved);
-    if (!ids.length) el('p',t('No saved events. Explore events and choose Save.','Sem eventos guardados. Explora os eventos e escolhe Guardar.'),target);
-    var sorted=ids.map(function(id) { return records.find(function(e) {return e.id===id;}) || {id:id,name:saved[id].name,missing:true}; });
-    sorted.sort(function(a,b) { var current=EventDiscovery.today(); var da=a.kind==='exhibition' ? a.end_date : ((a.end_date || a.date)>=current && a.date<current ? current : a.date); var db=b.kind==='exhibition' ? b.end_date : ((b.end_date || b.date)>=current && b.date<current ? current : b.date); return String(da || '9999').localeCompare(String(db || '9999')); });
-    sorted.forEach(function(e) {
-      var item=el('article','',target); item.className='special-event event-summary';
-      action(field(e,'name') || e.id,prefix+'/events/?id='+encodeURIComponent(e.id),item);
-      el('p',e.missing ? t('Record unavailable','Registo indisponível') : (e.kind==='exhibition' ? t('On View until ','Em exposição até ') + (e.end_date || e.date) : e.date + (e.end_date && e.end_date!==e.date ? ' – '+e.end_date : '') + (e.time ? ' · '+e.time : '')),item);
-      if (!e.missing && e.venue) el('p',field(e,'venue'),item);
-      if (!e.missing && (e.end_date || e.date)<EventDiscovery.today()) el('p',t('Ended','Terminado'),item);
-      if (e.status==='cancelled') el('p',t('Cancelled','Cancelado'),item);
-      saveButton(e.id,field(e,'name'),item);
-    });
   }
   document.addEventListener('click',function(e) {
     var b=e.target.closest('[data-save-id]'); if (!b || !b.dataset.saveId) return;
@@ -109,7 +94,7 @@
     var id=b.dataset.saveId;
     if (saved[id]) delete saved[id]; else saved[id]={name:b.dataset.saveName};
     if (!invalidSaved) { try { localStorage.setItem(key,JSON.stringify(saved)); storageOK=true; } catch (err) { storageOK=false; } }
-    renderSaved(); update();
+    update();
   });
-  renderDetail(); renderSaved(); update();
+  renderDetail(); update();
 })();
