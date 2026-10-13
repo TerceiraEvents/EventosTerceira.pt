@@ -132,3 +132,22 @@ test('actual EN/PT detail has no browser saving and never accesses stored data',
   assert.equal(page.stored(),'{"retained":{"name":"Existing bookmark"}}');
  }
 });
+
+for(const lang of ['en','pt']) test(`actual ${lang} artwork keeps its reserved frame during loading and failure`,()=>{
+ const record=artworkFixtures[0];
+ const page=render({lang,records:[record],id:record.id});
+ const frame=page.all().find(node=>node.className==='detail-artwork');
+ assert(frame,'artwork reserves a frame before image decoding');
+ const image=page.all().find(node=>node.tag==='img');
+ assert.equal(image.parent,frame);
+ image.listeners.error();
+ assert(page.all().includes(frame),'failure retains the reserved frame');
+ assert(!page.all().some(node=>node.tag==='img'));
+ assert(frame.children.some(node=>node.textContent===(lang==='pt'?'Cartaz indisponível. A informação está acima.':'Artwork unavailable. Event information remains above.')));
+ assert(page.all().some(node=>node.textContent===(lang==='pt'?'Partilhar link':'Share link')));
+});
+test('production artwork frame has bounded reserved height and uncropped image fit',()=>{
+ const css=fs.readFileSync('assets/css/style.css','utf8');
+ assert.match(css,/\.detail-artwork\s*\{[^}]*height:\s*clamp\(220px,\s*60vh,\s*480px\)/);
+ assert.match(css,/\.detail-artwork img\s*\{[^}]*width:\s*100%;[^}]*height:\s*100%;[^}]*object-fit:\s*contain/);
+});
