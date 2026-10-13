@@ -71,7 +71,6 @@
   {% endif %}
   <div class="event-venue">{{ event_venue | escape }}</div>
   {% if event.price %}<div>{{ event.price | escape }}</div>{% elsif event_tags contains 'free' %}<div>{% if page_lang == 'pt' %}Gratuito{% else %}Free{% endif %}</div>{% endif %}
-  <button class="save-event" type="button" data-save-id="{{ event.id }}" data-save-name="{{ event_name | escape }}" aria-pressed="false">{% if page_lang == 'pt' %}Guardar{% else %}Save{% endif %}</button>
  </div>
 </article>
 

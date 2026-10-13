@@ -5,6 +5,7 @@ const vm = require('node:vm');
 
 function render({lang = 'pt', records, id = 'exhibition-one', stored = null, unavailableStorage = false}) {
   const handlers = {}, roots = [];
+  let storageAccesses = 0;
   function node(tag) {
     return {tag, textContent:'', children:[], dataset:{}, attrs:{}, listeners:{}, className:'',
       appendChild(child) { this.children.push(child); child.parent=this; },
@@ -12,14 +13,13 @@ function render({lang = 'pt', records, id = 'exhibition-one', stored = null, una
       remove() {this.parent.children=this.parent.children.filter(child=>child!==this);},
       setAttribute(key,value) {this.attrs[key]=value;},
       addEventListener(type,handler) {this.listeners[type]=handler;},
-      closest(selector) {return selector==='[data-save-id]' && this.dataset.saveId ? this : null;},
       click() {if(this.listeners.click) this.listeners.click(); if(handlers.click) handlers.click({target:this});},
     };
   }
   const main=node('main'), detail=node('div'),  locale=node('a');
   main.appendChild(detail); roots.push(main,locale);
   function all() {const result=[]; function visit(n) {result.push(n); n.children.forEach(visit);} roots.forEach(visit); return result;}
-  function matches(n,selector) {return selector==='main' ? n===main : selector==='[data-save-id]' ? !!n.dataset.saveId : selector.startsWith('.') ? n.className.split(' ').includes(selector.slice(1)) : false;}
+  function matches(n,selector) {return selector==='main' ? n===main : selector.startsWith('.') ? n.className.split(' ').includes(selector.slice(1)) : false;}
   const document={documentElement:{lang},referrer:'',createElement:node,
     querySelector(selector) {if(selector==='.locale-other')return locale; return all().find(n=>matches(n,selector)) || null;},
     querySelectorAll(selector) {return all().filter(n=>matches(n,selector));},
@@ -27,10 +27,10 @@ function render({lang = 'pt', records, id = 'exhibition-one', stored = null, una
     addEventListener(type,handler) {handlers[type]=handler;},
     dispatchEvent(event) {if (handlers[event.type]) handlers[event.type](event);},
   };
-  const localStorage={getItem() {if(unavailableStorage)throw new Error('denied'); return stored;}, setItem(key,value) {if(unavailableStorage)throw new Error('denied'); stored=value;},removeItem() {if(unavailableStorage)throw new Error('denied'); stored=null;}};
+  const localStorage={getItem() {storageAccesses++; if(unavailableStorage)throw new Error('denied'); return stored;}, setItem(key,value) {storageAccesses++; if(unavailableStorage)throw new Error('denied'); stored=value;},removeItem() {storageAccesses++; if(unavailableStorage)throw new Error('denied'); stored=null;}};
   const context={document,localStorage,location:{origin:'https://eventosterceira.pt',pathname:lang==='pt'?'/pt/events/':'/events/',search:'?id='+id},navigator:{},Event,history:{length:1},URL,URLSearchParams,EventDiscovery:require('../../assets/js/discovery.js')};
-  vm.runInNewContext(fs.readFileSync('assets/js/plans.js','utf8'),context);
-  return {all, detail, stored:()=>stored, locale};
+  vm.runInNewContext(fs.readFileSync('assets/js/event-details.js','utf8'),context);
+  return {all, detail, stored:()=>stored, locale, storageAccesses:()=>storageAccesses};
 }
 const exhibition={id:'exhibition-one',kind:'exhibition',date:'2026-10-01',end_date:'2026-12-31',name:'Exhibition',name_pt:'Exposição',visiting_hours:'16:00 to 18:30 during the published programme period',visiting_hours_pt:'das 16h00 às 18h30 durante o período anunciado'};
 
@@ -45,19 +45,6 @@ test('actual PT share fallback preserves locale and exact identity',()=>{
   page.all().find(n=>n.textContent==='Partilhar link').click();
   assert(page.all().some(n=>n.href==='https://eventosterceira.pt/pt/events/?id=exhibition-one'));
 });
-test('invalid saved data has explicit recovery without silently overwriting it',()=>{
-  const page=render({lang:'en',records:[exhibition],stored:'[1,2]'});
-  assert(page.all().some(n=>n.textContent.includes('Saved data is unreadable')));
-  page.all().find(n=>n.dataset.saveId==='exhibition-one').click();
-  assert.equal(page.stored(),'[1,2]');
-  page.all().find(n=>n.textContent==='Clear unreadable saved data').click();
-  assert.equal(page.stored(),null);
-});
-test('actual storage denial remains distinct from malformed saved data',()=>{
- const page=render({lang:'en',records:[exhibition],unavailableStorage:true});
- assert(page.all().some(n=>n.textContent.includes('Browser storage is unavailable')));
- assert(!page.all().some(n=>n.textContent.includes('Saved data is unreadable')));
-});
 test('missing scalar fields do not deny times or prices in the published programme',()=>{
  const event={id:'exhibition-one',kind:'event',date:'2026-10-30',end_date:'2026-10-31',name:'Published programme',description:'30 October opens at 18:00; 31 October opens at 12:00. Tickets cost €3.'};
  const page=render({lang:'en',records:[event]});
@@ -68,20 +55,12 @@ test('missing scalar fields do not deny times or prices in the published program
  assert(text.includes('See details or check with the organizer for times.'));
  assert(text.includes('See details or check with the organizer for prices.'));
 });
-test('unreadable saved data cannot make Save appear persistently pressed',()=>{
- const page=render({lang:'en',records:[exhibition],stored:'[1,2]'});
- const button=page.all().find(n=>n.dataset.saveId==='exhibition-one');
- button.click();
- assert.equal(button.attrs['aria-pressed'],'false');
- assert.equal(button.disabled,true);
- assert.equal(page.stored(),'[1,2]');
-});
 
 test('actual navigation script marks exactly the matching discovery destination in EN/PT',()=>{
  for(const prefix of ['', '/pt']) for(const [query,expected] of [['?kind=exhibition&range=all','view'],['?range=today&q=music','explore'],['?kind=event&free=1','explore']]) {
   const links=[['explore',prefix+'/special/'],['view',prefix+'/special/?kind=exhibition&range=all']].map(([name,path])=>({name,...Object.fromEntries(['pathname','search'].map(key=>[key,new URL(path,'https://eventosterceira.pt')[key]])),attrs:{},setAttribute(key,value){this.attrs[key]=value;}}));
   const document={documentElement:{lang:prefix?'pt':'en'},createElement:()=>({setAttribute:()=>{}}),dispatchEvent:()=>{},querySelectorAll:selector=>selector==='.site-nav a'?links:[],querySelector:()=>null,getElementById:key=>key==='event-dataset'?{textContent:'[]'}:null,addEventListener:()=>{}};
-  vm.runInNewContext(fs.readFileSync('assets/js/plans.js','utf8'),{document,localStorage:{getItem:()=>null},location:{origin:'https://eventosterceira.pt',pathname:prefix+'/special/',search:query},Event,URL,URLSearchParams});
+  vm.runInNewContext(fs.readFileSync('assets/js/event-details.js','utf8'),{document,localStorage:{getItem:()=>null},location:{origin:'https://eventosterceira.pt',pathname:prefix+'/special/',search:query},Event,URL,URLSearchParams});
   assert.deepEqual(links.filter(link=>link.attrs['aria-current']==='page').map(link=>link.name),[expected]);
  }
 });
@@ -108,7 +87,7 @@ test('unavailable artwork retains the exact event and its detail actions in EN/P
   assert(!page.all().some(node=>node.tag==='img'));
   assert(page.all().some(node=>node.textContent.includes(lang==='pt'?'Cartaz indisponível':'Artwork unavailable')));
   assert(page.all().some(node=>node.textContent===record[lang==='pt'?'name_pt':'name']));
-  assert(page.all().some(node=>node.dataset.saveId===record.id));
+  assert(page.all().some(node=>node.textContent===(lang==='pt'?'Partilhar link':'Share link')));
   assert(page.all().some(node=>node.textContent===(lang==='pt'?'Partilhar link':'Share link')));
  }
 });
@@ -118,7 +97,7 @@ test('missing and malformed shared artwork do not create unsafe image controls',
   const page=render({records:[record],id:record.id});
   assert(!page.all().some(node=>node.tag==='img'));
   assert(!page.all().some(node=>String(node.href).startsWith('javascript:')));
-  assert(page.all().some(node=>node.dataset.saveId===record.id));
+  assert(page.all().some(node=>node.textContent==='Partilhar link'));
  }
 });
 test('shared poster has a safe localized full-size link independent of its source page',()=>{
@@ -141,6 +120,15 @@ test('corrupt encoded fixture keeps event and full-size action after the decoder
  image.listeners.error();
  assert(!page.all().some(node=>node.tag==='img'));
  assert(page.all().some(node=>node.textContent===record.name));
- assert(page.all().some(node=>node.dataset.saveId===record.id));
+ assert(page.all().some(node=>node.textContent==='Share link'));
  assert(page.all().some(node=>node.textContent==='Open full artwork'));
+});
+
+test('actual EN/PT detail has no browser saving and never accesses stored data',()=>{
+ for(const lang of ['en','pt']) {
+  const page=render({lang,records:[exhibition],stored:'{"retained":{"name":"Existing bookmark"}}'});
+  assert.equal(page.storageAccesses(),0);
+  assert(!page.all().some(node=>node.dataset.saveId || node.className==='save-event'));
+  assert.equal(page.stored(),'{"retained":{"name":"Existing bookmark"}}');
+ }
 });

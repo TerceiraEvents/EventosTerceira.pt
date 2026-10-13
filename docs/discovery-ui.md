@@ -18,16 +18,14 @@ The static website contains its dataset at publication. Event details do not fet
 another dataset. Publication time is labelled as a site build time, not organizer
 verification. A filter with no matches offers reset/all dates. No published events
 provides weekly browsing. Missing IDs show unavailable, ended records show ended,
-and absent prices/times remain unknown. Saved events filtering uses IDs and fallback titles in
-this browser only; it does not create a notification. Storage failure is announced
-and session changes remain usable. The website does not promise offline availability.
+and absent prices/times remain unknown. The website does not promise offline availability.
 
 ## Accessibility verification checklist
 
 Automated: Azores midnight/DST/device timezone date predicates; exact-ID uniqueness
 and preservation; combined facets; navigation and locale visibility; semantic controls.
 Manual required: EN/PT 390 px and desktop reflow, 200/400% zoom, keyboard navigation,
-visible wrapping navigation, details, saved removal, suggestion dialog, image failures, VoiceOver.
+visible wrapping navigation, details, suggestion dialog, image failures, VoiceOver.
 Native VoiceOver/TalkBack and enlarged system text require real platform runs.
 A component test does not establish WCAG conformance.
 
@@ -45,10 +43,8 @@ when that metadata is unavailable. The live page filter delegates its full
 predicate to `EventDiscovery.matches`; page-level tests cover facet conjunction,
 accented search, locality, date/type URL round trips, locale links, and reset.
 Detail DOM tests execute the actual renderer for EN/PT fields and share URLs.
-Invalid saved data has an explicit clear/recovery action and remains intact until
-that action is chosen. Storage denial has separate feedback.
 
-Details embed the full published dataset, including ended records. Saved URLs point to the discovery filter.
+Details embed the full published dataset, including ended records.
 The uncompressed detail HTML measured 535,876 bytes on 12 October 2026. This allows exact ended-event details without another request;
 per-event generated documents are a possible future payload improvement. A map
 action requires `map_url`; source and booking actions also require published URLs.
@@ -67,15 +63,11 @@ The machine-readable [color inventory](discovery-tokens.json) records every colo
 | Feedback | Status/error paragraph and available action | Polite status/result announcement and Retry | Loading, no matches, absent data and failure use distinct language |
 | Poster | Contain sizing, full-size link, failure paragraph | Contain sizing and full-size link | Alt/provenance and failure policy require cross-platform checks; permission-cleared sample remains open |
 
-Pressed feedback follows the browser/platform control. Website keyboard focus is a 3 px `--focus` outline with 3 px offset. Native touchables use their platform pressed feedback; there is no claim that every native control supplies a desktop keyboard focus treatment. Disabled actions retain an accessible disabled state and an explanation; Saved/reminder read failure must not become a false unselected state. Loading feedback must not prevent usable cached content being read. Website reduced-motion overrides animations, transitions and smooth scrolling. Native navigation animations and reduced-motion behavior need an actual system-setting audit.
+Pressed feedback follows the browser/platform control. Website keyboard focus is a 3 px `--focus` outline with 3 px offset. Native touchables use their platform pressed feedback; there is no claim that every native control supplies a desktop keyboard focus treatment. Disabled actions retain an accessible disabled state and an explanation; native Saved/reminder read failure must not become a false unselected state. Loading feedback must not prevent usable cached content being read. Website reduced-motion overrides animations, transitions and smooth scrolling. Native navigation animations and reduced-motion behavior need an actual system-setting audit.
 
 Run `node scripts/check_discovery_tokens.mjs` to check website token drift and the six declared body/action contrast pairs. Run `node scripts/check_discovery_tokens.mjs /absolute/path/to/TerceiraEventsApp/src/utils/theme.js` to check both source palettes. The optional source is deliberately explicit: CI checks website source and the documented native pairs, and does not fetch another repository at runtime. Run `node --test scripts/tests/test_discovery_tokens.mjs` to exercise drift and insufficient-contrast failures. The checker exports `contrast(foreground, background)` for six-digit sRGB WCAG ratios and `checkTokens(manifest, css, nativeTheme)` for inventory equality and minimum-contrast validation; the optional native source must be supplied explicitly. This is a synchronization check, not a visual regression or whole-product contrast audit. Token changes update the inventory and require side-by-side EN/PT home/navigation/card/detail screenshots, 320/390 px and desktop, plus Android/iOS enlarged-text checks. The checklist records the devices actually run.
 
 ## State and copy inventory
 
 [Data-state inventory](discovery-states.md) specifies the actual EN/PT feedback, recovery actions, timestamp meaning and unsupported states. It distinguishes the static website publication from native fetch/cache behavior. No new runtime dependency is needed for tokens or state documentation.
-Primary navigation displays every destination in normal document flow in both languages. Links wrap into rows at narrow widths, retain at least 44 px targets, and keep the language switch visible.
-
-Saved events is a discovery filter combined with the visible date, type and other facets. Enabling it selects all upcoming dates; Archive exposes ended records. Saved IDs stay in this browser and do not sync across devices. Get the app has its own navigation link. `EventDiscovery.savedIDs(storage)` returns validated bookmark IDs or null for unreadable storage; `matches` accepts savedOnly and savedIDs for conjunctive filtering.
-
-`EventDiscovery.savedEntries(storage)` returns retained IDs/titles or null for unreadable storage. `publicationIDs(text, count)` validates the page’s complete UUID registry and record count. The Saved filter retains absent bookmarks with their stored title and explicit Unsave, without assigning dates or facets. Unavailable status requires a valid published registry; parse failure produces unconfirmed availability. Rendering does not delete bookmarks.
+Primary navigation displays event discovery destinations in normal document flow in both languages. Contribute and Get the app are footer links. Links wrap into rows at narrow widths, retain at least 44 px targets, and keep the language switch visible.

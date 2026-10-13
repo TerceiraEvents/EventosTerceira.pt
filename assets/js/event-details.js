@@ -10,46 +10,7 @@
     }
     a.setAttribute('aria-current', 'page');
   });
-  var key = 'terceira-plans-v1', saved = {}, storageOK = true, invalidSaved = false, storedRaw = null;
-  try { storedRaw = localStorage.getItem(key); } catch (err) { storageOK = false; }
-  if (storageOK) {
-    try {
-      saved = JSON.parse(storedRaw || '{}');
-      if (!saved || Array.isArray(saved) || typeof saved !== 'object' || Object.keys(saved).some(function(id) { return !saved[id] || typeof saved[id].name !== 'string'; })) throw new Error('Invalid saved data');
-    } catch (err) { saved = {}; invalidSaved = true; }
-  }
   function el(tag, text, parent) { var node = document.createElement(tag); if (text) node.textContent = text; if (parent) parent.appendChild(node); return node; }
-  function feedback() {
-    var container = document.querySelector('.event-search-bar') || document.querySelector('main');
-    var status = document.querySelector('.storage-status');
-    if (!status) { status = el('p', '', container); status.className = 'storage-status'; status.setAttribute('role','status'); }
-    status.setAttribute('id', 'plans-storage-status');
-    status.textContent = !storageOK ? t('Browser storage is unavailable. Changes last only while this page is open.', 'O armazenamento está indisponível. As alterações duram apenas enquanto esta página está aberta.') : invalidSaved ? t('Saved data is unreadable. Existing browser data has not been changed. Clear it to restart saving.', 'Os dados guardados são ilegíveis. Os dados do navegador não foram alterados. Limpa-os para voltar a guardar.') : '';
-    var recovery = document.querySelector('.clear-invalid-plans');
-    if (invalidSaved && !recovery) {
-      recovery = el('button', t('Clear unreadable saved data', 'Limpar dados guardados ilegíveis'), document.querySelector('main'));
-      recovery.type = 'button'; recovery.className = 'clear-invalid-plans';
-      recovery.addEventListener('click', function() {
-        try { localStorage.removeItem(key); saved = {}; invalidSaved = false; storageOK = true; }
-        catch (err) { storageOK = false; }
-        update();
-      });
-    }
-    if (recovery) recovery.hidden = !invalidSaved;
-  }
-  function saveButton(id, name, parent) {
-    var b = el('button', '', parent); b.type = 'button'; b.className = 'save-event'; b.dataset.saveId = id; b.dataset.saveName = name; return b;
-  }
-  function update() {
-    document.querySelectorAll('[data-save-id]').forEach(function(b) {
-      var selected = !!saved[b.dataset.saveId]; b.setAttribute('aria-pressed', String(selected));
-      b.disabled = invalidSaved;
-      b.setAttribute('aria-describedby', invalidSaved ? 'plans-storage-status' : '');
-      b.textContent = invalidSaved ? t('Clear unreadable saved data before saving', 'Limpa os dados guardados ilegíveis antes de guardar') : selected ? t('Unsave', 'Remover evento guardado') : t('Save', 'Guardar');
-    });
-    feedback();
-    document.dispatchEvent(new Event('saved-events-change'));
-  }
   var records = [], data = document.getElementById('event-dataset');
   if (data) { try { records = JSON.parse(data.textContent); } catch (err) { el('p', t('Event data is unavailable. Reload this page to try again.', 'Dados indisponíveis. Recarrega a página para tentar novamente.'), document.querySelector('main')); } }
   function field(event, name) { return event[name + (pt ? '_pt' : '_en')] || event[name] || event[name + (pt ? '_en' : '_pt')] || ''; }
@@ -68,7 +29,6 @@
     el('p', event.kind === 'exhibition' ? (field(event,'visiting_hours') || t('Check visiting hours with the venue.','Confirma o horário de visita com o local.')) : (event.time || t('See details or check with the organizer for times.','Consulta os detalhes ou confirma os horários com a organização.')),target);
     el('p',field(event,'venue'),target); el('p',field(event,'address'),target);
     el('p',field(event,'price') || ((event.tags || []).includes('free') ? t('Free','Gratuito') : t('See details or check with the organizer for prices.','Consulta os detalhes ou confirma os preços com a organização.')),target);
-    saveButton(event.id,name,target);
     el('p',field(event,'description'),target);
     if (event.image_credit) el('p',t('Artwork: ','Cartaz: ') + event.image_credit,target);
     if (event.image_rights) el('p',event.image_rights,target);
@@ -89,13 +49,5 @@
     action(t('Events','Eventos'),prefix+'/special/?range=all',target);
     var locale=document.querySelector('.locale-other'); if (locale) locale.href=(pt?'':'/pt')+'/events/?id='+encodeURIComponent(id);
   }
-  document.addEventListener('click',function(e) {
-    var b=e.target.closest('[data-save-id]'); if (!b || !b.dataset.saveId) return;
-    if (invalidSaved) { feedback(); return; }
-    var id=b.dataset.saveId;
-    if (saved[id]) delete saved[id]; else saved[id]={name:b.dataset.saveName};
-    if (!invalidSaved) { try { localStorage.setItem(key,JSON.stringify(saved)); storageOK=true; } catch (err) { storageOK=false; } }
-    update();
-  });
-  renderDetail(); update();
+  renderDetail();
 })();

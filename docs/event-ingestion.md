@@ -72,10 +72,9 @@ consumer/curation changes.
 
 ## Website details and discovery
 
-The website detail and Saved discovery filters consume persisted IDs. The canonical share
+Website details consume persisted IDs. The canonical share
 URL is `https://eventosterceira.pt/events/?id=<id>`; Portuguese uses
-`/pt/events/?id=<id>`. Unknown IDs show an unavailable state. Saved filtering uses IDs
-and fallback titles in this browser and uses current metadata when the record exists.
+`/pt/events/?id=<id>`. Unknown IDs show an unavailable state.
 
 Date shortcuts use Atlantic/Azores calendar days. Today and Tomorrow each contain
 one day. This weekend contains Saturday and Sunday, or the remaining Sunday.
