@@ -132,3 +132,15 @@ test('shared poster has a safe localized full-size link independent of its sourc
   assert.equal(link.rel,'noopener noreferrer');
  }
 });
+
+test('corrupt encoded fixture keeps event and full-size action after the decoder error',()=>{
+ const record=artworkFixtures.find(event=>event.id==='artwork-fixture-corrupt-encoded');
+ const page=render({lang:'en',records:[record],id:record.id});
+ const image=page.all().find(node=>node.tag==='img');
+ assert(image.src.endsWith('/corrupt-encoded.png'));
+ image.listeners.error();
+ assert(!page.all().some(node=>node.tag==='img'));
+ assert(page.all().some(node=>node.textContent===record.name));
+ assert(page.all().some(node=>node.dataset.saveId===record.id));
+ assert(page.all().some(node=>node.textContent==='Open full artwork'));
+});
