@@ -421,6 +421,7 @@
         if (empty) {
           empty.classList.toggle('active', visibleCount === 0 && cards.length > 0);
         }
+        document.dispatchEvent(new Event('discovery-filters-applied'));
       }
 
       if (localitySelect) localitySelect.addEventListener('change', applyFilters);

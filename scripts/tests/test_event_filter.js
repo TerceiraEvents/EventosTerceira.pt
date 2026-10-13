@@ -36,7 +36,7 @@ function stubElement() {
 }
 
 // Stub search bar + card sibling chain. withRange=false omits the range select.
-function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = '2026-10-12', withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null, withFacets = false, withLocality = false, setFacets = null, setLocality = null, details = false, resetFilters = false }) {
+function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = '2026-10-12', withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null, withFacets = false, withLocality = false, setFacets = null, setLocality = null, details = false, resetFilters = false, withNavigation = false, lang = 'en' }) {
   const bar = {
     getAttribute: (k) => k === 'data-default-range' ? defaultRange : k === 'data-default-kind' ? defaultKind : null,
     parentElement: null,
@@ -99,33 +99,44 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
     constructor(...args) { super(...(args.length ? args : [`${today}T12:00:00Z`])); }
   } : Date;
   const locale = {href:'https://example.test/pt/special/'};
-  let currentURL = '/special/'+search;
+  const prefix = lang === 'pt' ? '/pt' : '';
+  let currentURL = prefix + '/special/' + search;
+  const listeners = {}, navHistory = [];
+  const links = [['events', '/special/'], ['today', '/special/?range=today'], ['exhibitions', '/special/?kind=exhibition&range=all']].map(([name, path]) => ({ name, ...Object.fromEntries(['pathname', 'search', 'hash'].map(key => [key, new URL(prefix + path, 'https://example.test')[key]])), attrs: {}, setAttribute(key, value) { this.attrs[key] = value; }, removeAttribute(key) { delete this.attrs[key]; } }));
+  function recordNavigation() { if (withNavigation) navHistory.push(links.filter(link => link.attrs['aria-current'] === 'page').map(link => link.name)); }
   const sandbox = {
     Date: TestDate,
-    window: { localStorage: new Proxy({}, {get() {throw new Error("Discovery must not access browser storage");}}), addEventListener() {}, location: { search, pathname:'/special/' }, history:{replaceState(data,title,url) {currentURL=url;}}, __SITE_I18N: {} },
+    window: { localStorage: new Proxy({}, {get() {throw new Error("Discovery must not access browser storage");}}), addEventListener(type, handler) { listeners[type] = handler; }, location: { search, pathname:prefix + '/special/', origin:'https://example.test' }, history:{replaceState(data,title,url) {currentURL=url; sandbox.window.location.search=new URL(url,'https://example.test').search;}}, __SITE_I18N: {} },
     URLSearchParams, Event: class { constructor(type) { this.type = type; } },
     document: {
-      querySelectorAll: (sel) => sel === '.event-search-bar' ? [bar] : [],
+      querySelectorAll: (sel) => sel === '.event-search-bar' ? [bar] : sel === '.site-nav a' ? links : [],
       querySelector: selector => selector === '.locale-other' ? locale : selector === '.event-search-bar' ? bar : null,
       createElement: () => stubElement(),
-      documentElement:{lang:'en'},
+      documentElement:{lang},
       getElementById: key => ['event-detail','event-dataset'].includes(key) ? null : stubElement(),
-      addEventListener(type, handler) {  },
+      addEventListener(type, handler) { listeners[type] = handler; },
+      dispatchEvent(event) { if (listeners[event.type]) listeners[event.type](event); },
     },
   };
   sandbox.localStorage = sandbox.window.localStorage;
+  sandbox.location = sandbox.window.location;
+  sandbox.URL = URL;
   vm.createContext(sandbox);
   vm.runInContext(fs.readFileSync('assets/js/discovery.js','utf8'), sandbox);
   sandbox.EventDiscovery = sandbox.window.EventDiscovery;
   vm.runInContext(FILTER_SRC, sandbox, { filename: 'event-filter.js' });
+  if (withNavigation) vm.runInContext(fs.readFileSync('assets/js/event-details.js', 'utf8'), sandbox);
+  recordNavigation();
 
   if (setRange !== null && withRange) {
     rangeSelect.value = setRange;
     for (const fn of rangeSelect.listeners.change || []) fn();
+    recordNavigation();
   }
   if (setKind !== null && withKind) {
     kindSelect.value = setKind;
     for (const fn of kindSelect.listeners.change || []) fn();
+    recordNavigation();
   }
   if (setTag !== null && withTag) {
     tagSelect.value = setTag;
@@ -133,10 +144,10 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   }
   if (setLocality !== null && withLocality) { localitySelect.value=setLocality; for (const fn of localitySelect.listeners.change || []) fn(); }
   if (setFacets !== null && withFacets) { for (const facet of facets) facet.checked=setFacets.includes(facet.value); for (const fn of facets[0].listeners.change || []) fn(); }
-  if (resetFilters) for (const fn of reset.listeners.click || []) fn();
+  if (resetFilters) { for (const fn of reset.listeners.click || []) fn(); recordNavigation(); }
   const visible = {};
   for (const card of cardNodes) visible[card.attrs['data-event-name']] = card.style.display !== 'none';
-  return details ? {visible,url:currentURL,localeHref:locale.href,resultCount:resultCount.textContent,emptyText:empty.textContent} : visible;
+  return details ? {visible,url:currentURL,localeHref:locale.href,resultCount:resultCount.textContent,emptyText:empty.textContent,navHistory} : visible;
 }
 
 const ONGOING = { name: 'ongoing', start: daysFromToday(-5), end: daysFromToday(5) };
@@ -282,4 +293,12 @@ test('actual page respects all and exhibition defaults and restores them on rese
   assert.deepEqual(page.visible,{Event:false,Exhibition:true});
   assert.equal(new URLSearchParams(page.url.split('?')[1]).get('kind'),'exhibition');
   assert.equal(new URLSearchParams(page.url.split('?')[1]).get('range'),'month');
+});
+
+for (const lang of ['en','pt']) test(`actual ${lang} filter changes keep exactly one truthful current navigation link`,()=>{
+ const page=runPage({cards:[{name:'Event',start:'2026-10-12',kind:'event'},{name:'Exhibition',start:'2026-10-01',end:'2026-12-31',kind:'exhibition'}],search:'?range=today',withKind:true,withNavigation:true,lang,setRange:'week',setKind:'exhibition',resetFilters:true,details:true});
+ assert.deepEqual(page.navHistory,[['today'],['events'],['exhibitions'],['events']]);
+ assert.equal(new URLSearchParams(page.url.split('?')[1]).get('range'),'all');
+ assert.equal(new URLSearchParams(page.url.split('?')[1]).get('kind'),'event');
+ assert.equal(new URLSearchParams(page.localeHref.split('?')[1]).get('kind'),'event');
 });
