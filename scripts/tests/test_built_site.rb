@@ -28,6 +28,13 @@ end
 # Pin the visitor-facing component behavior when the canonical fixture is
 # classified as an exhibition in the data used for this build.
 target_css = File.read(File.join(SITE, 'assets/css/style.css'))
+tag_focus_rule = target_css.match(/\.tag-chip:focus-within span\s*\{([^}]+)\}/m)
+err(errors, 'Suggest tag keyboard focus requires a visible 3px token outline on the label span') unless tag_focus_rule && tag_focus_rule[1].match?(/outline:\s*3px solid var\(--focus\)/) && tag_focus_rule[1].match?(/outline-offset:\s*3px/)
+['suggest/index.html', 'pt/suggest/index.html'].each do |route|
+  form_html = File.read(File.join(SITE, route))
+  err(errors, "#{route}: tag focus span must belong to a native checkbox label") unless form_html.match?(/<label class="tag-chip">\s*<input type="checkbox" name="tags\[\]"[^>]*>\s*<span>/)
+  err(errors, "#{route}: selected tag styling is absent") unless form_html.include?('.tag-chip input:checked + span')
+end
 nav_rule = target_css.match(/\.site-nav\s*\{([^}]+)\}/m)
 err(errors, 'navbar requires its original horizontal scroll layout') unless nav_rule && nav_rule[1].match?(/overflow-x:\s*auto/)
 err(errors, 'navbar row must not wrap into multiple rows') if target_css.match?(/\.site-nav \.container\s*\{[^}]*flex-wrap:\s*wrap/m)

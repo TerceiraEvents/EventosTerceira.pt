@@ -195,9 +195,6 @@ lang_alt: /suggest/
   border-color: var(--primary, #2d5016);
   color: #fff;
 }
-.tag-chip input:focus-visible + span {
-  box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.25);
-}
 .form-field small {
   display: block;
   margin-top: 0.3rem;

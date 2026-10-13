@@ -1513,3 +1513,5 @@ main a {
 .view-all { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
 .standalone-link { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; }
 .detail-link { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; }
+
+.tag-chip:focus-within span { outline: 3px solid var(--focus); outline-offset: 3px; }
