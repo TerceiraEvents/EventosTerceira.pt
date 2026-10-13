@@ -38,6 +38,10 @@ jobs:
         run: |
           PYTHONDONTWRITEBYTECODE=1 python3 -B scripts/tests/test_artwork_fixtures.py
           ruby scripts/validate_event_data.rb scripts/tests/fixtures/artwork/events.yml
+      - name: Check discovery color inventory and contrast
+        run: |
+          node scripts/check_discovery_tokens.mjs
+          node --test scripts/tests/test_discovery_tokens.mjs
 
       - name: Validate known venue locality metadata
         run: ruby scripts/tests/test_event_localities.rb

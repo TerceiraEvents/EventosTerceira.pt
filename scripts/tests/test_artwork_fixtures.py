@@ -49,6 +49,8 @@ class ArtworkFixtures(unittest.TestCase):
             self.assertEqual(len(pixels), stride * item['height'])
             self.assertEqual(pixels[0], 0)
             self.assertEqual(pixels[1:4], bytes((255, 210, 0)))
+            right = 1 + (item['width'] - 1) * 3
+            self.assertEqual(pixels[right:right + 3], bytes((0, 80, 255)))
             center = 1 + (item['width'] // 2) * 3
             self.assertEqual(pixels[center:center + 3], bytes((230, 30, 60)))
             bottom = stride * (item['height'] - 1) + center
