@@ -34,5 +34,14 @@
       "fetch_content_type": "image/png"
     }
   ],
-  "hosting": "Repository assets path; no release/tag creation or release upload"
+  "hosting": "Repository assets path; no release/tag creation or release upload",
+  "negative_images": [
+    {
+      "name": "corrupt-encoded",
+      "repo_image": "/assets/images/test-fixtures/corrupt-encoded.png",
+      "bytes": 64,
+      "sha256": "8123265ddfc6510c09ef975ae330c055f3ab90f011efb7c03ac7eb090a1dc4b5",
+      "construction": "First64 bytes of original CC0 portrait; truncated chunk/CRC and no complete image data. Intentionally invalid encoded PNG."
+    }
+  ]
 }

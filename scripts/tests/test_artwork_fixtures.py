@@ -58,13 +58,24 @@ class ArtworkFixtures(unittest.TestCase):
             self.assertIn(b'TEST ONLY', data)
             self.assertIn(b'CC0-1.0', data)
 
+    def test_corrupt_encoded_fixture_is_truncated_original_without_complete_chunks(self):
+        original = (FIXTURES / 'source/portrait.png').read_bytes()
+        data = (ROOT / 'assets/images/test-fixtures/corrupt-encoded.png').read_bytes()
+        self.assertEqual(data, original[:64])
+        self.assertNotIn(b'IEND', data)
+        offset = 33
+        length = struct.unpack('!I', data[offset:offset + 4])[0]
+        self.assertLess(len(data), offset + 12 + length)
+        manifest = json.loads((FIXTURES / 'manifest.json').read_text())
+        self.assertEqual(hashlib.sha256(data).hexdigest(), manifest['negative_images'][0]['sha256'])
+
     def test_generator_is_deterministic(self):
         self.assertEqual(generator._png(600, 900), (FIXTURES / 'source/portrait.png').read_bytes())
 
     def test_shared_records_are_labelled_non_production_and_record_rights(self):
         data = json.loads((FIXTURES / 'events.json').read_text())
         self.assertIn('TEST ONLY', data['purpose'])
-        self.assertEqual(len(data['events']), 6)
+        self.assertEqual(len(data['events']), 7)
         for record in data['events']:
             self.assertTrue(record['name'].startswith('TEST ONLY'))
             self.assertTrue(record['id'].startswith('artwork-fixture-'))

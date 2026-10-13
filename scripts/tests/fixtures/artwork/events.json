@@ -83,6 +83,22 @@
       "description": "Geometric rendering test fixture. This is not an event listing.",
       "description_pt": "Teste de apresentação geométrica. Não é um evento publicado.",
       "image": "/assets/images/test-fixtures/unavailable.png"
+    },
+    {
+      "id": "artwork-fixture-corrupt-encoded",
+      "kind": "event",
+      "name": "TEST ONLY — corrupt encoded PNG fixture",
+      "name_pt": "APENAS TESTE — PNG truncado",
+      "date": "2000-01-01",
+      "venue": "Test harness only",
+      "description": "Geometric rendering test fixture. This is not an event listing.",
+      "description_pt": "Teste de apresentação geométrica. Não é um evento publicado.",
+      "image": "/assets/images/test-fixtures/corrupt-encoded.png",
+      "image_alt_en": "TEST ONLY deliberately truncated original geometric PNG.",
+      "image_alt_pt": "APENAS TESTE: PNG geométrico original truncado de propósito.",
+      "image_credit": "Original deterministic fixture produced by Codex desktop app / gpt-6.1-sol",
+      "image_rights": "CC0-1.0; test-only geometry, not organizer artwork",
+      "image_source": "https://github.com/TerceiraEvents/EventosTerceira.pt/blob/test/corrupt-artwork-decoder/assets/images/test-fixtures/corrupt-encoded.png"
     }
   ]
 }
