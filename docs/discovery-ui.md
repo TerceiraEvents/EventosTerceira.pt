@@ -53,6 +53,27 @@ The uncompressed detail HTML measured 532,260 bytes on 12 October 2026. This all
 per-event generated documents are a possible future payload improvement. A map
 action requires `map_url`; source and booking actions also require published URLs.
 
+## Component inventory and synchronization
+
+The machine-readable [color inventory](discovery-tokens.json) records every color custom property in the website CSS and each native theme color. Hardcoded component color literals are outside this check; reviewing their contrast requires component measurements. The palettes share green/cream intent while retaining distinct values: website dark green `#1a3a2a`, cream `#f7f9f4`, body `#1a2e1a`, muted `#557555`; native primary `#2d5016`, background `#faf8f0`, body `#2c2c2c`, muted/inactive `#666666`, card white. Native primary dark is `#1a3009`; it is not the website dark green token. Website display headings use Playfair Display and body uses Source Sans 3 with system fallbacks. Native typography uses the platform font with 12/14/16/18/22/28-point roles and system scaling.
+
+| Component | Website | Native | Required state and sizing |
+| --- | --- | --- | --- |
+| Discovery heading/card | Name, attendance range/time, venue, published admission | Same field order; detail title spans card width | Long EN/PT text wraps; unknown time/admission remains explicit |
+| Primary action/Save | Bordered white; selected dark green/white with `aria-pressed` | Touchable action with accessible selected/disabled state | At least 44 px/points; state is expressed with text/semantics as well as color |
+| Search/input/select | Native HTML controls, visible global focus ring | Platform input/picker and text labels | Keyboard/system-text support; label remains associated with control |
+| Facet/type selector | Checkboxes/selects with preserved query state | Selected facet uses border-colored background and accessibility state | Selected, reset and unavailable choices remain distinguishable |
+| Navigation | Wrapping links and visible language control | Five tabs, two scalable label lines and safe-area space | Active location, every destination reachable; route and large-text checks remain platform-specific |
+| Feedback | Status/error paragraph and available action | Polite status/result announcement and Retry | Loading, no matches, absent data and failure use distinct language |
+| Poster | Contain sizing, full-size link, failure paragraph | Contain sizing and full-size link | Alt/provenance and failure policy require cross-platform checks; permission-cleared sample remains open |
+
+Pressed feedback follows the browser/platform control. Website keyboard focus is a 3 px `--focus` outline with 3 px offset. Native touchables use their platform pressed feedback; there is no claim that every native control supplies a desktop keyboard focus treatment. Disabled actions retain an accessible disabled state and an explanation; Saved/reminder read failure must not become a false unselected state. Loading feedback must not prevent usable cached content being read. Website reduced-motion overrides animations, transitions and smooth scrolling. Native navigation animations and reduced-motion behavior need an actual system-setting audit.
+
+Run `node scripts/check_discovery_tokens.mjs` to check website token drift and the six declared body/action contrast pairs. Run `node scripts/check_discovery_tokens.mjs /absolute/path/to/TerceiraEventsApp/src/utils/theme.js` to check both source palettes. The optional source is deliberately explicit: CI checks website source and the documented native pairs, and does not fetch another repository at runtime. Run `node --test scripts/tests/test_discovery_tokens.mjs` to exercise drift and insufficient-contrast failures. The checker exports `contrast(foreground, background)` for six-digit sRGB WCAG ratios and `checkTokens(manifest, css, nativeTheme)` for inventory equality and minimum-contrast validation; the optional native source must be supplied explicitly. This is a synchronization check, not a visual regression or whole-product contrast audit. Token changes update the inventory and require side-by-side EN/PT home/navigation/card/detail screenshots, 320/390 px and desktop, plus Android/iOS enlarged-text checks. The checklist records the devices actually run.
+
+## State and copy inventory
+
+[Data-state inventory](discovery-states.md) specifies the actual EN/PT feedback, recovery actions, timestamp meaning and unsupported states. It distinguishes the static website publication from native fetch/cache behavior. No new runtime dependency is needed for tokens or state documentation.
 Primary navigation displays every destination in normal document flow in both languages. Links wrap into rows at narrow widths, retain at least 44 px targets, and keep the language switch visible.
 
 Saved events is a discovery filter combined with the visible date, type and other facets. Enabling it selects all upcoming dates; Archive exposes ended records. Saved IDs stay in this browser and do not sync across devices. Get the app has its own navigation link. `EventDiscovery.savedIDs(storage)` returns validated bookmark IDs or null for unreadable storage; `matches` accepts savedOnly and savedIDs for conjunctive filtering.
