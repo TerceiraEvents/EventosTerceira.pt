@@ -365,6 +365,7 @@
 
       var empty = scope.querySelector('.event-search-empty') ||
                   document.querySelector('.event-search-empty');
+      var defaultEmptyMessage = empty ? empty.textContent : '';
 
       // Cache parsed dates so we don't re-parse on every keystroke.
       // Cards without an end date fall back to their start date.
@@ -446,7 +447,11 @@
           if (locale) locale.href = locale.href.split('?')[0] + '?' + params.toString();
         }
         if (empty) {
-          empty.classList.toggle('active', visibleCount === 0 && cards.length > 0);
+          var savedActive = savedSelect && savedSelect.checked;
+          if (savedActive) {
+            empty.textContent = savedEntries === null ? (document.documentElement.lang === 'pt' ? 'Não foi possível ler os eventos guardados. Tenta novamente.' : 'Saved events could not be read. Retry.') : !publishedIDs ? (document.documentElement.lang === 'pt' ? 'Não foi possível confirmar a disponibilidade. Recarrega a página para tentar novamente.' : 'Availability could not be confirmed. Reload this page to retry.') : savedEntries.length === 0 ? (document.documentElement.lang === 'pt' ? 'Ainda não há eventos guardados. Escolhe um evento e Guardar.' : 'No saved events yet. Choose an event and Save.') : (document.documentElement.lang === 'pt' ? 'Nenhum evento guardado corresponde a estes filtros.' : 'No saved events match these filters.');
+          } else empty.textContent = defaultEmptyMessage;
+          empty.classList.toggle('active', visibleCount === 0 && (cards.length > 0 || savedActive));
         }
       }
 

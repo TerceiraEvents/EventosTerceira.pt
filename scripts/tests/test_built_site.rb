@@ -86,12 +86,16 @@ end
 archive_path = "#{SITE}/archive/index.html"
 if File.exist?(archive_path)
   archive_html = File.read(archive_path)
+  err(errors, '/archive/: Saved filter is absent') unless archive_html.include?('class="event-saved-filter"')
+  err(errors, '/archive/: literal Events back link is absent') unless archive_html.include?('Back to Events</a>')
   err(errors, "/archive/: missing the English multi-day festival label") unless archive_html.include?("6–10 June · 5-day festival")
 end
 
 pt_archive_path = "#{SITE}/pt/archive/index.html"
 if File.exist?(pt_archive_path)
   pt_archive_html = File.read(pt_archive_path)
+  err(errors, '/pt/archive/: Saved filter is absent') unless pt_archive_html.include?('class="event-saved-filter"')
+  err(errors, '/pt/archive/: literal Eventos back link is absent') unless pt_archive_html.include?('Voltar a Eventos</a>')
   err(errors, "/pt/archive/: missing the Portuguese multi-day festival label") unless pt_archive_html.include?("6–10 de junho · festival de 5 dias")
 end
 

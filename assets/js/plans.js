@@ -45,7 +45,7 @@
       var selected = !!saved[b.dataset.saveId]; b.setAttribute('aria-pressed', String(selected));
       b.disabled = invalidSaved;
       b.setAttribute('aria-describedby', invalidSaved ? 'plans-storage-status' : '');
-      b.textContent = invalidSaved ? t('Clear unreadable saved data before saving', 'Limpa os dados guardados ilegíveis antes de guardar') : selected ? t('Unsave', 'Remover dos guardados') : t('Save', 'Guardar');
+      b.textContent = invalidSaved ? t('Clear unreadable saved data before saving', 'Limpa os dados guardados ilegíveis antes de guardar') : selected ? t('Unsave', 'Remover evento guardado') : t('Save', 'Guardar');
     });
     feedback();
     document.dispatchEvent(new Event('saved-events-change'));

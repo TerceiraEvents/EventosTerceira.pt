@@ -5,7 +5,7 @@ description: Full calendar of upcoming concerts, festivals, parties, and one-off
 lang_alt: /pt/calendar/
 ---
 
-<h2>Full Special Events Calendar</h2>
+<h2>Events Calendar</h2>
 
 <p class="section-intro">All upcoming concerts, festivals, parties, and one-off events in Angra do Heroísmo. Narrow by date range, search, or tag.</p>
 

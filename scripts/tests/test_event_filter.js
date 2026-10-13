@@ -96,8 +96,9 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
     card.nextElementSibling = null;
     node = card;
   }
+  const empty = stubElement(); empty.textContent = 'No events match your filters. Reset your filters or choose All upcoming.';
   const scope = {
-    querySelector() { return null; },
+    querySelector(selector) { return selector === '.event-search-empty' ? empty : null; },
   };
   bar.parentElement = scope;
 
@@ -146,7 +147,7 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   if (removeMissing) { vm.runInContext(fs.readFileSync('assets/js/plans.js','utf8'), sandbox); const button = descendants(missing).find(node => node.dataset.saveId); assert.ok(button, 'explicit Unsave action is rendered'); documentListeners.click({target:button}); }
   const visible = {};
   for (const card of cardNodes) visible[card.attrs['data-event-name']] = card.style.display !== 'none';
-  return details ? {visible,url:currentURL,localeHref:locale.href,resultCount:resultCount.textContent, missingText:descendants(missing).map(node=>node.textContent).join(' '), missingButtons:descendants(missing).filter(node=>node.dataset.saveId).map(node=>({id:node.dataset.saveId,label:node.textContent})), stored:storedSaved} : visible;
+  return details ? {visible,url:currentURL,localeHref:locale.href,resultCount:resultCount.textContent, missingText:descendants(missing).map(node=>node.textContent).join(' '), missingButtons:descendants(missing).filter(node=>node.dataset.saveId).map(node=>({id:node.dataset.saveId,label:node.textContent})), stored:storedSaved,emptyText:empty.textContent} : visible;
 }
 
 const ONGOING = { name: 'ongoing', start: daysFromToday(-5), end: daysFromToday(5) };
@@ -334,4 +335,35 @@ test('actual Saved filter retains an absent bookmark name and explicit Unsave ag
  const uncertain=runPage({...config,publication:{text:'{invalid',count:'650'}});
  assert(!uncertain.missingText.includes('Unavailable in this published list'));
  assert(uncertain.missingText.includes('Availability could not be confirmed'));
+});
+
+test('actual Saved filter empty state distinguishes no bookmarks, unmatched filters and unknown reads',()=>{
+ const html=fs.readFileSync('_site/events/index.html','utf8');
+ const records=JSON.parse(html.match(/<script[^>]*id="event-dataset"[^>]*>([\s\S]*?)<\/script>/)[1]);
+ const published=fs.readFileSync('_site/special/index.html','utf8').match(/<script[^>]*id="published-event-identities"[^>]*data-event-count="(\d+)"[^>]*>([\s\S]*?)<\/script>/);
+ const current=records.find(record=>record.date>='2026-11-01' && !(record.tags || []).includes('kid-friendly'));
+ assert(current && published);
+ const publication={text:published[2],count:published[1]};
+ const config={cards:[{id:current.id,name:current.name,start:current.date,end:current.end_date,tags:(current.tags || []).join(' ')}],withSaved:true,setSaved:true,publication,details:true};
+ assert(runPage({...config,storedSaved:{}}).emptyText.includes('No saved events yet. Choose an event and Save.'));
+ assert(runPage({...config,storedSaved:{[current.id]:{name:current.name}},withFacets:true,setFacets:['kid-friendly']}).emptyText.includes('No saved events match these filters.'));
+ assert(runPage({...config,storedSaved:'{invalid'}).emptyText.includes('Saved events could not be read'));
+ assert(runPage({...config,storedSaved:{},publication:{text:'{invalid',count:published[1]}}).emptyText.includes('Availability could not be confirmed'));
+ assert(!runPage({...config,storedSaved:{},resetFilters:true}).emptyText.includes('No saved events yet'));
+});
+
+test('actual Archive Saved filter exposes a published ended bookmark',()=>{
+ const records=JSON.parse(fs.readFileSync('_site/events/index.html','utf8').match(/<script[^>]*id="event-dataset"[^>]*>([\s\S]*?)<\/script>/)[1]);
+ const ended=records.find(record=>record.id==='71b345ed-15d0-46db-92ae-c77615dd0c8e');
+ assert(ended && ended.date<'2026-10-12');
+ for(const path of ['_site/archive/index.html','_site/pt/archive/index.html']){
+  const html=fs.readFileSync(path,'utf8');
+  assert(html.includes('class="event-saved-filter"'),'Archive exposes the Saved events filter');
+  assert(html.includes('data-save-id="'+ended.id+'"'),'ended card exposes Save/Unsave');
+  const published=html.match(/<script[^>]*id="published-event-identities"[^>]*data-event-count="(\d+)"[^>]*>([\s\S]*?)<\/script>/);
+  assert(published);
+  const page=runPage({cards:[{id:ended.id,name:ended.name,start:ended.date,end:ended.end_date}],withRange:false,withKind:true,defaultKind:'all',withSaved:true,search:'?saved=1&kind=all',storedSaved:{[ended.id]:{name:ended.name}},publication:{text:published[2],count:published[1]},details:true});
+  assert.equal(page.visible[ended.name],true);
+  assert(!page.missingText.includes('Unavailable'));
+ }
 });

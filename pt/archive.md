@@ -11,7 +11,7 @@ lang_alt: /archive/
 
 <p class="section-intro">Concertos, festas, festivais e noites especiais já realizados em Angra do Heroísmo.</p>
 
-{% include event_search_bar.html %}
+{% include event_search_bar.html default_kind="all" %}
 
 {% assign now_ts = "now" | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
 {% assign sorted_events = site.data.special_events | sort: "date" | reverse %}
@@ -40,5 +40,5 @@ lang_alt: /archive/
 </p>
 
 <div class="archive-link-section">
-  <a href="{{ '/pt/special/' | relative_url }}" class="view-all">Voltar a Eventos Especiais</a>
+  <a href="{{ '/pt/special/' | relative_url }}" class="view-all">Voltar a Eventos</a>
 </div>
