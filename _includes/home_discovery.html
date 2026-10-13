@@ -19,12 +19,12 @@
       {% assign preview_count = preview_count | plus: 1 %}
     {% endif %}
   {% endfor %}
-  {% if preview_count == 0 %}<p>{% if page_lang == 'pt' %}Sem eventos publicados. Consulta os eventos semanais.{% else %}No published upcoming events. Browse weekly regulars.{% endif %}</p>{% endif %}
+  {% if preview_count == 0 %}<p>{% if page_lang == 'pt' %}Sem eventos publicados. Consulta os eventos semanais.{% else %}No published upcoming events. Browse weekly events.{% endif %}</p>{% endif %}
   <a class="view-all" href="{{ home_prefix | append: '/special/?range=all' | relative_url }}">{% if page_lang == 'pt' %}Eventos de todas as datas{% else %}Events on all dates{% endif %}</a>
 </section>
-<section class="home-secondary"><h2>{% if page_lang == 'pt' %}Semanal{% else %}Weekly regulars{% endif %}</h2>
+<section class="home-secondary"><h2>{% if page_lang == 'pt' %}Eventos semanais{% else %}Weekly events{% endif %}</h2>
  <p>{% if page_lang == 'pt' %}Horários recorrentes: confirma com o local antes de sair.{% else %}Recurring schedules: confirm with the venue before setting out.{% endif %}</p>
- <a class="standalone-link" href="{{ home_prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Ver eventos semanais{% else %}Browse weekly regulars{% endif %}</a>
+ <a class="standalone-link" href="{{ home_prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Ver eventos semanais{% else %}Browse weekly events{% endif %}</a>
  <h2>{% if page_lang == 'pt' %}Exposições{% else %}Exhibitions{% endif %}</h2>
  <a class="standalone-link" href="{{ home_prefix | append: '/special/?kind=exhibition&range=all' | relative_url }}">{% if page_lang == 'pt' %}Ver exposições{% else %}Browse exhibitions{% endif %}</a>
 </section>

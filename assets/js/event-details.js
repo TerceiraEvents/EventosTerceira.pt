@@ -7,6 +7,7 @@
     if (/\/special\/$/.test(location.pathname)) {
       var onView = new URLSearchParams(location.search).get('kind') === 'exhibition';
       if ((new URLSearchParams(a.search).get('kind') === 'exhibition') !== onView) return;
+      if (!onView && ((new URLSearchParams(a.search).get('range') === 'today') !== (new URLSearchParams(location.search).get('range') === 'today'))) return;
     }
     a.setAttribute('aria-current', 'page');
   });
