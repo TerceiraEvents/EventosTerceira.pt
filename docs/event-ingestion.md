@@ -99,3 +99,5 @@ with documented permission or a reusable license, follow approved hosting and
 image-host validation, and record provenance/credit. A public social-media post
 alone does not establish reuse permission. Permission-cleared acquisition samples
 and native rendering coverage require their own verification.
+
+The [artwork curation and fixture guide](artwork-fixtures.md) records permission, provenance, approved repository hosting, consumer failure checks and the original CC0 test-only delivery sample. Test fixtures remain outside the production dataset.

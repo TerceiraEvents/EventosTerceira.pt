@@ -34,6 +34,10 @@ jobs:
       - name: Unit-test island discovery dates and facets
         run: node --test scripts/tests/test_discovery.js scripts/tests/test_detail_render.js
 
+      - name: Check original artwork fixtures and schema
+        run: |
+          PYTHONDONTWRITEBYTECODE=1 python3 -B scripts/tests/test_artwork_fixtures.py
+          ruby scripts/validate_event_data.rb scripts/tests/fixtures/artwork/events.yml
       - name: Check discovery color inventory and contrast
         run: |
           node scripts/check_discovery_tokens.mjs

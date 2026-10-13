@@ -1,0 +1,88 @@
+{
+  "agent_harness": "Codex desktop app (version unknown)",
+  "agent_model": "gpt-6.1-sol",
+  "agent_session": "local session ID 01a12d38-f796-77a1-b056-47c1eb6a90d5",
+  "purpose": "TEST ONLY shared consumer fixtures; never add to _data/special_events.yml",
+  "events": [
+    {
+      "id": "artwork-fixture-portrait",
+      "kind": "event",
+      "name": "TEST ONLY — portrait artwork fixture",
+      "name_pt": "APENAS TESTE — portrait cartaz de teste",
+      "date": "2000-01-01",
+      "venue": "Test harness only",
+      "description": "Geometric rendering test fixture. This is not an event listing.",
+      "description_pt": "Teste de apresentação geométrica. Não é um evento publicado.",
+      "image": "/assets/images/test-fixtures/portrait.png",
+      "image_alt_en": "TEST ONLY geometric portrait fixture, labelled TEST ONLY, with four colored edge markers.",
+      "image_alt_pt": "APENAS TESTE: imagem geométrica portrait com quatro margens coloridas.",
+      "image_credit": "Original deterministic fixture produced by Codex desktop app / gpt-6.1-sol",
+      "image_rights": "CC0-1.0; test-only geometry, not organizer artwork",
+      "image_source": "https://raw.githubusercontent.com/TerceiraEvents/EventosTerceira.pt/ce25f19/scripts/tests/fixtures/artwork/source/portrait.png"
+    },
+    {
+      "id": "artwork-fixture-landscape",
+      "kind": "event",
+      "name": "TEST ONLY — landscape artwork fixture",
+      "name_pt": "APENAS TESTE — landscape cartaz de teste",
+      "date": "2000-01-01",
+      "venue": "Test harness only",
+      "description": "Geometric rendering test fixture. This is not an event listing.",
+      "description_pt": "Teste de apresentação geométrica. Não é um evento publicado.",
+      "image": "/assets/images/test-fixtures/landscape.png",
+      "image_alt_en": "TEST ONLY geometric landscape fixture, labelled TEST ONLY, with four colored edge markers.",
+      "image_alt_pt": "APENAS TESTE: imagem geométrica landscape com quatro margens coloridas.",
+      "image_credit": "Original deterministic fixture produced by Codex desktop app / gpt-6.1-sol",
+      "image_rights": "CC0-1.0; test-only geometry, not organizer artwork",
+      "image_source": "https://raw.githubusercontent.com/TerceiraEvents/EventosTerceira.pt/ce25f19/scripts/tests/fixtures/artwork/source/landscape.png"
+    },
+    {
+      "id": "artwork-fixture-oversized",
+      "kind": "event",
+      "name": "TEST ONLY — oversized artwork fixture",
+      "name_pt": "APENAS TESTE — oversized cartaz de teste",
+      "date": "2000-01-01",
+      "venue": "Test harness only",
+      "description": "Geometric rendering test fixture. This is not an event listing.",
+      "description_pt": "Teste de apresentação geométrica. Não é um evento publicado.",
+      "image": "/assets/images/test-fixtures/oversized.png",
+      "image_alt_en": "TEST ONLY geometric oversized fixture, labelled TEST ONLY, with four colored edge markers.",
+      "image_alt_pt": "APENAS TESTE: imagem geométrica oversized com quatro margens coloridas.",
+      "image_credit": "Original deterministic fixture produced by Codex desktop app / gpt-6.1-sol",
+      "image_rights": "CC0-1.0; test-only geometry, not organizer artwork",
+      "image_source": "https://raw.githubusercontent.com/TerceiraEvents/EventosTerceira.pt/ce25f19/scripts/tests/fixtures/artwork/source/oversized.png"
+    },
+    {
+      "id": "artwork-fixture-missing",
+      "kind": "event",
+      "name": "TEST ONLY — missing artwork fixture",
+      "name_pt": "APENAS TESTE — missing cartaz de teste",
+      "date": "2000-01-01",
+      "venue": "Test harness only",
+      "description": "Geometric rendering test fixture. This is not an event listing.",
+      "description_pt": "Teste de apresentação geométrica. Não é um evento publicado."
+    },
+    {
+      "id": "artwork-fixture-malformed",
+      "kind": "event",
+      "name": "TEST ONLY — malformed artwork fixture",
+      "name_pt": "APENAS TESTE — malformed cartaz de teste",
+      "date": "2000-01-01",
+      "venue": "Test harness only",
+      "description": "Geometric rendering test fixture. This is not an event listing.",
+      "description_pt": "Teste de apresentação geométrica. Não é um evento publicado.",
+      "image": "javascript:alert(1)"
+    },
+    {
+      "id": "artwork-fixture-unavailable",
+      "kind": "event",
+      "name": "TEST ONLY — unavailable artwork fixture",
+      "name_pt": "APENAS TESTE — unavailable cartaz de teste",
+      "date": "2000-01-01",
+      "venue": "Test harness only",
+      "description": "Geometric rendering test fixture. This is not an event listing.",
+      "description_pt": "Teste de apresentação geométrica. Não é um evento publicado.",
+      "image": "/assets/images/test-fixtures/unavailable.png"
+    }
+  ]
+}

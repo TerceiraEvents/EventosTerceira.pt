@@ -76,7 +76,7 @@
     if (event.organizer) el('p',t('Organizer: ','Organização: ') + field(event,'organizer'),target);
     (event.features || []).forEach(function(feature) { el('p',feature,target); });
     if (event.image) {
-      var imageURL = safeLink(event.image); if (imageURL) { var img = el('img','',target); img.src=imageURL; img.alt=field(event,'image_alt') || name + t(' — organizer artwork',' — cartaz da organização'); img.loading='lazy'; img.addEventListener('error',function() { img.remove(); el('p',t('Artwork unavailable. Event information remains above.','Cartaz indisponível. A informação está acima.'),target); }); }
+      var imageURL = safeLink(event.image); if (imageURL) { var img = el('img','',target); img.src=imageURL; img.alt=field(event,'image_alt') || name + t(' — organizer artwork',' — cartaz da organização'); img.loading='lazy'; img.addEventListener('error',function() { img.remove(); el('p',t('Artwork unavailable. Event information remains above.','Cartaz indisponível. A informação está acima.'),target); }); var artworkLink = action(t('Open full artwork','Abrir imagem completa'),imageURL,target); artworkLink.rel='noopener noreferrer'; }
     }
     var actions=el('div','',target); actions.className='detail-actions';
     action(t('Source','Fonte'),event.source_url || event.instagram,actions);
