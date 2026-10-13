@@ -102,7 +102,7 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   const prefix = lang === 'pt' ? '/pt' : '';
   let currentURL = prefix + '/special/' + search;
   const listeners = {}, navHistory = [];
-  const links = [['events', '/special/'], ['today', '/special/?range=today'], ['exhibitions', '/special/?kind=exhibition&range=all']].map(([name, path]) => ({ name, ...Object.fromEntries(['pathname', 'search', 'hash'].map(key => [key, new URL(prefix + path, 'https://example.test')[key]])), attrs: {}, setAttribute(key, value) { this.attrs[key] = value; }, removeAttribute(key) { delete this.attrs[key]; } }));
+  const links = [['events', '/special/'], ['weekly', '/weekly/'], ['places', '/venues/']].map(([name, path]) => ({ name, ...Object.fromEntries(['pathname', 'search', 'hash'].map(key => [key, new URL(prefix + path, 'https://example.test')[key]])), attrs: {}, setAttribute(key, value) { this.attrs[key] = value; }, removeAttribute(key) { delete this.attrs[key]; } }));
   function recordNavigation() { if (withNavigation) navHistory.push(links.filter(link => link.attrs['aria-current'] === 'page').map(link => link.name)); }
   const sandbox = {
     Date: TestDate,
@@ -297,7 +297,7 @@ test('actual page respects all and exhibition defaults and restores them on rese
 
 for (const lang of ['en','pt']) test(`actual ${lang} filter changes keep exactly one truthful current navigation link`,()=>{
  const page=runPage({cards:[{name:'Event',start:'2026-10-12',kind:'event'},{name:'Exhibition',start:'2026-10-01',end:'2026-12-31',kind:'exhibition'}],search:'?range=today',withKind:true,withNavigation:true,lang,setRange:'week',setKind:'exhibition',resetFilters:true,details:true});
- assert.deepEqual(page.navHistory,[['today'],['events'],['exhibitions'],['events']]);
+ assert.deepEqual(page.navHistory,[['events'],['events'],['events'],['events']]);
  assert.equal(new URLSearchParams(page.url.split('?')[1]).get('range'),'all');
  assert.equal(new URLSearchParams(page.url.split('?')[1]).get('kind'),'event');
  assert.equal(new URLSearchParams(page.localeHref.split('?')[1]).get('kind'),'event');

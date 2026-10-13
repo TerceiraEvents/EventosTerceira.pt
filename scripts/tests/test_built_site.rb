@@ -28,6 +28,9 @@ end
 # Pin the visitor-facing component behavior when the canonical fixture is
 # classified as an exhibition in the data used for this build.
 target_css = File.read(File.join(SITE, 'assets/css/style.css'))
+nav_rule = target_css.match(/\.site-nav\s*\{([^}]+)\}/m)
+err(errors, 'navbar requires its original horizontal scroll layout') unless nav_rule && nav_rule[1].match?(/overflow-x:\s*auto/)
+err(errors, 'navbar row must not wrap into multiple rows') if target_css.match?(/\.site-nav \.container\s*\{[^}]*flex-wrap:\s*wrap/m)
 %w[locale-other view-all standalone-link detail-link].each do |name|
   rule_body = target_css.scan(/\.#{name}\s*\{([^}]+)\}/m).last&.first
   valid = rule_body && %w[height width].all? { |axis| rule_body.match?(/min-#{axis}:\s*44px/) } && rule_body.match?(/display:\s*inline-flex/)
@@ -128,8 +131,10 @@ html_pages.each do |path|
   end
   err(errors, "#{rel}: browser-saving UI or activation is present") if html.match?(/data-save-id|save-event|event-saved-filter|saved-unavailable|plans\.js|terceira-plans-v1/)
   if ['/index.html', '/pt/index.html'].include?(rel)
-    labels = rel.start_with?('/pt/') ? ['Eventos', 'Exposições', 'Obter a aplicação'] : ['Events', 'Exhibitions', 'Get the app']
-    labels.each { |label| err(errors, "#{rel}: literal navigation label #{label} is absent") unless html.match?(/<a[^>]*>#{Regexp.escape(label)}<\/a>/) }
+    labels = rel.start_with?('/pt/') ? ['Eventos', 'Obter a aplicação'] : ['Events', 'Get the app']
+    labels.each { |label| err(errors, "#{rel}: homepage discovery/app label #{label} is absent") unless html.match?(/<a[^>]*>#{Regexp.escape(label)}<\/a>/) }
+    exhibitions = rel.start_with?('/pt/') ? 'Exposições' : 'Exhibitions'
+    err(errors, "#{rel}: homepage Exhibitions section is absent") unless html.include?('<h2>' + exhibitions + '</h2>')
 
   end
   navigation = html[/<nav class="site-nav"[^>]*>[\s\S]*?<\/nav>/]
@@ -137,17 +142,11 @@ html_pages.each do |path|
     err(errors, "#{rel}: bookmark destination is absent from primary navigation") if navigation.match?(/<a (?!class="locale-other")[^>]*href="[^"]*\/saved\/"/)
     err(errors, "#{rel}: primary destinations must be visible without opening a menu") if navigation.match?(/<details|\bhidden\b|aria-hidden="true"/)
     prefix = rel.start_with?('/pt/') ? '/pt' : ''
-    weekly = prefix + '/weekly/'
-    events = prefix + '/special/'
-    places = prefix + '/venues/'
-    err(errors, "#{rel}: Today and Weekly events must precede other discovery destinations") unless navigation.index('href="' + prefix + '/special/?range=today"') && navigation.index('href="' + prefix + '/special/?range=today"') < navigation.index('href="' + weekly + '"') && navigation.index('href="' + weekly + '"') < navigation.index('href="' + events + '"') && navigation.index('href="' + events + '"') < navigation.index('href="' + places + '"')
-    label = prefix.empty? ? 'Weekly events' : 'Eventos semanais'
-    err(errors, "#{rel}: plain Weekly events navigation label is absent") unless navigation.include?('>' + label + '</a>')
-    ['/contribute/', '/#get-the-app'].each { |route| err(errors, "#{rel}: secondary destination remains in primary navigation: #{route}") if navigation.include?("href=\"#{prefix + route}\"") }
-    ['/', '/special/?range=today', '/weekly/', '/special/', '/venues/', '/blog/', '/resources/', '/suggest/', '/special/?kind=exhibition&amp;range=all'].each do |route|
-      href = prefix + route
-      err(errors, "#{rel}: visible navigation missing #{href}") unless navigation.include?("href=\"#{href}\"") || navigation.include?("href=\"#{href.gsub('&amp;', '&')}\"")
-    end
+    routes = ['/', '/weekly/', '/special/', '/venues/', '/blog/', '/contribute/', '/resources/']
+    labels = prefix.empty? ? ['Home', 'Weekly', 'Events', 'Places', 'Blog', 'Contribute', 'Resources'] : ['Início', 'Semanal', 'Eventos', 'Locais', 'Blogue', 'Contribuir', 'Recursos']
+    expected = routes.zip(labels).map { |route, label| [prefix + route, label] }
+    err(errors, "#{rel}: original seven primary routes/order with plain Events/Places labels are required") unless navigation.scan(/<a href="([^"]*)">([^<]*)<\/a>/) == expected
+    err(errors, "#{rel}: locale switcher is absent") unless navigation.include?('class="locale-other"')
   end
   footer = html[/<footer\b[^>]*>[\s\S]*?<\/footer>/]
   if footer

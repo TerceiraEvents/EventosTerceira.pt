@@ -63,14 +63,12 @@
     <nav class="site-nav" aria-label="{% if page_lang == 'pt' %}Navegação principal{% else %}Primary navigation{% endif %}">
       <div class="container">
         <a href="{{ prefix | append: '/' | relative_url }}">{% if page_lang == 'pt' %}Início{% else %}Home{% endif %}</a>
-        <a href="{{ prefix | append: '/special/?range=today' | relative_url }}">{% if page_lang == 'pt' %}Hoje{% else %}Today{% endif %}</a>
-        <a href="{{ prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Eventos semanais{% else %}Weekly events{% endif %}</a>
+        <a href="{{ prefix | append: '/weekly/' | relative_url }}">{% if page_lang == 'pt' %}Semanal{% else %}Weekly{% endif %}</a>
         <a href="{{ prefix | append: '/special/' | relative_url }}">{% if page_lang == 'pt' %}Eventos{% else %}Events{% endif %}</a>
         <a href="{{ prefix | append: '/venues/' | relative_url }}">{% if page_lang == 'pt' %}Locais{% else %}Places{% endif %}</a>
-        <a href="{{ prefix | append: '/special/?kind=exhibition&range=all' | relative_url }}">{% if page_lang == 'pt' %}Exposições{% else %}Exhibitions{% endif %}</a>
         <a href="{{ prefix | append: '/blog/' | relative_url }}">{% if page_lang == 'pt' %}Blogue{% else %}Blog{% endif %}</a>
+        <a href="{{ prefix | append: '/contribute/' | relative_url }}">{% if page_lang == 'pt' %}Contribuir{% else %}Contribute{% endif %}</a>
         <a href="{{ prefix | append: '/resources/' | relative_url }}">{% if page_lang == 'pt' %}Recursos{% else %}Resources{% endif %}</a>
-        <a href="{{ prefix | append: '/suggest/' | relative_url }}">{% if page_lang == 'pt' %}Sugerir evento{% else %}Suggest an event{% endif %}</a>
         {% include locale_switcher.html %}
       </div>
     </nav>
@@ -421,7 +419,6 @@
         if (empty) {
           empty.classList.toggle('active', visibleCount === 0 && cards.length > 0);
         }
-        document.dispatchEvent(new Event('discovery-filters-applied'));
       }
 
       if (localitySelect) localitySelect.addEventListener('change', applyFilters);

@@ -57,8 +57,8 @@ test('missing scalar fields do not deny times or prices in the published program
 });
 
 test('actual navigation script marks exactly the matching discovery destination in EN/PT',()=>{
- for(const prefix of ['', '/pt']) for(const [query,expected] of [['?kind=exhibition&range=all','view'],['?range=today&q=music','today'],['?kind=event&free=1','explore'],['?kind=event&range=today','today'],['?kind=exhibition&range=today','view']]) {
-  const links=[['explore',prefix+'/special/'],['today',prefix+'/special/?range=today'],['view',prefix+'/special/?kind=exhibition&range=all']].map(([name,path])=>({name,...Object.fromEntries(['pathname','search'].map(key=>[key,new URL(path,'https://eventosterceira.pt')[key]])),attrs:{},setAttribute(key,value){this.attrs[key]=value;},removeAttribute(key){delete this.attrs[key];}}));
+ for(const prefix of ['', '/pt']) for(const [query,expected] of [['?kind=exhibition&range=all','events'],['?range=today&q=music','events'],['?kind=event&free=1','events'],['?kind=event&range=today','events'],['?kind=exhibition&range=today','events']]) {
+  const links=[['events',prefix+'/special/'],['weekly',prefix+'/weekly/'],['places',prefix+'/venues/']].map(([name,path])=>({name,...Object.fromEntries(['pathname','search'].map(key=>[key,new URL(path,'https://eventosterceira.pt')[key]])),attrs:{},setAttribute(key,value){this.attrs[key]=value;},removeAttribute(key){delete this.attrs[key];}}));
   const document={documentElement:{lang:prefix?'pt':'en'},createElement:()=>({setAttribute:()=>{}}),dispatchEvent:()=>{},querySelectorAll:selector=>selector==='.site-nav a'?links:[],querySelector:()=>null,getElementById:key=>key==='event-dataset'?{textContent:'[]'}:null,addEventListener:()=>{}};
   vm.runInNewContext(fs.readFileSync('assets/js/event-details.js','utf8'),{document,window:{addEventListener(){}},localStorage:{getItem:()=>null},location:{origin:'https://eventosterceira.pt',pathname:prefix+'/special/',search:query},Event,URL,URLSearchParams});
   assert.deepEqual(links.filter(link=>link.attrs['aria-current']==='page').map(link=>link.name),[expected]);
