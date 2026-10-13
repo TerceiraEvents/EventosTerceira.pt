@@ -329,10 +329,13 @@
 
     bars.forEach(function(bar) {
       var input = bar.querySelector('.event-search-input');
-      var tagSelect = bar.querySelector('.event-tag-filter');
+      var tagMenu = bar.querySelector('.event-tags-menu');
+      var primaryTag = '';
       var rangeSelect = bar.querySelector('.event-range-filter');
       var kindSelect = bar.querySelector('.event-kind-filter');
-      var localitySelect = bar.querySelector('.event-locality-filter');
+      var localityMenu = bar.querySelector('.event-locality-filter');
+      var localityChoices = bar.querySelectorAll('[data-locality]');
+      var menus = bar.querySelectorAll('.filter-dropdown');
       var facets = bar.querySelectorAll ? bar.querySelectorAll('[data-facet]') : [];
       var reset = bar.querySelector('.filter-reset');
       var resultCount = bar.querySelector('.result-count');
@@ -353,7 +356,6 @@
         }
         node = node.nextElementSibling;
       }
-      if (!cards.length) return;
 
       var empty = scope.querySelector('.event-search-empty') ||
                   document.querySelector('.event-search-empty');
@@ -371,13 +373,50 @@
         return raw.trim() ? raw.trim().split(/\s+/) : [];
       }
 
+      function chosenLocality() {
+        var selected = Array.prototype.filter.call(localityChoices, function(choice) { return choice.checked; });
+        return selected.length ? selected[0].value : '';
+      }
+      function filterLabel(choice) { return choice.getAttribute('data-filter-label') || choice.value; }
+      function positionMenu(menu) {
+        if (!menu.open) return;
+        var panel = menu.querySelector('.filter-menu');
+        panel.style.left = '0px'; panel.style.right = 'auto';
+        var bounds = panel.getBoundingClientRect();
+        var width = document.documentElement.clientWidth || window.innerWidth;
+        var shift = Math.min(0, width - 8 - bounds.right);
+        if (bounds.left + shift < 8) shift = 8 - bounds.left;
+        panel.style.left = shift + 'px';
+      }
+      function updateMenus(selected) {
+        if (tagMenu) {
+          var topics = selected.filter(function(choice) { return choice.value !== 'free' && choice.value !== 'kid-friendly'; });
+          var topic = topics.filter(function(choice) { return choice.value === primaryTag; })[0] || topics[0];
+          var visible = topic ? [filterLabel(topic)] : [];
+          ['free', 'kid-friendly'].forEach(function(value) { var choice = selected.filter(function(item) { return item.value === value; })[0]; if (choice) visible.push(filterLabel(choice)); });
+          if (topics.length > 1) { var extra = topics.length - 1; visible.push(extra + (document.documentElement.lang === 'pt' ? (extra === 1 ? ' mais etiqueta' : ' mais etiquetas') : (extra === 1 ? ' more tag' : ' more tags'))); }
+          var label = visible.join(' + ') || tagMenu.getAttribute('data-empty-label');
+          tagMenu.querySelector('.filter-summary-text').textContent = label;
+          tagMenu.querySelector('summary').setAttribute('aria-label', selected.length ? (document.documentElement.lang === 'pt' ? 'Etiquetas: ' : 'Tags: ') + selected.map(filterLabel).join(', ') : label);
+        }
+        if (localityMenu) {
+          var choice = Array.prototype.filter.call(localityChoices, function(item) { return item.checked; })[0];
+          var label = choice ? filterLabel(choice) : (document.documentElement.lang === 'pt' ? 'Todos os locais' : 'All places');
+          localityMenu.querySelector('.filter-summary-text').textContent = label;
+        }
+        Array.prototype.forEach.call(menus, positionMenu);
+      }
       function applyFilters() {
         var query = input ? input.value.trim() : '';
-        var selectedTag = tagSelect ? tagSelect.value : '';
+        var selected = Array.prototype.filter.call(facets, function(f) { return f.checked; });
+        if (primaryTag && !selected.some(function(choice) { return choice.value === primaryTag; })) primaryTag = '';
+        if (!primaryTag) { var topic = selected.filter(function(choice) { return choice.value !== 'free' && choice.value !== 'kid-friendly'; })[0]; if (topic) primaryTag = topic.value; }
+        var selectedTag = selected.some(function(choice) { return choice.value === primaryTag; }) ? primaryTag : '';
+        var locality = chosenLocality();
         var range = rangeSelect ? rangeSelect.value : 'all';
         var kind = kindSelect ? kindSelect.value : 'all';
-        var selectedTags = Array.prototype.filter.call(facets, function(f) { return f.checked; }).map(function(f) { return f.value; });
-        if (selectedTag) selectedTags.push(selectedTag);
+        var selectedTags = selected.map(function(choice) { return choice.value; });
+        updateMenus(selected);
         var visibleCount = 0;
         cards.forEach(function(card, i) {
           var event = {
@@ -396,7 +435,7 @@
             tags: selectedTags,
             range: rangeSelect && event.date ? range : null,
             kind: kindSelect ? kind : null,
-            locality: localitySelect ? localitySelect.value : null
+            locality: locality
           });
           card.style.display = show ? '' : 'none';
           if (show) visibleCount++;
@@ -409,9 +448,9 @@
           if (selectedTag) params.set('tag', selectedTag);
           if (rangeSelect) params.set('range', range);
           if (kindSelect) params.set('kind', kind);
-          if (localitySelect && localitySelect.value) params.set('locality', localitySelect.value);
-          var selected = Array.prototype.filter.call(facets, function(f) { return f.checked; }).map(function(f) { return f.value; });
-          if (selected.length) params.set('tags', selected.join(','));
+          if (locality) params.set('locality', locality);
+          var additionalTags = selectedTags.filter(function(value) { return value !== selectedTag; });
+          if (additionalTags.length) params.set('tags', additionalTags.join(','));
           window.history.replaceState(null, '', window.location.pathname + '?' + params.toString());
           var locale = document.querySelector('.locale-other');
           if (locale) locale.href = locale.href.split('?')[0] + '?' + params.toString();
@@ -421,35 +460,35 @@
         }
       }
 
-      if (localitySelect) localitySelect.addEventListener('change', applyFilters);
-      Array.prototype.forEach.call(facets, function(f) { f.addEventListener('change', applyFilters); });
-      if (reset) reset.addEventListener('click', function() { if (input) input.value = ''; if (tagSelect) tagSelect.value = ''; if (localitySelect) localitySelect.value = ''; if (kindSelect) kindSelect.value = defaultKind; if (rangeSelect) rangeSelect.value = defaultRange; Array.prototype.forEach.call(facets, function(f) { f.checked = false; }); applyFilters(); });
+      Array.prototype.forEach.call(localityChoices, function(choice) { choice.addEventListener('change', applyFilters); });
+      Array.prototype.forEach.call(facets, function(f) { f.addEventListener('change', function() { if (f.checked && !primaryTag && f.value !== 'free' && f.value !== 'kid-friendly') primaryTag = f.value; if (!f.checked && primaryTag === f.value) primaryTag = ''; applyFilters(); }); });
+      Array.prototype.forEach.call(menus, function(menu) {
+        menu.addEventListener('keydown', function(event) { if (event.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); event.preventDefault(); } });
+        menu.addEventListener('toggle', function() { if (menu.open) { Array.prototype.forEach.call(menus, function(other) { if (other !== menu) other.open = false; }); positionMenu(menu); } });
+      });
+      window.addEventListener('resize', function() { Array.prototype.forEach.call(menus, positionMenu); });
+      document.addEventListener('click', function(event) { Array.prototype.forEach.call(menus, function(menu) { if (menu.open && !menu.contains(event.target)) menu.open = false; }); });
+      if (reset) reset.addEventListener('click', function() { if (input) input.value = ''; primaryTag = ''; Array.prototype.forEach.call(localityChoices, function(choice) { choice.checked = choice.value === ''; }); if (kindSelect) kindSelect.value = defaultKind; if (rangeSelect) rangeSelect.value = defaultRange; Array.prototype.forEach.call(facets, function(f) { f.checked = false; }); applyFilters(); });
       if (input) input.addEventListener('input', applyFilters);
-      if (tagSelect) tagSelect.addEventListener('change', applyFilters);
       if (rangeSelect) rangeSelect.addEventListener('change', applyFilters);
       if (kindSelect) kindSelect.addEventListener('change', applyFilters);
 
-      // Initial state: pick range from URL ?range=, falling back to the
-      // page default. URL also seeds search and tag filters.
-      // Legacy ?kid=1 is honoured as ?tag=kid-friendly.
       var initialRange = defaultRange;
       var initialKind = defaultKind;
       try {
         var params = new URLSearchParams(window.location.search);
         var q = params.get('q');
-        if (localitySelect) localitySelect.value = params.get('locality') || '';
+        var locality = params.get('locality') || '';
+        if (!Array.prototype.some.call(localityChoices, function(choice) { return choice.value === locality; })) locality = '';
+        Array.prototype.forEach.call(localityChoices, function(choice) { choice.checked = choice.value === locality; });
         var selectedFacets = (params.get('tags') || '').split(',');
         Array.prototype.forEach.call(facets, function(f) { f.checked = selectedFacets.indexOf(f.value) !== -1; });
         if (q && input) input.value = q;
         var tag = params.get('tag');
         if (!tag && params.get('kid') === '1') tag = 'kid-friendly';
-        if (tag && tagSelect) {
-          for (var i = 0; i < tagSelect.options.length; i++) {
-            if (tagSelect.options[i].value === tag) {
-              tagSelect.value = tag;
-              break;
-            }
-          }
+        if (tag && Array.prototype.some.call(facets, function(choice) { return choice.value === tag; })) {
+          primaryTag = tag;
+          Array.prototype.forEach.call(facets, function(choice) { if (choice.value === tag) choice.checked = true; });
         }
         var rangeParam = params.get('range');
         if (rangeParam && VALID_RANGES[rangeParam]) initialRange = rangeParam;

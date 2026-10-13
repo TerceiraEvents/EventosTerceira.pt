@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Eventos
-description: Concertos, festivais, festas e eventos pontuais desta semana em Angra do Heroísmo, Terceira.
+description: Concertos, festivais, festas e eventos pontuais na Terceira.
 permalink: /pt/special/
 lang: pt
 lang_alt: /special/
@@ -9,7 +9,7 @@ lang_alt: /special/
 
 <h2>Eventos</h2>
 
-<p class="section-intro">Concertos, festivais, festas e eventos pontuais em Angra do Heroísmo. Usa o intervalo de datas, a pesquisa ou a etiqueta para refinares a lista.</p>
+<p class="section-intro">Concertos, festivais, festas e eventos pontuais na Terceira.</p>
 
 {% include event_search_bar.html default_range="week" default_kind="events" %}
 

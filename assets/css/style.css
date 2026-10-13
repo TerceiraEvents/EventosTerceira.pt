@@ -1353,7 +1353,7 @@ main a {
   display: inline-flex;
   align-items: center;
 }
-.event-tag-filter,
+.filter-dropdown > summary,
 .event-range-filter,
 .event-kind-filter {
   padding: 0.55rem 2rem 0.55rem 0.85rem;
@@ -1371,7 +1371,6 @@ main a {
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
 }
-.event-tag-filter:focus,
 .event-range-filter:focus,
 .event-kind-filter:focus {
   outline: none;
@@ -1494,8 +1493,6 @@ main a {
 .home-secondary { margin-top: 2rem; }
 .event-search-bar { flex-wrap: wrap; }
 .event-search-bar select, .event-search-bar input { max-width: 100%; min-height: 44px; }
-.event-search-bar fieldset { border: 0; display: flex; flex-wrap: wrap; gap: .5rem; width: 100%; }
-.event-search-bar fieldset label { padding: .5rem; }
 .detail-artwork { width: 100%; height: clamp(220px, 60vh, 480px); display: flex; align-items: center; justify-content: center; background: var(--cream); }
 .detail-artwork img { width: 100%; height: 100%; object-fit: contain; }
 .detail-artwork p { margin: 0; padding: 1rem; }
@@ -1517,3 +1514,14 @@ main a {
 .tag-chip:focus-within span { outline: 3px solid var(--focus); outline-offset: 3px; }
 
 .form-tags .tag-chip span { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; }
+
+.filter-dropdown { position: relative; max-width: 100%; }
+.filter-dropdown > summary { min-height: 44px; list-style: none; max-width: 100%; }
+.filter-dropdown > summary::-webkit-details-marker { display: none; }
+.filter-dropdown:not([open]) .filter-menu { display: none; }
+.filter-menu { position: absolute; top: calc(100% + .35rem); left: 0; z-index: 20; min-width: 100%; width: max-content; max-width: calc(100vw - 4rem); max-height: min(60vh, 24rem); overflow: auto; padding: .5rem; border: 1px solid #d8d4c4; border-radius: 8px; background: white; box-shadow: 0 3px 12px var(--shadow); }
+.filter-menu .filter-choices { display: flex; flex-direction: column; gap: 0; border: 0; margin: 0; padding: 0; }
+.filter-choice { display: flex; align-items: center; gap: .55rem; min-width: 44px; min-height: 44px; padding: .5rem .65rem; cursor: pointer; font-size: .9rem; color: var(--green-deep); }
+.filter-choice input { min-height: 0; width: 1.1rem; height: 1.1rem; flex-shrink: 0; accent-color: var(--green-dark); }
+.filter-note { margin: .5rem .65rem; max-width: 22rem; font-size: .85rem; color: var(--text-light); }
+.event-search-bar .search-input:focus-visible, .event-range-filter:focus-visible, .event-kind-filter:focus-visible, .filter-dropdown > summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }

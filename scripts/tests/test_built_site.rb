@@ -45,6 +45,20 @@ err(errors, 'navbar row must not wrap into multiple rows') if target_css.match?(
   valid = rule_body && %w[height width].all? { |axis| rule_body.match?(/min-#{axis}:\s*44px/) } && rule_body.match?(/display:\s*inline-flex/)
   err(errors, "standalone .#{name} requires 44px width and height in normal flow") unless valid
 end
+['special/index.html', 'pt/special/index.html'].each do |route|
+  filter_html = File.read(File.join(SITE, route))
+  tag_menu = filter_html[/<details class="filter-dropdown event-tags-menu"[\s\S]*?<\/details>/]
+  place_menu = filter_html[/<details class="filter-dropdown event-locality-filter"[\s\S]*?<\/details>/]
+  canonical_tags = YAML.safe_load(File.read('_data/event_tags.yml')).map { |tag| tag['slug'] }.sort
+  menu_tags = tag_menu ? tag_menu.scan(/data-facet(?:="")? value="([^"]+)"/).flatten.sort : []
+  err(errors, "#{route}: Tags dropdown must retain every canonical tag exactly once") unless menu_tags == canonical_tags
+  err(errors, "#{route}: Free and Family belong inside the Tags dropdown") unless tag_menu && %w[free kid-friendly].all? { |value| tag_menu.match?(/data-facet(?:="")? value="#{Regexp.escape(value)}"/) }
+  note = route.start_with?('pt/') ? 'Alguns eventos não têm uma localidade confirmada. Todos os locais incluem esses eventos.' : 'Some events have no confirmed locality. All places includes them.'
+  err(errors, "#{route}: locality context belongs inside its dropdown") unless place_menu && place_menu.include?(note) && place_menu.include?('aria-describedby="event-locality-note"')
+  err(errors, "#{route}: permanent combine/coverage instructions are absent") if filter_html.include?('Combine: every selected option') || filter_html.include?('Combinar: todas as opções selecionadas') || filter_html.include?('Verified localities only; coverage is partial.') || filter_html.include?('Apenas localidades confirmadas; a cobertura é parcial.')
+  intro = filter_html[/<p class="section-intro">[\s\S]*?<\/p>/]
+  err(errors, "#{route}: discovery describes Terceira rather than only Angra") unless intro && (intro.include?('on Terceira') || intro.include?('na Terceira')) && !intro.include?('Angra')
+end
 home_target_html = File.read(File.join(SITE, 'index.html'))
 ['index.html', 'pt/index.html'].each do |route|
   home_html = File.read(File.join(SITE, route))
@@ -66,9 +80,9 @@ if File.exist?(special_path)
   err(errors, "/special/: missing Next 7 days range label") unless special_html.include?("Next 7 days</option>")
   events = YAML.safe_load(File.read('_data/special_events.yml'), permitted_classes: [Date, Time])
   localities = events.map { |event| event['locality'] }.compact.uniq
-  err(errors, "/special/: locality control availability does not match curated metadata") unless special_html.include?('class="event-locality-filter"') == localities.any?
+  err(errors, "/special/: locality control availability does not match curated metadata") unless special_html.match?(/class="[^"]*\bevent-locality-filter\b/) == localities.any?
   %w[angra praia other].each do |locality|
-    err(errors, "/special/: #{locality} option availability does not match curated metadata") unless special_html.include?(%(<option value="#{locality}">)) == localities.include?(locality)
+    err(errors, "/special/: #{locality} option availability does not match curated metadata") unless special_html.match?(/data-locality(?:="")? value="#{locality}"/) == localities.include?(locality)
   end
   title_target = special_html.match?(%r{<article[^>]*class="[^"]*event-summary[^"]*"[\s\S]*?<h3 class="event-name"><a href=})
   err(errors, '/special/: summary title anchor selector is absent') unless title_target

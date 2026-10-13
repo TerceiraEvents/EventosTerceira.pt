@@ -30,36 +30,44 @@ function stubElement() {
     value: '',
     style: {},
     textContent: '',
+    attrs: {},
+    setAttribute(key,value) { this.attrs[key]=value; },
+    getAttribute(key) { return this.attrs[key] || null; },
+    focus() { this.focused = true; },
+    contains(node) { return node===this; },
     classList: { add() {}, remove() {}, contains() { return false; }, toggle() {} },
     addEventListener(type, fn) { (listeners[type] = listeners[type] || []).push(fn); },
   };
 }
 
 // Stub search bar + card sibling chain. withRange=false omits the range select.
-function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = '2026-10-12', withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null, withFacets = false, withLocality = false, setFacets = null, setLocality = null, details = false, resetFilters = false, withNavigation = false, lang = 'en' }) {
+function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search = '', query = '', today = '2026-10-12', withRange = true, withKind = false, withTag = false, setRange = null, setKind = null, setTag = null, withFacets = false, withLocality = false, setFacets = null, setLocality = null, details = false, resetFilters = false, withNavigation = false, lang = 'en', escapeMenu = false, menuGeometry = null }) {
   const bar = {
     getAttribute: (k) => k === 'data-default-range' ? defaultRange : k === 'data-default-kind' ? defaultKind : null,
     parentElement: null,
     nextElementSibling: null,
     querySelector(sel) {
       if (sel === '.event-search-input') return input;
-      if (sel === '.event-tag-filter') return withTag ? tagSelect : null;
+      if (sel === '.event-tags-menu') return withTag || withFacets ? tagMenu : null;
       if (sel === '.event-range-filter') return withRange ? rangeSelect : null;
       if (sel === '.event-kind-filter') return withKind ? kindSelect : null;
-      if (sel === '.event-locality-filter') return withLocality ? localitySelect : null;
+      if (sel === '.event-locality-filter') return withLocality ? localityMenu : null;
       if (sel === '.filter-reset') return reset;
       if (sel === '.result-count') return resultCount;
       return null;
     },
   };
-  bar.querySelectorAll = () => withFacets ? facets : [];
-  const facets = ['free','kid-friendly'].map(value => ({...stubElement(), value, checked:false}));
-  const localitySelect = stubElement(), reset = stubElement(), resultCount = stubElement();
+  bar.querySelectorAll = selector => selector === '[data-facet]' ? (withFacets || withTag ? facets : []) : selector === '[data-locality]' ? (withLocality ? localities : []) : selector === '.filter-dropdown' ? [tagMenu, localityMenu] : [];
+  const values = [...new Set(['free','kid-friendly','art',...Array.from(fs.readFileSync('_data/event_tags.yml','utf8').matchAll(/^\s*- slug:\s*([a-z-]+)\s*$/gm),match=>match[1])])];
+  const facets = values.map(value => ({...stubElement(), value, checked:false, attrs:{'data-filter-label':value==='free'?(lang==='pt'?'Gratuito':'Free'):value==='kid-friendly'?(lang==='pt'?'Família':'Family'):value==='live-music'?(lang==='pt'?'Música ao Vivo':'Live Music'):value} }));
+  const tagSummary = stubElement(), localitySummary = stubElement(), tagButton = stubElement(), localityButton = stubElement();
+  const panel = {...stubElement(), getBoundingClientRect() { const anchor = menuGeometry ? (tagSummary.textContent.includes('Free') ? menuGeometry.selectedAnchor : menuGeometry.anchor) : 0; const left = this.style.left === undefined ? (menuGeometry.defaultLeft === undefined ? anchor : menuGeometry.defaultLeft) : anchor + parseFloat(this.style.left); return {left,right:left+menuGeometry.width,width:menuGeometry.width}; }};
+  const tagMenu = {...stubElement(), attrs:{'data-empty-label':lang==='pt'?'Todas as etiquetas':'All tags'}, querySelector: selector=>selector==='summary'?tagButton:selector==='.filter-menu'?panel:tagSummary};
+  const localityMenu = {...stubElement(), querySelector:selector=>selector==='summary'?localityButton:selector==='.filter-menu'?panel:localitySummary};
+  const localities=['','angra','praia','other'].map(value=>({...stubElement(), value, checked:!value, attrs:{'data-filter-label':value||(lang==='pt'?'Todos os locais':'All places')}}));
+  const reset = stubElement(), resultCount = stubElement();
   const input = stubElement();
   input.value = query;
-  const tagSelect = stubElement();
-  tagSelect.value = '';
-  tagSelect.options = ['', 'free', 'kid-friendly', 'art'].map(value => ({value}));
   const rangeSelect = stubElement();
   rangeSelect.value = defaultRange;
   const kindSelect = stubElement();
@@ -101,18 +109,18 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   const locale = {href:'https://example.test/pt/special/'};
   const prefix = lang === 'pt' ? '/pt' : '';
   let currentURL = prefix + '/special/' + search;
-  const listeners = {}, navHistory = [];
+  const listeners = {}, navHistory = [], popupHistory = [];
   const links = [['events', '/special/'], ['weekly', '/weekly/'], ['places', '/venues/']].map(([name, path]) => ({ name, ...Object.fromEntries(['pathname', 'search', 'hash'].map(key => [key, new URL(prefix + path, 'https://example.test')[key]])), attrs: {}, setAttribute(key, value) { this.attrs[key] = value; }, removeAttribute(key) { delete this.attrs[key]; } }));
   function recordNavigation() { if (withNavigation) navHistory.push(links.filter(link => link.attrs['aria-current'] === 'page').map(link => link.name)); }
   const sandbox = {
     Date: TestDate,
-    window: { localStorage: new Proxy({}, {get() {throw new Error("Discovery must not access browser storage");}}), addEventListener(type, handler) { listeners[type] = handler; }, location: { search, pathname:prefix + '/special/', origin:'https://example.test' }, history:{replaceState(data,title,url) {currentURL=url; sandbox.window.location.search=new URL(url,'https://example.test').search;}}, __SITE_I18N: {} },
+    window: { innerWidth:320, localStorage: new Proxy({}, {get() {throw new Error("Discovery must not access browser storage");}}), addEventListener(type, handler) { listeners[type] = handler; }, location: { search, pathname:prefix + '/special/', origin:'https://example.test' }, history:{replaceState(data,title,url) {currentURL=url; sandbox.window.location.search=new URL(url,'https://example.test').search;}}, __SITE_I18N: {} },
     URLSearchParams, Event: class { constructor(type) { this.type = type; } },
     document: {
       querySelectorAll: (sel) => sel === '.event-search-bar' ? [bar] : sel === '.site-nav a' ? links : [],
       querySelector: selector => selector === '.locale-other' ? locale : selector === '.event-search-bar' ? bar : null,
       createElement: () => stubElement(),
-      documentElement:{lang},
+      documentElement:{lang,clientWidth:320},
       getElementById: key => ['event-detail','event-dataset'].includes(key) ? null : stubElement(),
       addEventListener(type, handler) { listeners[type] = handler; },
       dispatchEvent(event) { if (listeners[event.type]) listeners[event.type](event); },
@@ -127,6 +135,7 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
   vm.runInContext(FILTER_SRC, sandbox, { filename: 'event-filter.js' });
   if (withNavigation) vm.runInContext(fs.readFileSync('assets/js/event-details.js', 'utf8'), sandbox);
   recordNavigation();
+  if(menuGeometry) { const menu=menuGeometry.menu==='places'?localityMenu:tagMenu; menu.open=true; for(const fn of menu.listeners.toggle || []) fn(); popupHistory.push(panel.getBoundingClientRect()); }
 
   if (setRange !== null && withRange) {
     rangeSelect.value = setRange;
@@ -139,15 +148,18 @@ function runPage({ cards, defaultRange = 'all', defaultKind = 'events', search =
     recordNavigation();
   }
   if (setTag !== null && withTag) {
-    tagSelect.value = setTag;
-    for (const fn of tagSelect.listeners.change || []) fn();
+    for (const facet of facets) if (!['free','kid-friendly'].includes(facet.value)) facet.checked=facet.value===setTag;
+    const chosen=facets.find(facet=>facet.value===setTag);
+    if(chosen) for(const fn of chosen.listeners.change || []) fn();
   }
-  if (setLocality !== null && withLocality) { localitySelect.value=setLocality; for (const fn of localitySelect.listeners.change || []) fn(); }
-  if (setFacets !== null && withFacets) { for (const facet of facets) facet.checked=setFacets.includes(facet.value); for (const fn of facets[0].listeners.change || []) fn(); }
+  if (setLocality !== null && withLocality) { for(const choice of localities) choice.checked=choice.value===setLocality; for(const fn of localities[0].listeners.change || []) fn(); }
+  if (setFacets !== null && withFacets) { for (const facet of facets) if (!withTag || ['free','kid-friendly'].includes(facet.value)) facet.checked=setFacets.includes(facet.value); for (const fn of facets[0].listeners.change || []) fn(); }
   if (resetFilters) { for (const fn of reset.listeners.click || []) fn(); recordNavigation(); }
+  if (escapeMenu) { tagMenu.open = true; for(const fn of tagMenu.listeners.keydown || []) fn({key:'Escape',preventDefault(){}}); }
+  if(menuGeometry) popupHistory.push(panel.getBoundingClientRect());
   const visible = {};
   for (const card of cardNodes) visible[card.attrs['data-event-name']] = card.style.display !== 'none';
-  return details ? {visible,url:currentURL,localeHref:locale.href,resultCount:resultCount.textContent,emptyText:empty.textContent,navHistory} : visible;
+  return details ? {visible,url:currentURL,localeHref:locale.href,resultCount:resultCount.textContent,emptyText:empty.textContent,navHistory,tagLabel:tagSummary.textContent,localityLabel:localitySummary.textContent,tagOpen:tagMenu.open,summaryFocused:tagButton.focused,popupBounds:menuGeometry?panel.getBoundingClientRect():null,popupHistory} : visible;
 }
 
 const ONGOING = { name: 'ongoing', start: daysFromToday(-5), end: daysFromToday(5) };
@@ -301,4 +313,35 @@ for (const lang of ['en','pt']) test(`actual ${lang} filter changes keep exactly
  assert.equal(new URLSearchParams(page.url.split('?')[1]).get('range'),'all');
  assert.equal(new URLSearchParams(page.url.split('?')[1]).get('kind'),'event');
  assert.equal(new URLSearchParams(page.localeHref.split('?')[1]).get('kind'),'event');
+});
+
+for(const lang of ['en','pt']) test(`actual ${lang} compact Tags menu preserves topic plus Free/Family and URL/reset`,()=>{
+ const cards=[{name:'All selected',start:daysFromToday(2),tags:'live-music free kid-friendly',locality:'angra'},{name:'Paid music',start:daysFromToday(2),tags:'live-music kid-friendly',locality:'angra'},{name:'Other topic',start:daysFromToday(2),tags:'free kid-friendly',locality:'angra'}];
+ const options={cards,lang,withTag:true,withFacets:true,withLocality:true,withKind:true,search:'?tag=live-music&range=week',setFacets:['free','kid-friendly'],setLocality:'angra',details:true};
+ const page=runPage(options);
+ assert.deepEqual(page.visible,{'All selected':true,'Paid music':false,'Other topic':false});
+ assert.equal(page.tagLabel,lang==='pt'?'Música ao Vivo + Gratuito + Família':'Live Music + Free + Family');
+ const params=new URLSearchParams(page.url.split('?')[1]);
+ assert.equal(params.get('tag'),'live-music');
+ assert.deepEqual(params.get('tags').split(','),['free','kid-friendly']);
+ assert.equal(params.get('locality'),'angra');
+ assert.equal(new URLSearchParams(page.localeHref.split('?')[1]).get('tag'),'live-music');
+ const restored=runPage({...options,search:'?'+params.toString(),setFacets:null,setLocality:null});
+ assert.deepEqual(restored.visible,page.visible);
+ assert.equal(restored.tagLabel,page.tagLabel);
+ const reset=runPage({...options,resetFilters:true});
+ assert.equal(reset.tagLabel,lang==='pt'?'Todas as etiquetas':'All tags');
+ assert.equal(reset.localityLabel,lang==='pt'?'Todos os locais':'All places');
+ assert.deepEqual(reset.visible,{'All selected':true,'Paid music':true,'Other topic':true});
+});
+
+test('actual Tags Escape handler closes the popup and focuses its summary',()=>{
+ const page=runPage({cards:[{name:'Event',start:daysFromToday(1)}],withFacets:true,escapeMenu:true,details:true});
+ assert.equal(page.tagOpen,false);
+ assert.equal(page.summaryFocused,true);
+});
+
+for(const geometry of [{menu:'places',anchor:29.796875,selectedAnchor:29.796875,defaultLeft:-120.6171875,width:256},{menu:'tags',anchor:158.390625,selectedAnchor:29.796875,width:256}]) test(`actual ${geometry.menu} popup is clamped after opening and summary wrapping`,()=>{
+ const page=runPage({cards:[{name:'Event',start:daysFromToday(1),tags:'free kid-friendly'}],withFacets:true,withLocality:true,menuGeometry:geometry,setFacets:['free','kid-friendly'],details:true});
+ for(const bounds of page.popupHistory) { assert(bounds.left>=0,JSON.stringify(bounds)); assert(bounds.right<=320,JSON.stringify(bounds)); }
 });
