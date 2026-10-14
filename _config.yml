@@ -56,6 +56,10 @@ defaults:
     values:
       lang: pt
 
+# Jekyll skips dot-directories unless explicitly included.
+include:
+  - .well-known
+
 exclude:
   - scripts/tests/fixtures
   - Gemfile

@@ -78,6 +78,20 @@ introduce jargon without a demonstrated benefit.
 
 ## Verification boundaries
 
+- Platform associations live in `.well-known/assetlinks.json` and
+  `.well-known/apple-app-site-association`; `_config.yml` includes that
+  directory. `scripts/tests/test_associations.rb` checks the verified
+  publisher, route contract and built output. `test_live_site.rb` checks
+  direct association responses; ordinary page redirects have separate rules.
+  Measure every declared host without following redirects, report MIME
+  types, and check Apple's CDN before claiming iOS OS acceptance.
+- Verify public signing identifiers in the exact app's existing developer
+  session when available: the Apple App ID prefix and Play app-signing
+  certificate differ from upload/debug identities. Keep private keys out of
+  the workflow. Native declarations, the Apple portal capability, refreshed
+  provisioning profiles, hosted files and release-signed OS delivery are
+  separate checks; valid JSON or a simulator custom-scheme pass proves only
+  its own stage.
 - Color and token checks: `docs/discovery-tokens.json` must match
   `assets/css/style.css` exactly, and
   `scripts/tests/test_discovery_tokens.mjs` is a bounded source regression

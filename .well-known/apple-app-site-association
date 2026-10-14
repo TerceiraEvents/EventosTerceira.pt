@@ -1,0 +1,24 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "9R3942X8JM.com.terceiraevents.app",
+        "paths": [
+          "/events",
+          "/events/",
+          "/weekly",
+          "/weekly/",
+          "/special",
+          "/special/",
+          "/pt/events",
+          "/pt/events/",
+          "/pt/weekly",
+          "/pt/weekly/",
+          "/pt/special",
+          "/pt/special/"
+        ]
+      }
+    ]
+  }
+}
