@@ -19,7 +19,8 @@ def check_files(dir, errors)
   }.each do |name, check|
     path = File.join(dir, ".well-known", name)
     errors << "#{path}: missing" and next unless File.exist?(path)
-    doc = AssociationContract.parse_json(File.read(path), path, errors) and check.call(doc, path, errors)
+    doc = AssociationContract.parse_json(File.read(path), path, errors)
+    check.call(doc, path, errors)
   end
 end
 
@@ -81,7 +82,28 @@ mutations = {
   "non-JSON content-type on assetlinks" => ->(e) {
     C.check_association_response("200", "text/html", JSON.generate(valid_al), "neg assetlinks", true, e)
   },
+  "JSON-like content-type on assetlinks" => ->(e) {
+    C.check_association_response("200", "application/jsonp", JSON.generate(valid_al), "neg assetlinks", true, e)
+  },
+  "non-array legacy AASA apps" => ->(e) {
+    doc = JSON.parse(JSON.generate(valid_aasa))
+    doc["applinks"]["apps"] = false
+    C.check_aasa_doc(doc, "neg", e)
+  },
+  "mixed legacy and modern AASA details" => ->(e) {
+    doc = JSON.parse(JSON.generate(valid_aasa))
+    doc["applinks"]["details"][0]["appIDs"] = ["OTHERTEAM.com.unrelated.app"]
+    doc["applinks"]["details"][0]["components"] = [{ "/" => "*" }]
+    C.check_aasa_doc(doc, "neg", e)
+  },
 }
+%w[assetlinks aasa].product(%w[null false]).each do |document, literal|
+  mutations["#{document} rejects JSON #{literal}"] = ->(e) {
+    C.check_association_response("200", "application/json", literal, "neg #{document}", document == "assetlinks", e)
+  }
+end
+C.check_association_response("200", "Application/JSON; charset=utf-8", JSON.generate(valid_al),
+                             "valid assetlinks", true, errors)
 mutations.each do |name, run|
   local = []
   run.call(local)

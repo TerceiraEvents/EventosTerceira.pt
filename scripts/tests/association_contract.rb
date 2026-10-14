@@ -64,7 +64,7 @@ module AssociationContract
 
     applinks = doc["applinks"]
     errors << "#{label}: missing applinks object" and return unless applinks.is_a?(Hash)
-    if applinks["apps"].is_a?(Array) && !applinks["apps"].empty?
+    unless applinks["apps"] == []
       errors << "#{label}: applinks.apps must stay empty (details carry the appID)"
     end
 
@@ -78,6 +78,9 @@ module AssociationContract
       unless detail.is_a?(Hash)
         errors << "#{l}: detail must be an object"
         next
+      end
+      if detail.key?("appIDs") || detail.key?("components")
+        errors << "#{l}: legacy appID/paths must not mix with appIDs/components"
       end
       errors << "#{l}: appID must be #{AASA_APP_ID}" unless detail["appID"] == AASA_APP_ID
       paths = detail["paths"]
@@ -98,10 +101,11 @@ module AssociationContract
   # application/octet-stream and OS acceptance is an Apple-CDN check.
   def self.check_association_response(code, content_type, body, label, require_json_mime, errors)
     errors << "#{label}: expected direct HTTP 200 with no redirects, got #{code}" and return unless code == "200"
-    if require_json_mime && !content_type.to_s.include?("application/json")
+    mime_type = content_type.to_s.split(";", 2).first.to_s.strip.downcase
+    if require_json_mime && mime_type != "application/json"
       errors << "#{label}: Content-Type '#{content_type}' must be application/json"
     end
-    doc = parse_json(body, label, errors) or return
+    doc = parse_json(body, label, errors)
     label.include?("assetlinks") ? check_assetlinks_doc(doc, label, errors) : check_aasa_doc(doc, label, errors)
   end
 end
