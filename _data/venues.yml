@@ -33,8 +33,8 @@
 - name: "Tasca do Camões"
   address: "Rua Da Rocha 64, 9700-169 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Tasca+do+Cam%C3%B5es+Angra+do+Hero%C3%ADsmo"
-  description: "Bar and tasca in Angra do Heroísmo with weekly karaoke and Latin dance nights."
-  description_pt: "Bar e tasca em Angra do Heroísmo com noites semanais de karaoke e dança latina."
+  description: "Bar and tasca in Angra do Heroísmo with weekly karaoke nights."
+  description_pt: "Bar e tasca em Angra do Heroísmo com noites semanais de karaoke."
   weekly:
     - day: Monday
       day_pt: Segunda-feira
@@ -44,10 +44,6 @@
       day_pt: Quarta-feira
       name: "Karaoke Night, 22:00–02:00"
       name_pt: "Noite de Karaoke, 22h00–02h00"
-    - day: Thursday
-      day_pt: Quinta-feira
-      name: "Latin Night, currently advertised from 22:00"
-      name_pt: "Noite Latina, atualmente anunciada a partir das 22h00"
     - day: Sunday
       day_pt: Domingo
       name: "Karaoke Night, 22:00–02:00"
