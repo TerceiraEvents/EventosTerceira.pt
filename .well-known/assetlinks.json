@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.terceiraevents.app",
+      "sha256_cert_fingerprints": [
+        "FD:23:49:C0:4B:57:A5:D2:AF:BE:62:93:D7:92:72:14:29:C4:72:93:60:D5:1E:E5:14:74:D2:66:FF:6A:C4:3A"
+      ]
+    }
+  }
+]

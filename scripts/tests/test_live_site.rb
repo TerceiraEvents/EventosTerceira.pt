@@ -114,6 +114,33 @@ if robots
 end
 
 # ─────────────────────────────────────────────────────────────────────
+# Platform association endpoints: the native app's universal links and
+# Android App Links resolve only while these parse as the exact
+# verified production contract.
+# ─────────────────────────────────────────────────────────────────────
+assetlinks = fetch("#{BASE}/.well-known/assetlinks.json")
+errors << "/.well-known/assetlinks.json: HTTP fetch failed" unless assetlinks
+if assetlinks
+  parsed = JSON.parse(assetlinks) rescue nil
+  entry = parsed.to_a.find { |e| e.dig("target", "package_name") == "com.terceiraevents.app" }
+  unless entry && entry["relation"] == ["delegate_permission/common.handle_all_urls"] &&
+         entry.dig("target", "namespace") == "android_app" &&
+         entry.dig("target", "sha256_cert_fingerprints").to_a.any?
+    errors << "/.well-known/assetlinks.json: missing verified android_app entry"
+  end
+end
+
+aasa = fetch("#{BASE}/.well-known/apple-app-site-association")
+errors << "/.well-known/apple-app-site-association: HTTP fetch failed" unless aasa
+if aasa
+  parsed = JSON.parse(aasa) rescue nil
+  details = parsed.to_h.dig("applinks", "details").to_a
+  unless details.any? { |d| d["appID"] == "9R3942X8JM.com.terceiraevents.app" }
+    errors << "/.well-known/apple-app-site-association: missing verified appID"
+  end
+end
+
+# ─────────────────────────────────────────────────────────────────────
 # Asset existence: og:image actually returns 200 (not 404)
 # ─────────────────────────────────────────────────────────────────────
 # Specifically catches the failure mode where jekyll-seo-tag emits an
