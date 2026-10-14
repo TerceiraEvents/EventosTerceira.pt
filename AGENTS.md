@@ -60,8 +60,8 @@ introduce jargon without a demonstrated benefit.
 - Detail Back reads “Back to results” / “Voltar aos resultados”: it steps
   through history when the referrer is same-origin, otherwise falls back to
   `/special/?range=all`.
-- There is no Saved workflow in the browser: `saved.md` redirects to
-  `/special/`. Never add one.
+- The browser has no Saved workflow. Event discovery uses the compact
+  filters described above; never add a Saved workflow.
 
 ## Data and curator corrections
 
@@ -80,11 +80,12 @@ introduce jargon without a demonstrated benefit.
 
 - Color and token checks: `docs/discovery-tokens.json` must match
   `assets/css/style.css` exactly, and
-  `scripts/tests/test_discovery_tokens.mjs` resolves the real cascade for
-  normal, hover, visited, focus, and focus-visible states. A passing
-  palette-token check alone never proves visible button text — always check
-  rendered labels, destinations, contrast, and keyboard focus in the built
-  page.
+  `scripts/tests/test_discovery_tokens.mjs` is a bounded source regression
+  over the known venue-button selector set (coverage, specificity order,
+  and contrast values). It is not a general browser CSS-cascade engine and
+  does not prove every focus or focus-visible state. Real rendered normal,
+  visited, hover, and focus labels and colors still need browser
+  verification, alongside destinations and keyboard focus.
 - Zoom claims require actual browser zoom: 400% zoom changes effective CSS
   pixels and device-pixel ratio, which a narrow viewport alone does not
   reproduce. Restore 100% afterwards. Chrome automatic translation can
@@ -93,9 +94,12 @@ introduce jargon without a demonstrated benefit.
 - Test clocks and cached fixtures share one deterministic island day.
   Keep assertions as written; never silence failures or loosen expectations
   to obtain green tests.
-- Screen-reader speech and automatic announcements require real
-  assistive-technology runs with the observed utterances recorded. Source
-  inspection, focus logs, and generated captions never substitute for them.
+- Screen-reader speech claims require real assistive-technology runs
+  with the observed utterances recorded. Source inspection and focus logs
+  alone do not establish speech. Generated captions can establish the
+  focused utterance strings and activation actually observed, but not audio
+  pronunciation; automatic announcements still need an actual
+  assistive-technology run.
 - Keep task tooling and data isolated, restore settings to baseline, and
   delete only exact disposable QA records. New dependencies require a stated
   license and reason; this repository stays on Jekyll.
