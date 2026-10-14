@@ -258,6 +258,27 @@ ld_notimed = card_jsonld(render_card(notimed, "en"))
 assert_eq ld_notimed["startDate"], "2026-10-01", "timeless range startDate"
 assert_eq ld_notimed["endDate"], "2026-10-05", "timeless range endDate"
 
+summary_cases = [
+  ["en", { "description_pt" => "Resumo português" }, "Resumo português", "pt"],
+  ["pt", { "description_en" => "English summary" }, "English summary", "en"],
+  ["en", { "description_en" => "English summary", "description" => "Bare summary", "description_pt" => "Resumo português" }, "English summary", "en"],
+  ["pt", { "description_pt" => "Resumo português", "description" => "Bare summary", "description_en" => "English summary" }, "Resumo português", "pt"],
+  ["en", { "description" => "Bare summary", "description_pt" => "Resumo português" }, "Bare summary", nil],
+  ["pt", { "description" => "Bare summary", "description_en" => "English summary" }, "Bare summary", nil],
+  ["en", { "description_en" => "", "description" => "", "description_pt" => "Resumo português" }, "Resumo português", "pt"],
+  ["pt", { "description_pt" => "", "description" => "", "description_en" => "English summary" }, "English summary", "en"],
+  ["en", {}, nil, nil],
+  ["pt", {}, nil, nil],
+]
+summary_cases.each_with_index do |(lang, fields, expected, summary_lang), index|
+  html = render_card(single.merge(fields), lang)
+  summary = html.match(/<div class="event-description"([^>]*)>(.*?)<\/div>/m)
+  assert_eq summary && summary[2], expected, "summary case #{index}: published text"
+  assert_eq summary && summary[1][/lang="([^"]+)"/, 1], summary_lang, "summary case #{index}: known language"
+  assert_eq card_jsonld(html)["description"], expected, "summary case #{index}: structured description"
+  assert_eq html.include?(%(data-event-description="#{expected || ''}")), true, "summary case #{index}: search metadata"
+end
+
 if @failed > 0
   puts "\nFAIL: #{@failed} assertion(s) failed"
   exit 1

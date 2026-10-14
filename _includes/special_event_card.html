@@ -5,9 +5,9 @@
   with a `_pt` (or `_en`) suffix — e.g. `description` and
   `description_pt`. We resolve them up front so the rest of the
   template can use the same variables it always did. When the
-  locale-specific value is missing or blank we fall back to the bare
-  field, which keeps the page working for events curators haven't
-  translated yet.
+  locale-specific value is missing or blank, summaries use the bare
+  field and then the other published language. Known summary languages
+  are exposed to assistive technology.
 
   Fields kept as-is (not translatable, or translation makes no sense):
     date, time, image, instagram, map_url, festival, kid_friendly,
@@ -34,12 +34,16 @@
   {% assign event_name = event.name_pt | default: event.name %}
   {% assign event_venue = event.venue_pt | default: event.venue %}
   {% assign event_address = event.address_pt | default: event.address %}
-  {% assign event_description = event.description_pt | default: event.description %}
+  {% assign event_description = event.description_pt | default: event.description | default: event.description_en %}
+  {% assign event_description_lang = "" %}
+  {% if event.description_pt and event.description_pt != empty %}{% assign event_description_lang = "pt" %}{% elsif event.description == nil or event.description == empty %}{% if event.description_en and event.description_en != empty %}{% assign event_description_lang = "en" %}{% endif %}{% endif %}
 {% else %}
   {% assign event_name = event.name_en | default: event.name %}
   {% assign event_venue = event.venue_en | default: event.venue %}
   {% assign event_address = event.address_en | default: event.address %}
-  {% assign event_description = event.description_en | default: event.description %}
+  {% assign event_description = event.description_en | default: event.description | default: event.description_pt %}
+  {% assign event_description_lang = "" %}
+  {% if event.description_en and event.description_en != empty %}{% assign event_description_lang = "en" %}{% elsif event.description == nil or event.description == empty %}{% if event.description_pt and event.description_pt != empty %}{% assign event_description_lang = "pt" %}{% endif %}{% endif %}
 {% endif %}
 
 {%- comment -%}
@@ -74,7 +78,7 @@
   {% if event.price %}<div>{{ event.price | escape }}</div>{% elsif event_tags contains 'free' %}<div>{% if page_lang == 'pt' %}Gratuito{% else %}Free{% endif %}</div>{% endif %}
 
   {% if event_address %}<div class="event-address">{{ event_address | escape }}</div>{% endif %}
-  {% if event_description %}<div class="event-description">{{ event_description | escape }}</div>{% endif %}
+  {% if event_description %}<div class="event-description"{% if event_description_lang != empty %} lang="{{ event_description_lang }}"{% endif %}>{{ event_description | escape }}</div>{% endif %}
   {% if event.festival %}<div class="festival-badge">{% if page_lang == "pt" %}{{ event.festival_pt | default: event.festival | escape }}{% else %}{{ event.festival_en | default: event.festival | escape }}{% endif %}</div>{% endif %}
   {% if event_tags.size > 0 %}<div class="event-tags">{% for slug in event_tags %}{% assign tag_meta = site.data.event_tags | where: "slug", slug | first %}{% if page_lang == "pt" %}{% assign tag_label = tag_meta.label_pt | default: tag_meta.label | default: slug %}{% else %}{% assign tag_label = tag_meta.label_en | default: tag_meta.label | default: slug %}{% endif %}<span class="event-tag tag-{{ slug | escape }}">{{ tag_meta.emoji }} {{ tag_label | escape }}</span>{% endfor %}</div>{% endif %}
   {% if event.organizer %}{% if page_lang == "pt" %}{% assign organizer = event.organizer_pt | default: event.organizer %}{% else %}{% assign organizer = event.organizer_en | default: event.organizer %}{% endif %}<div class="event-organizer">{% if page_lang == "pt" %}Organizado por: {% else %}Organized by: {% endif %}{{ organizer | escape }}</div>{% endif %}
