@@ -302,7 +302,8 @@ h3 {
   margin-top: 0.35rem;
 }
 
-.event-reservations a {
+.event-reservations a,
+.venue-card .event-reservations a {
   display: inline-block;
   padding: 0.3rem 0.8rem;
   background: var(--green-mid);
@@ -314,11 +315,13 @@ h3 {
   transition: background 0.2s;
 }
 
-.event-reservations a:visited {
+.event-reservations a:visited,
+.venue-card .event-reservations a:visited {
   color: var(--white);
 }
 
-.event-reservations a:hover {
+.event-reservations a:hover,
+.venue-card .event-reservations a:hover {
   background: var(--green-dark);
   color: var(--white);
 }

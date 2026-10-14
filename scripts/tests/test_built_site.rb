@@ -28,6 +28,11 @@ end
 # Pin the visitor-facing component behavior when the canonical fixture is
 # classified as an exhibition in the data used for this build.
 target_css = File.read(File.join(SITE, 'assets/css/style.css'))
+[['venues/index.html', 'Make a dinner reservation'], ['pt/venues/index.html', 'Reservar uma mesa']].each do |route, label|
+  venue_html = File.read(File.join(SITE, route))
+  reservation = venue_html.match(/<div class="event-reservations">\s*<a href="([^"]+)">([^<]+)<\/a>/)
+  err(errors, "#{route}: reservation link preserves its published target and label") unless reservation && reservation[1] == 'https://the-texan-1755256381.resos.com/booking' && reservation[2] == label
+end
 tag_target_rule = target_css.match(/\.form-tags \.tag-chip span\s*\{([^}]+)\}/m)
 err(errors, 'Suggest tag label targets require at least44px width and height') unless tag_target_rule && %w[width height].all? { |axis| tag_target_rule[1].match?(/min-#{axis}:\s*44px/) }
 tag_focus_rule = target_css.match(/\.tag-chip:focus-within span\s*\{([^}]+)\}/m)
