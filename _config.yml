@@ -56,9 +56,7 @@ defaults:
     values:
       lang: pt
 
-# `.well-known` carries the platform association files the native app's
-# deep links rely on (`apple-app-site-association`, `assetlinks.json`).
-# Jekyll skips dot-directories unless they're explicitly included.
+# Jekyll skips dot-directories unless explicitly included.
 include:
   - .well-known
 

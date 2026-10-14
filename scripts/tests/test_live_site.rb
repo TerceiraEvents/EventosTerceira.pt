@@ -15,11 +15,18 @@
 require "net/http"
 require "uri"
 require "json"
+require_relative "association_contract"
 
 BASE = ENV.fetch("BASE_URL", "https://eventosterceira.pt")
 puts "Smoke-testing live site at #{BASE}"
 
 errors = []
+
+# Association endpoints must be a direct 200 on each declared host —
+# a redirect to another host is not a valid association for OS purposes.
+def fetch_direct(url)
+  Net::HTTP.get_response(URI(url))
+end
 
 def fetch(url, redirects = 3)
   uri = URI(url)
@@ -114,30 +121,19 @@ if robots
 end
 
 # ─────────────────────────────────────────────────────────────────────
-# Platform association endpoints: the native app's universal links and
-# Android App Links resolve only while these parse as the exact
-# verified production contract.
+# Platform association endpoints: direct-200 contract checks (status and
+# Content-Type reported). assetlinks must serve application/json; AASA's
+# served MIME is reported but not asserted — Pages serves extensionless
+# files as application/octet-stream and OS acceptance is an Apple-CDN
+# check, not a JSON-parse check.
 # ─────────────────────────────────────────────────────────────────────
-assetlinks = fetch("#{BASE}/.well-known/assetlinks.json")
-errors << "/.well-known/assetlinks.json: HTTP fetch failed" unless assetlinks
-if assetlinks
-  parsed = JSON.parse(assetlinks) rescue nil
-  entry = parsed.to_a.find { |e| e.dig("target", "package_name") == "com.terceiraevents.app" }
-  unless entry && entry["relation"] == ["delegate_permission/common.handle_all_urls"] &&
-         entry.dig("target", "namespace") == "android_app" &&
-         entry.dig("target", "sha256_cert_fingerprints").to_a.any?
-    errors << "/.well-known/assetlinks.json: missing verified android_app entry"
-  end
-end
-
-aasa = fetch("#{BASE}/.well-known/apple-app-site-association")
-errors << "/.well-known/apple-app-site-association: HTTP fetch failed" unless aasa
-if aasa
-  parsed = JSON.parse(aasa) rescue nil
-  details = parsed.to_h.dig("applinks", "details").to_a
-  unless details.any? { |d| d["appID"] == "9R3942X8JM.com.terceiraevents.app" }
-    errors << "/.well-known/apple-app-site-association: missing verified appID"
-  end
+[
+  ["/.well-known/assetlinks.json", true],
+  ["/.well-known/apple-app-site-association", false],
+].each do |path, json_mime|
+  res = fetch_direct("#{BASE}#{path}")
+  puts "  #{path}: HTTP #{res.code}, Content-Type #{res.content_type}"
+  AssociationContract.check_association_response(res.code, res.content_type, res.body, path, json_mime, errors)
 end
 
 # ─────────────────────────────────────────────────────────────────────

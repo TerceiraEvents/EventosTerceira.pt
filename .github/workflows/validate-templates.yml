@@ -86,10 +86,6 @@ jobs:
       - name: Smoke-test built site
         run: bundle exec ruby scripts/tests/test_built_site.rb
 
-      # ── Platform association files ────────────────────────────────
-      # Asserts the /.well-known/ AASA + assetlinks.json sources parse,
-      # carry the verified production identities, associate only the
-      # natively-declared routes, and actually land in _site/ after the
-      # jekyll build above.
+      # Association contract + built `.well-known` emission.
       - name: Validate platform association files
         run: ruby scripts/tests/test_associations.rb
