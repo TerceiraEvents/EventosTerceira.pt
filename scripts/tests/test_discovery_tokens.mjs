@@ -22,3 +22,32 @@ test('an explicitly supplied native source detects native palette drift', () => 
   assert.equal(checkTokens(manifest, css, theme).length, 6);
   assert.throws(() => checkTokens(manifest, css, theme.replace("textLight: '#666666'", "textLight: '#888888'")), /native color inventory differs/);
 });
+
+function reservationColors(state) {
+  const selectors = new Map([
+    ['a', 1], ['main a', 2], ['.venue-card a', 11], ['.event-reservations a', 11],
+    ['.venue-card .event-reservations a', 21],
+  ]);
+  for (const [selector, specificity] of [...selectors]) {
+    if (state !== 'normal') selectors.set(`${selector}:${state}`, specificity + 10);
+  }
+  const values = new Map();
+  for (const rule of css.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
+    const applicable = rule[1].trim().split(',').map(selector => selectors.get(selector.trim())).filter(value => value !== undefined);
+    if (!applicable.length) continue;
+    const specificity = Math.max(...applicable);
+    for (const declaration of rule[2].matchAll(/(?:^|;)\s*(color|background)\s*:\s*([^;]+)/g)) {
+      const [, property, value] = declaration;
+      if (!values.has(property) || values.get(property).specificity <= specificity) values.set(property, {specificity, value: value.trim()});
+    }
+  }
+  return Object.fromEntries([...values].map(([property, {value}]) => [property, value.replace(/var\(--([^)]*)\)/g, (_, token) => manifest.website[token])]));
+}
+
+for (const state of ['normal', 'hover', 'visited', 'focus', 'focus-visible']) {
+  test(`reservation link text retains contrast through the source cascade: ${state}`, () => {
+    const {color, background} = reservationColors(state);
+    assert.ok(contrast(color, background) >= 4.5, `${state}: ${color}/${background} has contrast ${contrast(color, background).toFixed(2)}`);
+    assert.equal(color, manifest.website.white);
+  });
+}
