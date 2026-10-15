@@ -78,6 +78,14 @@ introduce jargon without a demonstrated benefit.
 
 ## Verification boundaries
 
+- The current nine-issue completion scope prioritizes readable layouts,
+  keyboard/focus access, labeled controls, touch targets, enlarged text and
+  actual browser zoom. Speech-specific testing (pronunciation, automatic
+  spoken output, audio recording or transcription) and speech-only features
+  require an explicit new user request; the omitted speech checks are
+  user-skipped, not unfinished device or simulator work. Existing assistive
+  labels and semantics stay in place, and source/platform evidence
+  boundaries from earlier runs still apply.
 - Platform associations live in `.well-known/assetlinks.json` and
   `.well-known/apple-app-site-association`; `_config.yml` includes that
   directory. `scripts/tests/test_associations.rb` checks the verified
