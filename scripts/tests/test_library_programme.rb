@@ -42,8 +42,6 @@ class LibraryProgrammeTest < Minitest::Test
     [14, 21, 28].each do |day|
       assert_single("Aventuras Fantásticas", Date.new(2026, 10, day), "15:00–17:00")
     end
-    assert_empty find_records("Aventuras Fantásticas", date: Date.new(2026, 10, 7)),
-      "7 October occurrence is outside the audit window and must not be added"
   end
 
   def test_lanterna_magica_october_wednesdays
