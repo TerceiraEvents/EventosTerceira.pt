@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
-import { existsSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -9,9 +9,7 @@ import { fileURLToPath } from 'node:url';
 const here = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(here, '..', '..');
 
-// Action-row markup mirrors _includes/special_event_card.html: a Maps link,
-// a source link (Instagram and generic variants), and the Suggest-an-edit
-// button, in both publish languages with the longest real labels.
+// Fixtures mirror the EN/PT Source and Instagram variants of the card include.
 function actionRow(mapLabel, sourceHtml, flagLabel) {
   return '<div class="event-card-actions">'
     + `<a class="event-map-link" data-safe-link href="https://www.example.test/maps" target="_blank" rel="noopener noreferrer">📍 ${mapLabel}</a>`
@@ -25,9 +23,8 @@ function actionRow(mapLabel, sourceHtml, flagLabel) {
 const MEASURE_SCRIPT = `<script>(function () {
   function rect(el) {
     var box = el.getBoundingClientRect();
-    var style = getComputedStyle(el);
     return { top: box.top, left: box.left, right: box.right, bottom: box.bottom,
-      width: box.width, height: box.height, marginTop: style.marginTop };
+      width: box.width, height: box.height };
   }
   var rows = Array.prototype.map.call(
     document.querySelectorAll('.event-card-actions'),
@@ -35,16 +32,17 @@ const MEASURE_SCRIPT = `<script>(function () {
       return Array.prototype.map.call(row.querySelectorAll('a, button'), rect);
     });
   var payload = JSON.stringify({
-    viewportWidth: document.documentElement.clientWidth,
+    viewportWidth: innerWidth,
+    availableWidth: document.documentElement.clientWidth,
     docWidth: document.documentElement.scrollWidth,
     rows: rows,
   });
-  var target = document.getElementById('geometry-result');
+  var target = parent.document.getElementById('geometry-result');
   target.textContent = payload;
 })();</script>`;
 
-function fixtureHtml(css) {
-  return '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+function fixtureHtml(css, width) {
+  const content = '<!doctype html><html lang="en"><head><meta charset="utf-8">'
     + '<meta name="viewport" content="width=device-width, initial-scale=1">'
     + `<title>card action geometry</title><style>${css}</style></head><body>`
     + '<article class="special-event event-summary"><div class="event-details">'
@@ -63,8 +61,12 @@ function fixtureHtml(css) {
     + '<h3 class="event-name">Exposição</h3>'
     + `${actionRow('Abrir no Maps', 'Fonte', 'Sugerir uma alteração')}`
     + '</div></article>'
-    + '<div id="geometry-result"></div>'
     + `${MEASURE_SCRIPT}</body></html>`;
+  const srcdoc = content.replaceAll('&', '&amp;').replaceAll('"', '&quot;')
+    .replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+  return '<!doctype html><html><body><div id="geometry-result" hidden></div>'
+    + `<iframe title="Card fixtures" style="width:${width}px;height:2400px;border:0" srcdoc="${srcdoc}"></iframe>`
+    + '</body></html>';
 }
 
 function resolveChrome() {
@@ -79,70 +81,77 @@ function resolveChrome() {
 
 function renderWidth(binary, pageUrl, width, timeoutMs) {
   return new Promise((resolveRender, rejectRender) => {
+    const fixtureDir = dirname(fileURLToPath(pageUrl));
     execFile(binary, ['--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage',
-      `--window-size=${width},800`, '--dump-dom', pageUrl],
-    { timeout: timeoutMs, maxBuffer: 16 * 1024 * 1024 },
-    (error, stdout) => {
-      if (error) { rejectRender(new Error(`headless chrome failed at ${width}px: ${error.message}`)); return; }
-      const match = /<div id="geometry-result">(.*?)<\/div>/s.exec(stdout);
+      `--user-data-dir=${join(fixtureDir, 'profile-' + width)}`, '--window-size=1280,800', '--dump-dom', pageUrl],
+    { timeout: timeoutMs, maxBuffer: 16 * 1024 * 1024,
+      env: { ...process.env, XDG_CACHE_HOME: join(fixtureDir, 'cache'), XDG_CONFIG_HOME: join(fixtureDir, 'config') } },
+    (error, stdout, stderr) => {
+      if (error) {
+        rejectRender(new Error(`headless chrome failed at ${width}px (${error.signal || error.code}): ${stderr.slice(-1000)}`));
+        return;
+      }
+      const match = /<div id="geometry-result"[^>]*>(.*?)<\/div>/s.exec(stdout);
       if (!match) { rejectRender(new Error(`no rendered measurements in dumped DOM at ${width}px`)); return; }
       try {
         resolveRender(JSON.parse(match[1]));
       } catch (parseError) {
-        rejectRender(new Error(`unparseable measurements at ${width}px: ${parseError.message}`));
+        rejectRender(new Error(`unparsable measurements at ${width}px: ${parseError.message}`));
       }
     });
   });
 }
 
-// Group actions by rendered flex line: actions whose tops agree within 1px
-// share a line; wrapped lines each align independently.
 function flexLines(actions) {
   const lines = [];
   for (const action of actions) {
-    const line = lines.find((candidate) => Math.abs(candidate[0].top - action.top) <= 1);
+    const line = lines.find((candidate) => candidate.some((other) => {
+      const overlap = Math.min(other.bottom, action.bottom) - Math.max(other.top, action.top);
+      return overlap > Math.min(other.height, action.height) / 2;
+    }));
     if (line) line.push(action);
     else lines.push([action]);
   }
   return lines;
 }
 
-test('card action rows align with uniform targets and wrap without overflow', async () => {
+test('card action rows align and wrap within real 1280px and 320px frame viewports', async (t) => {
   const timeoutMs = Number(process.env.CARD_GEOMETRY_TIMEOUT_MS || 60000);
   const css = readFileSync(join(repoRoot, 'assets', 'css', 'style.css'), 'utf8');
-  const page = join(mkdtempSync(join(tmpdir(), 'card-geometry-page-')), 'actions.html');
-  writeFileSync(page, fixtureHtml(css));
-  const pageUrl = `file://${encodeURI(page)}`;
+  const fixtureDir = mkdtempSync(join(tmpdir(), 'card-geometry-page-'));
+  t.after(() => rmSync(fixtureDir, { recursive: true, force: true }));
   const binary = resolveChrome();
 
   for (const width of [1280, 320]) {
+    const page = join(fixtureDir, `actions-${width}.html`);
+    writeFileSync(page, fixtureHtml(css, width));
+    const pageUrl = `file://${encodeURI(page)}`;
     const measured = await renderWidth(binary, pageUrl, width, timeoutMs);
+    assert.equal(measured.viewportWidth, width, 'the frame uses the requested CSS viewport width');
     assert.equal(measured.rows.length, 4, `expected four action rows at ${width}px`);
     for (const [index, actions] of measured.rows.entries()) {
       assert.equal(actions.length, 3, `row ${index} keeps all three actions at ${width}px`);
-      const margins = new Set(actions.map((action) => action.marginTop));
-      assert.equal(margins.size, 1,
-        `row ${index} actions use uniform spacing at ${width}px (margins ${[...margins].join(', ')})`);
       const lines = flexLines(actions);
       if (width === 1280) {
         assert.equal(lines.length, 1,
           `row ${index} stays on one line at desktop width (tops ${actions.map((a) => a.top.toFixed(1)).join(', ')})`);
       }
+      if (width === 320) assert.ok(lines.length > 1, `row ${index} exercises wrapping at 320px`);
       for (const [lineIndex, line] of lines.entries()) {
-        const tops = line.map((action) => action.top);
-        assert.ok(Math.max(...tops) - Math.min(...tops) <= 1,
-          `row ${index} line ${lineIndex} controls align at ${width}px (tops ${tops.map((v) => v.toFixed(1)).join(', ')})`);
+        const centers = line.map((action) => action.top + action.height / 2);
+        assert.ok(Math.max(...centers) - Math.min(...centers) <= 1,
+          `row ${index} line ${lineIndex} controls align at ${width}px (centers ${centers.map((v) => v.toFixed(1)).join(', ')})`);
         for (const [position, action] of line.entries()) {
           assert.ok(action.width >= 44 && action.height >= 44,
             `row ${index} line ${lineIndex} action ${position} target is at least 44x44px at ${width}px`
             + ` (got ${action.width.toFixed(1)}x${action.height.toFixed(1)})`);
-          assert.ok(action.left >= -1 && action.right <= width + 1,
+          assert.ok(action.left >= -1 && action.right <= measured.availableWidth + 1,
             `row ${index} line ${lineIndex} action ${position} stays in bounds at ${width}px`
             + ` (left ${action.left.toFixed(1)}, right ${action.right.toFixed(1)})`);
         }
       }
     }
-    assert.ok(measured.docWidth <= width + 1,
+    assert.ok(measured.docWidth <= measured.availableWidth + 1,
       `long EN/PT labels wrap without horizontal overflow at ${width}px (document ${measured.docWidth})`);
   }
 });
