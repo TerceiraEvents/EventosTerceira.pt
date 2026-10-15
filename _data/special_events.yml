@@ -5554,7 +5554,7 @@ Come join us and support our festivities!"
 - date: 2026-06-30
   locality: angra
   id: ba658ad2-7d03-4c09-a9b2-7e1e2b1146f2
-  end_date: 2026-09-30
+  end_date: 2026-10-31
   kind: exhibition
   name: "Confluência — estruturas para um território descontínuo"
   name_en: "Confluence — Structures for a Discontinuous Territory"
@@ -5563,7 +5563,7 @@ Come join us and support our festivities!"
   map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+Lu%C3%ADs+da+Silva+Ribeiro+Angra
   description: "Outdoor installation by Paulo Ávila Sousa using connected pyramidal structures inspired by traditional corn-drying racks to evoke the archipelago and autonomy."
   description_pt: "Instalação de Paulo Ávila Sousa no pátio da Biblioteca, composta por estruturas piramidais interligadas e alusivas às burras de milho, aproximando-se da ideia de arquipélago e autonomia."
-  source_url: https://angradoheroismo.pt/eventos/
+  source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
   tags:
   - exhibition
   - outdoor
@@ -9472,3 +9472,144 @@ Come join us and support our festivities!"
   description_pt: "Sessão gratuita de contos para crianças e famílias com Ana Couto e Paulo Freitas, no programa municipal de outubro a dezembro."
   instagram: https://www.instagram.com/angradoheroismo/p/DeSVk0_x9Cg/
   tags: [literature, kid-friendly, free]
+
+# BPARLSR "Biblioagenda" October 2026 programme.
+# Source: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
+# The programme's 7 October occurrences predate the audit window and are not
+# listed; no end times or admission prices are published for these items.
+
+- date: 2026-10-14
+  locality: angra
+  name: "Aventuras Fantásticas"
+  name_en: "Fantastic Adventures"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  time: "15:00–17:00"
+  description: "Gamebook activity for ages 11–17 built on the 'Aventuras Fantásticas' collection by Ian Livingstone and Steve Jackson, guided by Henrique Bulcão in the library's Children and Youth space. Limited places; register at the Children's and Young Adults Section desk."
+  source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
+  tags: [kid-friendly, literature]
+
+  id: 30d6d188-1da8-4618-8b3e-d2bbb9169831
+- date: 2026-10-14
+  locality: angra
+  name: "Lanterna Mágica | Pensar com a Caixa"
+  name_en: "Magic Lantern | Thinking with the Box"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  time: "15:30–18:00"
+  description: "Short-film screening followed by a discussion in the children's and young adults' multimedia space, part of the Lanterna Mágica video-library project run by Cine-Clube da Ilha Terceira with the library and the Municipality of Angra do Heroísmo."
+  source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
+  tags: [kid-friendly, cinema]
+
+  id: 95014084-3de5-4124-adbb-a0a3607445c9
+- date: 2026-10-15
+  locality: angra
+  name: "Apresentação do Livro | Jazz, Golf and American Dream"
+  name_en: "Book Presentation | Jazz, Golf and American Dream"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  time: "18:30"
+  description: "Presentation of 'Jazz, Golf and American Dream — The Social Impact of the American Presence on Terceira Island, Azores, During the Estado Novo Regime' by Tânia Santos (Letras Lavadas), introduced by Miguel Monjardino, in the library auditorium."
+  source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
+  tags: [literature]
+
+  id: ba3d105b-9a47-4722-9181-70377417f8fb
+- date: 2026-10-20
+  locality: angra
+  end_date: 2027-01-30
+  kind: exhibition
+  name: "Exposição de fotografia: Nocturnos de Angra"
+  name_en: "Photography exhibition: Nocturnos de Angra"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  visiting_hours: "Monday to Friday, 09:00–19:00; Saturday, 14:00–19:00"
+  visiting_hours_pt: "de segunda a sexta-feira, das 09h00 às 19h00; sábado, das 14h00 às 19h00"
+  description: "Photography exhibition by Rui Poeira in the library's Arte & Debates space: 24 images of Angra's emblematic buildings and monuments at night, marking the 50th anniversary of Azorean autonomy (1976–2026). Opening session on 20 October at 18:30."
+  source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
+  tags: [exhibition]
+
+  id: 922465d7-a5a5-4dee-95bb-a6b1cc9fc555
+- date: 2026-10-21
+  locality: angra
+  name: "Apresentação do Livro | Altar ao Divino Espírito Santo: tradição e modernidade"
+  name_en: "Book Presentation | Altar ao Divino Espírito Santo: tradição e modernidade"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  time: "18:30"
+  description: "Presentation of 'Altar ao Divino Espírito Santo: tradição e modernidade' by Fabiana Ourique — a photographic record of more than 700 Holy Spirit altars across Terceira, São Jorge, Graciosa, Corvo and São Miguel, and in the United States and Canada — in the library auditorium."
+  source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
+  tags: [literature]
+
+  id: 4a94739a-9f83-4e40-9b68-0dc62256e47e
+- date: 2026-10-21
+  locality: angra
+  end_date: 2026-11-07
+  kind: event
+  name: "Livro Assombrado"
+  name_en: "Haunted Book"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  visiting_hours: "Monday to Friday, 09:00–19:00; Saturday, 14:00–19:00"
+  visiting_hours_pt: "de segunda a sexta-feira, das 09h00 às 19h00; sábado, das 14h00 às 19h00"
+  description: "Blind-date reading selection in the Adult Reading Room and Home Loan Section: wrapped horror, mystery, thriller and crime fiction titles accompanied only by a few clues, inviting readers to choose without knowing the title, author or cover."
+  source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
+  tags: [literature]
+
+  id: 6901a07a-b614-4b19-8e91-7387a6407b04
+- date: 2026-10-21
+  locality: angra
+  name: "Aventuras Fantásticas"
+  name_en: "Fantastic Adventures"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  time: "15:00–17:00"
+  description: "Gamebook activity for ages 11–17 built on the 'Aventuras Fantásticas' collection by Ian Livingstone and Steve Jackson, guided by Henrique Bulcão in the library's Children and Youth space. Limited places; register at the Children's and Young Adults Section desk."
+  source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
+  tags: [kid-friendly, literature]
+
+  id: 5431b19c-9808-42e3-81bb-70b2d2cde337
+- date: 2026-10-21
+  locality: angra
+  name: "Lanterna Mágica | Pensar com a Caixa"
+  name_en: "Magic Lantern | Thinking with the Box"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  time: "15:30–18:00"
+  description: "Short-film screening followed by a discussion in the children's and young adults' multimedia space, part of the Lanterna Mágica video-library project run by Cine-Clube da Ilha Terceira with the library and the Municipality of Angra do Heroísmo."
+  source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
+  tags: [kid-friendly, cinema]
+
+  id: 2fb47eea-2d46-44e8-86de-29d89c589af3
+- date: 2026-10-28
+  locality: angra
+  name: "Aventuras Fantásticas"
+  name_en: "Fantastic Adventures"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  time: "15:00–17:00"
+  description: "Gamebook activity for ages 11–17 built on the 'Aventuras Fantásticas' collection by Ian Livingstone and Steve Jackson, guided by Henrique Bulcão in the library's Children and Youth space. Limited places; register at the Children's and Young Adults Section desk."
+  source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
+  tags: [kid-friendly, literature]
+
+  id: eab881bf-d896-42ec-baa4-1cb0d699741c
+- date: 2026-10-28
+  locality: angra
+  name: "Lanterna Mágica | Pensar com a Caixa"
+  name_en: "Magic Lantern | Thinking with the Box"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca+P%C3%BAblica+e+Arquivo+Regional+Lu%C3%ADs+da+Silva+Ribeiro+Angra+do+Hero%C3%ADsmo
+  time: "15:30–18:00"
+  description: "Short-film screening followed by a discussion in the children's and young adults' multimedia space, part of the Lanterna Mágica video-library project run by Cine-Clube da Ilha Terceira with the library and the Municipality of Angra do Heroísmo."
+  source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
+  tags: [kid-friendly, cinema]
+  id: 7d4fb60b-d1df-47f6-8b13-7f9567eb7c9d
