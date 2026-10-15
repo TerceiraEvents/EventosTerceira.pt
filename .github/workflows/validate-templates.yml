@@ -43,6 +43,14 @@ jobs:
           node scripts/check_discovery_tokens.mjs
           node --test scripts/tests/test_discovery_tokens.mjs
 
+      # ── Card action geometry (headless Chrome, no dependency) ──
+      # Renders the real card-action CSS/markup and asserts row alignment,
+      # 44px targets, and wrap without overflow. Uses the ubuntu runner's
+      # preinstalled google-chrome; the script fails loudly if no browser
+      # binary is present.
+      - name: Check card action geometry
+        run: node --test scripts/tests/test_card_action_geometry.mjs
+
       - name: Validate known venue locality metadata
         run: ruby scripts/tests/test_event_localities.rb
 

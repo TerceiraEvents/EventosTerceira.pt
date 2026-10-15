@@ -1529,8 +1529,9 @@ main a {
 
 .event-search-bar .search-input { flex-basis: 100%; }
 .filter-reset[hidden] { display: none; }
-.event-card-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+.event-card-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; align-items: center; }
 .event-card-actions a, .event-card-actions button { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+.event-card-actions .event-map-link, .event-card-actions .event-source, .event-card-actions .event-flag-btn { margin-top: 0; }
 .event-card-artwork:empty { display: none; }
 .event-card-artwork { width: 100%; height: clamp(220px, 60vh, 480px); }
 .event-card-artwork img { width: 100%; height: 100%; object-fit: contain; }
