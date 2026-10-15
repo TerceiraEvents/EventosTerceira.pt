@@ -59,6 +59,9 @@ jobs:
       - name: Validate Tasca recurring schedule
         run: bundle exec ruby scripts/tests/test_tasca_schedule.rb
 
+      - name: Validate October library programme reconciliation
+        run: bundle exec ruby scripts/tests/test_library_programme.rb
+
       # ── Blog post `lang:` front-matter ────────────────────────────
       # Catches typos like `lang: portugese` and EN/PT filename ↔
       # `lang:` mismatches before they break the bilingual permalinks
