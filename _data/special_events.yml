@@ -9610,3 +9610,79 @@ Come join us and support our festivities!"
   source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
   tags: [kid-friendly, cinema]
   id: 7d4fb60b-d1df-47f6-8b13-7f9567eb7c9d
+
+# Auto-ingested from CMAH (2026-10-17)
+- date: 2026-10-18
+  name: "Human, documentário de Yann Arthus-Bertrand"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, Angra do Heroísmo, 9700-030"
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa%20do%20Sal%20Angra%20do%20Hero%C3%ADsmo
+  time: "15:00"
+  description: "O que nos une enquanto seres humanos? No âmbito do ciclo \"Nunca Mais! Desarmar o ódio, construir a justiça\", a Oficina d'Angra convida a comunidade para a exibição de Human, aclamado documentário de Yann Arthus-Bertrand. Através de testemunhos de pessoas de diferentes partes do mundo, Human propõe uma reflexão profunda sobre a condição humana, abordando temas como a dignidade, a desigualdade, o amor, a guerra, a pobreza, a esperança e os direitos humanos. Uma oportunidade para olhar o mundo…"
+  source_url: https://angradoheroismo.pt/evento/human-documentario-de-yann-arthus-bertrand/
+  source_uid: "1973@angradoheroismo.pt"
+  tags:
+  - cinema
+
+  id: 2dcf677a-b916-4863-ac8c-8ebc693bdba8
+- date: 2026-10-21
+  name: "Mostra bibliográfica | Livro Assombrado"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão, n.º 42, Angra do Heroísmo, 9700-054"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca%20P%C3%BAblica%20e%20Arquivo%20Regional%20Lu%C3%ADs%20da%20Silva%20Ribeiro%20Angra%20do%20Hero%C3%ADsmo
+  time: "00:00"
+  description: "A BPARLSR organiza, de 21 de outubro a 7 de novembro, a mostra \"Livro Assombrado\", com o objetivo de estimular a curiosidade dos leitores e divulgar a sua Coleção de Livre Acesso. A iniciativa estará patente na Sala de Leitura e Empréstimo Domiciliário, proporcionando um verdadeiro encontro às cegas com o mistério. Serão apresentados livros dos géneros de terror, mistério, suspense e policial, cuidadosamente embrulhados para ocultar título, autor, capa e sinopse. Cada exemplar incluirá apenas…"
+  source_url: https://angradoheroismo.pt/evento/mostra-bibliografica-livro-assombrado/
+  source_uid: "1981@angradoheroismo.pt"
+  tags:
+  - exhibition
+
+  id: 0b966e14-71d5-46b6-bae1-252ef347832a
+  locality: angra
+- date: 2026-10-25
+  name: "Caminhada Vive a Vida"
+  venue: Praça Velha
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "10:00"
+  description: "A Praça Velha, em Angra do Heroísmo, acolhe, no dia 25 de outubro de 2026, domingo, às 10h00, a «Caminhada Vive a Vida», uma iniciativa promovida pela Liga Portuguesa Contra o Cancro – Núcleo Regional dos Açores, integrada nas comemorações do Outubro Rosa. A atividade pretende sensibilizar a população para a prevenção e combate ao cancro, promovendo simultaneamente a adoção de estilos de vida saudáveis e a solidariedade para com esta causa. As inscrições são gratuitas. Os participantes poderão…"
+  source_url: https://angradoheroismo.pt/evento/caminhada-vive-a-vida/
+  source_uid: "1975@angradoheroismo.pt"
+
+  id: 5177fe8d-d723-45e1-aaa8-5276d1c053db
+- date: 2026-10-25
+  name: "Sessão de Entrega do Prémio de Mérito Cívico Teotónio de Ornelas"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os%20do%20Concelho%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "20:00"
+  description: "Os Paços do Concelho acolhem, no dia 25 de outubro de 2026, domingo, às 20h00, a Sessão de Entrega do Prémio de Mérito Cívico Teotónio de Ornelas. A cerimónia distingue personalidades ou entidades cujo percurso e contributo constituam um exemplo de cidadania, dedicação à comunidade e promoção dos valores cívicos, homenageando simultaneamente a memória e o legado de Teotónio de Ornelas. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/sessao-de-entrega-do-premio-de-merito-civico-teotonio-de-ornelas/
+  source_uid: "1974@angradoheroismo.pt"
+
+  id: 58d60f0d-6f52-440e-ad2c-0e7c0f6162e9
+- date: 2026-11-14
+  name: "Concerto: Angra Convida Carolina Deslandes – Voz & Guitarra"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Angra do Heroísmo, 9700-130"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20e%20de%20Congressos%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:30"
+  description: "Angra Convida Carolina Deslandes – Voz & Guitarra O Centro Cultural e de Congressos de Angra do Heroísmo acolhe, nos dias 13 e 14 de novembro de 2026, sexta-feira e sábado, às 21h30, o espetáculo «Angra Convida Carolina Deslandes – Voz & Guitarra». Devido à elevada procura por parte do público, foi aberta uma sessão extra para o dia 13 de novembro. Em formato intimista, voz e guitarra, Carolina Deslandes apresenta algumas das canções mais marcantes da música portuguesa contemporânea,…"
+  source_url: https://angradoheroismo.pt/evento/concerto-angra-convida-carolina-deslandes-voz-guitarra/
+  source_uid: "1498@angradoheroismo.pt"
+  tags:
+  - live-music
+
+  id: f7f3b6e0-e682-42a3-a3e2-2ecb9b798b06
+  locality: angra
+- date: 2027-01-29
+  name: "Azores GameFest"
+  venue: Parque Multissetorial da Ilha Terceira
+  address: "Vinha Brava, Angra do Heroísmo, 9700-240"
+  map_url: https://www.google.com/maps/search/?api=1&query=Parque%20Multissetorial%20da%20Ilha%20Terceira%20Angra%20do%20Hero%C3%ADsmo
+  time: "10:00"
+  description: "O Azores GameFest, um dos maiores eventos de Gaming e Esports dos Açores regressa à Ilha Terceira, no Pavilhão Multiusos do Parque Multissetorial, entre os dias 29 e 31 de janeiro e promete novas áreas, torneios, convidados, workshops e painéis com muitas novidades e conteúdos dedicados aos fãs do gaming mas também para toda a família."
+  source_url: https://angradoheroismo.pt/evento/azores-gamefest/
+  source_uid: "1937@angradoheroismo.pt"
+
+  id: 4d99e75d-8df6-44b1-8cc3-e964b1584e59
