@@ -17,6 +17,8 @@ The complete special-event file and weekly schedules are loaded for reconciliati
 
 | https://www.instagram.com/cantinhodamusica.pt/p/DepFpmxIrA0/ | Original post shows “2 days ago” | 31 October, Sabores da Horta | accepted: Halloween Encantado; original poster gives sessions at 15:00 and 16:00; no title/date/venue/source match; limited places and registration by private message, price unverified |
 
+The reader profile reports 23 followed accounts. Opening Following and scrolling the dialog exposes all 23 distinct profile URLs; each has an initial-grid read in this pass. The additional organizer collaborator Cantinho da Música supplies the fifth accepted event.
+
 ## Instagram source boundaries
 
 Every route below opens an authenticated profile. This table describes the initial visible grid, not a complete history, highlight or monthly-programme audit. Caption dates describe visible events, not a verified publication boundary.
@@ -26,6 +28,7 @@ Every route below opens an authenticated profile. This table describes the initi
 | https://www.instagram.com/angradoheroismo/ | 23 October Cinefreguesias, 24–26 October Digger and 30 October Sónia Pereira; exact existing duplicates | partial |
 | https://www.instagram.com/museu.angra/ | Museum introduction and older September event captions; current complete programme unread | partial |
 | https://www.instagram.com/amit.academiamusical/ | 24 October autumn concert accepted; 16 October dance is past; 5–7 November Marrakech is outside Terceira | partial |
+| https://www.instagram.com/ebruartterceira/ | Pinned bookable studio/scarf experiences and marbled-art/product posts; no explicit future dated session in inspected grid; availability is not a dated special event | partial |
 | https://www.instagram.com/espacoamit/ | 25 September gaming and earlier June music; no inferred future repetition | partial |
 | https://www.instagram.com/cjazzamit/ | Jazz-course announcement and older dated sessions; admission requirements do not establish future session dates | partial |
 | https://www.instagram.com/oficinadangra/ | 31 October Halloween caption with lineup/prices; held against existing Abramacabra IV | partial |
@@ -68,7 +71,7 @@ The public group https://www.facebook.com/groups/1301827598546888/ opens at its 
 - Casa do Sal Halloween: 31 October 2026 at 22:00, MRAPPLES, Wild do Ó and Brothers on Dish, €5 online / €7 door / €5 members at door. The existing Abramacabra IV shares date and venue but lacks programme details. Hold a separate addition until event identity is resolved.
 - Garden Club Friday/Saturday karaoke: current caption advertises 22:00–02:00. Existing maintainer-confirmed Texan karaoke is 22:30–01:30. Preserve both existing schedules and hold any venue/time correction pending explicit reconciliation.
 - Praia parenting activities: insufficient dated public-session details in the reached municipal posts.
-- Monthly programmes other than the fully inspected Lar Doce Livro carousel, remaining carousel slides, highlights/stories, the complete followed-account inventory and the community group history require explicit final boundaries before this can qualify as a complete runbook scan. Automated official-source dry-runs belong to the stage-1 audit and are not rerun here.
+- Monthly programmes other than the fully inspected Lar Doce Livro carousel, remaining carousel slides, highlights/stories and the community group history require explicit final boundaries before this can qualify as a complete runbook scan. Automated official-source dry-runs belong to the stage-1 audit and are not rerun here.
 
 ## Validation
 
