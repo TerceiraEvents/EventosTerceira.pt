@@ -9610,3 +9610,65 @@ Come join us and support our festivities!"
   source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
   tags: [kid-friendly, cinema]
   id: 7d4fb60b-d1df-47f6-8b13-7f9567eb7c9d
+
+- date: 2026-10-24
+  name: Concerto de Outono — Coro Padre Tomás de Borba da AMIT
+  name_en: Autumn Concert — AMIT Coro Padre Tomás de Borba
+  venue: Igreja da Misericórdia
+  address: Angra do Heroísmo
+  time: '19:00'
+  description: The AMIT choir celebrates its 45th anniversary with an autumn programme conducted by Gerson Silva, including works by Eurico Carrapatoso, Fernando Lopes-Graça, Gualter Silva and José Afonso. Free admission.
+  description_pt: O coro da AMIT celebra 45 anos com um programa de outono dirigido pelo maestro Gerson Silva, incluindo obras de Eurico Carrapatoso, Fernando Lopes-Graça, Gualter Silva e José Afonso. Entrada livre.
+  instagram: https://www.instagram.com/amit.academiamusical/p/DecmZZNFk_l/
+  tags:
+  - live-music
+  - free
+  id: eaf5cc3c-ba57-441b-b351-9792cf684e3d
+- date: 2026-10-24
+  name: Tommy G ao vivo no The Garden Club
+  name_en: Tommy G Live at The Garden Club
+  venue: The Garden Club
+  address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
+  time: '20:00'
+  description: Live music with Tommy G at The Garden Club in Angra do Heroísmo.
+  description_pt: Música ao vivo com Tommy G no The Garden Club, em Angra do Heroísmo.
+  instagram: https://www.instagram.com/thegardenclub.angra/p/Der16YVsLjk/
+  tags:
+  - live-music
+  id: 89d9179f-6222-47ab-8d92-5d269cccdf96
+- date: 2026-10-24
+  name: Red Hot Tribute ao vivo na Tasca do Camões
+  name_en: Red Hot Tribute Live at Tasca do Camões
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  time: '22:00'
+  description: Red Hot Tribute performs live at Tasca do Camões.
+  description_pt: Red Hot Tribute ao vivo na Tasca do Camões.
+  instagram: https://www.instagram.com/tascadocamoes/p/DetaGeyiD73/
+  tags:
+  - live-music
+  id: 9c99ab5a-cfb1-4b48-9323-7f4854b7e009
+- date: 2026-10-24
+  name: DJ Waldo — Twins The Club
+  venue: Twins Club
+  address: Rua Diogo de Teive 54, 9700-065 Angra do Heroísmo
+  time: '23:00'
+  description: 'DJ Waldo with warm-up by Vitor at Twins The Club, from 23:00 until 06:00 the following morning. Advertised admission: €10 for men and €5 for women. Casual chic dress code; VIP options available.'
+  description_pt: 'DJ Waldo com warm-up de Vitor no Twins The Club, das 23h00 às 06h00 da manhã seguinte. Entrada anunciada: 10 € para homens e 5 € para mulheres. Dress code casual chic; opções VIP disponíveis.'
+  instagram: https://www.instagram.com/twinstheclub/reel/DesEc5ssJj1/
+  tags:
+  - nightlife
+  id: c1ef7348-8443-4083-8059-f0cded5cfacd
+- date: 2026-10-31
+  name: Halloween Encantado — música em família
+  name_en: Halloween Encantado — Family Music
+  venue: Sabores da Horta
+  address: Canada do Saco, 9760-123
+  time: 15:00 / 16:00
+  description: A family Halloween music activity by Cantinho da Música at Sabores da Horta. Two sessions, at 15:00 and 16:00. Costumes welcome; places are limited. Request information and registration by private message to the organizer.
+  description_pt: Atividade de música em família de Halloween pelo Cantinho da Música na Sabores da Horta. Duas sessões, às 15h00 e às 16h00. Fantasias bem-vindas; vagas limitadas. Informações e inscrições por mensagem privada à organização.
+  instagram: https://www.instagram.com/cantinhodamusica.pt/p/DepFpmxIrA0/
+  tags:
+  - kid-friendly
+  - workshop
+  id: 2dc47f4c-d9e0-4572-a20c-3a0bf5d606aa
