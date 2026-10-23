@@ -9610,3 +9610,32 @@ Come join us and support our festivities!"
   source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
   tags: [kid-friendly, cinema]
   id: 7d4fb60b-d1df-47f6-8b13-7f9567eb7c9d
+
+- date: 2026-10-25
+  name: Caminhada Vive a Vida
+  venue: Praça Velha
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "10:00"
+  description: "A cancer-awareness walk organized by Liga Portuguesa Contra o Cancro – Núcleo Regional dos Açores for Outubro Rosa, starting at Praça Velha. Registration is free; themed T-shirts and other materials are available to purchase. Information and registration: nucleoacores@ligacontracancro.pt or 295 212 345."
+  description_pt: "Caminhada organizada pela Liga Portuguesa Contra o Cancro – Núcleo Regional dos Açores no âmbito do Outubro Rosa, com início na Praça Velha. As inscrições são gratuitas; podem adquirir-se t-shirts e outros materiais alusivos à iniciativa. Informações e inscrições: nucleoacores@ligacontracancro.pt ou 295 212 345."
+  source_url: https://angradoheroismo.pt/evento/caminhada-vive-a-vida/
+  source_uid: "1975@angradoheroismo.pt"
+  tags:
+  - outdoor
+  - free
+
+  id: ea550394-c432-4146-90eb-39f7d9a9d053
+- date: 2026-10-25
+  name: Sessão de Entrega do Prémio de Mérito Cívico Teotónio de Ornelas
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os%20do%20Concelho%20de%20Angra%20do%20Hero%C3%ADsmo
+  time: "20:00"
+  description: "A public civic-merit award ceremony at the Town Hall, recognizing people and organizations for citizenship, dedication to the community and civic values, and honoring the memory and legacy of Teotónio de Ornelas. Free admission."
+  description_pt: "Sessão de entrega do Prémio de Mérito Cívico Teotónio de Ornelas nos Paços do Concelho, distinguindo personalidades e entidades pelo seu exemplo de cidadania, dedicação à comunidade e promoção dos valores cívicos. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/sessao-de-entrega-do-premio-de-merito-civico-teotonio-de-ornelas/
+  source_uid: "1974@angradoheroismo.pt"
+  tags:
+  - free
+  id: 25573c05-38e9-4182-af46-05e09d8844ef
