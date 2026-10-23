@@ -3,7 +3,7 @@
 > **Purpose:** Find and verify Terceira events across official calendars, organizer websites, search, Instagram, and Facebook, then update the data through a PR.
 > **Cadence:** Run once a week (or whenever you notice the upcoming-events list is getting thin).
 > **Time required:** ~30–60 minutes depending on how active venues have been.
-> **Source status last verified:** 2026-10-10; see the [dated coverage ledger](audit-2026-10-10.md).
+> **Latest source pass:** 2026-10-24; see the [dated coverage ledger and remaining gaps](audit-2026-10-24.md).
 
 ---
 

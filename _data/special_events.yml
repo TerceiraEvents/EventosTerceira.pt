@@ -8123,14 +8123,14 @@ Come join us and support our festivities!"
   id: 717abb33-5352-48f7-a06b-1d971459881c
   end_date: 2026-10-30
   kind: exhibition
-  visiting_hours: "16:00 to 18:30 during the published programme period"
-  visiting_hours_pt: "das 16h00 às 18h30 durante o período anunciado"
+  visiting_hours: "Monday to Friday, 16:00 to 18:30; opening Sunday October 11 at 16:00"
+  visiting_hours_pt: "segunda a sexta-feira, das 16h00 às 18h30; inauguração no domingo, 11 de outubro, às 16h00"
   name: "Exposição Entre Terra e Consolações"
   name_en: "Between Earth and Consolations Exhibition"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
-  description: "Exhibition by Carina Borges at Casa do Sal, opening on October 11 at 16:00. Visiting hours are 16:00 to 18:30 during the published programme period."
-  description_pt: "Exposição de Carina Borges na Casa do Sal, com inauguração a 11 de outubro às 16h00. Visitável das 16h00 às 18h30 durante o período anunciado."
+  description: "Exhibition by Carina Borges at Casa do Sal, opening on October 11 at 16:00. Visiting hours are Monday to Friday, 16:00 to 18:30, through October 30."
+  description_pt: "Exposição de Carina Borges na Casa do Sal, com inauguração a 11 de outubro às 16h00. Visitável de segunda a sexta-feira, das 16h00 às 18h30, até 30 de outubro."
   source_url: https://angradoheroismo.pt/evento/exposicao-entre-terra-e-consolacoes/
   instagram: https://www.instagram.com/oficinadangra/reel/DeSiDe2DadA/
   tags:
@@ -9190,10 +9190,10 @@ Come join us and support our festivities!"
   name: "Cine Atlântico: O Riso e a Faca"
   venue: Recreio dos Artistas
   address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
-  time: "18:00"
+  time: "21:00"
   description: "Screening in O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Tickets cost €3; members pay €1.50."
   description_pt: "Sessão do ciclo O Novo Cinema Português: Feridas Abertas e Novas Linguagens. Bilhetes a 3 €; sócios pagam 1,50 €."
-  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DdzL4SlCmhR/
+  instagram: https://www.instagram.com/cineclubedailhaterceira/p/DezQSWUjUXZ/
   tags: [cinema]
 
 - date: 2026-11-27
@@ -9310,10 +9310,11 @@ Come join us and support our festivities!"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
   time: "10:00"
-  description: "Opening session of the fortnightly Saturday drawing course, from 10:00 to 11:30, for young people aged 15+ and adults. Registration required; €25/month or €20/month for members."
-  description_pt: "Sessão inicial do curso quinzenal de desenho aos sábados, das 10h00 às 11h30, para jovens a partir dos 15 anos e adultos. Inscrição necessária; 25 €/mês ou 20 €/mês para sócios."
+  description: "Free trial session of the fortnightly Saturday drawing course, from 10:00 to 11:30, for young people aged 15+ and adults, with no commitment to continue. The course costs €25/month or €20/month for members."
+  description_pt: "Sessão experimental gratuita do curso quinzenal de desenho aos sábados, das 10h00 às 11h30, para jovens a partir dos 15 anos e adultos, sem compromisso de continuidade. O curso custa 25 €/mês ou 20 €/mês para sócios."
   source_url: https://tinyurl.com/mps3sasf
-  tags: [workshop]
+  instagram: https://www.instagram.com/oficinadangra/p/Dexgxg8jLKo/
+  tags: [workshop, free]
 
 - date: 2026-10-24
   id: 8fefcd1b-7306-41b9-8362-03983b2b294b
@@ -9610,3 +9611,1052 @@ Come join us and support our festivities!"
   source_url: https://bparlsr.azores.gov.pt/destaque/biblioagenda-outubro-2/
   tags: [kid-friendly, cinema]
   id: 7d4fb60b-d1df-47f6-8b13-7f9567eb7c9d
+
+- date: 2026-10-23
+  id: fe6e435d-4a09-41ab-a26d-f6738f1c5fe9
+  locality: "angra"
+  name: "Apresentação do livro Galeana — Joaquim Grave"
+  venue: "Sede da Tertúlia Tauromáquica Terceirense"
+  time: "20:30"
+  description: "Book presentation with author Joaquim Grave. Free admission."
+  instagram: "https://www.instagram.com/angradoheroismo/p/Dew5OtOCfZU/"
+  tags: [literature, free]
+
+- date: 2026-10-23
+  id: 1e0dd719-15e9-4828-8c62-67ba2960cb97
+  locality: "angra"
+  name: "Havanna: Solta a Tua Voz — Karaoke Night"
+  venue: "Havanna Club"
+  address: "Jardim do Corte Real, Angra do Heroísmo"
+  time: "22:00"
+  description: "Karaoke followed by DJ Marco Ferreira and DJ Artur M."
+  description_pt: "Karaoke seguido de DJ Marco Ferreira e DJ Artur M."
+  instagram: "https://www.instagram.com/havannaangra/reel/DezwY88AjSY/"
+  tags: [karaoke, nightlife]
+
+- date: 2026-10-23
+  id: 5b628534-7935-4be3-96c5-d7d1a73329ee
+  locality: "angra"
+  name: "Twins: Blush — Girls Night Out com DJ Victor"
+  venue: "Twins Club"
+  time: "23:00"
+  description: "DJ Victor plays from 23:00 until 06:00. The announcement states no minimum consumption for women until 02:00."
+  description_pt: "DJ Victor das 23h00 às 06h00. A publicação anuncia ausência de consumo mínimo para mulheres até às 02h00."
+  instagram: "https://www.instagram.com/twinstheclub/reel/De1R77eMAnc/"
+  tags: [nightlife]
+
+- date: 2026-10-24
+  id: 6c298020-5e03-41d4-8c95-a99924582197
+  locality: "angra"
+  name: "Havanna: Inauguração do Bar Esplanada"
+  venue: "Havanna Club"
+  address: "Jardim do Corte Real, Angra do Heroísmo"
+  description: "Opening of the terrace bar with DJ Rafa and Adrix. Start time is not stated in the announcement."
+  description_pt: "Inauguração do bar esplanada com DJ Rafa e Adrix. A publicação não indica a hora de início."
+  instagram: "https://www.instagram.com/havannaangra/reel/DezwY88AjSY/"
+  tags: [nightlife]
+
+- date: 2026-10-24
+  id: e31dea07-5fb7-4615-a328-4e37e24353e6
+  locality: "angra"
+  name: "Passeio Guiado na Fortaleza de São João Baptista"
+  venue: "Praça de Armas da Fortaleza de São João Baptista"
+  address: "Monte Brasil, Angra do Heroísmo"
+  time: "10:00"
+  description: "Free informal guided visit exploring the fortress's history and military heritage, marking Army Day."
+  description_pt: "Passeio informal pelo património e história da Fortaleza no âmbito do Dia do Exército. Entrada livre."
+  instagram: "https://www.instagram.com/angradoheroismo/p/Deyi_jbl_Bz/"
+  tags: [outdoor, free]
+
+- date: 2026-10-24
+  id: 1e81e010-e10e-4bd8-a7ba-4e0253cdf95f
+  locality: "angra"
+  name: "Da Terra ao Futuro — palestra com Ernst Götsch"
+  venue: "Centro Interpretativo de Angra do Heroísmo"
+  address: "Rua da Rosa, Angra do Heroísmo"
+  time: "14:30"
+  description: "Lecture in the Da Terra ao Futuro programme on regenerative agriculture. The organizer's current venue is the Centro Interpretativo de Angra do Heroísmo. Participation is free, subject to registration limits."
+  description_pt: "Palestra integrada no programa Da Terra ao Futuro, dedicada à agricultura regenerativa, no Centro Interpretativo de Angra do Heroísmo. Participação gratuita, sujeita ao limite de inscrições."
+  source_url: "https://www.facebook.com/bioazoricaoficial/posts/pfbid0ig2JjD9Q39J3fv5vrjvKsHSCon9FdRfc7rXcKJB3Tq18mPprpdoeqkrBNizZmLYql"
+  tags: [literature, free]
+
+- date: 2026-10-24
+  id: 24ab3210-ae89-46a1-abd3-198a31bf1c9a
+  locality: "angra"
+  name: "O Oráculo — Pyanepsia: Apolo, o Minotauro e Teseu"
+  venue: "Museu de Angra do Heroísmo"
+  address: "Ladeira de São Francisco, 9700-181 Angra do Heroísmo"
+  time: "17:00"
+  description: "ICHTUS programme from 17:00 to 20:30: a city walk with Greek myths at 17:00, followed by Sérgio Franclim's talk at 18:00 in the São Francisco building auditorium. The walk takes place inside the museum if weather is unfavourable. Registration via the organizer."
+  description_pt: "Programa da ICHTUS das 17h00 às 20h30: caminhada pela cidade com narração de mitos gregos às 17h00 e palestra de Sérgio Franclim às 18h00, no auditório do Edifício de São Francisco. Em caso de condições meteorológicas desfavoráveis, a caminhada decorre no museu. Inscrição junto do organizador."
+  source_url: "https://www.facebook.com/photo/?fbid=1738692818260772&set=a.765784455551618"
+  tags: [literature, outdoor]
+
+- date: 2026-10-24
+  id: 3c303666-a242-4a98-b974-a94673a7de8a
+  locality: "angra"
+  name: "Noite Mapas da Criação — Laetitia Vancon e Jason Rubero"
+  venue: "Casa do Sal / Oficina d'Angra"
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "19:00"
+  description: "Conversation with photographer Laetitia Vancon at 19:00, followed by Jason Rubero presenting The Sun Machines at 21:00. Free admission."
+  description_pt: "Conversa com a fotógrafa Laetitia Vancon às 19h00, seguida da apresentação de The Sun Machines por Jason Rubero às 21h00. Entrada livre."
+  instagram: "https://www.instagram.com/oficinadangra/p/DevEwiJl9x3/"
+  tags: [live-music, free]
+
+- date: 2026-10-24
+  id: 161780bd-bc55-4d2d-8873-17ecf2ab5646
+  locality: "angra"
+  name: "Entrega dos Prémios da Feira Taurina de São João 2026"
+  venue: "Sede da Tertúlia Tauromáquica Terceirense"
+  time: "20:30"
+  description: "Awards ceremony for the Feira Taurina de São João, held at the Tertúlia headquarters. Free admission."
+  instagram: "https://www.instagram.com/angradoheroismo/p/Deyt9iXgpzD/"
+  tags: [bullfighting, free]
+
+- date: 2026-10-30
+  id: 9b1cda42-6223-4f71-909f-297b8bdc4ed6
+  end_date: 2026-11-15
+  locality: "praia"
+  kind: "event"
+  name: "Outono Vivo 2026"
+  venue: "Academia de Juventude e das Artes da Ilha Terceira and Auditório do Ramo Grande"
+  address: "Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  description: "Literary and cultural festival with around 50 authors, a book fair, talks, performances and an exhibition on Vitorino Nemésio. Book fair hours: 30 Oct 20:00–23:00; Saturdays 10:00–23:00; Sundays 10:00–22:00; Fridays 12:00–23:00; other days 12:00–22:00."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature, exhibition]
+
+- date: 2026-10-30
+  id: d95117dd-3cd4-40ee-85c7-e640a0b61885
+  locality: "angra"
+  name: "docAH: Cesária Évora"
+  venue: "Recreio dos Artistas"
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "21:00"
+  description: "Documentary screening in the docAH international documentary film programme."
+  description_pt: "Sessão da Mostra Internacional de Cinema Documental de Angra do Heroísmo — docAH."
+  instagram: "https://www.instagram.com/cineclubedailhaterceira/p/DersMvQjRkg/"
+  tags: [cinema]
+
+- date: 2026-10-30
+  id: 1810cb0c-b4cc-4f5b-a345-d2e4df849c13
+  locality: "praia"
+  name: "Evandro Meneses & João da Ilha"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "21:30"
+  festival: "Outono Vivo 2026"
+  description: "Concert at the academy bar in the Outono Vivo programme."
+  source_url: "https://www.instagram.com/cmpraiadavitoria/p/DezIyUul35S/"
+  tags: [live-music]
+
+- date: 2026-10-31
+  id: 89a530de-d8de-42c1-917d-a8cc573c06ba
+  locality: "praia"
+  name: "Festa das Abóboras"
+  venue: "Sabores da Horta"
+  address: "Canada do Saco, 9760-123 Praia da Vitória"
+  map_url: "https://maps.app.goo.gl/Jqw6MqjUWzjvEhPM9"
+  time: "10:00–19:00"
+  description: "Halloween-season farm celebration with live music, food, a market, crafts, rides, animals and workshops."
+  source_url: "https://www.instagram.com/sabores_dahort_a/reel/Dezir6xAPyr/"
+  instagram: "https://www.instagram.com/sabores_dahort_a/"
+  tags: [food-drink, live-music, kid-friendly, outdoor]
+
+- date: 2026-10-31
+  id: 24004e46-dbc1-4628-a52a-529dacd19628
+  locality: "praia"
+  name: "Se Bem Me Lembro: chamava-se Vitorino Nemésio"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "15:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Children's biography of Vitorino Nemésio by Diana Zymbron and Luís Cardoso, presented by João Meneses."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-10-31
+  id: c2dd22c9-0561-42d4-a687-7a98caba1e49
+  locality: "praia"
+  name: "De ilha a ilha… duas décadas de trocas epistolares entre Vitorino Nemésio e Afonso Lopes Vieira"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "16:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Cristina Nobre's study of two decades of correspondence, presented by Marco Meneses."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-10-31
+  id: 2bb3b581-24ff-49dc-9146-63a9ea0706b8
+  locality: "praia"
+  name: "Na Rota do Yankee Clipper"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by José Correia Guedes, presented by Pedro Ventura."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-10-31
+  id: 8bc4a72b-2822-40fb-8dc8-e1d1410ec65f
+  locality: "praia"
+  name: "Vidas entrevistas"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Inês Pedrosa, presented by Marta Silva."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-10-31
+  id: 25192465-65d9-4527-9c59-c85bea80d259
+  locality: "angra"
+  name: "docAH: One to One: John & Yoko"
+  venue: "Recreio dos Artistas"
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "21:00"
+  description: "Documentary screening in the docAH international documentary film programme."
+  description_pt: "Sessão da Mostra Internacional de Cinema Documental de Angra do Heroísmo — docAH."
+  instagram: "https://www.instagram.com/cineclubedailhaterceira/p/DersMvQjRkg/"
+  tags: [cinema]
+
+- date: 2026-10-31
+  id: 99b61e47-d1b4-42af-a9f0-c0274e4488c8
+  locality: "praia"
+  name: "Conversa no Serão: Médicos do Mundo e FraterUne"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "21:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Conversation with Carla Paiva and António Francisco Cambim."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-10-31
+  id: 359130b9-4c94-49b6-b10a-d4be388540a1
+  locality: "angra"
+  name: "Festa do Halloween — Bodos da Serra da Ribeirinha"
+  venue: "Zona de Lazer da Serra da Ribeirinha"
+  address: "Serra da Ribeirinha, Angra do Heroísmo"
+  time: "22:00"
+  description: "Halloween party with DJ Rodrigo Alves, costumes and a bar. Free admission."
+  description_pt: "Festa de Halloween com DJ Rodrigo Alves, disfarces e bar. Entrada gratuita."
+  source_url: "https://www.facebook.com/events/1037276555976537/"
+  tags: [nightlife, free]
+
+- date: 2026-11-01
+  id: 91db3999-bfc9-4bf5-9911-9c5643d614ae
+  locality: "angra"
+  name: "Halloween Drive-In: Hokum — O Pesadelo da Bruxa"
+  venue: "Cerrado do Bailão"
+  address: "Cerrado do Bailão, Angra do Heroísmo"
+  time: "00:00"
+  description: "Free drive-in screening at midnight on the night of 31 October into 1 November, advertised as 31 October at 24:00."
+  description_pt: "Cinema drive-in gratuito à meia-noite de 31 de outubro para 1 de novembro, anunciado como 31 de outubro às 24h00."
+  instagram: "https://www.instagram.com/angradoheroismo/p/Dews9PGlsn1/"
+  tags: [cinema, free]
+
+- date: 2026-11-01
+  id: ad9a98ca-09ba-4617-a85b-25ed738f8d0b
+  locality: "praia"
+  name: "Oqueli. O Rapaz Folha"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "15:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Patrícia Carreiro, presented by Flávia Medeiros."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-01
+  id: 9f85142d-8784-4e1c-aab1-3ab071638362
+  locality: "angra"
+  name: "Halloween Drive-In: A Magia da Árvore Longínqua"
+  venue: "Cerrado do Bailão"
+  address: "Cerrado do Bailão, Angra do Heroísmo"
+  time: "16:00"
+  description: "Free afternoon drive-in screening."
+  description_pt: "Sessão de cinema drive-in com entrada livre."
+  instagram: "https://www.instagram.com/angradoheroismo/p/Dews9PGlsn1/"
+  tags: [cinema, free]
+
+- date: 2026-11-01
+  id: a53886be-78ad-4131-aab8-02ec95cc5340
+  locality: "praia"
+  name: "Engolir sapos engorda"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "16:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Conceição Calhau, presented by Cláudia Meneses."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-01
+  id: 99d7637a-e81d-4bcf-b989-43ed511a4e7b
+  locality: "praia"
+  name: "Sou uma multidão minúscula"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Susana Amaro Velho, presented by Dulce Bradford."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-01
+  id: cc75f4bd-30d4-4961-be61-c43ab1a0053c
+  locality: "angra"
+  name: "O Homem do Fogo — inauguração da exposição e apresentação do livro"
+  venue: "Casa do Sal / Oficina d'Angra"
+  address: "Estrada Gaspar Corte-Real, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Casa+do+Sal+Angra+do+Heroísmo"
+  time: "18:00"
+  description: "Opening of the exhibition and presentation of the book O Homem do Fogo."
+  source_url: "https://angradoheroismo.pt/evento/exposicao-livro-e-documentario-o-homem-do-fogo/"
+  tags: [exhibition, literature, free]
+
+- date: 2026-11-01
+  id: 67aa7343-1cc4-4d03-8c94-1bb0e21cd28e
+  locality: "angra"
+  name: "O Homem do Fogo — exibição do documentário"
+  venue: "Associação Os Montanheiros"
+  address: "Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Os+Montanheiros+Angra+do+Heroísmo"
+  time: "19:00"
+  description: "Documentary screening following the O Homem do Fogo exhibition opening and book presentation."
+  source_url: "https://angradoheroismo.pt/evento/exposicao-livro-e-documentario-o-homem-do-fogo/"
+  tags: [cinema, free]
+
+- date: 2026-11-01
+  id: a1faa520-8a4b-4fa5-99be-015c9939ca59
+  locality: "praia"
+  name: "O Inferno Cheio"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by João Tordo, presented by Hugo Tiago."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-01
+  id: c6bb4e61-4913-4ce1-864b-26746a7c561a
+  locality: "angra"
+  name: "docAH: Blur: To the End"
+  venue: "Recreio dos Artistas"
+  address: "Rua Recreio dos Artistas 52, 9700-026 Angra do Heroísmo"
+  time: "21:00"
+  description: "Documentary screening in the docAH international documentary film programme."
+  description_pt: "Sessão da Mostra Internacional de Cinema Documental de Angra do Heroísmo — docAH."
+  instagram: "https://www.instagram.com/cineclubedailhaterceira/p/DersMvQjRkg/"
+  tags: [cinema]
+
+- date: 2026-11-01
+  id: b13221e3-1fcb-495f-9ed0-2b0ca65db4ff
+  locality: "praia"
+  name: "O Chão Começou-me a Faltar"
+  venue: "Auditório do Ramo Grande"
+  address: "Auditório do Ramo Grande, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Auditório+do+Ramo+Grande+Praia+da+Vitória"
+  time: "21:30"
+  festival: "Outono Vivo 2026"
+  description: "Theatre production directed by Lúcia Moniz, presented with the Santa Cruz parish council. Free admission; collect tickets from AJAIT or the auditorium."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [theater, free]
+
+- date: 2026-11-02
+  id: 3dbb36bf-5ad5-4aef-ae7a-5bf2eaeda9a0
+  locality: "praia"
+  name: "Açoriano, Português e Retornado"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by José Macedo Bernardo, presented by Álamo Meneses."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-02
+  id: 485f8a92-09b6-4b3f-89da-d391af969e14
+  locality: "praia"
+  name: "Mestre Maduro-Dias; um poliedro de quantos lados?"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book coordinated by Francisco Maduro-Dias, with Carlos Reis, Diana Gonçalves dos Santos and Miguel Maduro-Dias."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-03
+  id: 63065bfa-c089-43b8-ba73-ecbab94827a9
+  locality: "praia"
+  name: "As aves terrestres dos Açores"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Sofia Goulart and Rúben Coelho, presented by Hélder Xavier."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-03
+  id: 07c56d1a-e899-4d5f-b134-b1d0a72461ed
+  locality: "praia"
+  name: "Noite de poesia — Poetas da Ilha com Joel Moura"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Poetry night with Poetas da Ilha accompanied by Joel Moura."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature, live-music]
+
+- date: 2026-11-04
+  id: c6f04455-2775-4680-8baa-32fbffebb5d5
+  locality: "praia"
+  name: "Islands of Dreams and Longing / Ao compasso das brumas"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Two books by Aníbal Pires, presented by Diniz Borges."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-04
+  id: d374d7ef-047b-48c0-9a62-724adc96e9a2
+  locality: "angra"
+  name: "Apresentação do livro Altar ao Divino Espírito Santo: tradição e modernidade"
+  venue: "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro"
+  address: "Rua do Morrão 42, 9700-054 Angra do Heroísmo"
+  time: "18:30"
+  description: "Presentation of Fabiana Ourique's book by Arnaldo Ourique in the library auditorium."
+  description_pt: "Apresentação do livro de Fabiana Ourique por Arnaldo Ourique, no auditório da Biblioteca."
+  source_url: "https://angradoheroismo.pt/evento/apresentacao-do-livro-altar-ao-divino-espirito-santo-tradicao-e-modernidade/"
+  tags: [literature]
+
+- date: 2026-11-04
+  id: fc4f2300-835a-4069-b10a-83a336be0a09
+  locality: "praia"
+  name: "Conversa: Ilha Terceira Maçónica"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Reader conversation around José Luís Neto's book with João Maria Mendes, Carlos Bessa, Marta Cruz and Jorge Paulus Bruno."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-04
+  id: c4696703-3bc7-4ea7-acb0-d73b2bd477e7
+  locality: "praia"
+  name: "Sob as Luas de Álamo"
+  venue: "Auditório do Ramo Grande"
+  address: "Auditório do Ramo Grande, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Auditório+do+Ramo+Grande+Praia+da+Vitória"
+  time: "22:00"
+  festival: "Outono Vivo 2026"
+  description: "Performance by BeOMNI Expression, Joana Moreira and Miguel Maduro-Dias."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [theater]
+
+- date: 2026-11-05
+  id: 9dbe209b-c093-4572-9f2f-9431a9f2abf1
+  locality: "praia"
+  name: "Diálogos contra a maré: Nova linguagem, novo mundo"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Conversation on Javier Cercas's O louco de Deus no fim do mundo with José Júlio Rocha, Carlos Correia, Carmo Rodeia and Joel Neto."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-05
+  id: 27b6e339-8063-4014-af9c-11779b1844f0
+  locality: "praia"
+  name: "Ilhas Desconhecidas — edição fac-simile do centenário"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Presentation of the centenary facsimile edition of Raúl Brandão's Ilhas Desconhecidas with José Júlio Rocha and Diniz Borges."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-05
+  id: 5d0ce166-e266-4e3c-ab53-50fc9d76e310
+  end_date: 2026-11-09
+  locality: "angra"
+  name: "Cinema: O Veredito Social"
+  venue: "Centro Cultural e de Congressos de Angra do Heroísmo"
+  address: "Rua Conselheiro Dr. José Pereira, 9700-040 Angra do Heroísmo"
+  time: "21:00"
+  description: "Nightly cinema screenings from 5 to 9 November. Running time: 1h52."
+  description_pt: "Sessões de cinema de 5 a 9 de novembro, às 21h00. Duração: 1h52."
+  source_url: "https://angradoheroismo.pt/evento/cinema-o-veredito-social/"
+  tags: [cinema]
+
+- date: 2026-11-06
+  id: 98509f9b-1a7d-4a75-b65e-3de1e9010b28
+  end_date: 2026-11-08
+  locality: "angra"
+  kind: "event"
+  name: "Presença e Narrativa Visual"
+  venue: "Instituto Açoriano de Cultura"
+  address: "Alto das Covas, 9700-215 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Instituto+Açoriano+de+Cultura+Angra+do+Heroísmo"
+  visiting_hours: "Friday 18:30–21:00; Saturday 08:00–12:00 and 14:00–17:30; Sunday 08:00–12:00 and 14:00–17:00"
+  visiting_hours_pt: "Sexta-feira, 18h30–21h00; sábado, 08h00–12h00 e 14h00–17h30; domingo, 08h00–12h00 e 14h00–17h00"
+  description: "Seventeen-hour workshop on documentary photography and visual storytelling. Maximum 15 participants; €175; no prior experience required."
+  source_url: "https://angradoheroismo.pt/evento/presenca-e-narrativa-visual/"
+  tags: [workshop]
+
+- date: 2026-11-06
+  id: 13fb42e0-acf1-45c9-aa8d-17c7d17e1341
+  locality: "praia"
+  name: "Between silence and vision"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Assunção Melo, presented by Diniz Borges."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-06
+  id: 7fcdb56f-ae0f-4117-8818-4650c2fe5e27
+  locality: "praia"
+  name: "Noite da Diáspora: Cartografias da Saudade"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Conversation on writing at a distance and inhabiting memory with Onésimo Teotónio de Almeida and Diniz Borges, moderated by José Andrade."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-07
+  id: 24b7a48d-dcbe-48e0-9098-9f49454691d4
+  locality: "praia"
+  name: "Passeio turístico-literário de Vitorino Nemésio"
+  venue: "Largo da Luz"
+  address: "Largo da Luz, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Largo+da+Luz+Praia+da+Vitória"
+  time: "13:30"
+  festival: "Outono Vivo 2026"
+  description: "Tourism and literary walk dedicated to Vitorino Nemésio; meet at Largo da Luz. Free participation; advance registration by 6 November via turismo@cmpv.pt."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature, outdoor]
+
+- date: 2026-11-07
+  id: 056476be-5221-40cf-a9c9-b0032d2f5bf6
+  locality: "praia"
+  name: "Atlas das Criaturas Estranhas"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "15:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Samuel Pimenta and Helena Soares, presented by Paulo Freitas."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-07
+  id: c4d4c53e-703e-453f-bf50-79e3f74cc169
+  locality: "praia"
+  name: "Francisco Jorge da Silva Ferreira: o Provedor da Praia"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "16:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Victor Alves, with Francisco Ferreira present."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-07
+  id: 065d5a8f-db9a-4ade-8168-38cb2dd880f8
+  locality: "praia"
+  name: "A Brevíssima História da Revolução dos Cravos"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Luís Nuno Rodrigues, presented by Leandro Ávila."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-07
+  id: 3537ebdf-fe98-4870-839c-c1269f6360f9
+  locality: "praia"
+  name: "Aguarela de Paris"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by João Pinto Coelho, presented by Paulo Matos."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-08
+  id: 37ea2317-f7d2-40bd-b349-5f54feac16f8
+  locality: "praia"
+  name: "Os Presentes de Dinis"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "15:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Joana Duque."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-08
+  id: e5c4cb69-88e1-44be-a552-0189674ff65d
+  locality: "praia"
+  name: "A Lógica das Ideias / Açorianidade e Autonomia"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "16:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Books by Eduardo Ferraz da Rosa, presented by Andreia Fernandes, Jaime Silveira and Paulo Linhares Dias."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-08
+  id: 0fe1a7c8-eef3-450a-bbda-f1e3ea7739c0
+  locality: "praia"
+  name: "Benjamim"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Pedro Chagas Freitas, presented by Flávia Bessa."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-08
+  id: b108292f-b411-4882-b4c5-42492fec258e
+  locality: "angra"
+  name: "Guardians of Zululand"
+  venue: "Centro Cultural e de Congressos de Angra do Heroísmo"
+  address: "Rua Conselheiro Dr. José Pereira, 9700-040 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+de+Angra+do+Heroísmo"
+  time: "18:00"
+  description: "Screening of the 26-minute documentary short Guardians of Zululand."
+  source_url: "https://angradoheroismo.pt/evento/guardians-of-zululand/"
+  tags: [cinema]
+
+- date: 2026-11-08
+  id: 59d5954c-b408-44d0-97cd-ad576eeda15f
+  locality: "praia"
+  name: "A Grande Rutura"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Miguel Monjardino, presented by Miguel Araújo."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-09
+  id: 32cc74c4-9b5a-46c0-9317-d6f92749e1a0
+  locality: "praia"
+  name: "O Faial à volta da mesa"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Carla Devesa Rodrigues's book on recipes recorded in notebooks from 1899 to 1930, presented by Cláudia Cardoso."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-09
+  id: ffe484ad-a2aa-4270-bb67-b158a41ff14e
+  locality: "praia"
+  name: "Temas da História Açoriana, vol. II"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Carlos Enes, presented by António Maio."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-10
+  id: 21c5bae7-a938-4ac4-b91a-52fd804f46a5
+  locality: "praia"
+  name: "Caminhos da Autonomia"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Alzira Silva, presented by Carlos Enes."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-10
+  id: 109ee37e-a245-479a-b97c-7a3de11c9c1e
+  locality: "praia"
+  name: "Mesa redonda: Democracia, Diplomacia e Informação"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Round table on navigating a changing world with Maria João Avillez and João Vale de Almeida, moderated by David Lopes."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-11
+  id: 03b4b254-815f-4c71-942c-6f76a9d9f013
+  locality: "praia"
+  name: "Sob as muralhas da Pax Julia"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by João Pelica, presented by Ricardo Mourão."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-11
+  id: 4490f0e9-917b-49fe-b229-a2e7b10c1b1b
+  locality: "praia"
+  name: "Corsário das Ilhas: memória e identidade insular"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Talk by Urbano Bettencourt marking the 70th anniversary of Vitorino Nemésio's Corsário das Ilhas."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-11
+  id: 9b4460b5-543f-4574-88c2-6f578301993f
+  locality: "angra"
+  name: "Music Açores’26 | Cantando Admont — Seis Vozes"
+  venue: "Igreja do Colégio"
+  address: "Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Igreja+do+Colégio+Angra+do+Heroísmo"
+  time: "20:00"
+  description: "Six-voice concert in the Music Açores’26 programme."
+  source_url: "https://angradoheroismo.pt/evento/music-acores26-cantando-admont-seis-vozes/"
+  instagram: "https://www.instagram.com/angradoheroismo/p/DeynGMKAl3N/"
+  tags: [live-music]
+
+- date: 2026-11-11
+  id: 593e3344-4c93-483b-ac80-8bfed177ef91
+  locality: "praia"
+  name: "Onde a Terra se Faz Memória"
+  venue: "Auditório do Ramo Grande"
+  address: "Auditório do Ramo Grande, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Auditório+do+Ramo+Grande+Praia+da+Vitória"
+  time: "21:00"
+  festival: "Outono Vivo 2026"
+  description: "Concert by Sociedade Musical União das Fontinhas in the Outono Vivo programme."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [live-music]
+
+- date: 2026-11-12
+  id: 3f397803-c352-4fe7-8058-4ee129df2ceb
+  locality: "praia"
+  name: "Visita Régia"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Publication from Instituto Histórico da Ilha Terceira coordinated by Álamo Meneses and João Maria Mendes."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-12
+  id: 6d2fd592-2904-4b37-9640-9b484dbe59b7
+  locality: "praia"
+  name: "Index Collectiones — Dicionário de Colecionismo"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Presentation produced with Instituto Histórico da Ilha Terceira, with Adelaide Duarte, Anísio Franco and Carolina Neves."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-12
+  id: af21749d-29bd-4ead-b9a1-0ab45bdad819
+  end_date: 2026-11-16
+  locality: "angra"
+  name: "Cinema: Street Fighter"
+  venue: "Centro Cultural e de Congressos de Angra do Heroísmo"
+  address: "Rua Conselheiro Dr. José Pereira, 9700-040 Angra do Heroísmo"
+  time: "21:00"
+  description: "Nightly cinema screenings from 12 to 16 November. Running time: 1h59."
+  description_pt: "Sessões de cinema de 12 a 16 de novembro, às 21h00. Duração: 1h59."
+  source_url: "https://angradoheroismo.pt/evento/cinema-street-fighter/"
+  tags: [cinema]
+
+- date: 2026-11-13
+  id: e6e0c289-1fd9-4a6f-80fd-e3a2589dd6ee
+  locality: "praia"
+  name: "Mesa redonda: A inatividade é individual ou é o sintoma de uma comunidade por construir?"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Round table on young people not in employment, education or training, family voice and territory."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-13
+  id: cad9b9c7-1072-4bb7-8f86-0561e1151201
+  locality: "praia"
+  name: "Filha da Louca"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Maria Francisca Gama, presented by Eduarda Mendes."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-14
+  id: 48ad3245-6462-4e4e-bfa7-2ba11299098f
+  locality: "praia"
+  name: "II Torneio da Marralhinha do Agrupamento 23"
+  venue: "Sede do Agrupamento 23 — Praia da Vitória"
+  description: "Community traditional-game tournament with a snack bar; registration €4. Confirm the start time with the organizer: the poster says 19:30 and the post caption says 19:00."
+  description_pt: "Torneio aberto à comunidade, com bar de petiscos e doces; inscrição €4. Confirmar o horário com o organizador: o cartaz indica 19h30 e a legenda da publicação indica 19h00."
+  source_url: "https://www.facebook.com/photo/?fbid=1104977315758431&set=a.113784058211100"
+  tags: [food-drink]
+
+- date: 2026-11-14
+  id: dc86d5ba-f5b0-4ee9-a36d-0a371def4c88
+  locality: "praia"
+  name: "Espírito Santo dos Pequeninos"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "15:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Cláudia Borges, presented by Paulo Freitas, João Drumonde Ornelas, Pedro Lima and Tiago Toste."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-14
+  id: 440b6737-8244-4a7e-ba33-f02cfe82bb2e
+  end_date: 2026-11-15
+  locality: "angra"
+  name: "Cinema: A Ilha Esquecida"
+  venue: "Centro Cultural e de Congressos de Angra do Heroísmo"
+  address: "Rua Conselheiro Dr. José Pereira, 9700-040 Angra do Heroísmo"
+  time: "15:00"
+  description: "Screenings on both days at 15:00 and 18:00."
+  description_pt: "Sessões nos dois dias às 15h00 e às 18h00."
+  source_url: "https://angradoheroismo.pt/evento/cinema-a-ilha-esquecida/"
+  tags: [cinema]
+
+- date: 2026-11-14
+  id: a5dc9e42-d660-48a2-8764-689178869dee
+  locality: "angra"
+  name: "Workshop: Comédia de Improviso"
+  venue: "Edifício Cultural de São Bento — Sala da Academia de Artes"
+  address: "São Bento, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Edifício+Cultural+de+São+Bento+Angra+do+Heroísmo"
+  time: "15:00–18:00"
+  description: "Limited-place improvisational comedy workshop; advance registration required."
+  source_url: "https://angradoheroismo.pt/evento/workshop-comedia-de-improviso/"
+  tags: [workshop, theater]
+
+- date: 2026-11-14
+  id: c5520519-c7e1-4589-9705-3661b9259423
+  locality: "praia"
+  name: "A Felicidade está a um Medo de Distância"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "16:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Manuel Clemente, presented by Tânia Ferreira."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-14
+  id: 33614b97-4523-4ea1-9ecc-98b2e6b0541c
+  locality: "praia"
+  name: "Aventuras Musicais II — Peer Gynt"
+  venue: "Auditório do Ramo Grande"
+  address: "Auditório do Ramo Grande, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Auditório+do+Ramo+Grande+Praia+da+Vitória"
+  time: "17:00"
+  festival: "Outono Vivo 2026"
+  description: "Family-oriented musical performance in the official Outono Vivo programme."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [live-music, kid-friendly]
+
+- date: 2026-11-14
+  id: bad0d8f4-068a-40f5-98dd-662f36f6dbe9
+  locality: "praia"
+  name: "Algoritmocracia"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book presentation with Adolfo Mesquita Nunes and Emanuel Areias."
+  source_url: "https://www.instagram.com/cmpraiadavitoria/p/DezI5LmF4FQ/"
+  tags: [literature]
+
+- date: 2026-11-14
+  id: 21bff2d7-8fbb-4b2f-b53a-817ed1e8150b
+  locality: "angra"
+  name: "FUSO INSULAR em Movimento — Novas Vozes da Videoarte Açoriana"
+  venue: "Casa do Sal / Oficina d'Angra"
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  time: "18:30"
+  description: "Public screening of video works developed by six artists in the Laboratório Imagem em Movimento residency programme, mentored by João Onofre and André Laranjinha."
+  description_pt: "Sessão pública dos vídeos criados por seis artistas no Laboratório Imagem em Movimento, com orientação de João Onofre e André Laranjinha."
+  source_url: "https://whatson.azores.gov.pt/evento/fuso-insular-em-movimento-1792591045057/"
+  tags: [cinema]
+
+- date: 2026-11-14
+  id: fc363cc0-e836-4b02-bc61-9ee4ab834686
+  locality: "praia"
+  name: "Sangue e Silêncio no Poço dos Negros"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by Francisco Moita Flores, presented by António Neves."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-15
+  id: 56f80f34-51de-4715-9ee3-e963bcbdbd53
+  locality: "praia"
+  name: "Revista Atlântida"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "15:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Presentation of Revista Atlântida from Instituto Açoriano de Cultura by Rogério Sousa and Álvaro Dâmaso."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-15
+  id: e7ef011f-7c1c-4094-b33b-24ee7e39236e
+  locality: "praia"
+  name: "Património Cultural dos Açores: reflexões para uma estratégia integrada"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "16:30"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Book by José Luís Neto and Nuno Ribeiro Lopes."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-15
+  id: ae21aafe-556c-4cf7-bbf4-64e7ac28657f
+  locality: "praia"
+  name: "Obra Reunida de Álvaro Monjardino"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "18:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Instituto Histórico da Ilha Terceira publication coordinated by Tânia Santos and presented by Armando Mendes."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-15
+  id: e4fdff15-1b52-41eb-8bb3-cdb0b42703db
+  locality: "praia"
+  name: "Mesa redonda: Para Lá das Colunas de Hércules"
+  venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+  address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+de+Juventude+e+das+Artes+da+Ilha+Terceira"
+  time: "20:00"
+  festival: "Outono Vivo 2026"
+  description: "At the academy bar. Round table on the discovery of the Azores and the first globalization, moderated by Cláudia Cardoso."
+  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  tags: [literature]
+
+- date: 2026-11-19
+  id: c828b10e-8195-4df7-8a4f-3b6b97f4a8e2
+  end_date: 2026-11-23
+  locality: "angra"
+  name: "Cinema: Clayface"
+  venue: "Centro Cultural e de Congressos de Angra do Heroísmo"
+  address: "Rua Conselheiro Dr. José Pereira, 9700-040 Angra do Heroísmo"
+  time: "21:00"
+  description: "Nightly cinema screenings from 19 to 23 November."
+  description_pt: "Sessões de cinema de 19 a 23 de novembro, às 21h00."
+  source_url: "https://angradoheroismo.pt/evento/cinema-clayface/"
+  tags: [cinema]
+
+- date: 2026-11-26
+  id: 0e8ed999-9d75-4699-9195-480477b2e087
+  end_date: 2026-11-30
+  locality: "angra"
+  name: "Cinema: Romance à Italiana"
+  venue: "Centro Cultural e de Congressos de Angra do Heroísmo"
+  address: "Rua Conselheiro Dr. José Pereira, 9700-040 Angra do Heroísmo"
+  time: "21:00"
+  description: "Nightly cinema screenings from 26 to 30 November."
+  description_pt: "Sessões de cinema de 26 a 30 de novembro, às 21h00."
+  source_url: "https://angradoheroismo.pt/evento/cinema-romance-a-italiana/"
+  tags: [cinema]
+
+- date: 2026-11-28
+  id: e4d1a035-9953-4273-856a-9754e022c6a4
+  locality: "angra"
+  name: "Tarina — Num Dia Assim, com Sofia Mestre"
+  venue: "Casa do Sal / Oficina d'Angra"
+  address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
+  description: "Terceira stop of Tarina's Azores tour with Sofia Mestre. Start time and admission details have not been published in the tour announcement."
+  description_pt: "Concerto da digressão açoriana de Tarina com Sofia Mestre. O anúncio da digressão não indica horário nem condições de entrada."
+  instagram: "https://www.instagram.com/__tarina____/p/Dew6MAro7rL/"
+  tags: [live-music]
