@@ -70,6 +70,9 @@ jobs:
       - name: Validate October library programme reconciliation
         run: bundle exec ruby scripts/tests/test_library_programme.rb
 
+      - name: Validate October social programme corrections
+        run: bundle exec ruby scripts/tests/test_social_scan_2026_10.rb
+
       # ── Blog post `lang:` front-matter ────────────────────────────
       # Catches typos like `lang: portugese` and EN/PT filename ↔
       # `lang:` mismatches before they break the bilingual permalinks
