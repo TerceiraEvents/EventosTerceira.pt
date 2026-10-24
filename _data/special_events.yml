@@ -10660,3 +10660,73 @@ Come join us and support our festivities!"
   description_pt: "Concerto da digressão açoriana de Tarina com Sofia Mestre. O anúncio da digressão não indica horário nem condições de entrada."
   instagram: "https://www.instagram.com/__tarina____/p/Dew6MAro7rL/"
   tags: [live-music]
+
+# Auto-ingested from CMAH (2026-10-24)
+- date: 2026-10-25
+  name: "Caminhada Vive a Vida"
+  venue: Praça Velha
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "10:00"
+  description: "A Praça Velha, em Angra do Heroísmo, acolhe, no dia 25 de outubro de 2026, domingo, às 10h00, a «Caminhada Vive a Vida», uma iniciativa promovida pela Liga Portuguesa Contra o Cancro – Núcleo Regional dos Açores, integrada nas comemorações do Outubro Rosa. A atividade pretende sensibilizar a população para a prevenção e combate ao cancro, promovendo simultaneamente a adoção de estilos de vida saudáveis e a solidariedade para com esta causa. As inscrições são gratuitas. Os participantes poderão…"
+  source_url: https://angradoheroismo.pt/evento/caminhada-vive-a-vida/
+  source_uid: "1975@angradoheroismo.pt"
+
+  id: 0a5d996e-30d9-48cd-8474-152c810e50df
+- date: 2026-10-25
+  name: "Sessão de Entrega do Prémio de Mérito Cívico Teotónio de Ornelas"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os%20do%20Concelho%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "20:00"
+  description: "Os Paços do Concelho acolhem, no dia 25 de outubro de 2026, domingo, às 20h00, a Sessão de Entrega do Prémio de Mérito Cívico Teotónio de Ornelas. A cerimónia distingue personalidades ou entidades cujo percurso e contributo constituam um exemplo de cidadania, dedicação à comunidade e promoção dos valores cívicos, homenageando simultaneamente a memória e o legado de Teotónio de Ornelas. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/sessao-de-entrega-do-premio-de-merito-civico-teotonio-de-ornelas/
+  source_uid: "1974@angradoheroismo.pt"
+
+  id: eb02b238-53a9-46c9-bc56-d3db6a3846d7
+- date: 2026-10-27
+  name: "2.º Seminário LIFE IP CLIMAZ"
+  venue: Angra do Heroísmo
+  address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  description: "Do Planeamento à Ação — Resiliência Climática nos Açores Data: 27 e 28 de outubro Local: Angra do Heroísmo, ilha Terceira, Açores. O 2.º Seminário LIFE IP CLIMAZ, subordinado ao tema “Do Planeamento à Ação — Resiliência Climática nos Açores”, reúne especialistas e entidades para debater a adaptação às alterações climáticas, a sustentabilidade, a gestão do território e os caminhos para a descarbonização. 27 de outubro 09h00 — Receção aos participantes 09h30 — Sessão de abertura Alonso Miguel,…"
+  source_url: https://angradoheroismo.pt/evento/2-o-seminario-life-ip-climaz/
+  source_uid: "1988@angradoheroismo.pt"
+
+  id: 7ae733a1-f2a6-4d4b-8232-b1a97a5647e4
+- date: 2026-10-28
+  name: "Webinar: Crescer Sob Pressão – O Peso das Expectativas na Infância e Adolescência"
+  venue: Angra do Heroísmo
+  address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "14:00"
+  description: "O Comissariado dos Açores para a Infância promove, no dia 28 de outubro de 2026, quarta-feira, às 14h00, o webinar «Crescer Sob Pressão – O Peso das Expectativas na Infância e Adolescência». A iniciativa pretende promover a reflexão sobre o impacto das expectativas colocadas sobre crianças e jovens, abordando os desafios que estas enfrentam nos contextos familiar, escolar e social. O webinar conta com a participação de David Justino, professor universitário e ex-Ministro da Educação, e de Sofia…"
+  source_url: https://angradoheroismo.pt/evento/webinar-crescer-sob-pressao-o-peso-das-expectativas-na-infancia-e-adolescencia/
+  source_uid: "1989@angradoheroismo.pt"
+
+  id: b9e55f70-2d5f-4fbf-84c5-64d9c103383b
+- date: 2026-10-31
+  name: "Halloween Cinema Drive-In"
+  venue: Cerrado do Bailão
+  map_url: https://www.google.com/maps/search/?api=1&query=Cerrado%20do%20Bail%C3%A3o%20Angra%20do%20Hero%C3%ADsmo
+  description: "O Cerrado do Bailão acolhe duas sessões especiais de cinema integradas nas celebrações do Halloween. No dia 31 de outubro de 2026, sábado, às 24h00, será exibido o filme «Hokum – O Pesadelo da Bruxa», numa sessão dedicada ao suspense e ao imaginário característico da época. Já no dia 1 de novembro de 2026, domingo, às 16h00, será projetado o filme «A Magia da Árvore Longínqua», destinado a públicos de todas as idades. A iniciativa convida a população a celebrar o Halloween através do cinema,…"
+  source_url: https://angradoheroismo.pt/evento/halloween-cinema-drive-in/
+  source_uid: "1993@angradoheroismo.pt"
+  tags:
+  - cinema
+
+  id: bd2abbe5-62d7-4ba0-8b6f-1484272cfa05
+- date: 2026-11-14
+  name: "Concerto: Angra Convida Carolina Deslandes – Voz & Guitarra"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Angra do Heroísmo, 9700-130"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20e%20de%20Congressos%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:30"
+  description: "Angra Convida Carolina Deslandes – Voz & Guitarra O Centro Cultural e de Congressos de Angra do Heroísmo acolhe, nos dias 13 e 14 de novembro de 2026, sexta-feira e sábado, às 21h30, o espetáculo «Angra Convida Carolina Deslandes – Voz & Guitarra». Devido à elevada procura por parte do público, foi aberta uma sessão extra para o dia 13 de novembro. Em formato intimista, voz e guitarra, Carolina Deslandes apresenta algumas das canções mais marcantes da música portuguesa contemporânea,…"
+  source_url: https://angradoheroismo.pt/evento/concerto-angra-convida-carolina-deslandes-voz-guitarra/
+  source_uid: "1498@angradoheroismo.pt"
+  tags:
+  - live-music
+
+  id: d3c0a344-4aef-4de2-8e36-889a0941814b
+  locality: angra
