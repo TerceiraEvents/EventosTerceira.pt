@@ -11223,6 +11223,7 @@ Come join us and support our festivities!"
   id: fda335bb-e9aa-473a-bd5d-237cd398d8eb
 - date: 2026-11-16
   name: 'Cinema: Ocean with David Attenborough'
+  name_en: "Film: Ocean with David Attenborough"
   venue: Auditório do Ramo Grande
   locality: praia
   address: Auditório do Ramo Grande, Praia da Vitória
@@ -11256,6 +11257,7 @@ Come join us and support our festivities!"
   id: 91bb0bb3-1aca-4133-8cbf-cd77ec97724e
 - date: 2026-11-10
   name: Angra Tech Day
+  name_en: "Angra Tech Day"
   venue: StartUp Angra
   locality: angra
   address: Angra do Heroísmo
@@ -11269,6 +11271,7 @@ Come join us and support our festivities!"
   id: ddee7934-3534-4be2-ba62-faea398320d1
 - date: 2026-10-30
   name: 'SOS Cagarro — Porto Martins'
+  name_en: "Shearwater Rescue — Porto Martins"
   venue: Junto à Igreja do Porto Martins
   time: '20:30'
   description: Volunteer seabird rescue. Meeting at 20:30; departure at 20:45. Bring suitable clothing, a torch
@@ -11282,6 +11285,7 @@ Come join us and support our festivities!"
   id: 735e7953-fd84-4d8a-b27e-8823057913d7
 - date: 2026-10-30
   name: 'SOS Cagarro — Altares'
+  name_en: "Shearwater Rescue — Altares"
   venue: Junta de Freguesia dos Altares
   time: '21:00'
   description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
@@ -11295,6 +11299,7 @@ Come join us and support our festivities!"
   id: b2bfb9b3-d26a-47dd-87b9-4fe8a5b4a3d6
 - date: 2026-10-30
   name: 'SOS Cagarro — Praia da Vitória'
+  name_en: "Shearwater Rescue — Praia da Vitória"
   venue: Restaurante Delman
   time: '21:00'
   description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
@@ -11308,6 +11313,7 @@ Come join us and support our festivities!"
   id: 81b83bf1-e477-4a10-a479-d0dca9b144c5
 - date: 2026-10-30
   name: 'SOS Cagarro — Angra'
+  name_en: "Shearwater Rescue — Angra"
   venue: Pátio da Alfândega
   time: '21:00'
   description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
@@ -11321,6 +11327,7 @@ Come join us and support our festivities!"
   id: 8e4df78b-ebd9-4924-9013-50d898dc20bf
 - date: 2026-10-30
   name: 'SOS Cagarro — Santa Bárbara'
+  name_en: "Shearwater Rescue — Santa Bárbara"
   venue: Sede dos Escuteiros de Santa Bárbara — Agrupamento 630
   time: '21:00'
   description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
@@ -11334,6 +11341,7 @@ Come join us and support our festivities!"
   id: 83055209-a048-422f-a548-ff50208ea0d9
 - date: 2026-10-30
   name: 'SOS Cagarro — São Mateus da Calheta'
+  name_en: "Shearwater Rescue — São Mateus da Calheta"
   venue: Forte Grande de São Mateus da Calheta
   time: '21:00'
   description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
@@ -11347,6 +11355,7 @@ Come join us and support our festivities!"
   id: d4468057-88fb-490b-9687-8d99e3719a4b
 - date: 2026-10-31
   name: Musurgia Ensemble — Valde honorandus est
+  name_en: "Musurgia Ensemble — Valde honorandus est"
   venue: Igreja do Recolhimento de São Gonçalo
   time: '18:00'
   description: Concert of sacred polyphony by Duarte Lobo, Manuel Cardoso and Palestrina, directed by João Francisco
@@ -11362,6 +11371,7 @@ Come join us and support our festivities!"
   id: 870d5e87-af96-42f8-84a4-d542aca280e2
 - date: 2026-10-31
   name: 'SOS Cagarro — Praia da Vitória'
+  name_en: "Shearwater Rescue — Praia da Vitória"
   venue: Restaurante Delman
   time: '21:00'
   description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
@@ -11375,6 +11385,7 @@ Come join us and support our festivities!"
   id: c966b3ac-36c7-4edd-8ba7-91b6d64de26d
 - date: 2026-10-31
   name: 'SOS Cagarro — Angra'
+  name_en: "Shearwater Rescue — Angra"
   venue: Pátio da Alfândega
   time: '21:00'
   description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
@@ -11388,6 +11399,7 @@ Come join us and support our festivities!"
   id: 7acca101-0c00-4af1-8593-c235eaa0e8bf
 - date: 2026-11-01
   name: 'SOS Cagarro — Angra'
+  name_en: "Shearwater Rescue — Angra"
   venue: Pátio da Alfândega
   time: '21:00'
   description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
@@ -11401,6 +11413,7 @@ Come join us and support our festivities!"
   id: a1a47ca5-693f-40f2-b9b0-6bcc78f9f3f7
 - date: 2026-11-02
   name: Experimenta Cerâmica — Forno de Papel
+  name_en: "Try Ceramics — Paper Kiln"
   venue: Prainha de Angra
   time: '18:00'
   description: 'Experimental ceramics workshop with Renato Costa e Silva and Kerstin Thomas, starting at 18:00.
@@ -11418,6 +11431,7 @@ Come join us and support our festivities!"
   id: 7beb56f0-d8d7-49ea-8efc-6b085d1ef0e6
 - date: 2026-11-06
   name: 'SOS Cagarro — Feteira'
+  name_en: "Shearwater Rescue — Feteira"
   venue: Acesso à zona balnear da Serretinha
   time: '20:00'
   description: Volunteer seabird rescue. Meeting at 20:00; departure at 20:15. Bring suitable clothing, a torch
@@ -11431,6 +11445,7 @@ Come join us and support our festivities!"
   id: bbcdb4d9-a3f5-4be1-8ab3-ee0e00a81658
 - date: 2026-11-07
   name: Danças Tradicionais do Mundo — Península Ibérica
+  name_en: "Traditional Dances of the World — Iberian Peninsula"
   venue: Casa do Sal / Oficina d’Angra
   time: '18:00'
   description: 'Traditional dances of the Iberian Peninsula with Miguel Lopes. Admission: €8 for members and €10
@@ -11447,6 +11462,7 @@ Come join us and support our festivities!"
   id: 6831285d-f435-4d5c-832e-5860d8c8dea4
 - date: 2026-11-02
   name: 'Formação Startup Angra: Inteligência Artificial a Favor dos Negócios'
+  name_en: "Startup Angra Training: Artificial Intelligence for Business"
   venue: StartUp Angra
   locality: angra
   description: Business training on artificial intelligence, 18:00–21:00, from 2 to 6 November.
@@ -11460,6 +11476,7 @@ Come join us and support our festivities!"
   id: ec106897-6b2d-4958-a68b-66a47d9e6e82
 - date: 2026-11-04
   name: 4.ª Conferência Internacional CellAgri Portugal
+  name_en: "4th CellAgri Portugal International Conference"
   venue: CCCAH (Centro Cultural e de Congressos)
   locality: angra
   description: Scientific conference on cellular agriculture for researchers, students, industry and policymakers.
@@ -11472,6 +11489,7 @@ Come join us and support our festivities!"
   id: 6def55cd-401a-4d69-aac7-de66cacc0c7d
 - date: 2026-11-06
   name: 'Apresentação do livro: Terceira Automóvel Clube — A propósito dos seus 50 anos — 1975–2025'
+  name_en: "Book Presentation: Terceira Automóvel Clube — Fifty Years, 1975–2025"
   venue: Centro Interpretativo de Angra do Heroísmo
   locality: angra
   description: Presentation of Josué Cardoso’s book on the fifty-year history of Terceira Automóvel Clube.
@@ -11484,6 +11502,7 @@ Come join us and support our festivities!"
   id: 543fcf33-bacd-4099-972e-6b9440ce1f21
 - date: 2026-11-16
   name: 'Formação Startup Angra: Estratégia de Preço'
+  name_en: "Startup Angra Training: Pricing Strategy"
   venue: StartUp Angra
   locality: angra
   description: Training on pricing strategy, 18:00–21:00, from 16 to 20 November.
@@ -11497,6 +11516,7 @@ Come join us and support our festivities!"
   id: 5d39ffca-c0a2-4270-a4ba-498d8aacbdc4
 - date: 2026-11-20
   name: Inauguração da Iluminação de Natal
+  name_en: "Christmas Lights Switch-On"
   venue: Praça Velha
   locality: angra
   description: Opening of Angra’s Christmas lighting at Praça Velha.
@@ -11509,6 +11529,7 @@ Come join us and support our festivities!"
   id: 3c253c7d-d98b-4ed9-a1da-3360744ba10c
 - date: 2026-11-20
   name: 'Conferência: Programa de Educação Patrimonial'
+  name_en: "Conference: Heritage Education Programme"
   venue: Centro Interpretativo de Angra do Heroísmo
   locality: angra
   description: Conference on the Heritage Education Programme, presented by the Instituto Histórico da Ilha Terceira.
@@ -11521,6 +11542,7 @@ Come join us and support our festivities!"
   id: 97d8e0ec-de89-49f4-a871-885e7599d320
 - date: 2026-11-27
   name: Conversas ao Serão — Médicos do Mundo e FraterUne
+  name_en: "Evening Conversations — Médicos do Mundo and FraterUne"
   venue: Paços do Concelho (Town Hall)
   locality: angra
   description: Conversas ao Serão session with Médicos do Mundo and FraterUne.
@@ -11533,6 +11555,7 @@ Come join us and support our festivities!"
   id: 71ab00b0-2989-47f7-bfe8-e8afce4cddcd
 - date: 2026-11-29
   name: Lançamento de livros — Curso Escrever para Crianças
+  name_en: "Book Launch — Writing for Children Course"
   venue: CCCAH (Centro Cultural e de Congressos)
   locality: angra
   description: Book launch following the Escrever para Crianças writing course.
@@ -11545,6 +11568,7 @@ Come join us and support our festivities!"
   id: 2aaec517-936a-4f4b-9ace-724e76230594
 - date: 2026-10-31
   name: Noite Negra na Rua de São João
+  name_en: "Noite Negra — Halloween on Rua de São João"
   venue: Rua de São João
   locality: angra
   description: Halloween street party with DJs Adrix and Cristiano, from 22:30 until 04:00 the following morning.
@@ -11559,6 +11583,7 @@ Come join us and support our festivities!"
   id: bdc503ba-a39d-422f-97ea-8a2c57980028
 - date: 2026-10-30
   name: Havanna — Karaoke com Edu e Rafa & Maciel
+  name_en: "Havanna — Karaoke with Edu and Rafa & Maciel"
   venue: Havanna Club
   locality: angra
   description: Friday night with karaoke hosted by Edu from 22:00, followed by Rafa & Maciel at 00:30 on Saturday.
@@ -11574,6 +11599,7 @@ Come join us and support our festivities!"
   id: 1d8bc35c-c7bc-460e-abaf-38ac1fc9e6ec
 - date: 2026-10-31
   name: Havanna — Halloween com DJ Marco Ferreira
+  name_en: "Havanna — Halloween with DJ Marco Ferreira"
   venue: Havanna Club
   locality: angra
   description: Halloween night with DJ Marco Ferreira. The organizer has not published a start time.
@@ -11586,6 +11612,7 @@ Come join us and support our festivities!"
   id: 786fdcdb-5993-477e-82e2-8e078f4d4932
 - date: 2026-10-31
   name: Twins Halloween — Carpotxa e Victor
+  name_en: "Twins Halloween — Carpotxa and Victor"
   venue: Twins Club
   locality: angra
   description: Halloween party with Carpotxa and Victor. Check the organizer for the start time and admission details.
@@ -11598,6 +11625,7 @@ Come join us and support our festivities!"
   id: 64193c3f-fcf8-431a-8c57-d525232b7654
 - date: 2026-10-31
   name: Walk With a Doc — Praia da Vitória
+  name_en: "Walk With a Doc — Praia da Vitória"
   venue: Marginal da Praia da Vitória — frente à GNR
   locality: praia
   description: Walk With a Doc session. Meet on Praia da Vitória’s waterfront opposite the GNR. In bad weather,
@@ -11612,6 +11640,7 @@ Come join us and support our festivities!"
   id: 9dee8aaa-adc7-42ab-8c8a-551aa2f58722
 - date: 2026-11-28
   name: Walk With a Doc — Praia da Vitória
+  name_en: "Walk With a Doc — Praia da Vitória"
   venue: Marginal da Praia da Vitória — frente à GNR
   locality: praia
   description: Walk With a Doc session. Meet on Praia da Vitória’s waterfront opposite the GNR. In bad weather,
@@ -11626,6 +11655,7 @@ Come join us and support our festivities!"
   id: e26dbc20-6ad5-41ae-bb33-2dd99e7b28ff
 - date: 2026-12-26
   name: Walk With a Doc — Praia da Vitória
+  name_en: "Walk With a Doc — Praia da Vitória"
   venue: Marginal da Praia da Vitória — frente à GNR
   locality: praia
   description: Walk With a Doc session. Meet on Praia da Vitória’s waterfront opposite the GNR. In bad weather,
@@ -11640,6 +11670,7 @@ Come join us and support our festivities!"
   id: df6c3168-486b-40cf-b3d5-707586e00a1c
 - date: 2026-10-31
   name: Atelier de Halloween — Raízes Pequenas
+  name_en: "Halloween Workshop — Raízes Pequenas"
   venue: Sabores da Horta
   locality: praia
   description: Halloween workshop during Festa das Abóboras, with sensory pumpkin activities for babies aged 6 months
@@ -11676,6 +11707,7 @@ Come join us and support our festivities!"
 - date: 2026-11-20
   end_date: 2026-11-21
   name: À procura de Violante
+  name_en: "In Search of Violante"
   venue: Núcleo de História Militar Manuel Coelho Baptista de Lima
   locality: angra
   description: Premiere of the Cães do Mar theatre production on 20 and 21 November,
