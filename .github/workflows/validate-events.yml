@@ -17,6 +17,7 @@ on:
       - "scripts/tests/test_event_data.rb"
       - "scripts/assign_event_ids.rb"
       - "scripts/tests/test_event_identity.rb"
+      - "scripts/tests/test_event_locales.py"
   pull_request:
     paths:
       - "_data/special_events.yml"
@@ -32,6 +33,7 @@ on:
       - "scripts/tests/test_event_data.rb"
       - "scripts/assign_event_ids.rb"
       - "scripts/tests/test_event_identity.rb"
+      - "scripts/tests/test_event_locales.py"
 
 jobs:
   validate:
@@ -67,3 +69,6 @@ jobs:
 
       - name: Validate identity assignment and published IDs
         run: ruby scripts/tests/test_event_identity.rb
+
+      - name: Require English and Portuguese titles and descriptions
+        run: python scripts/tests/test_event_locales.py

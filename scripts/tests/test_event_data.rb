@@ -175,13 +175,15 @@ duplicates = [
 duplicate_errors = validate_events(duplicates)
 assert_eq duplicate_errors.any? { |error| error.include?('Second identity') && error.include?('`id`') && error.include?('First identity') }, true, 'duplicate ID names offending record'
 
-halloween = special.select { |event| event["source_url"] == "https://www.instagram.com/thetexanbar/reel/DeWkNyxCVDz/" }
-assert_eq halloween.length, 1, "Texan Halloween has one source-backed occurrence"
+halloween = special.select { |event| event["id"] == "b34fbe97-d63c-44b6-9d87-ab07e8e3bb10" }
+assert_eq halloween.length, 1, "Texan Halloween has one persistent occurrence"
 if halloween.length == 1
   event = halloween.first
+  assert_eq event["source_url"], "https://www.instagram.com/thegardenclub.angra/p/De30PsLsPwx/", "Halloween cites the organizer's dated concert poster"
+  assert_eq event["source_uid"], "ig-thetexanbar-DeWkNyxCVDz", "Halloween preserves its original source identity"
   assert_eq event["date"], Date.new(2026, 10, 31), "Halloween preserves the announced date"
   assert_eq event["venue"], "The Texan", "Halloween preserves the announced venue"
-  assert_eq event["time"], nil, "Halloween has no guessed start time"
+  assert_eq event["time"], "20:00", "Halloween preserves the poster's concert start time"
   assert_eq event["price"], nil, "Halloween has no guessed price"
   assert_eq event["tags"].include?("free"), false, "missing price does not imply free admission"
   assert_eq event["tags"].include?("kid-friendly"), true, "organizer states family-friendly attendance"

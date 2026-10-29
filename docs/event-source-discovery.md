@@ -1,6 +1,6 @@
 # Terceira event-source discovery
 
-Companion to [the scan runbook](runbook-social-scan.md). Last researched: **2026-10-10, Atlantic/Azores**. The [dated coverage and candidate ledger](audit-2026-10-10.md) records the checked sources and remaining gaps. A source is useful when it supplies new, verifiable local events or corrects existing details, not simply when its homepage loads.
+Companion to [the scan runbook](runbook-social-scan.md). Latest pass: **2026-10-30 Asia/Tokyo / 2026-10-29 Atlantic/Azores**. The [dated coverage and candidate ledger](audit-2026-10-30.md) records the checked sources and remaining gaps. A source is useful when it supplies new, verifiable local events or corrects existing details, not simply when its homepage loads.
 
 ## Search procedure
 
