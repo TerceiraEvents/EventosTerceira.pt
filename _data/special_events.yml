@@ -11837,3 +11837,66 @@ Come join us and support our festivities!"
   - workshop
   id: 2dc47f4c-d9e0-4572-a20c-3a0bf5d606aa
   locality: praia
+
+# Auto-ingested from What's On Azores (2026-10-29)
+- date: 2026-10-30
+  name: "XXXIV Festa da Castanha da Terra Chã"
+  venue: Freguesia da Terra Chã
+  description: "📅 Data: 30 e 31 de outubro de 2026 🕒 Horário: Conforme programa 📍 Local: Terra Chã, Ilha Terceira, Açores Uma festa que celebra as nossas tradições, a nossa cultura e, acima de tudo, o espírito de união e convívio que nos caracteriza. Estão a ser preparados momentos especiais, muita animação, música, sabores tradicionais e, claro, as castanhas quentinhas que não podem faltar! Esta é uma festa de todos e para todos, onde se criam memórias, se reencontram amigos e se mantêm vivas as nossas…"
+  source_url: https://whatson.azores.gov.pt/evento/xxxiv-festa-da-castanha-da-terra-cha/
+  source_uid: "sgUE0m0nvHbY5pSL:2026-10-30@whatson.azores.gov.pt"
+
+  id: f6f92ec6-bc66-4a92-8af6-fd99d38fd321
+- date: 2026-10-31
+  name: "XXXIV Festa da Castanha da Terra Chã"
+  venue: Freguesia da Terra Chã
+  description: "📅 Data: 30 e 31 de outubro de 2026 🕒 Horário: Conforme programa 📍 Local: Terra Chã, Ilha Terceira, Açores Uma festa que celebra as nossas tradições, a nossa cultura e, acima de tudo, o espírito de união e convívio que nos caracteriza. Estão a ser preparados momentos especiais, muita animação, música, sabores tradicionais e, claro, as castanhas quentinhas que não podem faltar! Esta é uma festa de todos e para todos, onde se criam memórias, se reencontram amigos e se mantêm vivas as nossas…"
+  source_url: https://whatson.azores.gov.pt/evento/xxxiv-festa-da-castanha-da-terra-cha/
+  source_uid: "sgUE0m0nvHbY5pSL:2026-10-31@whatson.azores.gov.pt"
+
+  id: 508c5cdf-12e9-4e03-954e-83102496c1f4
+- date: 2026-10-31
+  name: "Halloween Cinema Drive-In"
+  venue: Cerrado do Bailão – Angra do Heroísmo
+  time: "16:00"
+  description: "📅 31 de outubro e 1 de novembro de 2026 🕒 31 de outubro – 24h00 | 1 de novembro – 16h00 📍 Cerrado do Bailão – Angra do Heroísmo O Halloween chega ao Cerrado do Bailão com o Halloween Cinema Drive-In, uma iniciativa da Câmara Municipal de Angra do Heroísmo que promete duas sessões de cinema para toda a família, entre o suspense e a fantasia. 🎬 31 de outubro | 24h00 Hokum – O Pesadelo da Bruxa — Uma sessão de terror para assinalar a noite mais assustadora do ano. 🎬 1 de novembro | 16h00 A Magia…"
+  source_url: https://whatson.azores.gov.pt/evento/halloween-cinema-drive-in/
+  source_uid: "spCkPadYUQsZrdlY:2026-10-31@whatson.azores.gov.pt"
+  tags:
+  - cinema
+  - free
+
+  id: bb739bd6-55be-4ba2-9682-0537e8f7581a
+- date: 2026-11-01
+  name: "INAUGURAÇÃO DE EXPOSIÇÃO FOTOGRÁFICA, LANÇAMENTO DE LIVRO E DOCUMENTÁRIO \"O HOMEM DO FOGO\""
+  venue: "Casa do Sal / Associação \"Os Montanheiros\""
+  time: "18:00"
+  description: "📅 1 de novembro 🕒 18:00 📍 Casa do Sal – Angra do Heroísmo A Oficina d’Angra – Associação Cultural e a Associação Os Montanheiros apresentam «O Homem do Fogo», um projeto editorial e cinematográfico de Paulo Henrique Silva, dedicado aos artistas Renato Costa e Silva e Kerstin Thomas. A iniciativa tem início às 18h00, na Casa do Sal, com a inauguração de uma exposição fotográfica e a apresentação do livro. Pelas 19h00, a programação prossegue na sede da Associação Os Montanheiros, com a exibição…"
+  source_url: https://whatson.azores.gov.pt/evento/inauguracao-de-exposicao-fotografica-lancamento-de-livro-e-documentario-andquoto-homem-do-fogoandquot/
+  source_uid: "sukwuJml7YyahgQr:2026-11-01@whatson.azores.gov.pt"
+  tags:
+  - exhibition
+
+  id: ad304d86-fdf5-42bd-8f5f-f021f8c5eb62
+- date: 2026-11-14
+  name: "Comédia de Improviso"
+  venue: Edifício Cultural de S. Bento
+  time: "15:00"
+  description: "📅 14 de novembro 🕒 15:00 às 18:00 📍 Edifício Cultural de São Bento (Sala da Academia de Artes) O Edifício Cultural de São Bento recebe um Workshop de Comédia de Improviso, uma atividade dedicada à criatividade, ao humor e à espontaneidade. Inspirado no popular programa Whose Line Is It Anyway?, o workshop convida os participantes a experimentar diferentes jogos de improvisação, explorando técnicas de expressão e interação de forma descontraída e divertida. A iniciativa destina-se tanto a…"
+  source_url: https://whatson.azores.gov.pt/evento/comedia-de-improviso/
+  source_uid: "sAxJXAELv3h3619i:2026-11-14@whatson.azores.gov.pt"
+  tags:
+  - workshop
+
+  id: 6321abf0-3469-44b9-84be-5bf1190b6789
+- date: 2026-12-27
+  name: "Concerto de Fim de Ano — Temporada de Música Clássica"
+  venue: Paços do Conselho de Angra do Heroísmo
+  time: "20:00"
+  description: "📅 27 de dezembro de 2026 🕒 20h00 📍Paços do Conselho de Angra do Heroísmo Os Paços do Concelho acolhem, no dia 27 de dezembro de 2026, domingo, às 20h00, o Concerto de Fim de Ano, que encerra a Temporada de Música Clássica 2026. A iniciativa conta com Grygoriy Grytsyuk, ao piano, Svitlana Poustovhar, ao violoncelo, e Taras Poustovgar, no clarinete, num momento de música clássica que assinala o encerramento da temporada. 💚 Entrada gratuita ℹ️ Mais informações:"
+  source_url: https://whatson.azores.gov.pt/evento/concerto-de-fim-de-ano-temporada-de-musica-classica/
+  source_uid: "sydiDV41RqdmhWkx:2026-12-27@whatson.azores.gov.pt"
+  tags:
+  - live-music
+  - free
+  id: e296be26-b5f0-47d2-b9a8-46c0cbf99e84
