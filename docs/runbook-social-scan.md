@@ -3,7 +3,7 @@
 > **Purpose:** Find and verify Terceira events across official calendars, organizer websites, search, Instagram, and Facebook, then update the data through a PR.
 > **Cadence:** Run once a week (or whenever you notice the upcoming-events list is getting thin).
 > **Time required:** ~30–60 minutes depending on how active venues have been.
-> **Latest source pass:** 2026-10-24; see the [dated coverage ledger and remaining gaps](audit-2026-10-24.md).
+> **Latest source pass:** 2026-10-30; see the [dated coverage ledger and remaining gaps](audit-2026-10-30.md).
 
 ---
 
@@ -49,6 +49,7 @@ Use this as a maintained starting list for Angra and Praia scans. It is not a gu
 | What's On Azores | All islands | The public website data query was readable on 2026-10-10. Paginate every advertised page, require an explicit Terceira reference, and use Portuguese displayed dates rather than administrative CMS timestamps. |
 | byAçores Terceira agenda | Terceira | Discovery-only cross-check. The Portuguese `/terceira/` page showed September/October 2026 listings in a browser on 2026-09-04; the previously checked English route appeared stale. Check the exact route and year, then follow original sources. `agendacores.pt` redirects here. |
 | AIR Centre (`aircentre.org/pt/events`) | Regional/international | Primary source for citizen science and marine activities. Inspect event location and registration eligibility; the Terceira headquarters address does not make every event local. |
+| Montanheiros (`montanheiros.com/category/agenda/`) | Terceira | First-party nature, volunteering and club programme. Read dated SOS Cagarro locations and meeting/departure times; check training eligibility and booking-page date conflicts. |
 | Azores Bravos Trail (`azoresbravostrail.com`) | Terceira | Primary organizer programme for races and walking. Check the current edition, actual start locations, and registration deadlines, not just a tourism summary. |
 | Clube de Golfe da Ilha Terceira (`terceiragolf.com/atividade-desportiva/`) | Terceira | First-party sporting calendar. Read the full dated table, including individual and pairs competitions beyond the 90-day social-post window. |
 | Festing (`festingapp.com/en/events`) | Portugal/all islands | Secondary discovery source with current local listings. Use browser pagination and place search, then follow organizer links; do not treat all results as Terceira events. |

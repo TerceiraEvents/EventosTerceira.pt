@@ -9180,12 +9180,13 @@ Come join us and support our festivities!"
   id: b52486cd-98e8-4197-8d3f-f625fc76502e
   name: "Torneio das Castanhas — Individual"
   name_en: "Chestnut Tournament — Individual"
-  description_en: "Individual tournament in the Terceira Island Golf Club's sports calendar."
+  description_en: "Individual 18-hole Stableford tournament. Check-in 08:00–08:30; shotgun start 08:45. Registration closed on 29 October at 14:00. Participation requires a valid WHS handicap; the technical committee may authorize non-competitive entries. Published fees: €20 members, €30 non-members and €10 training players."
   venue: Clube de Golfe da Ilha Terceira
   address: "Fajãs da Agualva, 9760-403 Praia da Vitória"
-  description_pt: "Torneio individual do calendário desportivo do Clube de Golfe da Ilha Terceira."
-  source_url: https://terceiragolf.com/atividade-desportiva/
+  description_pt: "Torneio individual de 18 buracos em Stableford. Check-in das 08h00 às 08h30; saída em shotgun às 08h45. As inscrições encerraram a 29 de outubro, às 14h00. Participação com handicap WHS válido; a comissão técnica pode autorizar inscrições extracompetição. Taxas publicadas: 20 € para sócios, 30 € para não-sócios e 10 € para jogadores da formação."
+  source_url: "https://terceiragolf.com/wp-content/uploads/2026/10/castanhas26_reg.pdf"
   tags: [outdoor]
+  time: "08:45"
 
 - date: 2026-11-15
   id: d5494a64-caae-4588-95a6-f2c2a8586d02
@@ -9241,11 +9242,12 @@ Come join us and support our festivities!"
   name_en: "Halloween at The Texan"
   venue: The Texan
   address: "Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo"
-  description: "Family-friendly Halloween party at The Texan on 31 October. The organizer invites guests to wear a Halloween costume and reserve a table."
-  description_pt: "Festa de Halloween para toda a família no The Texan a 31 de outubro. A organização convida a levar um disfarce de Halloween e a reservar uma mesa."
-  source_url: https://www.instagram.com/thetexanbar/reel/DeWkNyxCVDz/
+  description: "Family-friendly Halloween party with On The Road live at 20:00 on The Garden Club stage, followed by karaoke from 22:00 until 02:00 the following morning. Costumes encouraged; reserve a table with The Texan."
+  description_pt: "Festa de Halloween para toda a família, com On The Road ao vivo às 20h00 no palco do The Garden Club, seguida de karaoke das 22h00 às 02h00 da madrugada seguinte. Disfarces bem-vindos; reserva de mesa junto do The Texan."
+  source_url: "https://www.instagram.com/thegardenclub.angra/p/De30PsLsPwx/"
   booking_url: https://the-texan-1755256381.resos.com/booking
-  tags: [kid-friendly]
+  tags: ["kid-friendly", "live-music", "karaoke"]
+  time: "20:00"
 
 - date: 2026-10-11
   id: b524f146-9689-49c8-9066-6f2938d8b869
@@ -10140,9 +10142,9 @@ Come join us and support our festivities!"
   venue: "Sabores da Horta"
   address: "Canada do Saco, 9760-123 Praia da Vitória"
   map_url: "https://maps.app.goo.gl/Jqw6MqjUWzjvEhPM9"
-  time: "10:00–19:00"
+  time: "10:00–18:30"
   description: "Halloween-season farm celebration with live music, food, a market, crafts, rides, animals and workshops."
-  source_url: "https://www.instagram.com/sabores_dahort_a/reel/Dezir6xAPyr/"
+  source_url: "https://www.instagram.com/sabores_dahort_a/reel/DfEuw00ASIV/"
   instagram: "https://www.instagram.com/sabores_dahort_a/"
   tags: [food-drink, live-music, kid-friendly, outdoor]
 
@@ -10616,8 +10618,8 @@ Come join us and support our festivities!"
 - date: 2026-11-07
   id: 056476be-5221-40cf-a9c9-b0032d2f5bf6
   locality: "praia"
-  name: "Atlas das Criaturas Estranhas"
-  name_en: "Atlas das Criaturas Estranhas"
+  name: "Atlas das Criaturas Mágicas de Portugal"
+  name_en: "Atlas das Criaturas Mágicas de Portugal"
   description_pt: "No bar da academia. Livro de Samuel Pimenta e Helena Soares, apresentado por Paulo Freitas."
   venue: "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
   address: "Academia de Juventude e das Artes da Ilha Terceira, Praia da Vitória"
@@ -10625,7 +10627,7 @@ Come join us and support our festivities!"
   time: "15:00"
   festival: "Outono Vivo 2026"
   description: "At the academy bar. Book by Samuel Pimenta and Helena Soares, presented by Paulo Freitas."
-  source_url: "https://www.cmpv.pt/index.php?id=4609&op=noticias"
+  source_url: "https://www.instagram.com/cmpraiadavitoria/p/DfAQANXFV6K/"
   tags: [literature]
 
 - date: 2026-11-07
@@ -11167,3 +11169,523 @@ Come join us and support our festivities!"
   description_pt: "Concerto da digressão açoriana de Tarina com Sofia Mestre. O anúncio da digressão não indica horário nem condições de entrada."
   instagram: "https://www.instagram.com/__tarina____/p/Dew6MAro7rL/"
   tags: [live-music]
+
+- date: 2026-10-31
+  name: Trilho da Pedra Furada — Ribeirinha
+  name_en: Pedra Furada Trail — Ribeirinha
+  venue: Museu Etnográfico da Ribeirinha
+  locality: angra
+  address: Ribeirinha, Angra do Heroísmo
+  map_url: https://maps.app.goo.gl/oGrZLvLCLiMzWKdx7
+  time: 09:00
+  description: 'Terceira Hikers walk along the Pedra Furada trail in Ribeirinha. Meeting point: Museu Etnográfico
+    da Ribeirinha at 09:00.'
+  description_pt: 'Caminhada da Terceira Hikers pelo Trilho da Pedra Furada, na Ribeirinha. Ponto de encontro: Museu
+    Etnográfico da Ribeirinha, às 09h00.'
+  source_url: https://whatson.azores.gov.pt/evento/trilho-da-pedra-furada-ribeirinha/
+  facebook: https://www.facebook.com/permalink.php?story_fbid=pfbid02nxhPPLtsDdK4ro8objn29mHnZQAA3ZjmuLBeEg8BedJtK4r4ZmMPDAQzLeqEDLEMl&id=61594840420957
+  tags:
+  - outdoor
+  id: a0263ffb-f662-49c8-8e3b-4b7b7466fd47
+- date: 2026-10-31
+  name: Trio ELC — concerto e jam session
+  name_en: Trio ELC — Concert and Jam Session
+  venue: Auditório AMIT / Espaço AMIT (Academia Musical da Ilha Terceira)
+  locality: angra
+  address: Avenida Ten. Coronel José Agostinho, 6-A, 9700-108 Angra do Heroísmo
+  time: '22:00'
+  description: Jazz concert by Trio ELC at the AMIT auditorium in Rádio Clube de Angra, followed by a jam session
+    open to musicians in attendance. Free admission.
+  description_pt: Concerto de jazz pelo Trio ELC no Auditório AMIT, no Rádio Clube de Angra, seguido de uma jam
+    session aberta aos músicos presentes. Entrada livre.
+  source_url: https://angradoheroismo.pt/evento/trio-elc-concerto-e-jam-session/
+  source_uid: 2001@angradoheroismo.pt
+  tags:
+  - live-music
+  - free
+  id: f79ac587-6051-486a-ad0b-9467e707017c
+- date: 2026-11-07
+  name: Tertúlia Paleográfica
+  name_en: Palaeography Circle
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  locality: angra
+  address: Rua do Morrão 42, 9700-054 Angra do Heroísmo
+  time: '15:00'
+  description: An in-person and online palaeography gathering organized by the library. Register with the library
+    in advance.
+  description_pt: Sessão presencial e online da Tertúlia Paleográfica organizada pela biblioteca. Inscrição prévia
+    junto da biblioteca.
+  source_url: https://angradoheroismo.pt/evento/tertulia-paleografica-14/
+  source_uid: 2007@angradoheroismo.pt
+  tags:
+  - literature
+  - workshop
+  id: fda335bb-e9aa-473a-bd5d-237cd398d8eb
+- date: 2026-11-16
+  name: 'Cinema: Ocean with David Attenborough'
+  venue: Auditório do Ramo Grande
+  locality: praia
+  address: Auditório do Ramo Grande, Praia da Vitória
+  time: '20:00'
+  description: Documentary screening promoted by Revive Our Ocean, National Geographic Pristine Seas, Blue Azores
+    and Save Azores Waves, with municipal support. Admission is free but a ticket is required. Collect tickets at
+    AJAIT on weekdays, 08:30–13:00 and 14:00–16:30; the event-day ticket office opens two hours before the screening.
+  description_pt: Exibição do documentário promovida pela Revive Our Ocean, National Geographic Pristine Seas, Blue
+    Azores e Save Azores Waves, com apoio municipal. Entrada gratuita com levantamento obrigatório de bilhete na
+    AJAIT, nos dias úteis das 08h30 às 13h00 e das 14h00 às 16h30; no dia do evento a bilheteira abre duas horas
+    antes da sessão.
+  source_url: https://www.cmpv.pt/index.php?op=agenda&id=916
+  source_uid: cmpv-916-2026-11-16
+  tags:
+  - cinema
+  - free
+  id: 732bac57-f41c-4f80-9c3b-a9e74b7fd7ff
+- date: 2026-11-07
+  name: Concerto do Estágio da OSIT
+  name_en: OSIT Residency Concert
+  venue: Museu de Angra do Heroísmo
+  locality: angra
+  address: Ladeira de São Francisco, 9700-181 Angra do Heroísmo
+  time: '21:30'
+  description: OSIT concert in the Church of Nossa Senhora da Guia at Museu de Angra do Heroísmo.
+  description_pt: Concerto do Estágio da OSIT na Igreja de Nossa Senhora da Guia, no Museu de Angra do Heroísmo.
+  source_url: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  instagram: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  tags:
+  - live-music
+  id: 91bb0bb3-1aca-4133-8cbf-cd77ec97724e
+- date: 2026-11-10
+  name: Angra Tech Day
+  venue: StartUp Angra
+  locality: angra
+  address: Angra do Heroísmo
+  time: 09:00–18:00
+  description: Technology event at StartUp Angra, from 09:00 to 18:00. Consult the organizer for the programme and
+    participation details.
+  description_pt: Evento de tecnologia na StartUp Angra, das 09h00 às 18h00. Consulta a organização para conhecer
+    o programa e as condições de participação.
+  source_url: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  instagram: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  id: ddee7934-3534-4be2-ba62-faea398320d1
+- date: 2026-10-30
+  name: 'SOS Cagarro — Porto Martins'
+  venue: Junto à Igreja do Porto Martins
+  time: '20:30'
+  description: Volunteer seabird rescue. Meeting at 20:30; departure at 20:45. Bring suitable clothing, a torch
+    and a reflective vest.
+  description_pt: Brigada de salvamento de cagarros. Concentração às 20:30; saída às 20:45. Levar roupa adequada,
+    lanterna e colete refletor.
+  source_url: https://www.montanheiros.com/2026/10/19/campanha-sos-cagarro-2026-brigadas-noturnas/
+  tags:
+  - outdoor
+  locality: praia
+  id: 735e7953-fd84-4d8a-b27e-8823057913d7
+- date: 2026-10-30
+  name: 'SOS Cagarro — Altares'
+  venue: Junta de Freguesia dos Altares
+  time: '21:00'
+  description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
+    and a reflective vest.
+  description_pt: Brigada de salvamento de cagarros. Concentração às 21:00; saída às 21:15. Levar roupa adequada,
+    lanterna e colete refletor.
+  source_url: https://www.montanheiros.com/2026/10/19/campanha-sos-cagarro-2026-brigadas-noturnas/
+  tags:
+  - outdoor
+  locality: angra
+  id: b2bfb9b3-d26a-47dd-87b9-4fe8a5b4a3d6
+- date: 2026-10-30
+  name: 'SOS Cagarro — Praia da Vitória'
+  venue: Restaurante Delman
+  time: '21:00'
+  description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
+    and a reflective vest.
+  description_pt: Brigada de salvamento de cagarros. Concentração às 21:00; saída às 21:15. Levar roupa adequada,
+    lanterna e colete refletor.
+  source_url: https://www.montanheiros.com/2026/10/19/campanha-sos-cagarro-2026-brigadas-noturnas/
+  tags:
+  - outdoor
+  locality: praia
+  id: 81b83bf1-e477-4a10-a479-d0dca9b144c5
+- date: 2026-10-30
+  name: 'SOS Cagarro — Angra'
+  venue: Pátio da Alfândega
+  time: '21:00'
+  description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
+    and a reflective vest.
+  description_pt: Brigada de salvamento de cagarros. Concentração às 21:00; saída às 21:15. Levar roupa adequada,
+    lanterna e colete refletor.
+  source_url: https://www.montanheiros.com/2026/10/19/campanha-sos-cagarro-2026-brigadas-noturnas/
+  tags:
+  - outdoor
+  locality: angra
+  id: 8e4df78b-ebd9-4924-9013-50d898dc20bf
+- date: 2026-10-30
+  name: 'SOS Cagarro — Santa Bárbara'
+  venue: Sede dos Escuteiros de Santa Bárbara — Agrupamento 630
+  time: '21:00'
+  description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
+    and a reflective vest.
+  description_pt: Brigada de salvamento de cagarros. Concentração às 21:00; saída às 21:15. Levar roupa adequada,
+    lanterna e colete refletor.
+  source_url: https://www.montanheiros.com/2026/10/19/campanha-sos-cagarro-2026-brigadas-noturnas/
+  tags:
+  - outdoor
+  locality: angra
+  id: 83055209-a048-422f-a548-ff50208ea0d9
+- date: 2026-10-30
+  name: 'SOS Cagarro — São Mateus da Calheta'
+  venue: Forte Grande de São Mateus da Calheta
+  time: '21:00'
+  description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
+    and a reflective vest.
+  description_pt: Brigada de salvamento de cagarros. Concentração às 21:00; saída às 21:15. Levar roupa adequada,
+    lanterna e colete refletor.
+  source_url: https://www.montanheiros.com/2026/10/19/campanha-sos-cagarro-2026-brigadas-noturnas/
+  tags:
+  - outdoor
+  locality: angra
+  id: d4468057-88fb-490b-9687-8d99e3719a4b
+- date: 2026-10-31
+  name: Musurgia Ensemble — Valde honorandus est
+  venue: Igreja do Recolhimento de São Gonçalo
+  time: '18:00'
+  description: Concert of sacred polyphony by Duarte Lobo, Manuel Cardoso and Palestrina, directed by João Francisco
+    Távora. Free admission.
+  description_pt: Concerto de polifonia sacra com obras de Duarte Lobo, Manuel Cardoso e Palestrina, sob direção
+    de João Francisco Távora. Entrada livre.
+  source_url: https://www.diocesedeangra.pt/musurgia-ensemble-apresenta-concerto-dedicado-a-polifonia-sacra-portuguesa-na-ilha-terceira/
+  tags:
+  - live-music
+  - free
+  address: Igreja do Recolhimento de São Gonçalo, Angra do Heroísmo
+  locality: angra
+  id: 870d5e87-af96-42f8-84a4-d542aca280e2
+- date: 2026-10-31
+  name: 'SOS Cagarro — Praia da Vitória'
+  venue: Restaurante Delman
+  time: '21:00'
+  description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
+    and a reflective vest.
+  description_pt: Brigada de salvamento de cagarros. Concentração às 21:00; saída às 21:15. Levar roupa adequada,
+    lanterna e colete refletor.
+  source_url: https://www.montanheiros.com/2026/10/19/campanha-sos-cagarro-2026-brigadas-noturnas/
+  tags:
+  - outdoor
+  locality: praia
+  id: c966b3ac-36c7-4edd-8ba7-91b6d64de26d
+- date: 2026-10-31
+  name: 'SOS Cagarro — Angra'
+  venue: Pátio da Alfândega
+  time: '21:00'
+  description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
+    and a reflective vest.
+  description_pt: Brigada de salvamento de cagarros. Concentração às 21:00; saída às 21:15. Levar roupa adequada,
+    lanterna e colete refletor.
+  source_url: https://www.montanheiros.com/2026/10/19/campanha-sos-cagarro-2026-brigadas-noturnas/
+  tags:
+  - outdoor
+  locality: angra
+  id: 7acca101-0c00-4af1-8593-c235eaa0e8bf
+- date: 2026-11-01
+  name: 'SOS Cagarro — Angra'
+  venue: Pátio da Alfândega
+  time: '21:00'
+  description: Volunteer seabird rescue. Meeting at 21:00; departure at 21:15. Bring suitable clothing, a torch
+    and a reflective vest.
+  description_pt: Brigada de salvamento de cagarros. Concentração às 21:00; saída às 21:15. Levar roupa adequada,
+    lanterna e colete refletor.
+  source_url: https://www.montanheiros.com/2026/10/19/campanha-sos-cagarro-2026-brigadas-noturnas/
+  tags:
+  - outdoor
+  locality: angra
+  id: a1a47ca5-693f-40f2-b9b0-6bcc78f9f3f7
+- date: 2026-11-02
+  name: Experimenta Cerâmica — Forno de Papel
+  venue: Prainha de Angra
+  time: '18:00'
+  description: 'Experimental ceramics workshop with Renato Costa e Silva and Kerstin Thomas, starting at 18:00.
+    Participants build a paper kiln and fire their clay pieces. Registration: €30, or €25 for members. Wear comfortable,
+    non-flammable clothing.'
+  description_pt: 'Oficina de cerâmica experimental com Renato Costa e Silva e Kerstin Thomas, a partir das 18h00.
+    Construção de um forno de papel e cozedura das peças. Inscrição: 30 €, ou 25 € para sócios. Levar roupa confortável
+    e não inflamável.'
+  source_url: https://angradoheroismo.pt/evento/experimenta-ceramica-forno-de-papel/
+  tags:
+  - workshop
+  instagram: https://www.instagram.com/oficinadangra/p/De-WpmcjNDd/
+  address: Prainha de Angra, Angra do Heroísmo
+  locality: angra
+  id: 7beb56f0-d8d7-49ea-8efc-6b085d1ef0e6
+- date: 2026-11-06
+  name: 'SOS Cagarro — Feteira'
+  venue: Acesso à zona balnear da Serretinha
+  time: '20:00'
+  description: Volunteer seabird rescue. Meeting at 20:00; departure at 20:15. Bring suitable clothing, a torch
+    and a reflective vest.
+  description_pt: Brigada de salvamento de cagarros. Concentração às 20:00; saída às 20:15. Levar roupa adequada,
+    lanterna e colete refletor.
+  source_url: https://www.montanheiros.com/2026/10/19/campanha-sos-cagarro-2026-brigadas-noturnas/
+  tags:
+  - outdoor
+  locality: angra
+  id: bbcdb4d9-a3f5-4be1-8ab3-ee0e00a81658
+- date: 2026-11-07
+  name: Danças Tradicionais do Mundo — Península Ibérica
+  venue: Casa do Sal / Oficina d’Angra
+  time: '18:00'
+  description: 'Traditional dances of the Iberian Peninsula with Miguel Lopes. Admission: €8 for members and €10
+    for non-members.'
+  description_pt: 'Danças tradicionais da Península Ibérica com Miguel Lopes. Inscrição: 8 € para sócios e 10 €
+    para não-sócios.'
+  source_url: https://www.instagram.com/oficinadangra/p/De_99UMFh_a/
+  tags:
+  - dance
+  - workshop
+  instagram: https://www.instagram.com/oficinadangra/p/De_99UMFh_a/
+  address: Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo
+  locality: angra
+  id: 6831285d-f435-4d5c-832e-5860d8c8dea4
+- date: 2026-11-02
+  name: 'Formação Startup Angra: Inteligência Artificial a Favor dos Negócios'
+  venue: StartUp Angra
+  locality: angra
+  description: Business training on artificial intelligence, 18:00–21:00, from 2 to 6 November.
+  description_pt: Formação sobre inteligência artificial a favor dos negócios, das 18h00 às 21h00, de 2 a 6 de novembro.
+  source_url: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  instagram: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  tags:
+  - workshop
+  end_date: 2026-11-06
+  time: '18:00'
+  id: ec106897-6b2d-4958-a68b-66a47d9e6e82
+- date: 2026-11-04
+  name: 4.ª Conferência Internacional CellAgri Portugal
+  venue: CCCAH (Centro Cultural e de Congressos)
+  locality: angra
+  description: Scientific conference on cellular agriculture for researchers, students, industry and policymakers.
+    Consult the organizer for registration and the programme.
+  description_pt: Conferência científica sobre agricultura celular para investigadores, estudantes, empresas e decisores.
+    Consultar a organização para inscrições e programa.
+  source_url: https://cba.uac.pt/news-events/ver.php?id=36
+  instagram: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  end_date: 2026-11-06
+  id: 6def55cd-401a-4d69-aac7-de66cacc0c7d
+- date: 2026-11-06
+  name: 'Apresentação do livro: Terceira Automóvel Clube — A propósito dos seus 50 anos — 1975–2025'
+  venue: Centro Interpretativo de Angra do Heroísmo
+  locality: angra
+  description: Presentation of Josué Cardoso’s book on the fifty-year history of Terceira Automóvel Clube.
+  description_pt: Apresentação do livro de Josué Cardoso sobre os cinquenta anos do Terceira Automóvel Clube.
+  source_url: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  instagram: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  tags:
+  - literature
+  time: '20:30'
+  id: 543fcf33-bacd-4099-972e-6b9440ce1f21
+- date: 2026-11-16
+  name: 'Formação Startup Angra: Estratégia de Preço'
+  venue: StartUp Angra
+  locality: angra
+  description: Training on pricing strategy, 18:00–21:00, from 16 to 20 November.
+  description_pt: Formação sobre estratégia de preço, das 18h00 às 21h00, de 16 a 20 de novembro.
+  source_url: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  instagram: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  tags:
+  - workshop
+  end_date: 2026-11-20
+  time: '18:00'
+  id: 5d39ffca-c0a2-4270-a4ba-498d8aacbdc4
+- date: 2026-11-20
+  name: Inauguração da Iluminação de Natal
+  venue: Praça Velha
+  locality: angra
+  description: Opening of Angra’s Christmas lighting at Praça Velha.
+  description_pt: Inauguração da iluminação de Natal de Angra na Praça Velha.
+  source_url: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  instagram: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  tags:
+  - outdoor
+  time: '18:30'
+  id: 3c253c7d-d98b-4ed9-a1da-3360744ba10c
+- date: 2026-11-20
+  name: 'Conferência: Programa de Educação Patrimonial'
+  venue: Centro Interpretativo de Angra do Heroísmo
+  locality: angra
+  description: Conference on the Heritage Education Programme, presented by the Instituto Histórico da Ilha Terceira.
+  description_pt: Conferência sobre o Programa de Educação Patrimonial, pelo Instituto Histórico da Ilha Terceira.
+  source_url: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  instagram: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  tags:
+  - literature
+  time: '18:30'
+  id: 97d8e0ec-de89-49f4-a871-885e7599d320
+- date: 2026-11-27
+  name: Conversas ao Serão — Médicos do Mundo e FraterUne
+  venue: Paços do Concelho (Town Hall)
+  locality: angra
+  description: Conversas ao Serão session with Médicos do Mundo and FraterUne.
+  description_pt: Sessão de Conversas ao Serão com Médicos do Mundo e FraterUne.
+  source_url: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  instagram: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  tags:
+  - literature
+  time: '21:00'
+  id: 71ab00b0-2989-47f7-bfe8-e8afce4cddcd
+- date: 2026-11-29
+  name: Lançamento de livros — Curso Escrever para Crianças
+  venue: CCCAH (Centro Cultural e de Congressos)
+  locality: angra
+  description: Book launch following the Escrever para Crianças writing course.
+  description_pt: Lançamento de livros na sequência do curso Escrever para Crianças.
+  source_url: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  instagram: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
+  tags:
+  - literature
+  time: '16:00'
+  id: 2aaec517-936a-4f4b-9ace-724e76230594
+- date: 2026-10-31
+  name: Noite Negra na Rua de São João
+  venue: Rua de São João
+  locality: angra
+  description: Halloween street party with DJs Adrix and Cristiano, from 22:30 until 04:00 the following morning.
+  description_pt: Festa de Halloween na rua com os DJs Adrix e Cristiano, das 22h30 às 04h00 da madrugada seguinte.
+  source_url: https://www.instagram.com/livraria_lardocelivro/p/DfFtVXmAeEt/
+  instagram: https://www.instagram.com/livraria_lardocelivro/p/DfFtVXmAeEt/
+  tags:
+  - nightlife
+  - outdoor
+  time: '22:30'
+  address: Rua de São João, Angra do Heroísmo
+  id: bdc503ba-a39d-422f-97ea-8a2c57980028
+- date: 2026-10-30
+  name: Havanna — Karaoke com Edu e Rafa & Maciel
+  venue: Havanna Club
+  locality: angra
+  description: Friday night with karaoke hosted by Edu from 22:00, followed by Rafa & Maciel at 00:30 on Saturday.
+  description_pt: Sexta-feira com karaoke com Edu a partir das 22h00, seguido de Rafa & Maciel às 00h30 de sábado.
+  source_url: https://www.instagram.com/havannaangra/reel/DfE-Nh2Da21/
+  instagram: https://www.instagram.com/havannaangra/reel/DfE-Nh2Da21/
+  tags:
+  - karaoke
+  - live-music
+  - nightlife
+  time: '22:00'
+  address: Jardim do Corte Real, Angra do Heroísmo
+  id: 1d8bc35c-c7bc-460e-abaf-38ac1fc9e6ec
+- date: 2026-10-31
+  name: Havanna — Halloween com DJ Marco Ferreira
+  venue: Havanna Club
+  locality: angra
+  description: Halloween night with DJ Marco Ferreira. The organizer has not published a start time.
+  description_pt: Noite de Halloween com DJ Marco Ferreira. A organização não publicou a hora de início.
+  source_url: https://www.instagram.com/havannaangra/reel/DfE-Nh2Da21/
+  instagram: https://www.instagram.com/havannaangra/reel/DfE-Nh2Da21/
+  tags:
+  - nightlife
+  address: Jardim do Corte Real, Angra do Heroísmo
+  id: 786fdcdb-5993-477e-82e2-8e078f4d4932
+- date: 2026-10-31
+  name: Twins Halloween — Carpotxa e Victor
+  venue: Twins Club
+  locality: angra
+  description: Halloween party with Carpotxa and Victor. Check the organizer for the start time and admission details.
+  description_pt: Festa de Halloween com Carpotxa e Victor. Consultar a organização para a hora de início e condições
+    de entrada.
+  source_url: https://www.instagram.com/twinstheclub/reel/De7qWC9M1ve/
+  instagram: https://www.instagram.com/twinstheclub/reel/De7qWC9M1ve/
+  tags:
+  - nightlife
+  id: 64193c3f-fcf8-431a-8c57-d525232b7654
+- date: 2026-10-31
+  name: Walk With a Doc — Praia da Vitória
+  venue: Marginal da Praia da Vitória — frente à GNR
+  locality: praia
+  description: Walk With a Doc session. Meet on Praia da Vitória’s waterfront opposite the GNR. In bad weather,
+    the session takes place at Pavilhão do Porto Martins. Register with the organizer.
+  description_pt: Sessão Walk With a Doc. Encontro na marginal da Praia da Vitória, em frente à GNR. Em caso de
+    mau tempo, a sessão realiza-se no Pavilhão do Porto Martins. Inscrição junto da organização.
+  source_url: https://www.instagram.com/cmpraiadavitoria/p/DfEvhFdDFB9/
+  instagram: https://www.instagram.com/cmpraiadavitoria/p/DfEvhFdDFB9/
+  tags:
+  - outdoor
+  time: '10:30'
+  id: 9dee8aaa-adc7-42ab-8c8a-551aa2f58722
+- date: 2026-11-28
+  name: Walk With a Doc — Praia da Vitória
+  venue: Marginal da Praia da Vitória — frente à GNR
+  locality: praia
+  description: Walk With a Doc session. Meet on Praia da Vitória’s waterfront opposite the GNR. In bad weather,
+    the session takes place at Pavilhão do Porto Martins. Register with the organizer.
+  description_pt: Sessão Walk With a Doc. Encontro na marginal da Praia da Vitória, em frente à GNR. Em caso de
+    mau tempo, a sessão realiza-se no Pavilhão do Porto Martins. Inscrição junto da organização.
+  source_url: https://www.instagram.com/cmpraiadavitoria/p/DfEvhFdDFB9/
+  instagram: https://www.instagram.com/cmpraiadavitoria/p/DfEvhFdDFB9/
+  tags:
+  - outdoor
+  time: '10:30'
+  id: e26dbc20-6ad5-41ae-bb33-2dd99e7b28ff
+- date: 2026-12-26
+  name: Walk With a Doc — Praia da Vitória
+  venue: Marginal da Praia da Vitória — frente à GNR
+  locality: praia
+  description: Walk With a Doc session. Meet on Praia da Vitória’s waterfront opposite the GNR. In bad weather,
+    the session takes place at Pavilhão do Porto Martins. Register with the organizer.
+  description_pt: Sessão Walk With a Doc. Encontro na marginal da Praia da Vitória, em frente à GNR. Em caso de
+    mau tempo, a sessão realiza-se no Pavilhão do Porto Martins. Inscrição junto da organização.
+  source_url: https://www.instagram.com/cmpraiadavitoria/p/DfEvhFdDFB9/
+  instagram: https://www.instagram.com/cmpraiadavitoria/p/DfEvhFdDFB9/
+  tags:
+  - outdoor
+  time: '10:30'
+  id: df6c3168-486b-40cf-b3d5-707586e00a1c
+- date: 2026-10-31
+  name: Atelier de Halloween — Raízes Pequenas
+  venue: Sabores da Horta
+  locality: praia
+  description: Halloween workshop during Festa das Abóboras, with sensory pumpkin activities for babies aged 6 months
+    to 3 years and pumpkin hunts and slime activities for children aged 4–12. Limited places; register with Raízes
+    Pequenas.
+  description_pt: Atelier de Halloween na Festa das Abóboras, com exploração sensorial e caça às abóboras para bebés
+    dos 6 meses aos 3 anos, e caça às abóboras e slime para crianças dos 4 aos 12 anos. Vagas limitadas; inscrição
+    junto da Raízes Pequenas.
+  source_url: https://www.instagram.com/playgroupraizespequenas/p/DezTTA7Ic3P/
+  instagram: https://www.instagram.com/playgroupraizespequenas/p/DezTTA7Ic3P/
+  tags:
+  - kid-friendly
+  - workshop
+  time: '13:00'
+  address: Canada do Saco, 9760-123 Praia da Vitória
+  id: 2760dcc0-b7dc-49cf-af14-06334cf16626
+
+- date: 2026-10-30
+  name: Delta Project — concerto ao vivo
+  name_en: Delta Project — Live Concert
+  venue: Tasca do Camões
+  locality: angra
+  address: Rua da Rocha 64, 9700-169 Angra do Heroísmo
+  time: '22:00'
+  description: Live rock concert by Delta Project at Tasca do Camões.
+  description_pt: Concerto de rock ao vivo com Delta Project na Tasca do Camões.
+  source_url: https://www.facebook.com/photo/?fbid=122238261644313029&set=a.122097858566313029
+  facebook: https://www.facebook.com/photo/?fbid=122238261644313029&set=a.122097858566313029
+  tags:
+  - live-music
+  - nightlife
+  id: 4a158d74-0e56-465d-9249-ff0587a3ae21
+
+- date: 2026-11-20
+  end_date: 2026-11-21
+  name: À procura de Violante
+  venue: Núcleo de História Militar Manuel Coelho Baptista de Lima
+  locality: angra
+  description: Premiere of the Cães do Mar theatre production on 20 and 21 November,
+    directed by Ana Brum. Consult the organizer for performance times and admission
+    details.
+  description_pt: Estreia da produção teatral da Cães do Mar nos dias 20 e 21 de novembro,
+    com direção de Ana Brum. Consultar a organização para os horários e condições
+    de entrada.
+  source_url: https://www.instagram.com/ana.bruma/p/DfDA2FNMl8C/
+  instagram: https://www.instagram.com/ana.bruma/p/DfDA2FNMl8C/
+  tags:
+  - theater
+  id: 59a3f169-1784-474e-b910-429fbc9266fd
