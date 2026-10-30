@@ -11900,3 +11900,67 @@ Come join us and support our festivities!"
   - live-music
   - free
   id: e296be26-b5f0-47d2-b9a8-46c0cbf99e84
+
+# Auto-ingested from CMAH (2026-10-30)
+- date: 2026-10-31
+  name: "Concerto | Vaide Honorandus Est"
+  venue: Recolhimento de São Gonçalo
+  map_url: https://www.google.com/maps/search/?api=1&query=Recolhimento%20de%20S%C3%A3o%20Gon%C3%A7alo%20Angra%20do%20Hero%C3%ADsmo
+  time: "18:00"
+  description: "O Recolhimento de São Gonçalo, em Angra do Heroísmo, acolhe, no dia 31 de outubro de 2026, sábado, às 18h00, o concerto «Vaide Honorandus Est», interpretado pelo Musurgia Ensemble, sob direção musical de João Francisco Távora. O programa reúne obras de Duarte Lobo, Manuel Cardoso e Giovanni Pierluigi da Palestrina, compositores de referência da música sacra renascentista, proporcionando ao público um percurso pelo património musical polifónico europeu. A iniciativa é promovida pela Associação…"
+  source_url: https://angradoheroismo.pt/evento/concerto-vaide-honorandus-est/
+  source_uid: "2008@angradoheroismo.pt"
+  tags:
+  - live-music
+
+  id: 5cb6beb4-8fe5-4da4-a7af-29040ca319a0
+- date: 2026-11-07
+  name: "Danças Tradicionais do Mundo com Miguel Lopes"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, Angra do Heroísmo, 9700-030"
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa%20do%20Sal%20Angra%20do%20Hero%C3%ADsmo
+  time: "18:00"
+  description: "💃🌍 Danças Tradicionais do Mundo regressam à Casa do Sal! Em novembro, Miguel Lopes convida-nos a descobrir algumas das danças tradicionais da Península Ibérica, numa oficina onde o movimento, a música e o convívio se encontram. Entre passos, ritmos e coreografias transmitidos de geração em geração, os participantes terão oportunidade de contactar com tradições populares que continuam bem vivas de ambos os lados da fronteira. Não é necessária experiência prévia, apenas curiosidade e vontade de…"
+  source_url: https://angradoheroismo.pt/evento/dancas-tradicionais-do-mundo-com-miguel-lopes-2/
+  source_uid: "2003@angradoheroismo.pt"
+  tags:
+  - workshop
+
+  id: 956d0f60-ac46-4332-a985-0ea37b00a04b
+- date: 2026-11-14
+  name: "Concerto: Angra Convida Carolina Deslandes – Voz & Guitarra"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Angra do Heroísmo, 9700-130"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20e%20de%20Congressos%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:30"
+  description: "Angra Convida Carolina Deslandes – Voz & Guitarra O Centro Cultural e de Congressos de Angra do Heroísmo acolhe, nos dias 13 e 14 de novembro de 2026, sexta-feira e sábado, às 21h30, o espetáculo «Angra Convida Carolina Deslandes – Voz & Guitarra». Devido à elevada procura por parte do público, foi aberta uma sessão extra para o dia 13 de novembro. Em formato intimista, voz e guitarra, Carolina Deslandes apresenta algumas das canções mais marcantes da música portuguesa contemporânea,…"
+  source_url: https://angradoheroismo.pt/evento/concerto-angra-convida-carolina-deslandes-voz-guitarra/
+  source_uid: "1498@angradoheroismo.pt"
+  tags:
+  - live-music
+
+  id: b660b64e-0f81-4c79-a66c-fe84c5c335b9
+  locality: angra
+- date: 2026-11-27
+  name: "Festival Fado Atlântico"
+  venue: Igreja do Regimento de Guarnição N.º1
+  map_url: https://www.google.com/maps/search/?api=1&query=Igreja%20do%20Regimento%20de%20Guarni%C3%A7%C3%A3o%20N.%C2%BA1%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:30"
+  description: "A Igreja do Regimento de Guarnição N.º 1, no Monte Brasil, acolhe, no dia 27 de novembro de 2026, sexta-feira, às 21h30, mais uma edição do Festival Fado Atlântico. O concerto tem como protagonista Cláudia Picado, contando ainda com a participação dos fadistas convidados Fábio Ourique, Lisele Silva, Nélia Martins, Américo Roque, André Gonçalves, Tiago Azevedo, Vera Brasil, Guida Lima e Susana Lemos. Os intérpretes serão acompanhados pelos músicos Evandro Meneses, Paulo Cunha e Pedro Morais,…"
+  source_url: https://angradoheroismo.pt/evento/festival-fado-atlantico/
+  source_uid: "2009@angradoheroismo.pt"
+  tags:
+  - live-music
+
+  id: b22b0460-534b-4774-8433-901b919cb27c
+- date: 2027-01-29
+  name: "Azores GameFest"
+  venue: Parque Multissetorial da Ilha Terceira
+  address: "Vinha Brava, Angra do Heroísmo, 9700-240"
+  map_url: https://www.google.com/maps/search/?api=1&query=Parque%20Multissetorial%20da%20Ilha%20Terceira%20Angra%20do%20Hero%C3%ADsmo
+  time: "10:00"
+  description: "O Azores GameFest, um dos maiores eventos de Gaming e Esports dos Açores regressa à Ilha Terceira, no Pavilhão Multiusos do Parque Multissetorial, entre os dias 29 e 31 de janeiro e promete novas áreas, torneios, convidados, workshops e painéis com muitas novidades e conteúdos dedicados aos fãs do gaming mas também para toda a família."
+  source_url: https://angradoheroismo.pt/evento/azores-gamefest/
+  source_uid: "1937@angradoheroismo.pt"
+
+  id: 669a2215-ddc0-421d-ae18-232755e363a9
