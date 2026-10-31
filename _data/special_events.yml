@@ -11964,3 +11964,46 @@ Come join us and support our festivities!"
   source_uid: "1937@angradoheroismo.pt"
 
   id: 669a2215-ddc0-421d-ae18-232755e363a9
+
+# Auto-ingested from CMAH (2026-10-31)
+- date: 2026-11-01
+  name: "Domingos com Música, com Gustaaf van Manen"
+  venue: Angra do Heroísmo
+  address: "Concelho de Angra do Heroísmo, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "11:00"
+  description: "Com a missão de valorizar e preservar o património musical da região, o Museu de Angra do Heroísmo prossegue com a sua programação de concertos barrocos no órgão histórico da Igreja de Nossa Senhora da Guia, construído em 1788 por António Xavier Machado e Cerveira e restaurado em 2011 por Dinarte Machado. Interpretado pelo organista residente Gustaaf Robert van Manen, o programa reúne obras dos séculos XVI a XVIII. MUSEU DE ANGRA DO HEROÍSMO. CORO ALTO DA IGREJA DE NOSSA SENHORA DA GUIA. 11H00.…"
+  source_url: https://angradoheroismo.pt/evento/domingos-com-musica-com-gustaaf-van-manen-7/
+  source_uid: "2012@angradoheroismo.pt"
+  tags:
+  - live-music
+
+  id: 32c24f24-cb74-43dc-8f1d-0b72ee99f8c8
+- date: 2026-11-02
+  name: "Documento do Mês | As folhas que guardam"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão, n.º 42, Angra do Heroísmo, 9700-054"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca%20P%C3%BAblica%20e%20Arquivo%20Regional%20Lu%C3%ADs%20da%20Silva%20Ribeiro%20Angra%20do%20Hero%C3%ADsmo
+  time: "09:00"
+  description: "Esta exposição do Documento do Mês, intitulada As folhas que guardam, decorre durante o mês de novembro e dezembro de 2026. Esta é uma viagem visual, artística e técnica sobre as folhas de guarda. Nesta mostra pode perceber o que são, para que servem, a sua importância, bem como, observar as suas inúmeras variações e decorações. As folhas que guardam têm uma função funcional, estrutural, e, muitas vezes, decorativa. Estas decorações não só enriquecem visualmente a obra, como também constituem…"
+  source_url: https://angradoheroismo.pt/evento/documento-do-mes-as-folhas-que-guardam/
+  source_uid: "2010@angradoheroismo.pt"
+  tags:
+  - exhibition
+
+  id: 7677325e-db12-47d3-abd7-2424c85005d3
+  locality: angra
+- date: 2026-11-11
+  name: "Dia de São Martinho"
+  venue: Praça Velha
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "12:00"
+  description: "A Praça Velha, em Angra do Heroísmo, acolhe, no dia 11 de novembro de 2026, quarta-feira, entre as 12h00 e as 17h00, a celebração do «Dia de São Martinho». O programa inclui os concertos de Fábio Ourique, às 12h30, e da banda Bahia Groove, às 15h00, proporcionando uma tarde de animação musical em pleno centro histórico da cidade. A iniciativa conta ainda com barraquinhas de comes e bebes e espaços dedicados ao artesanato, promovendo o convívio e a dinamização do espaço público. Entrada livre."
+  source_url: https://angradoheroismo.pt/evento/dia-de-sao-martinho/
+  source_uid: "2011@angradoheroismo.pt"
+  tags:
+  - bullfighting
+  - live-music
+
+  id: 6fac6df0-76ea-416a-ad4d-39512417e25f
