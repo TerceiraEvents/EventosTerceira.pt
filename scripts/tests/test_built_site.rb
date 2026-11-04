@@ -31,7 +31,7 @@ target_css = File.read(File.join(SITE, 'assets/css/style.css'))
 [['venues/index.html', 'Make a dinner reservation'], ['pt/venues/index.html', 'Reservar uma mesa']].each do |route, label|
   venue_html = File.read(File.join(SITE, route))
   reservation = venue_html.match(/<div class="event-reservations">\s*<a href="([^"]+)">([^<]+)<\/a>/)
-  err(errors, "#{route}: reservation link preserves its published target and label") unless reservation && reservation[1] == 'https://the-texan-1755256381.resos.com/booking' && reservation[2] == label
+  err(errors, "#{route}: reservation link preserves its published target and label") unless reservation && reservation[1] == 'https://tableamigo.com/malooca' && reservation[2] == label
 end
 tag_target_rule = target_css.match(/\.form-tags \.tag-chip span\s*\{([^}]+)\}/m)
 err(errors, 'Suggest tag label targets require at least44px width and height') unless tag_target_rule && %w[width height].all? { |axis| tag_target_rule[1].match?(/min-#{axis}:\s*44px/) }

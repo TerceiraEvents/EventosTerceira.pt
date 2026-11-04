@@ -82,7 +82,7 @@
     - { label: "Website", label_pt: "Site", url: "https://www.thetexan.pt" }
     - { label: "Instagram (Texan)", label_pt: "Instagram (Texan)", url: "https://www.instagram.com/thetexanbar/" }
     - { label: "Instagram (Garden Club)", label_pt: "Instagram (Garden Club)", url: "https://www.instagram.com/thegardenclub.angra/" }
-  reservation_url: "https://the-texan-1755256381.resos.com/booking"
+  reservation_url: "https://tableamigo.com/malooca"
   reservation_label: "Make a dinner reservation"
   reservation_label_pt: "Reservar uma mesa"
   schema_type: Restaurant
