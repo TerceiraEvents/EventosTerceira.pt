@@ -11148,6 +11148,7 @@ Come join us and support our festivities!"
 
 - date: 2026-11-26
   id: 0e8ed999-9d75-4699-9195-480477b2e087
+  source_uid: "108940@ticketline.pt"
   end_date: 2026-11-30
   locality: "angra"
   name: "Cinema: Romance à Italiana"
@@ -12107,14 +12108,3 @@ Come join us and support our festivities!"
     - dance
   id: c29ddc14-d361-4c48-b6b4-04b2e13747df
   locality: angra
-
-# Auto-ingested from Ticketline (2026-11-13)
-- date: 2026-11-26
-  name: "ROMANCE À ITALIANA"
-  venue: C.C.C. Angra Do Heroísmo - Pequeno Auditório
-  map_url: https://www.google.com/maps/search/?api=1&query=C.C.C.%20Angra%20Do%20Hero%C3%ADsmo%20-%20Pequeno%20Audit%C3%B3rio%20Angra%20do%20Hero%C3%ADsmo
-  time: "21:00"
-  source_url: https://www.ticketline.pt/evento/romance-a-italiana-108940
-  source_uid: "108940@ticketline.pt"
-
-  id: 471abac1-6be5-4636-a102-dcfd4eac6ed4
