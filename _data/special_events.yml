@@ -7796,6 +7796,7 @@ Come join us and support our festivities!"
   time: "20:00"
   description: "The concert closing the 2026 Classical Music Season, with Grygoriy Grytsyuk (piano), Svitlana Poustovhar (cello), and Taras Poustovgar (clarinet). Free entry."
   description_pt: "Concerto que encerra a Temporada de Música Clássica 2026, com Grygoriy Grytsyuk (piano), Svitlana Poustovhar (violoncelo) e Taras Poustovgar (clarinete). Entrada livre."
+  source_uid: "sydiDV41RqdmhWkx:2026-12-27@whatson.azores.gov.pt"
   source_url: https://angradoheroismo.pt/evento/temporada-de-musica-classica-concerto-de-fim-de-ano/
   tags:
   - live-music
@@ -10331,6 +10332,7 @@ Come join us and support our festivities!"
   map_url: "https://www.google.com/maps/search/?api=1&query=Casa+do+Sal+Angra+do+Heroísmo"
   time: "18:00"
   description: "Opening of the exhibition and presentation of the book O Homem do Fogo."
+  source_uid: "sukwuJml7YyahgQr:2026-11-01@whatson.azores.gov.pt"
   source_url: "https://angradoheroismo.pt/evento/exposicao-livro-e-documentario-o-homem-do-fogo/"
   tags: [exhibition, literature, free]
 
@@ -11841,25 +11843,31 @@ Come join us and support our festivities!"
 # Auto-ingested from What's On Azores (2026-10-29)
 - date: 2026-10-30
   name: "XXXIV Festa da Castanha da Terra Chã"
+  name_en: "XXXIV Chestnut Festival of Terra Chã"
   venue: Freguesia da Terra Chã
   description: "📅 Data: 30 e 31 de outubro de 2026 🕒 Horário: Conforme programa 📍 Local: Terra Chã, Ilha Terceira, Açores Uma festa que celebra as nossas tradições, a nossa cultura e, acima de tudo, o espírito de união e convívio que nos caracteriza. Estão a ser preparados momentos especiais, muita animação, música, sabores tradicionais e, claro, as castanhas quentinhas que não podem faltar! Esta é uma festa de todos e para todos, onde se criam memórias, se reencontram amigos e se mantêm vivas as nossas…"
+  description_en: "📅 Date: 30 and 31 October 2026 🕒 Time: as per the programme 📍 Location: Terra Chã, Terceira Island, Azores A festival that celebrates our traditions, our culture and, above all, the spirit of unity and conviviality that characterises us. Special moments are being prepared, with lots of entertainment, music, traditional flavours and, of course, the warm roasted chestnuts that cannot be missing! This is a festival for everyone and of everyone, where memories are made, friends are reunited and our … are kept alive"
   source_url: https://whatson.azores.gov.pt/evento/xxxiv-festa-da-castanha-da-terra-cha/
   source_uid: "sgUE0m0nvHbY5pSL:2026-10-30@whatson.azores.gov.pt"
 
   id: f6f92ec6-bc66-4a92-8af6-fd99d38fd321
 - date: 2026-10-31
   name: "XXXIV Festa da Castanha da Terra Chã"
+  name_en: "XXXIV Chestnut Festival of Terra Chã"
   venue: Freguesia da Terra Chã
   description: "📅 Data: 30 e 31 de outubro de 2026 🕒 Horário: Conforme programa 📍 Local: Terra Chã, Ilha Terceira, Açores Uma festa que celebra as nossas tradições, a nossa cultura e, acima de tudo, o espírito de união e convívio que nos caracteriza. Estão a ser preparados momentos especiais, muita animação, música, sabores tradicionais e, claro, as castanhas quentinhas que não podem faltar! Esta é uma festa de todos e para todos, onde se criam memórias, se reencontram amigos e se mantêm vivas as nossas…"
+  description_en: "📅 Date: 30 and 31 October 2026 🕒 Time: as per the programme 📍 Location: Terra Chã, Terceira Island, Azores A festival that celebrates our traditions, our culture and, above all, the spirit of unity and conviviality that characterises us. Special moments are being prepared, with lots of entertainment, music, traditional flavours and, of course, the warm roasted chestnuts that cannot be missing! This is a festival for everyone and of everyone, where memories are made, friends are reunited and our … are kept alive"
   source_url: https://whatson.azores.gov.pt/evento/xxxiv-festa-da-castanha-da-terra-cha/
   source_uid: "sgUE0m0nvHbY5pSL:2026-10-31@whatson.azores.gov.pt"
 
   id: 508c5cdf-12e9-4e03-954e-83102496c1f4
 - date: 2026-10-31
   name: "Halloween Cinema Drive-In"
+  name_en: "Halloween Cinema Drive-In"
   venue: Cerrado do Bailão – Angra do Heroísmo
   time: "16:00"
   description: "📅 31 de outubro e 1 de novembro de 2026 🕒 31 de outubro – 24h00 | 1 de novembro – 16h00 📍 Cerrado do Bailão – Angra do Heroísmo O Halloween chega ao Cerrado do Bailão com o Halloween Cinema Drive-In, uma iniciativa da Câmara Municipal de Angra do Heroísmo que promete duas sessões de cinema para toda a família, entre o suspense e a fantasia. 🎬 31 de outubro | 24h00 Hokum – O Pesadelo da Bruxa — Uma sessão de terror para assinalar a noite mais assustadora do ano. 🎬 1 de novembro | 16h00 A Magia…"
+  description_en: "📅 31 October and 1 November 2026 🕒 31 October – 00:00 | 1 November – 16:00 📍 Cerrado do Bailão – Angra do Heroísmo Halloween arrives at the Cerrado do Bailão with the Halloween Cinema Drive-In, an initiative of the Angra do Heroísmo Municipal Council that promises two film screenings for the whole family, between suspense and fantasy. 🎬 31 October | 00:00 Hokum – O Pesadelo da Bruxa — a horror screening to mark the scariest night of the year. 🎬 1 November | 16:00 A Magia…"
   source_url: https://whatson.azores.gov.pt/evento/halloween-cinema-drive-in/
   source_uid: "spCkPadYUQsZrdlY:2026-10-31@whatson.azores.gov.pt"
   tags:
@@ -11867,47 +11875,28 @@ Come join us and support our festivities!"
   - free
 
   id: bb739bd6-55be-4ba2-9682-0537e8f7581a
-- date: 2026-11-01
-  name: "INAUGURAÇÃO DE EXPOSIÇÃO FOTOGRÁFICA, LANÇAMENTO DE LIVRO E DOCUMENTÁRIO \"O HOMEM DO FOGO\""
-  venue: "Casa do Sal / Associação \"Os Montanheiros\""
-  time: "18:00"
-  description: "📅 1 de novembro 🕒 18:00 📍 Casa do Sal – Angra do Heroísmo A Oficina d’Angra – Associação Cultural e a Associação Os Montanheiros apresentam «O Homem do Fogo», um projeto editorial e cinematográfico de Paulo Henrique Silva, dedicado aos artistas Renato Costa e Silva e Kerstin Thomas. A iniciativa tem início às 18h00, na Casa do Sal, com a inauguração de uma exposição fotográfica e a apresentação do livro. Pelas 19h00, a programação prossegue na sede da Associação Os Montanheiros, com a exibição…"
-  source_url: https://whatson.azores.gov.pt/evento/inauguracao-de-exposicao-fotografica-lancamento-de-livro-e-documentario-andquoto-homem-do-fogoandquot/
-  source_uid: "sukwuJml7YyahgQr:2026-11-01@whatson.azores.gov.pt"
-  tags:
-  - exhibition
-
-  id: ad304d86-fdf5-42bd-8f5f-f021f8c5eb62
 - date: 2026-11-14
   name: "Comédia de Improviso"
+  name_en: "Improvised Comedy"
   venue: Edifício Cultural de S. Bento
   time: "15:00"
   description: "📅 14 de novembro 🕒 15:00 às 18:00 📍 Edifício Cultural de São Bento (Sala da Academia de Artes) O Edifício Cultural de São Bento recebe um Workshop de Comédia de Improviso, uma atividade dedicada à criatividade, ao humor e à espontaneidade. Inspirado no popular programa Whose Line Is It Anyway?, o workshop convida os participantes a experimentar diferentes jogos de improvisação, explorando técnicas de expressão e interação de forma descontraída e divertida. A iniciativa destina-se tanto a…"
+  description_en: "📅 14 November 🕒 15:00 to 18:00 📍 São Bento Cultural Building (Sala da Academia de Artes) The São Bento Cultural Building hosts an Improvised Comedy Workshop, an activity dedicated to creativity, humour and spontaneity. Inspired by the popular programme Whose Line Is It Anyway?, the workshop invites participants to try out different improvisation games, exploring techniques of expression and interaction in a relaxed and fun way. The initiative is aimed at both…"
   source_url: https://whatson.azores.gov.pt/evento/comedia-de-improviso/
   source_uid: "sAxJXAELv3h3619i:2026-11-14@whatson.azores.gov.pt"
   tags:
   - workshop
 
   id: 6321abf0-3469-44b9-84be-5bf1190b6789
-- date: 2026-12-27
-  name: "Concerto de Fim de Ano — Temporada de Música Clássica"
-  venue: Paços do Conselho de Angra do Heroísmo
-  time: "20:00"
-  description: "📅 27 de dezembro de 2026 🕒 20h00 📍Paços do Conselho de Angra do Heroísmo Os Paços do Concelho acolhem, no dia 27 de dezembro de 2026, domingo, às 20h00, o Concerto de Fim de Ano, que encerra a Temporada de Música Clássica 2026. A iniciativa conta com Grygoriy Grytsyuk, ao piano, Svitlana Poustovhar, ao violoncelo, e Taras Poustovgar, no clarinete, num momento de música clássica que assinala o encerramento da temporada. 💚 Entrada gratuita ℹ️ Mais informações:"
-  source_url: https://whatson.azores.gov.pt/evento/concerto-de-fim-de-ano-temporada-de-musica-classica/
-  source_uid: "sydiDV41RqdmhWkx:2026-12-27@whatson.azores.gov.pt"
-  tags:
-  - live-music
-  - free
-  id: e296be26-b5f0-47d2-b9a8-46c0cbf99e84
-
 # Auto-ingested from CMAH (2026-10-30)
 - date: 2026-10-31
   name: "Concerto | Vaide Honorandus Est"
+  name_en: "Concerto | Vaide Honorandus Est"
   venue: Recolhimento de São Gonçalo
   map_url: https://www.google.com/maps/search/?api=1&query=Recolhimento%20de%20S%C3%A3o%20Gon%C3%A7alo%20Angra%20do%20Hero%C3%ADsmo
   time: "18:00"
   description: "O Recolhimento de São Gonçalo, em Angra do Heroísmo, acolhe, no dia 31 de outubro de 2026, sábado, às 18h00, o concerto «Vaide Honorandus Est», interpretado pelo Musurgia Ensemble, sob direção musical de João Francisco Távora. O programa reúne obras de Duarte Lobo, Manuel Cardoso e Giovanni Pierluigi da Palestrina, compositores de referência da música sacra renascentista, proporcionando ao público um percurso pelo património musical polifónico europeu. A iniciativa é promovida pela Associação…"
+  description_en: "The Recolhimento de São Gonçalo, in Angra do Heroísmo, hosts, on Saturday, 31 October 2026, at 18:00, the concert «Vaide Honorandus Est», performed by the Musurgia Ensemble, under the musical direction of João Francisco Távora. The programme brings together works by Duarte Lobo, Manuel Cardoso and Giovanni Pierluigi da Palestrina, reference composers of Renaissance sacred music, offering the public a journey through the European polyphonic musical heritage. The initiative is promoted by the Association…"
   source_url: https://angradoheroismo.pt/evento/concerto-vaide-honorandus-est/
   source_uid: "2008@angradoheroismo.pt"
   tags:
@@ -11916,11 +11905,13 @@ Come join us and support our festivities!"
   id: 5cb6beb4-8fe5-4da4-a7af-29040ca319a0
 - date: 2026-11-07
   name: "Danças Tradicionais do Mundo com Miguel Lopes"
+  name_en: "Traditional Dances of the World with Miguel Lopes"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, Angra do Heroísmo, 9700-030"
   map_url: https://www.google.com/maps/search/?api=1&query=Casa%20do%20Sal%20Angra%20do%20Hero%C3%ADsmo
   time: "18:00"
   description: "💃🌍 Danças Tradicionais do Mundo regressam à Casa do Sal! Em novembro, Miguel Lopes convida-nos a descobrir algumas das danças tradicionais da Península Ibérica, numa oficina onde o movimento, a música e o convívio se encontram. Entre passos, ritmos e coreografias transmitidos de geração em geração, os participantes terão oportunidade de contactar com tradições populares que continuam bem vivas de ambos os lados da fronteira. Não é necessária experiência prévia, apenas curiosidade e vontade de…"
+  description_en: "💃🌍 Traditional Dances of the World return to the Casa do Sal! In November, Miguel Lopes invites us to discover some of the traditional dances of the Iberian Peninsula, in a workshop where movement, music and togetherness meet. Through steps, rhythms and choreographies passed down from generation to generation, participants will have the opportunity to encounter popular traditions that remain very much alive on both sides of the border. No previous experience is required, only curiosity and a willingness to…"
   source_url: https://angradoheroismo.pt/evento/dancas-tradicionais-do-mundo-com-miguel-lopes-2/
   source_uid: "2003@angradoheroismo.pt"
   tags:
@@ -11929,11 +11920,13 @@ Come join us and support our festivities!"
   id: 956d0f60-ac46-4332-a985-0ea37b00a04b
 - date: 2026-11-14
   name: "Concerto: Angra Convida Carolina Deslandes – Voz & Guitarra"
+  name_en: "Concert: Angra Convida Carolina Deslandes – Voz & Guitarra"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Angra do Heroísmo, 9700-130"
   map_url: https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20e%20de%20Congressos%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
   time: "21:30"
   description: "Angra Convida Carolina Deslandes – Voz & Guitarra O Centro Cultural e de Congressos de Angra do Heroísmo acolhe, nos dias 13 e 14 de novembro de 2026, sexta-feira e sábado, às 21h30, o espetáculo «Angra Convida Carolina Deslandes – Voz & Guitarra». Devido à elevada procura por parte do público, foi aberta uma sessão extra para o dia 13 de novembro. Em formato intimista, voz e guitarra, Carolina Deslandes apresenta algumas das canções mais marcantes da música portuguesa contemporânea,…"
+  description_en: "Angra Convida Carolina Deslandes – Voz & Guitarra The Cultural and Congress Centre of Angra do Heroísmo hosts, on Friday and Saturday, 13 and 14 November 2026, at 21:30, the show «Angra Convida Carolina Deslandes – Voz & Guitarra». Due to high demand from the public, an extra session was opened for 13 November. In an intimate format, voice and guitar, Carolina Deslandes presents some of the most striking songs of contemporary Portuguese music,…"
   source_url: https://angradoheroismo.pt/evento/concerto-angra-convida-carolina-deslandes-voz-guitarra/
   source_uid: "1498@angradoheroismo.pt"
   tags:
@@ -11943,10 +11936,12 @@ Come join us and support our festivities!"
   locality: angra
 - date: 2026-11-27
   name: "Festival Fado Atlântico"
+  name_en: "Fado Atlântico Festival"
   venue: Igreja do Regimento de Guarnição N.º1
   map_url: https://www.google.com/maps/search/?api=1&query=Igreja%20do%20Regimento%20de%20Guarni%C3%A7%C3%A3o%20N.%C2%BA1%20Angra%20do%20Hero%C3%ADsmo
   time: "21:30"
   description: "A Igreja do Regimento de Guarnição N.º 1, no Monte Brasil, acolhe, no dia 27 de novembro de 2026, sexta-feira, às 21h30, mais uma edição do Festival Fado Atlântico. O concerto tem como protagonista Cláudia Picado, contando ainda com a participação dos fadistas convidados Fábio Ourique, Lisele Silva, Nélia Martins, Américo Roque, André Gonçalves, Tiago Azevedo, Vera Brasil, Guida Lima e Susana Lemos. Os intérpretes serão acompanhados pelos músicos Evandro Meneses, Paulo Cunha e Pedro Morais,…"
+  description_en: "The Church of the Garrison Regiment No. 1, in Monte Brasil, hosts, on Friday, 27 November 2026, at 21:30, another edition of the Fado Atlântico Festival. The concert stars Cláudia Picado, and also features the invited fado singers Fábio Ourique, Lisele Silva, Nélia Martins, Américo Roque, André Gonçalves, Tiago Azevedo, Vera Brasil, Guida Lima and Susana Lemos. The performers will be accompanied by musicians Evandro Meneses, Paulo Cunha and Pedro Morais,…"
   source_url: https://angradoheroismo.pt/evento/festival-fado-atlantico/
   source_uid: "2009@angradoheroismo.pt"
   tags:
@@ -11955,11 +11950,13 @@ Come join us and support our festivities!"
   id: b22b0460-534b-4774-8433-901b919cb27c
 - date: 2027-01-29
   name: "Azores GameFest"
+  name_en: "Azores GameFest"
   venue: Parque Multissetorial da Ilha Terceira
   address: "Vinha Brava, Angra do Heroísmo, 9700-240"
   map_url: https://www.google.com/maps/search/?api=1&query=Parque%20Multissetorial%20da%20Ilha%20Terceira%20Angra%20do%20Hero%C3%ADsmo
   time: "10:00"
   description: "O Azores GameFest, um dos maiores eventos de Gaming e Esports dos Açores regressa à Ilha Terceira, no Pavilhão Multiusos do Parque Multissetorial, entre os dias 29 e 31 de janeiro e promete novas áreas, torneios, convidados, workshops e painéis com muitas novidades e conteúdos dedicados aos fãs do gaming mas também para toda a família."
+  description_en: "The Azores GameFest, one of the largest Gaming and Esports events in the Azores, returns to Terceira Island, at the Multi-Use Pavilion of the Parque Multissetorial, between 29 and 31 January, and promises new areas, tournaments, guests, workshops and panels with many novelties and content dedicated to gaming fans but also for the whole family."
   source_url: https://angradoheroismo.pt/evento/azores-gamefest/
   source_uid: "1937@angradoheroismo.pt"
 
@@ -11968,16 +11965,19 @@ Come join us and support our festivities!"
 # Auto-ingested from Ticketline (2026-11-01)
 - date: 2026-11-05
   name: "O VEREDITO SOCIAL"
+  name_en: "THE SOCIAL VERDICT"
   venue: C.C.C. Angra Do Heroísmo - Pequeno Auditório
   map_url: https://www.google.com/maps/search/?api=1&query=C.C.C.%20Angra%20Do%20Hero%C3%ADsmo%20-%20Pequeno%20Audit%C3%B3rio%20Angra%20do%20Hero%C3%ADsmo
   time: "21:00"
   description: "Duas décadas após a fundação do Facebook, a plataforma tornou-se um gigante que influencia a vida das pessoas e os governos de todo o mundo. No centro da história está uma pergunta que marca o nosso tempo: o que acontece quando a atenção humana se torna o bem mais valioso da sociedade? \"O Veredito Social\" acompanha a relação de confiança entre Frances Haugen, antiga engenheira do Facebook, e Jeff Horwitz, jornalista do Wall Street Journal, que se unem para revelar os segredos mais bem guardados…"
+  description_en: "Two decades after the founding of Facebook, the platform has become a giant that influences people's lives and the governments of the whole world. At the centre of the story is a question that marks our time: what happens when human attention becomes the most valuable asset in society? \"The Social Verdict\" follows the relationship of trust between Frances Haugen, a former Facebook engineer, and Jeff Horwitz, a journalist at the Wall Street Journal, who join forces to reveal the best-kept secrets…"
   source_url: https://www.ticketline.pt/evento/o-veredito-social-108929
   source_uid: "108929@ticketline.pt"
 
   id: 1f1871ae-30e1-4543-843d-75f5495c635f
 - date: 2026-11-07
   name: "ENQUANTO HOUVER QUEM CANTE"
+  name_en: "AS LONG AS THERE IS SOMEONE TO SING"
   venue: Teatro Angrense
   address: Angra do Heroísmo
   map_url: https://www.google.com/maps/search/?api=1&query=Teatro%20Angrense%20Angra%20do%20Hero%C3%ADsmo
@@ -11988,44 +11988,53 @@ Come join us and support our festivities!"
   id: bdca5310-c8fc-4ed8-a26d-0520dad67868
 - date: 2026-11-12
   name: "STREET FIGHTER"
+  name_en: "STREET FIGHTER"
   venue: C.C.C. Angra Do Heroísmo - Pequeno Auditório
   map_url: https://www.google.com/maps/search/?api=1&query=C.C.C.%20Angra%20Do%20Hero%C3%ADsmo%20-%20Pequeno%20Audit%C3%B3rio%20Angra%20do%20Hero%C3%ADsmo
   time: "21:00"
   description: "A narrativa decorre em 1993, onde Ryu, interpretado por Andrew Koji, e Ken Masters, a cargo de Noah Centineo, voltam a cruzar destinos ao serem recrutados pela enigmática Chun-Li, interpretada por Callina Liang. Juntos, enfrentam o torneio \"World Warrior\", uma competição feroz que esconde uma conspiração letal e arrisca colocá-los frente a frente tanto como adversários quanto diante dos seus próprios fantasmas."
+  description_en: "The story takes place in 1993, where Ryu, played by Andrew Koji, and Ken Masters, played by Noah Centineo, cross destinies again when they are recruited by the enigmatic Chun-Li, played by Callina Liang. Together, they face the \"World Warrior\" tournament, a fierce competition that hides a deadly conspiracy and risks putting them face to face both as adversaries and before their own demons."
   source_url: https://www.ticketline.pt/evento/street-fighter-108930
   source_uid: "108930@ticketline.pt"
 
   id: b8e21ad3-a3b3-4a73-a9e7-ba6de099f77f
 - date: 2026-11-13
   name: "HUGO SOUSA - AQUI ENTRE NÓS"
+  name_en: "HUGO SOUSA - HERE BETWEEN US"
   venue: Ilha Terceira
   map_url: https://www.google.com/maps/search/?api=1&query=Ilha%20Terceira%20Angra%20do%20Hero%C3%ADsmo
   description: "“Aqui Entre Nós” é um espetáculo de stand-up onde Hugo Sousa abre as portas da sua vida sem filtros. Entre histórias de família, episódios caricatos do dia a dia e momentos inspirados nas suas próprias experiências, Hugo transforma situações comuns em gargalhadas inesperadas. Com humor próximo, espontâneo e cheio de identificação, “Aqui Entre Nós” leva o público numa viagem por vários temas que fazem parte da vida de todos nós — relações, memórias, manias, diferenças geracionais e aquelas…"
+  description_en: "\"Here Between Us\" is a stand-up show in which Hugo Sousa opens the doors of his life without filters. Between family stories, comical everyday episodes and moments inspired by his own experiences, Hugo turns ordinary situations into unexpected laughter. With close, spontaneous humour full of relatability, \"Here Between Us\" takes the audience on a journey through several themes that are part of all our lives — relationships, memories, quirks, generational differences and those…"
   source_url: https://www.ticketline.pt/evento/hugo-sousa-aqui-entre-nos-105639
   source_uid: "105639@ticketline.pt"
 
   id: b13b5cef-9955-419a-9954-8680e606b082
 - date: 2026-11-14
   name: "A ILHA ESQUECIDA"
+  name_en: "THE FORGOTTEN ISLAND"
   venue: C.C.C. Angra Do Heroísmo - Pequeno Auditório
   map_url: https://www.google.com/maps/search/?api=1&query=C.C.C.%20Angra%20Do%20Hero%C3%ADsmo%20-%20Pequeno%20Audit%C3%B3rio%20Angra%20do%20Hero%C3%ADsmo
   time: "15:00"
   description: "Jo e Raissa encontram-se presas no mundo fantástico da ilha esquecida de Nakali. Descobrem que a única forma de regressarem a casa poderá custar-lhes uma vida inteira de memórias e emoções."
+  description_en: "Jo and Raissa find themselves trapped in the fantastic world of the forgotten island of Nakali. They discover that the only way to return home may cost them a lifetime of memories and emotions."
   source_url: https://www.ticketline.pt/evento/a-ilha-esquecida-108934
   source_uid: "108934@ticketline.pt"
 
   id: 8bc8b0d6-3793-4759-a9f1-b957141b6c3f
 - date: 2026-11-20
   name: "SONS DA MACARONÉSIA 2026"
+  name_en: "SONS DA MACARONÉSIA 2026"
   venue: Ilha Terceira
   map_url: https://www.google.com/maps/search/?api=1&query=Ilha%20Terceira%20Angra%20do%20Hero%C3%ADsmo
   description: "O Centro Cultural e de Congressos de Angra do Heroísmo acolhe, nos dias 20 e 21 de novembro de 2026, o «Sons da Macaronésia – Festival de Música Atlântica», um evento que promove o encontro entre diferentes expressões musicais dos arquipélagos da Macaronésia. Promovido pela Fraterune, o festival reúne artistas dos Açores, Madeira, Canárias e Cabo Verde, proporcionando ao público uma experiência cultural marcada pela diversidade, pela partilha e pela valorização das identidades atlânticas.…"
+  description_en: "The Cultural and Congress Centre of Angra do Heroísmo hosts, on 20 and 21 November 2026, the «Sons da Macaronésia – Festival de Música Atlântica», an event that promotes the meeting of different musical expressions from the archipelagos of Macaronesia. Promoted by Fraterune, the festival brings together artists from the Azores, Madeira, the Canaries and Cape Verde, offering the public a cultural experience marked by diversity, sharing and the appreciation of Atlantic identities.…"
   source_url: https://www.ticketline.pt/evento/sons-da-macaronesia-2026-108293
   source_uid: "108293@ticketline.pt"
 
   id: 9b665388-9f36-45fd-be81-b81ddcbea648
 - date: 2026-11-22
   name: "FLORESTA MÁGICA"
+  name_en: "MAGIC FOREST"
   venue: Auditório Ramo Grande - Açores
   map_url: https://www.google.com/maps/search/?api=1&query=Audit%C3%B3rio%20Ramo%20Grande%20-%20A%C3%A7ores%20Angra%20do%20Hero%C3%ADsmo
   time: "15:00"
@@ -12036,11 +12045,13 @@ Come join us and support our festivities!"
 # Auto-ingested from CMAH (2026-11-02)
 - date: 2026-11-02
   name: "Documento do Mês | As folhas que guardam"
+  name_en: "Document of the Month | As folhas que guardam"
   venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
   address: "Rua do Morrão, n.º 42, Angra do Heroísmo, 9700-054"
   map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca%20P%C3%BAblica%20e%20Arquivo%20Regional%20Lu%C3%ADs%20da%20Silva%20Ribeiro%20Angra%20do%20Hero%C3%ADsmo
   time: "09:00"
   description: "Esta exposição do Documento do Mês, intitulada As folhas que guardam, decorre durante o mês de novembro e dezembro de 2026. Esta é uma viagem visual, artística e técnica sobre as folhas de guarda. Nesta mostra pode perceber o que são, para que servem, a sua importância, bem como, observar as suas inúmeras variações e decorações. As folhas que guardam têm uma função funcional, estrutural, e, muitas vezes, decorativa. Estas decorações não só enriquecem visualmente a obra, como também constituem…"
+  description_en: "This Document of the Month exhibition, titled As folhas que guardam, runs during the months of November and December 2026. It is a visual, artistic and technical journey about endpapers. In this show you can understand what they are, what they are used for and their importance, as well as observe their numerous variations and decorations. Endpapers have a functional, structural and, often, decorative role. These decorations not only enrich the work visually, they also constitute…"
   source_url: https://angradoheroismo.pt/evento/documento-do-mes-as-folhas-que-guardam/
   source_uid: "2010@angradoheroismo.pt"
   tags:
@@ -12050,11 +12061,13 @@ Come join us and support our festivities!"
   locality: angra
 - date: 2026-11-11
   name: "Dia de São Martinho"
+  name_en: "Saint Martin's Day"
   venue: Praça Velha
   address: "Praça Velha, Angra do Heroísmo, 9701-857"
   map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
   time: "12:00"
   description: "A Praça Velha, em Angra do Heroísmo, acolhe, no dia 11 de novembro de 2026, quarta-feira, entre as 12h00 e as 17h00, a celebração do «Dia de São Martinho». O programa inclui os concertos de Fábio Ourique, às 12h30, e da banda Bahia Groove, às 15h00, proporcionando uma tarde de animação musical em pleno centro histórico da cidade. A iniciativa conta ainda com barraquinhas de comes e bebes e espaços dedicados ao artesanato, promovendo o convívio e a dinamização do espaço público. Entrada livre."
+  description_en: "Praça Velha, in Angra do Heroísmo, hosts, on Wednesday, 11 November 2026, between 12:00 and 17:00, the celebration of Saint Martin's Day. The programme includes concerts by Fábio Ourique, at 12:30, and by the band Bahia Groove, at 15:00, providing an afternoon of musical entertainment in the heart of the city's historic centre. The initiative also features food and drink stalls and spaces dedicated to crafts, promoting togetherness and the revitalisation of public space. Free admission."
   source_url: https://angradoheroismo.pt/evento/dia-de-sao-martinho/
   source_uid: "2011@angradoheroismo.pt"
   tags:
@@ -12066,14 +12079,34 @@ Come join us and support our festivities!"
 # Auto-ingested from Ticketline (2026-11-03)
 - date: 2026-11-19
   name: "CLAYFACE"
+  name_en: "CLAYFACE"
   venue: C.C.C. Angra Do Heroísmo - Pequeno Auditório
   map_url: https://www.google.com/maps/search/?api=1&query=C.C.C.%20Angra%20Do%20Hero%C3%ADsmo%20-%20Pequeno%20Audit%C3%B3rio%20Angra%20do%20Hero%C3%ADsmo
   time: "21:00"
   description: "Um conto de terror de Hollywood centrado num ator de filmes de série B que se injeta com uma substância e descobre que é capaz de moldar rosto e corpo, tornando-se numa verdadeira peça de argila ambulante."
+  description_en: "A Hollywood horror tale centred on a B-movie actor who injects himself with a substance and discovers that he is able to shape face and body, becoming a true walking piece of clay."
   source_url: https://www.ticketline.pt/evento/clayface-108939
   source_uid: "108939@ticketline.pt"
 
   id: c97afa40-b40d-45bc-89c5-d859e2e03c34
+
+- name: "ESCAMA: de cobra 4#"
+  name_en: "ESCAMA: de cobra 4#"
+  name_pt: "ESCAMA: de cobra 4#"
+  date: 2026-11-21
+  time: "22:00"
+  venue: "Recreio dos Artistas"
+  address: "Rua Recreio dos Artistas 9700-160 Angra Do Heroísmo Portugal"
+  map_url: "https://maps.app.goo.gl/uWxur7eM4r8tKKBx6"
+  description: "**ESCAMA: de cobra 4#** The snake sheds its skin, but never loses its venom! On **21 November**, we return to Recreio dos Artistas with three musical acts stepping outside the usual circuit. **PARPAR — Lisbon**   Free jazz meets noise rock. Saxophone, drums and raw sonic energy. **ANDREIA DO Ó — DJ SET**   After 10 years with the Wild do Ó project, she returns to the decks solo, bringing her international experience to a new chapter. **MUNAY — DJ SET**   A journey through different geographies and sounds. 21 November · 10 PM   Recreio dos Artistas · Angra do Heroísmo Tickets: €6 AAIP members  €8 daily membership **Outside the circuit. Within the island.**"
+  description_en: "**ESCAMA: de cobra 4#** The snake sheds its skin, but never loses its venom! On **21 November**, we return to Recreio dos Artistas with three musical acts stepping outside the usual circuit. **PARPAR — Lisbon**   Free jazz meets noise rock. Saxophone, drums and raw sonic energy. **ANDREIA DO Ó — DJ SET**   After 10 years with the Wild do Ó project, she returns to the decks solo, bringing her international experience to a new chapter. **MUNAY — DJ SET**   A journey through different geographies and sounds. 21 November · 10 PM   Recreio dos Artistas · Angra do Heroísmo Tickets: €6 AAIP members  €8 daily membership **Outside the circuit. Within the island.**"
+  description_pt: "**ESCAMA: de cobra 4#** A cobra muda de pele, mas não perde o veneno! A 21 de novembro, regressamos ao Recreio dos Artistas com três propostas musicais fora do circuito habitual. **PARPAR — Lisboa**   Free jazz e noise rock. Saxofone, bateria e pancada sonora sem rede. **ANDREIA DO Ó — DJ SET**   Depois de 10 anos no projeto Wild do Ó, regressa aos pratos a solo, trazendo o seu percurso internacional. **MUNAY — DJ SET**   Uma viagem por diferentes geografias e sonoridades. 21 de novembro · 22h   Recreio dos Artistas · Angra do Heroísmo **Entrada:** 6 € sócios AAIP · 8 € sócio diário **Fora do circuito. Dentro da ilha.**"
+  instagram: "https://www.instagram.com/p/DfcotKCt-ce/?vrfl=Mjc5czk0dXF0N2ty"
+  tags:
+    - live-music
+    - dance
+  id: c29ddc14-d361-4c48-b6b4-04b2e13747df
+  locality: angra
 
 # Auto-ingested from CMAH (2026-11-13)
 - date: 2026-11-13
