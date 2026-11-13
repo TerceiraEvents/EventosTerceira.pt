@@ -61,9 +61,12 @@ jobs:
             This PR was opened by `.github/workflows/ingest-touradas.yml`.
             Each junta page is scraped for date patterns paired with
             tourada/bezerrada keywords; matches are emitted as
-            `bullfighting` + `outdoor` events. **Review carefully** — the
-            scrape is keyword-based and may pick up announcements that
-            aren't actual scheduled dates.
+            `bullfighting` + `outdoor` events.
+            `.github/workflows/merge-ingest-prs.yml` squash-merges this PR
+            once the three validation gates pass on its head commit; if a
+            gate fails, the PR stays open with a comment linking the failed
+            runs. The scrape is keyword-based and may pick up announcements
+            that aren't actual scheduled dates.
 
             **Coverage:** Configured in `scripts/ingest_touradas.py` under
             `JUNTA_SOURCES`. To add a parish, append its calendar URL +

@@ -5,15 +5,20 @@ on:
     paths:
       - "scripts/ingest_*.py"
       - "scripts/tests/**"
+      - "scripts/merge_ingest_prs.py"
       - ".github/workflows/ingest-*.yml"
+      - ".github/workflows/merge-ingest-prs.yml"
       - ".github/workflows/validate-ingesters.yml"
   push:
     branches: [main]
     paths:
       - "scripts/ingest_*.py"
       - "scripts/tests/**"
+      - "scripts/merge_ingest_prs.py"
       - ".github/workflows/ingest-*.yml"
+      - ".github/workflows/merge-ingest-prs.yml"
       - ".github/workflows/validate-ingesters.yml"
+  workflow_dispatch: {}
 
 permissions:
   contents: read
