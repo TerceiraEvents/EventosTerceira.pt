@@ -1,0 +1,5 @@
+{
+  "exceptions": {
+    ".py": "This repository declares no Python formatter; scripts/*.py keep their existing hand-formatted style, and the pre-push Ruff lint (E4,E7,E9,F) still applies."
+  }
+}
