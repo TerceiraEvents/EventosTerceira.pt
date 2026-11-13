@@ -167,3 +167,25 @@ test('actual card artwork uses a reserved uncropped frame and rejects executable
  const rejected=render({records:[exhibition],cardImage:'javascript:alert(1)'});
  assert.equal(rejected.all().filter(n=>n.attrs['data-card-artwork']).length,0);
 });
+
+test('unknown shared id renders the unavailable state instead of another record',()=>{
+ for(const lang of ['en','pt']) {
+  const page=render({lang,records:[exhibition],id:'missing-event'});
+  const texts=page.detail.children.map(n=>n.textContent);
+  assert(texts.includes(lang==='pt'?'Evento indisponível':'Event unavailable'));
+  assert(texts.includes(lang==='pt'?'Este link não corresponde a um registo publicado.':'This link does not match a published record. It has not opened another event.'));
+  const link=page.all().find(n=>n.textContent===(lang==='pt'?'Eventos':'Events'));
+  assert(link);
+  assert.equal(link.href,lang==='pt'?'https://eventosterceira.pt/pt/special/?range=all':'https://eventosterceira.pt/special/?range=all');
+  assert(!texts.includes(lang==='pt'?'Exposição':'Exhibition'));
+ }
+});
+test('a past event reports that it has ended while a future one does not',()=>{
+ for(const lang of ['en','pt']) {
+  const ended=lang==='pt'?'Este evento terminou.':'This event has ended.';
+  const past=render({lang,records:[{id:'old-event',kind:'event',date:'2020-01-01',name:'Past event'}],id:'old-event'});
+  assert(past.detail.children.map(n=>n.textContent).includes(ended));
+  const future=render({lang,records:[{id:'new-event',kind:'event',date:'2099-01-01',name:'Future event'}],id:'new-event'});
+  assert(!future.detail.children.map(n=>n.textContent).includes(ended));
+ }
+});

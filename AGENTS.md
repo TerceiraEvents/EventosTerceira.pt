@@ -76,6 +76,39 @@ introduce jargon without a demonstrated benefit.
   to satisfy a correction about recurring schedules. Distinguish a user
   correction from fresh organizer-source verification.
 
+## Event ingestion pipeline
+
+- Seven scheduled workflows (`.github/workflows/ingest-*.yml`, scripts
+  `scripts/ingest_*.py`) read CMAH, CMPV, Museu de Angra, Ticketline,
+  parish touradas, Visit Azores and Azores What's On. They append new
+  events to the end of `_data/special_events.yml`, deduplicating by
+  `source_uid` and same-date name similarity. Each one opens or refreshes
+  an `Auto-ingest: ...` PR on `auto/<x>-ingest` and fails loudly when its
+  source is degraded (`scripts/ingest_health.py`).
+- Three gates validate every change: `validate event data`
+  (`validate-events.yml`, data paths only), `validate templates and
+  structured data` (`validate-templates.yml`, every PR) and `validate
+  event ingesters` (`validate-ingesters.yml`, ingester and test paths).
+  Each also accepts `workflow_dispatch`.
+- GITHUB_TOKEN opens the ingest PRs, so their `pull_request` gate runs wait
+  for approval. `merge-ingest-prs.yml` (`scripts/merge_ingest_prs.py`) runs
+  after each ingest workflow and every three hours. For each bot-authored
+  ingest PR that touches only `_data/special_events.yml`, it does one of
+  the following:
+  - When main has changed files since the branch point, it re-runs the
+    ingest workflow, which regenerates the branch.
+  - Otherwise it dispatches the three gates on the head commit. When all
+    three pass, it squash-merges with `--match-head-commit` and then
+    dispatches the gates on main.
+  - When a gate fails, the PR stays open with one comment per head commit
+    that links the failed runs.
+- Regeneration replaces commits pushed to an `auto/*-ingest` branch. Merge
+  hand-fixed ingest PRs before the next run of their ingest workflow.
+- `scripts/tests/test_event_locales.py` requires English and Portuguese
+  titles and descriptions. Ingesters publish the source's Portuguese only,
+  so their PRs merge once someone adds the English fields.
+- `Gemfile.lock` pins the Ruby 3.3 bundle (github-pages 233, Jekyll 3.10).
+
 ## Verification boundaries
 
 - The current nine-issue completion scope prioritizes readable layouts,

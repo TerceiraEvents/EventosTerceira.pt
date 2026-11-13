@@ -6,7 +6,7 @@ name: ingest Ticketline events
 # Auditório Ramo Grande in Praia da Vitória — the last of which CMAH's
 # municipal feed doesn't cover.
 #
-# Opens a PR for human review, same pattern as ingest-cmah.yml.
+# Opens a PR that merge-ingest-prs.yml merges once the gates pass.
 #
 # See scripts/ingest_ticketline.py for dedup and parsing logic.
 
@@ -64,8 +64,10 @@ jobs:
             (Ilha Terceira district filter).
 
             This PR was opened by `.github/workflows/ingest-ticketline.yml`.
-            Review the added events, edit descriptions/tags/venues as needed,
-            then merge.
+            `.github/workflows/merge-ingest-prs.yml` squash-merges this PR
+            once the three validation gates pass on its head commit; if a
+            gate fails, the PR stays open with a comment linking the failed
+            runs.
 
             **Coverage:** Teatro Angrense, CCCAH (both auditoriums), and the
             Auditório Ramo Grande in Praia da Vitória. The Praia events are

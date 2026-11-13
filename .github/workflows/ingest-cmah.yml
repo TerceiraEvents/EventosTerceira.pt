@@ -2,8 +2,8 @@ name: ingest CMAH events
 
 # Daily ingestion of events from the Câmara Municipal de Angra do Heroísmo
 # iCal feed (https://angradoheroismo.pt/events.ics) into
-# _data/special_events.yml. Opens a pull request with any new events for
-# human review before they land on main.
+# _data/special_events.yml. Opens a PR that merge-ingest-prs.yml merges
+# once the gates pass.
 #
 # See scripts/ingest_cmah.py for dedup and parsing logic.
 
@@ -56,9 +56,11 @@ jobs:
           body: |
             Automated ingestion from https://angradoheroismo.pt/events.ics
 
-            This PR was opened by `.github/workflows/ingest-cmah.yml`. Review
-            the added events, edit descriptions/tags/venues as needed, then
-            merge.
+            This PR was opened by `.github/workflows/ingest-cmah.yml`.
+            `.github/workflows/merge-ingest-prs.yml` squash-merges this PR
+            once the three validation gates pass on its head commit; if a
+            gate fails, the PR stays open with a comment linking the failed
+            runs.
 
             **Known limitations:**
             - Dedup matches on CMAH `source_uid` and word-level name

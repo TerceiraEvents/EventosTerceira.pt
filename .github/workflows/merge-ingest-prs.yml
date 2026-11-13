@@ -1,0 +1,46 @@
+name: merge ingest PRs
+
+# Dispatches the three validation gates on open ingest PR branches (their
+# pull_request runs wait for approval because GITHUB_TOKEN opened them) and
+# squash-merges the PRs whose head commit passes. See
+# scripts/merge_ingest_prs.py.
+
+on:
+  workflow_run:
+    workflows:
+      - ingest CMAH events
+      - ingest CMPV events
+      - ingest Museu de Angra events
+      - ingest Ticketline events
+      - ingest touradas calendar
+      - ingest Visit Azores events
+      - ingest Whatson Azores events
+    types: [completed]
+  schedule:
+    - cron: "45 */3 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: merge-ingest-prs
+  cancel-in-progress: false
+
+permissions:
+  actions: write
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Gate and squash-merge open ingest PRs
+        run: python scripts/merge_ingest_prs.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}

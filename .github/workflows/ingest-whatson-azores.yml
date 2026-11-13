@@ -64,8 +64,10 @@ jobs:
             Automated ingestion from https://whatson.azores.gov.pt/
 
             This PR was opened by `.github/workflows/ingest-whatson-azores.yml`.
-            Review the added events, edit descriptions/tags as needed, then
-            merge.
+            `.github/workflows/merge-ingest-prs.yml` squash-merges this PR
+            once the three validation gates pass on its head commit; if a
+            gate fails, the PR stays open with a comment linking the failed
+            runs.
 
             **Coverage:** Regional government events portal, filtered to
             records explicitly assigned to Terceira. Catches Festivals (Sanjoaninas,
