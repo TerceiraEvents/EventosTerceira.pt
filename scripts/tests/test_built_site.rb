@@ -231,11 +231,13 @@ html_pages.each do |path|
   # Title
   err(errors, "#{rel}: missing <title>") unless html.match?(/<title>[^<]+<\/title>/)
 
-  # Per-page meta — use a forgiving regex (jekyll-seo-tag emits in
-  # property=… content=… order; some other tools use the reverse)
+  # Per-page meta. Attribute order varies (jekyll-seo-tag emits
+  # `<meta name="twitter:description" property="og:description" ...>`),
+  # so match the property and a non-empty content anywhere in one tag.
   REQUIRED_META.each do |prop|
-    has = html.match?(/<meta\s+property=["']#{Regexp.escape(prop)}["']\s+content=["'][^"']+["']/) ||
-          html.match?(/<meta\s+content=["'][^"']+["']\s+property=["']#{Regexp.escape(prop)}["']/)
+    has = html.scan(/<meta\b[^>]*>/i).any? do |tag|
+      tag.match?(/\bproperty=["']#{Regexp.escape(prop)}["']/) && tag.match?(/\bcontent=["'][^"']+["']/)
+    end
     err(errors, "#{rel}: missing <meta property=\"#{prop}\">") unless has
   end
 
