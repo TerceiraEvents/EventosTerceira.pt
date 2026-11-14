@@ -1,3 +1,7 @@
 [default]
 # `lang: portugese` is a deliberate example of a bad front-matter value.
 extend-ignore-re = ["lang: portugese"]
+
+[default.extend-words]
+# Portuguese word in the venue name "Escola Profissional da Praia da Vitória".
+Profissional = "Profissional"
