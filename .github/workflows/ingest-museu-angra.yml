@@ -1,6 +1,6 @@
 name: ingest Museu de Angra events
 
-# Daily ingestion of events from the Museu de Angra do Heroísmo
+# Ingestion of events from the Museu de Angra do Heroísmo
 # (https://museu-angra.cultura.azores.gov.pt/) into _data/special_events.yml.
 # Reads the published event and exhibition archives and detail pages.
 # Source failures fail the job and attach a health report for review.
@@ -8,11 +8,10 @@ name: ingest Museu de Angra events
 # See scripts/ingest_museu_angra.py for parsing logic.
 
 on:
-  schedule:
-    # 07:00 UTC — staggered 30 min after Ticketline's 06:30 UTC ingest so
-    # the Tribe events have a chance to dedup against any same-day cinema
-    # cross-listings.
-    - cron: "0 7 * * *"
+  # Manual runs only. The source site answers every page except robots.txt
+  # with a Cloudflare managed challenge that only an interactive browser can
+  # pass, so a scheduled run would fail with HTTP 403. Add a `schedule:`
+  # trigger once the challenge clears for the declared user agent.
   workflow_dispatch: {}
 
 concurrency:
