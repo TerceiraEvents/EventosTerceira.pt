@@ -19,12 +19,16 @@ different dates stay distinct.
 
 Any incomplete coverage raises ``SourceError``: HTTP failure,
 unrecognizable pages, broken detail pages, genuine cards with invalid
-dates or unverified venues, detail dates disagreeing with the listing,
-contradictory duplicate ids, links leaving the CMPV agenda route, and
-pagination loops or caps. Every event the calendar widget advertises
-must resolve to a listing card. A recognized agenda that lists nothing — with
-the calendar and pagination chrome present and no unconsumed agenda
-markup — succeeds with no events.
+dates, detail dates disagreeing with the listing, contradictory duplicate
+ids, links leaving the CMPV agenda route, and pagination loops or caps.
+Every event the calendar widget advertises must resolve to a listing card.
+A recognized agenda that lists nothing — with the calendar and pagination
+chrome present and no unconsumed agenda markup — succeeds with no events.
+
+A detail page that names no venue line (for example, a ceremony whose venue
+appears only inside a sentence) is skipped with a warning and counted in
+``health.rejected``: the venue is never guessed. When most in-window events
+lack a venue line, the venue markup has probably changed and the run raises.
 """
 from __future__ import annotations
 
@@ -46,6 +50,10 @@ AGENDA_HOST = urllib.parse.urlparse(BASE_URL).hostname
 MAX_PAGES = 10
 
 DEFAULT_LOCALITY = "Praia da Vitória"
+
+# Venue lines are names, optionally followed by an address; longer lines are
+# description sentences that merely mention a venue word.
+MAX_VENUE_CHARS = 100
 
 EVENT_ID_RE = re.compile(r"[?&]id=(\d+)")
 
@@ -297,9 +305,15 @@ def _parse_detail(payload: bytes, url: str) -> tuple:
     return titles[0], lines
 
 
+def _strip_trailing_punctuation(text: str) -> str:
+    return re.sub(r"[.;]+$", "", text)
+
+
 def _find_venue(lines: list) -> str:
-    """Return the first explicit venue line, skipping sales and metadata lines."""
+    """Return the first explicit venue line, skipping sales, metadata and prose."""
     for line in lines:
+        if len(line) > MAX_VENUE_CHARS:
+            continue
         if TICKET_RE.search(line):
             continue
         if ORGANIZER_RE.match(line):
@@ -307,7 +321,7 @@ def _find_venue(lines: list) -> str:
         if METADATA_RE.match(line):
             continue
         if VENUE_RE.search(line):
-            return _collapse(line)
+            return _strip_trailing_punctuation(_collapse(line))
     return ""
 
 
@@ -358,7 +372,7 @@ def _is_date_or_time_line(line: str, year: int) -> bool:
 def _build_description(title: str, venue: str, lines: list, year: int) -> str:
     kept = []
     for line in lines:
-        if line == title or line == venue:
+        if line == title or _strip_trailing_punctuation(line) == venue:
             continue
         if TICKET_RE.search(line):
             continue
@@ -373,7 +387,8 @@ def discover_events(today: dt.date, lookahead: dt.date, health: SourceHealth) ->
 
     ``health.listed`` counts unique card ids seen, ``health.local`` the
     in-window ids sent for detail resolution, ``health.parsed`` the
-    events returned, and ``health.rejected`` the bullfighting exclusions.
+    events returned, and ``health.rejected`` the bullfighting exclusions and
+    the events skipped for lacking a venue line.
     """
     seen: dict = {}
     advertised: set = set()
@@ -424,6 +439,7 @@ def discover_events(today: dt.date, lookahead: dt.date, health: SourceHealth) ->
         return []
 
     events: list = []
+    no_venue: list = []
     for event_id, (raw_name, date_text) in seen.items():
         name = _collapse(raw_name)
         if not name:
@@ -445,7 +461,10 @@ def discover_events(today: dt.date, lookahead: dt.date, health: SourceHealth) ->
         title, lines = _parse_detail(payload, url)
         venue = _find_venue(lines)
         if not venue:
-            raise SourceError(f"{title!r}: detail verifies no venue")
+            no_venue.append(title)
+            health.rejected += 1
+            health.warnings.append(f"{title}: detail names no venue line, skipped ({url})")
+            continue
         detail_session = _detail_range(lines, start.year)
         if detail_session is not None and detail_session != (start, end):
             raise SourceError(
@@ -473,6 +492,12 @@ def discover_events(today: dt.date, lookahead: dt.date, health: SourceHealth) ->
             event["time"] = found_time
         events.append(event)
         health.parsed += 1
+    if len(no_venue) * 2 > health.parsed + len(no_venue):
+        raise SourceError(
+            f"detail verifies no venue for {len(no_venue)} of "
+            f"{health.parsed + len(no_venue)} in-window events: "
+            + ", ".join(repr(title) for title in no_venue)
+        )
     return events
 
 

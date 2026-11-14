@@ -403,6 +403,56 @@ class DiscoverTests(unittest.TestCase):
         with self.assertRaises(SourceError):
             ingest_cmpv.discover_events(self.today, self.lookahead, health)
 
+    def mixed_venue_pages(self, second="detail_venue_after_prose.html"):
+        return {
+            ingest_cmpv.AGENDA_URL: fixture("agenda_venue_mixed.html"),
+            page_url(1): fixture("agenda_venue_mixed.html"),
+            detail_url("931"): fixture("detail_venue_in_prose.html"),
+            detail_url("932"): fixture(second),
+            detail_url("933"): fixture("detail_venue_plain.html"),
+        }
+
+    def test_event_without_venue_line_is_skipped_not_fatal(self):
+        events, health = self.discover(self.mixed_venue_pages())
+        self.assertEqual(
+            sorted(e["name"] for e in events),
+            ["Conversa no Auditório", "Espetáculo Familiar"],
+        )
+        self.assertEqual(health.local, 3)
+        self.assertEqual(health.parsed, 2)
+        self.assertEqual(health.rejected, 1)
+        self.assertEqual(len(health.warnings), 1)
+        self.assertIn("Cerimónia Comemorativa", health.warnings[0])
+        self.assertIn("no venue", health.warnings[0])
+
+    def test_description_sentence_is_not_a_venue(self):
+        _, lines = ingest_cmpv._parse_detail(
+            fixture("detail_venue_after_prose.html"), "detail_venue_after_prose"
+        )
+        self.assertEqual(ingest_cmpv._find_venue(lines), "Auditório do Ramo Grande")
+
+    def test_venue_line_is_not_repeated_in_description(self):
+        events, _ = self.discover(self.mixed_venue_pages())
+        family = [e for e in events if e["name"] == "Espetáculo Familiar"][0]
+        self.assertNotIn("Auditório do Ramo Grande", family["description"])
+
+    def test_majority_without_venue_raises(self):
+        pages = self.mixed_venue_pages(second="detail_venue_missing_2.html")
+        health = FakeHealth(pages)
+        with self.assertRaisesRegex(SourceError, "no venue"):
+            ingest_cmpv.discover_events(self.today, self.lookahead, health)
+
+    def test_every_event_without_venue_raises(self):
+        pages = {
+            ingest_cmpv.AGENDA_URL: fixture("agenda_venue_all_missing.html"),
+            page_url(1): fixture("agenda_venue_all_missing.html"),
+            detail_url("931"): fixture("detail_venue_in_prose.html"),
+            detail_url("934"): fixture("detail_venue_missing_2.html"),
+        }
+        health = FakeHealth(pages)
+        with self.assertRaisesRegex(SourceError, "no venue"):
+            ingest_cmpv.discover_events(self.today, self.lookahead, health)
+
     def test_detail_date_mismatch_raises(self):
         pages = {
             ingest_cmpv.AGENDA_URL: fixture("agenda_single.html"),

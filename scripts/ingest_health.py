@@ -58,6 +58,13 @@ class SourceHealth:
         try:
             with urllib.request.urlopen(request, timeout=30) as response:
                 content = response.read()
+        except urllib.error.HTTPError as exc:
+            if (exc.headers or {}).get("cf-mitigated") == "challenge":
+                raise SourceError(
+                    f"{url}: HTTP {exc.code}, answered with a Cloudflare managed challenge "
+                    "that only an interactive browser can pass; the ingester does not attempt it"
+                ) from exc
+            raise SourceError(f"{url}: {exc}") from exc
         except (urllib.error.URLError, TimeoutError, OSError) as exc:
             raise SourceError(f"{url}: {exc}") from exc
         self.pages += 1
