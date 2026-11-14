@@ -1,6 +1,8 @@
 [default.extend-identifiers]
 # Opaque id of the What's On agenda repeater (scripts/ingest_whatson_azores.py).
 c09Ov7jGKeOQKPn6 = "c09Ov7jGKeOQKPn6"
+# Opaque What's On record id inside two source_uid values in _data/special_events.yml.
+sgUE0m0nvHbY5pSL = "sgUE0m0nvHbY5pSL"
 
 [default]
 # `lang: portugese` is a deliberate example of a bad front-matter value.
@@ -9,3 +11,61 @@ extend-ignore-re = ["lang: portugese"]
 [default.extend-words]
 # Portuguese word in the venue name "Escola Profissional da Praia da Vitória".
 Profissional = "Profissional"
+
+# Portuguese words in _data/special_events.yml that are also English misspellings.
+# Scoped to that file so the rest of the repository keeps the default dictionary.
+[type.special-events]
+extend-glob = ["**/special_events.yml"]
+
+[type.special-events.extend-words]
+alternativos = "alternativos"
+anual = "anual"
+artistas = "artistas"
+atitude = "atitude"
+autor = "autor"
+claus = "claus"
+clientes = "clientes"
+compasso = "compasso"
+componente = "componente"
+compromisso = "compromisso"
+confirme = "confirme"
+constituem = "constituem"
+contextos = "contextos"
+contributo = "contributo"
+convento = "convento"
+curso = "curso"
+damon = "damon"
+dilemas = "dilemas"
+diplomacia = "diplomacia"
+envolve = "envolve"
+fase = "fase"
+feministas = "feministas"
+flor = "flor"
+funcional = "funcional"
+infantis = "infantis"
+inicial = "inicial"
+instituto = "instituto"
+internacional = "internacional"
+jornal = "jornal"
+lazer = "lazer"
+leve = "leve"
+limite = "limite"
+mata = "mata"
+momento = "momento"
+momentos = "momentos"
+monumentos = "monumentos"
+oficial = "oficial"
+participantes = "participantes"
+presentes = "presentes"
+programa = "programa"
+queres = "queres"
+regresso = "regresso"
+rute = "rute"
+sentimentos = "sentimentos"
+ser = "ser"
+som = "som"
+tema = "tema"
+tio = "tio"
+tradicional = "tradicional"
+transportar = "transportar"
+zink = "zink"
