@@ -37,7 +37,6 @@ from ingest_common import (
     format_event_yaml,
     load_existing_yaml,
     matches_existing,
-    normalize_name,
 )
 
 CMAH_ICAL_URL = "https://angradoheroismo.pt/events.ics"
