@@ -1,3 +1,7 @@
+[default.extend-identifiers]
+# Opaque id of the What's On agenda repeater (scripts/ingest_whatson_azores.py).
+c09Ov7jGKeOQKPn6 = "c09Ov7jGKeOQKPn6"
+
 [default]
 # `lang: portugese` is a deliberate example of a bad front-matter value.
 extend-ignore-re = ["lang: portugese"]
