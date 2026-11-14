@@ -83,7 +83,9 @@ def _venue_key(venue: str, name: str = "") -> str:
         return "pacos praia" if "praia" in text else "pacos angra"
     if "museu de angra" in text or "igreja de nossa senhora da guia" in text:
         return "museu angra"
-    if "sao bento" in text or (text == "angra do heroismo" and "sao bento" in normalize_name(name)):
+    if "sao bento" in text or re.search(r"\bs\. bento\b", text) or (
+        text == "angra do heroismo" and "sao bento" in normalize_name(name)
+    ):
         return "sao bento"
     return " ".join(word for word in re.findall(r"\w+", text) if word not in {"de", "do", "da", "e"})
 

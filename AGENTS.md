@@ -78,13 +78,16 @@ introduce jargon without a demonstrated benefit.
 
 ## Event ingestion pipeline
 
-- Seven scheduled workflows (`.github/workflows/ingest-*.yml`, scripts
+- Seven ingest workflows (`.github/workflows/ingest-*.yml`, scripts
   `scripts/ingest_*.py`) read CMAH, CMPV, Museu de Angra, Ticketline,
-  parish touradas, Visit Azores and Azores What's On. They append new
-  events to the end of `_data/special_events.yml`, deduplicating by
-  `source_uid` and same-date name similarity. Each one opens or refreshes
-  an `Auto-ingest: ...` PR on `auto/<x>-ingest` and fails loudly when its
-  source is degraded (`scripts/ingest_health.py`).
+  parish touradas, Visit Azores and Azores What's On. Six run daily on a
+  schedule; the Museu de Angra workflow runs only by `workflow_dispatch`
+  while the source site's Cloudflare managed challenge blocks automated
+  requests. They append new events to the end of
+  `_data/special_events.yml`, deduplicating by `source_uid` and same-date
+  name similarity. Each one opens or refreshes an `Auto-ingest: ...` PR
+  on `auto/<x>-ingest` and fails loudly when its source is degraded
+  (`scripts/ingest_health.py`).
 - Three gates validate every change: `validate event data`
   (`validate-events.yml`, data paths only), `validate templates and
   structured data` (`validate-templates.yml`, every PR) and `validate
