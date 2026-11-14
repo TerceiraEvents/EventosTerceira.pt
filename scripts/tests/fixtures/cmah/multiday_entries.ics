@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//wp-events-plugin.com//7.4.14//EN
+BEGIN:VEVENT
+UID:1937@angradoheroismo.pt
+DTSTART;TZID=Atlantic/Azores:20270129T100000
+DTEND;TZID=Atlantic/Azores:20270131T200000
+SUMMARY:Azores GameFest
+END:VEVENT
+BEGIN:VEVENT
+UID:2010@angradoheroismo.pt
+DTSTART;TZID=Atlantic/Azores:20261102T090000
+DTEND;TZID=Atlantic/Azores:20261231T190000
+SUMMARY:Documento do Mês | As folhas que guardam
+END:VEVENT
+END:VCALENDAR
