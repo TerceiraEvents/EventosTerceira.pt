@@ -79,6 +79,47 @@ class WhatsonPortalTests(unittest.TestCase):
         self.assertEqual(health.listed, 2)
         self.assertEqual(related, RELATED)
 
+    def tied_end_date_server(self, honors_tie_break):
+        """Fake query endpoint whose tied end dates reorder between page requests."""
+        structure = {"hash": 123, "repeaters": {portal.REPEATER_ID: {
+            "pagination": {"enabled": True},
+            "sorts": [{"attr": "datetime_end_date", "direction": "asc"}]}}}
+        records = {name: dict(event_record(), id=name) for name in "abcde"}
+        stable = [["a", "b"], ["c", "d"], ["e"]]
+        shifted = [["a", "b"], ["b", "c"], ["d", "e"]]
+        sorts_seen = []
+
+        def fetch(url, payload=None):
+            if payload is None:
+                return b"window.BndLyrStruct = " + json.dumps(structure).encode() + b";"
+            sorts = payload["repeater"]["sorts"]
+            sorts_seen.append(sorts)
+            has_tie_break = any(sort["attr"] == "id" for sort in sorts)
+            pages = stable if has_tie_break and honors_tie_break else shifted
+            page = payload["repeater"]["page"]
+            return json.dumps({"page": page, "totalPages": 3, "related": RELATED,
+                               "items": [records[name] for name in pages[page - 1]]}).encode()
+
+        return fetch, sorts_seen
+
+    def test_record_id_breaks_ties_in_the_end_date_sort(self):
+        fetch, sorts_seen = self.tied_end_date_server(honors_tie_break=True)
+        health = SourceHealth("test")
+        with patch.object(health, "fetch", side_effect=fetch):
+            items, _ = portal.fetch_records(health)
+        self.assertEqual([item["id"] for item in items], list("abcde"))
+        self.assertEqual(len(sorts_seen), 3)
+        for sorts in sorts_seen:
+            self.assertEqual(sorts, [{"attr": "datetime_end_date", "direction": "asc"},
+                                     {"attr": "id", "direction": "asc"}])
+
+    def test_records_repeated_despite_the_tie_break_still_fail(self):
+        fetch, _ = self.tied_end_date_server(honors_tie_break=False)
+        health = SourceHealth("test")
+        with patch.object(health, "fetch", side_effect=fetch), \
+             self.assertRaisesRegex(SourceError, "repeated record"):
+            portal.fetch_records(health)
+
     def test_invalid_empty_repeated_and_truncated_pages_fail(self):
         structure = {"hash": 123, "repeaters": {portal.REPEATER_ID: {"pagination": {"enabled": True}}}}
         cases = [

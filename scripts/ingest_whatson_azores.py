@@ -18,6 +18,11 @@ STRUCT_URL = f"https://cdn.bndlyr.com/{PROJECT_ID}/_p/struct.js"
 QUERY_URL = "https://repeater.bondlayer.com/fetch"
 BASE_URL = "https://whatson.azores.gov.pt"
 MAX_PAGES = 50
+# The published agenda query sorts by end date alone. Many events share an end
+# date and the server does not keep ties in one order between page requests, so
+# a record can appear on two pages while another appears on none. Sorting
+# ties by record id makes the paging deterministic.
+TIE_BREAK_SORT = {"attr": "id", "direction": "asc"}
 CATEGORY_TAGS = {
     "cinema": "cinema", "musica": "live-music", "teatro": "theater",
     "danca": "dance", "desporto": "outdoor",
@@ -56,6 +61,9 @@ def fetch_records(health: SourceHealth) -> tuple[list[dict], dict]:
     """Fetch all agenda pages with loop, cap, and response-schema checks."""
     structure = _structure(health.fetch(STRUCT_URL))
     repeater = copy.deepcopy(structure["repeaters"][REPEATER_ID])
+    sorts = repeater.get("sorts") or []
+    if not any(sort.get("attr") == TIE_BREAK_SORT["attr"] for sort in sorts):
+        repeater["sorts"] = [*sorts, TIE_BREAK_SORT]
     items, related, seen = [], {}, set()
     expected_pages = None
     for page in range(1, MAX_PAGES + 1):
