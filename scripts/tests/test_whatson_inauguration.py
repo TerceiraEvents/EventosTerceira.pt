@@ -159,9 +159,13 @@ class InaugurationRangeTests(unittest.TestCase):
             portal.parse_record(described(CORES, end="2026-07-15T00:00:00Z"), RELATED)
 
     def test_contradicting_printed_years_keep_the_review_error(self):
-        item = described(CORES, extra="A 13 de novembro de 2025 abriu o atelier.")
-        with self.assertRaisesRegex(SourceError, "year needs review"):
-            portal.parse_record(item, RELATED)
+        extras = {
+            "earlier year, outside the run-length bound": "A 13 de novembro de 2025 abriu o atelier.",
+            "later year, after the CMS end date": "Reabre a 13 de novembro de 2027.",
+        }
+        for case, extra in extras.items():
+            with self.subTest(case=case), self.assertRaisesRegex(SourceError, "year needs review"):
+                portal.parse_record(described(CORES, extra=extra), RELATED)
 
     def test_repeating_the_same_printed_date_is_not_a_contradiction(self):
         item = described(CORES, extra="Esperamos por si a 13 de novembro de 2026.")
