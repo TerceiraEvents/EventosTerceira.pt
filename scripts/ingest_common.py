@@ -45,6 +45,16 @@ _DEDUP_STOPWORDS = frozenset(
 )
 
 
+# Generic event-type labels that sources put before a title ("Cinema: Verity")
+# while other sources publish the bare title ("VERITY").
+_CATEGORY_LABELS = frozenset(
+    {
+        "cinema", "concerto", "conferencia", "danca", "exposicao",
+        "festival", "formacao", "palestra", "teatro", "workshop",
+    }
+)
+
+
 def normalize_name(name: str) -> str:
     """Normalize a name for dedup: lowercase, strip accents, unify dashes/quotes.
 
@@ -74,6 +84,14 @@ def _tokenize(name: str) -> frozenset[str]:
     return frozenset(t for t in tokens if t not in _DEDUP_STOPWORDS)
 
 
+def _split_category_label(name: str) -> tuple[str | None, str]:
+    """Split a leading event-type label ("Cinema: ") from a normalized title."""
+    label, separator, rest = normalize_name(name).partition(":")
+    if separator and label.strip() in _CATEGORY_LABELS and rest.strip():
+        return label.strip(), rest.strip()
+    return None, normalize_name(name)
+
+
 def is_similar_match(a_name: str, b_name: str) -> bool:
     """Return True if two event names look like the same event.
 
@@ -90,8 +108,17 @@ def is_similar_match(a_name: str, b_name: str) -> bool:
 
     Requiring each input ≥3 content tokens AND ≥3 shared content tokens
     keeps false positives low on generic short names like "Cinema: X".
+
+    Short titles cannot reach those thresholds, so two names also match when
+    they are identical once a leading event-type label is removed from one or
+    both ("ROMANCE À ITALIANA" and "Cinema: Romance à Italiana"). Two
+    different labels on the same title ("Concerto: X", "Cinema: X") do not
+    match.
     """
     if normalize_name(a_name) == normalize_name(b_name):
+        return True
+    (a_label, a_core), (b_label, b_core) = _split_category_label(a_name), _split_category_label(b_name)
+    if a_core == b_core and (a_label is None or b_label is None or a_label == b_label):
         return True
     a_tokens = _tokenize(a_name)
     b_tokens = _tokenize(b_name)
