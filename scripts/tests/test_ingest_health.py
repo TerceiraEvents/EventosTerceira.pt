@@ -121,6 +121,15 @@ class SourceFailureTests(unittest.TestCase):
         candidate["venue"] = "Auditório Ramo Grande"
         self.assertTrue(_duplicate(candidate, [first]))
 
+    def test_abbreviated_sao_bento_venue_matches_the_full_name(self):
+        existing = {"date": dt.date(2026, 11, 14), "name": "Workshop: Comédia de Improviso",
+                    "venue": "Edifício Cultural de São Bento — Sala da Academia de Artes"}
+        candidate = {"date": dt.date(2026, 11, 14), "name": "Comédia de Improviso",
+                     "venue": "Edifício Cultural de S. Bento"}
+        self.assertTrue(_duplicate(candidate, [existing]))
+        candidate["venue"] = "Auditório do Ramo Grande"
+        self.assertFalse(_duplicate(candidate, [existing]))
+
     def test_series_dates_and_short_artist_titles_match_existing(self):
         date = dt.date(2027, 1, 16)
         existing = [{"date": date, "name": "Concertos Únicos 2027: Ana Moura com João Barros",
