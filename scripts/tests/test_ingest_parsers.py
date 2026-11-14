@@ -12,19 +12,27 @@ Run from the repo root:
 """
 from __future__ import annotations
 
+import contextlib
 import datetime as dt
+import io
 import json
 import os
 import sys
+import tempfile
 import textwrap
 import unittest
+from pathlib import Path
+from unittest.mock import patch
 
 # Allow `from ingest_* import ...` whether run from repo root or from
 # scripts/tests/ directly.
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), os.pardir))
 
+import icalendar
+import ingest_cmah
 import ingest_jsonld
 import ingest_touradas
+import yaml
 from ingest_common import format_event_yaml, listing_kind
 
 
@@ -123,6 +131,121 @@ class TouradasParserTests(unittest.TestCase):
         m = ingest_touradas.GANADEIRO_RE.search("Ganadeiro: Marcos Bastos")
         self.assertIsNotNone(m)
         self.assertEqual(m.group(1).strip(), "Marcos Bastos")
+
+
+def vevent(dtstart: str, dtend: str | None = None, summary: str = "Evento", extra: str = "") -> icalendar.Event:
+    """Build a CMAH-style VEVENT; the property lines are copied from the live feed's forms."""
+    lines = ["BEGIN:VEVENT", "UID:1@angradoheroismo.pt", dtstart]
+    if dtend:
+        lines.append(dtend)
+    lines += [f"SUMMARY:{summary}", "LOCATION:Venue\\, Street\\, Angra do Heroísmo", extra, "END:VEVENT"]
+    return icalendar.Event.from_ical("\r\n".join(line for line in lines if line))
+
+
+ALL_DAY = "{name};TZID=Atlantic/Azores;VALUE=DATE:{day}"
+TIMED = "{name};TZID=Atlantic/Azores:{day}T{clock}"
+
+
+class CmahDatesTests(unittest.TestCase):
+    def dates(self, dtstart: str, dtend: str | None):
+        component = vevent(dtstart, dtend)
+        start = component.get("DTSTART")
+        end = component.get("DTEND")
+        date, time = ingest_cmah.extract_date_time(start)
+        return date, time, ingest_cmah.extract_end_date(start, end)
+
+    def test_all_day_end_is_exclusive(self):
+        cases = (
+            ("20261120", "20270111", dt.date(2027, 1, 10)),
+            ("20261120", "20261122", dt.date(2026, 11, 21)),
+            ("20261120", "20261121", None),
+        )
+        for first, last, expected in cases:
+            with self.subTest(first=first, last=last):
+                date, time, end = self.dates(ALL_DAY.format(name="DTSTART", day=first),
+                                             ALL_DAY.format(name="DTEND", day=last))
+                self.assertEqual((date, time, end), (dt.date.fromisoformat(first[:4] + "-" + first[4:6] + "-" + first[6:]), None, expected))
+
+    def test_timed_multi_day_end_is_the_end_date(self):
+        cases = (
+            ((("20261113", "190000"), ("20261114", "190000")), ("19:00", dt.date(2026, 11, 14))),
+            ((("20261113", "200000"), ("20261115", "223000")), ("20:00", dt.date(2026, 11, 15))),
+            ((("20261127", "160000"), ("20261128", "220000")), ("16:00", dt.date(2026, 11, 28))),
+            ((("20261122", "160000"), ("20261204", "183000")), ("16:00", dt.date(2026, 12, 4))),
+            ((("20261121", "190000"), ("20261122", "184500")), ("19:00", dt.date(2026, 11, 22))),
+            ((("20261121", "230000"), ("20261122", "061500")), ("23:00", dt.date(2026, 11, 22))),
+        )
+        for ((first, start_clock), (last, end_clock)), (time, end_date) in cases:
+            with self.subTest(first=first, last=last):
+                _, got_time, got_end = self.dates(TIMED.format(name="DTSTART", day=first, clock=start_clock),
+                                                  TIMED.format(name="DTEND", day=last, clock=end_clock))
+                self.assertEqual((got_time, got_end), (time, end_date))
+
+    def test_midnight_start_has_no_time_and_keeps_the_end_date(self):
+        _, time, end = self.dates(TIMED.format(name="DTSTART", day="20261118", clock="000000"),
+                                  TIMED.format(name="DTEND", day="20261122", clock="000000"))
+        self.assertIsNone(time)
+        self.assertEqual(end, dt.date(2026, 11, 22))
+
+    def test_overnight_finish_is_not_a_second_day(self):
+        cases = (("220000", "020000"), ("210000", "000000"), ("233000", "060000"))
+        for start_clock, end_clock in cases:
+            with self.subTest(start=start_clock, end=end_clock):
+                _, time, end = self.dates(TIMED.format(name="DTSTART", day="20261121", clock=start_clock),
+                                          TIMED.format(name="DTEND", day="20261122", clock=end_clock))
+                self.assertEqual(time, f"{start_clock[:2]}:{start_clock[2:4]}")
+                self.assertIsNone(end)
+
+    def test_same_day_missing_and_reversed_ends_give_no_end_date(self):
+        start = TIMED.format(name="DTSTART", day="20261121", clock="210000")
+        cases = (
+            TIMED.format(name="DTEND", day="20261121", clock="230000"),
+            TIMED.format(name="DTEND", day="20261120", clock="230000"),
+            None,
+        )
+        for dtend in cases:
+            with self.subTest(dtend=dtend):
+                self.assertIsNone(self.dates(start, dtend)[2])
+
+    def test_main_writes_end_date_and_omits_midnight_time(self):
+        calendar = textwrap.dedent(
+            """\
+            BEGIN:VCALENDAR
+            VERSION:2.0
+            BEGIN:VEVENT
+            UID:5001@angradoheroismo.pt
+            DTSTART;TZID=Atlantic/Azores:20990518T000000
+            DTEND;TZID=Atlantic/Azores:20990522T000000
+            SUMMARY:Festival de teste em Angra
+            LOCATION:Venue\\, Street\\, Angra do Heroísmo
+            CATEGORIES:Exposições
+            END:VEVENT
+            BEGIN:VEVENT
+            UID:5002@angradoheroismo.pt
+            DTSTART;TZID=Atlantic/Azores:20990521T220000
+            DTEND;TZID=Atlantic/Azores:20990522T020000
+            SUMMARY:Concerto de teste noturno
+            LOCATION:Venue\\, Street\\, Angra do Heroísmo
+            END:VEVENT
+            END:VCALENDAR
+            """
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            ics, store = Path(tmp) / "events.ics", Path(tmp) / "events.yml"
+            ics.write_text(calendar, encoding="utf-8")
+            store.write_text("[]\n", encoding="utf-8")
+            argv = ["ingest_cmah", "--dry-run", "--url", ics.as_uri(), "--yaml-path", str(store)]
+            output = io.StringIO()
+            with patch.object(sys, "argv", argv), patch.object(ingest_cmah, "LOOKAHEAD_DAYS", 40000), \
+                    contextlib.redirect_stdout(output):
+                self.assertEqual(ingest_cmah.main(), 0)
+        events = {event["source_uid"]: event for event in yaml.safe_load(output.getvalue())}
+        festival, concert = events["5001@angradoheroismo.pt"], events["5002@angradoheroismo.pt"]
+        self.assertEqual((festival["date"], festival["end_date"]), (dt.date(2099, 5, 18), dt.date(2099, 5, 22)))
+        self.assertNotIn("time", festival)
+        self.assertEqual(festival["kind"], "exhibition")
+        self.assertEqual(concert["time"], "22:00")
+        self.assertNotIn("end_date", concert)
 
 
 class ListingKindTests(unittest.TestCase):

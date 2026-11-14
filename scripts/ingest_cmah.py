@@ -68,6 +68,10 @@ CATEGORY_TAG_MAP = {
     "Infantil": "kid-friendly",
 }
 
+# An event whose DTEND falls the next morning at or before this time ends
+# after midnight rather than on a second day.
+OVERNIGHT_END_LIMIT = dt.time(6, 0)
+
 logger = logging.getLogger("ingest_cmah")
 
 
@@ -88,6 +92,8 @@ def extract_date_time(prop) -> tuple[dt.date, str | None]:
 
     iCal DATE-only values (VALUE=DATE) come back as timezone-aware datetimes
     at midnight; we detect those via the VALUE parameter and strip the time.
+    A start at local midnight is the feed's way of publishing a date without
+    a time, so it yields no time either.
     """
     value = prop.dt
     value_param = prop.params.get("VALUE") if hasattr(prop, "params") else None
@@ -96,10 +102,45 @@ def extract_date_time(prop) -> tuple[dt.date, str | None]:
             return (value.date(), None)
         return (value, None)
     if isinstance(value, dt.datetime):
-        return (value.date(), value.strftime("%H:%M"))
+        time = value.strftime("%H:%M")
+        return (value.date(), None if time == "00:00" else time)
     if isinstance(value, dt.date):
         return (value, None)
     raise ValueError(f"unexpected DTSTART type: {type(value).__name__}")
+
+
+def extract_end_date(start_prop, end_prop) -> dt.date | None:
+    """Return the last day of a multi-day event from DTSTART and DTEND, or None.
+
+    - A DTEND of VALUE=DATE is exclusive (RFC 5545), so its last day is the
+      day before.
+    - A timed DTEND ends on its own date, including a midnight DTEND: the
+      feed publishes "18 to 22 November" as 00:00 on the 18th to 00:00 on
+      the 22nd.
+    - A DTEND on the next day before 06:00 and earlier than the start's clock
+      time is an event that runs past midnight (22:00 to 02:00), not a second
+      day.
+    """
+    if end_prop is None:
+        return None
+    start, end = start_prop.dt, end_prop.dt
+    start_day = start.date() if isinstance(start, dt.datetime) else start
+    if end_prop.params.get("VALUE") == "DATE":
+        end_day = (end.date() if isinstance(end, dt.datetime) else end) - dt.timedelta(days=1)
+    elif isinstance(end, dt.datetime):
+        if isinstance(start, dt.datetime) and start.tzinfo and end.tzinfo:
+            end = end.astimezone(start.tzinfo)
+        end_day = end.date()
+        if (
+            isinstance(start, dt.datetime)
+            and end_day == start_day + dt.timedelta(days=1)
+            and end.time() < start.time()
+            and end.time() <= OVERNIGHT_END_LIMIT
+        ):
+            return None
+    else:
+        end_day = end
+    return end_day if end_day > start_day else None
 
 
 def parse_location(loc: str) -> tuple[str, str]:
@@ -202,6 +243,7 @@ def main() -> int:
             if dtstart is None:
                 continue
             date, time = extract_date_time(dtstart)
+            end_date = extract_end_date(dtstart, component.get("DTEND"))
             if date < today or date > lookahead:
                 skipped_window += 1
                 continue
@@ -219,6 +261,7 @@ def main() -> int:
 
             event = {
                 "date": date,
+                "end_date": end_date,
                 "name": summary,
                 "venue": venue or "Angra do Heroísmo",
                 "address": address,
