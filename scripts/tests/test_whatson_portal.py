@@ -119,6 +119,20 @@ class WhatsonPortalTests(unittest.TestCase):
         with self.assertRaises(SourceError):
             portal.parse_record(item, RELATED)
 
+    def test_semicolon_separated_sessions_become_distinct_events(self):
+        item = event_record()
+        item["_title"] = {"all": "Hora do Conto"}
+        item["text_display_date"] = {"all": "31 de outubro; 7, 14, 21 e 28 de novembro; 5, 12, 19 e 26 de dezembro"}
+        item["text_description"] = {"all": "<p>🕒 De acordo com a programação</p>"}
+        item["datetime_end_date"] = "2026-12-26T23:45:20.000Z"
+        events = portal.parse_record(item, RELATED)
+        self.assertEqual([event["date"] for event in events], [
+            dt.date(2026, 10, 31), dt.date(2026, 11, 7), dt.date(2026, 11, 14), dt.date(2026, 11, 21),
+            dt.date(2026, 11, 28), dt.date(2026, 12, 5), dt.date(2026, 12, 12), dt.date(2026, 12, 19),
+            dt.date(2026, 12, 26)])
+        self.assertEqual(len({event["source_uid"] for event in events}), 9)
+        self.assertTrue(all("end_date" not in event and event["time"] is None for event in events))
+
 
 if __name__ == "__main__":
     unittest.main()
