@@ -9,7 +9,7 @@ import re
 import sys
 
 from ingest_common import clean_description, is_similar_match, normalize_name
-from ingest_dates import published_dates, published_time
+from ingest_dates import MONTHS, MONTH_RE, published_dates, published_time
 from ingest_health import SourceError, SourceHealth, run_ingester
 
 PROJECT_ID = "s51ryo6rirdnhc5r"
@@ -40,6 +40,32 @@ def localized(value) -> str:
     if isinstance(value, dict):
         return str(value.get("pt") or value.get("all") or "").strip()
     return ""
+
+
+def inauguration_opening(label: str, description: str, run_end: dt.date) -> dt.date | None:
+    """Opening date of an exhibition labelled "Inauguração: <day> de <month>".
+
+    The label carries no year and the CMS end date is the end of the run, so the
+    year comes from the one full date the description prints for that day and
+    month. Returns None, leaving the label to the generic date rules, unless
+    exactly one such date is printed and it does not fall after ``run_end``.
+    """
+    labelled = re.fullmatch(rf"inauguracao\s*:\s*(\d{{1,2}})\s+de\s+({MONTH_RE})", normalize_name(label))
+    if not labelled:
+        return None
+    day, month = int(labelled[1]), MONTHS[labelled[2]]
+    printed = set()
+    for found in re.finditer(rf"(?<!\d)(\d{{1,2}})\s+de\s+({MONTH_RE})\s+de\s+(20\d{{2}})\b",
+                             normalize_name(description)):
+        if (int(found[1]), MONTHS[found[2]]) == (day, month):
+            printed.add(int(found[3]))
+    if len(printed) != 1:
+        return None
+    try:
+        opening = dt.date(printed.pop(), month, day)
+    except ValueError:
+        return None
+    return opening if opening <= run_end else None
 
 
 def _structure(payload: bytes) -> dict:
@@ -115,7 +141,10 @@ def parse_record(item: dict, related: dict, known_events: list[dict] | None = No
     try:
         metadata_end = dt.datetime.fromisoformat(str(item["datetime_end_date"]).replace("Z", "+00:00")).date()
         year = metadata_end.year
-        if normalize_name(label).startswith("ate "):
+        opening = inauguration_opening(label, description, metadata_end)
+        if opening is not None:
+            dates = [(opening, metadata_end)]
+        elif normalize_name(label).startswith("ate "):
             end = published_dates(re.sub(r"^\s*Até\s+", "", label, flags=re.I), year)[0][1]
             known = next((event for event in (known_events or [])
                           if isinstance(event.get("date"), dt.date)
@@ -126,7 +155,7 @@ def parse_record(item: dict, related: dict, known_events: list[dict] | None = No
             dates = [(known["date"], end)]
         else:
             dates = published_dates(label, year)
-        if not re.search(r"\b20\d{2}\b", label) and abs((dates[-1][1] - metadata_end).days) > 60:
+        if opening is None and not re.search(r"\b20\d{2}\b", label) and abs((dates[-1][1] - metadata_end).days) > 60:
             raise ValueError("displayed date and CMS end date disagree; the event year needs review")
     except (KeyError, ValueError, TypeError) as exc:
         raise SourceError(f"What’s On: {title}: {exc}") from exc
@@ -135,6 +164,8 @@ def parse_record(item: dict, related: dict, known_events: list[dict] | None = No
         raise SourceError(f"What’s On: invalid category reference for {title}")
     category = normalize_name(localized(related.get(category_id, {}).get("_title")))
     tags = [CATEGORY_TAGS[category]] if category in CATEGORY_TAGS else []
+    if opening is not None and metadata_end > opening and "exhibition" not in tags:
+        tags.insert(0, "exhibition")
     if re.search(r"entrada (?:livre|gratuita)|acesso livre", normalize_name(description)):
         tags.append("free")
     time = published_time(label) or published_time(localized(item.get("text_description")))
