@@ -32,10 +32,30 @@ class CalendarDatesTests(unittest.TestCase):
                 parsed = published_dates(label, 2026)
                 self.assertEqual(parsed, [(dt.date.fromisoformat(a), dt.date.fromisoformat(b)) for a, b in expected])
 
+    def test_semicolon_separated_session_groups(self):
+        cases = [
+            ("31 de outubro; 7, 14, 21 e 28 de novembro; 5, 12, 19 e 26 de dezembro", [
+                "2026-10-31", "2026-11-07", "2026-11-14", "2026-11-21", "2026-11-28",
+                "2026-12-05", "2026-12-12", "2026-12-19", "2026-12-26"]),
+            ("19 e 26 de dezembro; 2 e 9 de janeiro", ["2026-12-19", "2026-12-26", "2027-01-02", "2027-01-09"]),
+            ("19 de dezembro de 2026; 2 de janeiro de 2027", ["2026-12-19", "2027-01-02"]),
+            ("31 de outubro; 7 de novembro | 16h00", ["2026-10-31", "2026-11-07"]),
+            ("7 de novembro;", ["2026-11-07"]),
+        ]
+        for label, days in cases:
+            with self.subTest(label=label):
+                parsed = published_dates(label, 2026)
+                self.assertEqual(parsed, [(dt.date.fromisoformat(day),) * 2 for day in days])
+
+    def test_semicolon_groups_may_mix_ranges_and_sessions(self):
+        self.assertEqual(published_dates("1 a 3 de outubro; 10 de outubro", 2026), [
+            (dt.date(2026, 10, 1), dt.date(2026, 10, 3)), (dt.date(2026, 10, 10), dt.date(2026, 10, 10))])
+
     def test_unknown_or_impossible_dates_fail(self):
         for label in ("Até 23 de novembro", "A partir de 16 de setembro", "coming soon", "31 de fevereiro",
                       "28 de novembro a 3 de dezembro, 10 de dezembro", "1 a 3 e 10 de outubro",
-                      "3 de outubro e 10 a 12 de novembro"):
+                      "3 de outubro e 10 a 12 de novembro", "31 de outubro; até 12 de novembro", "31 de outubro; 31 de novembro",
+                      "10 de outubro; 3 de outubro", "19 e 26 de dezembro; 2 de janeiro de 2027", ";"):
             with self.subTest(label=label), self.assertRaises(ValueError):
                 published_dates(label, 2026)
 

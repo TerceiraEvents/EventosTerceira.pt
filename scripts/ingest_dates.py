@@ -14,6 +14,24 @@ MONTHS = {
 MONTH_RE = "|".join(MONTHS)
 
 
+def _session_groups(groups: list[str], year: int, explicit_year: bool) -> list[tuple[dt.date, dt.date]]:
+    """Parse ``;``-separated date groups, each a label of its own, in date order.
+
+    Without a printed year, a group whose month precedes the previous group's
+    month continues into the next year ("26 de dezembro; 2 de janeiro").
+    """
+    sessions: list[tuple[dt.date, dt.date]] = []
+    for group in groups:
+        parsed = published_dates(group, year)
+        if sessions and parsed[0][0] < sessions[-1][1]:
+            if explicit_year or parsed[0][0].month >= sessions[-1][1].month:
+                raise ValueError(f"Session groups are not in date order: {'; '.join(groups)}")
+            parsed = [(start.replace(year=start.year + 1), end.replace(year=end.year + 1))
+                      for start, end in parsed]
+        sessions.extend(parsed)
+    return sessions
+
+
 def published_dates(text: str, year: int) -> list[tuple[dt.date, dt.date]]:
     """Return discrete sessions or an inclusive range from an explicit date label."""
     text = normalize_name(clean_description(text))
@@ -24,6 +42,9 @@ def published_dates(text: str, year: int) -> list[tuple[dt.date, dt.date]]:
     if re.match(r"(?:ate|a partir|todas|todos)\b", text):
         raise ValueError(f"Date label requires a start date or recurrence review: {text}")
     text = text.split("|", 1)[0]
+    groups = [group.strip() for group in text.split(";") if group.strip()]
+    if len(groups) > 1 and all(re.search(MONTH_RE, group) for group in groups):
+        return _session_groups(groups, year, bool(explicit_years))
     text = re.sub(r"(?<!\d)\d{1,2}(?:[:h]\d{2}|h)\b", "", text)
     text = re.sub(r"\b(?:segundas?(?:-feiras?)?|tercas?(?:-feiras?)?|quartas?(?:-feiras?)?|quintas?(?:-feiras?)?|sextas?(?:-feiras?)?|sabados?|domingos?|dias?)\b", "", text)
     numeric = list(re.finditer(r"(\d{1,2})[./](\d{1,2})[./](20\d{2})", text))
