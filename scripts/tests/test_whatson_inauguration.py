@@ -17,6 +17,7 @@ from unittest.mock import patch
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), os.pardir))
 import ingest_whatson_azores as portal
 from ingest_common import format_event_yaml, listing_kind
+from ingest_dates import MONTHS
 from ingest_health import SourceError, SourceHealth
 
 with open(os.path.join(os.path.dirname(__file__), "fixtures", "whatson", "inauguration_records.json"),
@@ -25,6 +26,7 @@ with open(os.path.join(os.path.dirname(__file__), "fixtures", "whatson", "inaugu
 CORES, PINTURA = FIXTURE["items"]
 RELATED = FIXTURE["related"]
 RUN_END = dt.date(2027, 1, 30)
+MONTH_NAMES = {number: name for name, number in MONTHS.items()}
 
 
 def described(record, label=None, header=None, extra=None, end=None):
@@ -67,6 +69,17 @@ class InaugurationRangeTests(unittest.TestCase):
         self.assertEqual(event["end_date"], RUN_END)
         self.assertEqual(event["time"], "15:00")
         self.assertEqual(event["tags"], ["exhibition", "free"])
+
+    def test_category_tags_are_kept_and_no_exhibition_kind_is_forced(self):
+        for title, tag in (("Música", "live-music"), ("Teatro", "theater")):
+            related = {**RELATED, "other-category": {"_title": {"all": title}}}
+            item = dict(PINTURA, ref_category="other-category")
+            with self.subTest(category=title):
+                event = portal.parse_record(item, related)[0]
+                self.assertEqual((event["date"], event["end_date"]), (dt.date(2026, 11, 28), RUN_END))
+                self.assertEqual(event["tags"], [tag, "free"])
+                self.assertIsNone(listing_kind(event["tags"], event["date"], event["end_date"]))
+                self.assertNotIn("kind:", format_event_yaml(event))
 
     def test_ranges_are_written_as_exhibition_listings(self):
         for record in (CORES, PINTURA):
@@ -114,6 +127,33 @@ class InaugurationRangeTests(unittest.TestCase):
             with self.subTest(header=header), self.assertRaisesRegex(SourceError, "year needs review"):
                 portal.parse_record(described(CORES, header=header), RELATED)
 
+    def test_printed_opening_more_than_a_year_before_the_cms_end_date_keeps_the_review_error(self):
+        item = described(CORES, header="Inauguração: 13 de novembro de 2025")
+        self.assertEqual(item["datetime_end_date"][:10], "2027-01-30")
+        with self.assertRaisesRegex(SourceError, "year needs review"):
+            portal.parse_record(item, RELATED)
+
+    def test_unrelated_earlier_date_with_the_same_day_and_month_keeps_the_review_error(self):
+        item = described(CORES, header="Inauguração", extra="Inaugurada a 13 de novembro de 2019.")
+        with self.assertRaisesRegex(SourceError, "year needs review"):
+            portal.parse_record(item, RELATED)
+
+    def test_run_length_bound_is_366_days(self):
+        end = dt.date(2027, 1, 30)
+        for days, expected in ((0, end), (365, end - dt.timedelta(days=365)), (366, end - dt.timedelta(days=366)),
+                               (367, None), (444, None)):
+            opening = end - dt.timedelta(days=days)
+            description = f"<p>Inauguração: {opening.day} de {MONTH_NAMES[opening.month]} de {opening.year}</p>"
+            label = f"Inauguração: {opening.day} de {MONTH_NAMES[opening.month]}"
+            with self.subTest(days=days):
+                self.assertEqual(portal.inauguration_opening(label, description, end), expected)
+
+    def test_live_records_are_inside_the_run_length_bound(self):
+        for record, opening in ((CORES, dt.date(2026, 11, 13)), (PINTURA, dt.date(2026, 11, 28))):
+            with self.subTest(record=record["id"]):
+                self.assertLessEqual((RUN_END - opening).days, portal.MAX_RUN_DAYS)
+                self.assertEqual(portal.parse_record(record, RELATED)[0]["date"], opening)
+
     def test_cms_end_date_before_the_printed_opening_keeps_the_review_error(self):
         with self.assertRaisesRegex(SourceError, "year needs review"):
             portal.parse_record(described(CORES, end="2026-07-15T00:00:00Z"), RELATED)
@@ -138,6 +178,14 @@ class InaugurationRangeTests(unittest.TestCase):
         self.assertEqual(event["date"], dt.date(2026, 11, 28))
         self.assertNotIn("end_date", event)
         self.assertEqual(event["tags"], ["free"])
+
+    def test_invalid_calendar_day_ends_in_the_generic_day_out_of_range_error(self):
+        item = described(PINTURA, label="Inauguração: 31 de novembro", header="Inauguração: 31 de novembro de 2026")
+        self.assertIsNone(portal.inauguration_opening("Inauguração: 31 de novembro", item["text_description"]["all"],
+                                                      RUN_END))
+        with self.assertRaisesRegex(SourceError, r"day (?:is out of range for month|31 must be in range 1\.\.30)") as caught:
+            portal.parse_record(item, RELATED)
+        self.assertIsInstance(caught.exception.__cause__, ValueError)
 
     def test_session_day_errors_are_not_affected(self):
         item = described(CORES, label="Inauguração: 13 de novembro, 14 e 15 de dezembro")
