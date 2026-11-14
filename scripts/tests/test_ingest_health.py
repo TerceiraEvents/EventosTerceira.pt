@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import contextlib
 import datetime as dt
+from http.client import HTTPMessage
 import io
 import json
 import os
@@ -18,7 +19,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), os.pardir))
 import ingest_cmpv
 import ingest_museu_angra
 import ingest_whatson_azores
-from ingest_health import SourceError, _duplicate, run_ingester
+from ingest_health import SourceError, SourceHealth, _duplicate, run_ingester
 import yaml
 
 
@@ -34,6 +35,28 @@ class SourceFailureTests(unittest.TestCase):
                 ), contextlib.redirect_stdout(io.StringIO()):
                     self.assertEqual(module.main(), 1)
                 self.assertEqual(path.read_text(encoding="utf-8"), "[]\n")
+
+    def test_cloudflare_challenge_is_named_in_the_error(self):
+        headers = HTTPMessage()
+        headers["CF-Mitigated"] = "challenge"
+        error = HTTPError("https://example.test/events/", 403, "Forbidden", headers, None)
+        with patch("urllib.request.urlopen", side_effect=error):
+            with self.assertRaises(SourceError) as caught:
+                SourceHealth("fixture").fetch("https://example.test/events/")
+        message = str(caught.exception)
+        self.assertIn("https://example.test/events/", message)
+        self.assertIn("403", message)
+        self.assertIn("Cloudflare managed challenge", message)
+
+    def test_plain_forbidden_is_not_reported_as_a_challenge(self):
+        headers = HTTPMessage()
+        headers["Server"] = "nginx"
+        error = HTTPError("https://example.test/events/", 403, "Forbidden", headers, None)
+        with patch("urllib.request.urlopen", side_effect=error):
+            with self.assertRaises(SourceError) as caught:
+                SourceHealth("fixture").fetch("https://example.test/events/")
+        self.assertIn("HTTP Error 403: Forbidden", str(caught.exception))
+        self.assertNotIn("Cloudflare", str(caught.exception))
 
     def test_partial_discovery_failure_preserves_yaml_and_report(self):
         with tempfile.TemporaryDirectory() as tmp:
