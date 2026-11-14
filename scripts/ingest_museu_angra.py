@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Read the museum's public event and exhibition archives and their detail pages."""
+"""Read the museum's public event and exhibition archives and their detail pages.
+
+The museum's host answers every page except ``robots.txt`` (which allows all
+paths) with a Cloudflare managed challenge to clients that are not an
+interactive browser, including this bot with its declared user agent. The
+run then fails with that cause named in the source-health report; the
+ingester does not try to pass the challenge.
+"""
 from __future__ import annotations
 
 import datetime as dt
