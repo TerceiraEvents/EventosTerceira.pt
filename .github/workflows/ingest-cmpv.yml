@@ -10,7 +10,7 @@ name: ingest CMPV events
 
 on:
   schedule:
-    # 07:30 UTC — staggered 30 min after the museum ingest at 07:00.
+    # 07:30 UTC — staggered an hour after Ticketline's 06:30 UTC ingest.
     - cron: "30 7 * * *"
   workflow_dispatch: {}
 
