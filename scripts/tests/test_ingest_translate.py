@@ -1,4 +1,4 @@
-"""Ingested events are translated into the other locale via GitHub Models."""
+"""Ingested events are translated into the other locale through a chat-completions endpoint."""
 from __future__ import annotations
 
 import datetime as dt
