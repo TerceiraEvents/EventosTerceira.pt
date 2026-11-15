@@ -21,6 +21,7 @@ from ingest_common import (
     format_event_yaml, is_contained_title, is_similar_match, load_existing_yaml,
     normalize_name, same_instant, same_start_time, venues_in_conflict,
 )
+from ingest_translate import translate_events
 
 
 class SourceError(RuntimeError):
@@ -178,7 +179,7 @@ def _find_duplicate(event: dict, others: list[dict]) -> dict | None:
     return None
 
 
-def run_ingester(source: str, discover) -> int:
+def run_ingester(source: str, discover, language: str = "pt") -> int:
     """Discover, reconcile, and append events; fail before writing on bad coverage."""
     parser = argparse.ArgumentParser(description=f"Ingest verified events from {source}.")
     parser.add_argument("--dry-run", action="store_true")
@@ -225,6 +226,7 @@ def run_ingester(source: str, discover) -> int:
         health.deferred = max(0, len(candidates) - args.max_events)
         selected = candidates[:args.max_events]
         if selected:
+            health.warnings.extend(translate_events(selected, language))
             block = f"\n# Auto-ingested from {source} ({args.today.isoformat()})\n"
             block += "\n".join(format_event_yaml(event) for event in selected)
             if args.dry_run:

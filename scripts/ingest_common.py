@@ -378,6 +378,9 @@ def format_event_yaml(event: dict) -> str:
     if kind:
         out.append(f"  kind: {kind}")
     out.append(f"  name: {yaml_double_quote(event['name'])}")
+    for locale in ("en", "pt"):
+        if event.get(f"name_{locale}"):
+            out.append(f"  name_{locale}: {yaml_double_quote(event[f'name_{locale}'])}")
     out.append(f"  venue: {yaml_value(event['venue'])}")
     if event.get("address"):
         out.append(f"  address: {yaml_value(event['address'])}")
@@ -387,6 +390,9 @@ def format_event_yaml(event: dict) -> str:
         out.append(f'  time: "{event["time"]}"')
     if event.get("description"):
         out.append(f"  description: {yaml_double_quote(event['description'])}")
+        for locale in ("en", "pt"):
+            if event.get(f"description_{locale}"):
+                out.append(f"  description_{locale}: {yaml_double_quote(event[f'description_{locale}'])}")
     if event.get("source_url"):
         out.append(f"  source_url: {event['source_url']}")
     if event.get("source_uid"):
