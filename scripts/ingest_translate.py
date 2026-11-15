@@ -14,7 +14,6 @@ the gap) without aborting ingestion. Secrets never appear in messages.
 """
 from __future__ import annotations
 
-import http.client
 import json
 import logging
 import os
