@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), os.pardir))
 import ingest_cmpv
 import ingest_museu_angra
 import ingest_whatson_azores
-from ingest_health import SourceError, SourceHealth, _duplicate, run_ingester
+from ingest_health import SourceError, SourceHealth, _duplicate, _venue_key, run_ingester
 import yaml
 
 
@@ -138,6 +138,65 @@ class SourceFailureTests(unittest.TestCase):
         self.assertTrue(_duplicate(candidate, existing))
         candidate["date"] = dt.date(2027, 3, 13)
         self.assertFalse(_duplicate(candidate, existing))
+
+
+class CrossSourceSlotTests(unittest.TestCase):
+    """Stored CMPV records and the What's On copies the 2026-11-15 run re-added."""
+
+    AJAIT = "Academia da Juventude e das Artes da Ilha Terceira (AJAIT)"
+
+    def pairs(self):
+        day, next_day = dt.date(2026, 11, 15), dt.date(2026, 11, 16)
+        return (
+            ({"date": day, "time": "18:00", "name": "Obra Reunida de Álvaro Monjardino", "venue": self.AJAIT},
+             {"date": day, "time": "18:00", "name": "Obra Reunida de Álvaro Monjardino",
+              "venue": "Bar da Academia de Juventude e das Artes"}),
+            ({"date": day, "time": "16:30", "venue": self.AJAIT,
+              "name": "Património Cultural dos Açores: reflexões para uma estratégia integrada"},
+             {"date": day, "time": "16:30", "venue": "Bar da Academia de Juventude e das Artes",
+              "name": "Património Cultural dos Açores: Reflexões para uma estratégia integrada"}),
+            ({"date": next_day, "time": "20:00", "name": "Cinema: Ocean with David Attenborough",
+              "name_en": "Film: Ocean with David Attenborough", "venue": "Auditório do Ramo Grande"},
+             {"date": next_day, "time": "20:00", "name": "“Ocean” com David Attenborough regressa à ilha Terceira",
+              "venue": "Auditório do Ramo Grande, Praia da Vitória"}),
+        )
+
+    def test_same_title_date_and_start_time_is_a_duplicate(self):
+        for stored, candidate in self.pairs():
+            with self.subTest(name=candidate["name"]):
+                self.assertTrue(_duplicate(candidate, [stored]))
+
+    def test_same_title_at_another_venue_and_time_is_not_a_duplicate(self):
+        for stored, candidate in self.pairs():
+            with self.subTest(name=candidate["name"]):
+                self.assertFalse(_duplicate(dict(candidate, time="21:30", venue="Teatro Angrense"), [stored]))
+                self.assertFalse(_duplicate(dict(candidate, date=dt.date(2026, 11, 20)), [stored]))
+
+    def test_academy_rooms_share_one_venue_key(self):
+        keys = {_venue_key(venue) for venue in (
+            self.AJAIT, "Academia de Juventude e das Artes da Ilha Terceira",
+            "Bar da Academia de Juventude e das Artes",
+            "Bar da Academia de Juventude e das Artes da Ilha Terceira")}
+        self.assertEqual(keys, {"ajait"})
+        self.assertEqual(_venue_key("Academia de Juventude e das Artes da Ilha Terceira e Auditório do Ramo Grande"),
+                         "ramo grande")
+
+    def test_same_slot_at_another_venue_is_skipped_and_reported(self):
+        stored, candidate = self.pairs()[0]
+        candidate = dict(candidate, venue="Teatro Angrense", source_url="https://example.test/obra")
+        with tempfile.TemporaryDirectory() as tmp:
+            path, report = Path(tmp) / "events.yml", Path(tmp) / "health.json"
+            path.write_text(yaml.safe_dump([stored], allow_unicode=True), encoding="utf-8")
+            original = path.read_text(encoding="utf-8")
+            with patch.object(sys, "argv", ["test", "--yaml-path", str(path), "--health-report", str(report),
+                                           "--today", "2026-11-14"]):
+                self.assertEqual(run_ingester("fixture", lambda *args: [candidate]), 0)
+            self.assertEqual(path.read_text(encoding="utf-8"), original)
+            health = json.loads(report.read_text())
+            self.assertEqual((health["duplicates"], health["added"]), (1, 0))
+            self.assertEqual(health["corrections"], [{
+                "date": "2026-11-15", "name": "Obra Reunida de Álvaro Monjardino", "field": "venue",
+                "stored": self.AJAIT, "observed": "Teatro Angrense", "source_url": "https://example.test/obra"}])
 
 
 if __name__ == "__main__":

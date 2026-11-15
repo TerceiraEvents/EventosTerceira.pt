@@ -88,6 +88,11 @@ introduce jargon without a demonstrated benefit.
   name similarity. Each one opens or refreshes an `Auto-ingest: ...` PR
   on `auto/<x>-ingest` and fails loudly when its source is degraded
   (`scripts/ingest_health.py`).
+- A candidate with a stored event's title, date and start time is a
+  duplicate whatever its venue string (`same_listing_slot` in
+  `scripts/ingest_common.py`); `run_ingester` reports a differing venue as
+  a `venue` correction. `is_guard_duplicate_name` follows `similar_name?`
+  in `scripts/tests/test_special_event_duplicates.rb`; change both together.
 - Three gates validate every change: `validate event data`
   (`validate-events.yml`, data paths only), `validate templates and
   structured data` (`validate-templates.yml`, every PR) and `validate

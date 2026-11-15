@@ -18,7 +18,7 @@ import yaml
 
 from ingest_common import (
     DEFAULT_MAX_EVENTS, LOOKAHEAD_DAYS, USER_AGENT, YAML_PATH,
-    format_event_yaml, is_similar_match, load_existing_yaml, normalize_name,
+    format_event_yaml, is_similar_match, load_existing_yaml, normalize_name, same_listing_slot,
 )
 
 
@@ -81,6 +81,8 @@ def _venue_key(venue: str, name: str = "") -> str:
         return "ramo grande"
     if "pacos" in text and "concelho" in text:
         return "pacos praia" if "praia" in text else "pacos angra"
+    if "academia de juventude" in text or "academia da juventude" in text:
+        return "ajait"
     if "museu de angra" in text or "igreja de nossa senhora da guia" in text:
         return "museu angra"
     if "sao bento" in text or re.search(r"\bs\. bento\b", text) or (
@@ -88,6 +90,16 @@ def _venue_key(venue: str, name: str = "") -> str:
     ):
         return "sao bento"
     return " ".join(word for word in re.findall(r"\w+", text) if word not in {"de", "do", "da", "e"})
+
+
+def _same_venue(event: dict, other: dict) -> bool:
+    venue = _venue_key(event.get("venue", ""), event.get("name", ""))
+    other_venue = _venue_key(other.get("venue", ""), other.get("name", ""))
+    return bool(venue and other_venue and (venue.startswith(other_venue) or other_venue.startswith(venue)))
+
+
+def _same_source(event: dict, other: dict) -> bool:
+    return any(event.get(key) and event[key] == other.get(key) for key in ("source_uid", "source_url"))
 
 
 def _duplicate(event: dict, existing: list[dict]) -> bool:
@@ -98,13 +110,11 @@ def _duplicate(event: dict, existing: list[dict]) -> bool:
             continue
         if not start <= event["date"] <= end:
             continue
-        if event.get("source_uid") and event["source_uid"] == other.get("source_uid"):
+        if _same_source(event, other):
             return True
-        if event.get("source_url") and event["source_url"] == other.get("source_url"):
+        if same_listing_slot(event, other):
             return True
-        venue = _venue_key(event["venue"], event["name"])
-        other_venue = _venue_key(other.get("venue", ""), other.get("name", ""))
-        if not venue or not other_venue or not (venue.startswith(other_venue) or other_venue.startswith(venue)):
+        if not _same_venue(event, other):
             continue
         film_names = [re.sub(r"^cinema\s*:\s*", "", normalize_name(name))
                       for name in (event["name"], other.get("name", ""))]
@@ -174,6 +184,10 @@ def run_ingester(source: str, discover) -> int:
                         health.corrections.append({"date": start.isoformat(), "name": event["name"],
                                                    "field": "time", "stored": match["time"],
                                                    "observed": event["time"], "source_url": event["source_url"]})
+                    if not _same_venue(event, match) and not _same_source(event, match):
+                        health.corrections.append({"date": start.isoformat(), "name": event["name"],
+                                                   "field": "venue", "stored": match.get("venue", ""),
+                                                   "observed": event["venue"], "source_url": event["source_url"]})
         candidates.sort(key=lambda event: (event["date"], event.get("time") or "", event["name"]))
         health.candidates = len(candidates)
         health.deferred = max(0, len(candidates) - args.max_events)
