@@ -2,11 +2,13 @@
 
 The ingest sources publish a single language (Portuguese, except Visit
 Azores which lists in English) while ``test_event_locales.py`` requires
-both locales per event. This module asks GitHub Models for the missing
-language and stores it in the explicit ``_en`` / ``_pt`` sibling field;
-the bare ``name`` / ``description`` keeps the source text. Translation
-failures never abort ingestion — they surface as health warnings and the
-locale gate stays red until a curator fills the gap.
+both locales per event. This module calls an OpenAI-compatible
+chat-completions endpoint, configured by the environment variables in
+``ENV_VARS``, for the missing language and stores it in the explicit
+``_en`` / ``_pt`` sibling field; the bare ``name`` / ``description``
+keeps the source text. Translation failures never abort ingestion —
+they surface as health warnings and the locale gate stays red until a
+curator fills the gap.
 """
 from __future__ import annotations
 
@@ -16,9 +18,7 @@ import os
 import urllib.error
 import urllib.request
 
-MODELS_URL = "https://models.github.ai/inference/chat/completions"
-MODEL = "openai/gpt-4.1-mini"
-TOKEN_ENV = "GITHUB_MODELS_TOKEN"
+ENV_VARS = ("TRANSLATION_API_URL", "TRANSLATION_API_KEY", "TRANSLATION_MODEL")
 BATCH_SIZE = 10          # events per request
 FIELDS = ("name", "description")
 LANGUAGES = {"pt": "European Portuguese", "en": "English"}
@@ -36,21 +36,22 @@ SYSTEM_PROMPT = (
 
 
 class TranslationError(RuntimeError):
-    """The GitHub Models translation request failed or returned unusable data."""
+    """The translation request failed or returned unusable data."""
 
 
-def github_models_translate(texts: list[str], source: str, target: str) -> list[str]:
-    """Translate ``texts`` from ``source`` into ``target`` via GitHub Models.
+def chat_completions_translate(texts: list[str], source: str, target: str) -> list[str]:
+    """Translate ``texts`` from ``source`` into ``target`` via chat completions.
 
     Returns one translated string per input, in order. Raises
-    TranslationError when the token is missing, the request fails, or the
-    response does not hold exactly one non-empty string per input.
+    TranslationError when the endpoint is not configured, the request
+    fails, or the response does not hold exactly one non-empty string
+    per input.
     """
-    token = os.environ.get(TOKEN_ENV)
-    if not token:
-        raise TranslationError(f"{TOKEN_ENV} is not set")
+    missing = [name for name in ENV_VARS if not os.environ.get(name)]
+    if missing:
+        raise TranslationError(f"translation is not configured: set {', '.join(missing)}")
     payload = {
-        "model": MODEL,
+        "model": os.environ["TRANSLATION_MODEL"],
         "temperature": 0,
         "response_format": {"type": "json_object"},
         "messages": [
@@ -61,9 +62,9 @@ def github_models_translate(texts: list[str], source: str, target: str) -> list[
         ],
     }
     request = urllib.request.Request(
-        MODELS_URL,
+        os.environ["TRANSLATION_API_URL"],
         data=json.dumps(payload).encode("utf-8"),
-        headers={"Authorization": f"Bearer {token}",
+        headers={"Authorization": f"Bearer {os.environ['TRANSLATION_API_KEY']}",
                  "Content-Type": "application/json",
                  "Accept": "application/json"},
     )
@@ -73,13 +74,13 @@ def github_models_translate(texts: list[str], source: str, target: str) -> list[
         translations = json.loads(content)["translations"]
     except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError,
             KeyError, IndexError, TypeError, ValueError) as exc:
-        raise TranslationError(f"GitHub Models request failed: {exc}") from exc
+        raise TranslationError(f"Translation request failed: {exc}") from exc
     if not isinstance(translations, list) or len(translations) != len(texts):
         count = len(translations) if isinstance(translations, list) else "no"
         raise TranslationError(
-            f"GitHub Models returned {count} translations for {len(texts)} inputs")
+            f"Translation endpoint returned {count} translations for {len(texts)} inputs")
     if any(not isinstance(t, str) or not t.strip() for t in translations):
-        raise TranslationError("GitHub Models returned an empty translation")
+        raise TranslationError("Translation endpoint returned an empty translation")
     return translations
 
 
@@ -91,7 +92,7 @@ def translate_events(events: list[dict], source: str, translate=None) -> list[st
     warning string per failed chunk; failures leave events untranslated
     so ingestion continues and the locale gate reports the gap.
     """
-    translate = translate or github_models_translate
+    translate = translate or chat_completions_translate
     target = "en" if source == "pt" else "pt"
     warnings: list[str] = []
     for start in range(0, len(events), BATCH_SIZE):

@@ -33,10 +33,10 @@ class FakeResponse:
         return False
 
 
-def fake_models_endpoint(requests: list):
-    """urlopen side_effect: asserts the Bearer token, returns EN<string> translations."""
+def fake_endpoint(requests: list):
+    """urlopen side_effect: asserts the Bearer key, returns EN<string> translations."""
     def respond(request, **kwargs):
-        assert request.get_header("Authorization") == "Bearer test-token"
+        assert request.get_header("Authorization") == "Bearer test-key"
         payload = json.loads(request.data.decode("utf-8"))
         strings = json.loads(payload["messages"][1]["content"])["strings"]
         requests.append(payload)
@@ -63,8 +63,11 @@ class RunIngesterIntegrationTests(unittest.TestCase):
                  "source_uid": "mercado@fixture"},
             ]
             requests = []
-            with patch.dict(os.environ, {"GITHUB_MODELS_TOKEN": "test-token"}), \
-                 patch("urllib.request.urlopen", side_effect=fake_models_endpoint(requests)), \
+            config = {"TRANSLATION_API_URL": "https://llm.example.test/v1/chat/completions",
+                      "TRANSLATION_API_KEY": "test-key",
+                      "TRANSLATION_MODEL": "test-model"}
+            with patch.dict(os.environ, config), \
+                 patch("urllib.request.urlopen", side_effect=fake_endpoint(requests)), \
                  patch.object(sys, "argv", ["fixture", "--yaml-path", str(path), "--today", "2026-11-15"]):
                 self.assertEqual(run_ingester("fixture", lambda *args: [dict(e) for e in events]), 0)
             written = yaml.safe_load(path.read_text(encoding="utf-8"))
@@ -87,7 +90,8 @@ class RunIngesterIntegrationTests(unittest.TestCase):
                  patch("urllib.request.urlopen") as urlopen, \
                  patch.object(sys, "argv", ["fixture", "--yaml-path", str(path),
                                             "--health-report", str(report), "--today", "2026-11-15"]):
-                env.pop("GITHUB_MODELS_TOKEN", None)
+                for name in ("TRANSLATION_API_URL", "TRANSLATION_API_KEY", "TRANSLATION_MODEL"):
+                    env.pop(name, None)
                 self.assertEqual(run_ingester("fixture", lambda *args: events), 0)
             urlopen.assert_not_called()
             written = yaml.safe_load(path.read_text(encoding="utf-8"))

@@ -19,9 +19,13 @@ from ingest_common import format_event_yaml
 import ingest_touradas
 import test_event_locales
 from ingest_translate import (
-    BATCH_SIZE, MODEL, TOKEN_ENV, TranslationError,
-    github_models_translate, translate_events,
+    BATCH_SIZE, ENV_VARS, TranslationError,
+    chat_completions_translate, translate_events,
 )
+
+CONFIG = {"TRANSLATION_API_URL": "https://llm.example.test/v1/chat/completions",
+          "TRANSLATION_API_KEY": "test-key",
+          "TRANSLATION_MODEL": "test-model"}
 
 
 class FakeResponse:
@@ -38,12 +42,13 @@ class FakeResponse:
         return False
 
 
-def fake_models_endpoint(requests: list[dict], translations=None):
-    """urlopen side_effect: asserts auth/model, returns EN<string> translations."""
+def fake_endpoint(requests: list[dict], translations=None):
+    """urlopen side_effect: asserts url/auth/model, returns EN<string> translations."""
     def respond(request, **kwargs):
         payload = json.loads(request.data.decode("utf-8"))
-        assert request.get_header("Authorization") == "Bearer test-token"
-        assert payload["model"] == MODEL
+        assert request.full_url == "https://llm.example.test/v1/chat/completions"
+        assert request.get_header("Authorization") == "Bearer test-key"
+        assert payload["model"] == "test-model"
         strings = json.loads(payload["messages"][1]["content"])["strings"]
         requests.append(payload)
         out = translations(strings) if translations else [f"EN<{s}>" for s in strings]
@@ -58,21 +63,24 @@ def pt_event(name: str, description: str = "Uma descrição.") -> dict:
             "source_uid": f"{name}@fixture"}
 
 
-class ModelsEndpointTests(unittest.TestCase):
-    def test_missing_token_fails_before_any_request(self):
-        with patch.dict(os.environ) as env, \
-             patch("urllib.request.urlopen") as urlopen:
-            env.pop(TOKEN_ENV, None)
-            with self.assertRaises(TranslationError) as caught:
-                github_models_translate(["Olá"], "pt", "en")
-        self.assertIn(TOKEN_ENV, str(caught.exception))
-        urlopen.assert_not_called()
+class EndpointConfigTests(unittest.TestCase):
+    def test_each_missing_variable_fails_before_any_request(self):
+        for name in ENV_VARS:
+            with self.subTest(missing=name), \
+                 patch.dict(os.environ) as env, \
+                 patch("urllib.request.urlopen") as urlopen:
+                env.update(CONFIG)
+                env.pop(name, None)
+                with self.assertRaises(TranslationError) as caught:
+                    chat_completions_translate(["Olá"], "pt", "en")
+            self.assertIn(name, str(caught.exception))
+            urlopen.assert_not_called()
 
     def test_request_shape_and_translation_order(self):
         requests = []
-        with patch.dict(os.environ, {TOKEN_ENV: "test-token"}), \
-             patch("urllib.request.urlopen", side_effect=fake_models_endpoint(requests)):
-            self.assertEqual(github_models_translate(["A", "B"], "pt", "en"), ["EN<A>", "EN<B>"])
+        with patch.dict(os.environ, CONFIG), \
+             patch("urllib.request.urlopen", side_effect=fake_endpoint(requests)):
+            self.assertEqual(chat_completions_translate(["A", "B"], "pt", "en"), ["EN<A>", "EN<B>"])
         self.assertEqual(len(requests), 1)
 
 
@@ -135,7 +143,7 @@ class TranslateEventsTests(unittest.TestCase):
 class HttpFailureTests(unittest.TestCase):
     def run_translate(self, response_or_error, events=None):
         events = events or [pt_event("Feira")]
-        with patch.dict(os.environ, {TOKEN_ENV: "test-token"}), \
+        with patch.dict(os.environ, CONFIG), \
              patch("urllib.request.urlopen",
                    side_effect=response_or_error if isinstance(response_or_error, Exception)
                    else lambda request, **kw: response_or_error):
@@ -161,7 +169,7 @@ class HttpFailureTests(unittest.TestCase):
         self.assertNotIn("name_en", events[0])
 
     def test_http_error(self):
-        error = HTTPError("https://models.github.ai/inference/chat/completions", 429,
+        error = HTTPError("https://llm.example.test/v1/chat/completions", 429,
                           "Too Many Requests", {}, None)
         warnings, events = self.run_translate(error)
         self.assertEqual(len(warnings), 1)
