@@ -65,7 +65,7 @@ def main() -> int:
         return 0
 
     existing = load_existing_yaml(args.yaml_path)
-    date_to_names, source_uids = build_dedup_index(existing)
+    date_to_events, source_uids = build_dedup_index(existing)
     today = dt.date.today()
     lookahead = today + dt.timedelta(days=LOOKAHEAD_DAYS)
 
@@ -79,7 +79,8 @@ def main() -> int:
         if event["source_uid"] and event["source_uid"] in source_uids:
             skipped_dedup += 1
             continue
-        if matches_existing(event["name"], event["date"], date_to_names):
+        if matches_existing(event["name"], event["date"], date_to_events,
+                            time=event.get("time"), end_date=event.get("end_date")):
             skipped_dedup += 1
             continue
         candidates.append(event)

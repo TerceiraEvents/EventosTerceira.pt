@@ -219,7 +219,7 @@ def main() -> int:
         return 0
 
     existing = load_existing_yaml(args.yaml_path)
-    date_to_names, source_uids = build_dedup_index(existing)
+    date_to_events, source_uids = build_dedup_index(existing)
     logger.info(
         "loaded %d existing events (%d with source_uid)",
         len(existing),
@@ -249,7 +249,7 @@ def main() -> int:
             if uid and uid in source_uids:
                 skipped_dedup += 1
                 continue
-            if matches_existing(summary, date, date_to_names):
+            if matches_existing(summary, date, date_to_events, time=time, end_date=end_date):
                 skipped_dedup += 1
                 continue
             venue, address = parse_location(str(component.get("LOCATION", "")))

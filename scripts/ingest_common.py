@@ -135,6 +135,62 @@ def is_similar_match(a_name: str, b_name: str) -> bool:
     return overlap >= 0.8
 
 
+_GUARD_STOPWORDS = _DEDUP_STOPWORDS | {"with", "com"}
+_GUARD_PREFIX = re.compile(
+    r"^(?:concert|concerto|show|festival|espetaculo|espectaculo|cinema|exposicao|workshop)\s*[:-]\s*"
+)
+
+
+def _guard_name(name: str) -> str:
+    return _GUARD_PREFIX.sub("", normalize_name(name), count=1)
+
+
+def _guard_tokens(name: str) -> frozenset[str]:
+    return frozenset(t for t in re.findall(r"[^\W_]+", _guard_name(name)) if t not in _GUARD_STOPWORDS)
+
+
+def is_guard_duplicate_name(a_name: str, b_name: str) -> bool:
+    """Return True if the stored-data duplicate guard would flag the two names.
+
+    Follows ``similar_name?`` in ``scripts/tests/test_special_event_duplicates.rb``:
+    a leading event-type label is dropped, "with"/"com" count as stopwords, and
+    the Jaccard/overlap thresholds of ``is_similar_match`` apply. The guard
+    compares listings sharing date, time and end date, so an ingester that
+    adds a candidate this function pairs with a stored listing in the same
+    slot produces a PR the guard rejects.
+    """
+    if _guard_name(a_name) == _guard_name(b_name):
+        return True
+    a_tokens, b_tokens = _guard_tokens(a_name), _guard_tokens(b_name)
+    shared = a_tokens & b_tokens
+    if len(a_tokens) < 3 or len(b_tokens) < 3 or len(shared) < 3:
+        return False
+    return (len(shared) / len(a_tokens | b_tokens) >= 0.6
+            or len(shared) / min(len(a_tokens), len(b_tokens)) >= 0.8)
+
+
+def _slot(event: dict) -> tuple[str, str]:
+    end = event.get("end_date")
+    return str(event.get("time") or ""), str(end) if end and end != event.get("date") else ""
+
+
+def same_listing_slot(candidate: dict, stored: dict) -> bool:
+    """Return True if a candidate repeats a stored listing's title, day and start time.
+
+    Both listings need a published start time. The venue is ignored: two independent calendars name one room differently
+    ("X (AJAIT)", "Bar da X") and translate titles ("Cinema: Ocean with ...",
+    "Ocean com ..."), while two different events with the same title, day and
+    minute are not expected.
+    """
+    if not candidate.get("time") or candidate.get("date") != stored.get("date"):
+        return False
+    if _slot(candidate) != _slot(stored):
+        return False
+    return any(stored.get(key) and (is_similar_match(candidate["name"], str(stored[key]))
+                                    or is_guard_duplicate_name(candidate["name"], str(stored[key])))
+               for key in ("name", "name_en"))
+
+
 # ---------------------------------------------------------------------------
 # Description cleanup
 # ---------------------------------------------------------------------------
@@ -186,36 +242,40 @@ def load_existing_yaml(path: Path) -> list[dict]:
 
 def build_dedup_index(
     existing: list[dict],
-) -> tuple[dict[dt.date, list[str]], set[str]]:
+) -> tuple[dict[dt.date, list[dict]], set[str]]:
     """Build a dedup index from existing events.
 
     Returns:
-      - date_to_names: map of date → list of raw names on that date
-        (normalization happens inside is_similar_match).
+      - date_to_events: map of start date → stored events on that date.
       - source_uids: set of source UIDs already present.
     """
-    date_to_names: dict[dt.date, list[str]] = {}
+    date_to_events: dict[dt.date, list[dict]] = {}
     source_uids: set[str] = set()
     for ev in existing:
         if not isinstance(ev, dict):
             continue
-        name = ev.get("name")
-        date = ev.get("date")
-        if name and isinstance(date, dt.date):
-            date_to_names.setdefault(date, []).append(str(name))
+        if ev.get("name") and isinstance(ev.get("date"), dt.date):
+            date_to_events.setdefault(ev["date"], []).append(ev)
         sid = ev.get("source_uid")
         if sid:
             source_uids.add(str(sid))
-    return date_to_names, source_uids
+    return date_to_events, source_uids
 
 
 def matches_existing(
     candidate_name: str,
     candidate_date: dt.date,
-    date_to_names: dict[dt.date, list[str]],
+    date_to_events: dict[dt.date, list[dict]],
+    *,
+    time: str | None = None,
+    end_date: dt.date | None = None,
 ) -> bool:
-    for existing_name in date_to_names.get(candidate_date, []):
-        if is_similar_match(candidate_name, existing_name):
+    """Return True if a stored event on the same date has a similar name or the same slot."""
+    candidate = {"date": candidate_date, "name": candidate_name, "time": time, "end_date": end_date}
+    for stored in date_to_events.get(candidate_date, []):
+        if is_similar_match(candidate_name, str(stored["name"])):
+            return True
+        if same_listing_slot(candidate, stored):
             return True
     return False
 
