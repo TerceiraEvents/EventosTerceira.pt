@@ -11,6 +11,8 @@ extend-ignore-re = ["lang: portugese"]
 [default.extend-words]
 # Portuguese word in the venue name "Escola Profissional da Praia da Vitória".
 Profissional = "Profissional"
+# Portuguese word quoted from a source title in scripts/ingest_ticketline.py.
+internacional = "internacional"
 
 # Portuguese words in _data/special_events.yml that are also English misspellings.
 # Scoped to that file so the rest of the repository keeps the default dictionary.
