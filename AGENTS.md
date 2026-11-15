@@ -110,11 +110,12 @@ introduce jargon without a demonstrated benefit.
 - `scripts/tests/test_event_locales.py` requires English and Portuguese
   titles and descriptions. Ingesters keep the source text in the bare
   `name`/`description` and add the other language as `_en`/`_pt` through
-  `scripts/ingest_translate.py` (GitHub Models, `GITHUB_MODELS_TOKEN` from
-  the workflow's `models: read` token); touradas use hand-written English
-  templates. When translation fails the ingest still opens its PR, the run
-  logs a warning, and the locale gate stays red until someone adds the
-  missing fields.
+  `scripts/ingest_translate.py`, an OpenAI-compatible chat-completions
+  call configured by the repository variables `TRANSLATION_API_URL` and
+  `TRANSLATION_MODEL` and the secret `TRANSLATION_API_KEY`; touradas use
+  hand-written English templates. Without that configuration, or when a
+  request fails, the ingest still opens its PR, logs a warning, and the
+  locale gate stays red until someone adds the missing fields.
 - `Gemfile.lock` pins the Ruby 3.3 bundle (github-pages 233, Jekyll 3.10).
 
 ## Verification boundaries
