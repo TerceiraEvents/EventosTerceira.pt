@@ -135,7 +135,12 @@ def _is_read_only(args):
 
 
 def gh(args, dry_run=False):
-    """Run a gh CLI call and return stdout (empty for mutating calls)."""
+    """Run a gh CLI call and return its stdout.
+
+    Mutating calls print what they created, such as the run URL of
+    `workflow run` or the comment URL of `pr comment`. In dry-run mode they
+    print the command instead and return "".
+    """
     cmd = ["gh"] + args
     if dry_run and not _is_read_only(args):
         print("DRY RUN:", " ".join(cmd))
@@ -146,6 +151,24 @@ def gh(args, dry_run=False):
 
 def gh_json(args, dry_run=False):
     return json.loads(gh(args, dry_run=dry_run))
+
+
+def run_gh(args, dry_run=False):
+    """Run a gh CLI call; parse stdout as JSON for read-only calls only.
+
+    Read-only calls ask for JSON, so an empty reply is None. Mutating calls
+    print a URL or a status line, which is returned as the raw string.
+    """
+    out = gh(args, dry_run=dry_run)
+    if not _is_read_only(args):
+        return out
+    return json.loads(out) if out.strip() else None
+
+
+def _printed(out):
+    """` <stdout>` to append to a log line, or "" when the call printed nothing."""
+    text = out.strip() if isinstance(out, str) else ""
+    return f" {text}" if text else ""
 
 
 def log(msg, summary_file=None):
@@ -170,8 +193,7 @@ def main(argv=None, gh_call=None, sleep=time.sleep):
     dry_run = args.dry_run
     if gh_call is None:
         def gh_call(a):
-            out = gh(a, dry_run=dry_run)
-            return json.loads(out) if out.strip() else None
+            return run_gh(a, dry_run=dry_run)
     deadline = time.monotonic() + args.timeout_minutes * 60
     workflows_dir = os.path.join(
         os.path.dirname(__file__), os.pardir, ".github", "workflows"
@@ -241,9 +263,12 @@ def main(argv=None, gh_call=None, sleep=time.sleep):
                     break
                 if decision.action == "dispatch":
                     for gate in decision.detail:
-                        gh_call(["workflow", "run", gate, "--ref", branch])
+                        out = gh_call(["workflow", "run", gate, "--ref", branch])
                         dispatched.add((gate, sha))
-                        log(f"#{number} dispatched {gate} on {sha[:7]}", summary)
+                        log(
+                            f"#{number} dispatched {gate} on {sha[:7]}{_printed(out)}",
+                            summary,
+                        )
                     if dry_run:
                         break
                     continue
@@ -264,8 +289,11 @@ def main(argv=None, gh_call=None, sleep=time.sleep):
                     if newest and newest[0].get("status") in ("queued", "in_progress"):
                         log(f"#{number} {workflow} already running; skipping", summary)
                     else:
-                        gh_call(["workflow", "run", workflow, "--ref", "main"])
-                        log(f"#{number} regenerate: {workflow} on main", summary)
+                        out = gh_call(["workflow", "run", workflow, "--ref", "main"])
+                        log(
+                            f"#{number} regenerate: {workflow} on main{_printed(out)}",
+                            summary,
+                        )
                     break
                 if decision.action == "report":
                     marker = MARKER.format(sha=sha)
@@ -305,8 +333,8 @@ def main(argv=None, gh_call=None, sleep=time.sleep):
                     break
         if merged_any:
             for gate in GATES:
-                gh_call(["workflow", "run", gate, "--ref", "main"])
-                log(f"dispatched {gate} on main", summary)
+                out = gh_call(["workflow", "run", gate, "--ref", "main"])
+                log(f"dispatched {gate} on main{_printed(out)}", summary)
     finally:
         if summary:
             summary.close()

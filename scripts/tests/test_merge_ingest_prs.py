@@ -2,8 +2,9 @@
 
 The pure classification logic (decide/latest_run/ingest_workflow/
 report_body) is exercised against synthetic `gh` JSON payloads, the driver
-against an injected fake `gh`, and the workflow contract against the real
-files under .github/workflows/.
+against an injected fake `gh_call` and, through its default wrapper, against
+a fake `gh` that prints realistic CLI output, and the workflow contract
+against the real files under .github/workflows/.
 
 Run from the repo root:
 
@@ -11,9 +12,13 @@ Run from the repo root:
 """
 from __future__ import annotations
 
+import contextlib
+import io
+import json
 import os
 import sys
 import unittest
+from unittest import mock
 
 import yaml
 
@@ -273,6 +278,156 @@ class DriverTests(unittest.TestCase):
             "expected no new comment when the sha marker is already present",
         )
         self.assertFalse(any(c[:2] == ["pr", "merge"] for c in calls))
+
+
+BRANCH = "auto/cmah-ingest"
+
+
+class FakeGh:
+    """Stand-in for `merge_ingest_prs.gh` that prints what the real CLI prints.
+
+    Read-only calls return JSON text. Mutating calls return what `gh` writes
+    to stdout: the created run URL for `workflow run`, the comment URL for
+    `pr comment`, and a status line for `pr merge`; none of it is JSON.
+    A gate has a finished run on the PR head once it was dispatched on the
+    branch (or is listed in `dispatched` from the start).
+    """
+
+    RUN_URL = "https://github.com/o/r/actions/runs/1"
+    COMMENT_URL = "https://github.com/o/r/pull/296#issuecomment-1"
+    MERGE_TEXT = "Squashed and merged pull request #296\n"
+
+    def __init__(self, conclusion="success", dispatched=(), main_changes=()):
+        self.conclusion = conclusion
+        self.dispatched = set(dispatched)
+        self.main_changes = list(main_changes)
+        self.calls = []
+
+    def __call__(self, args, dry_run=False):
+        self.calls.append(args)
+        if args[:2] == ["pr", "list"]:
+            return json.dumps([pr()])
+        if args[:2] == ["pr", "view"]:
+            if args[-1] == "comments":
+                return json.dumps({"comments": []})
+            return json.dumps({"headRefOid": SHA, "state": "OPEN"})
+        if args[0] == "api":
+            return json.dumps(self.main_changes)
+        if args[:2] == ["run", "list"]:
+            gate = args[args.index("--workflow") + 1]
+            if gate not in self.dispatched:
+                return "[]"
+            return json.dumps([{
+                "databaseId": 1,
+                "headSha": SHA,
+                "status": "completed",
+                "conclusion": self.conclusion,
+                "url": f"https://github.com/o/r/actions/runs/{gate}",
+                "createdAt": "2026-01-01T00:00:00Z",
+            }])
+        if args[:2] == ["workflow", "run"]:
+            if args[args.index("--ref") + 1] == BRANCH:
+                self.dispatched.add(args[2])
+            return self.RUN_URL + "\n"
+        if args[:2] == ["pr", "comment"]:
+            return self.COMMENT_URL + "\n"
+        if args[:2] == ["pr", "merge"]:
+            return self.MERGE_TEXT
+        raise AssertionError(f"unexpected gh call: {args}")
+
+
+def run_default_main(fake):
+    """Run `main()` with its default gh wrapper over `fake`; return (exit code, stdout)."""
+    out = io.StringIO()
+    with (
+        mock.patch.object(m, "gh", fake),
+        mock.patch.dict(os.environ),
+        contextlib.redirect_stdout(out),
+    ):
+        os.environ.pop("GITHUB_STEP_SUMMARY", None)
+        code = m.main([], gh_call=None, sleep=lambda s: None)
+    return code, out.getvalue()
+
+
+class DefaultWrapperTests(unittest.TestCase):
+    """Drive `main()` through the real `gh_call` wrapper, which the injected
+    `gh_call` fakes in DriverTests bypass."""
+
+    def test_dispatch_then_merge_tolerates_urls_on_stdout(self):
+        fake = FakeGh()
+        code, out = run_default_main(fake)
+        self.assertEqual(code, 0)
+        for gate in m.GATES:
+            self.assertIn(["workflow", "run", gate, "--ref", BRANCH], fake.calls)
+            self.assertIn(["workflow", "run", gate, "--ref", "main"], fake.calls)
+            self.assertIn(
+                f"#296 dispatched {gate} on {SHA[:7]} {fake.RUN_URL}\n", out
+            )
+            self.assertIn(f"dispatched {gate} on main {fake.RUN_URL}\n", out)
+        merge = ["pr", "merge", "296", "--squash", "--match-head-commit", SHA]
+        self.assertIn(merge, fake.calls)
+        self.assertLess(
+            fake.calls.index(merge),
+            fake.calls.index(["workflow", "run", m.GATES[0], "--ref", "main"]),
+        )
+
+    def test_failed_gate_is_reported_without_crashing(self):
+        fake = FakeGh(conclusion="failure", dispatched=m.GATES)
+        code, out = run_default_main(fake)
+        self.assertEqual(code, 0)
+        comments = [c for c in fake.calls if c[:2] == ["pr", "comment"]]
+        self.assertEqual(len(comments), 1)
+        self.assertFalse(any(c[:2] == ["pr", "merge"] for c in fake.calls))
+        self.assertIn("#296 report: validate-events.yml failure", out)
+
+    def test_regenerate_dispatch_logs_run_url(self):
+        fake = FakeGh(main_changes=["_data/special_events.yml"])
+        code, out = run_default_main(fake)
+        self.assertEqual(code, 0)
+        self.assertIn(["workflow", "run", "ingest-cmah.yml", "--ref", "main"], fake.calls)
+        self.assertIn(
+            f"#296 regenerate: ingest-cmah.yml on main {fake.RUN_URL}\n", out
+        )
+
+
+class RunGhTests(unittest.TestCase):
+    def call(self, args, stdout, dry_run=False):
+        seen = []
+
+        def fake(a, dry_run=False):
+            seen.append((a, dry_run))
+            return stdout
+
+        with mock.patch.object(m, "gh", fake):
+            result = m.run_gh(args, dry_run=dry_run)
+        self.assertEqual(seen, [(args, dry_run)])
+        return result
+
+    def test_read_only_calls_parse_json(self):
+        for args in (
+            ["pr", "list", "--json", "number"],
+            ["pr", "view", "1", "--json", "state"],
+            ["run", "list", "--json", "status"],
+            ["api", "repos/{owner}/{repo}/compare/a...b"],
+        ):
+            with self.subTest(args=args):
+                self.assertEqual(self.call(args, '{"a": [1]}'), {"a": [1]})
+
+    def test_read_only_call_with_empty_stdout_is_none(self):
+        self.assertIsNone(self.call(["run", "list", "--json", "status"], "\n"))
+
+    def test_mutating_calls_return_raw_stdout(self):
+        for args, stdout in (
+            (["workflow", "run", "validate-events.yml", "--ref", "x"], FakeGh.RUN_URL + "\n"),
+            (["pr", "comment", "1", "--body-file", "f"], FakeGh.COMMENT_URL + "\n"),
+            (["pr", "merge", "1", "--squash"], FakeGh.MERGE_TEXT),
+            (["pr", "merge", "1", "--squash"], ""),
+        ):
+            with self.subTest(args=args, stdout=stdout):
+                self.assertEqual(self.call(args, stdout), stdout)
+
+    def test_dry_run_is_forwarded(self):
+        self.assertEqual(self.call(["pr", "merge", "1"], "", dry_run=True), "")
 
 
 if __name__ == "__main__":
