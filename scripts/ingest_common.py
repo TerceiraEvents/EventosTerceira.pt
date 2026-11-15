@@ -10,6 +10,7 @@ module for the common pieces.
 from __future__ import annotations
 
 import datetime as dt
+import functools
 import html
 import re
 import unicodedata
@@ -24,6 +25,7 @@ import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 YAML_PATH = REPO_ROOT / "_data" / "special_events.yml"
+VENUE_LOCALITIES_PATH = REPO_ROOT / "_data" / "venue_localities.yml"
 USER_AGENT = "TerceiraEventsBot/1.0 (+https://eventosterceira.pt)"
 DESCRIPTION_MAX_CHARS = 500
 DEFAULT_MAX_EVENTS = 20
@@ -53,6 +55,15 @@ _CATEGORY_LABELS = frozenset(
         "festival", "formacao", "palestra", "teatro", "workshop",
     }
 )
+
+# Words that join a title to its subject in English and Portuguese ("Ocean
+# with David Attenborough", "Ocean com David Attenborough"); ignored when one
+# title is compared with the words of another.
+_CONNECTOR_WORDS = frozenset({"com", "with"})
+
+# Locality values a record or venue alias may carry (``locality`` in
+# ``_data/special_events.yml``, ``_data/venue_localities.yml``).
+_KNOWN_LOCALITIES = frozenset({"angra", "praia", "other"})
 
 
 def normalize_name(name: str) -> str:
@@ -84,12 +95,120 @@ def _tokenize(name: str) -> frozenset[str]:
     return frozenset(t for t in tokens if t not in _DEDUP_STOPWORDS)
 
 
+def _words(text: str) -> str:
+    """Join the alphanumeric runs of a normalized title with single spaces."""
+    return " ".join(re.findall(r"[^\W_]+", text))
+
+
 def _split_category_label(name: str) -> tuple[str | None, str]:
-    """Split a leading event-type label ("Cinema: ") from a normalized title."""
+    """Split a leading event-type label ("Cinema: ") from a title.
+
+    The second item is the title's words: normalized, with every
+    non-alphanumeric character (punctuation, quotes, dashes) reduced to a
+    single space.
+    """
     label, separator, rest = normalize_name(name).partition(":")
     if separator and label.strip() in _CATEGORY_LABELS and rest.strip():
-        return label.strip(), rest.strip()
-    return None, normalize_name(name)
+        return label.strip(), _words(rest)
+    return None, _words(normalize_name(name))
+
+
+def same_title(a_name: str, b_name: str) -> bool:
+    """Return True if two titles are equal once case, accents and punctuation are ignored.
+
+    A leading event-type label is ignored on one side or both, but two
+    different labels ("Concerto: X", "Cinema: X") are different titles.
+    """
+    (a_label, a_core), (b_label, b_core) = _split_category_label(a_name), _split_category_label(b_name)
+    return bool(a_core) and a_core == b_core and (a_label is None or b_label is None or a_label == b_label)
+
+
+def is_contained_title(a_name: str, b_name: str, minimum: int = 3) -> bool:
+    """Return True if every content word of one title is in the other.
+
+    Content words are the title's words without stopwords, connector words
+    ("com", "with") and a leading event-type label; order and repetition are
+    ignored. At least ``minimum`` words must be contained, so the rule matches
+    "Cinema: Ocean with David Attenborough" with "“Ocean” com David
+    Attenborough regressa à ilha Terceira" and never a one- or two-word title.
+    Two different event-type labels are different titles. A title may also be
+    compared by the words after its first colon ("Mesa redonda: Para Lá das
+    Colunas de Hércules" is contained in "Para lá das Colunas de Hércules: a
+    descoberta dos Açores"), which drops a series name or label that the other
+    title does not repeat.
+    """
+    (a_label, a_core), (b_label, b_core) = _split_category_label(a_name), _split_category_label(b_name)
+    if a_label is not None and b_label is not None and a_label != b_label:
+        return False
+    skipped = _DEDUP_STOPWORDS | _CONNECTOR_WORDS
+
+    def content(text: str) -> frozenset[str]:
+        return frozenset(text.split()) - skipped
+
+    a_words, b_words = content(a_core), content(b_core)
+    smaller, larger = sorted((a_words, b_words), key=len)
+    if len(smaller) >= minimum and smaller <= larger:
+        return True
+    for name, other_words in ((a_name, b_words), (b_name, a_words)):
+        _, colon, subtitle = normalize_name(name).partition(":")
+        words = content(_words(subtitle))
+        if colon and len(words) >= minimum and words <= other_words:
+            return True
+    return False
+
+
+def start_time(value) -> str | None:
+    """Return the ``HH:MM`` a time field starts at, or None ("15:00–18:00" starts at 15:00)."""
+    match = re.match(r"\s*(\d{1,2})[:h](\d{2})", str(value or ""))
+    return f"{int(match.group(1)):02d}:{match.group(2)}" if match else None
+
+
+@functools.lru_cache(maxsize=None)
+def _locality_aliases(path: Path) -> tuple[tuple[str, str], ...]:
+    with path.open("r", encoding="utf-8") as f:
+        venues = yaml.safe_load(f)
+    return tuple(
+        (normalize_name(alias), venue["locality"])
+        for venue in venues
+        for alias in venue.get("aliases", [])
+    )
+
+
+def venue_locality(venue: str | None, locality: str | None = None) -> str | None:
+    """Return the locality of a record or venue string, or None when it is not known.
+
+    A record's own ``locality`` wins. Otherwise a venue that contains exactly
+    one locality's alias from ``_data/venue_localities.yml`` takes that locality.
+    """
+    if locality in _KNOWN_LOCALITIES:
+        return locality
+    text = normalize_name(str(venue or ""))
+    found = {place for alias, place in _locality_aliases(VENUE_LOCALITIES_PATH) if alias and alias in text}
+    return found.pop() if len(found) == 1 else None
+
+
+def venues_in_conflict(event: dict, other: dict) -> bool:
+    """Return True if both records name venues in two different known localities."""
+    place = venue_locality(event.get("venue"), event.get("locality"))
+    other_place = venue_locality(other.get("venue"), other.get("locality"))
+    return place is not None and other_place is not None and place != other_place
+
+
+def same_start_time(event: dict, other: dict) -> bool:
+    """Return True if both records state a start time and it is the same."""
+    time = start_time(event.get("time"))
+    return time is not None and time == start_time(other.get("time"))
+
+
+def same_instant(event: dict, other: dict) -> bool:
+    """Return True if two records have the same title and start time.
+
+    The caller has already checked that ``event`` falls on a day ``other``
+    covers; neither the venue nor the language of the description matters.
+    """
+    return same_start_time(event, other) and any(
+        same_title(event["name"], other.get(key) or "") for key in ("name", "name_en")
+    )
 
 
 def is_similar_match(a_name: str, b_name: str) -> bool:
@@ -110,15 +229,12 @@ def is_similar_match(a_name: str, b_name: str) -> bool:
     keeps false positives low on generic short names like "Cinema: X".
 
     Short titles cannot reach those thresholds, so two names also match when
-    they are identical once a leading event-type label is removed from one or
-    both ("ROMANCE À ITALIANA" and "Cinema: Romance à Italiana"). Two
-    different labels on the same title ("Concerto: X", "Cinema: X") do not
-    match.
+    they are the same title (``same_title``): identical once case, accents,
+    punctuation and a leading event-type label are ignored ("ROMANCE À
+    ITALIANA" and "Cinema: Romance à Italiana"). Two different labels on the
+    same title ("Concerto: X", "Cinema: X") do not match.
     """
-    if normalize_name(a_name) == normalize_name(b_name):
-        return True
-    (a_label, a_core), (b_label, b_core) = _split_category_label(a_name), _split_category_label(b_name)
-    if a_core == b_core and (a_label is None or b_label is None or a_label == b_label):
+    if normalize_name(a_name) == normalize_name(b_name) or same_title(a_name, b_name):
         return True
     a_tokens = _tokenize(a_name)
     b_tokens = _tokenize(b_name)

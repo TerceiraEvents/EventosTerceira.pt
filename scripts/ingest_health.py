@@ -18,12 +18,17 @@ import yaml
 
 from ingest_common import (
     DEFAULT_MAX_EVENTS, LOOKAHEAD_DAYS, USER_AGENT, YAML_PATH,
-    format_event_yaml, is_similar_match, load_existing_yaml, normalize_name,
+    format_event_yaml, is_contained_title, is_similar_match, load_existing_yaml,
+    normalize_name, same_instant, same_start_time, venues_in_conflict,
 )
 
 
 class SourceError(RuntimeError):
     """A source cannot provide a complete, recognized event listing."""
+
+
+class VenueConflict(SourceError):
+    """One title and start time is listed at venues in two different localities."""
 
 
 @dataclass
@@ -79,6 +84,8 @@ def _venue_key(venue: str, name: str = "") -> str:
         return "cccah"
     if "ramo grande" in text:
         return "ramo grande"
+    if "ajait" in text or all(word in text for word in ("academia", "juventude", "artes")):
+        return "ajait"
     if "pacos" in text and "concelho" in text:
         return "pacos praia" if "praia" in text else "pacos angra"
     if "museu de angra" in text or "igreja de nossa senhora da guia" in text:
@@ -91,6 +98,12 @@ def _venue_key(venue: str, name: str = "") -> str:
 
 
 def _duplicate(event: dict, existing: list[dict]) -> bool:
+    """Return True if ``event`` repeats a record of ``existing``.
+
+    Raises ``VenueConflict`` when the only records with its title and start
+    time are in another locality.
+    """
+    conflict = None
     for other in existing:
         start = other.get("date")
         end = other.get("end_date", start)
@@ -104,7 +117,17 @@ def _duplicate(event: dict, existing: list[dict]) -> bool:
             return True
         venue = _venue_key(event["venue"], event["name"])
         other_venue = _venue_key(other.get("venue", ""), other.get("name", ""))
-        if not venue or not other_venue or not (venue.startswith(other_venue) or other_venue.startswith(venue)):
+        venues_agree = bool(venue and other_venue and (venue.startswith(other_venue) or other_venue.startswith(venue)))
+        if same_instant(event, other):
+            if venues_agree or not venues_in_conflict(event, other):
+                return True
+            conflict = conflict or VenueConflict(
+                f"{event['name']!r} on {event['date']} at {event.get('time')} is listed at {event['venue']!r} "
+                f"and already stored at {other.get('venue')!r}, in a different locality; "
+                "review which venue is right"
+            )
+            continue
+        if not venues_agree:
             continue
         film_names = [re.sub(r"^cinema\s*:\s*", "", normalize_name(name))
                       for name in (event["name"], other.get("name", ""))]
@@ -112,6 +135,10 @@ def _duplicate(event: dict, existing: list[dict]) -> bool:
         if film_names[0] == film_names[1]:
             return True
         if any(is_similar_match(event["name"], other.get(key, "")) for key in ("name", "name_en")):
+            return True
+        if same_start_time(event, other) and any(
+            is_contained_title(event["name"], other.get(key) or "") for key in ("name", "name_en")
+        ):
             return True
         names = [normalize_name(event["name"]), normalize_name(other.get("name", ""))]
         for first, second in (names, names[::-1]):
@@ -129,7 +156,26 @@ def _duplicate(event: dict, existing: list[dict]) -> bool:
         description_words = set(re.findall(r"\w+", normalize_name(event.get("description", ""))))
         if len(words) >= 3 and words <= description_words:
             return True
+    if conflict:
+        raise conflict
     return False
+
+
+def _find_duplicate(event: dict, others: list[dict]) -> dict | None:
+    """Return the first record of ``others`` that ``event`` repeats, or None.
+
+    A ``VenueConflict`` is raised only when no record matches.
+    """
+    conflict = None
+    for other in others:
+        try:
+            if _duplicate(event, [other]):
+                return other
+        except VenueConflict as exc:
+            conflict = conflict or exc
+    if conflict:
+        raise conflict
+    return None
 
 
 def run_ingester(source: str, discover) -> int:
@@ -165,7 +211,7 @@ def run_ingester(source: str, discover) -> int:
             if end < args.today or start > lookahead:
                 health.outside_window += 1
             else:
-                match = next((other for other in existing + candidates if _duplicate(event, [other])), None)
+                match = _find_duplicate(event, existing + candidates)
                 if match is None:
                     candidates.append(event)
                 else:
