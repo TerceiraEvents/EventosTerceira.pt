@@ -23,6 +23,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      models: read
     steps:
       - uses: actions/checkout@v4
 
@@ -35,6 +36,8 @@ jobs:
 
       - name: Run ingestion script
         run: python scripts/ingest_whatson_azores.py --health-report "${{ runner.temp }}/source-health.json"
+        env:
+          GITHUB_MODELS_TOKEN: ${{ github.token }}
 
       - name: Preserve source health
         if: always()
