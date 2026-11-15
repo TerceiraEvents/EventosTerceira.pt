@@ -39,6 +39,11 @@ class TranslationError(RuntimeError):
     """The translation request failed or returned unusable data."""
 
 
+def translation_configured() -> bool:
+    """True when every variable in ``ENV_VARS`` is set and non-empty."""
+    return all(os.environ.get(name) for name in ENV_VARS)
+
+
 def chat_completions_translate(texts: list[str], source: str, target: str) -> list[str]:
     """Translate ``texts`` from ``source`` into ``target`` via chat completions.
 
@@ -90,9 +95,14 @@ def translate_events(events: list[dict], source: str, translate=None) -> list[st
     The bare ``name``/``description`` keeps the ``source``-language text;
     the translation goes into the explicit sibling field. Returns one
     warning string per failed chunk; failures leave events untranslated
-    so ingestion continues and the locale gate reports the gap.
+    so ingestion continues and the locale gate reports the gap. With the
+    default endpoint and no configuration, nothing is translated and no
+    warning is raised.
     """
-    translate = translate or chat_completions_translate
+    if translate is None:
+        if not translation_configured():
+            return []
+        translate = chat_completions_translate
     target = "en" if source == "pt" else "pt"
     warnings: list[str] = []
     for start in range(0, len(events), BATCH_SIZE):

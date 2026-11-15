@@ -77,7 +77,7 @@ class RunIngesterIntegrationTests(unittest.TestCase):
             self.assertEqual(batukes["name_en"], "EN<BATUKES – UM DIA DE NATAL>")
             self.assertEqual(batukes["description_en"], "EN<Um dia de Natal onde a imaginação ganha ritmo…>")
 
-    def test_translation_failure_still_writes_source_events(self):
+    def test_unconfigured_translation_changes_nothing(self):
         with tempfile.TemporaryDirectory() as tmp:
             path, report = Path(tmp) / "events.yml", Path(tmp) / "health.json"
             path.write_text("[]\n", encoding="utf-8")
@@ -99,7 +99,30 @@ class RunIngesterIntegrationTests(unittest.TestCase):
             self.assertNotIn("name_en", written[0])
             health = json.loads(report.read_text())
             self.assertEqual(health["status"], "healthy")
+            self.assertEqual(health["warnings"], [])
+
+    def test_failing_endpoint_still_writes_source_events(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path, report = Path(tmp) / "events.yml", Path(tmp) / "health.json"
+            path.write_text("[]\n", encoding="utf-8")
+            events = [{"date": dt.date(2026, 12, 13), "name": "Feira",
+                       "venue": "Auditório do Ramo Grande",
+                       "description": "Uma descrição.",
+                       "source_url": "https://example.test/x",
+                       "source_uid": "Feira@fixture"}]
+            config = {"TRANSLATION_API_URL": "https://llm.example.test/v1/chat/completions",
+                      "TRANSLATION_API_KEY": "test-key",
+                      "TRANSLATION_MODEL": "test-model"}
+            with patch.dict(os.environ, config), \
+                 patch("urllib.request.urlopen", side_effect=OSError("boom")), \
+                 patch.object(sys, "argv", ["fixture", "--yaml-path", str(path),
+                                            "--health-report", str(report), "--today", "2026-11-15"]):
+                self.assertEqual(run_ingester("fixture", lambda *args: events), 0)
+            written = yaml.safe_load(path.read_text(encoding="utf-8"))
+            self.assertNotIn("name_en", written[0])
+            health = json.loads(report.read_text())
             self.assertTrue(any("Translation" in w for w in health["warnings"]))
+            self.assertNotIn("test-key", json.dumps(health))
 
 
 if __name__ == "__main__":

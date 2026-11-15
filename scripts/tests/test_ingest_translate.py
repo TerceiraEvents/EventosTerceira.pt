@@ -128,6 +128,19 @@ class TranslateEventsTests(unittest.TestCase):
         self.assertEqual(len(requests), 2)
         self.assertEqual([len(r[0]) for r in requests], [BATCH_SIZE * 2, 4])
 
+    def test_unconfigured_default_endpoint_is_a_silent_noop(self):
+        for blank in ("", None):
+            with self.subTest(key=blank), patch.dict(os.environ, CONFIG) as env, \
+                 patch("urllib.request.urlopen") as urlopen:
+                if blank is None:
+                    env.pop("TRANSLATION_API_KEY")
+                else:
+                    env["TRANSLATION_API_KEY"] = blank
+                events = [pt_event("Feira", "Descrição")]
+                self.assertEqual(translate_events(events, "pt"), [])
+            urlopen.assert_not_called()
+            self.assertEqual(events, [pt_event("Feira", "Descrição")])
+
     def test_failure_warns_and_keeps_source_text(self):
         def failing(texts, source, target):
             raise TranslationError("boom")
