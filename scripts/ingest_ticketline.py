@@ -44,6 +44,7 @@ from ingest_common import (
     load_existing_yaml,
     matches_existing,
 )
+from ingest_translate import translate_events
 
 BASE_URL = "https://www.ticketline.pt"
 LISTING_URL = f"{BASE_URL}/pesquisa?district=29"  # Ilha Terceira
@@ -367,6 +368,7 @@ def main() -> int:
         )
         candidates = candidates[: args.max_events]
 
+    translate_events(candidates, "pt")
     block = f"\n# Auto-ingested from Ticketline ({today.isoformat()})\n"
     for ev in candidates:
         block += format_event_yaml(ev) + "\n"

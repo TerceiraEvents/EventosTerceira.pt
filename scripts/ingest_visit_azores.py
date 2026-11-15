@@ -29,6 +29,7 @@ from ingest_common import (
     matches_existing,
 )
 from ingest_jsonld import JsonLdSource, harvest
+from ingest_translate import translate_events
 
 SOURCE = JsonLdSource(
     slug="visitazores.com",
@@ -96,6 +97,7 @@ def main() -> int:
         logger.warning("capping %d → %d", len(candidates), args.max_events)
         candidates = candidates[: args.max_events]
 
+    translate_events(candidates, "en")
     block = f"\n# Auto-ingested from Visit Azores ({today.isoformat()})\n"
     for ev in candidates:
         block += format_event_yaml(ev) + "\n"

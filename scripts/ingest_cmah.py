@@ -38,6 +38,7 @@ from ingest_common import (
     load_existing_yaml,
     matches_existing,
 )
+from ingest_translate import translate_events
 
 CMAH_ICAL_URL = "https://angradoheroismo.pt/events.ics"
 
@@ -297,6 +298,7 @@ def main() -> int:
         )
         candidates = candidates[: args.max_events]
 
+    translate_events(candidates, "pt")
     block = f"\n# Auto-ingested from CMAH ({today.isoformat()})\n"
     for ev in candidates:
         block += format_event_yaml(ev) + "\n"
