@@ -37,13 +37,16 @@ from ingest_common import (
     DEFAULT_MAX_EVENTS,
     LOOKAHEAD_DAYS,
     YAML_PATH,
+    append_events_block,
     build_dedup_index,
     build_map_url,
     clean_description,
     format_event_yaml,
     load_existing_yaml,
     matches_existing,
+    report_warnings,
 )
+from ingest_translate import translate_events
 
 BASE_URL = "https://www.ticketline.pt"
 LISTING_URL = f"{BASE_URL}/pesquisa?district=29"  # Ilha Terceira
@@ -367,6 +370,7 @@ def main() -> int:
         )
         candidates = candidates[: args.max_events]
 
+    report_warnings("Ticketline", translate_events(candidates, "pt"))
     block = f"\n# Auto-ingested from Ticketline ({today.isoformat()})\n"
     for ev in candidates:
         block += format_event_yaml(ev) + "\n"
@@ -376,8 +380,7 @@ def main() -> int:
         logger.info("[dry-run] would add %d events", len(candidates))
         return 0
 
-    with args.yaml_path.open("a", encoding="utf-8") as f:
-        f.write(block)
+    append_events_block(args.yaml_path, block, len(candidates))
 
     logger.info("added %d events to %s", len(candidates), args.yaml_path)
     return 0

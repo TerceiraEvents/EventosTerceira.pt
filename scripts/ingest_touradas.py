@@ -39,7 +39,7 @@ import logging
 import re
 import sys
 import urllib.request
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 
 from ingest_common import (
@@ -191,14 +191,19 @@ def harvest_junta(source: JuntaSource, today: dt.date) -> list[dict]:
         description_bits = [
             "Tourada à corda — tradicional tourada de rua com toiro preso por uma corda.",
         ]
+        description_en_bits = [
+            "Tourada à corda — traditional street bullfight with a bull held on a rope.",
+        ]
         if ganadeiro:
             description_bits.append(f"Ganadeiro: {ganadeiro}.")
+            description_en_bits.append(f"Ganadeiro: {ganadeiro}.")
         description = " ".join(description_bits)
 
         events.append(
             {
                 "date": date,
                 "name": name,
+                "name_en": f"Tourada à Corda (Rope Bullfight) — {source.venue}",
                 "venue": source.venue,
                 "address": source.address,
                 "map_url": source.map_url or build_map_url(source.venue, "Praia da Vitória"
@@ -206,6 +211,7 @@ def harvest_junta(source: JuntaSource, today: dt.date) -> list[dict]:
                                                             "Angra do Heroísmo"),
                 "time": None,
                 "description": description,
+                "description_en": " ".join(description_en_bits),
                 "source_url": source.calendar_url,
                 "source_uid": f"{source.slug}-{date.isoformat()}@touradas",
                 "tags": ["bullfighting", "outdoor"],

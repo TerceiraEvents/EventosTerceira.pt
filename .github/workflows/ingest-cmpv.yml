@@ -36,6 +36,10 @@ jobs:
 
       - name: Run ingestion script
         run: python scripts/ingest_cmpv.py --health-report "${{ runner.temp }}/source-health.json"
+        env:
+          TRANSLATION_API_URL: ${{ vars.TRANSLATION_API_URL }}
+          TRANSLATION_API_KEY: ${{ secrets.TRANSLATION_API_KEY }}
+          TRANSLATION_MODEL: ${{ vars.TRANSLATION_MODEL }}
 
       - name: Preserve source health
         if: always()

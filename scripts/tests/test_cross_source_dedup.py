@@ -161,6 +161,39 @@ class NotDuplicateTests(unittest.TestCase):
                                                   "Para lá das Colunas de Hércules: a descoberta dos Açores"))
 
 
+class TranslatedSiblingTests(unittest.TestCase):
+    """A record stores its title in the source language and the translation in a sibling."""
+
+    PT = event("Mercado de Natal em Angra", "2026-12-20", "18:00", "Praça Velha")
+    EN = event("Christmas Market in Angra", "2026-12-20", "18:00", "Praça Velha")
+
+    def stored(self, bare, sibling_key, sibling):
+        return {**bare, sibling_key: sibling}
+
+    def test_pt_candidate_matches_visit_azores_record_with_name_pt(self):
+        stored = self.stored(self.EN, "name_pt", self.PT["name"])
+        self.assertTrue(_duplicate(dict(self.PT), [stored]))
+        self.assertTrue(common.same_instant(dict(self.PT), stored))
+
+    def test_en_candidate_matches_portuguese_record_with_name_en(self):
+        stored = self.stored(self.PT, "name_en", self.EN["name"])
+        self.assertTrue(_duplicate(dict(self.EN), [stored]))
+        self.assertTrue(common.same_instant(dict(self.EN), stored))
+
+    def test_dedup_index_holds_every_title_of_a_record(self):
+        for key, bare, other in (("name_pt", self.EN, self.PT), ("name_en", self.PT, self.EN)):
+            with self.subTest(key=key):
+                stored = self.stored(bare, key, other["name"])
+                names, _ = common.build_dedup_index([stored])
+                candidate = other["name"]
+                self.assertTrue(common.matches_existing(candidate, bare["date"], names))
+
+    def test_unrelated_sibling_is_not_a_duplicate(self):
+        stored = self.stored(self.PT, "name_en", "Boat trip to Graciosa")
+        self.assertFalse(_duplicate(event("Concerto de Jazz", "2026-12-20", "21:00", "Teatro Angrense"),
+                                    [stored]))
+
+
 class LocalityConflictTests(unittest.TestCase):
     def setUp(self):
         self.stored = event("Concerto de Natal", "2026-12-12", "21:00", "Teatro Angrense", locality="angra")

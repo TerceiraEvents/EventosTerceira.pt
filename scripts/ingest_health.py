@@ -18,9 +18,10 @@ import yaml
 
 from ingest_common import (
     DEFAULT_MAX_EVENTS, LOOKAHEAD_DAYS, USER_AGENT, YAML_PATH,
-    format_event_yaml, is_contained_title, is_similar_match, load_existing_yaml,
+    NAME_KEYS, format_event_yaml, is_contained_title, is_similar_match, load_existing_yaml,
     normalize_name, same_instant, same_start_time, venues_in_conflict,
 )
+from ingest_translate import translate_events
 
 
 class SourceError(RuntimeError):
@@ -134,10 +135,10 @@ def _duplicate(event: dict, existing: list[dict]) -> bool:
         film_names = [re.sub(r"\s*\((?:praia da vitoria|angra do heroismo)\)$", "", name) for name in film_names]
         if film_names[0] == film_names[1]:
             return True
-        if any(is_similar_match(event["name"], other.get(key, "")) for key in ("name", "name_en")):
+        if any(is_similar_match(event["name"], other.get(key, "")) for key in NAME_KEYS):
             return True
         if same_start_time(event, other) and any(
-            is_contained_title(event["name"], other.get(key) or "") for key in ("name", "name_en")
+            is_contained_title(event["name"], other.get(key) or "") for key in NAME_KEYS
         ):
             return True
         names = [normalize_name(event["name"]), normalize_name(other.get("name", ""))]
@@ -178,7 +179,7 @@ def _find_duplicate(event: dict, others: list[dict]) -> dict | None:
     return None
 
 
-def run_ingester(source: str, discover) -> int:
+def run_ingester(source: str, discover, language: str = "pt") -> int:
     """Discover, reconcile, and append events; fail before writing on bad coverage."""
     parser = argparse.ArgumentParser(description=f"Ingest verified events from {source}.")
     parser.add_argument("--dry-run", action="store_true")
@@ -225,6 +226,7 @@ def run_ingester(source: str, discover) -> int:
         health.deferred = max(0, len(candidates) - args.max_events)
         selected = candidates[:args.max_events]
         if selected:
+            health.warnings.extend(translate_events(selected, language))
             block = f"\n# Auto-ingested from {source} ({args.today.isoformat()})\n"
             block += "\n".join(format_event_yaml(event) for event in selected)
             if args.dry_run:

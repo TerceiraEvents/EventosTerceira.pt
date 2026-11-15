@@ -12,6 +12,7 @@ from __future__ import annotations
 import datetime as dt
 import functools
 import html
+import os
 import re
 import unicodedata
 import urllib.parse
@@ -200,6 +201,9 @@ def same_start_time(event: dict, other: dict) -> bool:
     return time is not None and time == start_time(other.get("time"))
 
 
+NAME_KEYS = ("name", "name_en", "name_pt")
+
+
 def same_instant(event: dict, other: dict) -> bool:
     """Return True if two records have the same title and start time.
 
@@ -207,7 +211,7 @@ def same_instant(event: dict, other: dict) -> bool:
     covers; neither the venue nor the language of the description matters.
     """
     return same_start_time(event, other) and any(
-        same_title(event["name"], other.get(key) or "") for key in ("name", "name_en")
+        same_title(event["name"], other.get(key) or "") for key in NAME_KEYS
     )
 
 
@@ -315,10 +319,11 @@ def build_dedup_index(
     for ev in existing:
         if not isinstance(ev, dict):
             continue
-        name = ev.get("name")
         date = ev.get("date")
-        if name and isinstance(date, dt.date):
-            date_to_names.setdefault(date, []).append(str(name))
+        if isinstance(date, dt.date):
+            for key in NAME_KEYS:
+                if ev.get(key):
+                    date_to_names.setdefault(date, []).append(str(ev[key]))
         sid = ev.get("source_uid")
         if sid:
             source_uids.add(str(sid))
@@ -349,9 +354,22 @@ def listing_kind(tags: list[str] | None, date: dt.date, end_date: dt.date | None
 
 
 def yaml_double_quote(s: str) -> str:
-    """Double-quote a string for YAML, escaping backslashes and quotes."""
-    s = s.replace("\\", "\\\\").replace('"', '\\"')
-    return f'"{s}"'
+    """Double-quote a string for YAML, escaping quotes and control characters."""
+    out = []
+    for ch in s:
+        if ch in '\\"':
+            out.append("\\" + ch)
+        elif ch == "\n":
+            out.append("\\n")
+        elif ch == "\r":
+            out.append("\\r")
+        elif ch == "\t":
+            out.append("\\t")
+        elif ord(ch) < 0x20 or 0x7F <= ord(ch) <= 0x9F or ch in "\u2028\u2029":
+            out.append(f"\\u{ord(ch):04x}")
+        else:
+            out.append(ch)
+    return f'"{"".join(out)}"'
 
 
 _BARE_UNSAFE = re.compile(r"""[:#'"\\{}\[\],&*!|>%@`]""")
@@ -378,6 +396,9 @@ def format_event_yaml(event: dict) -> str:
     if kind:
         out.append(f"  kind: {kind}")
     out.append(f"  name: {yaml_double_quote(event['name'])}")
+    for locale in ("en", "pt"):
+        if event.get(f"name_{locale}"):
+            out.append(f"  name_{locale}: {yaml_double_quote(event[f'name_{locale}'])}")
     out.append(f"  venue: {yaml_value(event['venue'])}")
     if event.get("address"):
         out.append(f"  address: {yaml_value(event['address'])}")
@@ -387,6 +408,9 @@ def format_event_yaml(event: dict) -> str:
         out.append(f'  time: "{event["time"]}"')
     if event.get("description"):
         out.append(f"  description: {yaml_double_quote(event['description'])}")
+        for locale in ("en", "pt"):
+            if event.get(f"description_{locale}"):
+                out.append(f"  description_{locale}: {yaml_double_quote(event[f'description_{locale}'])}")
     if event.get("source_url"):
         out.append(f"  source_url: {event['source_url']}")
     if event.get("source_uid"):
@@ -407,3 +431,30 @@ def build_map_url(venue: str, locality: str = "Angra do Heroísmo") -> str:
     """
     query = urllib.parse.quote(f"{venue} {locality}".strip())
     return f"https://www.google.com/maps/search/?api=1&query={query}"
+
+
+def append_events_block(path: Path, block: str, added: int) -> None:
+    """Append ``block`` to the event list at ``path`` after checking it parses.
+
+    Raises ValueError, leaving the file untouched, when the combined YAML is
+    not a list that grew by ``added`` records.
+    """
+    original = path.read_text(encoding="utf-8")
+    output = original + block
+    before = yaml.safe_load(original) or []
+    try:
+        after = yaml.safe_load(output)
+    except yaml.YAMLError as exc:
+        raise ValueError(f"Generated YAML does not parse: {exc}") from exc
+    if not isinstance(after, list) or len(after) != len(before) + added:
+        raise ValueError("Generated YAML does not preserve the existing event list")
+    path.write_text(output, encoding="utf-8")
+
+
+def report_warnings(source: str, warnings: list[str]) -> None:
+    """Show ingest warnings in the Actions job summary when one is available."""
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if warnings and summary:
+        with Path(summary).open("a", encoding="utf-8") as stream:
+            stream.write(f"### {source}: translation warnings\n\n"
+                         + "".join(f"- {w}\n" for w in warnings))

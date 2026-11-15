@@ -11,6 +11,9 @@ extend-ignore-re = ["lang: portugese"]
 [default.extend-words]
 # Portuguese word in the venue name "Escola Profissional da Praia da Vitória".
 Profissional = "Profissional"
+# Portuguese words in ingester source text (touradas template, Ticketline title example).
+internacional = "internacional"
+tradicional = "tradicional"
 
 # Portuguese words in _data/special_events.yml that are also English misspellings.
 # Scoped to that file so the rest of the repository keeps the default dictionary.
