@@ -34,14 +34,14 @@ class FakeResponse:
 
 
 def fake_endpoint(requests: list):
-    """urlopen side_effect: asserts the Bearer key, returns EN<string> translations."""
+    """urlopen side_effect: asserts the Bearer key, returns EN[string] translations."""
     def respond(request, **kwargs):
         assert request.get_header("Authorization") == "Bearer test-key"
         payload = json.loads(request.data.decode("utf-8"))
         strings = json.loads(payload["messages"][1]["content"])["strings"]
         requests.append(payload)
         return FakeResponse({"choices": [{"message": {"content": json.dumps(
-            {"translations": [f"EN<{s}>" for s in strings]}, ensure_ascii=False)}}]})
+            {"translations": [f"EN[{s}]" for s in strings]}, ensure_ascii=False)}}]})
     return respond
 
 
@@ -74,8 +74,8 @@ class RunIngesterIntegrationTests(unittest.TestCase):
             self.assertEqual(len(written), 2)
             self.assertEqual(test_event_locales.audit(written), [])
             batukes = next(e for e in written if e["name"] == "BATUKES – UM DIA DE NATAL")
-            self.assertEqual(batukes["name_en"], "EN<BATUKES – UM DIA DE NATAL>")
-            self.assertEqual(batukes["description_en"], "EN<Um dia de Natal onde a imaginação ganha ritmo…>")
+            self.assertEqual(batukes["name_en"], "EN[BATUKES – UM DIA DE NATAL]")
+            self.assertEqual(batukes["description_en"], "EN[Um dia de Natal onde a imaginação ganha ritmo…]")
 
     def test_unconfigured_translation_changes_nothing(self):
         with tempfile.TemporaryDirectory() as tmp:

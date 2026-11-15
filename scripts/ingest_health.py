@@ -18,7 +18,7 @@ import yaml
 
 from ingest_common import (
     DEFAULT_MAX_EVENTS, LOOKAHEAD_DAYS, USER_AGENT, YAML_PATH,
-    format_event_yaml, is_contained_title, is_similar_match, load_existing_yaml,
+    NAME_KEYS, format_event_yaml, is_contained_title, is_similar_match, load_existing_yaml,
     normalize_name, same_instant, same_start_time, venues_in_conflict,
 )
 from ingest_translate import translate_events
@@ -135,10 +135,10 @@ def _duplicate(event: dict, existing: list[dict]) -> bool:
         film_names = [re.sub(r"\s*\((?:praia da vitoria|angra do heroismo)\)$", "", name) for name in film_names]
         if film_names[0] == film_names[1]:
             return True
-        if any(is_similar_match(event["name"], other.get(key, "")) for key in ("name", "name_en")):
+        if any(is_similar_match(event["name"], other.get(key, "")) for key in NAME_KEYS):
             return True
         if same_start_time(event, other) and any(
-            is_contained_title(event["name"], other.get(key) or "") for key in ("name", "name_en")
+            is_contained_title(event["name"], other.get(key) or "") for key in NAME_KEYS
         ):
             return True
         names = [normalize_name(event["name"]), normalize_name(other.get("name", ""))]
