@@ -4,11 +4,9 @@ from __future__ import annotations
 import datetime as dt
 import json
 import os
-from pathlib import Path
 import sys
-import tempfile
 import unittest
-from unittest.mock import Mock, patch
+from unittest.mock import patch
 from urllib.error import HTTPError
 
 import yaml
