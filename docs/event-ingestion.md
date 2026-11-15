@@ -34,6 +34,16 @@ The `validate event ingesters` workflow exercises fixtures and failure paths wit
 
 `SourceHealth.fetch` reads a public page or data query and counts successful responses; `SourceError` identifies incomplete discovery. `run_ingester` calls a source's `discover_events(today, lookahead, health)` and validates the complete YAML output before writing. `published_dates` returns inclusive ranges or discrete session dates and rejects ambiguous mixtures; `published_time` reads clock labels while excluding duration and ticket-office lines. `parse_html` produces `HtmlNode` elements with attributes, children, class-token checks, document-order traversal, and visible text without executing scripts.
 
+## Duplicate matching
+
+`run_ingester` skips a candidate that `_duplicate` (`scripts/ingest_health.py`) matches to a stored event, or to an earlier candidate of the same run, whose date range covers the candidate's day. A match is any of:
+
+- the same `source_uid` or `source_url`;
+- the same title and the same start time, whatever the venue string says. Titles are the same when case, accents, punctuation and a leading event-type label (`cinema`, `concerto`, `workshop`, ...) are ignored; two different labels are different titles. The start time is the first clock of the `time` field (`15:00–18:00` starts at 15:00). When the two venues are in different known localities (the record's `locality`, else an alias in `_data/venue_localities.yml`), the run fails with a `SourceError` naming both venues instead of choosing one;
+- venue keys that agree (`_venue_key` gives variants of one place a single key: `S. Bento`, `Bar da Academia de Juventude e das Artes` and `(AJAIT)`, `Auditório do Ramo Grande, Praia da Vitória`) together with similar titles (`is_similar_match`), a shared title prefix, a stored title found in the candidate's description, or, at the same start time, titles where at least three content words of one (without stopwords, `com`/`with` and the event-type label) are all words of the other, optionally counting only the words after the first colon (`Mesa redonda: X` and `X: subtitle`).
+
+The ingesters that use `matches_existing` (CMAH, Ticketline, Visit Azores, touradas) compare titles on the same date with `is_similar_match` alone.
+
 ## Inclusive date ranges on the site
 
 Upcoming, home, calendar, and archive selection compare `event.end_date | default: event.date` against today, so the inclusive end day stays upcoming and the next day moves to the archive. Cards and home previews label the complete period (`event_date_range.html`, silent for single-day events) and expose it to the client filter through `data-event-end-date`. Event JSON-LD carries the inclusive end date as date-only for multi-day ranges; timed single-day events keep the start time on both `startDate` and `endDate`. The client range filter keeps any event overlapping today through its exclusive horizon.
