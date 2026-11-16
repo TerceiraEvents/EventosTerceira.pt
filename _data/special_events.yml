@@ -12553,3 +12553,33 @@ Come join us and support our festivities!"
   - exhibition
   - free
   id: 90ce8aba-c75d-4c9f-a981-855348994308
+
+# Auto-ingested from CMPV (2026-11-15)
+- date: 2026-12-06
+  name: "Os Gatos da Cidade - Uma Cidade para Todos"
+  name_en: "Os Gatos da Cidade - Uma Cidade para Todos"
+  venue: Auditório do Ramo Grande
+  map_url: https://www.google.com/maps/search/?api=1&query=Audit%C3%B3rio%20do%20Ramo%20Grande%20Praia%20da%20Vit%C3%B3ria
+  time: "16:30"
+  description: "Pela EBSTB e EDMP. Com o apoio da Câmara Municipal da Praia da Vitória."
+  description_en: "By EBSTB and EDMP. With the support of Câmara Municipal da Praia da Vitória."
+  source_url: https://www.cmpv.pt/index.php?op=agenda&id=920
+  source_uid: "cmpv-920-2026-12-06"
+
+  id: e2957451-2e95-48ac-87e4-6acfb99ca955
+  locality: praia
+- date: 2026-12-13
+  name: "BATUKES – UM DIA DE NATAL"
+  name_en: "BATUKES – UM DIA DE NATAL"
+  venue: Auditório do Ramo Grande
+  map_url: https://www.google.com/maps/search/?api=1&query=Audit%C3%B3rio%20do%20Ramo%20Grande%20Praia%20da%20Vit%C3%B3ria
+  time: "17:00"
+  description: "Um dia de Natal onde a imaginação ganha ritmo, os objetos da casa transformam-se em instrumentos e a música e o teatro se juntam num espetáculo cheio de criatividade, humor e surpresas! ESPETÁCULO FAMILIAR ENTRADA GRATUITA"
+  description_en: "A Christmas day where imagination finds its rhythm, household objects become instruments, and music and theatre come together in a show full of creativity, humour and surprises! FAMILY SHOW FREE ADMISSION"
+  source_url: https://www.cmpv.pt/index.php?op=agenda&id=921
+  source_uid: "cmpv-921-2026-12-13"
+  tags:
+  - live-music
+  - theater
+  id: 4f1783e6-d9e3-4fde-b0f4-99cc85ab6bc0
+  locality: praia
