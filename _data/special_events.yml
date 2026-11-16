@@ -4112,7 +4112,7 @@ Come join us and support our festivities!"
   tags:
   - live-music
 
-# social-scan 2026-11-16 (CHANGE): rescheduled from 13-14 Nov 2026 to 2-3 Jan 2027 per organizer post https://www.instagram.com/p/DfjxqAPlph8/ (published 2026-11-10) · confidence: high
+# social-scan 2026-11-16 (CHANGE): rescheduled from 13-14 Nov 2026 to 2-3 Jan 2027 per organizer posts https://www.instagram.com/p/DfjxqAPlph8/ (published 2026-11-10) + https://www.instagram.com/p/DfU8widllQy (published 2026-11-04) · confidence: high
 - date: 2027-01-02
   locality: angra
   id: 7a3f4487-011b-4625-adfa-69dc96533c51
@@ -11921,7 +11921,7 @@ Come join us and support our festivities!"
   - workshop
 
   id: 956d0f60-ac46-4332-a985-0ea37b00a04b
-# social-scan 2026-11-16 (CHANGE): rescheduled from 14 Nov 2026 (this session) to 3 Jan 2027 per organizer post https://www.instagram.com/p/DfjxqAPlph8/ (published 2026-11-10) · confidence: high
+# social-scan 2026-11-16 (CHANGE): rescheduled from 14 Nov 2026 (this session) to 3 Jan 2027 per organizer posts https://www.instagram.com/p/DfjxqAPlph8/ (published 2026-11-10) + https://www.instagram.com/p/DfU8widllQy (published 2026-11-04) · confidence: high
 - date: 2027-01-03
   name: "Concerto: Angra Convida Carolina Deslandes – Voz & Guitarra"
   name_en: "Concert: Angra Convida Carolina Deslandes – Voz & Guitarra"
@@ -11929,8 +11929,8 @@ Come join us and support our festivities!"
   address: "Canada Nova, Angra do Heroísmo, 9700-130"
   map_url: https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20e%20de%20Congressos%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
   time: "21:30"
-  description: "Angra Convida Carolina Deslandes – Voz & Guitarra O Centro Cultural e de Congressos de Angra do Heroísmo acolhe, nos dias 13 e 14 de novembro de 2026, sexta-feira e sábado, às 21h30, o espetáculo «Angra Convida Carolina Deslandes – Voz & Guitarra». Devido à elevada procura por parte do público, foi aberta uma sessão extra para o dia 13 de novembro. Em formato intimista, voz e guitarra, Carolina Deslandes apresenta algumas das canções mais marcantes da música portuguesa contemporânea,… Reagendado pela organização: os espetáculos de 13 e 14 de novembro de 2026 realizam-se a 2 e 3 de janeiro de 2027; bilhetes válidos; reembolsos até 20 de novembro de 2026 (fonte: https://www.instagram.com/p/DfjxqAPlph8/)."
-  description_en: "Angra Convida Carolina Deslandes – Voz & Guitarra The Cultural and Congress Centre of Angra do Heroísmo hosts, on Friday and Saturday, 13 and 14 November 2026, at 21:30, the show «Angra Convida Carolina Deslandes – Voz & Guitarra». Due to high demand from the public, an extra session was opened for 13 November. In an intimate format, voice and guitar, Carolina Deslandes presents some of the most striking songs of contemporary Portuguese music,… Rescheduled by the organiser: the 13 and 14 November 2026 shows now take place on 2 and 3 January 2027; tickets remain valid; refunds available until 20 November 2026 (source: https://www.instagram.com/p/DfjxqAPlph8/)."
+  description: "[REAGENDADO para 2 e 3 de janeiro de 2027] Angra Convida Carolina Deslandes – Voz & Guitarra O Centro Cultural e de Congressos de Angra do Heroísmo acolhe, nos dias 13 e 14 de novembro de 2026, sexta-feira e sábado, às 21h30, o espetáculo «Angra Convida Carolina Deslandes – Voz & Guitarra». Devido à elevada procura por parte do público, foi aberta uma sessão extra para o dia 13 de novembro. Em formato intimista, voz e guitarra, Carolina Deslandes apresenta algumas das canções mais marcantes da música portuguesa contemporânea,… Reagendado pela organização: os espetáculos de 13 e 14 de novembro de 2026 realizam-se a 2 e 3 de janeiro de 2027; bilhetes válidos; reembolsos até 20 de novembro de 2026 (fontes: https://www.instagram.com/p/DfjxqAPlph8/ e https://www.instagram.com/p/DfU8widllQy)."
+  description_en: "[RESCHEDULED to 2 and 3 January 2027] Angra Convida Carolina Deslandes – Voz & Guitarra The Cultural and Congress Centre of Angra do Heroísmo hosts, on Friday and Saturday, 13 and 14 November 2026, at 21:30, the show «Angra Convida Carolina Deslandes – Voz & Guitarra». Due to high demand from the public, an extra session was opened for 13 November. In an intimate format, voice and guitar, Carolina Deslandes presents some of the most striking songs of contemporary Portuguese music,… Rescheduled by the organiser: the 13 and 14 November 2026 shows now take place on 2 and 3 January 2027; tickets remain valid; refunds available until 20 November 2026 (sources: https://www.instagram.com/p/DfjxqAPlph8/ and https://www.instagram.com/p/DfU8widllQy)."
   source_url: https://angradoheroismo.pt/evento/concerto-angra-convida-carolina-deslandes-voz-guitarra/
   source_uid: "1498@angradoheroismo.pt"
   tags:
@@ -12700,8 +12700,8 @@ Come join us and support our festivities!"
   venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
   locality: angra
   time: "18:00"
-  description: "Oficina de pintura de iniciação à aguarela para adultos na Lar Doce Livro, com inscrição prévia na loja ou via WhatsApp. Nota OCR [?]: hora, orientador e preço variam entre leituras do cartaz."
-  description_en: "Beginner watercolour painting workshop for adults at Lar Doce Livro, with advance registration in store or via WhatsApp. OCR note [?]: time, instructor and price varied across flyer reads."
+  description: "Oficina de pintura de iniciação à aguarela para adultos na Lar Doce Livro, com inscrição prévia na loja ou via WhatsApp. Nota OCR [?]: as leituras do cartaz variaram quanto à hora (10h00, 15h00 ou 18h00 — indicada 18h00), ao orientador e ao preço."
+  description_en: "Beginner watercolour painting workshop for adults at Lar Doce Livro, with advance registration in store or via WhatsApp. OCR note [?]: flyer reads varied on time (10:00, 15:00 or 18:00 — 18:00 listed here), instructor and price."
   source_url: https://www.instagram.com/p/DfQJc7jCEH_
   instagram: https://www.instagram.com/livraria_lardocelivro/
   tags:
@@ -12830,8 +12830,8 @@ Come join us and support our festivities!"
   venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
   locality: angra
   time: "11:00"
-  description: "Debate na Lar Doce Livro às 11h00 sobre Maçonaria e Opus Dei, com Jorge Paulo Bruno, Luís Mendes Cabral, Paulo Mendes Pinto e moderação de Nuno Costa Nunes. Entrada livre (segundo o programa)."
-  description_en: "Debate at Lar Doce Livro at 11:00 on Freemasonry and Opus Dei, with Jorge Paulo Bruno, Luís Mendes Cabral, Paulo Mendes Pinto, moderated by Nuno Costa Nunes. Free admission (per programme)."
+  description: "Debate na Lar Doce Livro às 11h00 sobre Maçonaria e Opus Dei, com Jorge Paulo Bruno, Luís Mendes Cabral, Paulo Mendes Pinto e moderação de Nuno Costa Nunes. Entrada livre (segundo o programa). Nota OCR [?]: as leituras do cartaz divergem quanto ao apelido de um interveniente."
+  description_en: "Debate at Lar Doce Livro at 11:00 on Freemasonry and Opus Dei, with Jorge Paulo Bruno, Luís Mendes Cabral, Paulo Mendes Pinto, moderated by Nuno Costa Nunes. Free admission (per programme). OCR note [?]: flyer reads disagree on one panellist's surname."
   source_url: https://www.instagram.com/p/DfQJc7jCEH_
   instagram: https://www.instagram.com/livraria_lardocelivro/
   tags:
