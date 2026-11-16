@@ -4112,18 +4112,19 @@ Come join us and support our festivities!"
   tags:
   - live-music
 
-- date: 2026-11-13
+# social-scan 2026-11-16 (CHANGE): rescheduled from 13-14 Nov 2026 to 2-3 Jan 2027 per organizer posts https://www.instagram.com/p/DfjxqAPlph8/ (published 2026-11-10) + https://www.instagram.com/p/DfU8widllQy (published 2026-11-04) · confidence: high
+- date: 2027-01-02
   locality: angra
   id: 7a3f4487-011b-4625-adfa-69dc96533c51
-  end_date: 2026-11-14
+  end_date: 2027-01-03
   name: "Concerto: Angra Convida Carolina Deslandes — Voz & Guitarra"
   name_en: "Concert: Angra Convida Carolina Deslandes — Voice & Guitar"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
   map_url: https://www.google.com/maps/search/?api=1&query=CCCAH+Angra+do+Hero%C3%ADsmo
   time: "21:30"
-  description: "Carolina Deslandes performs an intimate voice-and-guitar show on two nights at the CCCAH. The November 13 session was added after the original November 14 performance drew high demand."
-  description_pt: "Carolina Deslandes apresenta um concerto intimista de voz e guitarra em duas noites no CCCAH. A sessão de 13 de novembro foi acrescentada devido à elevada procura pelo espetáculo original de 14 de novembro."
+  description: "Carolina Deslandes performs an intimate voice-and-guitar show on two nights at the CCCAH, on 2 and 3 January 2027 at 21:30. The shows were rescheduled by the organiser from 13 and 14 November 2026; purchased tickets remain valid and refunds are available until 20 November 2026."
+  description_pt: "Carolina Deslandes apresenta um concerto intimista de voz e guitarra em duas noites no CCCAH, a 2 e 3 de janeiro de 2027, às 21h30. Os espetáculos foram reagendados pela organização, deixando as datas de 13 e 14 de novembro de 2026; os bilhetes adquiridos mantêm-se válidos e os reembolsos podem ser pedidos até 20 de novembro de 2026."
   source_url: https://angradoheroismo.pt/evento/concerto-angra-convida-carolina-deslandes-voz-guitarra/
   instagram: https://www.instagram.com/angradoheroismo/p/DdoeeiTo3Iz/
   tags:
@@ -11920,15 +11921,16 @@ Come join us and support our festivities!"
   - workshop
 
   id: 956d0f60-ac46-4332-a985-0ea37b00a04b
-- date: 2026-11-14
+# social-scan 2026-11-16 (CHANGE): rescheduled from 14 Nov 2026 (this session) to 3 Jan 2027 per organizer posts https://www.instagram.com/p/DfjxqAPlph8/ (published 2026-11-10) + https://www.instagram.com/p/DfU8widllQy (published 2026-11-04) · confidence: high
+- date: 2027-01-03
   name: "Concerto: Angra Convida Carolina Deslandes – Voz & Guitarra"
   name_en: "Concert: Angra Convida Carolina Deslandes – Voz & Guitarra"
   venue: Centro Cultural e de Congressos de Angra do Heroísmo
   address: "Canada Nova, Angra do Heroísmo, 9700-130"
   map_url: https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20e%20de%20Congressos%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
   time: "21:30"
-  description: "Angra Convida Carolina Deslandes – Voz & Guitarra O Centro Cultural e de Congressos de Angra do Heroísmo acolhe, nos dias 13 e 14 de novembro de 2026, sexta-feira e sábado, às 21h30, o espetáculo «Angra Convida Carolina Deslandes – Voz & Guitarra». Devido à elevada procura por parte do público, foi aberta uma sessão extra para o dia 13 de novembro. Em formato intimista, voz e guitarra, Carolina Deslandes apresenta algumas das canções mais marcantes da música portuguesa contemporânea,…"
-  description_en: "Angra Convida Carolina Deslandes – Voz & Guitarra The Cultural and Congress Centre of Angra do Heroísmo hosts, on Friday and Saturday, 13 and 14 November 2026, at 21:30, the show «Angra Convida Carolina Deslandes – Voz & Guitarra». Due to high demand from the public, an extra session was opened for 13 November. In an intimate format, voice and guitar, Carolina Deslandes presents some of the most striking songs of contemporary Portuguese music,…"
+  description: "[REAGENDADO para 2 e 3 de janeiro de 2027] Angra Convida Carolina Deslandes – Voz & Guitarra O Centro Cultural e de Congressos de Angra do Heroísmo acolhe, nos dias 13 e 14 de novembro de 2026, sexta-feira e sábado, às 21h30, o espetáculo «Angra Convida Carolina Deslandes – Voz & Guitarra». Devido à elevada procura por parte do público, foi aberta uma sessão extra para o dia 13 de novembro. Em formato intimista, voz e guitarra, Carolina Deslandes apresenta algumas das canções mais marcantes da música portuguesa contemporânea,… Reagendado pela organização: os espetáculos de 13 e 14 de novembro de 2026 realizam-se a 2 e 3 de janeiro de 2027; bilhetes válidos; reembolsos até 20 de novembro de 2026 (fontes: https://www.instagram.com/p/DfjxqAPlph8/ e https://www.instagram.com/p/DfU8widllQy)."
+  description_en: "[RESCHEDULED to 2 and 3 January 2027] Angra Convida Carolina Deslandes – Voz & Guitarra The Cultural and Congress Centre of Angra do Heroísmo hosts, on Friday and Saturday, 13 and 14 November 2026, at 21:30, the show «Angra Convida Carolina Deslandes – Voz & Guitarra». Due to high demand from the public, an extra session was opened for 13 November. In an intimate format, voice and guitar, Carolina Deslandes presents some of the most striking songs of contemporary Portuguese music,… Rescheduled by the organiser: the 13 and 14 November 2026 shows now take place on 2 and 3 January 2027; tickets remain valid; refunds available until 20 November 2026 (sources: https://www.instagram.com/p/DfjxqAPlph8/ and https://www.instagram.com/p/DfU8widllQy)."
   source_url: https://angradoheroismo.pt/evento/concerto-angra-convida-carolina-deslandes-voz-guitarra/
   source_uid: "1498@angradoheroismo.pt"
   tags:
@@ -12583,3 +12585,320 @@ Come join us and support our festivities!"
   - theater
   id: 4f1783e6-d9e3-4fde-b0f4-99cc85ab6bc0
   locality: praia
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfZ22Exlhyf/ (published 2026-11-06) · confidence: high · evidence: caption-text
+- date: 2026-12-01
+  id: e3638e05-9c7e-4640-8a86-5382c2cc725d
+  name: "Sozinho em Casa em Concerto — Filarmónica Rainha Santa Isabel das Doze Ribeiras"
+  name_en: "Home Alone in Concert — Filarmónica Rainha Santa Isabel das Doze Ribeiras"
+  venue: "Teatro Angrense"
+  locality: angra
+  time: "15:00"
+  description: "Exibição do filme «Sozinho em Casa» com banda sonora ao vivo pela Filarmónica Rainha Santa Isabel das Doze Ribeiras, no dia 1 de dezembro de 2026, às 15h00, no Teatro Angrense. Bilhetes à venda a partir de 9 de novembro de 2026."
+  description_en: "Screening of the film Home Alone with live soundtrack performed by Filarmónica Rainha Santa Isabel das Doze Ribeiras on 1 December 2026 at 15:00 at Teatro Angrense. Tickets on sale from 9 November 2026."
+  source_url: https://www.instagram.com/p/DfZ22Exlhyf/
+  instagram: https://www.instagram.com/angradoheroismo/
+  tags:
+  - cinema
+  - live-music
+  - kid-friendly
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfnorlHsJE1/ (published 2026-11-11) · confidence: low · evidence: flyer-vision-qwen · note: time discrepancy between flyer (21:00) and caption (21:30); bottom of poster cut off
+- date: 2026-11-21
+  id: f6571464-beda-4909-a5f0-beb6aca4ab71
+  name: "Concerto solidário AMIT — Paulo M. (Ilhéu Beach Bar)"
+  name_en: "AMIT Charity Concert — Paulo M. (Ilhéu Beach Bar)"
+  venue: "Espaço AMIT (edifício Rádio Clube de Angra)"
+  locality: angra
+  time: "21:00"
+  description: "Concerto solidário no Espaço AMIT com Paulo M. (Ilhéu Beach Bar) a 21 de novembro de 2026. Bilhete consiste num bem alimentar doado a famílias. Nota: o cartaz indica 21h00 e a legenda 21h30."
+  description_en: "Charity concert at Espaço AMIT featuring Paulo M. (Ilhéu Beach Bar) on 21 November 2026. Admission is a food item donated to families. Note: flyer states 21:00 while caption states 21:30."
+  source_url: https://www.instagram.com/p/DfnorlHsJE1/
+  instagram: https://www.instagram.com/espacoamit/
+  tags:
+  - live-music
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfalPjNDMEt (published 2026-11-06) · confidence: medium · evidence: caption-text
+- date: 2026-11-26
+  id: a75abe0b-7797-4732-8b99-f2f1d997b4aa
+  name: "Thanksgiving Dinner"
+  name_pt: "Jantar de Ação de Graças (Thanksgiving)"
+  venue: "The Texan, Rua Carreira dos Cavalos 37, Angra do Heroísmo"
+  locality: angra
+  description: "Traditional Thanksgiving dinner with turkey, sides and homemade pie on 26 November 2026 at The Texan. Reservations via tableamigo.com/thanksgiving."
+  description_pt: "Jantar tradicional de Ação de Graças com peru, acompanhamentos e tarte caseira no dia 26 de novembro de 2026 no The Texan. Reservas em tableamigo.com/thanksgiving."
+  source_url: https://www.instagram.com/p/DfalPjNDMEt
+  instagram: https://www.instagram.com/thetexanbar/
+  tags:
+  - food-drink
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfXQb1ygLNG (published 2026-11-05) · confidence: low · evidence: flyer-vision-qwen
+- date: 2026-11-22
+  id: 50bb7d1a-f639-4c9a-a3ba-56191653b2fc
+  name: "Círculo de Mulheres II — «Eu escolho-me»"
+  name_en: "Women's Circle II — \"I Choose Myself\""
+  venue: "Sabores da Horta"
+  time: "09:00–12:00"
+  description: "Encontro Círculo de Mulheres II — «Eu escolho-me» com pausa e demonstração de green smoothie, no espaço Sabores da Horta, das 09h00 às 12h00. Inscrição necessária (morada e preço não indicados na publicação)."
+  description_en: "Women's Circle II — \"I Choose Myself\" gathering with a break and green smoothie demonstration at Sabores da Horta, 09:00–12:00. Registration required (address and price not stated in post)."
+  source_url: https://www.instagram.com/p/DfXQb1ygLNG
+  instagram: https://www.instagram.com/sabores_dahort_a/
+  tags:
+  - workshop
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfmpXQolsNn (published 2026-11-11) · confidence: medium · evidence: caption-text
+- date: 2026-12-12
+  id: 6d39b866-f4e0-4a05-93cb-ca5bfb42d548
+  name: "Cerimónia comemorativa dos 50 anos do Poder Local"
+  name_en: "Commemorative Ceremony for 50 Years of Local Government"
+  venue: "Academia de Juventude e das Artes da Ilha Terceira (AJAIT), Praia da Vitória"
+  locality: praia
+  description: "Cerimónia comemorativa dos 50 anos do Poder Local promovida pela Assembleia Municipal da Praia da Vitória, na Academia de Juventude e das Artes da Ilha Terceira (AJAIT). Entrada gratuita; transmissão em direto na VITEC."
+  description_en: "Commemorative ceremony marking 50 years of Local Government hosted by the Praia da Vitória Municipal Assembly at AJAIT. Free admission; livestreamed on VITEC."
+  source_url: https://www.instagram.com/p/DfmpXQolsNn
+  instagram: https://www.instagram.com/cmpraiadavitoria/
+  tags:
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: second read gives 19:00 'A Maçonaria Açoriana...' by Patrícia Ferreira-Sousa
+- date: 2026-11-20
+  id: 4bba24f5-1a5b-432e-87d0-55af1ae1419b
+  name: "Encontro-apresentação «A Macaronésia Escrita Por Mulheres», de Susana Gaudêncio"
+  name_en: "Book Talk: \"Macaronesia Written by Women\" by Susana Gaudêncio"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "18:00"
+  description: "Encontro-apresentação na Lar Doce Livro em parceria com o Festival Sete Sóis Sete Luas / Macaronésia / Teatro da Ilha. Entrada livre (segundo o programa). Nota OCR [?]: leitura alternativa indica 19h00 apresentação sobre Maçonaria Açoriana por Patrícia Ferreira-Sousa."
+  description_en: "Book presentation and talk at Lar Doce Livro in partnership with Festival Sete Sóis Sete Luas / Macaronésia / Teatro da Ilha. Free admission (per programme). OCR note [?]: alternate vision read gave 19:00 book presentation on Azorean Freemasonry by Patrícia Ferreira-Sousa."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - literature
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: heading garbled across vision reads
+- date: 2026-11-20
+  id: 2ee1d64d-24b5-4b19-aef3-9a9b0b5b0f03
+  name: "«Herdeiras de Cesária» — Maya Andrade"
+  name_en: "\"Heirs of Cesária\" — Maya Andrade"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "21:30"
+  description: "Concerto/leitura «Herdeiras de Cesária» com Maya Andrade às 21h30 na Lar Doce Livro. Entrada livre (segundo o programa)."
+  description_en: "Concert/reading \"Herdeiras de Cesária\" with Maya Andrade at 21:30 at Lar Doce Livro. Free admission (per programme)."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - live-music
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: time (10:00/15:00/18:00), instructor name, and price (5€/25€/50€-60€) vary across reads
+- date: 2026-11-21
+  id: fce5bb8f-4af0-4ed3-ac69-0044d21efc8a
+  name: "Oficina de pintura para adultos «Iniciação à aguarela»"
+  name_en: "Adult Painting Workshop: Introduction to Watercolour"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "18:00"
+  description: "Oficina de pintura de iniciação à aguarela para adultos na Lar Doce Livro, com inscrição prévia na loja ou via WhatsApp. Nota OCR [?]: as leituras do cartaz variaram quanto à hora (10h00, 15h00 ou 18h00 — indicada 18h00), ao orientador e ao preço."
+  description_en: "Beginner watercolour painting workshop for adults at Lar Doce Livro, with advance registration in store or via WhatsApp. OCR note [?]: flyer reads varied on time (10:00, 15:00 or 18:00 — 18:00 listed here), instructor and price."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - workshop
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: title ('Palavras de Paz'/'Poesia da Ilha') and musicians ('Paulo M.'/'músicos do Pico') conflict
+- date: 2026-11-21
+  id: 74ecdbd6-fa4c-4948-8921-512642e7c20d
+  name: "Poesia — leitura com músicos"
+  name_en: "Poetry Reading with Musicians"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "20:15"
+  description: "Sessão de leitura de poesia acompanhada por músicos na Lar Doce Livro às 20h15. Entrada livre (segundo o programa). Nota OCR [?]: título exato e nomes dos músicos incertos na leitura do cartaz."
+  description_en: "Poetry reading accompanied by musicians at Lar Doce Livro at 20:15. Free admission (per programme). OCR note [?]: exact title and musician names uncertain across flyer reads."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - literature
+  - live-music
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: artist name garbled ('DJ Cat'/'90 Cat'/'No Cat')
+- date: 2026-11-21
+  id: 6ba8eb75-25a2-41a4-979e-3d1542ec633b
+  name: "Concerto ao vivo — DJ Cat + Happy Hour"
+  name_en: "Live Set — DJ Cat + Happy Hour"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "21:30"
+  description: "Atuação ao vivo às 21h30 na Lar Doce Livro seguida de Happy Hour das 23h00 às 00h00. Entrada livre (segundo o programa). Nota OCR [?]: nome do artista com variação entre leituras."
+  description_en: "Live music set at 21:30 at Lar Doce Livro followed by Happy Hour from 23:00 to 00:00. Free admission (per programme). OCR note [?]: artist name garbled across reads."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - live-music
+  - nightlife
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: album/artist line garbled
+- date: 2026-11-22
+  id: 6026c5d5-220e-4851-9ecc-1225b2cb52bd
+  name: "World Music — «O Espaço do Tempo» (Dia do Músico)"
+  name_en: "World Music — \"O Espaço do Tempo\" (Musician's Day)"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "17:30"
+  description: "Sessão World Music de Dia do Músico na Lar Doce Livro às 17h30, com Carlos Borges Ferreira (World Music Charts Europe) e apresentação de álbum. Entrada livre (segundo o programa)."
+  description_en: "Musician's Day World Music session at Lar Doce Livro at 17:30 with Carlos Borges Ferreira (World Music Charts Europe) and album presentation. Free admission (per programme)."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - live-music
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: title and partner name garbled
+- date: 2026-11-24
+  id: c4c64ff1-7989-461b-9a38-57a0af4d1794
+  name: "Eco-conversas — Dia Mundial da Ciência"
+  name_en: "Eco-Talks — World Science Day"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "18:15"
+  description: "Sessão Eco-conversas assinalando o Dia Mundial da Ciência na Lar Doce Livro às 18h15, com Laura Alves e Maximino Guedes. Entrada livre (segundo o programa). Nota OCR [?]: subtítulo e parceiro incertos na leitura do cartaz."
+  description_en: "Eco-talks session marking World Science Day at Lar Doce Livro at 18:15 with Laura Alves and Maximino Guedes. Free admission (per programme). OCR note [?]: subtitle and partner name garbled in flyer read."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: series title and moderator name ('Rogério Sousa'/'Rogério Lopes') garbled
+- date: 2026-11-25
+  id: 0b053d85-5948-4943-aff6-48b8d3bd1989
+  name: "Ciclo de cinema e tertúlia — escolha de Rogério Sousa"
+  name_en: "Film Screening and Discussion — Selected by Rogério Sousa"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "18:15"
+  description: "Exibição de filme seguida de tertúlia na Lar Doce Livro às 18h15. Entrada livre (segundo o programa). Nota OCR [?]: título do ciclo, filme e nome do moderador com variações entre leituras."
+  description_en: "Film screening followed by discussion at Lar Doce Livro at 18:15. Free admission (per programme). OCR note [?]: series title, film and moderator name varied across reads."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - cinema
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: artist ('Sá-Vila'/'Sá Niza'), title, and opening time (15:15 vs 18:15) uncertain
+- date: 2026-11-26
+  end_date: 2026-12-21
+  kind: exhibition
+  id: 1f099cd7-0418-4c1d-9dfc-3be09f8c19f1
+  name: "Exposição de Sá-Vila (patente até 21 de dezembro)"
+  name_en: "Exhibition by Sá-Vila (on view until 21 December)"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "15:15"
+  description: "Inauguração de exposição de Sá-Vila na Lar Doce Livro a 26 de novembro, patente até 21 de dezembro de 2026. Entrada livre (segundo o programa). Nota OCR [?]: título da obra e hora de inauguração (15h15 ou 18h15) incertos."
+  description_en: "Opening of an exhibition by Sá-Vila at Lar Doce Livro on 26 November, on view through 21 December 2026. Free admission (per programme). OCR note [?]: exhibition title and opening time (15:15 or 18:15) uncertain."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - exhibition
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: host/musician names garbled
+- date: 2026-11-27
+  id: 52964f64-9013-4c59-baf2-ef82c54286d0
+  name: "Festa Americana — Traditional American Open Jam Night"
+  name_en: "American Party — Traditional American Open Jam Night"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "20:30"
+  description: "Noite de roda aberta (open jam) de música tradicional americana às 20h30 na Lar Doce Livro. Entrada livre (segundo o programa). Nota OCR [?]: nomes dos anfitriões incertos na leitura do cartaz."
+  description_en: "Traditional American open jam night at 20:30 at Lar Doce Livro. Free admission (per programme). OCR note [?]: host names garbled in flyer read."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - live-music
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: time 11:00 and one speaker surname uncertain
+- date: 2026-11-28
+  id: feaace1d-0396-46bc-b557-5766881e767b
+  name: "Grande debate «Maçonaria e Opus Dei — são opostas? O que as distingue?»"
+  name_en: "Debate: \"Freemasonry and Opus Dei — Are They Opposites? What Distinguishes Them?\""
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "11:00"
+  description: "Debate na Lar Doce Livro às 11h00 sobre Maçonaria e Opus Dei, com Jorge Paulo Bruno, Luís Mendes Cabral, Paulo Mendes Pinto e moderação de Nuno Costa Nunes. Entrada livre (segundo o programa). Nota OCR [?]: as leituras do cartaz divergem quanto ao apelido de um interveniente."
+  description_en: "Debate at Lar Doce Livro at 11:00 on Freemasonry and Opus Dei, with Jorge Paulo Bruno, Luís Mendes Cabral, Paulo Mendes Pinto, moderated by Nuno Costa Nunes. Free admission (per programme). OCR note [?]: flyer reads disagree on one panellist's surname."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: performer name garbled ('Tommy e as suas ...'); only 21:30 + concerto reliable
+- date: 2026-11-28
+  id: e5c3d2dc-cc8d-48aa-b896-732902715de7
+  name: "Concerto na Lar Doce Livro (28 de novembro)"
+  name_en: "Concert at Lar Doce Livro (28 November)"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "21:30"
+  description: "Concerto às 21h30 na Lar Doce Livro. Entrada livre (segundo o programa). Nota OCR [?]: nome do artista/banda ilegível nas leituras do cartaz (lido parcialmente como 'Tommy e as suas...')."
+  description_en: "Concert at 21:30 at Lar Doce Livro. Free admission (per programme). OCR note [?]: performer name garbled across flyer reads (partially read as 'Tommy e as suas...')."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - live-music
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: winning-work/author line garbled
+- date: 2026-11-29
+  id: 28d9773e-2f2e-40f6-bef6-caa9efa38bb7
+  name: "Monte Brasil — concurso de contos para pais e filhos"
+  name_en: "Monte Brasil — Short Story Contest for Parents and Children"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "17:00"
+  description: "Atividade do Festival Monte Brasil na Lar Doce Livro às 17h00: concurso de contos para pais e filhos. Entrada livre (segundo o programa)."
+  description_en: "Monte Brasil Festival activity at Lar Doce Livro at 17:00: short story contest for parents and children. Free admission (per programme)."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - literature
+  - kid-friendly
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: guest producer name ('Sam Punnett'?) uncertain
+- date: 2026-11-29
+  id: dcd2238c-b547-46c5-83fb-20783e7f9429
+  name: "World Music — noite de celebração com Carlos Borges Ferreira"
+  name_en: "World Music — Celebration Night with Carlos Borges Ferreira"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "20:30"
+  description: "Noite de celebração World Music com Carlos Borges Ferreira (WMCE) às 20h30 na Lar Doce Livro. Entrada livre (segundo o programa)."
+  description_en: "World Music celebration night with Carlos Borges Ferreira (WMCE) at 20:30 at Lar Doce Livro. Free admission (per programme)."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - live-music
+  - free
+
+# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: debate partner name ('Kikabau'?) and closing footnote garbled
+- date: 2026-11-30
+  id: d8b5cc5a-a353-4357-a784-364e6990548a
+  name: "Noite Monte Brasil — debate de encerramento + Happy Hour"
+  name_en: "Monte Brasil Night — Closing Debate + Happy Hour"
+  venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
+  locality: angra
+  time: "22:30"
+  description: "Debate de encerramento da Noite Monte Brasil na Lar Doce Livro às 22h30, seguido de Happy Hour das 23h00 às 00h00. Entrada livre (segundo o programa). Nota OCR [?]: nome do parceiro de debate incerto."
+  description_en: "Monte Brasil Night closing debate at Lar Doce Livro at 22:30, followed by Happy Hour from 23:00 to 00:00. Free admission (per programme). OCR note [?]: debate partner name uncertain."
+  source_url: https://www.instagram.com/p/DfQJc7jCEH_
+  instagram: https://www.instagram.com/livraria_lardocelivro/
+  tags:
+  - literature
+  - nightlife
+  - free
