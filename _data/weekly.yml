@@ -19,10 +19,11 @@
     venue: Tasca do Camões
     # Hours maintainer-confirmed by Chris Rackauckas, 2026-10-11.
     time: "22:00–02:00"
-    description: "Weekly karaoke at Camões. Current recurring schedule: Monday, Wednesday, and Sunday."
-    description_pt: "Karaoke semanal no Camões. Horário semanal atual: segunda, quarta e domingo."
-    note: "The recurring post confirms the days."
-    note_pt: "A publicação recorrente confirma os dias."
+    description: "Weekly karaoke at Camões. Recurring schedule before the closure: Monday, Wednesday, and Sunday."
+    description_pt: "Karaoke semanal no Camões. Horário recorrente antes do encerramento: segunda, quarta e domingo."
+    # Closure maintainer-confirmed by Chris Rackauckas, 2026-11-18.
+    note: "Closed at least until February 2027 — karaoke nights are suspended until the venue reopens."
+    note_pt: "Encerrado pelo menos até fevereiro de 2027 — as noites de karaoke estão suspensas até nova reabertura."
     address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
     instagram: https://www.instagram.com/tascadocamoes/
@@ -55,8 +56,11 @@
     venue: Tasca do Camões
     # Hours maintainer-confirmed by Chris Rackauckas, 2026-10-11.
     time: "22:00–02:00"
-    description: "Weekly karaoke at Camões. Current recurring schedule: Monday, Wednesday, and Sunday."
-    description_pt: "Karaoke semanal no Camões. Horário semanal atual: segunda, quarta e domingo."
+    description: "Weekly karaoke at Camões. Recurring schedule before the closure: Monday, Wednesday, and Sunday."
+    description_pt: "Karaoke semanal no Camões. Horário recorrente antes do encerramento: segunda, quarta e domingo."
+    # Closure maintainer-confirmed by Chris Rackauckas, 2026-11-18.
+    note: "Closed at least until February 2027 — karaoke nights are suspended until the venue reopens."
+    note_pt: "Encerrado pelo menos até fevereiro de 2027 — as noites de karaoke estão suspensas até nova reabertura."
     address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
     instagram: https://www.instagram.com/tascadocamoes/
@@ -162,8 +166,9 @@
     time: "22:00–02:00"
     description: "Weekly Sunday karaoke at Camões, sometimes promoted as Domingoke with a featured host."
     description_pt: "Karaoke semanal de domingo no Camões, por vezes anunciado como Domingoke com um animador convidado."
-    note: "The recurring post confirms Sunday; check the latest post for the host."
-    note_pt: "A publicação recorrente confirma o domingo; consulta a publicação mais recente para o animador."
+    # Closure maintainer-confirmed by Chris Rackauckas, 2026-11-18.
+    note: "Closed at least until February 2027 — karaoke nights are suspended until the venue reopens. When it reopens, check the latest post for the host."
+    note_pt: "Encerrado pelo menos até fevereiro de 2027 — as noites de karaoke estão suspensas até nova reabertura. Após reabrir, consulta a publicação mais recente para o animador."
     address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
     instagram: https://www.instagram.com/tascadocamoes/
