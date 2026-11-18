@@ -11170,10 +11170,12 @@ Come join us and support our festivities!"
   name_en: "Tarina — On a Day Like This, with Sofia Mestre"
   venue: "Casa do Sal / Oficina d'Angra"
   address: "Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo"
-  description: "Terceira stop of Tarina's Azores tour with Sofia Mestre. Start time and admission details have not been published in the tour announcement."
-  description_pt: "Concerto da digressão açoriana de Tarina com Sofia Mestre. O anúncio da digressão não indica horário nem condições de entrada."
+  time: "21:30"
+  description: "Tarina presents her debut album «num dia assim» with Sofia Mestre at Casa do Sal. Free admission."
+  description_pt: "Tarina apresenta o seu álbum de estreia «num dia assim» com Sofia Mestre na Casa do Sal. Entrada livre."
+  source_url: "https://www.instagram.com/p/DfVhsOCFpfA/"
   instagram: "https://www.instagram.com/__tarina____/p/Dew6MAro7rL/"
-  tags: [live-music]
+  tags: [live-music, free]
 
 - date: 2026-10-31
   name: Trilho da Pedra Furada — Ribeirinha
@@ -11715,14 +11717,11 @@ Come join us and support our festivities!"
   name_en: "In Search of Violante"
   venue: Núcleo de História Militar Manuel Coelho Baptista de Lima
   locality: angra
-  description: Premiere of the Cães do Mar theatre production on 20 and 21 November,
-    directed by Ana Brum. Consult the organizer for performance times and admission
-    details.
-  description_pt: Estreia da produção teatral da Cães do Mar nos dias 20 e 21 de novembro,
-    com direção de Ana Brum. Consultar a organização para os horários e condições
-    de entrada.
+  time: "21:00"
+  description: "Premiere of the Cães do Mar theatre production, directed by Ana Brum, at 21:00 on 20 and 21 November. The performance on 20 November is sold out. Buy tickets for 21 November in advance online only, using the link in the organizer's Instagram bio."
+  description_pt: "Estreia da produção teatral da Cães do Mar, com direção de Ana Brum, às 21h00 nos dias 20 e 21 de novembro. A sessão de 20 de novembro está esgotada. Os bilhetes para 21 de novembro são vendidos antecipadamente, apenas online, através do link na biografia do Instagram da organização."
   source_url: https://www.instagram.com/ana.bruma/p/DfDA2FNMl8C/
-  instagram: https://www.instagram.com/ana.bruma/p/DfDA2FNMl8C/
+  instagram: "https://www.instagram.com/p/Df2F8dsjplj/"
   tags:
   - theater
   id: 59a3f169-1784-474e-b910-429fbc9266fd
@@ -12170,9 +12169,10 @@ Come join us and support our festivities!"
   venue: Academia Musical da Ilha Terceira (AMIT)
   address: "Avenida Ten. Coronel José Agostinho, 6-A, Angra do Heroísmo, 9700-108"
   map_url: https://www.google.com/maps/search/?api=1&query=Academia%20Musical%20da%20Ilha%20Terceira%20%28AMIT%29%20Angra%20do%20Hero%C3%ADsmo
-  description: "SÊ DOS PRIMEIROS A JOGAR GTA VI! \"Mas como?\" — perguntas tu. O JogaAí e o Auditório AMIT juntam-se para apresentar o sexto evento DayOne, desta vez dedicado ao lançamento de um dos videojogos mais aguardados de sempre: GRAND THEFT AUTO VI! De dia 18 a domingo, dia 22, prepara-te para viver uma experiência única. - Um espetáculo dedicado ao universo GTA VI. - Ecrã gigante. - Som de cinema. - Gaming e muita diversão e, claro, algumas surpresas que ainda não podemos revelar! Cinco dias para…"
-  description_en: "BE AMONG THE FIRST TO PLAY GTA VI! \"But how?\" you ask. JogaAí and the AMIT Auditorium join forces to present the sixth DayOne event, this time dedicated to the launch of one of the most anticipated video games ever: GRAND THEFT AUTO VI! From the 18th to Sunday the 22nd, get ready for a unique experience. - A show dedicated to the GTA VI universe. - Giant screen. - Cinema sound. - Gaming and lots of fun and, of course, some surprises we cannot reveal yet! Five days to…"
+  description: "Sessão de abertura a 18 de novembro às 20h30, com outro momento do programa às 23h00. SÊ DOS PRIMEIROS A JOGAR GTA VI! \"Mas como?\" — perguntas tu. O JogaAí e o Auditório AMIT juntam-se para apresentar o sexto evento DayOne, desta vez dedicado ao lançamento de um dos videojogos mais aguardados de sempre: GRAND THEFT AUTO VI! De dia 18 a domingo, dia 22, prepara-te para viver uma experiência única. - Um espetáculo dedicado ao universo GTA VI. - Ecrã gigante. - Som de cinema. - Gaming e muita diversão e, claro, algumas surpresas que ainda não podemos revelar! Cinco dias para…"
+  description_en: "The opening session on 18 November starts at 20:30, with another programme segment at 23:00. BE AMONG THE FIRST TO PLAY GTA VI! \"But how?\" you ask. JogaAí and the AMIT Auditorium join forces to present the sixth DayOne event, this time dedicated to the launch of one of the most anticipated video games ever: GRAND THEFT AUTO VI! From the 18th to Sunday the 22nd, get ready for a unique experience. - A show dedicated to the GTA VI universe. - Giant screen. - Cinema sound. - Gaming and lots of fun and, of course, some surprises we cannot reveal yet! Five days to…"
   source_url: https://angradoheroismo.pt/evento/jogaai-mega-dayone-lancamento-de-gta-vi/
+  instagram: "https://www.instagram.com/p/DfzLeajNkfH/"
   source_uid: "2026@angradoheroismo.pt"
 
   id: f1bab0d9-12a0-48e8-9b4d-06d8d8eb7ae5
@@ -12228,9 +12228,10 @@ Come join us and support our festivities!"
   address: "Estrada Gaspar Corte-Real, Angra do Heroísmo, 9700-030"
   map_url: https://www.google.com/maps/search/?api=1&query=Casa%20do%20Sal%20Angra%20do%20Hero%C3%ADsmo
   time: "22:00"
-  description: "🌍🎶 DANÇA SEM FRONTEIRAS A Casa do Sal recebe Marta San (Lisboa) para uma noite de ritmos globais, psicadelismo, new wave, rock, eletrónica e muitas outras surpresas sonoras. Conhecida pelos seus sets ecléticos e pelas viagens musicais sem mapa nem fronteiras, Marta San conduz-nos numa pista de dança onde tudo pode acontecer e onde a única regra é continuar a dançar. 📅 21 de novembro de 2026 🕙 22h00 📍 Casa do Sal 🎟 Sócios: 1,50 € | Não sócios: 3,00 € Uma noite para descobrir novos sons,…"
-  description_en: "🌍🎶 DANCE WITHOUT BORDERS Casa do Sal welcomes Marta San (Lisbon) for a night of global rhythms, psychedelia, new wave, rock, electronic music and many other sonic surprises. Known for her eclectic sets and musical journeys with no map and no borders, Marta San leads us onto a dance floor where anything can happen and the only rule is to keep dancing. 📅 21 November 2026 🕙 10 pm 📍 Casa do Sal 🎟 Members: €1.50 | Non-members: €3.00 A night to discover new sounds,…"
+  description: "🌍🎶 DANÇA SEM FRONTEIRAS A Casa do Sal recebe Marta San (Lisboa) para uma noite de ritmos globais, psicadelismo, new wave, rock, eletrónica e muitas outras surpresas sonoras. Conhecida pelos seus sets ecléticos e pelas viagens musicais sem mapa nem fronteiras, Marta San conduz-nos numa pista de dança onde tudo pode acontecer e onde a única regra é continuar a dançar. 📅 21 de novembro de 2026 🕙 22h00 📍 Casa do Sal 🎟 Sócios: 3,00 € | Não sócios: 5,00 € Uma noite para descobrir novos sons,…"
+  description_en: "🌍🎶 DANCE WITHOUT BORDERS Casa do Sal welcomes Marta San (Lisbon) for a night of global rhythms, psychedelia, new wave, rock, electronic music and many other sonic surprises. Known for her eclectic sets and musical journeys with no map and no borders, Marta San leads us onto a dance floor where anything can happen and the only rule is to keep dancing. 📅 21 November 2026 🕙 10 pm 📍 Casa do Sal 🎟 Members: €3.00 | Non-members: €5.00 A night to discover new sounds,…"
   source_url: https://angradoheroismo.pt/evento/danca-sem-fronteiras-dj-set-com-marta-san-lisboa/
+  instagram: "https://www.instagram.com/p/Df28w3ehZGX/"
   source_uid: "2033@angradoheroismo.pt"
   tags:
   - live-music
@@ -12244,26 +12245,29 @@ Come join us and support our festivities!"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, Angra do Heroísmo, 9700-030"
   map_url: https://www.google.com/maps/search/?api=1&query=Casa%20do%20Sal%20Angra%20do%20Hero%C3%ADsmo
-  time: "16:00"
-  description: "🎅✨ Mil Pais Natais na Casa do Sal De 22 de novembro a 4 de dezembro, a Casa do Sal recebe Mil Pais Natais, uma exposição que reúne a coleção de Ana Pereira, construída ao longo de vários anos e composta por dezenas de representações desta figura tão marcante do imaginário natalício. Entre peças em barro, madeira, vidro, tecido, metal e muitos outros materiais, a mostra revela a diversidade de formas e interpretações que o Pai Natal inspirou em diferentes contextos, tradições e expressões…"
-  description_en: "🎅✨ Mil Pais Natais (A Thousand Santa Clauses) at Casa do Sal From 22 November to 4 December, Casa do Sal hosts Mil Pais Natais, an exhibition bringing together the collection of Ana Pereira, built over several years and made up of dozens of representations of this figure so central to the Christmas imagination. Among pieces in clay, wood, glass, fabric, metal and many other materials, the show reveals the diversity of forms and interpretations that Santa Claus has inspired in different contexts, traditions and expressions…"
+  visiting_hours: "Mon–Fri 16:00–18:30"
+  visiting_hours_pt: "Seg–Sex 16h00–18h30"
+  description: "De 22 de novembro a 4 de dezembro, a Casa do Sal recebe Mil Pais Natais, uma exposição da coleção de Ana Pereira, com dezenas de representações do Pai Natal em barro, madeira, vidro, tecido, metal e outros materiais. Entrada livre."
+  description_en: "From 22 November to 4 December, Casa do Sal hosts Mil Pais Natais, an exhibition from Ana Pereira's collection with dozens of Santa Claus figures in clay, wood, fabric, glass, metal and other materials. Free admission."
   source_url: https://angradoheroismo.pt/evento/mil-pais-natais-exposicao/
+  instagram: "https://www.instagram.com/p/DfwaOONAvXG/"
   source_uid: "2027@angradoheroismo.pt"
   tags:
   - exhibition
+  - free
 
   id: cb0d4844-a64f-484f-bd85-8a5cce58d91a
 - date: 2026-11-27
-  end_date: 2026-11-28
-  name: "O Curtas Vila do Conde chega à Casa do Sal"
-  name_en: "Curtas Vila do Conde comes to Casa do Sal"
+  name: "Best of Curtas — Curtas Vila do Conde"
+  name_en: "Best of Curtas — Curtas Vila do Conde"
   venue: Casa do Sal
   address: "Estrada Gaspar Corte-Real, Angra do Heroísmo, 9700-030"
   map_url: https://www.google.com/maps/search/?api=1&query=Casa%20do%20Sal%20Angra%20do%20Hero%C3%ADsmo
-  time: "16:00"
-  description: "🎬 O Curtas Vila do Conde chega à Casa do Sal Nos dias 27 e 28 de novembro, a Oficina d'Angra recebe na Casa do Sal duas sessões especiais do Curtas Vila do Conde – Festival Internacional de Cinema, um dos mais importantes festivais de cinema do país. ✨ Best of Curtas (adultos) 📅 27 novembro | 21h00 🎈 Curtinhas (crianças) 📅 28 novembro | 14h30 Do melhor da curta-metragem contemporânea ao cinema pensado para famílias e público mais jovem, serão dois momentos para descobrir o universo criativo de…"
-  description_en: "🎬 Curtas Vila do Conde comes to Casa do Sal On 27 and 28 November, Oficina d'Angra hosts at Casa do Sal two special sessions of Curtas Vila do Conde – International Film Festival, one of the most important film festivals in the country. ✨ Best of Curtas (adults) 📅 27 November | 9 pm 🎈 Curtinhas (children) 📅 28 November | 2:30 pm From the best of contemporary short film to cinema made for families and younger audiences, these will be two moments to discover the creative universe of…"
+  time: "21:00"
+  description: "Sessão para adultos com curtas-metragens contemporâneas do festival Curtas Vila do Conde na Casa do Sal. Bilhetes a 2 € para sócios e 3 € para o público geral."
+  description_en: "An adult screening of contemporary short films from the Curtas Vila do Conde festival at Casa do Sal. Tickets cost €2 for members and €3 for the general public."
   source_url: https://angradoheroismo.pt/evento/o-curtas-vila-do-conde-chega-a-casa-do-sal/
+  instagram: "https://www.instagram.com/p/DfeYo_Hj8Pm/"
   source_uid: "2022@angradoheroismo.pt"
   tags:
   - cinema
@@ -12576,9 +12580,10 @@ Come join us and support our festivities!"
   venue: Auditório do Ramo Grande
   map_url: https://www.google.com/maps/search/?api=1&query=Audit%C3%B3rio%20do%20Ramo%20Grande%20Praia%20da%20Vit%C3%B3ria
   time: "17:00"
-  description: "Um dia de Natal onde a imaginação ganha ritmo, os objetos da casa transformam-se em instrumentos e a música e o teatro se juntam num espetáculo cheio de criatividade, humor e surpresas! ESPETÁCULO FAMILIAR ENTRADA GRATUITA"
-  description_en: "A Christmas day where imagination finds its rhythm, household objects become instruments, and music and theatre come together in a show full of creativity, humour and surprises! FAMILY SHOW FREE ADMISSION"
+  description: "Um dia de Natal onde a imaginação ganha ritmo, os objetos da casa transformam-se em instrumentos e a música e o teatro se juntam num espetáculo cheio de criatividade, humor e surpresas! Espetáculo familiar com entrada gratuita. É obrigatório levantar o bilhete nas bilheteiras da AJAIT."
+  description_en: "A Christmas day where imagination finds its rhythm, household objects become instruments, and music and theatre come together in a show full of creativity, humour and surprises! Free admission for this family show. Tickets must be collected at the AJAIT box offices."
   source_url: https://www.cmpv.pt/index.php?op=agenda&id=921
+  instagram: "https://www.instagram.com/p/DfzF2nDCLgy/"
   source_uid: "cmpv-921-2026-12-13"
   tags:
   - live-music
@@ -12724,18 +12729,17 @@ Come join us and support our festivities!"
   - live-music
   - free
 
-# social-scan 2026-11-16 · source: https://www.instagram.com/p/DfQJc7jCEH_ (published 2026-11-02) · confidence: low · evidence: flyer-vision-qwen · OCR conflict [?]: artist name garbled ('DJ Cat'/'90 Cat'/'No Cat')
 - date: 2026-11-21
   id: 6ba8eb75-25a2-41a4-979e-3d1542ec633b
-  name: "Concerto ao vivo — DJ Cat + Happy Hour"
-  name_en: "Live Set — DJ Cat + Happy Hour"
+  name: "Concerto de K9 Cat + Happy Hour"
+  name_en: "K9 Cat Concert + Happy Hour"
   venue: "Lar Doce Livro, Rua de São João, Angra do Heroísmo"
   locality: angra
   time: "21:30"
-  description: "Atuação ao vivo às 21h30 na Lar Doce Livro seguida de Happy Hour das 23h00 às 00h00. Entrada livre (segundo o programa). Nota OCR [?]: nome do artista com variação entre leituras."
-  description_en: "Live music set at 21:30 at Lar Doce Livro followed by Happy Hour from 23:00 to 00:00. Free admission (per programme). OCR note [?]: artist name garbled across reads."
-  source_url: https://www.instagram.com/p/DfQJc7jCEH_
-  instagram: https://www.instagram.com/livraria_lardocelivro/
+  description: "Concerto de rock de K9 Cat às 21h30 na Lar Doce Livro. O programa anuncia Happy Hour das 23h00 às 00h00. Entrada livre."
+  description_en: "K9 Cat plays rock at 21:30 at Lar Doce Livro. The programme lists Happy Hour from 23:00 to 00:00. Free admission."
+  source_url: "https://www.instagram.com/p/Df2M9aCiIRO/"
+  instagram: "https://www.instagram.com/p/DfQJc7jCEH_/"
   tags:
   - live-music
   - nightlife
@@ -13283,3 +13287,34 @@ Come join us and support our festivities!"
   - live-music
   id: 3699a971-5993-46eb-b222-95146a07033b
   locality: praia
+
+- date: 2026-11-18
+  name: "Apresentação do livro: O Semeador de Palavras"
+  name_en: "Book Presentation: O Semeador de Palavras"
+  venue: Lar Doce Livro
+  address: Rua de São João 22-24, 9700-182 Angra do Heroísmo
+  locality: angra
+  time: "18:15"
+  description: "Presentation of O Semeador de Palavras, a collection of interviews with José Afonso edited by Guadalupe Portelinha, José Rodrigues and Ana Ribeiro, with José Luís Neto and António Neves. Free admission."
+  description_pt: "Apresentação de O Semeador de Palavras, livro de entrevistas a José Afonso coordenado por Guadalupe Portelinha, José Rodrigues e Ana Ribeiro, com José Luís Neto e António Neves. Entrada livre."
+  instagram: https://www.instagram.com/p/Df2T1iaExke/
+  tags:
+  - literature
+  - free
+
+  id: 278bf5c6-d985-46bf-8e99-dc8bb0d62167
+- date: 2026-11-22
+  kind: event
+  name: "Inauguração da exposição Mil Pais Natais"
+  name_en: "Mil Pais Natais Exhibition Opening"
+  venue: Casa do Sal
+  address: Estrada Gaspar Corte-Real, 9700-030 Angra do Heroísmo
+  locality: angra
+  time: "16:00"
+  description: "Opening of Mil Pais Natais, an exhibition of Santa Claus figures from Ana Pereira's collection. Free admission."
+  description_pt: "Inauguração de Mil Pais Natais, exposição de figuras do Pai Natal da coleção de Ana Pereira. Entrada livre."
+  instagram: https://www.instagram.com/p/DfwaOONAvXG/
+  tags:
+  - exhibition
+  - free
+  id: 90420f3c-35ab-4863-948d-84769bbdce75
