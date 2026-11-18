@@ -1,0 +1,9 @@
+# Social scan report — 2026-11-18 (Atlantic/Azores)
+- Read-only IG+FB scan, Steps 4–5 + window rules. Window: published ≥ 2026-10-18; events 2026-11-18 → +90 d.
+- Ledger: 137 rows (41 upcoming dated ≥ 2026-11-18, incl. beyond-90d flagged in notes; 96 in-window recaps/notes). Files: ledger.tsv (canonical), ledger.md (readable), sources-status.md, artifacts/ (450 screenshots), results/*.json.
+- IG: all 22 accounts read to window edge (12 of 22 needed multi-batch paging). porta_42, ruadireita.azores: 0 in-window.
+- Top leads: Monte Brasil Festival 27 nov–6 dez (program behind unfetched Diário Insular/shorturl pointers); À procura de Violante 20–21 nov (20 nov SOLD OUT, 21 nov seats left, online-only tickets); Sons da Macaronesia 20–21 nov CCCA; Sister Midnight 22 nov; Círculo de Mulheres II 22 nov; Cinema ARG «Floresta Mágica» 22 nov; Texan Thanksgiving 26 nov; Batukes 13 dez + Cortejos de Natal 01/20 dez (deadline to join 21 nov); OUTONO VIVO 2026 closed 15 nov (umbrella + concert lineup rows).
+- FB: all 7 targets attempted; timelines exposed only comment threads through the extractor (all marked partial), member-only group ilhaterceira.eventos inaccessible (no join attempted). One signal kept as note: Casa do Sal «eventos quase todos os fins de semana» (page reply 16 nov, no dates).
+- Unresolved / for Step-3 web scan: cmpv.pt news id=4609/4611, ticketline.pt, tableamigo.com, Boletim shorturl, Diário Insular Monte Brasil program — deliberately NOT fetched (local-only egress). Livraria Nov 13 talk 18:15-vs-21:30 conflict still open. Weekly-suspect rows need cross-check vs weekly.yml next week.
+- No Stories/Highlights viewed; no write controls touched; no login walls hit; no rate limits encountered.
+- Rerun (per account, absolute paths): START=<n> timeout 1200 "$SCAN_VENV/bin/python" ~/SciMLFactory/roles/terceira-events/social_scan/ig_scan.py <account> <max>; FB: same dir fb_scan.py <slug> <url>.
