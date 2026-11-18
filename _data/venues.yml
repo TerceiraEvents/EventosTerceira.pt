@@ -33,8 +33,9 @@
 - name: "Tasca do Camões"
   address: "Rua Da Rocha 64, 9700-169 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Tasca+do+Cam%C3%B5es+Angra+do+Hero%C3%ADsmo"
-  description: "Bar and tasca in Angra do Heroísmo with weekly karaoke nights."
-  description_pt: "Bar e tasca em Angra do Heroísmo com noites semanais de karaoke."
+  # Closure maintainer-confirmed by Chris Rackauckas, 2026-11-18.
+  description: "Bar and tasca in Angra do Heroísmo with weekly karaoke nights. Closed at least until February 2027 — nights are suspended until the venue reopens."
+  description_pt: "Bar e tasca em Angra do Heroísmo com noites semanais de karaoke. Encerrado pelo menos até fevereiro de 2027 — as noites estão suspensas até nova reabertura."
   weekly:
     - day: Monday
       day_pt: Segunda-feira
