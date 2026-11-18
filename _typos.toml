@@ -3,6 +3,12 @@
 c09Ov7jGKeOQKPn6 = "c09Ov7jGKeOQKPn6"
 # Opaque What's On record id inside two source_uid values in _data/special_events.yml.
 sgUE0m0nvHbY5pSL = "sgUE0m0nvHbY5pSL"
+# Opaque What's On record id for the LIFE IP AZORES NATURA workshop.
+sPuegaTkuwF4BaPF = "sPuegaTkuwF4BaPF"
+# Opaque What's On record id for the Christmas cookie workshop.
+sTuYuZIdNd9mdNJF = "sTuYuZIdNd9mdNJF"
+# Opaque What's On record id for the Jazz O’Phonia concert.
+sM8GqvRJcXMJuViw = "sM8GqvRJcXMJuViw"
 
 [default]
 # `lang: portugese` is a deliberate example of a bad front-matter value.
@@ -38,8 +44,12 @@ contributo = "contributo"
 convento = "convento"
 curso = "curso"
 damon = "damon"
+# Portuguese for dates in the Carolina Deslandes rescheduling notices.
+datas = "datas"
 dilemas = "dilemas"
 diplomacia = "diplomacia"
+# Portuguese for publishers in the Monte Brasil festival description.
+editoras = "editoras"
 envolve = "envolve"
 fase = "fase"
 feministas = "feministas"
@@ -48,17 +58,25 @@ funcional = "funcional"
 infantis = "infantis"
 inicial = "inicial"
 instituto = "instituto"
+# Portuguese for instruments in the BATUKES description.
+instrumentos = "instrumentos"
 internacional = "internacional"
 jornal = "jornal"
 lazer = "lazer"
 leve = "leve"
 limite = "limite"
 mata = "mata"
+# Given name of Mena Ferreira in the O Amor Tem Quatro Patas presentation.
+Mena = "Mena"
 momento = "momento"
 momentos = "momentos"
 monumentos = "monumentos"
+# Portuguese for names in the Lar Doce Livro programme.
+nomes = "nomes"
 oficial = "oficial"
 participantes = "participantes"
+# Portuguese invitation to take part in the Christmas wreath workshop.
+Participe = "Participe"
 presentes = "presentes"
 programa = "programa"
 queres = "queres"
