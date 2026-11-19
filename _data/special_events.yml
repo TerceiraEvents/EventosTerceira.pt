@@ -13417,3 +13417,19 @@ Come join us and support our festivities!"
   - exhibition
   - free
   id: 502e921d-76cf-4ab6-b4f2-87b0390a5dd8
+
+# Auto-ingested from CMPV (2026-11-19)
+- date: 2026-11-20
+  name: "III Edição do Concerto - Celebração do Dia de Santa Cecília"
+  name_en: "3rd Edition of the Concert - Celebration of Saint Cecilia's Day"
+  venue: Auditório do Ramo Grande
+  map_url: https://www.google.com/maps/search/?api=1&query=Audit%C3%B3rio%20do%20Ramo%20Grande%20Praia%20da%20Vit%C3%B3ria
+  time: "18:30"
+  description: "20 de novembro | 18h30 às 20:00"
+  description_en: "November 20 | 18:30 to 20:00"
+  source_url: https://www.cmpv.pt/index.php?op=agenda&id=922
+  source_uid: "cmpv-922-2026-11-20"
+  tags:
+  - live-music
+  id: 086d2dc3-88b1-4962-ba0c-6905dfc03333
+  locality: praia
