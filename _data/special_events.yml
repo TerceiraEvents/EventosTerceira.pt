@@ -13433,3 +13433,25 @@ Come join us and support our festivities!"
   - live-music
   id: 086d2dc3-88b1-4962-ba0c-6905dfc03333
   locality: praia
+
+# Curatorial (not auto-ingested): grand opening of Escudo & 20, a gaming
+# club in Angra do Heroísmo. Address and opening hours from the public
+# site https://escudo20.pt (Friday hours 14:00–02:00); the opening date
+# was confirmed with the venue. Play via monthly membership (sócio mensal)
+# or day pass (passe diário); event seats are limited and reserved in the
+# club app.
+- date: 2026-11-20
+  name: "Grand opening of Escudo & 20 — gaming club in Angra do Heroísmo"
+  name_pt: "Inauguração do Escudo & 20 — clube de jogos em Angra do Heroísmo"
+  venue: "Escudo & 20"
+  venue_pt: "Escudo & 20"
+  address: "Rua da Palha 86, Angra do Heroísmo, Terceira"
+  address_pt: "Rua da Palha 86, Angra do Heroísmo, Terceira"
+  map_url: https://www.google.com/maps/search/?api=1&query=Escudo+%26+20%2C+Rua+da+Palha+86%2C+Angra+do+Hero%C3%ADsmo
+  time: "14:00"
+  description: "Escudo & 20 — board games, card games, video games, tabletop and LAN parties — opens its doors at Rua da Palha 86 in Angra do Heroísmo. Friday nights run until 02:00. Play as a monthly member or with a day pass; the club's event seats are limited and reserved through its app."
+  description_pt: "O Escudo & 20 — tabuleiro, cartas, videojogos, tabletop e LAN parties — abre as portas na Rua da Palha 86, em Angra do Heroísmo. Às sextas a noite dura até às 02:00. Joga como sócio mensal ou com passe diário; os lugares dos eventos do clube são limitados e reservados na app."
+  source_url: https://escudo20.pt/
+  tags:
+  - nightlife
+  id: 331d39fb-ade5-49f3-b5f6-4f1c9d579897
