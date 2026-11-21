@@ -24,3 +24,9 @@
   location_evidence:
     - https://turismo.azores.gov.pt/pin/auditorio-ramo-grande/
     - https://www.cmpv.pt/index.php?op=70
+- key: escudo-20
+  locality: angra
+  aliases:
+    - Escudo & 20
+  location_evidence:
+    - https://escudo20.pt/

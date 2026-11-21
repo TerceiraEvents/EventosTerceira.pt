@@ -389,3 +389,14 @@
   telephone: "+351295540106"
   schema_type: Museum
   category: arts-culture
+
+- name: "Escudo & 20"
+  address: "Rua da Palha 86, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Escudo+%26+20%2C+Rua+da+Palha+86%2C+Angra+do+Hero%C3%ADsmo"
+  description: "Gaming club opened in November 2026: board games, card games, video games, tabletop sessions and LAN parties, with one-off programme nights (trading-card-game afternoons, karaoke, introductory D&D) announced on Instagram. Fridays run from 14:00 until 02:00; play as a monthly member or with a day pass, event seats limited and reserved through the club app."
+  description_pt: "Clube de jogos aberto em novembro de 2026: jogos de tabuleiro, cartas, videojogos, sessões de tabletop e LAN parties, com noites de programação avulsa (cartas colecionáveis, karaoke, D&D para iniciantes) anunciadas no Instagram. Às sextas funciona das 14:00 às 02:00; joga como sócio mensal ou com passe diário, com lugares nos eventos limitados e reservados na app do clube."
+  links:
+    - { label: "Website", label_pt: "Site", url: "https://escudo20.pt/" }
+    - { label: "Instagram", label_pt: "Instagram", url: "https://www.instagram.com/escudoe20cafe/" }
+  schema_type: LocalBusiness
+  category: nightlife
