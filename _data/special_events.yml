@@ -13439,7 +13439,9 @@ Come join us and support our festivities!"
 # site https://escudo20.pt (Friday hours 14:00–02:00); the opening date
 # was confirmed with the venue. Play via monthly membership (sócio mensal)
 # or day pass (passe diário); event seats are limited and reserved in the
-# club app.
+# club app. The evening's programme (doors 14:00, official opening 20:30,
+# free-to-play games from 21:00) is the club's own announcement at
+# https://www.instagram.com/p/Df8NGl_CGEC/.
 - date: 2026-11-20
   name: "Grand opening of Escudo & 20 — gaming club in Angra do Heroísmo"
   name_pt: "Inauguração do Escudo & 20 — clube de jogos em Angra do Heroísmo"
@@ -13448,10 +13450,67 @@ Come join us and support our festivities!"
   address: "Rua da Palha 86, Angra do Heroísmo, Terceira"
   address_pt: "Rua da Palha 86, Angra do Heroísmo, Terceira"
   map_url: https://www.google.com/maps/search/?api=1&query=Escudo+%26+20%2C+Rua+da+Palha+86%2C+Angra+do+Hero%C3%ADsmo
-  time: "14:00"
-  description: "Escudo & 20 — board games, card games, video games, tabletop and LAN parties — opens its doors at Rua da Palha 86 in Angra do Heroísmo. Friday nights run until 02:00. Play as a monthly member or with a day pass; the club's event seats are limited and reserved through its app."
-  description_pt: "O Escudo & 20 — tabuleiro, cartas, videojogos, tabletop e LAN parties — abre as portas na Rua da Palha 86, em Angra do Heroísmo. Às sextas a noite dura até às 02:00. Joga como sócio mensal ou com passe diário; os lugares dos eventos do clube são limitados e reservados na app."
+  time: "20:30"
+  description: "Escudo & 20 — board games, card games, video games, tabletop and LAN parties — opens its doors at Rua da Palha 86 in Angra do Heroísmo. The club's announced opening evening: doors from 14:00, official opening at 20:30, then free-to-play computers, board games, Nintendo and PlayStation from 21:00. Friday nights run until 02:00. Play as a monthly member or with a day pass; the club's event seats are limited and reserved through its app."
+  description_pt: "O Escudo & 20 — tabuleiro, cartas, videojogos, tabletop e LAN parties — abre as portas na Rua da Palha 86, em Angra do Heroísmo. A noite de inauguração anunciada pelo clube: portas abertas a partir das 14:00, inauguração oficial às 20:30 e, a partir das 21:00, computadores, jogos de tabuleiro, Nintendo e PlayStation em jogo livre. Às sextas a noite dura até às 02:00. Joga como sócio mensal ou com passe diário; os lugares dos eventos do clube são limitados e reservados na app."
   source_url: https://escudo20.pt/
+  instagram: https://www.instagram.com/escudoe20cafe/
   tags:
   - nightlife
   id: 331d39fb-ade5-49f3-b5f6-4f1c9d579897
+
+# Curatorial (not auto-ingested): Saturday and Sunday programme of the
+# Escudo & 20 opening weekend, as announced by the club's own Instagram
+# account on 2026-11-19 (https://www.instagram.com/p/Df8NGl_CGEC/). Titles,
+# times and the Dungeon Master credit are as stated in the post; no prices
+# were stated. The Friday items (20:30 Inauguração; 21:00 Free to Play &
+# Convívio) extend the opening entry above rather than standing separately.
+  locality: angra
+- date: 2026-11-21
+  name: "TCG Pokémon & TCG Magic — opening weekend at Escudo & 20"
+  name_pt: "TCG Pokémon & TCG Magic — fim de semana de inauguração no Escudo & 20"
+  venue: "Escudo & 20"
+  venue_pt: "Escudo & 20"
+  address: "Rua da Palha 86, Angra do Heroísmo, Terceira"
+  address_pt: "Rua da Palha 86, Angra do Heroísmo, Terceira"
+  map_url: https://www.google.com/maps/search/?api=1&query=Escudo+%26+20%2C+Rua+da+Palha+86%2C+Angra+do+Hero%C3%ADsmo
+  time: "14:30"
+  description: "Opening-weekend games afternoon at Escudo & 20, the new gaming club in Angra do Heroísmo: trading-card-game tables for Pokémon TCG and Magic, announced for 14:30, with doors from 14:00."
+  description_pt: "Tarde de jogos no segundo dia do fim de semana de inauguração do Escudo & 20, o novo clube de jogos em Angra do Heroísmo: mesas de cartas colecionáveis de Pokémon TCG e Magic, anunciadas para as 14:30, com portas abertas a partir das 14:00."
+  source_url: https://www.instagram.com/p/Df8NGl_CGEC/
+  instagram: https://www.instagram.com/escudoe20cafe/
+  id: 0829db18-9ae0-4ddb-a88c-9c73cdec937f
+  locality: angra
+- date: 2026-11-21
+  name: "Karaoke with hosts Sally & Chris at Escudo & 20"
+  name_pt: "Karaoke c/ Host Sally & Chris no Escudo & 20"
+  venue: "Escudo & 20"
+  venue_pt: "Escudo & 20"
+  address: "Rua da Palha 86, Angra do Heroísmo, Terceira"
+  address_pt: "Rua da Palha 86, Angra do Heroísmo, Terceira"
+  map_url: https://www.google.com/maps/search/?api=1&query=Escudo+%26+20%2C+Rua+da+Palha+86%2C+Angra+do+Hero%C3%ADsmo
+  time: "20:30"
+  description: "Karaoke night on the second evening of Escudo & 20's opening weekend, hosted by Sally & Chris, announced for 20:30 at the gaming club on Rua da Palha 86."
+  description_pt: "Noite de karaoke na segunda noite do fim de semana de inauguração do Escudo & 20, com os apresentadores Sally e Chris, anunciada para as 20:30 no clube de jogos da Rua da Palha 86."
+  source_url: https://www.instagram.com/p/Df8NGl_CGEC/
+  instagram: https://www.instagram.com/escudoe20cafe/
+  tags:
+  - karaoke
+  - nightlife
+  id: 321ffcd3-6312-440b-95e7-4b6aeb2d6f79
+  locality: angra
+- date: 2026-11-22
+  name: "D&D for beginners — special edition at Escudo & 20"
+  name_pt: "D&D para iniciantes – Edição Especial no Escudo & 20"
+  venue: "Escudo & 20"
+  venue_pt: "Escudo & 20"
+  address: "Rua da Palha 86, Angra do Heroísmo, Terceira"
+  address_pt: "Rua da Palha 86, Angra do Heroísmo, Terceira"
+  map_url: https://www.google.com/maps/search/?api=1&query=Escudo+%26+20%2C+Rua+da+Palha+86%2C+Angra+do+Hero%C3%ADsmo
+  time: "15:30"
+  description: "Introductory Dungeons & Dragons session on the closing day of Escudo & 20's opening weekend, run by Dungeon Master Roberto Pereira (Ilhas de Bruma), announced for 15:30, with doors from 14:00."
+  description_pt: "Sessão introdutória de Dungeons & Dragons no último dia do fim de semana de inauguração do Escudo & 20, orientada pelo Dungeon Master Roberto Pereira (Ilhas de Bruma), anunciada para as 15:30, com portas abertas a partir das 14:00."
+  source_url: https://www.instagram.com/p/Df8NGl_CGEC/
+  instagram: https://www.instagram.com/escudoe20cafe/
+  id: e6dde9c4-ecc8-4666-9f24-dcb92304c3ca
+  locality: angra
