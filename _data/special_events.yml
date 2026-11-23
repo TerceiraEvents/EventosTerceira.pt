@@ -13514,3 +13514,84 @@ Come join us and support our festivities!"
   instagram: https://www.instagram.com/escudoe20cafe/
   id: e6dde9c4-ecc8-4666-9f24-dcb92304c3ca
   locality: angra
+
+# Auto-ingested from CMAH (2026-11-23)
+- date: 2026-11-23
+  name: "30 minutos com música"
+  name_en: "30 minutes with music"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão, n.º 42, Angra do Heroísmo, 9700-054"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca%20P%C3%BAblica%20e%20Arquivo%20Regional%20Lu%C3%ADs%20da%20Silva%20Ribeiro%20Angra%20do%20Hero%C3%ADsmo
+  time: "18:00"
+  description: "A BPARLSR convida toda a comunidade para o evento \"30 minutos com música\", no dia 23 de novembro, pelas 18h00. O programa conta com a participação dos jovens músicos Madalena Bettencourt, Laura Andrade e Afonso Alves, acompanhados pelos professores Antonella Barletta e Miguel Moutinho. A iniciativa visa promover o talento local e destacar o papel da música como fonte de inspiração, conhecimento e bem-estar. Contamos com a vossa presença!"
+  description_en: "BPARLSR invites the whole community to the event \"30 minutes with music\", on November 23, at 6:00 pm. The programme features young musicians Madalena Bettencourt, Laura Andrade and Afonso Alves, accompanied by teachers Antonella Barletta and Miguel Moutinho. The initiative aims to promote local talent and highlight the role of music as a source of inspiration, knowledge and well-being. We look forward to seeing you there!"
+  source_url: https://angradoheroismo.pt/evento/30-minutos-com-musica-12/
+  source_uid: "2043@angradoheroismo.pt"
+  tags:
+  - live-music
+
+  id: c834e914-b42f-4612-9fe3-f08f21155065
+  locality: angra
+- date: 2026-12-01
+  end_date: 2027-01-01
+  name: "Oficina Fios de Natal - ornamentos natalícios em tecelagem"
+  name_en: "Workshop Fios de Natal - Christmas ornaments in weaving"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, Angra do Heroísmo, 9700-030"
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa%20do%20Sal%20Angra%20do%20Hero%C3%ADsmo
+  time: "14:30"
+  description: "🎄🧶 Fios de Natal convida os participantes a criar ornamentos natalícios em tecelagem, explorando cores, texturas e técnicas simples para dar vida a peças únicas feitas à mão. Orientada por İnci Köker-Milligan, esta oficina é uma oportunidade para abrandar, criar e levar para casa decorações especiais para a árvore de Natal ou para oferecer nesta época festiva. 📅 1 de dezembro🕝 14h30📍 Casa do Sal👥 Jovens (+15 anos) e adultos💶 15 € | 13 € sócios📝 Inscrições: tinyurl.com/mmx2wse4 ✨ Não é…"
+  description_en: "🎄🧶 Fios de Natal invites participants to create Christmas ornaments in weaving, exploring colours, textures and simple techniques to bring unique handmade pieces to life. Led by İnci Köker-Milligan, this workshop is an opportunity to slow down, create and take home special decorations for the Christmas tree or to give as gifts this festive season. 📅 1 December🕝 14h30📍 Casa do Sal👥 Young people (+15 years) and adults💶 15 € | 13 € members📝 Registration: tinyurl.com/mmx2wse4 ✨ It is not…"
+  source_url: https://angradoheroismo.pt/evento/oficina-fios-de-natal-ornamentos-natalicios-em-tecelagem/
+  source_uid: "2042@angradoheroismo.pt"
+  tags:
+  - workshop
+
+  id: 3dc4ec33-9952-447d-a25a-b724ae5c7907
+- date: 2026-12-02
+  name: "Cinema: La Bola Negra"
+  name_en: "Cinema: La Bola Negra"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Angra do Heroísmo, 9700-130"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20e%20de%20Congressos%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:00"
+  description: "𝙇𝙖 𝘽𝙤𝙡𝙖 𝙉𝙚𝙜𝙧𝙖 conta as histórias interligadas de três homens em três épocas diferentes. Três vidas intimamente ligadas pela sexualidade e pelo desejo, pela dor e pela herança, e por uma das últimas obras inacabadas de Federico García Lorca. Se a obra de García Lorca traçou o rumo da cultura queer até aos dias de hoje, a iconografia do seu martírio e o peso do trauma biográfico a ele associado, são feridas abertas que transbordam essa linhagem cultural. La Bola Negra é talvez a mais exuberante…"
+  description_en: "𝙇𝙖 𝘽𝙤𝙡𝙖 𝙉𝙚𝙜𝙧𝙖 tells the interconnected stories of three men in three different eras. Three lives intimately linked by sexuality and desire, by pain and heritage, and by one of Federico García Lorca’s last unfinished works. If García Lorca’s work charted the course of queer culture up to the present day, the iconography of his martyrdom and the weight of the biographical trauma associated with him, are open wounds that overflow this cultural lineage. La Bola Negra is perhaps the most exuberant…"
+  source_url: https://angradoheroismo.pt/evento/cinema-la-bola-negra/
+  source_uid: "2041@angradoheroismo.pt"
+  tags:
+  - cinema
+
+  id: b6a42307-781a-4ed3-998f-dd38b05c02d2
+  locality: angra
+- date: 2026-12-05
+  name: "Burning Man por Timothy Lima"
+  name_en: "Burning Man by Timothy Lima"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, Angra do Heroísmo, 9700-030"
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa%20do%20Sal%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:30"
+  description: "📸🔥 Burning Man chega à Casa do Sal pela lente de Timothy Lima A Oficina d’Angra recebe o fotógrafo e realizador documental Timothy Lima, que partilhará a sua experiência no Burning Man 2026, um dos mais fascinantes fenómenos culturais do mundo. Através de imagens e histórias captadas no deserto de Black Rock, no Nevada, esta será uma oportunidade única para conhecer por dentro a arte, a criatividade e o espírito comunitário que dão vida a esta cidade efémera. 🌵📷✨ Uma viagem visual ao coração do…"
+  description_en: "📸🔥 Burning Man comes to Casa do Sal through the lens of Timothy Lima A Oficina d’Angra welcomes photographer and documentary filmmaker Timothy Lima, who will share his experience at Burning Man 2026, one of the world’s most fascinating cultural phenomena. Through images and stories captured in the Black Rock Desert, in Nevada, this will be a unique opportunity to discover the art, creativity and community spirit that bring this ephemeral city to life. 🌵📷✨ A visual journey to the heart of the…"
+  source_url: https://angradoheroismo.pt/evento/burning-man-por-timothy-lima/
+  source_uid: "2039@angradoheroismo.pt"
+  tags:
+  - literature
+
+  id: ddbcef27-f884-46b8-abf3-c7e0f1bce75a
+- date: 2026-12-07
+  end_date: 2026-12-11
+  name: "EXPERIMENTA CERÂMICA - Iniciação"
+  name_en: "TRY CERAMICS - Introduction"
+  venue: Casa do Sal
+  address: "Estrada Gaspar Corte-Real, Angra do Heroísmo, 9700-030"
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa%20do%20Sal%20Angra%20do%20Hero%C3%ADsmo
+  time: "18:00"
+  description: "A Oficina d'Angra Associação Cultural promove, de 7 a 11 de dezembro de 2026, a oficina \"EXPERIMENTA CERÂMICA - Iniciação\", uma proposta formativa destinada a todos os que desejam descobrir e experimentar os fundamentos da criação cerâmica. Orientada pelos ceramistas Renato Costa e Silva e Kerstin Thomas, esta formação convida os participantes a explorar, ao longo de cinco sessões, diferentes técnicas de conformação do barro, desde a modelagem manual às técnicas da lastra e do rolinho,…"
+  description_en: "A Oficina d'Angra Associação Cultural is organizing, from December 7 to 11, 2026, the workshop \"TRY CERAMICS - Introduction\", a training opportunity for everyone who wants to discover and try the fundamentals of ceramic creation. Led by ceramic artists Renato Costa e Silva and Kerstin Thomas, this course invites participants to explore, over five sessions, different techniques for shaping clay, from hand-building to slab and coil techniques,…"
+  source_url: https://angradoheroismo.pt/evento/experimenta-ceramica-iniciacao/
+  source_uid: "2040@angradoheroismo.pt"
+  tags:
+  - workshop
+
+  id: fdcc56c8-f69e-45dc-9b30-69520129caec
