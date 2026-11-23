@@ -13700,3 +13700,21 @@ Come join us and support our festivities!"
   source_url: https://whatson.azores.gov.pt/evento/mercado-de-roupa-em-segunda-mao-da-ge-questa/
   source_uid: "skOq5IMG052Y7SP7:2026-12-12@whatson.azores.gov.pt"
   id: 02a4fed3-9cfe-49ba-8f0a-f79eaca2a140
+
+# Auto-ingested from CMAH (2026-11-23)
+- date: 2026-12-01
+  name: "Concerto: Ecos de Belém"
+  name_en: "Concert: Ecos de Belém"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Angra do Heroísmo, 9700-130"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20e%20de%20Congressos%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "18:30"
+  description: "O Centro Cultural e de Congressos de Angra do Heroísmo acolhe, no dia 1 de dezembro de 2026, terça-feira, às 18h30, o concerto «Ecos de Belém – Uma Viagem Musical pela Magia do Natal». O espetáculo conta com a participação da classe de flauta do professor Rodrigo Lima, de Luana Rocha como convidada e de Fernando Martinho como pianista acompanhador, proporcionando um momento musical dedicado à celebração da quadra natalícia. Entrada livre."
+  description_en: "The Centro Cultural e de Congressos de Angra do Heroísmo hosts, on December 1, 2026, Tuesday, at 6:30 p.m., the concert «Ecos de Belém – Uma Viagem Musical pela Magia do Natal». The performance features the flute class of professor Rodrigo Lima, Luana Rocha as guest, and Fernando Martinho as accompanying pianist, offering a musical moment dedicated to celebrating the Christmas season. Free admission."
+  source_url: https://angradoheroismo.pt/evento/concerto-ecos-de-belem/
+  source_uid: "2049@angradoheroismo.pt"
+  tags:
+  - live-music
+
+  id: c463f78e-c904-4ae9-b2f9-88f069638d9b
+  locality: angra
