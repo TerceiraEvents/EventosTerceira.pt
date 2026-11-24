@@ -13866,3 +13866,76 @@ Come join us and support our festivities!"
   tags:
   - live-music
   id: b771abca-619b-41f2-80ea-e077da3ce2ee
+
+# Auto-ingested from CMAH (2026-11-24)
+- date: 2026-11-27
+  end_date: 2026-12-31
+  kind: exhibition
+  name: "Exposição | Olhares sobre o Monte Brasil"
+  name_en: "Exhibition | Olhares sobre o Monte Brasil"
+  venue: Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro
+  address: "Rua do Morrão, n.º 42, Angra do Heroísmo, 9700-054"
+  map_url: https://www.google.com/maps/search/?api=1&query=Biblioteca%20P%C3%BAblica%20e%20Arquivo%20Regional%20Lu%C3%ADs%20da%20Silva%20Ribeiro%20Angra%20do%20Hero%C3%ADsmo
+  description: "A BPARLSR organiza, de 27 de novembro a 31 de dezembro, a exposição “𝗢𝗹𝗵𝗮𝗿𝗲𝘀 𝘀𝗼𝗯𝗿𝗲 𝗼 𝗠𝗼𝗻𝘁𝗲 𝗕𝗿𝗮𝘀𝗶𝗹”, que ficará patente ao público no Espaço Mundo. Através de uma seleção de documentos, registos fotográficos e artigos publicados em revistas e jornais, bem como de monografias, destaca-se a área do Monte Brasil nas suas diversas vertentes: geológica e vulcanológica, histórica e militar, ecológica e ambiental, turística, de lazer e literária. Para mais informações consulte o link:…"
+  description_en: "BPARLSR is organizing, from November 27 to December 31, the exhibition “𝗢𝗹𝗵𝗮𝗿𝗲𝘀 𝘀𝗼𝗯𝗿𝗲 𝗼 𝗠𝗼𝗻𝘁𝗲 𝗕𝗿𝗮𝘀𝗶𝗹”, which will be open to the public at Espaço Mundo. Through a selection of documents, photographic records and articles published in magazines and newspapers, as well as monographs, the Monte Brasil area is highlighted in its various aspects: geological and volcanological, historical and military, ecological and environmental, tourism, leisure and literary. For more information, see the link:…"
+  source_url: https://angradoheroismo.pt/evento/exposicao-olhares-sobre-o-monte-brasil/
+  source_uid: "2055@angradoheroismo.pt"
+  tags:
+  - exhibition
+
+  id: 3c2a1012-8098-4387-b51e-4b582a8768f0
+  locality: angra
+- date: 2026-11-28
+  end_date: 2026-12-26
+  kind: exhibition
+  name: "Hora do Conto (Natal em Angra 2026)"
+  name_en: "Storytime (Christmas in Angra 2026)"
+  venue: Praça Velha
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "11:00"
+  description: "A Praça Velha acolhe, nos dias 28 de novembro e 5, 12, 19 e 26 de dezembro de 2026, sábados, às 11h00, a iniciativa «Hora do Conto», com Ana Couto e Paulo Freitas. Entrada livre."
+  description_en: "Praça Velha hosts the “Storytime” event on November 28 and December 5, 12, 19 and 26, 2026, Saturdays, at 11:00, with Ana Couto and Paulo Freitas. Free admission."
+  source_url: https://angradoheroismo.pt/evento/hora-do-conto-natal-em-angra-2026/
+  source_uid: "2062@angradoheroismo.pt"
+  tags:
+  - literature
+  - exhibition
+  - live-music
+  - theater
+
+  id: 7d3c37f2-20cf-4588-96e8-39f83ab4baac
+- date: 2026-12-19
+  end_date: 2026-12-20
+  name: "Cinema: Hexe – O Reino da Magia (VP)"
+  name_en: "Film: Hexe – O Reino da Magia (VP)"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Angra do Heroísmo, 9700-130"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20e%20de%20Congressos%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "15:00"
+  description: "Na nova saga mágica dos Walt Disney Animation Studios, Billie, uma adolescente impulsiva e pouco convencional, descobre possuir poderes mágicos que, uma vez libertados, a lançam numa viagem repleta de desafios, levando-a para lá dos limites da sua vida suburbana até Hexe, um vasto reino oculto de bruxas. Obrigada a unir forças com Alice, a sua cautelosa mãe, as duas acabam por desvendar mistérios familiares que poderão mudar para sempre o mundo das bruxas. Em exibição: 19 e 20 de dezembro de…"
+  description_en: "In the new magical saga from Walt Disney Animation Studios, Billie, an impulsive and unconventional teenager, discovers she has magical powers which, once unleashed, send her on a journey full of challenges, taking her beyond the limits of her suburban life to Hexe, a vast hidden realm of witches. Forced to join forces with Alice, her cautious mother, the two end up uncovering family mysteries that could change the world of witches forever. Showing: December 19 and 20…"
+  source_url: https://angradoheroismo.pt/evento/cinema-hexe-o-reino-da-magia-vp/
+  source_uid: "2060@angradoheroismo.pt"
+  tags:
+  - cinema
+
+  id: 9e5d4c8a-544c-4961-8f45-0913122cc814
+  locality: angra
+- date: 2026-12-26
+  end_date: 2026-12-28
+  name: "https://www.youtube.com/watch?v=WdN0qTUQ_lQ"
+  name_en: "https://www.youtube.com/watch?v=WdN0qTUQ_lQ"
+  venue: Centro Cultural e de Congressos de Angra do Heroísmo
+  address: "Canada Nova, Angra do Heroísmo, 9700-130"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20e%20de%20Congressos%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:00"
+  description: "Pouco antes do golpe chileno de 1973, os agentes da CIA Chris (John Malkovich) e Lee (Sam Rockwell) são enviados de Santiago para a Ilha de Páscoa, por indicação do seu chefe, MJ (Steve Buscemi). Entre as icónicas estátuas da ilha, os dois parceiros de longa data confrontam-se com um passado obscuro e conspirações do presente. Entretanto, o vínculo inesperado de Chris com duas estudantes rebeldes (Mariana di Girolamo e Ailín Salas) ameaça transformar a estadia neste paraíso remoto numa…"
+  description_en: "Shortly before the 1973 Chilean coup, CIA agents Chris (John Malkovich) and Lee (Sam Rockwell) are sent from Santiago to Easter Island at the recommendation of their boss, MJ (Steve Buscemi). Among the island’s iconic statues, the two longtime partners confront a dark past and present-day conspiracies. Meanwhile, Chris’s unexpected bond with two rebellious students (Mariana di Girolamo and Ailín Salas) threatens to turn their stay in this remote paradise into a…"
+  source_url: https://angradoheroismo.pt/evento/https-www-youtube-com-watchvwdn0qtuq_lq/
+  source_uid: "2061@angradoheroismo.pt"
+  tags:
+  - cinema
+
+  id: 798f8b88-b88e-4c3d-8601-f7178ef22e9f
+  locality: angra
