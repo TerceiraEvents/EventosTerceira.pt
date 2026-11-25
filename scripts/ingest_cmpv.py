@@ -35,6 +35,8 @@ from __future__ import annotations
 import datetime as dt
 import re
 import sys
+import time
+import urllib.error
 import urllib.parse
 
 from ingest_common import build_map_url, clean_description, normalize_name
@@ -382,6 +384,18 @@ def _build_description(title: str, venue: str, lines: list, year: int) -> str:
     return clean_description(" ".join(kept))
 
 
+def _fetch_with_retry(health: SourceHealth, url: str) -> bytes:
+    for attempt in range(3):
+        try:
+            return health.fetch(url)
+        except SourceError as exc:
+            cause = exc.__cause__
+            retryable = isinstance(cause, (urllib.error.URLError, TimeoutError))
+            if isinstance(cause, urllib.error.HTTPError) or not retryable or attempt == 2:
+                raise
+            time.sleep(2 ** (attempt + 1))
+
+
 def discover_events(today: dt.date, lookahead: dt.date, health: SourceHealth) -> list:
     """Crawl the live agenda and return verified event dicts.
 
@@ -403,7 +417,7 @@ def discover_events(today: dt.date, lookahead: dt.date, health: SourceHealth) ->
             raise SourceError(
                 f"pagination cap exceeded ({MAX_PAGES} pages from {AGENDA_URL})"
             )
-        root = parse_html(health.fetch(url))
+        root = parse_html(_fetch_with_retry(health, url))
         visited.add(url)
         if seed_root is None:
             seed_root = root
@@ -455,7 +469,7 @@ def discover_events(today: dt.date, lookahead: dt.date, health: SourceHealth) ->
         health.local += 1
         url = detail_url(event_id)
         try:
-            payload = health.fetch(url)
+            payload = _fetch_with_retry(health, url)
         except SourceError as exc:
             raise SourceError(f"required detail page failed for {name!r}: {exc}") from exc
         title, lines = _parse_detail(payload, url)
