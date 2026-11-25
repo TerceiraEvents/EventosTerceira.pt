@@ -13953,3 +13953,36 @@ Come join us and support our festivities!"
   source_url: https://www.cmpv.pt/index.php?op=agenda&id=923
   source_uid: "cmpv-923-2026-12-19"
   id: ceef264e-a3a4-4d60-97cf-c9f0540a5467
+
+# Auto-ingested from CMAH (2026-11-25)
+- date: 2026-12-04
+  end_date: 2027-01-04
+  name: "Lançamento de livro: A Arca de Noémia"
+  name_en: "Book launch: A Arca de Noémia"
+  venue: Centro Interpretativo de Angra do Heroísmo
+  address: "Rua do Marquês, Angra do Heroísmo, 9700-143"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro%20Interpretativo%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "17:15"
+  description: "O Centro Interpretativo de Angra do Heroísmo acolhe, no dia 4 de dezembro de 2026, sexta-feira, às 17h15, o lançamento do livro «A Arca de Noémia», da autoria de Álvaro Laborinho Lúcio, com apresentação de Adélia Carvalho. Jurista, professor universitário, escritor e figura de relevo na vida pública portuguesa, Álvaro Laborinho Lúcio desenvolveu um percurso marcado pela reflexão sobre a justiça, a sociedade e a condição humana, a par de uma reconhecida atividade literária. A apresentação desta…"
+  description_en: "Centro Interpretativo de Angra do Heroísmo will host the launch of the book «A Arca de Noémia», by Álvaro Laborinho Lúcio, presented by Adélia Carvalho, on Friday, 4 December 2026, at 5:15 p.m. A jurist, university professor, writer and prominent figure in Portuguese public life, Álvaro Laborinho Lúcio has pursued a path marked by reflection on justice, society and the human condition, alongside a recognised literary career. The presentation of this…"
+  source_url: https://angradoheroismo.pt/evento/lancamento-de-livro-a-arca-de-noemia/
+  source_uid: "2064@angradoheroismo.pt"
+  tags:
+  - literature
+
+  id: 4c837bc4-e721-45a1-9db7-746cd88b6bf8
+- date: 2026-12-14
+  name: "Apresentação de livro: Doçaria Conventual da Ilha Terceira"
+  name_en: "Book presentation: Doçaria Conventual da Ilha Terceira"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os%20do%20Concelho%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "20:00"
+  description: "Os Paços do Concelho acolhem, no dia 14 de dezembro de 2026, segunda-feira, às 20h00, a apresentação do livro «Doçaria Conventual da Ilha Terceira», de Helena Juliano. Uma publicação dedicada à doçaria conventual da ilha, que será apresentada ao público numa ocasião de encontro em torno dos sabores e das tradições doceiras da Terceira. Entrada livre."
+  description_en: "The Town Hall will host, on Monday, December 14, 2026, at 8:00 p.m., the presentation of the book «Doçaria Conventual da Ilha Terceira», by Helena Juliano. A publication dedicated to the convent confectionery of the island, which will be presented to the public at a gathering centered around the flavors and confectionery traditions of Terceira. Free admission."
+  source_url: https://angradoheroismo.pt/evento/apresentacao-de-livro-docaria-conventual-da-ilha-terceira/
+  source_uid: "2063@angradoheroismo.pt"
+  tags:
+  - literature
+
+  id: 8da96b81-c229-4848-9bac-3d88c22e9504
