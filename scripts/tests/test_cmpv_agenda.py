@@ -18,6 +18,8 @@ import os
 import sys
 import unittest
 import urllib.parse
+import urllib.error
+from unittest.mock import MagicMock, patch
 
 # Allow `from ingest_* import ...` whether run from repo root or from
 # scripts/tests/ directly.
@@ -108,6 +110,45 @@ class DiscoverTests(unittest.TestCase):
             page_url(1): fixture("agenda_single.html"),
             detail_url("914"): fixture(detail_fixture),
         }
+
+    def test_transient_timeout_retries_agenda_and_detail(self):
+        attempts = {}
+
+        def open_page(request, timeout):
+            url = request.full_url
+            attempts[url] = attempts.get(url, 0) + 1
+            if url in (ingest_cmpv.AGENDA_URL, detail_url("914")) and attempts[url] == 1:
+                raise urllib.error.URLError(TimeoutError("timed out"))
+            response = MagicMock()
+            response.__enter__.return_value.read.return_value = self.pages[url]
+            return response
+
+        health = ingest_cmpv.SourceHealth("CMPV")
+        with patch("urllib.request.urlopen", side_effect=open_page), patch("time.sleep") as sleep:
+            events = ingest_cmpv.discover_events(self.today, self.lookahead, health)
+        self.assertTrue(events)
+        self.assertEqual(attempts[ingest_cmpv.AGENDA_URL], 2)
+        self.assertEqual(attempts[detail_url("914")], 2)
+        self.assertEqual(sleep.call_count, 2)
+
+    def test_timeouts_exhaust_retries_and_raise_source_error(self):
+        health = ingest_cmpv.SourceHealth("CMPV")
+        with patch("urllib.request.urlopen", side_effect=TimeoutError("timed out")) as request, \
+             patch("time.sleep") as sleep:
+            with self.assertRaisesRegex(SourceError, "timed out"):
+                ingest_cmpv.discover_events(self.today, self.lookahead, health)
+        self.assertEqual(request.call_count, 3)
+        self.assertEqual(sleep.call_count, 2)
+
+    def test_http_error_is_not_retried(self):
+        health = ingest_cmpv.SourceHealth("CMPV")
+        error = urllib.error.HTTPError(ingest_cmpv.AGENDA_URL, 404, "Not Found", {}, None)
+        with patch("urllib.request.urlopen", side_effect=error) as request, \
+             patch("time.sleep") as sleep:
+            with self.assertRaises(SourceError):
+                ingest_cmpv.discover_events(self.today, self.lookahead, health)
+        self.assertEqual(request.call_count, 1)
+        sleep.assert_not_called()
 
     def test_films_and_show_discovered_across_pagination(self):
         events, health = self.discover()
