@@ -11547,19 +11547,14 @@ Come join us and support our festivities!"
   - literature
   time: '18:30'
   id: 97d8e0ec-de89-49f4-a871-885e7599d320
-- date: 2026-11-27
-  name: Conversas ao Serão — Médicos do Mundo e FraterUne
-  name_en: "Evening Conversations — Médicos do Mundo and FraterUne"
-  venue: Paços do Concelho (Town Hall)
-  locality: angra
-  description: Conversas ao Serão session with Médicos do Mundo and FraterUne.
-  description_pt: Sessão de Conversas ao Serão com Médicos do Mundo e FraterUne.
-  source_url: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
-  instagram: https://www.instagram.com/angradoheroismo/p/De17Bm-AIPj/
-  tags:
-  - literature
-  time: '21:00'
-  id: 71ab00b0-2989-47f7-bfe8-e8afce4cddcd
+# Curation (2026-11-25 social scan): the Conversas ao Serão session announced
+# for 2026-11-27 20:00 was cancelled by the municipality
+# (https://www.instagram.com/angradoheroismo/ — "A sessão de Conversas ao
+# Serão, prevista para a próxima sexta-feira, dia 27 de novembro, às 20h00,
+# está cancelada"). Both site copies of that date (CMAH "Médicos do Mundo e
+# FraterUne" and the What's On "AMI – FraterUne" listing) were removed. If a
+# source re-lists a 27-Nov session, reinstate only then.
+
 - date: 2026-11-29
   name: Lançamento de livros — Curso Escrever para Crianças
   name_en: "Book Launch — Writing for Children Course"
@@ -13638,19 +13633,6 @@ Come join us and support our festivities!"
   - literature
 
   id: c9d5dc3e-0b6e-4037-a867-282ad45e7774
-- date: 2026-11-27
-  name: "Conversas ao Serão: Assistência Médica Internacional – FraterUne – A Fraternidade que nos Une"
-  name_en: "Evening Conversations: Assistência Médica Internacional – FraterUne – A Fraternidade que nos Une"
-  venue: Salão Nobre da Câmara Municipal de Angra do Heroísmo
-  time: "20:00"
-  description: "📅 27 de novembro 🕒 20h00 📍 Salão Nobre da Câmara Municipal de Angra do Heroísmo Mais uma edição das “Conversas ao Serão”, desta vez com Fernando Nobre, presidente da Assistência Médica Internacional (AMI), que apresenta a conversa “FraterUne – A Fraternidade que nos Une”. Entrada livre. Mais informações."
-  description_en: "📅 27 November 🕒 8:00 pm 📍 Salão Nobre da Câmara Municipal de Angra do Heroísmo Another edition of “Evening Conversations”, this time with Fernando Nobre, president of Assistência Médica Internacional (AMI), who presents the conversation “FraterUne – A Fraternidade que nos Une”. Free admission. More information."
-  source_url: https://whatson.azores.gov.pt/evento/conversas-ao-serao-assistencia-medica-internacional-fraterune-a-fraternidade-que-nos-une/
-  source_uid: "sab63tu5JiTxw2u2:2026-11-27@whatson.azores.gov.pt"
-  tags:
-  - free
-
-  id: 6fa03b61-65ad-422b-8f5f-b55c01ac6522
 - date: 2026-11-28
   name: "Caminhada Solidária – Novembro Azul"
   name_en: "Solidarity Walk – Blue November"
@@ -14004,3 +13986,108 @@ Come join us and support our festivities!"
   - live-music
 
   id: 06b78d98-6df2-4a64-bff9-34bc633812ea
+
+
+# Curatorial (not auto-ingested): five dated items and one seasonal
+# programme from the 2026-11-25 social scan, as announced by the venues'
+# and municipalities' own Instagram accounts; times, prices and
+# conditions are as stated in the linked posts.
+
+- date: 2026-11-26
+  name: "Thanksgiving — jantar especial com 3HP Acoustic Rock"
+  name_en: "Thanksgiving — special dinner with 3HP Acoustic Rock"
+  venue: "The Garden Club"
+  map_url: https://www.google.com/maps/search/?api=1&query=The%20Garden%20Club%2C%20Angra%20do%20Hero%C3%ADsmo
+  address: "The Garden Club, Angra do Heroísmo"
+  description: "O The Garden Club celebra o Thanksgiving na quinta-feira, 26 de novembro de 2026, com jantar especial e música ao vivo com os 3HP Acoustic Rock. 26,50 € por pessoa; reservas via TableAmigo."
+  description_en: "The Garden Club celebrates Thanksgiving on Thursday, 26 November 2026, with a special dinner and live music by 3HP Acoustic Rock. 26.50 € per person; reservations via TableAmigo."
+  source_url: https://www.instagram.com/p/DgAWoEzMuWr/
+  instagram: https://www.instagram.com/thegardenclub.angra/
+  price: "26,50 € por pessoa"
+  tags:
+  - live-music
+  locality: angra
+  id: 1cadb75d-f6c0-4e8a-b59b-7edc7bb59b38
+
+- date: 2026-11-27
+  name: "Música ao vivo: Low Key (acústico)"
+  name_en: "Live music: Low Key (acoustic)"
+  venue: "The Garden Club"
+  map_url: https://www.google.com/maps/search/?api=1&query=The%20Garden%20Club%2C%20Angra%20do%20Hero%C3%ADsmo
+  address: "The Garden Club, Angra do Heroísmo"
+  time: "20:00"
+  description: "Os Low Key atuam em formato acústico no The Garden Club na sexta-feira, 27 de novembro de 2026, a partir das 20:00. O clube tem música ao vivo às sextas-feiras."
+  description_en: "Low Key perform an acoustic set at The Garden Club on Friday, 27 November 2026, from 20:00. The club hosts live music on Fridays."
+  source_url: https://www.instagram.com/p/DgH1fL5MeCT/
+  instagram: https://www.instagram.com/thegardenclub.angra/
+  tags:
+  - live-music
+  locality: angra
+  id: 6b9415fd-954e-43c5-a911-fbd635ae372f
+
+- date: 2026-11-27
+  name: "BLUSH — Girls Night Out (DJ Victor)"
+  name_en: "BLUSH — Girls Night Out (DJ Victor)"
+  venue: "Twins The Club"
+  map_url: https://www.google.com/maps/search/?api=1&query=Twins%20The%20Club%2C%20Angra%20do%20Hero%C3%ADsmo
+  address: "Twins The Club, Angra do Heroísmo"
+  time: "00:30"
+  description: "Noite BLUSH — Girls Night Out com DJ Victor no Twins The Club, sexta-feira, 27 de novembro de 2026, das 00:30 às 06:00. Homens 10 €, mulheres 5 € (consumo mínimo obrigatório); guest list com 1 cocktail."
+  description_en: "BLUSH — Girls Night Out with DJ Victor at Twins The Club, Friday, 27 November 2026, 00:30 to 06:00. Men 10 €, women 5 € (mandatory minimum spend); guest list includes one cocktail."
+  source_url: https://www.instagram.com/p/DgGuCTesSoj/
+  instagram: https://www.instagram.com/twinstheclub/
+  price: "Homens 10 € / Mulheres 5 €"
+  tags:
+  - nightlife
+  locality: angra
+  id: 2a3b0978-17f9-4747-ab4a-8c54831d3576
+
+- date: 2026-12-04
+  end_date: 2026-12-05
+  name: "Remember Old Times — duas noites de Kizomba no Twins"
+  name_en: "Remember Old Times — two nights of Kizomba at Twins"
+  venue: "Twins The Club"
+  map_url: https://www.google.com/maps/search/?api=1&query=Twins%20The%20Club%2C%20Angra%20do%20Hero%C3%ADsmo
+  address: "Twins The Club, Angra do Heroísmo"
+  description: "O Twins The Club dedica 4 e 5 de dezembro de 2026 aos grandes momentos da Kizomba: sexta-feira com Victor e DJ Monteiro; sábado com Jey V, John C, MDO, Yudi Fox e Ademar. Pulseiras: dia 4 — 10 €, dia 5 — 15 €, geral (duas noites) — 20 €; venda no clube, por reserva na Instagram e na bilheteira. Maiores de 16 anos."
+  description_en: "Twins The Club celebrates the great moments of Kizomba across two nights, 4 and 5 December 2026: Friday with Victor and DJ Monteiro; Saturday with Jey V, John C, MDO, Yudi Fox and Ademar. Wristbands: day 4 — 10 €, day 5 — 15 €, both nights — 20 €; sold at the club, via Instagram reservation and at the door. Ages 16 and up."
+  source_url: https://www.instagram.com/p/DgBQcRwsSKR/
+  instagram: https://www.instagram.com/twinstheclub/
+  price: "Pulseiras 10 € / 15 € / 20 €"
+  tags:
+  - nightlife
+  locality: angra
+  id: 6460eb86-eed4-4fb6-90ec-858b8e6f176b
+
+- date: 2026-11-30
+  name: "Concerto: Alma Popular + Sociedade Progresso Lajense"
+  name_en: "Concert: Alma Popular + Sociedade Progresso Lajense"
+  venue: "Auditório do Ramo Grande"
+  map_url: https://www.google.com/maps/search/?api=1&query=Auditório%20do%20Ramo%20Grande%2C%20Praia%20da%20Vit%C3%B3ria
+  address: "Auditório do Ramo Grande, Praia da Vitória"
+  time: "21:00"
+  description: "A banda Alma Popular sobe ao palco do Auditório do Ramo Grande, em conjunto com a Sociedade Progresso Lajense, no dia 30 de novembro de 2026, às 21:00. Entrada gratuita com levantamento de bilhete na AJAIT (seg-sex, 08h30-13h00 e 14h00-16h30) ou no ARG a partir de 2 horas antes do espetáculo."
+  description_en: "The band Alma Popular, together with Sociedade Progresso Lajense, takes the stage at the Auditório do Ramo Grande in Praia da Vitória on 30 November 2026 at 21:00. Free entry with ticket pickup at AJAIT (Mon-Fri, 08:30-13:00 and 14:00-16:30) or at ARG from two hours before the show."
+  source_url: https://www.instagram.com/p/DgH37c1lrep/
+  instagram: https://www.instagram.com/cmpraiadavitoria/
+  tags:
+  - live-music
+  locality: praia
+  id: d6735126-c9d7-40a8-979b-e26b945d814e
+
+- date: 2026-11-27
+  end_date: 2027-01-06
+  name: "Natal na Praia da Vitória — programação de Natal"
+  name_en: "Natal na Praia da Vitória — Christmas programme"
+  venue: "Centro histórico da Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro%20histórico%20da%20Praia%20da%20Vitória%2C%20Praia%20da%20Vit%C3%B3ria
+  address: "Centro histórico, Praia da Vitória"
+  description: "A programação de Natal do município da Praia da Vitória decorre de 27 de novembro de 2026 a 6 de janeiro de 2027 no centro histórico, com atividades ao longo de toda a quadra — incluindo o espetáculo Os Descendentes (cante alentejano) a 19 de dezembro no Auditório do Ramo Grande. Programa completo: https://www.cmpv.pt/index.php?op=noticias&id=4617"
+  description_en: "The Praia da Vitória municipality's Christmas programme runs from 27 November 2026 to 6 January 2027 in the historic centre, with activities across the whole season — including the Os Descendentes (Alentejo work song) show on 19 December at the Auditório do Ramo Grande. Full programme: https://www.cmpv.pt/index.php?op=noticias&id=4617"
+  source_url: https://www.instagram.com/p/DgF-kH7kSva/
+  instagram: https://www.instagram.com/cmpraiadavitoria/
+  tags:
+  - outdoor
+  - live-music
+  locality: praia
+  id: 7b3aeeb4-e6c6-4c63-a098-4aa3396d872f
