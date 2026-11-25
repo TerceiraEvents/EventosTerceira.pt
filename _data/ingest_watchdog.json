@@ -1,0 +1,11 @@
+{
+  "description": "Daily UTC schedule starts, grace before recovery, and maximum window age in minutes. Keep times aligned with the ingest workflow cron schedules.",
+  "windows": [
+    {"workflow": "ingest-cmah.yml", "time_utc": "06:00", "grace_minutes": 45, "max_age_minutes": 1440},
+    {"workflow": "ingest-ticketline.yml", "time_utc": "06:30", "grace_minutes": 45, "max_age_minutes": 1440},
+    {"workflow": "ingest-cmpv.yml", "time_utc": "07:30", "grace_minutes": 45, "max_age_minutes": 1440},
+    {"workflow": "ingest-whatson-azores.yml", "time_utc": "08:00", "grace_minutes": 45, "max_age_minutes": 1440},
+    {"workflow": "ingest-visit-azores.yml", "time_utc": "08:30", "grace_minutes": 45, "max_age_minutes": 1440},
+    {"workflow": "ingest-touradas.yml", "time_utc": "09:00", "grace_minutes": 45, "max_age_minutes": 1440}
+  ]
+}

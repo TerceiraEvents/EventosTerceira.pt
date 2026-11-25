@@ -1,0 +1,25 @@
+name: recover missed ingest windows
+
+on:
+  schedule:
+    - cron: "15,45 * * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: ingest-watchdog
+  cancel-in-progress: false
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover missed ingest windows
+        run: python3 scripts/ingest_watchdog.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
