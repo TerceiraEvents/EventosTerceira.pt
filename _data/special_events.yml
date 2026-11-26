@@ -14042,3 +14042,69 @@ Come join us and support our festivities!"
   tags:
   - free
   id: f7f5eb8e-1427-4618-a103-91b3329cf705
+
+# Auto-ingested from CMAH (2026-11-26)
+- date: 2026-11-30
+  end_date: 2026-12-30
+  kind: exhibition
+  name: "Exposição: Anjos de Natal"
+  name_en: "Exhibition: Anjos de Natal"
+  venue: Praça Velha
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Velha%20Angra%20do%20Hero%C3%ADsmo
+  time: "17:00"
+  description: "A Ermida de N.ª Sr.ª da Saúde, na Praça Velha, acolhe, de 30 de novembro a 30 de dezembro de 2026, entre as 17h00 e as 22h00, a exposição «Anjos de Natal». A mostra reúne trabalhos manuais desenvolvidos pelos Centros de Convívio do concelho de Angra do Heroísmo, dando a conhecer a criatividade, o talento e a dedicação dos seus participantes, num ambiente marcado pelo espírito e pela tradição natalícia. A inauguração realiza-se no dia 30 de novembro, às 17h00. Entrada livre."
+  description_en: "The Chapel of N.ª Sr.ª da Saúde, in Praça Velha, hosts the exhibition “Anjos de Natal” from November 30 to December 30, 2026, between 5:00 p.m. and 10:00 p.m. The exhibition brings together handicrafts created by the Community Centers of the municipality of Angra do Heroísmo, showcasing the creativity, talent and dedication of their participants in an atmosphere marked by the spirit and traditions of Christmas. The opening takes place on November 30 at 5:00 p.m. Free admission."
+  source_url: https://angradoheroismo.pt/evento/exposicao-anjos-de-natal/
+  source_uid: "2067@angradoheroismo.pt"
+  tags:
+  - exhibition
+
+  id: 53ab2c25-8517-412c-996b-f8abe23c3a2a
+- date: 2026-12-07
+  name: "Sessão comemorativa: 43.º aniversário da Inscrição da Zona Central de Angra do Heroísmo na Lista do Património Mundial da UNESCO (1983-2026)"
+  name_en: "Commemorative session: 43rd anniversary of the inscription of the Central Zone of Angra do Heroísmo on the UNESCO World Heritage List (1983-2026)"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os%20do%20Concelho%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "20:00"
+  description: "Os Paços do Concelho acolhem, no dia 7 de dezembro de 2026, segunda-feira, às 20h00, a sessão comemorativa do 43.º aniversário da Inscrição da Zona Central de Angra do Heroísmo na Lista do Património Mundial da UNESCO. A iniciativa assinala esta importante distinção internacional, promovendo a reflexão sobre a salvaguarda e a gestão do Património Mundial, através de duas intervenções dedicadas aos desafios contemporâneos da preservação e à experiência de gestão de um sítio patrimonial na…"
+  description_en: "The City Hall will host, on Monday, December 7, 2026, at 8:00 p.m., the commemorative session marking the 43rd anniversary of the inscription of the Central Zone of Angra do Heroísmo on the UNESCO World Heritage List. The event marks this important international distinction, promoting reflection on the safeguarding and management of World Heritage through two presentations dedicated to the contemporary challenges of preservation and the experience of managing a heritage site in the…"
+  source_url: https://angradoheroismo.pt/evento/sessao-comemorativa-43-o-aniversario-da-inscricao-da-zona-central-de-angra-do-heroismo-na-lista-do-patrimonio-mundial-da-unesco-1983-2026/
+  source_uid: "2066@angradoheroismo.pt"
+  tags:
+  - literature
+
+  id: 93607b36-f50b-420f-aa04-d69b6a0c6097
+- date: 2026-12-11
+  name: "Comemoração: 50 Anos das Primeiras Eleições Autárquicas"
+  name_en: "Celebration: 50 Years of the First Local Elections"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os%20do%20Concelho%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "19:00"
+  description: "Os Paços do Concelho acolhem, no dia 11 de dezembro de 2026, sexta-feira, às 19h00, a comemoração dos 50 anos das primeiras eleições autárquicas, assinalada com a abertura de uma exposição e a realização de uma conferência. A exposição, patente no Átrio Superior dos Paços do Concelho, será inaugurada por Carlos Enes. No Salão Nobre, a conferência será moderada por Andreia Cardoso da Costa e contará com a participação de Raquel Freitas, Presidente da Junta de Freguesia de São Pedro Fins, do…"
+  description_en: "The Town Hall will host, on Friday, 11 December 2026, at 19:00, the celebration of 50 years of the first local elections, marked by the opening of an exhibition and a conference. The exhibition, on display in the Upper Atrium of the Town Hall, will be inaugurated by Carlos Enes. In the Main Hall, the conference will be moderated by Andreia Cardoso da Costa and will include the participation of Raquel Freitas, President of the Parish Council of São Pedro Fins, of the…"
+  source_url: https://angradoheroismo.pt/evento/comemoracao-50-anos-das-primeiras-eleicoes-autarquicas/
+  source_uid: "2069@angradoheroismo.pt"
+  tags:
+  - literature
+
+  id: 3cff3ef6-5b71-42cc-8fd6-7e03ca8f03cf
+- date: 2026-12-20
+  end_date: 2027-01-31
+  kind: exhibition
+  name: "Exposição: As Miranas de Natal – Magia e Encanto"
+  name_en: "Exhibition: As Miranas de Natal – Magia e Encanto"
+  venue: Paços do Concelho de Angra do Heroísmo
+  address: "Praça Velha, Angra do Heroísmo, 9701-857"
+  map_url: https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os%20do%20Concelho%20de%20Angra%20do%20Hero%C3%ADsmo%20Angra%20do%20Hero%C3%ADsmo
+  time: "08:30"
+  description: "Os Paços do Concelho acolhem, no dia 20 de dezembro de 2026, domingo, às 19h00, a inauguração da exposição «As Miranas de Natal – Magia e Encanto», da autoria de Ana Maria Costa. A mostra reúne bonecas de pano feitas pela artista, dando a conhecer um conjunto de criações artesanais que evocam a magia e o encanto da época natalícia. A exposição estará patente ao público até 31 de janeiro de 2027. Entrada livre."
+  description_en: "Paços do Concelho will host the opening of the exhibition «As Miranas de Natal – Magia e Encanto», by Ana Maria Costa, on Sunday, December 20, 2026, at 7:00 p.m. The exhibition brings together cloth dolls made by the artist, showcasing a collection of handcrafted creations that evoke the magic and enchantment of the Christmas season. The exhibition will be open to the public until January 31, 2027. Free admission."
+  source_url: https://angradoheroismo.pt/evento/exposicao-as-miranas-de-natal-magia-e-encanto/
+  source_uid: "2068@angradoheroismo.pt"
+  tags:
+  - exhibition
+
+  id: b197a59b-ec3b-4340-ab77-1eef2f68cde4
