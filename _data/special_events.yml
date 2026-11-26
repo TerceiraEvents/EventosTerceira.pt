@@ -11674,6 +11674,7 @@ Come join us and support our festivities!"
   - outdoor
   time: '10:30'
   id: e26dbc20-6ad5-41ae-bb33-2dd99e7b28ff
+  source_uid: "scwrTyRTNcG0h6Vl:2026-11-28@whatson.azores.gov.pt"
 - date: 2026-12-26
   name: Walk With a Doc — Praia da Vitória
   name_en: "Walk With a Doc — Praia da Vitória"
@@ -11689,6 +11690,7 @@ Come join us and support our festivities!"
   - outdoor
   time: '10:30'
   id: df6c3168-486b-40cf-b3d5-707586e00a1c
+  source_uid: "scwrTyRTNcG0h6Vl:2026-12-26@whatson.azores.gov.pt"
 - date: 2026-10-31
   name: Atelier de Halloween — Raízes Pequenas
   name_en: "Halloween Workshop — Raízes Pequenas"
@@ -12459,17 +12461,6 @@ Come join us and support our festivities!"
 
   id: 77701545-bd37-4313-8e21-bbbe8ed2fef0
 - date: 2026-11-28
-  name: "Walk With a Doc"
-  name_en: "Walk With a Doc"
-  venue: "Ponto de encontro: em frente à GNR |Praia da Vitória"
-  time: "10:30"
-  description: "📅 31 de outubro, 28 de novembro e 26 de dezembro 🕒 10:30 📍 Ponto de encontro: em frente à GNR, Praia da Vitória, Terceira (Google Maps) O Walk With a Doc promove caminhadas mensais com acompanhamento médico, incentivando a atividade física e a adoção de hábitos de vida mais saudáveis num ambiente descontraído e de convívio. O percurso realiza-se pela Marginal da Praia da Vitória, proporcionando também momentos de partilha de experiências e esclarecimento de questões relacionadas com a saúde. Em…"
-  description_en: "📅 October 31, November 28 and December 26 🕒 10:30 📍 Meeting point: in front of the GNR, Praia da Vitória, Terceira (Google Maps) Walk With a Doc promotes monthly walks accompanied by a doctor, encouraging physical activity and the adoption of healthier lifestyle habits in a relaxed, social setting. The route follows the Praia da Vitória waterfront, also providing opportunities to share experiences and get answers to health-related questions. At…"
-  source_url: https://whatson.azores.gov.pt/evento/walk-with-a-doc-1793460511478/
-  source_uid: "scwrTyRTNcG0h6Vl:2026-11-28@whatson.azores.gov.pt"
-
-  id: fe4f6895-3399-4778-8aa6-e2dbe0cddd1b
-- date: 2026-11-28
   name: "Workshop de Bolachas de Natal"
   name_en: "Christmas Cookie Workshop"
   venue: Mercado de Natal do Porto Judeu
@@ -13188,17 +13179,6 @@ Come join us and support our festivities!"
   - free
 
   id: 2179c769-64a0-46f3-b541-8b07a1976c5d
-- date: 2026-12-26
-  name: "Walk With a Doc"
-  name_en: "Walk With a Doc"
-  venue: "Ponto de encontro: em frente à GNR |Praia da Vitória"
-  time: "10:30"
-  description: "📅 31 de outubro, 28 de novembro e 26 de dezembro 🕒 10:30 📍 Ponto de encontro: em frente à GNR, Praia da Vitória, Terceira (Google Maps) O Walk With a Doc promove caminhadas mensais com acompanhamento médico, incentivando a atividade física e a adoção de hábitos de vida mais saudáveis num ambiente descontraído e de convívio. O percurso realiza-se pela Marginal da Praia da Vitória, proporcionando também momentos de partilha de experiências e esclarecimento de questões relacionadas com a saúde. Em…"
-  description_en: "📅 October 31, November 28 and December 26 🕒 10:30 📍 Meeting point: in front of the GNR, Praia da Vitória, Terceira (Google Maps) Walk With a Doc promotes monthly walks with medical supervision, encouraging physical activity and the adoption of healthier lifestyle habits in a relaxed, sociable setting. The route follows the seafront promenade of Praia da Vitória, also offering moments to share experiences and discuss health-related questions. In…"
-  source_url: https://whatson.azores.gov.pt/evento/walk-with-a-doc-1793460511478/
-  source_uid: "scwrTyRTNcG0h6Vl:2026-12-26@whatson.azores.gov.pt"
-
-  id: 394763f9-844e-4872-b1ef-023e1be8ea20
 - date: 2027-01-02
   name: "COMUNICADO | ADIAMENTO DOS CONCERTOS DE CAROLINA DESLANDES NA ILHA TERCEIRA"
   name_en: "ANNOUNCEMENT | POSTPONEMENT OF CAROLINA DESLANDES CONCERTS ON TERCEIRA ISLAND"
