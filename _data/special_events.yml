@@ -10545,6 +10545,7 @@ Come join us and support our festivities!"
 
 - date: 2026-11-05
   id: 5d0ce166-e266-4e3c-ab53-50fc9d76e310
+  source_uid: "108929@ticketline.pt"
   end_date: 2026-11-09
   locality: "angra"
   name: "Cinema: O Veredito Social"
@@ -10905,6 +10906,7 @@ Come join us and support our festivities!"
 
 - date: 2026-11-12
   id: af21749d-29bd-4ead-b9a1-0ab45bdad819
+  source_uid: "108930@ticketline.pt"
   end_date: 2026-11-16
   locality: "angra"
   name: "Cinema: Street Fighter"
@@ -10975,6 +10977,7 @@ Come join us and support our festivities!"
 
 - date: 2026-11-14
   id: 440b6737-8244-4a7e-ba33-f02cfe82bb2e
+  source_uid: "108934@ticketline.pt"
   end_date: 2026-11-15
   locality: "angra"
   name: "Cinema: A Ilha Esquecida"
@@ -11136,6 +11139,7 @@ Come join us and support our festivities!"
 
 - date: 2026-11-19
   id: c828b10e-8195-4df7-8a4f-3b6b97f4a8e2
+  source_uid: "108939@ticketline.pt"
   end_date: 2026-11-23
   locality: "angra"
   name: "Cinema: Clayface"
@@ -11976,18 +11980,6 @@ Come join us and support our festivities!"
   id: 669a2215-ddc0-421d-ae18-232755e363a9
 
 # Auto-ingested from Ticketline (2026-11-01)
-- date: 2026-11-05
-  name: "O VEREDITO SOCIAL"
-  name_en: "THE SOCIAL VERDICT"
-  venue: C.C.C. Angra Do Heroísmo - Pequeno Auditório
-  map_url: https://www.google.com/maps/search/?api=1&query=C.C.C.%20Angra%20Do%20Hero%C3%ADsmo%20-%20Pequeno%20Audit%C3%B3rio%20Angra%20do%20Hero%C3%ADsmo
-  time: "21:00"
-  description: "Duas décadas após a fundação do Facebook, a plataforma tornou-se um gigante que influencia a vida das pessoas e os governos de todo o mundo. No centro da história está uma pergunta que marca o nosso tempo: o que acontece quando a atenção humana se torna o bem mais valioso da sociedade? \"O Veredito Social\" acompanha a relação de confiança entre Frances Haugen, antiga engenheira do Facebook, e Jeff Horwitz, jornalista do Wall Street Journal, que se unem para revelar os segredos mais bem guardados…"
-  description_en: "Two decades after the founding of Facebook, the platform has become a giant that influences people's lives and the governments of the whole world. At the centre of the story is a question that marks our time: what happens when human attention becomes the most valuable asset in society? \"The Social Verdict\" follows the relationship of trust between Frances Haugen, a former Facebook engineer, and Jeff Horwitz, a journalist at the Wall Street Journal, who join forces to reveal the best-kept secrets…"
-  source_url: https://www.ticketline.pt/evento/o-veredito-social-108929
-  source_uid: "108929@ticketline.pt"
-
-  id: 1f1871ae-30e1-4543-843d-75f5495c635f
 - date: 2026-11-07
   name: "ENQUANTO HOUVER QUEM CANTE"
   name_en: "AS LONG AS THERE IS SOMEONE TO SING"
@@ -11999,18 +11991,6 @@ Come join us and support our festivities!"
   source_uid: "109225@ticketline.pt"
 
   id: bdca5310-c8fc-4ed8-a26d-0520dad67868
-- date: 2026-11-12
-  name: "STREET FIGHTER"
-  name_en: "STREET FIGHTER"
-  venue: C.C.C. Angra Do Heroísmo - Pequeno Auditório
-  map_url: https://www.google.com/maps/search/?api=1&query=C.C.C.%20Angra%20Do%20Hero%C3%ADsmo%20-%20Pequeno%20Audit%C3%B3rio%20Angra%20do%20Hero%C3%ADsmo
-  time: "21:00"
-  description: "A narrativa decorre em 1993, onde Ryu, interpretado por Andrew Koji, e Ken Masters, a cargo de Noah Centineo, voltam a cruzar destinos ao serem recrutados pela enigmática Chun-Li, interpretada por Callina Liang. Juntos, enfrentam o torneio \"World Warrior\", uma competição feroz que esconde uma conspiração letal e arrisca colocá-los frente a frente tanto como adversários quanto diante dos seus próprios fantasmas."
-  description_en: "The story takes place in 1993, where Ryu, played by Andrew Koji, and Ken Masters, played by Noah Centineo, cross destinies again when they are recruited by the enigmatic Chun-Li, played by Callina Liang. Together, they face the \"World Warrior\" tournament, a fierce competition that hides a deadly conspiracy and risks putting them face to face both as adversaries and before their own demons."
-  source_url: https://www.ticketline.pt/evento/street-fighter-108930
-  source_uid: "108930@ticketline.pt"
-
-  id: b8e21ad3-a3b3-4a73-a9e7-ba6de099f77f
 - date: 2026-11-13
   name: "HUGO SOUSA - AQUI ENTRE NÓS"
   name_en: "HUGO SOUSA - HERE BETWEEN US"
@@ -12022,18 +12002,6 @@ Come join us and support our festivities!"
   source_uid: "105639@ticketline.pt"
 
   id: b13b5cef-9955-419a-9954-8680e606b082
-- date: 2026-11-14
-  name: "A ILHA ESQUECIDA"
-  name_en: "THE FORGOTTEN ISLAND"
-  venue: C.C.C. Angra Do Heroísmo - Pequeno Auditório
-  map_url: https://www.google.com/maps/search/?api=1&query=C.C.C.%20Angra%20Do%20Hero%C3%ADsmo%20-%20Pequeno%20Audit%C3%B3rio%20Angra%20do%20Hero%C3%ADsmo
-  time: "15:00"
-  description: "Jo e Raissa encontram-se presas no mundo fantástico da ilha esquecida de Nakali. Descobrem que a única forma de regressarem a casa poderá custar-lhes uma vida inteira de memórias e emoções."
-  description_en: "Jo and Raissa find themselves trapped in the fantastic world of the forgotten island of Nakali. They discover that the only way to return home may cost them a lifetime of memories and emotions."
-  source_url: https://www.ticketline.pt/evento/a-ilha-esquecida-108934
-  source_uid: "108934@ticketline.pt"
-
-  id: 8bc8b0d6-3793-4759-a9f1-b957141b6c3f
 - date: 2026-11-20
   name: "SONS DA MACARONÉSIA 2026"
   name_en: "SONS DA MACARONÉSIA 2026"
@@ -12090,20 +12058,6 @@ Come join us and support our festivities!"
   - live-music
 
   id: 8481bf42-466c-434e-8813-7c8011846d86
-
-# Auto-ingested from Ticketline (2026-11-03)
-- date: 2026-11-19
-  name: "CLAYFACE"
-  name_en: "CLAYFACE"
-  venue: C.C.C. Angra Do Heroísmo - Pequeno Auditório
-  map_url: https://www.google.com/maps/search/?api=1&query=C.C.C.%20Angra%20Do%20Hero%C3%ADsmo%20-%20Pequeno%20Audit%C3%B3rio%20Angra%20do%20Hero%C3%ADsmo
-  time: "21:00"
-  description: "Um conto de terror de Hollywood centrado num ator de filmes de série B que se injeta com uma substância e descobre que é capaz de moldar rosto e corpo, tornando-se numa verdadeira peça de argila ambulante."
-  description_en: "A Hollywood horror tale centred on a B-movie actor who injects himself with a substance and discovers that he is able to shape face and body, becoming a true walking piece of clay."
-  source_url: https://www.ticketline.pt/evento/clayface-108939
-  source_uid: "108939@ticketline.pt"
-
-  id: c97afa40-b40d-45bc-89c5-d859e2e03c34
 
 - name: "ESCAMA: de cobra 4#"
   name_en: "ESCAMA: de cobra 4#"
