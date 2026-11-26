@@ -243,6 +243,36 @@ class LocalityConflictTests(unittest.TestCase):
 
 
 class RunIngesterTests(unittest.TestCase):
+    def test_cancelled_source_uid_blocks_reoffers_but_allows_a_new_occurrence(self):
+        url = "https://example.test/an-event"
+        cancelled = event("Original concert", "2026-11-27", "20:00", "Town Hall",
+                          source_url=url, source_uid="original@fixture.test", cancelled=True)
+        reoffers = [
+            event("Updated programme", "2026-11-27", "21:00", "Different venue",
+                  source_url="https://example.test/updated", source_uid=cancelled["source_uid"]),
+            event("Updated programme", "2026-11-28", "21:00", "Different venue",
+                  source_url="https://example.test/updated", source_uid=cancelled["source_uid"]),
+        ]
+        replacement = event("Original concert", "2026-11-29", "20:00", "Town Hall",
+                            source_url=url, source_uid="replacement@fixture.test", description="New session")
+        with tempfile.TemporaryDirectory() as tmp:
+            path, report = Path(tmp) / "events.yml", Path(tmp) / "health.json"
+            before = yaml.safe_dump([cancelled], allow_unicode=True)
+            path.write_text(before, encoding="utf-8")
+            with patch.object(sys, "argv", ["test", "--yaml-path", str(path), "--health-report", str(report),
+                                           "--today", "2026-11-26"]), \
+                    patch.object(health, "translate_events", return_value=[]):
+                self.assertEqual(run_ingester("fixture", lambda *args: reoffers + [replacement]), 0)
+            summary = json.loads(report.read_text())
+            self.assertEqual((summary["duplicates"], summary["added"]), (2, 1))
+            self.assertEqual(summary["corrections"], [])
+            stored = path.read_text(encoding="utf-8")
+            self.assertTrue(stored.startswith(before))
+            events = yaml.safe_load(stored)
+            self.assertEqual(events[0], cancelled)
+            self.assertEqual(events[1]["source_uid"], replacement["source_uid"])
+            self.assertIsNot(events[1].get("cancelled"), True)
+
     def test_the_issue_326_pairs_are_skipped_and_a_new_event_is_kept(self):
         stored = [dict(pair[0], source_url=f"https://example.test/stored/{index}")
                   for index, pair in enumerate(ISSUE_326_PAIRS.values())]
@@ -260,6 +290,19 @@ class RunIngesterTests(unittest.TestCase):
             self.assertEqual((summary["duplicates"], summary["candidates"], summary["added"]),
                              (len(ISSUE_326_PAIRS), 1, 1))
             self.assertEqual(len(yaml.safe_load(path.read_text())), len(stored) + 1)
+
+
+class PublishedCancellationTests(unittest.TestCase):
+    def test_both_offers_remain_in_the_ingest_dedup_index(self):
+        stored = common.load_existing_yaml(common.YAML_PATH)
+        on_day = [record for record in stored if record["date"] == dt.date(2026, 11, 27)
+                  and "FraterUne" in record["name"]]
+        self.assertEqual(len(on_day), 2)
+        self.assertTrue(all(record.get("cancelled") is True for record in on_day))
+        names, uids = common.build_dedup_index(on_day)
+        self.assertIn("sab63tu5JiTxw2u2:2026-11-27" + WHATSON, uids)
+        self.assertTrue(common.matches_existing("Conversas ao Serão — Médicos do Mundo e FraterUne",
+                                                dt.date(2026, 11, 27), names))
 
 
 class InRunTests(unittest.TestCase):

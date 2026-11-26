@@ -106,13 +106,16 @@ def _duplicate(event: dict, existing: list[dict]) -> bool:
     """
     conflict = None
     for other in existing:
+        same_uid = event.get("source_uid") and event["source_uid"] == other.get("source_uid")
+        if same_uid and other.get("cancelled") is True:
+            return True
         start = other.get("date")
         end = other.get("end_date", start)
         if not isinstance(start, dt.date) or not isinstance(end, dt.date):
             continue
         if not start <= event["date"] <= end:
             continue
-        if event.get("source_uid") and event["source_uid"] == other.get("source_uid"):
+        if same_uid:
             return True
         if event.get("source_url") and event["source_url"] == other.get("source_url"):
             return True
@@ -217,7 +220,8 @@ def run_ingester(source: str, discover, language: str = "pt") -> int:
                     candidates.append(event)
                 else:
                     health.duplicates += 1
-                    if event.get("time") and match.get("time") and event["time"] != match["time"]:
+                    if (match.get("cancelled") is not True and event.get("time") and match.get("time")
+                            and event["time"] != match["time"]):
                         health.corrections.append({"date": start.isoformat(), "name": event["name"],
                                                    "field": "time", "stored": match["time"],
                                                    "observed": event["time"], "source_url": event["source_url"]})

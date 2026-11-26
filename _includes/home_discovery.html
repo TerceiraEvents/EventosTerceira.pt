@@ -14,7 +14,7 @@
   {% assign events = site.data.special_events | sort: 'date' %}
   {% for event in events %}
     {% assign ending = event.end_date | default: event.date | date: '%Y-%m-%d' %}
-    {% if ending >= now_day and event.kind != 'exhibition' and preview_count < 3 %}
+    {% if ending >= now_day and event.kind != 'exhibition' and event.cancelled != true and preview_count < 3 %}
       {% include special_event_card.html event=event %}
       {% assign preview_count = preview_count | plus: 1 %}
     {% endif %}

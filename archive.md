@@ -17,7 +17,7 @@ lang_alt: /pt/archive/
 {% assign has_past = false %}
 {% for event in sorted_events %}
   {% assign event_ts = event.end_date | default: event.date | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
-  {% if event_ts < now_ts %}
+  {% if event_ts < now_ts and event.cancelled != true %}
     {% assign has_past = true %}
   {% endif %}
 {% endfor %}
@@ -25,7 +25,7 @@ lang_alt: /pt/archive/
 {% if has_past %}
 {% for event in sorted_events %}
   {% assign event_ts = event.end_date | default: event.date | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
-  {% if event_ts < now_ts %}
+  {% if event_ts < now_ts and event.cancelled != true %}
     {% include special_event_card.html event=event %}
   {% endif %}
 {% endfor %}

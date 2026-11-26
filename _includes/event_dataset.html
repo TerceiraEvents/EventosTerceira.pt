@@ -1,1 +1,7 @@
-<script type="application/json" id="event-dataset">{{ site.data.special_events | jsonify | replace: '</', '<\/' }}</script>
+{% assign visible_events = "" | split: "" %}
+{% for dataset_event in site.data.special_events %}
+  {% unless dataset_event.cancelled == true %}
+    {% assign visible_events = visible_events | push: dataset_event %}
+  {% endunless %}
+{% endfor %}
+<script type="application/json" id="event-dataset">{{ visible_events | jsonify | replace: '</', '<\/' }}</script>

@@ -156,6 +156,45 @@ assert_eq home.include?("Single Past"), false, "[en] home preview hides Single P
 home_pt = render_page("pt/index.md", EVENTS, "pt")
 assert_eq home_pt.include?("Ongoing Expo"), true, "[pt] home preview lists Ongoing Expo"
 
+puts "cancelled records are hidden on every listing (actual templates)"
+CANCELLED = [
+  ev("Cancelled Tomorrow", T + 1).merge("cancelled" => true, "locality" => "praia"),
+  ev("Visible Tomorrow", T + 2).merge("cancelled" => false, "locality" => "angra"),
+  ev("Cancelled Past", T - 2).merge("cancelled" => true),
+  ev("Visible Past", T - 3),
+].freeze
+{
+  "special.md" => "en", "pt/special.md" => "pt",
+  "calendar.md" => "en", "pt/calendar.md" => "pt",
+}.each do |path, lang|
+  out = render_page(path, CANCELLED, lang)
+  assert_eq out.include?("Visible Tomorrow"), true, "[#{lang}] #{path} lists visible future"
+  assert_eq out.include?("Cancelled Tomorrow"), false, "[#{lang}] #{path} hides cancelled future"
+  assert_eq out.include?('data-locality value="angra"'), true, "[#{lang}] #{path} keeps active locality"
+  assert_eq out.include?('data-locality value="praia"'), false, "[#{lang}] #{path} omits cancelled-only locality"
+  empty = render_page(path, [CANCELLED.first], lang)
+  message = lang == "pt" ? "não há eventos agendados" : "No upcoming events at the moment"
+  assert_eq empty.include?(message), true, "[#{lang}] #{path} shows the empty state for a cancelled-only agenda"
+end
+{ "archive.md" => "en", "pt/archive.md" => "pt" }.each do |path, lang|
+  out = render_page(path, CANCELLED, lang)
+  assert_eq out.include?("Visible Past"), true, "[#{lang}] #{path} lists visible past"
+  assert_eq out.include?("Cancelled Past"), false, "[#{lang}] #{path} hides cancelled past"
+end
+{ "index.md" => "en", "pt/index.md" => "pt" }.each do |path, lang|
+  full_preview = CANCELLED + [ev("Third Day", T + 3), ev("Fourth Day", T + 4)]
+  home_cancelled = render_page(path, full_preview, lang)
+  assert_eq home_cancelled.include?("Cancelled Tomorrow"), false, "[#{lang}] home preview hides cancelled"
+  assert_eq home_cancelled.include?("Visible Tomorrow"), true, "[#{lang}] home preview keeps visible"
+  assert_eq home_cancelled.include?("Fourth Day"), true, "[#{lang}] cancelled event does not take a preview slot"
+end
+{ "events.md" => "en", "pt/events.md" => "pt" }.each do |path, lang|
+  events_page = render_page(path, CANCELLED, lang)
+  dataset = events_page[%r{<script type="application/json" id="event-dataset">(.*?)</script>}m, 1]
+  assert_eq JSON.parse(dataset).map { |event| event["name"] }, ["Visible Tomorrow", "Visible Past"],
+            "[#{lang}] event dataset contains only visible records"
+end
+
 puts "winter UTC-1 selection with Date objects (actual templates)"
 
 with_tz(WINTER_TZ) do

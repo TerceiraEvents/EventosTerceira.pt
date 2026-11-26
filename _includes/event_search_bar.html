@@ -77,9 +77,11 @@
   </details>
   {% assign has_angra = false %}{% assign has_praia = false %}{% assign has_other = false %}
   {% for known_event in site.data.special_events %}
-    {% if known_event.locality == 'angra' %}{% assign has_angra = true %}{% endif %}
-    {% if known_event.locality == 'praia' %}{% assign has_praia = true %}{% endif %}
-    {% if known_event.locality == 'other' %}{% assign has_other = true %}{% endif %}
+    {% if known_event.cancelled != true %}
+      {% if known_event.locality == 'angra' %}{% assign has_angra = true %}{% endif %}
+      {% if known_event.locality == 'praia' %}{% assign has_praia = true %}{% endif %}
+      {% if known_event.locality == 'other' %}{% assign has_other = true %}{% endif %}
+    {% endif %}
   {% endfor %}
   {% if has_angra or has_praia or has_other %}
   <details class="filter-dropdown event-locality-filter">
