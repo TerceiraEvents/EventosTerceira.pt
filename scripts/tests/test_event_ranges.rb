@@ -156,6 +156,30 @@ assert_eq home.include?("Single Past"), false, "[en] home preview hides Single P
 home_pt = render_page("pt/index.md", EVENTS, "pt")
 assert_eq home_pt.include?("Ongoing Expo"), true, "[pt] home preview lists Ongoing Expo"
 
+puts "cancelled records are hidden on every listing (actual templates)"
+CANCELLED = [
+  ev("Cancelled Tomorrow", T + 1).merge("cancelled" => true),
+  ev("Visible Tomorrow", T + 2),
+  ev("Cancelled Past", T - 2).merge("cancelled" => true),
+  ev("Visible Past", T - 3),
+].freeze
+{ "special.md" => "en", "pt/special.md" => "pt", "calendar.md" => "en" }.each do |path, lang|
+  out = render_page(path, CANCELLED, lang)
+  assert_eq out.include?("Visible Tomorrow"), true, "[#{lang}] #{path} lists visible future"
+  assert_eq out.include?("Cancelled Tomorrow"), false, "[#{lang}] #{path} hides cancelled future"
+end
+{ "archive.md" => "en", "pt/archive.md" => "pt" }.each do |path, lang|
+  out = render_page(path, CANCELLED, lang)
+  assert_eq out.include?("Visible Past"), true, "[#{lang}] #{path} lists visible past"
+  assert_eq out.include?("Cancelled Past"), false, "[#{lang}] #{path} hides cancelled past"
+end
+home_cancelled = render_page("index.md", CANCELLED, "en")
+assert_eq home_cancelled.include?("Cancelled Tomorrow"), false, "home preview hides cancelled"
+assert_eq home_cancelled.include?("Visible Tomorrow"), true, "home preview keeps visible"
+events_page = render_page("events.md", CANCELLED, "en")
+assert_eq events_page.include?("Cancelled Tomorrow"), false, "event dataset JSON hides cancelled"
+assert_eq events_page.include?("Visible Tomorrow"), true, "event dataset JSON keeps visible"
+
 puts "winter UTC-1 selection with Date objects (actual templates)"
 
 with_tz(WINTER_TZ) do

@@ -212,6 +212,19 @@ end
   assert_eq errors.any? { |error| error.include?(name) }, true, "#{name} error names record" if should_fail
 end
 
+puts "cancelled flag"
+assert_eq validate_fixture_events(
+  [{ "name" => "Called Off", "date" => Date.new(2026, 10, 4), "cancelled" => true }]
+), [], "cancelled: true passes"
+assert_eq validate_fixture_events(
+  [{ "name" => "Off Switch", "date" => Date.new(2026, 10, 4), "cancelled" => false }]
+), [], "cancelled: false passes"
+bad_cancelled = validate_fixture_events(
+  [{ "name" => "Not A Boolean", "date" => Date.new(2026, 10, 4), "cancelled" => "yes" }]
+)
+assert_eq bad_cancelled.size, 1, "non-boolean cancelled fails"
+assert_eq bad_cancelled.first.include?("cancelled"), true, "cancelled error names the field"
+
 if @failed > 0
   puts "\nFAIL: #{@failed} assertion(s) failed"
   exit 1

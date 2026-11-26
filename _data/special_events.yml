@@ -11551,9 +11551,26 @@ Come join us and support our festivities!"
 # for 2026-11-27 20:00 was cancelled by the municipality
 # (https://www.instagram.com/angradoheroismo/ — "A sessão de Conversas ao
 # Serão, prevista para a próxima sexta-feira, dia 27 de novembro, às 20h00,
-# está cancelada"). Both site copies of that date (CMAH "Médicos do Mundo e
-# FraterUne" and the What's On "AMI – FraterUne" listing) were removed. If a
-# source re-lists a 27-Nov session, reinstate only then.
+# está cancelada"). The CMAH copy was removed and CMAH has dropped the
+# listing. What's On still publishes the page, so its copy is kept below with
+# `cancelled: true`: its `source_uid` stays in the file so the ingester stops
+# re-offering it, while every listing path hides cancelled records. If What's
+# On ever drops the page, this record may be deleted; if the municipality
+# reschedules the session, that is a new event with a new uid.
+
+- date: 2026-11-27
+  name: "Conversas ao Serão: Assistência Médica Internacional – FraterUne – A Fraternidade que nos Une"
+  name_en: "Evening Conversations: Assistência Médica Internacional – FraterUne – A Fraternidade que nos Une"
+  venue: Salão Nobre da Câmara Municipal de Angra do Heroísmo
+  time: "20:00"
+  description: "📅 27 de novembro 🕒 20h00 📍 Salão Nobre da Câmara Municipal de Angra do Heroísmo Mais uma edição das “Conversas ao Serão”, desta vez com Fernando Nobre, presidente da Assistência Médica Internacional (AMI), que apresenta a conversa “FraterUne – A Fraternidade que nos Une”. Entrada livre. Mais informações."
+  description_en: "📅 November 27 🕒 8:00 p.m. 📍 Main Hall of Angra do Heroísmo City Hall Another edition of “Evening Conversations”, this time with Fernando Nobre, president of Assistência Médica Internacional (AMI), who presents the conversation “FraterUne – A Fraternidade que nos Une”. Free entry. More information."
+  source_url: https://whatson.azores.gov.pt/evento/conversas-ao-serao-assistencia-medica-internacional-fraterune-a-fraternidade-que-nos-une/
+  source_uid: "sab63tu5JiTxw2u2:2026-11-27@whatson.azores.gov.pt"
+  cancelled: true
+  tags:
+  - free
+  id: f7f5eb8e-1427-4618-a103-91b3329cf705
 
 - date: 2026-11-29
   name: Lançamento de livros — Curso Escrever para Crianças
@@ -14091,17 +14108,3 @@ Come join us and support our festivities!"
   - live-music
   locality: praia
   id: 7b3aeeb4-e6c6-4c63-a098-4aa3396d872f
-
-# Auto-ingested from What's On Azores (2026-11-26)
-- date: 2026-11-27
-  name: "Conversas ao Serão: Assistência Médica Internacional – FraterUne – A Fraternidade que nos Une"
-  name_en: "Evening Conversations: Assistência Médica Internacional – FraterUne – A Fraternidade que nos Une"
-  venue: Salão Nobre da Câmara Municipal de Angra do Heroísmo
-  time: "20:00"
-  description: "📅 27 de novembro 🕒 20h00 📍 Salão Nobre da Câmara Municipal de Angra do Heroísmo Mais uma edição das “Conversas ao Serão”, desta vez com Fernando Nobre, presidente da Assistência Médica Internacional (AMI), que apresenta a conversa “FraterUne – A Fraternidade que nos Une”. Entrada livre. Mais informações."
-  description_en: "📅 November 27 🕒 8:00 p.m. 📍 Main Hall of Angra do Heroísmo City Hall Another edition of “Evening Conversations”, this time with Fernando Nobre, president of Assistência Médica Internacional (AMI), who presents the conversation “FraterUne – A Fraternidade que nos Une”. Free entry. More information."
-  source_url: https://whatson.azores.gov.pt/evento/conversas-ao-serao-assistencia-medica-internacional-fraterune-a-fraternidade-que-nos-une/
-  source_uid: "sab63tu5JiTxw2u2:2026-11-27@whatson.azores.gov.pt"
-  tags:
-  - free
-  id: f7f5eb8e-1427-4618-a103-91b3329cf705

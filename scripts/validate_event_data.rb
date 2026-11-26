@@ -62,6 +62,10 @@ def validate_events(data, require_ids: true)
       errors << "#{name}: `kind` must be `event` or `exhibition`, got #{kind.inspect}"
     end
 
+    if event.key?("cancelled") && !(event["cancelled"] == true || event["cancelled"] == false)
+      errors << "#{name}: `cancelled` must be a boolean; omit it for live events"
+    end
+
     if event.key?('visiting_hours') != event.key?('visiting_hours_pt')
       errors << "#{name}: provide `visiting_hours` and `visiting_hours_pt` together"
     end
