@@ -224,6 +224,20 @@ bad_cancelled = validate_fixture_events(
 )
 assert_eq bad_cancelled.size, 1, "non-boolean cancelled fails"
 assert_eq bad_cancelled.first.include?("cancelled"), true, "cancelled error names the field"
+assert_eq validate_fixture_events(
+  [{ "name" => "Null flag", "date" => Date.new(2026, 10, 4), "cancelled" => nil }]
+).size, 1, "explicit null cancelled fails"
+
+cancelled = { "name" => "Cancelled session", "date" => Date.new(2026, 10, 4),
+              "source_uid" => "session@fixture.test", "cancelled" => true }
+reoffer = cancelled.merge("name" => "Re-offered session", "date" => Date.new(2026, 10, 5), "cancelled" => false)
+[[cancelled, reoffer], [reoffer, cancelled]].each do |records|
+  errors = validate_fixture_events(records)
+  assert_eq errors.any? { |error| error.include?("source_uid") && error.include?("session@fixture.test") },
+            true, "cancelled source UID rejects another record in either order"
+end
+assert_eq validate_fixture_events([cancelled, reoffer.merge("source_uid" => "new-session@fixture.test")]),
+          [], "rescheduled session with a new source UID passes"
 
 if @failed > 0
   puts "\nFAIL: #{@failed} assertion(s) failed"

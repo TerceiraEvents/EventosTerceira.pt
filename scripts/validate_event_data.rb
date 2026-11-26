@@ -17,6 +17,7 @@ def validate_events(data, require_ids: true)
   # entries crash Liquid's `sort: "date"` with
   # "comparison of Array with Array failed".
   seen_ids = {}
+  seen_source_uids = {}
   data.each_with_index do |event, i|
     unless event.is_a?(Hash)
       errors << "record ##{i}: expected a YAML mapping, got #{event.class}"
@@ -64,6 +65,14 @@ def validate_events(data, require_ids: true)
 
     if event.key?("cancelled") && !(event["cancelled"] == true || event["cancelled"] == false)
       errors << "#{name}: `cancelled` must be a boolean; omit it for live events"
+    end
+    source_uid = event["source_uid"]
+    if source_uid.is_a?(String) && !source_uid.empty?
+      previous = seen_source_uids[source_uid]
+      if previous && (event["cancelled"] == true || previous["cancelled"] == true)
+        errors << "#{name}: `source_uid` #{source_uid.inspect} conflicts with #{previous['name'] || 'another event'}; keep one record for a cancelled source UID"
+      end
+      seen_source_uids[source_uid] ||= event
     end
 
     if event.key?('visiting_hours') != event.key?('visiting_hours_pt')

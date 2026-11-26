@@ -79,12 +79,29 @@ err(errors, 'browser-saving bundle must not be published') if File.exist?(File.j
 end
 err(errors, 'detail back/explore links require standalone targets') unless detail_source.include?("a.className='detail-link'") && detail_source.include?("back.className='detail-link'")
 
+events = YAML.safe_load(File.read('_data/special_events.yml'), permitted_classes: [Date, Time])
+cancelled, published = events.partition { |event| event['cancelled'] == true }
+published_ids = published.map { |event| event.fetch('id') }.sort
+%w[events/index.html pt/events/index.html].each do |route|
+  html = File.read(File.join(SITE, route))
+  dataset = html[%r{<script type="application/json" id="event-dataset">(.*?)</script>}m, 1]
+  unless dataset && JSON.parse(dataset).map { |event| event.fetch('id') }.sort == published_ids
+    err(errors, "#{route}: detail dataset must contain exactly the published event IDs")
+  end
+end
+unless cancelled.empty?
+  ids = Regexp.union(cancelled.map { |event| event.fetch('id') })
+  reference = /(?:[?&]id=|data-event-id="|"id"\s*:\s*"|^UID:)#{ids}(?![a-zA-Z0-9_-])/
+  Dir.glob(File.join(SITE, '**/*.{html,json,xml,ics,atom,rss}')).each do |path|
+    err(errors, "#{path}: published output contains a cancelled event ID") if File.binread(path).match?(reference)
+  end
+end
+
 special_path = "#{SITE}/special/index.html"
 if File.exist?(special_path)
   special_html = File.read(special_path)
   err(errors, "/special/: missing Next 7 days range label") unless special_html.include?("Next 7 days</option>")
-  events = YAML.safe_load(File.read('_data/special_events.yml'), permitted_classes: [Date, Time])
-  localities = events.map { |event| event['locality'] }.compact.uniq
+  localities = published.map { |event| event['locality'] }.compact.uniq
   err(errors, "/special/: locality control availability does not match curated metadata") unless special_html.match?(/class="[^"]*\bevent-locality-filter\b/) == localities.any?
   %w[angra praia other].each do |locality|
     err(errors, "/special/: #{locality} option availability does not match curated metadata") unless special_html.match?(/data-locality(?:="")? value="#{locality}"/) == localities.include?(locality)
