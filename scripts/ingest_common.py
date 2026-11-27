@@ -311,7 +311,10 @@ def build_dedup_index(
 
     Returns:
       - date_to_names: map of date → list of raw names on that date
-        (normalization happens inside is_similar_match).
+        (normalization happens inside is_similar_match). A record with
+        an `end_date` is indexed under every day of its inclusive span:
+        sources disagreeing on which day of one run to file it under
+        (opening night vs first public day) must not re-ingest it.
       - source_uids: set of source UIDs already present.
     """
     date_to_names: dict[dt.date, list[str]] = {}
@@ -321,9 +324,12 @@ def build_dedup_index(
             continue
         date = ev.get("date")
         if isinstance(date, dt.date):
-            for key in NAME_KEYS:
-                if ev.get(key):
-                    date_to_names.setdefault(date, []).append(str(ev[key]))
+            names = [str(ev[key]) for key in NAME_KEYS if ev.get(key)]
+            end = ev.get("end_date")
+            span = (end - date).days if isinstance(end, dt.date) and end > date else 0
+            for offset in range(span + 1):
+                day = date + dt.timedelta(days=offset)
+                date_to_names.setdefault(day, []).extend(names)
         sid = ev.get("source_uid")
         if sid:
             source_uids.add(str(sid))

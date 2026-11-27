@@ -305,6 +305,50 @@ class PublishedCancellationTests(unittest.TestCase):
                                                 dt.date(2026, 11, 27), names))
 
 
+class SpanIndexedDedupTests(unittest.TestCase):
+    """A multi-day record blocks same-title offers on every day it runs.
+
+    CMAH files «O 25 de Abril do Poder Local» under its 2026-12-11 opening
+    night while What's On published the same run from 2026-12-02 (issue #365);
+    one-UID-per-record cannot suppress a second source, so the name index
+    must cover the whole span.
+    """
+
+    KEEPER = event("O 25 de Abril do Poder Local", "2026-12-02", None,
+                   "Átrio Superior do Edifício dos Paços do Concelho",
+                   end_date=dt.date(2026, 12, 15),
+                   source_uid="sBZYamRmkMufSuFA:2026-12-02" + WHATSON)
+
+    def keeper_names(self):
+        names, _ = common.build_dedup_index([self.KEEPER])
+        return names
+
+    def test_same_title_on_a_middle_day_of_the_run_matches(self):
+        self.assertTrue(common.matches_existing(
+            "Exposição: O 25 de Abril do Poder Local", dt.date(2026, 12, 11), self.keeper_names()))
+
+    def test_the_last_span_day_matches_and_the_day_after_does_not(self):
+        self.assertTrue(common.matches_existing(
+            "O 25 de Abril do Poder Local", dt.date(2026, 12, 15), self.keeper_names()))
+        self.assertFalse(common.matches_existing(
+            "O 25 de Abril do Poder Local", dt.date(2026, 12, 16), self.keeper_names()))
+
+    def test_another_title_on_a_span_day_is_not_blocked(self):
+        self.assertFalse(common.matches_existing(
+            "Conferência: Autonomias Insulares", dt.date(2026, 12, 11), self.keeper_names()))
+
+    def test_single_day_records_are_indexed_only_under_their_own_day(self):
+        names, _ = common.build_dedup_index(
+            [event("Cinema: Verity", "2026-12-05", "21:30", "Cine-Teatro Ângelo Simões")])
+        self.assertTrue(common.matches_existing("Cinema: Verity", dt.date(2026, 12, 5), names))
+        self.assertFalse(common.matches_existing("Cinema: Verity", dt.date(2026, 12, 6), names))
+
+    def test_the_published_april_exhibition_exists_once(self):
+        stored = common.load_existing_yaml(common.YAML_PATH)
+        published = [r for r in stored if "25 de Abril do Poder Local" in r.get("name", "")]
+        self.assertEqual([r["date"] for r in published], [dt.date(2026, 12, 2)])
+
+
 class InRunTests(unittest.TestCase):
     def test_two_candidates_of_one_run_are_deduplicated_against_each_other(self):
         first = event("Obra Reunida de Álvaro Monjardino", "2026-11-15", "18:00", AJAIT,
